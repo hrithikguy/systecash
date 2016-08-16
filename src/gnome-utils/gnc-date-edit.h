@@ -5,14 +5,14 @@
  * All rights reserved.
  *
  * This file was part of the Gnome Library. It was modifed by
- * Dave Peticolas <dave@krondo.com> for use in GnuCash.
+ * Dave Peticolas <dave@krondo.com> for use in systecash.
  *
- * GnuCash is free software; you can redistribute it and/or modify
+ * systecash is free software; you can redistribute it and/or modify
  * it under the terms of the GNU Library General Public License as
  * published by the Free Software Foundation; either version 2 of
  * the License, or (at your option) any later version.
  *
- * Gnucash is distributed in the hope that it will be useful,
+ * systecash is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Library General Public License for more details.
@@ -48,7 +48,7 @@ typedef enum
 
 /**
  *  \verbatim
- *  * 2001.05.13T1647 [PDT], #gnucash:
+ *  * 2001.05.13T1647 [PDT], #systecash:
  * <jsled> dave_p: So the header for gnc-dateedit.h is a bit light
  *         on _why_ such a thing was done... any help?
  * <dave_p> jsled: gnome date edit isn't i18n'd properly. also, we

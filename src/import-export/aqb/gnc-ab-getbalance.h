@@ -41,10 +41,10 @@ G_BEGIN_DECLS
 
 /**
  * Execute a GetBalance job, show the resulting balance and offer to reconcile
- * the GnuCash account.
+ * the systecash account.
  *
  * @param parent Widget to use as parent, may be NULL
- * @param gnc_acc GnuCash account to fetch balance for
+ * @param gnc_acc systecash account to fetch balance for
  */
 void gnc_ab_getbalance(GtkWidget *parent, Account *gnc_acc);
 

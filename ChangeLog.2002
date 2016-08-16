@@ -94,7 +94,7 @@
 
 	* src/import-export/qif-import/qif-parse.scm: Fix regexps to
 	handle a leading '+' sign in the currency field. (Bug reported on
-	gnucash-user.)
+	systecash-user.)
 
 
 	* src/gnome-utils/gnc-html.c: The stream_handler hook needs to
@@ -157,7 +157,7 @@
 
 2002-12-22  Chris Lyttle  <chris@wilddev.net>
 
-	* rpm/gnucash.spec.in: require g-wrap 1.3.4
+	* rpm/systecash.spec.in: require g-wrap 1.3.4
 
 2002-12-22  Chris Lyttle  <chris@wilddev.net>
 
@@ -213,11 +213,11 @@
 
 2002-12-20  Chris Lyttle  <chris@wilddev.net>
 
-	* src/pixmaps/gnucash-icon.png: new gnucash icon
-	* rpm/gnucash.spec.in: remove help dirs, add finance-quote-check
-	* src/gnome/gnucash.desktop.in: new gnucash icon
+	* src/pixmaps/systecash-icon.png: new systecash icon
+	* rpm/systecash.spec.in: remove help dirs, add finance-quote-check
+	* src/gnome/systecash.desktop.in: new systecash icon
 	* src/gnome-utils/gnc-gnome-utils.c: add custom icon function
-	* src/pixmaps/Makefile.am: new gnucash icon
+	* src/pixmaps/Makefile.am: new systecash icon
 
 2002-12-20  Christian Stimming  <stimming@tuhh.de>
 
@@ -318,7 +318,7 @@
 
 2002-12-13  Chris Lyttle  <chris@wilddev.net>
 
-	* rpm/gnucash.spec.in: fix for problem reports on gnucash-user
+	* rpm/systecash.spec.in: fix for problem reports on systecash-user
 
 2002-12-12  Benoit Grégoire  <bock@step.polymtl.ca>
 	* src/import-export/import-account-matcher.c: Fix "level 3 and
@@ -365,7 +365,7 @@
 
 2002-12-11  Christian Stimming  <stimming@tuhh.de>
 
-	* accounts/el_GR/acctchrt_common.gnucash-xea: Greek account
+	* accounts/el_GR/acctchrt_common.systecash-xea: Greek account
 	templates by Nikos Charonitakis <frolix68@yahoo.gr>
 
 	* src/import-export/hbci/gnc-hbci-gettrans.c: Fix broken changes
@@ -708,7 +708,7 @@
 2002-12-04  David Hampton  <hampton@employees.org>
 
 	* src/quotes/finance-quote-helper.in (schemify_quote): Allow stock
-	index names to be passed though from gnucash to
+	index names to be passed though from systecash to
 	Finance::Quote. Necessary but not sufficient to solve #88118.
 
 	* src/scm/price-quotes.scm ((gnc:fq-get-quotes)): Beef up the
@@ -771,7 +771,7 @@
 
 	* src/gnome/window-main.c (gnc_main_window_about_cb): Put the
 	build date into the about box for development versions of
-	gnucash. #99775
+	systecash. #99775
 
 	* src/register/ledger-core/split-register-control.c
 	(gnc_split_register_move_cursor): Don't delete an empty split if
@@ -798,7 +798,7 @@
 	* src/doc/doxygen.cfg.in: New file.
 
 	* src/gnome/gnc-split-reg.c (gsr_default_delete_handler):
-	Convert the delete dialogs to follow the existing gnucash standard
+	Convert the delete dialogs to follow the existing systecash standard
 	where the cancel button is the rightmost button in the dialog box.
 	#98291
 
@@ -1178,7 +1178,7 @@ v	  fix the print_info
 
 	* src/import-export/gnc-gen-transaction.[hc],
 	generic-importer.glade: Added a new generic transaction importer,
-	with GUI as proposed on gnucash-devel (one-page, one-listview).
+	with GUI as proposed on systecash-devel (one-page, one-listview).
 
 	* src/import-export/Transaction-matcher.[hc]: Refactor the code
 	even more and separate GUI-dependent from -independent tasks.
@@ -1792,12 +1792,12 @@ v	  fix the print_info
 	* src/register/ledger-core/gnc-regwidget.c: Removed; replaced with
 	src/gnome/gnc-split-reg.c.
 
-	* src/register/register-gnome/gnucash-date-picker.c
+	* src/register/register-gnome/systecash-date-picker.c
 	(gnc_date_picker_new): Call gtk_widget_show_all rather than
 	gtk_widget_realize in order to setup the calendar to a state
 	sufficient for subsequent calls.
 
-	* HACKING: Added description of how to start GnuCash in GDB.
+	* HACKING: Added description of how to start systecash in GDB.
 
 2002-11-03  Derek Atkins  <derek@ihtfp.com>
 	* engine/gnc-be-utils.h: implement macro helpers for begin/commit functions
@@ -1830,7 +1830,7 @@ v	  fix the print_info
 
 2002-11-01  Chris Lyttle  <chris@wilddev.net>
 
-	* rpm/gnucash.spec.in: updated to work on rh8
+	* rpm/systecash.spec.in: updated to work on rh8
 
 2002-10-31  Derek Atkins  <derek@ihtfp.com>
 	* import-export/ofx/Makefile.am: add gncscm_DATA to EXTRA_DIST
@@ -1855,7 +1855,7 @@ v	  fix the print_info
 
 	* NEWS: update for new release
 	* configure.in: update to new version 1.7.2
-	* rpm/gnucash.spec.in: now works building 1.7.x
+	* rpm/systecash.spec.in: now works building 1.7.x
 
 2002-10-28  Chris Lyttle  <chris@wilddev.net>
 
@@ -1873,12 +1873,12 @@ v	  fix the print_info
 
 	* src/gnome-utils/gnc-html.c:
 	* src/gnome/Makefile.am:
-	* src/gnome/top-level.c (gnc_gui_init): Disable the gnucash
+	* src/gnome/top-level.c (gnc_gui_init): Disable the systecash
 	network code.
 
 	* src/app-utils/prefs.scm: Add option for enabling advanced
 	pages. Move some existing prefs to an "Advanced" page.  Disable
-	the gnucash network code.
+	the systecash network code.
 
 	* src/gnome-utils/dialog-options.c: OK button should always be
 	sensitive.  Add support for "Advanced" option pages. These option
@@ -2018,7 +2018,7 @@ v	  fix the print_info
 	(gnc_split_register_set_read_only): New function to set the
 	read-only bit on the table underlying the register window.
 
-	* src/register/register-gnome/gnucash-sheet.c: Remove no longer
+	* src/register/register-gnome/systecash-sheet.c: Remove no longer
 	used function from first pass at the placeholder account code.
 
 	* src/gnc-ui.h:
@@ -2312,7 +2312,7 @@ v	  fix the print_info
 	* src/backend/file/test/test-file-stuff.c -- don't spew so much
 
 	* src/test-core and src/engine/test-core should not be added to
-	  the gnucash-build-env (noinst_ is a static library)
+	  the systecash-build-env (noinst_ is a static library)
 
 	* add library directories for "make check"
 
@@ -2324,7 +2324,7 @@ v	  fix the print_info
 2002-10-13  Chris Lyttle  <chris@wilddev.net>
 
 	* accounts/fr_FR/Makefile.am: fix make dist breakage
-	* rpm/gnucash.spec.in: update for release
+	* rpm/systecash.spec.in: update for release
 	* configure.in: change to version 1.7.1
 	* AUTHORS: moved Benoit to main developers
 	* NEWS: added section for 1.7.1 release.
@@ -2474,7 +2474,7 @@ v	  fix the print_info
 2002-10-06  Derek Atkins  <derek@ihtfp.com>
 	* Rename a bunch of reports as per Chris Lyttle's suggestions
 	* Change the Report MENU names, not the REPORT names (except for
-	  the "Welcome to GnuCash" report)
+	  the "Welcome to systecash" report)
 
 	* report-gnome/report-gnome.scm -- Create sorted menu items
 
@@ -2491,8 +2491,8 @@ v	  fix the print_info
 	register contains a placeholder account, and putting up a nice
 	dialog about it.
 
-	* src/register/register-gnome/gnucash-sheet.c
-	(gnucash_register_set_sensitive): New routine to make the sheet
+	* src/register/register-gnome/systecash-sheet.c
+	(systecash_register_set_sensitive): New routine to make the sheet
 	insensitive for read-only accounts.
 
 	* src/gnome-utils/dialog-utils.c (gnc_handle_date_accelerator): If
@@ -2534,7 +2534,7 @@ v	  fix the print_info
 	starting the new user dialog.
 
 2002-10-05  Derek Atkins <derek@ihtfp.com>
-	* Fix the autoconf-2.13/2.52/2.53 problems -- Gnucash should now
+	* Fix the autoconf-2.13/2.52/2.53 problems -- systecash should now
 	  work on all versions of auto-tools, although it now requires GnuMake.
 
 	* configure.in -- just pass LIBOBJS directly to the Makefile; pass
@@ -2599,7 +2599,7 @@ v	  fix the print_info
 	* src/report/standard-reports/standard-reports.scm: add
 	advanced-portfolio.scm to gncscmmod_DATA
 
-	* doc/build-suse.txt: updated for GnuCash 1.7
+	* doc/build-suse.txt: updated for systecash 1.7
 
 2002-10-01  Christian Stimming  <stimming@tuhh.de>
 
@@ -2623,7 +2623,7 @@ v	  fix the print_info
 	  really "_Preferences"
 
 	* src/gnc-test-env: define LTDL_LIBRARY_PATH
-	* src/bin/overrides/gnucash-build-env: fix trailing whitespace bug
+	* src/bin/overrides/systecash-build-env: fix trailing whitespace bug
 
 2002-09-29  Joshua Sled  <jsled@asynchronous.org>
 
@@ -2652,7 +2652,7 @@ v	  fix the print_info
 2002-09-29  Benoit Grégoire  <bock@step.polymtl.ca>
 
 	* src/import-export/Transaction-matcher.c: Fix	segfault when
-	importing into a gnucash account which has no splits.
+	importing into a systecash account which has no splits.
 
 	* src/import-export/ofx/gnc-ofx-import.c: Code simplification for
 	commodity autoselection.
@@ -2663,7 +2663,7 @@ v	  fix the print_info
 
 2002-09-26  David Hampton  <hampton@employees.org>
 
-	* README: Updated the section on running gnucash.
+	* README: Updated the section on running systecash.
 
 	* doc/Makefile.am: Automatically update the date and version
 	number in the man pages.
@@ -2678,7 +2678,7 @@ v	  fix the print_info
 
 	* src/import-export/ofx/gnc-ofx-import.c: The default commodity
 	and account type are now preselected from OFX provided information
-	when user choses to creates a new gnucash account in the account
+	when user choses to creates a new systecash account in the account
 	matcher dialog.  Fix a segfault when clicking cancel in the file
 	selection dialog.
 
@@ -2715,7 +2715,7 @@ v	  fix the print_info
 
 	* src/import-export/hbci/gnc-hbci-actions.c,
 	src/import-export/hbci/dialog-hbcitrans.[hc] : Connect the HBCI
-	transaction-invocation and gnucash xfer dialog.
+	transaction-invocation and systecash xfer dialog.
 
 	* src/gnome/dialog-transfer.[hc]: Add set_memo access function.
 
@@ -2920,12 +2920,12 @@ v	  fix the print_info
 
 	* src/gnome/window-main.[ch] (gnc_shutdown): Export this function.
 
-	* src/register/register-gnome/gnucash-style.c
-	(gnucash_style_set_register_font_name):
-	(gnucash_style_set_register_hint_font_name): Complain to the user
+	* src/register/register-gnome/systecash-style.c
+	(systecash_style_set_register_font_name):
+	(systecash_style_set_register_hint_font_name): Complain to the user
 	if a font can't be loaded.  Don't release any existing font until
 	the new font has been successfully loaded.
-	(gnucash_style_init): Indicate if all fonts were loaded.
+	(systecash_style_init): Indicate if all fonts were loaded.
 
 2002-09-14  Derek Atkins  <derek@ihtfp.com>
 	Add TaxTable entries to Vendor Invoices (Bills); make sure it does
@@ -2976,7 +2976,7 @@ v	  fix the print_info
 2002-09-01  Derek Atkins  <derek@ihtfp.com>
 	* configure.in: remove GNUCASH_BUILD_DATE
 	* src/gnome/Makefile.am: build gnc-version.h, and #define a string
-	  defining the time when gnucash was built (GNUCASH_BUILD_DATE)
+	  defining the time when systecash was built (GNUCASH_BUILD_DATE)
 	* src/gnome/gnc-splash.h: include the new gnc-version.h header
 
 2002-09-01  David Hampton  <hampton@employees.org>
@@ -3068,7 +3068,7 @@ v	  fix the print_info
 
 2002-08-14  Joachim Breitner <mail@joachim-breitner.de>
 
-	It may not be appropriate for a newcomer in the gnucash community
+	It may not be appropriate for a newcomer in the systecash community
 	like me, but could you please please include this simple patch in
 	the 1.6.7 release? The VWD source (already in Finance::Quote) is
 	the only source that has the German Deka-Fonts.
@@ -3117,7 +3117,7 @@ v	  fix the print_info
 2002-08-10  Christian Stimming  <stimming@tuhh.de>
 
 	* src/import-export/hbci/hbci-interaction.[hc]: Add code for
-	HBCI_API interaction. Will be migrated to gnucash-UI's code
+	HBCI_API interaction. Will be migrated to systecash-UI's code
 	soon. Recent changes to HBCI code require yet another update to
 	current OpenHBCI CVS.
 
@@ -3186,7 +3186,7 @@ v	  fix the print_info
 2002-08-06  Christian Stimming  <stimming@tuhh.de>
 
 	* src/import-export/hbci/gnc-hbci-utils.[hc]: Added hbci functions
-	that are to be used from the rest of the gnucash UI.
+	that are to be used from the rest of the systecash UI.
 
 	* src/import-export/hbci/*: More work on HBCI support (HBCI data
 	is now actually stored in book's and account's kvp frames).
@@ -3368,7 +3368,7 @@ v	  fix the print_info
 	Gnome Druid for setting up loan-repayment Scheduled Transactions.
 
 	* src/doc/loans.txt: Added; notes about how loans will be dealt
-	with in GnuCash.
+	with in systecash.
 
 	* src/gnome/glade/sched-xact.glade: Added loan-druid.
 
@@ -3562,7 +3562,7 @@ v	  fix the print_info
 
 2002-07-02  Derek Atkins  <derek@ihtfp.com>
 
-	* register/register-gnome/gnucash-sheet.c: allow a caller to
+	* register/register-gnome/systecash-sheet.c: allow a caller to
 	"unset" the popup menu by passing a NULL popup.
 
 	* business/business-gnome/dialog-invoice.c: use glade for the
@@ -3819,7 +3819,7 @@ v	  fix the print_info
 
 	* Move to invoice report into business-reports (it _IS_ a business
 	report after all).  Add a business-reports guile module, and get
-	it all to work.  Fix the gnucash-build-env script to look in the
+	it all to work.  Fix the systecash-build-env script to look in the
 	new directories.
 
 2002-06-16  Derek Atkins   <derek@ihtfp.com>
@@ -3912,7 +3912,7 @@ v	  fix the print_info
 2002-06-06  Derek Atkins   <derek@ihtfp.com>
 
 	Create a top-level Business menu item in the main window.  You
-	don't need to run GnuCash with GNC_DEBUG=1 in order to use the
+	don't need to run systecash with GNC_DEBUG=1 in order to use the
 	business functionality.
 
 2002-06-05  Derek Atkins   <derek@ihtfp.com>
@@ -3938,7 +3938,7 @@ v	  fix the print_info
 2002-06-04  David Hampton  <hampton@employees.org>
 
 	* src/gnome-utils/gnc-mdi-utils.c (gnc_mdi_destroy): Work around a
-	bug in the Gnome MDI code that is causing Gnucash to crash if the
+	bug in the Gnome MDI code that is causing systecash to crash if the
 	last window isn't the topmost window when the application is quit.
 
 2002-06-05  Christian Stimming  <stimming@tuhh.de>
@@ -3990,7 +3990,7 @@ v	  fix the print_info
 
 	* src/gnome-util/dialog-options.[ch]: Create an option-type
 	database so that modules can define new option-types and plug them
-	into Gnucash.  Break apart the existing "if type == blah; else if
+	into systecash.  Break apart the existing "if type == blah; else if
 	type == blah blah..." code and use the new options-type database.
 	New options require the implementation of three functions,
 	set_widget(), set_value(), and get_value().
@@ -4101,7 +4101,7 @@ v	  fix the print_info
 
 	Pogma's Mac OS X patches committed.  Added a new directory
 	src/lib/libc for library routines not available on Mac OS X.
-	Changed all of the module function names required by gnucash
+	Changed all of the module function names required by systecash
 	according to libltdl rules so that they are unique, though they
 	all still appear the same to callers of libltdl.
 
@@ -4125,7 +4125,7 @@ v	  fix the print_info
 	for that stock price.  Added an option for skipping stocks with a
 	zero share balance.
 
-	* rpm/gnucash.spec.in: Added more dependency information. Added
+	* rpm/systecash.spec.in: Added more dependency information. Added
 	support for building an additional RPM containing only the
 	postgres backend files.
 
@@ -4281,7 +4281,7 @@ v	  fix the print_info
 
 	* configure.in:
 	* src/bin/overrides/Makefile.am:
-	* src/bin/overrides/gnucash-env.in: Propagate any non standard
+	* src/bin/overrides/systecash-env.in: Propagate any non standard
 	g-wrap prefix path to the setting of the LD_LIBRARY_PATH variable.
 
 	* src/app-utils/gnc-component-manager.c:
@@ -4401,7 +4401,7 @@ v	  fix the print_info
 
 2002-04-07  David Hampton  <hampton@employees.org>
 
-	* make-gnucash-patch.in: Make sure the 'manifest' argument is a
+	* make-systecash-patch.in: Make sure the 'manifest' argument is a
 	fully specified pathname before passing it off to the makepatch
 	program.
 
@@ -4513,7 +4513,7 @@ v	  fix the print_info
 	* src/report/standard-reports/account-piecharts.scm: bump up default
 	pie chart height
 
-	* src/bin/overrides/gnucash-env.in: set LTDL_LIBRARY_PATH, too
+	* src/bin/overrides/systecash-env.in: set LTDL_LIBRARY_PATH, too
 
 	* macros/gnome-gdk-pixbuf.m4: fix bug
 
@@ -4746,7 +4746,7 @@ v	  fix the print_info
 
 2002-01-03  Dave Peticolas  <dave@krondo.com>
 
-	* src/backend/postgres/PostgresBackend.c: allow gnucash tables
+	* src/backend/postgres/PostgresBackend.c: allow systecash tables
 	to be installed in an existing database.
 
 	* src/backend/postgres/upgrade.c: use pointer<->int conversion

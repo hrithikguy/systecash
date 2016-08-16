@@ -1,7 +1,7 @@
 #
 # Spec file for Fedora and other RedHat distros and derivatives
 #
-# Check whether GnuCash should build optional modules.
+# Check whether systecash should build optional modules.
 # To modify parameters, edit the .spec file, 0 is off, 1 is on
 %define _with_postgres 0
 %define _with_ofx 1
@@ -26,14 +26,14 @@
 %define aqbanking_version 1.3
 %define postgresql_version 7.1.3
 
-Name:      	gnucash
-Summary:   	GnuCash is an application to keep track of your finances.
+Name:      	systecash
+Summary:   	systecash is an application to keep track of your finances.
 Version:   	%{version}
 Release:  	1.%{dist}
 License:	GPL
 Group:     	Applications/Finance
-URL:            http://www.gnucash.org
-Source:    	http://www.gnucash.org/pub/gnucash/sources/stable/gnucash-%{version}.tar.gz
+URL:            http://www.systecash.org
+Source:    	http://www.systecash.org/pub/systecash/sources/stable/systecash-%{version}.tar.gz
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-root
 
 Prereq:         GConf2
@@ -57,7 +57,7 @@ BuildRequires: 	libjpeg-devel, openssl-devel
 BuildRequires:	goffice-devel
 
 %description
-GnuCash is a personal finance manager. A check-book like
+systecash is a personal finance manager. A check-book like
 register GUI allows you to enter and track bank accounts,
 stocks, income and even currency trades. The interface is
 designed to be simple and easy to use, but is backed with
@@ -65,55 +65,55 @@ double-entry accounting principles to ensure balanced books.
 
 
 %package devel
-Summary: Header files for GnuCash development.
+Summary: Header files for systecash development.
 Group: Development/Libraries
-Requires: gnucash = %{version}
+Requires: systecash = %{version}
 
 %description devel
-This package contains header files for GnuCash development.
-Install this package if you want to use GnuCash libraries
+This package contains header files for systecash development.
+Install this package if you want to use systecash libraries
 in C programs.
 
 
 %if %{_with_ofx}
 %package ofx
-Summary: Enables OFX importing in GnuCash
+Summary: Enables OFX importing in systecash
 Group: Applications/Finance
-Requires: gnucash = %{version}
+Requires: systecash = %{version}
 Requires: libofx >= %{libofx_version}
 BuildRequires: libofx-devel
 
 %description ofx
 This package adds OFX file import support to the base
-GnuCash package. Install this package if you want to
+systecash package. Install this package if you want to
 import OFX files.
 %endif
 
 %if %{_with_hbci}
 %package hbci
-Summary: Enables HBCI importing in GnuCash
+Summary: Enables HBCI importing in systecash
 Group: Applications/Finance
-Requires: gnucash = %{version}
+Requires: systecash = %{version}
 Requires: aqbanking >= %{aqbanking_version}
 BuildRequires: aqbanking-devel
 
 %description hbci
 This package adds HBCI file import support to the base
-GnuCash package. Install this package if you want to
+systecash package. Install this package if you want to
 import HBCI files.
 %endif
 
 %if %{_with_postgres}
 %package backend-postgres
-Summary: Backend for storing GnuCash data in a PostgreSQL database.
+Summary: Backend for storing systecash data in a PostgreSQL database.
 Group: Applications/Finance
-Requires: gnucash = %{version}
+Requires: systecash = %{version}
 Requires: postgresql >= %{postgresql_version}
 BuildRequires: postgresql-devel
 
 %description backend-postgres
 
-This package contains a backend for storing your GnuCash accounts and
+This package contains a backend for storing your systecash accounts and
 transactions in a PostgreSQL database.  Install this package if you
 want to keep your financial data in a database instead of a flat file
 (recommended for large volumes of data and commercial sites).
@@ -121,14 +121,14 @@ want to keep your financial data in a database instead of a flat file
 
 %if %{_with_dbi}
 %package backend-dbi
-Summary: DBI Backend for storing GnuCash data databases.
+Summary: DBI Backend for storing systecash data databases.
 Group: Applications/Finance
-Requires: gnucash = %{version}
+Requires: systecash = %{version}
 Requires: libdbi
 BuildRequires: libdbi-devel
 
 %description backend-dbi
-This package contains a backend for storing GnuCash accounts in databases
+This package contains a backend for storing systecash accounts in databases
 using the libdbi package.  To enable this functionality, you must install
 one or more of the libdbi-dbd-* driver packages (e.g.  libdbi-dbd-mysql,
 libdbi-dbd-sqlite or libdbi-dbd-pgsql).
@@ -164,7 +164,7 @@ cp -p src/backend/postgres/README README.postgres
 [ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
 
 export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
-LIBRARY_PATH=$RPM_BUILD_ROOT%{_libdir}:$RPM_BUILD_ROOT%{_libdir}/gnucash make DESTDIR=$RPM_BUILD_ROOT install
+LIBRARY_PATH=$RPM_BUILD_ROOT%{_libdir}:$RPM_BUILD_ROOT%{_libdir}/systecash make DESTDIR=$RPM_BUILD_ROOT install
 unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 
 %find_lang %name
@@ -176,10 +176,10 @@ unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 
 %post
 /sbin/ldconfig
-/sbin/install-info %{_infodir}/gnucash-design.info.gz %{_infodir}/dir
+/sbin/install-info %{_infodir}/systecash-design.info.gz %{_infodir}/dir
 
 export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
-SCHEMAS=%{_sysconfdir}/gconf/schemas/apps_gnucash*.schemas
+SCHEMAS=%{_sysconfdir}/gconf/schemas/apps_systecash*.schemas
 for S in $SCHEMAS; do
   gconftool-2 --makefile-install-rule $S > /dev/null
 done
@@ -188,7 +188,7 @@ done
 if [ "$1" -eq 0 ]; then
      #deleting the schema on package removal
      export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
-     SCHEMAS=%{_sysconfdir}/gconf/schemas/apps_gnucash*.schemas
+     SCHEMAS=%{_sysconfdir}/gconf/schemas/apps_systecash*.schemas
      for S in $SCHEMAS; do
        gconftool-2 --makefile-uninstall-rule $S > /dev/null
      done
@@ -197,56 +197,56 @@ fi
 %postun
 /sbin/ldconfig
 if [ $1 = 0 ]; then
-   /sbin/install-info --delete %{_infodir}/gnucash-design.info.gz %{_infodir}/dir
+   /sbin/install-info --delete %{_infodir}/systecash-design.info.gz %{_infodir}/dir
 fi
 
 %files -f %{name}.lang
 %defattr(444,root,root,755)
 %attr(555,root,root) %{_bindir}/*
-%attr(555,root,root) %{_libexecdir}/gnucash
+%attr(555,root,root) %{_libexecdir}/systecash
 %{_mandir}/man*/*
-%{_infodir}/gnucash*info*
+%{_infodir}/systecash*info*
 %{_libdir}/*
-%{_datadir}/gnucash
+%{_datadir}/systecash
 %{_datadir}/applications/*
-%{_datadir}/xml/gnucash/xsl/*
+%{_datadir}/xml/systecash/xsl/*
 %{_datadir}/icons/*
-%{_sysconfdir}/gconf/schemas/apps_gnucash*
+%{_sysconfdir}/gconf/schemas/apps_systecash*
 %if %{_with_ofx}
-%exclude %{_libdir}/gnucash/libgncmod-ofx*
+%exclude %{_libdir}/systecash/libgncmod-ofx*
 %endif
 %if %{_with_hbci}
-%exclude %{_libdir}/gnucash/libgncmod-aqbanking*
-%exclude %{_datadir}/gnucash/glade/aqbanking*
-%exclude %{_sysconfdir}/gconf/schemas/apps_gnucash_dialog_hbci.schemas
+%exclude %{_libdir}/systecash/libgncmod-aqbanking*
+%exclude %{_datadir}/systecash/glade/aqbanking*
+%exclude %{_sysconfdir}/gconf/schemas/apps_systecash_dialog_hbci.schemas
 %endif
 %if %{_with_postgres}
 %exclude %{_libdir}/libgnc-backend-postgres*
 %endif
 %if %{_with_dbi}
-%exclude %{_libdir}/gnucash/libgncmod-backend-dbi*
+%exclude %{_libdir}/systecash/libgncmod-backend-dbi*
 %endif
-%config %{_sysconfdir}/gnucash
+%config %{_sysconfdir}/systecash
 %doc AUTHORS COPYING ChangeLog* DOCUMENTERS HACKING LICENSE NEWS README
 %doc doc/README.german doc/README.francais doc/guile-hackers.txt
 
 %files devel
 %defattr(444,root,root,755)
-%{_includedir}/gnucash
+%{_includedir}/systecash
 
 %if %{_with_ofx}
 %files ofx
 %defattr(444,root,root,755)
-%{_libdir}/gnucash/libgncmod-ofx*
+%{_libdir}/systecash/libgncmod-ofx*
 %doc doc/README.OFX
 %endif
 
 %if %{_with_hbci}
 %files hbci
 %defattr(444,root,root,755)
-%{_libdir}/gnucash/libgncmod-aqbanking*
-%{_datadir}/gnucash/glade/aqbanking*
-%{_sysconfdir}/gconf/schemas/apps_gnucash_dialog_hbci.schemas
+%{_libdir}/systecash/libgncmod-aqbanking*
+%{_datadir}/systecash/glade/aqbanking*
+%{_sysconfdir}/gconf/schemas/apps_systecash_dialog_hbci.schemas
 %doc doc/README.HBCI
 %endif
 
@@ -260,5 +260,5 @@ fi
 %if %{_with_dbi}
 %files backend-dbi
 %defattr(444,root,root,755)
-%{_libdir}/gnucash/libgncmod-backend-dbi*
+%{_libdir}/systecash/libgncmod-backend-dbi*
 %endif

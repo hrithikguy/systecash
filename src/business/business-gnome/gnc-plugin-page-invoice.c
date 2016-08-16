@@ -37,7 +37,7 @@
 #include "gnc-gobject-utils.h"
 #include "gnc-gnome-utils.h"
 #include "gnc-icons.h"
-#include "gnucash-sheet.h"
+#include "systecash-sheet.h"
 #include "gnc-prefs.h"
 #include "gnc-ui-util.h"
 #include "gnc-window.h"
@@ -81,7 +81,7 @@ static void gnc_plugin_page_invoice_cmd_duplicateEntry (GtkAction *action, GncPl
 static void gnc_plugin_page_invoice_cmd_pay_invoice (GtkAction *action, GncPluginPageInvoice *plugin_page);
 static void gnc_plugin_page_invoice_cmd_company_report (GtkAction *action, GncPluginPageInvoice *plugin_page);
 
-static void gnc_plugin_page_redraw_help_cb( GnucashRegister *gsr, GncPluginPageInvoice *invoice_page );
+static void gnc_plugin_page_redraw_help_cb( systecashRegister *gsr, GncPluginPageInvoice *invoice_page );
 static void gnc_plugin_page_invoice_refresh_cb (GHashTable *changes, gpointer user_data);
 
 static void gnc_plugin_page_invoice_cmd_entryUp (GtkAction *action, GncPluginPageInvoice *plugin_page);
@@ -533,7 +533,7 @@ gnc_plugin_page_invoice_destroy_widget (GncPluginPage *plugin_page)
 }
 
 /** Save enough information about this invoice page that it can be
- *  recreated next time the user starts gnucash.
+ *  recreated next time the user starts systecash.
  *
  *  @param page The page to save.
  *
@@ -566,7 +566,7 @@ gnc_plugin_page_invoice_save_page (GncPluginPage *plugin_page,
 
 
 /** Create a new invoice page based on the information saved during a
- *  previous instantiation of gnucash.
+ *  previous instantiation of systecash.
  *
  *  @param window The window where this page should be installed.
  *
@@ -928,7 +928,7 @@ gnc_plugin_page_invoice_cmd_company_report (GtkAction *action,
 /************************************************************/
 
 static void
-gnc_plugin_page_redraw_help_cb (GnucashRegister *g_reg,
+gnc_plugin_page_redraw_help_cb (systecashRegister *g_reg,
                                 GncPluginPageInvoice *invoice_page)
 {
     GncPluginPageInvoicePrivate *priv;
@@ -980,6 +980,6 @@ gnc_plugin_page_invoice_refresh_cb (GHashTable *changes, gpointer user_data)
 
     priv = GNC_PLUGIN_PAGE_INVOICE_GET_PRIVATE(page);
     reg = gnc_invoice_get_register(priv->iw);
-    gnucash_register_refresh_from_prefs(GNUCASH_REGISTER(reg));
+    systecash_register_refresh_from_prefs(GNUCASH_REGISTER(reg));
     gtk_widget_queue_draw(priv->widget);
 }

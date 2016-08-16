@@ -13,8 +13,8 @@ TARGET_COMPILE_DEFINITIONS(gncmod-locale-reports-us PRIVATE -DG_LOG_DOMAIN=\"gnc
 
 
 INSTALL(TARGETS gncmod-locale-reports-us
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 # No headers to install
 
@@ -35,7 +35,7 @@ SET(GUILE_DEPENDS   gncmod-html scm-tax-us-1 scm-tax-us-2 scm-report-system-3)
 
 GNC_ADD_SCHEME_TARGETS(scm-report-locale-specific-1
   "${gncmod_local_reports_us_SCHEME_1}"
-  gnucash/report
+  systecash/report
   "${GUILE_MODULES}"
   "${GUILE_LOAD_DIRS}"
   "${GUILE_LIBRARY_DIRS}"
@@ -45,7 +45,7 @@ GNC_ADD_SCHEME_TARGETS(scm-report-locale-specific-1
 
 GNC_ADD_SCHEME_TARGETS(scm-report-locale-specific-2
   "${gncmod_local_reports_us_SCHEME_2}"
-  gnucash/report/locale-specific
+  systecash/report/locale-specific
   "${GUILE_MODULES}"
   "${GUILE_LOAD_DIRS}"
   "${GUILE_LIBRARY_DIRS}"

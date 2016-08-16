@@ -12,8 +12,8 @@ TARGET_INCLUDE_DIRECTORIES(gncmod-tax-us
     PRIVATE ${CMAKE_BINARY_DIR}/src ${GUILE_INCLUDE_DIRS})
 
 INSTALL(TARGETS gncmod-tax-us
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 # No headers to install
 
@@ -38,7 +38,7 @@ GNC_ADD_SCHEME_TARGETS(scm-tax-us-1
   )
 GNC_ADD_SCHEME_TARGETS(scm-tax-us-2
   "${gncmod_tax_us_SCHEME_2}"
-  gnucash/tax
+  systecash/tax
   "${GUILE_MODULES}"
   "${GUILE_LOAD_DIRS}"
   "${GUILE_LIBRARY_DIRS}"

@@ -1,17 +1,17 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.gnucash.dialogs.business" path="/org/gnucash/dialogs/business/">
-    <child name="customer-search" schema="org.gnucash.dialogs.business.customer-search"/>
-    <child name="employee-search" schema="org.gnucash.dialogs.business.employee-search"/>
-    <child name="invoice-search" schema="org.gnucash.dialogs.business.invoice-search"/>
-    <child name="job-search" schema="org.gnucash.dialogs.business.job-search"/>
-    <child name="order-search" schema="org.gnucash.dialogs.business.order-search"/>
-    <child name="vendor-search" schema="org.gnucash.dialogs.business.vendor-search"/>
-    <child name="invoice" schema="org.gnucash.dialogs.business.invoice"/>
-    <child name="bill" schema="org.gnucash.dialogs.business.bill"/>
-    <child name="tax-tables" schema="org.gnucash.dialogs.business.tax-tables"/>
+  <schema id="org.systecash.dialogs.business" path="/org/systecash/dialogs/business/">
+    <child name="customer-search" schema="org.systecash.dialogs.business.customer-search"/>
+    <child name="employee-search" schema="org.systecash.dialogs.business.employee-search"/>
+    <child name="invoice-search" schema="org.systecash.dialogs.business.invoice-search"/>
+    <child name="job-search" schema="org.systecash.dialogs.business.job-search"/>
+    <child name="order-search" schema="org.systecash.dialogs.business.order-search"/>
+    <child name="vendor-search" schema="org.systecash.dialogs.business.vendor-search"/>
+    <child name="invoice" schema="org.systecash.dialogs.business.invoice"/>
+    <child name="bill" schema="org.systecash.dialogs.business.bill"/>
+    <child name="tax-tables" schema="org.systecash.dialogs.business.tax-tables"/>
   </schema>
 
-  <schema id="org.gnucash.dialogs.business.customer-search" path="/org/gnucash/dialogs/business/customer-search/">
+  <schema id="org.systecash.dialogs.business.customer-search" path="/org/systecash/dialogs/business/customer-search/">
     <key name="last-geometry" type="(iiii)">
       <default>(-1,-1,-1,-1)</default>
       <summary>Last window position and size</summary>
@@ -26,7 +26,7 @@
     </key>
   </schema>
 
-  <schema id="org.gnucash.dialogs.business.employee-search" path="/org/gnucash/dialogs/business/employee-search/">
+  <schema id="org.systecash.dialogs.business.employee-search" path="/org/systecash/dialogs/business/employee-search/">
     <key name="last-geometry" type="(iiii)">
       <default>(-1,-1,-1,-1)</default>
       <summary>Last window position and size</summary>
@@ -41,7 +41,7 @@
     </key>
   </schema>
 
-  <schema id="org.gnucash.dialogs.business.invoice-search" path="/org/gnucash/dialogs/business/invoice-search/">
+  <schema id="org.systecash.dialogs.business.invoice-search" path="/org/systecash/dialogs/business/invoice-search/">
     <key name="last-geometry" type="(iiii)">
       <default>(-1,-1,-1,-1)</default>
       <summary>Last window position and size</summary>
@@ -56,7 +56,7 @@
     </key>
   </schema>
 
-  <schema id="org.gnucash.dialogs.business.job-search" path="/org/gnucash/dialogs/business/job-search/">
+  <schema id="org.systecash.dialogs.business.job-search" path="/org/systecash/dialogs/business/job-search/">
     <key name="last-geometry" type="(iiii)">
       <default>(-1,-1,-1,-1)</default>
       <summary>Last window position and size</summary>
@@ -71,7 +71,7 @@
     </key>
   </schema>
 
-  <schema id="org.gnucash.dialogs.business.order-search" path="/org/gnucash/dialogs/business/order-search/">
+  <schema id="org.systecash.dialogs.business.order-search" path="/org/systecash/dialogs/business/order-search/">
     <key name="last-geometry" type="(iiii)">
       <default>(-1,-1,-1,-1)</default>
       <summary>Last window position and size</summary>
@@ -86,7 +86,7 @@
     </key>
   </schema>
 
-  <schema id="org.gnucash.dialogs.business.vendor-search" path="/org/gnucash/dialogs/business/vendor-search/">
+  <schema id="org.systecash.dialogs.business.vendor-search" path="/org/systecash/dialogs/business/vendor-search/">
     <key name="last-geometry" type="(iiii)">
       <default>(-1,-1,-1,-1)</default>
       <summary>Last window position and size</summary>
@@ -101,7 +101,7 @@
     </key>
   </schema>
 
-  <schema id="org.gnucash.dialogs.business.invoice" path="/org/gnucash/dialogs/business/invoice/">
+  <schema id="org.systecash.dialogs.business.invoice" path="/org/systecash/dialogs/business/invoice/">
     <key name="tax-included" type="b">
       <default>true</default>
       <summary>Is tax included in this type of business entry?</summary>
@@ -115,12 +115,12 @@
     <key name="notify-when-due" type="b">
       <default>true</default>
       <summary>Show invoices due reminder at startup</summary>
-      <description>If active, at startup GnuCash will check to see whether any invoices will become due soon. If so, it will present the user with a reminder dialog. The definition of "soon" is controlled by the "Days in Advance" setting. Otherwise GnuCash does not check for due invoices.</description>
+      <description>If active, at startup systecash will check to see whether any invoices will become due soon. If so, it will present the user with a reminder dialog. The definition of "soon" is controlled by the "Days in Advance" setting. Otherwise systecash does not check for due invoices.</description>
     </key>
     <key name="days-in-advance" type="d">
       <default>7.0</default>
       <summary>Show invoices due within this many days</summary>
-      <description>This field defines the number of days in advance that GnuCash will check for due invoices. Its value is only used if the "Notify when due" setting is active.</description>
+      <description>This field defines the number of days in advance that systecash will check for due invoices. Its value is only used if the "Notify when due" setting is active.</description>
     </key>
     <key name="enable-toolbuttons" type="b">
       <default>false</default>
@@ -143,7 +143,7 @@
       <description>If this field is active then multiple entries in an invoice that transfer to the same account will be accumulated into a single split. This field can be overridden per invoice in the Posting dialog.</description>
     </key>
   </schema>
-  <schema id="org.gnucash.dialogs.business.bill" path="/org/gnucash/dialogs/business/bill/">
+  <schema id="org.systecash.dialogs.business.bill" path="/org/systecash/dialogs/business/bill/">
     <key name="tax-included" type="b">
       <default>true</default>
       <summary>Is tax included in this type of business entry?</summary>
@@ -157,16 +157,16 @@
     <key name="notify-when-due" type="b">
       <default>true</default>
       <summary>Show bills due reminder at startup</summary>
-      <description>If active, at startup GnuCash will check to see whether any bills will become due soon. If so, it will present the user with a reminder dialog. The definition of "soon" is controlled by the "Days in Advance" setting. Otherwise GnuCash does not check for due bills.</description>
+      <description>If active, at startup systecash will check to see whether any bills will become due soon. If so, it will present the user with a reminder dialog. The definition of "soon" is controlled by the "Days in Advance" setting. Otherwise systecash does not check for due bills.</description>
     </key>
     <key name="days-in-advance" type="d">
       <default>7.0</default>
       <summary>Show bills due within this many days</summary>
-      <description>This field defines the number of days in advance that GnuCash will check for due bills. Its value is only used if the "Notify when due" setting is active.</description>
+      <description>This field defines the number of days in advance that systecash will check for due bills. Its value is only used if the "Notify when due" setting is active.</description>
     </key>
   </schema>
 
-  <schema id="org.gnucash.dialogs.business.tax-tables" path="/org/gnucash/dialogs/business/tax-tables/">
+  <schema id="org.systecash.dialogs.business.tax-tables" path="/org/systecash/dialogs/business/tax-tables/">
     <key name="last-geometry" type="(iiii)">
       <default>(-1,-1,-1,-1)</default>
       <summary>Last window position and size</summary>

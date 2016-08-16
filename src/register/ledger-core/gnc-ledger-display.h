@@ -1,6 +1,6 @@
 /********************************************************************\
  * gnc-ledger-display.h -- utilities for dealing with multiple      *
- *                         register/ledger windows in GnuCash       *
+ *                         register/ledger windows in systecash       *
  *                                                                  *
  * Copyright (C) 1997 Robin D. Clark                                *
  * Copyright (C) 1997, 1998 Linas Vepstas                           *

@@ -71,7 +71,7 @@ endif
 EXTRA_DIST = \
   gnc-html.i
 
-CLEANFILES = $(BUILT_SOURCES) gnucash
+CLEANFILES = $(BUILT_SOURCES) systecash
 MAINTAINERCLEANFILES = swig-gnc-html.c
 
 # We do this only for the gnome help tool on Linux and MacPorts.

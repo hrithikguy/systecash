@@ -29,23 +29,23 @@
 
 from sys import argv, exit
 
-from gnucash import Session, Transaction, Split, Account, GncNumeric, \
+from systecash import Session, Transaction, Split, Account, GncNumeric, \
     GncCommodity
 
-# argv[1] should be the path to an existing gnucash file/database
+# argv[1] should be the path to an existing systecash file/database
 # for a file, simply pass the pathname, for a database you can use
 # these forms:
 # mysql://user:password@host/dbname
 # postgres://user:password@host[:port]/dbname (the port is optional)
 #
-# You should try it out with a gnucash file with tranding accounts enabled
+# You should try it out with a systecash file with tranding accounts enabled
 # and trading accounts disabled
 
 if len(argv) < 2:    
     print 'not enough parameters'
     print 'usage: test_imbalance_transaction.py {book_url}'
     print 'examples:'
-    print "gnucash-env python test_imbalance_transaction.py '/home/username/test.gnucash'"
+    print "systecash-env python test_imbalance_transaction.py '/home/username/test.systecash'"
     exit()
 
 

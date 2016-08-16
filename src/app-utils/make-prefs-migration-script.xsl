@@ -15,15 +15,15 @@
 ;;;  migrate-prefs.scm
 ;;;  Custom generated script to migrate user preferences from
 ;;;  gconf to gsettings. This should only be run once -
-;;;  when running GnuCash 2.6.x for the first time.
+;;;  when running systecash 2.6.x for the first time.
 ;;;
 ;;;  Copyright 2013 Geert Janssens &lt;geert@kobaltwit.be&gt;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define-module (migrate-prefs-user))
 
-(use-modules (gnucash core-utils))
-;(use-modules (gnucash gnc-module))
+(use-modules (systecash core-utils))
+;(use-modules (systecash gnc-module))
 ;; Guile 2 needs to find the symbols from the c module at compile time already
 ;(cond-expand
 ;  (guile-2

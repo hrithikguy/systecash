@@ -25,7 +25,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(use-modules (gnucash gettext))
+(use-modules (systecash gettext))
 
 ;; Converts a font name to css style information
 (define (font-name-to-style-info font-name)

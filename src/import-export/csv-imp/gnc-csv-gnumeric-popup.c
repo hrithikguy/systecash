@@ -1,6 +1,6 @@
 /********************************************************************\
  * The following is code copied from Gnumeric 1.7.8 src/gui-util.c, *
- * and it has been modified slightly to work within GnuCash.        *
+ * and it has been modified slightly to work within systecash.        *
  * This program is free software; you can redistribute it and/or    *
  * modify it under the terms of the GNU General Public License as   *
  * published by the Free Software Foundation; either version 2 of   *

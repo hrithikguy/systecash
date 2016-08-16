@@ -17,7 +17,7 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash tax us))
+(define-module (systecash tax us))
 
 (export gnc:txf-get-payer-name-source)
 (export gnc:txf-get-form)

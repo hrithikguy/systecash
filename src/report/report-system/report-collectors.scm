@@ -17,22 +17,22 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report report-system report-collectors))
+(define-module (systecash report report-system report-collectors))
 
-(use-modules (gnucash gnc-module))
-(gnc:module-load "gnucash/report/report-system" 0)
+(use-modules (systecash gnc-module))
+(gnc:module-load "systecash/report/report-system" 0)
 
 (use-modules (ice-9 format))
 (use-modules (srfi srfi-1))
 
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash printf))
-(use-modules (gnucash report report-system))
-(use-modules (gnucash app-utils))
-(use-modules (gnucash engine))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash printf))
+(use-modules (systecash report report-system))
+(use-modules (systecash app-utils))
+(use-modules (systecash engine))
 (use-modules (sw_engine))
-(use-modules (gnucash report report-system collectors))
-(use-modules (gnucash report report-system list-extras))
+(use-modules (systecash report report-system collectors))
+(use-modules (systecash report report-system list-extras))
 
 (export account-destination-alist)
 (export category-by-account-report)

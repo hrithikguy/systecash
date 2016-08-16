@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-splash.h -- splash screen for GnuCash                        *
+ * gnc-splash.h -- splash screen for systecash                        *
  * Copyright (C) 2001 Gnumatic, Inc.                                *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *

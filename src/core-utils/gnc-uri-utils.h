@@ -39,7 +39,7 @@
 #ifndef GNCURIUTILS_H_
 #define GNCURIUTILS_H_
 
-#define GNC_DATAFILE_EXT ".gnucash"
+#define GNC_DATAFILE_EXT ".systecash"
 #define GNC_LOGFILE_EXT  ".log"
 
 /** Converts a uri in separate components.

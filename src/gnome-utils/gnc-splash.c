@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-splash.c -- splash screen for GnuCash                        *
+ * gnc-splash.c -- splash screen for systecash                        *
  * Copyright (C) 2001 Gnumatic, Inc.                                *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
@@ -71,11 +71,11 @@ gnc_show_splash_screen (void)
     g_signal_connect (splash, "destroy",
                       G_CALLBACK (splash_destroy_cb), NULL);
 
-    gtk_window_set_title (GTK_WINDOW (splash), "GnuCash");
+    gtk_window_set_title (GTK_WINDOW (splash), "systecash");
     gtk_window_set_position (GTK_WINDOW (splash), GTK_WIN_POS_CENTER);
     gtk_window_set_type_hint (GTK_WINDOW (splash), GDK_WINDOW_TYPE_HINT_DIALOG);
 
-    pixmap = gnc_gnome_get_pixmap ("gnucash_splash.png");
+    pixmap = gnc_gnome_get_pixmap ("systecash_splash.png");
 
     if (!pixmap)
     {
@@ -89,19 +89,19 @@ gnc_show_splash_screen (void)
     hbox = gtk_hbox_new (FALSE, 3);
 #ifdef GNUCASH_SCM
     /* Development version */
-    /* Translators: 1st %s is the GnuCash version (eg 2.4.11);
+    /* Translators: 1st %s is the systecash version (eg 2.4.11);
                     2nd %s is the scm type (svn/svk/git/bzr);
                     3rd %s is the scm revision number;
                     4th %s is the build date */
-    ver_string = g_strdup_printf(_("Version: GnuCash-%s %s (rev %s built %s)"),
+    ver_string = g_strdup_printf(_("Version: systecash-%s %s (rev %s built %s)"),
                                  VERSION, GNUCASH_SCM, GNUCASH_SCM_REV,
                                  GNUCASH_BUILD_DATE);
 #else
     /* Dist Tarball */
-    /* Translators: 1st %s is the GnuCash version (eg 2.4.11);
+    /* Translators: 1st %s is the systecash version (eg 2.4.11);
                     2nd %s is the scm (svn/svk/git/bzr) revision number;
                     3rd %s is the build date */
-    ver_string = g_strdup_printf(_("Version: GnuCash-%s (rev %s built %s)"),
+    ver_string = g_strdup_printf(_("Version: systecash-%s (rev %s built %s)"),
                                  VERSION, GNUCASH_SCM_REV, GNUCASH_BUILD_DATE);
 #endif
 

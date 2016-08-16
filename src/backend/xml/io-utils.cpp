@@ -1,5 +1,5 @@
 /********************************************************************\
- * io-utils.c -- implementation for gnucash file i/o utils          *
+ * io-utils.c -- implementation for systecash file i/o utils          *
  *                                                                  *
  * Copyright (C) 2001 James LewisMoss <dres@debian.org>             *
  *                                                                  *

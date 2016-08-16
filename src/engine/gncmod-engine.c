@@ -46,13 +46,13 @@ int libgncmod_engine_gnc_module_age      = 0;
 char *
 libgncmod_engine_gnc_module_path(void)
 {
-    return g_strdup("gnucash/engine");
+    return g_strdup("systecash/engine");
 }
 
 char *
 libgncmod_engine_gnc_module_description(void)
 {
-    return g_strdup("The GnuCash accounting engine");
+    return g_strdup("The systecash accounting engine");
 }
 
 extern SCM scm_init_sw_engine_module(void);
@@ -68,8 +68,8 @@ libgncmod_engine_gnc_module_init(int refcount)
 
     scm_init_sw_engine_module();
     scm_c_eval_string("(use-modules (sw_engine))");
-    scm_c_eval_string("(use-modules (gnucash engine))");
-    scm_c_eval_string("(use-modules (gnucash business-core))");
+    scm_c_eval_string("(use-modules (systecash engine))");
+    scm_c_eval_string("(use-modules (systecash business-core))");
 
     return TRUE;
 }

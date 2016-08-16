@@ -1,4 +1,4 @@
-/** \page gnome2 GnuCash Gnome2 architecture
+/** \page gnome2 systecash Gnome2 architecture
 
 \section gnome2names Naming
 
@@ -46,11 +46,11 @@ for any given item.
 
 \section gnome2windows  Windowing Architecture
 
-In the gtk1/gnome1 (hereafter g1) version of Gnucash, the windowing
+In the gtk1/gnome1 (hereafter g1) version of systecash, the windowing
 was based on the "Multiple Document Interface" of g1.  This code was
 hard to use in the first place, and has been deprecated in g2.
 
-The g2 version of gnucash is a series of plugin modules designed
+The g2 version of systecash is a series of plugin modules designed
 around the g2 concepts of "actions" and "menu merging".  These
 concepts will be integrated into gtk2.4 release.
 
@@ -77,13 +77,13 @@ with the plugin manager code.
 API: \ref GuiTreeModel
 
 As mentioned above, the ctree widget has been deprecated in g2.  Some
-parts of gnucash have been converted to the new style using either a
+parts of systecash have been converted to the new style using either a
 GtkTreeModel/GtkTreeView pair of widgets, or using a
 GtkTreeModel/GtkTreeModelFilter/GtkTreeModelSort/GtkTreeView set of
 stacked widgets.  The account tree is presented here as example of the
 latter.
 
-In gnucash, all the accounts are stored in the engine.  The account
+In systecash, all the accounts are stored in the engine.  The account
 tree "model" (a GtkTreeModel) provides a representation of these
 accounts that can be used by one or more views presented on the user's
 screen.  This code is designed so that there is only one single model

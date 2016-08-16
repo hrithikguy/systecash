@@ -2,7 +2,7 @@
 SUBDIRS = gnumeric
 
 gncscmdir = ${GNC_SCM_INSTALL_DIR}
-gncscmmoddir = ${GNC_SCM_INSTALL_DIR}/gnucash
+gncscmmoddir = ${GNC_SCM_INSTALL_DIR}/systecash
 
 gncscmmod_DATA = main.scm price-quotes.scm printf.scm
 
@@ -28,14 +28,14 @@ SCM_FILE_LINKS = \
 endif
 
 .scm-links: 
-	$(RM) -rf gnucash
-	mkdir -p  gnucash
+	$(RM) -rf systecash
+	mkdir -p  systecash
 if GNUCASH_SEPARATE_BUILDDIR
 	for X in ${SCM_FILE_LINKS} ; do \
 	  $(LN_S) -f ${srcdir}/$$X . ; \
 	done
 endif
-	( cd gnucash; for A in $(gncscmmod_DATA) ; do $(LN_S) -f ../$$A . ; done )
+	( cd systecash; for A in $(gncscmmod_DATA) ; do $(LN_S) -f ../$$A . ; done )
 if ! OS_WIN32
 # Windows knows no "ln -s" but uses "cp": must copy every time (see bug #566567).
 	touch .scm-links
@@ -54,7 +54,7 @@ GUILE_COMPILE_ENV = \
 	$(shell ${abs_top_srcdir}/src/gnc-test-env.pl --noexports ${GUILE_COMPILE_ENV}) \
 	$(GUILD) compile -o $@ $<
 
-gncscmmodcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@/gnucash
+gncscmmodcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@/systecash
 gncscmmodcache_DATA = $(gncscmmod_DATA:.scm=.go)
 
 gncscmcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@
@@ -62,7 +62,7 @@ gncscmcache_DATA = $(gncscm_DATA:.scm=.go)
 endif
 
 clean-local:
-	$(RM) -rf gnucash
+	$(RM) -rf systecash
 
 SCM_FILES = ${gncscm_DATA} ${gncscmmod_DATA}
 

@@ -1,12 +1,12 @@
-Using CMake to build GnuCash
+Using CMake to build systecash
 ============================
 
 == Intro
 
 As part of his CuteCash work, Christian Stimming added support for
-using http://www.cmake.org[CMake] to build the part of GnuCash that
+using http://www.cmake.org[CMake] to build the part of systecash that
 went into CuteCash. This work extends the use of CMake to cover all of
-GnuCash proper such that GnuCash itself can be fully compiled with
+systecash proper such that systecash itself can be fully compiled with
 CMake.
 
 Some advantages of using CMake:
@@ -48,7 +48,7 @@ similar targets. Other limitations include:
 
   * Visual Studio support is out of scope. While CMake supports
     generating build files for Visual Studio on Windows, it is not
-    likely at this point that either GnuCash or all of its
+    likely at this point that either systecash or all of its
     dependencies can be built using the Microsoft compiler tool chain.
 
 == Known Issues
@@ -66,7 +66,7 @@ similar targets. Other limitations include:
 The CMake setup does not support building and installing dependencies
 (although it probably could some day). So you need to have the
 dependencies available, most likely by having run the existing
-Autotools build at least once. Various resources on the GnuCash wiki
+Autotools build at least once. Various resources on the systecash wiki
 will have advice on how to do this.
 
 You will need to have CMake and optionally Ninja installed, either
@@ -79,8 +79,8 @@ The next step is to invoke CMake to generate the build system. Before
 running CMake, you need to create a build directory:
 
   $ cd ..   # back to workdir
-  $ mkdir gnucash-build
-  $ cd gnucash-build
+  $ mkdir systecash-build
+  $ cd systecash-build
 
 Then decide what cmake command line options you will need:
 
@@ -101,7 +101,7 @@ Then decide what cmake command line options you will need:
  * If you don't specify a generator, Makefiles will be generated.
 
  * Finally, put the path to your source directory last.
-   Here, that is ../gnucash
+   Here, that is ../systecash
 
  * There are other options available; look in the `OPTIONS` section of
    the top-level `CMakeLists.txt` file.  For example, you can disable
@@ -111,19 +111,19 @@ Some examples:
 
  * Build on Linux, don't want to install, use the Makefile generator:
 
-   $ cmake ../gnucash
+   $ cmake ../systecash
 
- * Build on Linux, install to /tmp/gnucash, use Ninja generator:
+ * Build on Linux, install to /tmp/systecash, use Ninja generator:
 
-   $ cmake -D CMAKE_INSTALL_PREFIX=/tmp/gnucash -G Ninja ../gnucash
+   $ cmake -D CMAKE_INSTALL_PREFIX=/tmp/systecash -G Ninja ../systecash
 
- * Build on OS X, install to /tmp/gnucash, use Ninja generator:
+ * Build on OS X, install to /tmp/systecash, use Ninja generator:
 
-   $ cmake -D CMAKE_INSTALL_PREFIX=/tmp/gnucash -D CMAKE_PREFIX_PATH=$HOME/gnucash-unstable -G Ninja ../gnucash
+   $ cmake -D CMAKE_INSTALL_PREFIX=/tmp/systecash -D CMAKE_PREFIX_PATH=$HOME/systecash-unstable -G Ninja ../systecash
 
  * The same, but use the Xcode generator:
 
-   $ cmake -D CMAKE_INSTALL_PREFIX=/tmp/gnucash -D CMAKE_PREFIX_PATH=$HOME/gnucash-unstable -G Xcode ../gnucash
+   $ cmake -D CMAKE_INSTALL_PREFIX=/tmp/systecash -D CMAKE_PREFIX_PATH=$HOME/systecash-unstable -G Xcode ../systecash
 
 === Building
 
@@ -154,7 +154,7 @@ For Xcode via the command line (see below to build from within Xcode):
 
 === Running tests
 
-To run the Gnucash tests (also called checks), use the `check` target.
+To run the systecash tests (also called checks), use the `check` target.
 For ninja, use:
 
    $ ninja check
@@ -170,12 +170,12 @@ For Xcode via the command line:
 A test summary will appear in the terminal. Full logs are available
 in at Testing/Temporary/LastTest.log in the build directory.
 
-=== Launching GnuCash
+=== Launching systecash
 
 Assuming the build completes successfully, in all cases you can run
 directly from the build directory:
 
-   $ bin/gnucash
+   $ bin/systecash
 
 In you chose to install, you can switch to the install directory and
 do the same.
@@ -185,7 +185,7 @@ do the same.
 
 
 For Windows, follow the instructions at
-https://github.com/Gnucash/gnucash-on-windows to the point where you
+https://github.com/systecash/systecash-on-windows to the point where you
 are ready to run install.sh.
 
 Edit custom.sh to add these lines at the bottom:
@@ -197,7 +197,7 @@ Ensure that your custom.sh file contains this line:
 
   MSYS_DIR=c:\\gcdev\\mingw\\msys\\1.0
 
-Remove or move any existing install at /c/gcdev/gnucash/inst.
+Remove or move any existing install at /c/gcdev/systecash/inst.
 
 Then continue to follow the existing build instructions.
 
@@ -206,12 +206,12 @@ via dist.sh has not been tested.
 
 == Using Xcode on OS X
 
-CMake can generate build files for Xcode such that GnuCash can be
+CMake can generate build files for Xcode such that systecash can be
 built, run and debugged from within Xcode.  Follow the instructions
 above to the point where you would use `xcodebuild` to launch the
 build. Instead, launch Xcode by doing:
 
-  $ open Gnucash.xcodeproj
+  $ open systecash.xcodeproj
 
 Xcode 7 will pop up a window about Autocreate Schemes. I usually
 choose "Manually Manage Schemes". On the next window, use the "\+"
@@ -222,11 +222,11 @@ the "+" symbol again and choose the "install" scheme.
 Back in the Xcode main window, make sure the "ALL_BUILD" scheme is
 selected (next to the stop symbol).  Click on "ALL_BUILD" and
 then "Edit Scheme". On the "Info" tab, choose the executable to be
-"gnucash".
+"systecash".
 
 Now use Command-B to build (or Product -> Build) to start the
 build. When it finishes, click on the play symbol (or Product
--> Run) to verify that you can launch GnuCash from within Xcode. If
+-> Run) to verify that you can launch systecash from within Xcode. If
 that works, you can now set breakpoints with Xcode and debug away.
 
 To run the install script, click on the "ALL_BUILD" scheme and change

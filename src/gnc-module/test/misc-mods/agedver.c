@@ -37,7 +37,7 @@ int libgncmod_agedver_gnc_module_revision = 0;
 char *
 libgncmod_agedver_gnc_module_path(void)
 {
-    return g_strdup("gnucash/agedver");
+    return g_strdup("systecash/agedver");
 }
 
 char *

@@ -20,14 +20,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash report standard-reports register))
+(define-module (systecash report standard-reports register))
 
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
 (use-modules (srfi srfi-1))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
 (define-macro (addto! alist element)
   `(set! ,alist (cons ,element ,alist)))

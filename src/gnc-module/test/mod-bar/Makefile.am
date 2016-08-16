@@ -36,7 +36,7 @@ endif
 
 EXTRA_DIST = \
   bar.i \
-  gnucash/bar.scm
+  systecash/bar.scm
 
 BUILT_SOURCES = swig-bar.c
 MAINTAINERCLEANFILES = swig-bar.c

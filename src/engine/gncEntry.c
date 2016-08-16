@@ -1531,7 +1531,7 @@ static void entry_free (QofInstance *inst)
 
 void gncEntryCommitEdit (GncEntry *entry)
 {
-    /* GnuCash 2.6.3 and earlier didn't handle entry kvp's... */
+    /* systecash 2.6.3 and earlier didn't handle entry kvp's... */
     if (qof_instance_has_kvp(QOF_INSTANCE(entry)))
         gnc_features_set_used (qof_instance_get_book (QOF_INSTANCE (entry)),
                                GNC_FEATURE_KVP_EXTRA_DATA);

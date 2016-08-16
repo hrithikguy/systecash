@@ -565,7 +565,7 @@
       </object>
       <packing>
         <property name="page_type">confirm</property>
-        <property name="title" translatable="yes">Finish GnuCash Datafile Import</property>
+        <property name="title" translatable="yes">Finish systecash Datafile Import</property>
       </packing>
     </child>
   </object>

@@ -97,8 +97,8 @@
 (define gnc:html-piechart-set-subtitle!
   (record-modifier <html-piechart> 'subtitle))
 
-;; FIXME url's haven't been working since GnuCash 1.x
-;;       GnuCash 2.x switched from guppy to goffice, which
+;; FIXME url's haven't been working since systecash 1.x
+;;       systecash 2.x switched from guppy to goffice, which
 ;;       made it very hard to remain the url functionality
 ;;       At this point I (gjanssens) is in the process of
 ;;       moving from goffice to jqplot for our charts

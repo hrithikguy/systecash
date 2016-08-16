@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-gui-query.h -- functions for creating dialogs for GnuCash    *
+ * gnc-gui-query.h -- functions for creating dialogs for systecash    *
  * Copyright (C) 1998, 1999, 2000 Linas Vepstas                     *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *

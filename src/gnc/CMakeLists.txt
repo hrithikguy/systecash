@@ -57,7 +57,7 @@ SET (gnc_FORMS
 )
 
 SET (gnc_RESOURCES
-  gnucash.qrc
+  systecash.qrc
   gtk-icons.qrc
   fallback-icons.qrc
   stylesheets.qrc

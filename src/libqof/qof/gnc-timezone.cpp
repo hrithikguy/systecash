@@ -628,7 +628,7 @@ TimeZoneProvider::TimeZoneProvider(const std::string& tzname) :  zone_vector {}
 	    //gap in transitions > 1 year, non-dst zone
 	    //change. In the last case the exact date of the change will be
 	    //wrong because boost::local_date::timezone isn't able to
-	    //represent it. For GnuCash's purposes this isn't likely to be
+	    //represent it. For systecash's purposes this isn't likely to be
 	    //important as the last time this sort of transition happened
 	    //was 1946, but we have to handle the case in order to parse
 	    //the tz file.

@@ -13,11 +13,11 @@ in src/engine/FileIOP.h)
 -# Allow user to configure which directory backups should be put into.
    (currently, this is same as current directory).  Requires changes to
    engine FileIOP.h as well as GUI.\n
-   One possible default is ~/.gnucash/data/  (Which is supposed to 
+   One possible default is ~/.systecash/data/  (Which is supposed to 
    be the place where files are saved if no directory is specified.!?)
 -# Prompt the user to make a backup every third save.  Make this number
    configurable. If no default backup path set, prompt to set it,
-   with suggested path being ~/.gnucash/backups/
+   with suggested path being ~/.systecash/backups/
 -# If save format was XML text, then could use RCS ...
 	Alternately,
 	For those that don't know, xdelta is like RCS, but it's designed to

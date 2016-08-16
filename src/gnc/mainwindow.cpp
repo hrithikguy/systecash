@@ -33,7 +33,7 @@
 #include "mainwindow.hpp"
 #include "ui_mainwindow.h"
 
-// gnucash includes
+// systecash includes
 #include <glib/gi18n.h>
 extern "C"
 {
@@ -93,8 +93,8 @@ MainWindow::MainWindow()
     ui->tabWidget->addTab(m_dboard, "Dashboard");
 
     /* Properties used by QSettings */
-    QCoreApplication::setOrganizationName("Gnucash");
-    QCoreApplication::setOrganizationDomain("gnucash.org");
+    QCoreApplication::setOrganizationName("systecash");
+    QCoreApplication::setOrganizationDomain("systecash.org");
     QCoreApplication::setApplicationName("Cutecash");
 
     readSettings();
@@ -106,7 +106,7 @@ MainWindow::MainWindow()
     connect(this, SIGNAL(dashboardVisible(bool)),
             m_dboard, SLOT(transferFundsWidgetButtonToggled(bool)));
 
-    setWindowIcon(QIcon(":/pixmaps/gnucash-icon-64x64.png"));
+    setWindowIcon(QIcon(":/pixmaps/systecash-icon-64x64.png"));
 
     /* Check if the system supports freedesktop standards for icons,
      * if not, then use the bundled icon set. */
@@ -177,7 +177,7 @@ bool MainWindow::on_actionSave_as_triggered()
 void MainWindow::on_actionAbout_triggered()
 {
     QMessageBox::about(this, tr("About Application"),
-                       tr("This is a Gnucash C++ gui example, from the Qt4 Application example. It demonstrates how to "
+                       tr("This is a systecash C++ gui example, from the Qt4 Application example. It demonstrates how to "
                           "write modern GUI applications using Qt, with a menu bar, "
                           "toolbars, and a status bar."));
 }

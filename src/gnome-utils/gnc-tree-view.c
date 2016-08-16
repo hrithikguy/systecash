@@ -1,6 +1,6 @@
 /*
  * gnc-tree-view.c -- new GtkTreeView with extra features used by
- *                    all the tree views in gnucash
+ *                    all the tree views in systecash
  *
  * Copyright (C) 2003,2005 David Hampton <hampton@employees.org>
  *
@@ -27,7 +27,7 @@
 /** @addtogroup GncTreeView
  * @{ */
 /** @file gnc-tree-view.c
-    @brief Base GncTreeView implementation for gnucash trees.
+    @brief Base GncTreeView implementation for systecash trees.
     @author David Hampton <hampton@employees.org>
 */
 
@@ -136,7 +136,7 @@ typedef struct GncTreeViewPrivate
 
 static GObjectClass *parent_class = NULL;
 
-/** Create a new glib type for the base gnucash tree view.
+/** Create a new glib type for the base systecash tree view.
  *
  *  @internal
  *
@@ -170,7 +170,7 @@ gnc_tree_view_get_type (void)
     return gnc_tree_view_type;
 }
 
-/** Initialize the class for the new base gnucash tree view.  This
+/** Initialize the class for the new base systecash tree view.  This
  *  will set up any function pointers that override functions in the
  *  parent class, and also installs the properties that are unique to
  *  this class.
@@ -217,7 +217,7 @@ gnc_tree_view_class_init (GncTreeViewClass *klass)
     gtkobject_class->destroy = gnc_tree_view_destroy;
 }
 
-/** Initialize a new instance of a base gnucash tree view.  This
+/** Initialize a new instance of a base systecash tree view.  This
  *  function allocates and initializes the object private storage
  *  space.  It also adds the new object to a list (for memory tracking
  *  purposes), and sets up a callback for the column drag function.

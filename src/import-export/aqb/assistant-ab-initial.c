@@ -295,8 +295,8 @@ aai_wizard_button_clicked_cb(GtkButton *button, gpointer user_data)
      * application contains the very verbose step-by-step setup wizard
      * for the AqBanking account, and the application is shared with
      * other AqBanking-based financial managers that offer the AqBanking
-     * features (e.g. KMyMoney).  See gnucash-devel discussion here
-     * https://lists.gnucash.org/pipermail/gnucash-devel/2004-December/012351.html
+     * features (e.g. KMyMoney).  See systecash-devel discussion here
+     * https://lists.systecash.org/pipermail/systecash-devel/2004-December/012351.html
      */
     buf = GWEN_Buffer_new(NULL, 300, 0, 0);
     AB_Banking_FindWizard(banking, "", NULL, buf);
@@ -539,7 +539,7 @@ child_exit_cb(GPid pid, gint status, gpointer data)
                "\n\n"
                "If you have installed Qt already, you will have to adapt "
                "the PATH variable of your system appropriately. "
-               "Contact the GnuCash developers if you need further "
+               "Contact the systecash developers if you need further "
                "assistance on how to install Qt correctly."
                "\n\n"
                "Online Banking cannot be setup without Qt. Press \"Close\" "
@@ -607,10 +607,10 @@ update_account_list_acc_cb(AB_ACCOUNT *ab_acc, gpointer user_data)
 
     ab_name = ab_account_longname(ab_acc);
 
-    /* Get corresponding gnucash account */
+    /* Get corresponding systecash account */
     gnc_acc = g_hash_table_lookup(info->gnc_hash, ab_acc);
 
-    /* Build the text for the gnucash account. */
+    /* Build the text for the systecash account. */
     if (gnc_acc)
         gnc_name = gnc_account_get_full_name(gnc_acc);
     else
@@ -882,7 +882,7 @@ gnc_ab_initial_assistant(void)
     gtk_tree_view_append_column(info->account_view, column);
 
     column = gtk_tree_view_column_new_with_attributes(
-                 _("GnuCash Account Name"), gtk_cell_renderer_text_new(),
+                 _("systecash Account Name"), gtk_cell_renderer_text_new(),
                  "text", ACCOUNT_LIST_COL_GNC_NAME, (gchar*) NULL);
     gtk_tree_view_column_set_expand(column, TRUE);
     gtk_tree_view_append_column(info->account_view, column);

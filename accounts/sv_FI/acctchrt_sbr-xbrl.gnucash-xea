@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gnc-account-example
-        xmlns="http://www.gnucash.org/XML/"
-        xmlns:act="http://www.gnucash.org/XML/act"
-        xmlns:cmdty="http://www.gnucash.org/XML/cmdty"
-        xmlns:gnc="http://www.gnucash.org/XML/gnc"
-        xmlns:gnc-act="http://www.gnucash.org/XML/gnc-act"
-        xmlns:slot="http://www.gnucash.org/XML/slot"
+        xmlns="http://www.systecash.org/XML/"
+        xmlns:act="http://www.systecash.org/XML/act"
+        xmlns:cmdty="http://www.systecash.org/XML/cmdty"
+        xmlns:gnc="http://www.systecash.org/XML/gnc"
+        xmlns:gnc-act="http://www.systecash.org/XML/gnc-act"
+        xmlns:slot="http://www.systecash.org/XML/slot"
 >
     <gnc-act:title>Företag och organisationer</gnc-act:title>
     <gnc-act:short-description>Företag och organisationer</gnc-act:short-description>

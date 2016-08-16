@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-ui.h - High level UI functions for GnuCash                   *
+ * gnc-ui.h - High level UI functions for systecash                   *
  * Copyright (C) 1997 Robin D. Clark                                *
  * Copyright (C) 1999, 2000 Rob Browning <rlb@cs.utexas.edu>        *
  *                                                                  *
@@ -40,14 +40,14 @@
 
 /** Help Files ******************************************************/
 #ifdef G_OS_WIN32
-#    define HF_GUIDE         "gnucash-guide.chm"
-#    define HF_HELP          "gnucash-help.chm"
+#    define HF_GUIDE         "systecash-guide.chm"
+#    define HF_HELP          "systecash-help.chm"
 #elif defined MAC_INTEGRATION
-#    define HF_GUIDE         "Gnucash Guide"
-#    define HF_HELP          "Gnucash Help"
+#    define HF_GUIDE         "systecash Guide"
+#    define HF_HELP          "systecash Help"
 #else
-#    define HF_GUIDE         "gnucash-guide"
-#    define HF_HELP          "gnucash-help"
+#    define HF_GUIDE         "systecash-guide"
+#    define HF_HELP          "systecash-help"
 #endif
 
 /** Links in the Help Files *****************************************/

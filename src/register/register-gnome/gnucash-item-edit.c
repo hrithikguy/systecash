@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnucash-item-edit.c -- cell editor cut-n-paste from gnumeric     *
+ * systecash-item-edit.c -- cell editor cut-n-paste from gnumeric     *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
  * modify it under the terms of the GNU General Public License as   *
@@ -21,7 +21,7 @@
 \********************************************************************/
 
 /*
- *  An editor for the gnucash sheet.
+ *  An editor for the systecash sheet.
  *  Cut and pasted from the gnumeric item-edit.c file.
  *
  *  And then substantially rewritten by Dave Peticolas <dave@krondo.com>.
@@ -32,13 +32,13 @@
 
 #include <string.h>
 
-#include "gnucash-color.h"
-#include "gnucash-cursor.h"
-#include "gnucash-item-edit.h"
-#include "gnucash-grid.h"
-#include "gnucash-sheet.h"
-#include "gnucash-sheetP.h"
-#include "gnucash-style.h"
+#include "systecash-color.h"
+#include "systecash-cursor.h"
+#include "systecash-item-edit.h"
+#include "systecash-grid.h"
+#include "systecash-sheet.h"
+#include "systecash-sheetP.h"
+#include "systecash-style.h"
 
 
 /* FIXME GNOME2 Port
@@ -100,18 +100,18 @@ gnc_item_edit_get_pixel_coords (GncItemEdit *item_edit,
                                 int *x, int *y,
                                 int *w, int *h)
 {
-    GnucashSheet *sheet = item_edit->sheet;
+    systecashSheet *sheet = item_edit->sheet;
     SheetBlock *block;
     int xd, yd;
 
-    block = gnucash_sheet_get_block (sheet, item_edit->virt_loc.vcell_loc);
+    block = systecash_sheet_get_block (sheet, item_edit->virt_loc.vcell_loc);
     if (block == NULL)
         return;
 
     xd = block->origin_x;
     yd = block->origin_y;
 
-    gnucash_sheet_style_get_cell_pixel_rel_coords
+    systecash_sheet_style_get_cell_pixel_rel_coords
     (item_edit->style,
      item_edit->virt_loc.phys_row_offset,
      item_edit->virt_loc.phys_col_offset,
@@ -185,7 +185,7 @@ gnc_item_edit_draw_info (GncItemEdit *item_edit, int x, int y, TextDrawInfo *inf
     PangoRectangle strong_pos;
     PangoAttribute *attr;
     PangoAttrList *attr_list;
-    GnucashSheet *sheet;
+    systecashSheet *sheet;
 
     sheet = GNUCASH_SHEET (item_edit->sheet);
     table = item_edit->sheet->table;
@@ -204,9 +204,9 @@ gnc_item_edit_draw_info (GncItemEdit *item_edit, int x, int y, TextDrawInfo *inf
     {
         argb = gnc_table_get_bg_color (table, item_edit->virt_loc,
                                        &hatching);
-        info->bg_color = gnucash_color_argb_to_gdk (argb);
+        info->bg_color = systecash_color_argb_to_gdk (argb);
         argb = gnc_table_get_fg_color (table, item_edit->virt_loc);
-        info->fg_color = gnucash_color_argb_to_gdk (argb);
+        info->fg_color = systecash_color_argb_to_gdk (argb);
     }
 
     info->hatching = hatching;
@@ -363,7 +363,7 @@ gnc_item_edit_draw (GnomeCanvasItem *item, GdkDrawable *drawable,
                         info.bg_rect.width, info.bg_rect.height);
 
     if (info.hatching)
-        gnucash_draw_hatching (drawable, item_edit->gc,
+        systecash_draw_hatching (drawable, item_edit->gc,
                                info.hatch_rect.x,
                                info.hatch_rect.y,
                                info.hatch_rect.width,
@@ -678,9 +678,9 @@ gnc_item_edit_set_cursor_pos (GncItemEdit *item_edit,
     cell_row = virt_loc.phys_row_offset;
     cell_col = virt_loc.phys_col_offset;
 
-    style = gnucash_sheet_get_style (item_edit->sheet, virt_loc.vcell_loc);
+    style = systecash_sheet_get_style (item_edit->sheet, virt_loc.vcell_loc);
 
-    cd = gnucash_style_get_cell_dimensions (style, cell_row, cell_col);
+    cd = systecash_style_get_cell_dimensions (style, cell_row, cell_col);
 
     if (!virt_loc_equal (virt_loc, item_edit->virt_loc))
         return FALSE;
@@ -767,8 +767,8 @@ gnc_item_edit_set_editor (GncItemEdit *item_edit, void *data)
 void
 gnc_item_edit_configure (GncItemEdit *item_edit)
 {
-    GnucashSheet *sheet = item_edit->sheet;
-    GnucashItemCursor *cursor;
+    systecashSheet *sheet = item_edit->sheet;
+    systecashItemCursor *cursor;
 
     cursor = GNUCASH_ITEM_CURSOR
              (GNUCASH_CURSOR(sheet->cursor)->cursor[GNUCASH_CURSOR_BLOCK]);
@@ -786,7 +786,7 @@ gnc_item_edit_configure (GncItemEdit *item_edit)
     }
 
     item_edit->style =
-        gnucash_sheet_get_style (item_edit->sheet,
+        systecash_sheet_get_style (item_edit->sheet,
                                  item_edit->virt_loc.vcell_loc);
 
     cursor = GNUCASH_ITEM_CURSOR
@@ -1208,7 +1208,7 @@ create_popup_toggle(GnomeCanvasGroup *parent, PopupToggle *pt)
 
 
 GnomeCanvasItem *
-gnc_item_edit_new (GnomeCanvasGroup *parent, GnucashSheet *sheet, GtkWidget *entry)
+gnc_item_edit_new (GnomeCanvasGroup *parent, systecashSheet *sheet, GtkWidget *entry)
 {
     static const GtkTargetEntry targets[] =
     {
@@ -1281,7 +1281,7 @@ gnc_item_edit_show_popup (GncItemEdit *item_edit)
     GtkToggleButton *toggle;
     GtkAnchorType popup_anchor;
     GtkAllocation alloc;
-    GnucashSheet *sheet;
+    systecashSheet *sheet;
     gint x, y, w, h;
     gint y_offset;
     gint popup_x, popup_y;

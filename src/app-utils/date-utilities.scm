@@ -20,9 +20,9 @@
 ;; 51 Franklin Street, Fifth Floor    Fax:    +1-617-542-2652
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 
-(use-modules (gnucash core-utils)
-             (gnucash printf)
-             (gnucash gettext))
+(use-modules (systecash core-utils)
+             (systecash printf)
+             (systecash gettext))
 
 (define gnc:reldate-list '())
 
@@ -816,7 +816,7 @@
       (gnc:date->timepair now))))
 
 ;; There is no GNC:RELATIVE-DATES list like the one mentioned in
-;; gnucash-design.info, is there? Here are the currently defined
+;; systecash-design.info, is there? Here are the currently defined
 ;; items, loosely grouped.
 ;;today
 ;;start-cal-year end-cal-year start-prev-year end-prev-year

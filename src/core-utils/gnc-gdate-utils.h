@@ -26,7 +26,7 @@
 /** @addtogroup GDate GDate Utilities
 
     This file provides routines that help make it easier to use GDates
-    from within Gnucash.  A GDate is a data strucutre provided by GLib
+    from within systecash.  A GDate is a data strucutre provided by GLib
     that handles dates from year 1 to year 9999.
 
     @{ */

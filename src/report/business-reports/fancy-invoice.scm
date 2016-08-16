@@ -23,7 +23,7 @@
 
 
 ;; Fancy Invoice customized from "invoice.scm"
-;; Customized by:  Oliver Jones <gnucash at oliverstech dot com>
+;; Customized by:  Oliver Jones <systecash at oliverstech dot com>
 ;;
 ;; WARNING: customizations are hard-coded, some translations might be
 ;; broken and it won't work for bills/expense vouchers
@@ -41,21 +41,21 @@
 ;; This is a quick and dirty hack. The proper way to do this (when I
 ;; or someone else will have time) is to have the user supply an HTML
 ;; template. The most common used templates will be distributed with
-;; gnucash.
+;; systecash.
 
 ;; Modifed to use settable options instead of the hard coded ones.
 ;; modified by Brian Dolbec <dol-sen at telus dot net> Feb. 6, 2006
 
-(define-module (gnucash report fancy-invoice))
+(define-module (systecash report fancy-invoice))
 
 (use-modules (srfi srfi-1))
-(use-modules (gnucash printf))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash printf))
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(gnc:module-load "gnucash/report/report-system" 0)
-(use-modules (gnucash report standard-reports))
-(use-modules (gnucash report business-reports))
+(gnc:module-load "systecash/report/report-system" 0)
+(use-modules (systecash report standard-reports))
+(use-modules (systecash report business-reports))
 
 (define-macro (addto! alist element)
   `(set! ,alist (cons ,element ,alist)))

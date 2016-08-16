@@ -4,7 +4,7 @@
       A Simple Checkbook
     </gnc-act:title>
     <gnc-act:short-description>
-     Dette er et minimums sett av kontoer for å bruke GnuCash.
+     Dette er et minimums sett av kontoer for å bruke systecash.
     </gnc-act:short-description>
     <gnc-act:long-description>
      Use this if you just want to balance your checkbook.  Later on, you can start tracking income and expenses in more detail if you feel the need.

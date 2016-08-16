@@ -102,30 +102,30 @@
  </xsl:variable>
  <xsl:variable name="branches">
   <branch>
-   <prefix>gnucash/branches/aqbanking3</prefix>
+   <prefix>systecash/branches/aqbanking3</prefix>
   </branch>
   <branch>
-   <prefix>gnucash/branches/csv-import</prefix>
+   <prefix>systecash/branches/csv-import</prefix>
   </branch>
   <branch>
-   <prefix>gnucash/branches/reshuffle-modules</prefix>
+   <prefix>systecash/branches/reshuffle-modules</prefix>
   </branch>
   <branch>
-   <prefix>gnucash/branches/deprecated-cleanup</prefix>
+   <prefix>systecash/branches/deprecated-cleanup</prefix>
   </branch>
   <branch>
-   <prefix>gnucash/branches/gobject-engine-dev-warlord</prefix>
+   <prefix>systecash/branches/gobject-engine-dev-warlord</prefix>
   </branch>
   <branch>
-   <prefix>gnucash/branches/remove-group2</prefix>
+   <prefix>systecash/branches/remove-group2</prefix>
   </branch>
   <branch>
-   <prefix>gnucash/branches/sx-cleanup</prefix>
+   <prefix>systecash/branches/sx-cleanup</prefix>
   </branch>
  </xsl:variable>
  <xsl:variable name="sp_branches" select="exsl:node-set($branches)"/>
  <xsl:variable name="sp_root">
-  <xsl:text>gnucash/</xsl:text>
+  <xsl:text>systecash/</xsl:text>
  </xsl:variable>
 
  <xsl:template match="log">

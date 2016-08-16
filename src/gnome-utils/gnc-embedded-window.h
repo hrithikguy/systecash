@@ -1,6 +1,6 @@
 /*
  * gnc-embedded-window.h -- GtkWindow which represents an
- *	embedded GnuCash window.
+ *	embedded systecash window.
  *
  * Copyright (C) 2003 Jan Arne Petersen <jpetersen@uni-bonn.de>
  * Copyright (C) 2003 David Hampton <hampton@employees.org>

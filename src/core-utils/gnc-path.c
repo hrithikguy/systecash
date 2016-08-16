@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-path.c -- Path lookup of gnucash installation locations      *
+ * gnc-path.c -- Path lookup of systecash installation locations      *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
  * modify it under the terms of the GNU General Public License as   *
@@ -52,39 +52,39 @@ gchar *gnc_path_get_libdir()
 }
 
 /** Returns the datadir path, usually
- * "$prefix/share/gnucash". Needed for gnc_gnome_locate_*().
+ * "$prefix/share/systecash". Needed for gnc_gnome_locate_*().
  *
  * @returns A newly allocated string. */
 gchar *gnc_path_get_pkgdatadir()
 {
     gchar *datadir = gnc_gbr_find_data_dir (DATADIR);
-    gchar *result = g_build_filename (datadir, "gnucash", (char*)NULL);
+    gchar *result = g_build_filename (datadir, "systecash", (char*)NULL);
     g_free (datadir);
     //printf("Returning pkgdatadir %s\n", result);
     return result;
 }
 
 /** Returns the docdir path, usually
- * "$prefix/share/doc/gnucash".
+ * "$prefix/share/doc/systecash".
  *
  * @returns A newly allocated string. */
 gchar *gnc_path_get_pkgdocdir()
 {
     gchar *docdir = gnc_gbr_find_data_dir (DATADIR);
-    gchar *result = g_build_filename (docdir, "doc", "gnucash", (char*)NULL);
+    gchar *result = g_build_filename (docdir, "doc", "systecash", (char*)NULL);
     g_free (docdir);
     //printf("Returning pkgdocdir %s\n", result);
     return result;
 }
 
 /** Returns the sysconfdir path, usually
- * "$prefix/etc/gnucash".
+ * "$prefix/etc/systecash".
  *
  * @returns A newly allocated string. */
 gchar *gnc_path_get_pkgsysconfdir()
 {
     gchar *sysconfdir = gnc_gbr_find_etc_dir (SYSCONFDIR);
-    gchar *result = g_build_filename (sysconfdir, "gnucash", (char*)NULL);
+    gchar *result = g_build_filename (sysconfdir, "systecash", (char*)NULL);
     g_free (sysconfdir);
     //printf("Returning pkgsysconfdir %s\n", result);
     return result;
@@ -92,7 +92,7 @@ gchar *gnc_path_get_pkgsysconfdir()
 
 
 /** Returns the pkglibdir path, usually
- * "$prefix/lib/gnucash".
+ * "$prefix/lib/systecash".
  *
  * @returns A newly allocated string. */
 gchar *gnc_path_get_pkglibdir()
@@ -102,7 +102,7 @@ gchar *gnc_path_get_pkglibdir()
     /* Workaround for Bug 618646, {pkglibdir} will be bin/ on Windows */
     gchar *result = gnc_gbr_find_bin_dir(libdir);
 #else
-    gchar *result = g_build_filename (libdir, "gnucash", (char*)NULL);
+    gchar *result = g_build_filename (libdir, "systecash", (char*)NULL);
 #endif
     g_free (libdir);
     //printf("Returning pkglibdir %s\n", result);
@@ -110,7 +110,7 @@ gchar *gnc_path_get_pkglibdir()
 }
 
 /** Returns the gtkbuilder file path, usually
- * "$prefix/share/gnucash/gtkbuilder".
+ * "$prefix/share/systecash/gtkbuilder".
  *
  * @returns A newly allocated string. */
 gchar *gnc_path_get_gtkbuilderdir()
@@ -136,7 +136,7 @@ gchar *gnc_path_get_localedir()
 }
 
 /** Returns the accounts file path, usually
- * "$prefix/share/gnucash/accounts".
+ * "$prefix/share/systecash/accounts".
  *
  * @returns A newly allocated string. */
 gchar *gnc_path_get_accountsdir()
@@ -149,7 +149,7 @@ gchar *gnc_path_get_accountsdir()
 }
 
 /** Returns the file path to the report directory, usually
- * "$prefix/share/gnucash/scm/gnucash/report".
+ * "$prefix/share/systecash/scm/systecash/report".
  *
  * @returns A newly allocated string. */
 gchar *gnc_path_get_reportdir()
@@ -174,7 +174,7 @@ gchar *gnc_path_get_reportdir()
          */
         gchar *pkgdatadir = gnc_path_get_pkgdatadir ();
         result = g_build_filename (pkgdatadir, "scm",
-                                   "gnucash", "report", (char*)NULL);
+                                   "systecash", "report", (char*)NULL);
         g_free (pkgdatadir);
     }
     //printf("Returning stdreportsdir %s\n", result);
@@ -183,7 +183,7 @@ gchar *gnc_path_get_reportdir()
 
 /** Returns the file path to the standard
  * reports, usually
- * "$prefix/share/gnucash/scm/gnucash/report/standard-reports".
+ * "$prefix/share/systecash/scm/systecash/report/standard-reports".
  *
  * @returns A newly allocated string. */
 gchar *gnc_path_get_stdreportsdir()
@@ -192,7 +192,7 @@ gchar *gnc_path_get_stdreportsdir()
     gchar *reportdir = gnc_path_get_reportdir ();
     if (g_getenv ("GNC_UNINSTALLED"))
     {
-        result = g_build_filename (reportdir, "standard-reports", "gnucash",
+        result = g_build_filename (reportdir, "standard-reports", "systecash",
                                    "report", "standard-reports", NULL);
     }
     else

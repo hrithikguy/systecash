@@ -28,8 +28,8 @@
 #   @author Mark Jenkins, ParIT Worker Co-operative <mark@parit.ca>
 #   @ingroup python_bindings_examples
 
-from gnucash import Session, Account, Transaction, Split, GncNumeric
-from gnucash.gnucash_core_c import \
+from systecash import Session, Account, Transaction, Split, GncNumeric
+from systecash.systecash_core_c import \
     GNC_DENOM_AUTO, GNC_HOW_DENOM_EXACT, \
     ACCT_TYPE_ASSET, ACCT_TYPE_BANK, ACCT_TYPE_CASH, ACCT_TYPE_CHECKING, \
     ACCT_TYPE_CREDIT, ACCT_TYPE_EQUITY, ACCT_TYPE_EXPENSE, ACCT_TYPE_INCOME, \
@@ -40,7 +40,7 @@ from sys import argv
 from os.path import abspath
 from datetime import date
 
-# This script takes a gnucash url
+# This script takes a systecash url
 # and creates a new file/db at a second url that has the same
 # account tree and an equivilent opening balance on all the simple balance
 # sheet accounts (not for income and expense accounts)
@@ -51,33 +51,33 @@ from datetime import date
 # mutual, and trading, you'll have to put the opening balance in yourself
 #
 # Invocation examples:
-# gnucash-env python new_book_with_opening_balances.py \
-#   '/home/mark/test.gnucash'
-#   'sqlite3:///home/mark/new_test.gnucash'
+# systecash-env python new_book_with_opening_balances.py \
+#   '/home/mark/test.systecash'
+#   'sqlite3:///home/mark/new_test.systecash'
 #
-# gnucash-env python new_book_with_opening_balances.py \
-#   '/home/mark/test.gnucash' \
-#   'xml:///crypthome/mark/parit-financial-system/new_test.gnucash'
+# systecash-env python new_book_with_opening_balances.py \
+#   '/home/mark/test.systecash' \
+#   'xml:///crypthome/mark/parit-financial-system/new_test.systecash'
 #
-# Remember that the gnucash python package has to be in your PYTHONPATH
-# if you're installed GnuCash in a non-standard location, you'll have to do
+# Remember that the systecash python package has to be in your PYTHONPATH
+# if you're installed systecash in a non-standard location, you'll have to do
 # something like this
-# export PYTHONPATH=gnucash_install_path/lib/python2.x/site-packages/
+# export PYTHONPATH=systecash_install_path/lib/python2.x/site-packages/
 
-# argv[1] should be the path to an existing gnucash file/database
-# For a file, simply pass the pathname. GnuCash will determine the data format
+# argv[1] should be the path to an existing systecash file/database
+# For a file, simply pass the pathname. systecash will determine the data format
 # xml or sqlite3 automatically.
 # For a database you can use these forms:
 #   mysql://user:password@host/dbname
 #   postgres://user:password@host[:port]/dbname (the port is optional)
 #
-# argv[2] should be the path for the new gnucash file/database
+# argv[2] should be the path for the new systecash file/database
 # For a file, simply pass the pathname prefixed with the requested data format
 # like:
-#   xml:///home/blah/blah.gnucash
-#   sqlite3:///home/blah/blah.gnucash
+#   xml:///home/blah/blah.systecash
+#   sqlite3:///home/blah/blah.systecash
 # Paths can also be relative, for example:
-#   xml://from-here/to/there/blah.gnucash
+#   xml://from-here/to/there/blah.systecash
 # For a database you can use these forms:
 #   mysql://user:password@host/dbname
 #   postgres://user:password@host[:port]/dbname (the port is optional)
@@ -293,8 +293,8 @@ def main():
         print 'not enough parameters'
         print 'usage: new_book_with_opening_balances.py {source_book_url} {destination_book_url}'
         print 'examples:'
-        print "gnucash-env python new_book_with_opening_balances.py '/home/username/test.gnucash' 'sqlite3:///home/username/new_test.gnucash'"
-        print "gnucash-env python new_book_with_opening_balances.py '/home/username/test.gnucash' 'xml:///crypthome/username/finances/new_test.gnucash'"
+        print "systecash-env python new_book_with_opening_balances.py '/home/username/test.systecash' 'sqlite3:///home/username/new_test.systecash'"
+        print "systecash-env python new_book_with_opening_balances.py '/home/username/test.systecash' 'xml:///crypthome/username/finances/new_test.systecash'"
         return
 
     #have everything in a try block to unable us to release our hold on stuff to the extent possible

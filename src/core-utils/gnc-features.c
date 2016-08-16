@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-features.c -- manage GnuCash features table                  *
+ * gnc-features.c -- manage systecash features table                  *
  * Copyright (C) 2011 Derek Atkins <derek@ihtfp.com>                *
  * Copyright (C) 2012 Geert Janssens <geert@kobaltwit.be>           *
  *                                                                  *
@@ -41,11 +41,11 @@ typedef struct
 static GHashTable *features_table = NULL;
 static gncFeature known_features[] =
 {
-    { GNC_FEATURE_CREDIT_NOTES, "Customer and vendor credit notes (requires at least GnuCash 2.5.0)" },
-    { GNC_FEATURE_NUM_FIELD_SOURCE, "User specifies source of 'num' field'; either transaction number or split action (requires at least GnuCash 2.5.0)" },
-    { GNC_FEATURE_KVP_EXTRA_DATA, "Extra data for addresses, jobs or invoice entries (requires at least GnuCash 2.6.4)" },
-    { GNC_FEATURE_BOOK_CURRENCY, "User specifies a 'book-currency'; costs of other currencies/commodities tracked in terms of book-currency (requires at least GnuCash 2.7.0)" },
-    { GNC_FEATURE_GUID_BAYESIAN, "Use account GUID as key for Bayesian data (requires at least GnuCash 2.6.12)" },
+    { GNC_FEATURE_CREDIT_NOTES, "Customer and vendor credit notes (requires at least systecash 2.5.0)" },
+    { GNC_FEATURE_NUM_FIELD_SOURCE, "User specifies source of 'num' field'; either transaction number or split action (requires at least systecash 2.5.0)" },
+    { GNC_FEATURE_KVP_EXTRA_DATA, "Extra data for addresses, jobs or invoice entries (requires at least systecash 2.6.4)" },
+    { GNC_FEATURE_BOOK_CURRENCY, "User specifies a 'book-currency'; costs of other currencies/commodities tracked in terms of book-currency (requires at least systecash 2.7.0)" },
+    { GNC_FEATURE_GUID_BAYESIAN, "Use account GUID as key for Bayesian data (requires at least systecash 2.6.12)" },
     { NULL },
 };
 
@@ -90,7 +90,7 @@ static void gnc_features_test_one(gpointer pkey, gpointer value,
 				       (gpointer)feature_desc);
 }
 
-/* Check if the session requires features unknown to this version of GnuCash.
+/* Check if the session requires features unknown to this version of systecash.
  *
  * Returns a message to display if we found unknown features, NULL if
  * we're okay.
@@ -111,8 +111,8 @@ gchar *gnc_features_test_unknown (QofBook *book)
     {
 	GList *i;
 	char* msg = g_strdup(_("This Dataset contains features not supported "
-			       "by this version of GnuCash. You must use a "
-			       "newer version of GnuCash in order to support "
+			       "by this version of systecash. You must use a "
+			       "newer version of systecash in order to support "
 			       "the following features:"
                              ));
 

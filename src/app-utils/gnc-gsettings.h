@@ -1,6 +1,6 @@
 /********************************************************************\
  * gnc-gsettings.h -- utility functions for storing/retrieving      *
- *              data in the GSettings database for GnuCash          *
+ *              data in the GSettings database for systecash          *
  * Copyright (C) 2013 Geert Janssens <geert@kobaltwit.be>           *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
@@ -27,17 +27,17 @@
 /** @addtogroup GSettings GSettings Utilities
 
     The API in this file is designed to make it easy to use the GSettings
-    system from within Gnucash.  GSettings is a shared key/value storage
+    system from within systecash.  GSettings is a shared key/value storage
     system.
 
     The main benefits of these routines are that they
     -# maintain a list of GSettings objects (one per schema),
-    -# convert gnucash internal schema names into full gsettings schema id's, and
+    -# convert systecash internal schema names into full gsettings schema id's, and
     -# optionally take care of error checking on return values.
 
     Note that this api should not be called directly. Instead use
     the gnc_gsettings_load_backend function to configure gsettings
-    as backend for the gnucash preferences api and then use
+    as backend for the systecash preferences api and then use
     the gnc_prefs_* functions instead to work with preferences.
 
     @{ */
@@ -52,13 +52,13 @@
 
 #include <gio/gio.h>
 
-#define GSET_SCHEMA_PREFIX            "org.gnucash"
+#define GSET_SCHEMA_PREFIX            "org.systecash"
 
 /** Convert a partial schema name into a complete gsettings schema name.
  *
  *  This function takes a partial gsettings schema name and converts
  *  it into a fully qualified gsettings schema name.  It does this
- *  by prepending the standard prefix for all gnucash schemas.
+ *  by prepending the standard prefix for all systecash schemas.
  *  If the schema is already fully qualified (i.e. begins with the
  *  default schema prefix, this routine will not change it.
  *
@@ -81,7 +81,7 @@ void gnc_gsettings_set_prefix (const gchar *prefix);
 
 /** Get the default gsettings schema prefix.
  *  If none was set explicitly, this defaults to
- *  "org.gnucash"
+ *  "org.systecash"
  */
 const gchar *gnc_gsettings_get_prefix (void);
 
@@ -203,9 +203,9 @@ void gnc_gsettings_remove_any_cb_by_func (const gchar *schema,
  *  and vice versa.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  *
@@ -229,13 +229,13 @@ void gnc_gsettings_bind (const gchar *schema,
 /** Get a boolean value from GSettings.
  *
  *  Retrieve a TRUE/FALSE value from GSettings.  The schema name
- *  provided as argument is combined with the default gnucash schema
+ *  provided as argument is combined with the default systecash schema
  *  prefix to produce a fully qualified schema name.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  *
@@ -253,13 +253,13 @@ gboolean gnc_gsettings_get_bool (const gchar *schema,
 /** Get an integer value from GSettings.
  *
  *  Retrieve an integer value from GSettings.  The schema name
- *  provided as argument is combined with the default gnucash schema
+ *  provided as argument is combined with the default systecash schema
  *  prefix to produce a fully qualified schema name.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  *
@@ -279,13 +279,13 @@ gint gnc_gsettings_get_int (const gchar *schema,
 /** Get an float value from GSettings.
  *
  *  Retrieve an float value from GSettings.  The schema name
- *  provided as argument is combined with the default gnucash schema
+ *  provided as argument is combined with the default systecash schema
  *  prefix to produce a fully qualified schema name.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  *
@@ -305,13 +305,13 @@ gdouble gnc_gsettings_get_float (const gchar *schema,
 /** Get a string value from GSettings.
  *
  *  Retrieve an string value from GSettings.  The schema name
- *  provided as argument is combined with the default gnucash schema
+ *  provided as argument is combined with the default systecash schema
  *  prefix to produce a fully qualified schema name.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  *
@@ -332,13 +332,13 @@ gchar *gnc_gsettings_get_string (const gchar *schema,
 /** Get an enum value from GSettings.
  *
  *  Retrieve an enum value from GSettings.  The schema name
- *  provided as argument is combined with the default gnucash schema
+ *  provided as argument is combined with the default systecash schema
  *  prefix to produce a fully qualified schema name.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  *
@@ -360,13 +360,13 @@ gint gnc_gsettings_get_enum (const gchar *schema,
  *  Retrieve an arbitrary combination of values from GSettings.   This
  *  combination of values can be anything that can be encapsulated
  *  in a GVariant structure.  The schema name
- *  provided as argument is combined with the default gnucash schema
+ *  provided as argument is combined with the default systecash schema
  *  prefix to produce a fully qualified schema name.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  *
@@ -395,13 +395,13 @@ GVariant *gnc_gsettings_get_value (const gchar *schema,
 /** Store a boolean value into GSettings.
  *
  *  Store a boolean value into GSettings.  The schema name
- *  provided as argument is combined with the default gnucash schema
+ *  provided as argument is combined with the default systecash schema
  *  prefix to produce a fully qualified schema name.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  *
@@ -420,13 +420,13 @@ gboolean gnc_gsettings_set_bool (const gchar *schema,
 /** Store an integer value into GSettings.
  *
  *  Store an integer into GSettings.  The schema name
- *  provided as argument is combined with the default gnucash schema
+ *  provided as argument is combined with the default systecash schema
  *  prefix to produce a fully qualified schema name.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  *
@@ -445,13 +445,13 @@ gboolean gnc_gsettings_set_int (const gchar *schema,
 /** Store a float value into GSettings.
  *
  *  Store a float into GSettings.  The schema name
- *  provided as argument is combined with the default gnucash schema
+ *  provided as argument is combined with the default systecash schema
  *  prefix to produce a fully qualified schema name.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  *
@@ -471,13 +471,13 @@ gboolean gnc_gsettings_set_float (const gchar *schema,
 /** Store a string into GSettings.
  *
  *  Store a single string into GSettings. The schema name
- *  provided as argument is combined with the default gnucash schema
+ *  provided as argument is combined with the default systecash schema
  *  prefix to produce a fully qualified schema name.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  *
@@ -498,13 +498,13 @@ gboolean gnc_gsettings_set_string (const gchar *schema,
 /** Store an enum value into GSettings.
  *
  *  Store an enum into GSettings.  The schema name
- *  provided as argument is combined with the default gnucash schema
+ *  provided as argument is combined with the default systecash schema
  *  prefix to produce a fully qualified schema name.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  *
@@ -525,13 +525,13 @@ gboolean gnc_gsettings_set_enum (const gchar *schema,
  *  Store an arbitrary combination of values into GSettings.  This
  *  combination of values can be anything that can be encapsulated
  *  in a GVariant structure.  The schema name
- *  provided as argument is combined with the default gnucash schema
+ *  provided as argument is combined with the default systecash schema
  *  prefix to produce a fully qualified schema name.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  *
@@ -554,13 +554,13 @@ gboolean gnc_gsettings_set_value (const gchar *schema,
  *  is done by removing the value from the database.  The next attempt
  *  to read this value will return the default as specified in the
  *  GSettings schema for this key.  The schema name
- *  provided as argument is combined with the default gnucash schema
+ *  provided as argument is combined with the default systecash schema
  *  prefix to produce a fully qualified schema name.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  *
@@ -576,13 +576,13 @@ void gnc_gsettings_reset (const gchar *schema,
  *  this is done by removing the values from the database.  The next attempt
  *  to read a keys will return its default as specified in the
  *  GSettings schema for this key.  The schema name
- *  provided as argument is combined with the default gnucash schema
+ *  provided as argument is combined with the default systecash schema
  *  prefix to produce a fully qualified schema name.
  *
  *  @param schema This string provides a grouping of keys within the
- *  GnuCash schema of the gsettings database.  It can be a simple string
+ *  systecash schema of the gsettings database.  It can be a simple string
  *  as in "history" for settings that are common to many areas of
- *  gnucash, or it can be a partial path name as in
+ *  systecash, or it can be a partial path name as in
  *  "dialogs.business.invoice" for setting that only apply to one
  *  specific area of the program.
  */
@@ -591,7 +591,7 @@ void gnc_gsettings_reset_schema (const gchar *schema);
 /** @} */
 
 
-/** Configure gsettings as the backend for the gnucash preferences api.
+/** Configure gsettings as the backend for the systecash preferences api.
  */
 void gnc_gsettings_load_backend (void);
 

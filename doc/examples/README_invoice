@@ -1,10 +1,10 @@
-The Bill Invoice importer is an optional module and needs to enabled by editing the file $HOME/.gnucash/config.user, adding the line:
+The Bill Invoice importer is an optional module and needs to enabled by editing the file $HOME/.systecash/config.user, adding the line:
 
-(gnc:module-load "gnucash/plugins/bi_import" 0)
+(gnc:module-load "systecash/plugins/bi_import" 0)
 
 The example csv file must have the 22 elements for it to work.
 
 To use the example file, create an account "Expenses:Materials General" and a Customer with owner = 000013.
 
-More information can be found at http://svn.gnucash.org/docs/guide/python-import-invoices.html
+More information can be found at http://svn.systecash.org/docs/guide/python-import-invoices.html
 

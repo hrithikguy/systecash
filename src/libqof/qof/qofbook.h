@@ -122,7 +122,7 @@ struct _QofBook
 
     /* Boolean indicates whether book is safe to write to (true means
      * that it isn't). The usual reason will be a database version
-     * mismatch with the running instance of Gnucash.
+     * mismatch with the running instance of systecash.
      */
     gboolean read_only;
 

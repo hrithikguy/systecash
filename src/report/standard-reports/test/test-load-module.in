@@ -4,10 +4,10 @@ exec ${GUILE} -s "$0"
 
 (display "  testing standard report module load ... ")
 (setenv "GNC_UNINSTALLED" "1")
-(use-modules (gnucash gnc-module))
+(use-modules (systecash gnc-module))
 (gnc:module-system-init)
 
-(if (gnc:module-load "gnucash/report/standard-reports" 0)
+(if (gnc:module-load "systecash/report/standard-reports" 0)
     (begin 
       (display "ok\n")
       (exit 0))

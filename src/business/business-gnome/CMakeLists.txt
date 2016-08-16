@@ -56,8 +56,8 @@ TARGET_LINK_LIBRARIES(gncmod-business-gnome gnc-business-ledger gncmod-gnome-sea
 TARGET_COMPILE_DEFINITIONS(gncmod-business-gnome PRIVATE -DG_LOG_DOMAIN=\"gnc.business.gnome\")
 
 INSTALL(TARGETS gncmod-business-gnome
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 # No headers to install
 
@@ -65,7 +65,7 @@ INSTALL(TARGETS gncmod-business-gnome
 
 SET(gncmod_business_gnome_SCHEME business-gnome.scm)
 
-SET(GUILE_OUTPUT_DIR   gnucash)
+SET(GUILE_OUTPUT_DIR   systecash)
 SET(GUILE_MODULES      src/app-utils src/engine src/gnome-utils src/html src/report/report-system src/report/standard-reports)
 SET(GUILE_LOAD_DIRS    src/app-utils src/engine src/core-utils src/gnc-module src/gnome-utils src/report/business-reports src/report/report-system src/report/standard-reports src/scm)
 SET(GUILE_LIBRARY_DIRS src/app-utils src/engine src/core-utils src/gnc-module src/gnome-utils src/report/report-system)

@@ -25,9 +25,9 @@
 /** @addtogroup Scrub
     Data scrubbing, repairing and forward migration routines.
     These routines check and repair data, making sure that it
-    is in a format that the current version of the GnuCash
+    is in a format that the current version of the systecash
     Engine likes.  These routines serve both to provide backwards
-    compatibility with older versions of GnuCash, and to fix
+    compatibility with older versions of systecash, and to fix
     or at least paper over possible current problems.
 
     It is typically expected that the scrub routines are run

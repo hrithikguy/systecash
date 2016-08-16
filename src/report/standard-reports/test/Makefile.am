@@ -67,9 +67,9 @@ EXTRA_DIST = \
 	$(SCM_TEST_SRCS)
 
 .scm-links:
-	$(RM) -rf gnucash
-	mkdir -p  gnucash/report/standard-reports/test
-	( cd gnucash/report/standard-reports/test; for A in $(SCM_TEST_HELPERS) ; do $(LN_S) -f $(abs_srcdir)/$$A . ; done )
+	$(RM) -rf systecash
+	mkdir -p  systecash/report/standard-reports/test
+	( cd systecash/report/standard-reports/test; for A in $(SCM_TEST_HELPERS) ; do $(LN_S) -f $(abs_srcdir)/$$A . ; done )
 if ! OS_WIN32
 # Windows knows no "ln -s" but uses "cp": must copy every time (see bug #566567).
 	touch .scm-links
@@ -82,7 +82,7 @@ debug:
 	$(TESTS_ENVIRONMENT) gdb --args $(shell cat $(TEST))
 
 clean-local:
-	$(RM) -rf gnucash
+	$(RM) -rf systecash
 
 noinst_DATA = .scm-links
 CLEANFILES = .scm-links *.log

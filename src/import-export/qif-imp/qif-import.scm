@@ -24,8 +24,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash import-export qif-import))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
+(define-module (systecash import-export qif-import))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
 
 ;; We do this initialization here because src/gnome isn't a real module.
 ;; Note: Guile 2 needs to find the symbols from the extension at compile time already
@@ -39,16 +39,16 @@
 
 (use-modules (sw_gnome))
 
-(use-modules (gnucash gnc-module))
+(use-modules (systecash gnc-module))
 (use-modules (ice-9 regex))
 (use-modules (srfi srfi-1))
 
 (debug-enable 'debug)
 (debug-enable 'backtrace)
 
-(gnc:module-load "gnucash/engine" 0)
-(gnc:module-load "gnucash/app-utils" 0)
-(gnc:module-load "gnucash/gnome-utils" 0)
+(gnc:module-load "systecash/engine" 0)
+(gnc:module-load "systecash/app-utils" 0)
+(gnc:module-load "systecash/gnome-utils" 0)
 
 (load-from-path "qif-import/qif-objects")      ;; class definitions
 (load-from-path "qif-import/qif-parse")        ;; string-to-value

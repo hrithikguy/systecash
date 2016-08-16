@@ -1,6 +1,6 @@
 /*
  * gnc-tree-model.c -- base implementation for a tree model in
- *                     Gnucash.  This only implements the object, not
+ *                     systecash.  This only implements the object, not
  *                     the model interface.
  *
  * Copyright (C) 2005 David Hampton <hampton@employees.org>

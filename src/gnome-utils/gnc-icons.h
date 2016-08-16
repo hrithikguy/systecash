@@ -1,5 +1,5 @@
 /*
- * gnc-icons.h -- Functions to create a GtkIconFactory for GnuCash
+ * gnc-icons.h -- Functions to create a GtkIconFactory for systecash
  * Copyright (C) 2003 Jan Arne Petersen
  * Author: Jan Arne Petersen <jpetersen@uni-bonn.de>
  */

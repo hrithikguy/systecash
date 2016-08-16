@@ -11,14 +11,14 @@ SET(examples_DATA
   abc.qif
   bogus.qif
   cbb-export.qif
-  currency_tree_xml.gnucash
+  currency_tree_xml.systecash
   every.qif
   invoice.csv
   ms-money.qif
   quicktest.qif
   swipe.qif
-  taxreport.gnucash
+  taxreport.systecash
   web.qif
 )
 
-INSTALL(FILES ${examples_DATA} DESTINATION share/doc/gnucash)
+INSTALL(FILES ${examples_DATA} DESTINATION share/doc/systecash)

@@ -20,7 +20,7 @@ dnl Process this file with autoconf to produce a configure script.
 
 # Autoconf initialization
 AC_PREREQ(2.60)
-AC_INIT([GnuCash], [2.6.99], [gnucash-devel@gnucash.org])
+AC_INIT([systecash], [2.6.99], [systecash-devel@systecash.org])
 AC_CONFIG_HEADERS(config.h)
 AC_CONFIG_SRCDIR(src/engine/Transaction.h)
 AC_CONFIG_MACRO_DIR([macros])
@@ -80,17 +80,17 @@ AC_SUBST(GNUCASH_NANO_VERSION)
 AC_SUBST(GNUCASH_LATEST_STABLE_SERIES)
 
 AC_DEFINE_UNQUOTED(GNUCASH_MAJOR_VERSION, $GNUCASH_MAJOR_VERSION,
-    [GnuCash Major version number])
+    [systecash Major version number])
 AC_DEFINE_UNQUOTED(GNUCASH_MINOR_VERSION, $GNUCASH_MINOR_VERSION,
-    [GnuCash Minor version number])
+    [systecash Minor version number])
 AC_DEFINE_UNQUOTED(GNUCASH_MICRO_VERSION, $GNUCASH_MICRO_VERSION,
-    [GnuCash Micro version number])
+    [systecash Micro version number])
 AC_DEFINE_UNQUOTED(GNUCASH_NANO_VERSION, $GNUCASH_NANO_VERSION,
-    [GnuCash Nano version number])
+    [systecash Nano version number])
 AC_DEFINE_UNQUOTED(GNUCASH_RESAVE_VERSION, $GNUCASH_RESAVE_VERSION,
-    [GnuCash earliest compatible databaseversion number])
+    [systecash earliest compatible databaseversion number])
 AC_DEFINE_UNQUOTED(GNUCASH_LATEST_STABLE_SERIES, "$GNUCASH_LATEST_STABLE_SERIES",
-    [Most recent stable GnuCash series])
+    [Most recent stable systecash series])
 
 dnl Set of available languages.
 TP_LINGUAS="az ca cs da eu fa ja nl rw sk sr sv tr uk zh_CN"
@@ -101,7 +101,7 @@ NEW_LINGUAS="as brx doi es_NI kok kok@latin ks mai mni mni@bengali"
 
 ALL_LINGUAS="$TP_LINGUAS $GC_LINGUAS $NEW_LINGUAS"
 
-GETTEXT_PACKAGE=gnucash
+GETTEXT_PACKAGE=systecash
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE",
     [GetText version number])
@@ -140,7 +140,7 @@ AM_CONDITIONAL([CLANG], [test "x$ac_cv_CLANG" = "xyes"])
 ###--------------------------------------------------------
 AX_BOOST_BASE([1.53.0], [ac_cv_BOOST=yes], [ac_cv_BOOST=no])
 if test x$ac_cv_BOOST != xyes; then
-    AC_MSG_ERROR([Boost 1.53.0 or later was not found and is required to build GnuCash])
+    AC_MSG_ERROR([Boost 1.53.0 or later was not found and is required to build systecash])
 fi
 ###--------------------------------------------------------
 ### Optionally enable gtkmm plugin (requires c++ compiler)
@@ -294,7 +294,7 @@ else
 It looks like you are NOT building from Subversion, svk, git or bzr
 but I cannot find swig-runtime.h.  Check your PATH and make sure
 we can find gnc-vcs-info in your PATH!
-Either that or contact gnucash-devel@gnucash.org because
+Either that or contact systecash-devel@systecash.org because
 the tarball you downloaded is broken.
 
     ])])
@@ -304,7 +304,7 @@ the tarball you downloaded is broken.
 It looks like you are NOT building from Subversion, svk, git or bzr
 but I cannot find gnc-vcs-info.h.  Check your PATH and make sure
 we can find gnc-vcs-info in your PATH!
-Either that or contact gnucash-devel@gnucash.org because
+Either that or contact systecash-devel@systecash.org because
 the tarball you downloaded is broken.
 
     ])])
@@ -399,7 +399,7 @@ dnl First remove any existing -std= setting from CFLAGS then add the one we want
 CFLAGS=`echo ${CFLAGS} | sed -E -e "s,-std=[[a-z0-9]]+,,g"`
 CFLAGS="${CFLAGS} -std=${ac_cv_cstd}"
 
-# Gnucash replaced dlopen/dlsym by the g_module functions; dlsym
+# systecash replaced dlopen/dlsym by the g_module functions; dlsym
 # is needed optionally in one place for BSD linkers, though.
 DL_LIB=
 AC_CHECK_FUNCS(dlsym,,[
@@ -576,7 +576,7 @@ AS_IF([test "$GUILE_EFFECTIVE_VERSION" = "0"],
       [AC_MSG_ERROR([
        guile does not appear to be installed correctly, or is not in the
        correct version range.  Perhaps you have not installed the guile
-       development packages?  Gnucash requires at least version 1.8.5 to build.
+       development packages?  systecash requires at least version 1.8.5 to build.
        ])]
 )
 
@@ -613,7 +613,7 @@ then
         then
             AC_MSG_ERROR([
     You are building from ${VCS_TYPE} but swig was not found or too old.
-    To build gnucash you need at least swig version 2.0.10.
+    To build systecash you need at least swig version 2.0.10.
             ])
         fi
     else  # using guile 1.8
@@ -622,7 +622,7 @@ then
             AX_PKG_SWIG(1.3.31, [],
                 [AC_MSG_ERROR([
     You are building from ${VCS_TYPE} but swig was not found or too old.
-    To build gnucash with guile 1.8 you need at least swig version 1.3.31.
+    To build systecash with guile 1.8 you need at least swig version 1.3.31.
             ])])
         fi
     fi
@@ -654,7 +654,7 @@ LIBS="$LIBS $LIBXML2_LIBS"
 
 # Compile a test program to verify that the xml2 library works.
 AC_CHECK_LIB(xml2, xmlElemDump, [:], [
-  AC_MSG_ERROR([libxml2 is required for GnuCash])
+  AC_MSG_ERROR([libxml2 is required for systecash])
   ])
 LIBS="$oLIBS"
 
@@ -671,7 +671,7 @@ AC_SUBST(LIBXSLT_LIBS)
 AC_PATH_PROG(XSLTPROC, xsltproc, [""])
 
 if test -z "$XSLTPROC"; then
-  AC_MSG_ERROR([xsltproc is required to build GnuCash])
+  AC_MSG_ERROR([xsltproc is required to build systecash])
 fi
 
 ### --------------------------------------------------------------------------
@@ -683,7 +683,7 @@ AC_SUBST(ZLIB_LIBS)
 oLIBS="$LIBS"
 LIBS="$LIBS $ZLIB_LIBS"
 AC_CHECK_LIB(z, gzopen, [:], [
-  AC_MSG_ERROR([zlib is required for GnuCash])
+  AC_MSG_ERROR([zlib is required for systecash])
 ])
 LIBS="$oLIBS"
 
@@ -778,7 +778,7 @@ to the configure argument list and run it again.
 
  Unable to find <dbi/dbi.h>. Either install the libdbi development
  package (such as libdbi0-dev), or switch off the database backend of
- gnucash by --disable-dbi.
+ systecash by --disable-dbi.
  Note: If you install libdbi, you should also install its database
  drivers (such as libdbd-sqlite3 libdbd-mysql libdbd-pgsql).
 ])
@@ -792,12 +792,12 @@ AM_CONDITIONAL(WITH_DBI, [test "x$ac_cv_header_dbi_dbi_h" = xyes])
 ### --------------------------------------------------------------------------
 ### Variables
 ### Set up all the initial variable values...
-GNC_CONFIGDIR='${sysconfdir}/gnucash'
+GNC_CONFIGDIR='${sysconfdir}/systecash'
 GNC_DOC_INSTALL_DIR='${docdir}'
-GNC_INCLUDE_DIR='${includedir}/gnucash'
+GNC_INCLUDE_DIR='${includedir}/systecash'
 GNC_SCM_INSTALL_DIR='${pkgdatadir}/scm'
 GNC_SHAREDIR='${pkgdatadir}'
-GNC_LIBEXECDIR='${libexecdir}/gnucash'
+GNC_LIBEXECDIR='${libexecdir}/systecash'
 
 GNC_ACCOUNTS_DIR='${GNC_SHAREDIR}/accounts'
 GNC_CHECKS_DIR='${GNC_SHAREDIR}/checks'
@@ -1298,7 +1298,7 @@ LIBS="$LIBS -lm"
 ### --------------------------------------------------------------------------
 
 AC_ARG_ENABLE(gui,
-  [AS_HELP_STRING([--disable-gui],[build without the GNOME GUI components of Gnucash])],
+  [AS_HELP_STRING([--disable-gui],[build without the GNOME GUI components of systecash])],
   [case "${enableval}" in
      yes) gnc_build_gui=true ;;
      no)  gnc_build_gui=false ;;
@@ -1361,8 +1361,8 @@ then
   case "$with_html_engine" in
 
     gtkhtml)
-      # No more gtkhtml in gnucash-2.5.0
-      AC_MSG_ERROR([gtkhtml is no longer sufficient for gnucash, as we now require the CSS/javascript features using webkit. Please remove your --with-html-engine argument from configure.])
+      # No more gtkhtml in systecash-2.5.0
+      AC_MSG_ERROR([gtkhtml is no longer sufficient for systecash, as we now require the CSS/javascript features using webkit. Please remove your --with-html-engine argument from configure.])
       ;;
 
     webkit)
@@ -1828,28 +1828,28 @@ AC_CONFIG_FILES(
   src/plugins/customer_import/gtkbuilder/Makefile
   src/plugins/customer_import/ui/Makefile
   dnl # non-makefiles
-  src/bin/gnucash.rc
+  src/bin/systecash.rc
   src/app-utils/migratable-prefs.xml
-  src/gnome/gnucash.desktop.in
+  src/gnome/systecash.desktop.in
   dnl # GSettings schema files
-  src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in
-  src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in
-  src/gnome/gschemas/org.gnucash.dialogs.commodities.gschema.xml.in
-  src/gnome/gschemas/org.gnucash.dialogs.gschema.xml.in
-  src/gnome/gschemas/org.gnucash.dialogs.reconcile.gschema.xml.in
-  src/gnome/gschemas/org.gnucash.dialogs.sxs.gschema.xml.in
-  src/gnome/gschemas/org.gnucash.dialogs.totd.gschema.xml.in
-  src/gnome/gschemas/org.gnucash.gschema.xml.in
-  src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in
-  src/gnome/gschemas/org.gnucash.window.pages.gschema.xml.in
-  src/gnome-utils/gschemas/org.gnucash.history.gschema.xml.in
-  src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in
-  src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in
-  src/import-export/csv-exp/gschemas/org.gnucash.dialogs.export.csv.gschema.xml.in
-  src/import-export/csv-imp/gschemas/org.gnucash.dialogs.import.csv.gschema.xml.in
-  src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in
-  src/import-export/ofx/gschemas/org.gnucash.dialogs.import.ofx.gschema.xml.in
-  src/import-export/qif-imp/gschemas/org.gnucash.dialogs.import.qif.gschema.xml.in
+  src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in
+  src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in
+  src/gnome/gschemas/org.systecash.dialogs.commodities.gschema.xml.in
+  src/gnome/gschemas/org.systecash.dialogs.gschema.xml.in
+  src/gnome/gschemas/org.systecash.dialogs.reconcile.gschema.xml.in
+  src/gnome/gschemas/org.systecash.dialogs.sxs.gschema.xml.in
+  src/gnome/gschemas/org.systecash.dialogs.totd.gschema.xml.in
+  src/gnome/gschemas/org.systecash.gschema.xml.in
+  src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in
+  src/gnome/gschemas/org.systecash.window.pages.gschema.xml.in
+  src/gnome-utils/gschemas/org.systecash.history.gschema.xml.in
+  src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in
+  src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in
+  src/import-export/csv-exp/gschemas/org.systecash.dialogs.export.csv.gschema.xml.in
+  src/import-export/csv-imp/gschemas/org.systecash.dialogs.import.csv.gschema.xml.in
+  src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in
+  src/import-export/ofx/gschemas/org.systecash.dialogs.import.ofx.gschema.xml.in
+  src/import-export/qif-imp/gschemas/org.systecash.dialogs.import.qif.gschema.xml.in
   dnl # Please read doc/build-system before adding *anything* here
   ,
   dnl # init-commands go here
@@ -1897,7 +1897,7 @@ AC_CONFIG_FILES([src/tax/us/test/test-load-module],
                 [chmod +x src/tax/us/test/test-load-module])
 
 # A few files need extra actions at creation time
-AC_CONFIG_FILES([src/bin/overrides/gnucash-make-guids], [chmod u+x src/bin/overrides/gnucash-make-guids])
+AC_CONFIG_FILES([src/bin/overrides/systecash-make-guids], [chmod u+x src/bin/overrides/systecash-make-guids])
 #Link (copy on Windows) test data files:
 AC_CONFIG_LINKS([src/import-export/csv-imp/test/sample1.csv:src/import-export/csv-imp/test/sample1.csv])
 LDFLAGS="${LDFLAGS} ${NOUNDEF}"
@@ -1907,7 +1907,7 @@ AC_OUTPUT
 AC_MSG_RESULT([
   Options detected/selected
   -------------------------
-  gnucash version ...... : $VERSION
+  systecash version ...... : $VERSION
   Build for host ....... : $host
   Optional components... : $_COMPONENTS
   Extra Warnings ....... : $warnFLAGS

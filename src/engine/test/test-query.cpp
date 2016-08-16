@@ -2,7 +2,7 @@
  *            test-query.c
  *
  *  Tue Sep 27 19:12:41 2005
- *  Copyright  2005 GnuCash team
+ *  Copyright  2005 systecash team
  ****************************************************************************/
 /*
  *  This program is free software; you can redistribute it and/or modify

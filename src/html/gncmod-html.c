@@ -51,13 +51,13 @@ int libgncmod_html_gnc_module_age      = 0;
 char *
 libgncmod_html_gnc_module_path( void )
 {
-    return g_strdup( "gnucash/html" );
+    return g_strdup( "systecash/html" );
 }
 
 char *
 libgncmod_html_gnc_module_description( void )
 {
-    return g_strdup( "Utilities for using HTML with GnuCash" );
+    return g_strdup( "Utilities for using HTML with systecash" );
 }
 
 static void
@@ -74,12 +74,12 @@ int
 libgncmod_html_gnc_module_init( int refcount )
 {
     /* load the engine (we depend on it) */
-    if ( !gnc_module_load( "gnucash/engine", 0 ) )
+    if ( !gnc_module_load( "systecash/engine", 0 ) )
     {
         return FALSE;
     }
 
-    if ( !gnc_module_load( "gnucash/app-utils", 0 ) )
+    if ( !gnc_module_load( "systecash/app-utils", 0 ) )
     {
         return FALSE;
     }
@@ -87,7 +87,7 @@ libgncmod_html_gnc_module_init( int refcount )
     scm_init_sw_gnc_html_module();
     gnc_html_initialize();
     lmod( "(sw_gnc_html)" );
-//	lmod( "(gnucash gnc_html)" );
+//	lmod( "(systecash gnc_html)" );
 
     return TRUE;
 }

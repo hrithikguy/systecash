@@ -25,18 +25,18 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report standard-reports net-linechart))
+(define-module (systecash report standard-reports net-linechart))
 
 (use-modules (srfi srfi-1))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(use-modules (gnucash printf))
-(use-modules (gnucash report report-system report-collectors))
-(use-modules (gnucash report report-system collectors))
-(use-modules (gnucash report standard-reports category-barchart)) ; for guids of called reports
-(gnc:module-load "gnucash/report/report-system" 0)
+(use-modules (systecash printf))
+(use-modules (systecash report report-system report-collectors))
+(use-modules (systecash report report-system collectors))
+(use-modules (systecash report standard-reports category-barchart)) ; for guids of called reports
+(gnc:module-load "systecash/report/report-system" 0)
 
 (define reportname (N_ "Income/Expense Chart"))
 
@@ -70,7 +70,7 @@
 (define (options-generator inc-exp?)
   (let* ((options (gnc:new-options))
          ;; This is just a helper function for making options.
-         ;; See gnucash/src/scm/options.scm for details.
+         ;; See systecash/src/scm/options.scm for details.
          (add-option
           (lambda (new-option)
             (gnc:register-option options new-option))))

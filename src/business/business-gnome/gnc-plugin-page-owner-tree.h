@@ -79,7 +79,7 @@ GType gnc_plugin_page_owner_tree_get_type (void);
 /** Create a new "owner tree" plugin page.
  *
  *  @param owner_type The owner type to create a page for. Can be any of
- *         the owner types defined in GnuCash, like vendor, customer,...
+ *         the owner types defined in systecash, like vendor, customer,...
  *
  *  @return The newly created plugin page.
  */

@@ -5,9 +5,9 @@
 ;; Prepares a trial balance of your books.
 ;; Optionally prepares a complete work sheet.
 ;; 
-;; N.B.: Since GnuCash ensures that all your debits and credits
+;; N.B.: Since systecash ensures that all your debits and credits
 ;; balance, preparing a Trial Balance isn't technically necessary for
-;; GnuCash users.  This report is included primarily for pedagogical
+;; systecash users.  This report is included primarily for pedagogical
 ;; and corroborative purposes.
 ;; 
 ;; BUGS:
@@ -50,13 +50,13 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report standard-reports trial-balance))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash printf))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(define-module (systecash report standard-reports trial-balance))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash printf))
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
 (define reportname (N_ "Trial Balance"))
 

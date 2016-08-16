@@ -152,7 +152,7 @@ gnc_AB_BANKING_new(void)
     }
     else
     {
-        api = AB_Banking_new("gnucash", NULL, 0);
+        api = AB_Banking_new("systecash", NULL, 0);
         g_return_val_if_fail(api, NULL);
 
 #ifdef AQBANKING_VERSION_4_PLUS
@@ -490,7 +490,7 @@ gnc_ab_trans_to_gnc(const AB_TRANSACTION *ab_trans, Account *gnc_acc)
 
     g_return_val_if_fail(ab_trans && gnc_acc, NULL);
 
-    /* Create new GnuCash transaction for the given AqBanking one */
+    /* Create new systecash transaction for the given AqBanking one */
     book = gnc_account_get_book(gnc_acc);
     gnc_trans = xaccMallocTransaction(book);
     xaccTransBeginEdit(gnc_trans);
@@ -510,7 +510,7 @@ gnc_ab_trans_to_gnc(const AB_TRANSACTION *ab_trans, Account *gnc_acc)
 
     xaccTransSetDateEnteredSecs(gnc_trans, gnc_time (NULL));
 
-    /* Currency.  We take simply the default currency of the gnucash account */
+    /* Currency.  We take simply the default currency of the systecash account */
     xaccTransSetCurrency(gnc_trans, xaccAccountGetCommodity(gnc_acc));
 
     /* Trans-Num or Split-Action set with gnc_set_num_action below per book
@@ -578,7 +578,7 @@ gnc_ab_trans_to_gnc(const AB_TRANSACTION *ab_trans, Account *gnc_acc)
  * the information in @a acc_info.
  *
  * @param acc_info AB_IMEXPORTER_ACCOUNTINFO
- * @return A GnuCash account, or NULL otherwise
+ * @return A systecash account, or NULL otherwise
  */
 static Account *
 gnc_ab_accinfo_to_gnc_acc(AB_IMEXPORTER_ACCOUNTINFO *acc_info)
@@ -613,7 +613,7 @@ gnc_ab_accinfo_to_gnc_acc(AB_IMEXPORTER_ACCOUNTINFO *acc_info)
  * the local information in @a transaction.
  *
  * @param transaction AB_TRANSACTION
- * @return A GnuCash account, or NULL otherwise
+ * @return A systecash account, or NULL otherwise
  */
 static Account *
 gnc_ab_txn_to_gnc_acc(const AB_TRANSACTION *transaction)
@@ -657,7 +657,7 @@ txn_transaction_cb(const AB_TRANSACTION *element, gpointer user_data)
 
     g_return_val_if_fail(element && data, NULL);
 
-    /* Create a GnuCash transaction from ab_trans */
+    /* Create a systecash transaction from ab_trans */
     txnacc = gnc_ab_txn_to_gnc_acc(element);
     gnc_trans = gnc_ab_trans_to_gnc(element, txnacc ? txnacc : data->gnc_acc);
 
@@ -666,7 +666,7 @@ txn_transaction_cb(const AB_TRANSACTION *element, gpointer user_data)
         AB_TRANSACTION *ab_trans = AB_Transaction_dup(element);
         AB_JOB *job;
 
-        /* NEW: The imported transaction has been imported into gnucash.
+        /* NEW: The imported transaction has been imported into systecash.
          * Now also add it as a job to aqbanking */
         AB_Transaction_SetLocalBankCode(
             ab_trans, AB_Account_GetBankCode(data->ab_acc));
@@ -809,21 +809,21 @@ txn_accountinfo_cb(AB_IMEXPORTER_ACCOUNTINFO *element, gpointer user_data)
         }
     }
 
-    /* Lookup the corresponding gnucash account */
+    /* Lookup the corresponding systecash account */
     gnc_acc = gnc_ab_accinfo_to_gnc_acc(element);
     if (!gnc_acc) return NULL;
     data->gnc_acc = gnc_acc;
 
     if (data->execute_txns)
     {
-        /* Retrieve the aqbanking account that belongs to this gnucash
+        /* Retrieve the aqbanking account that belongs to this systecash
          * account */
         data->ab_acc = gnc_ab_get_ab_account(data->api, gnc_acc);
         if (!data->ab_acc)
         {
             gnc_error_dialog(NULL, "%s",
                              _("No Online Banking account found for this "
-                               "gnucash account. These transactions will "
+                               "systecash account. These transactions will "
                                "not be executed by Online Banking."));
         }
     }
@@ -913,7 +913,7 @@ bal_accountinfo_cb(AB_IMEXPORTER_ACCOUNTINFO *element, gpointer user_data)
         }
     }
 
-    /* Lookup the corresponding gnucash account */
+    /* Lookup the corresponding systecash account */
     gnc_acc = gnc_ab_accinfo_to_gnc_acc(element);
     if (!gnc_acc) return NULL;
     data->gnc_acc = gnc_acc;

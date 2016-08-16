@@ -24,18 +24,18 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash report report-system))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
+(define-module (systecash report report-system))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
 (use-modules (ice-9 regex))
 (use-modules (srfi srfi-1))
 (use-modules (srfi srfi-19))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash core-utils))
+(use-modules (systecash gnc-module))
+(use-modules (systecash core-utils))
 
-(gnc:module-load "gnucash/engine" 0)
-(gnc:module-load "gnucash/app-utils" 0)
-(gnc:module-load "gnucash/html" 0)
-(gnc:module-load "gnucash/gnome-utils" 0)
+(gnc:module-load "systecash/engine" 0)
+(gnc:module-load "systecash/app-utils" 0)
+(gnc:module-load "systecash/html" 0)
+(gnc:module-load "systecash/gnome-utils" 0)
 
 ;; commodity-utilities.scm
 (export gnc:get-match-commodity-splits)
@@ -200,7 +200,7 @@
 (export gnc:report-template-menu-name/name)
 (export gnc:report-template-renderer/name)
 ;; Legacy: this function is needed only to restore
-;; a open report when loading a book last saved in GnuCash 2.2
+;; a open report when loading a book last saved in systecash 2.2
 (export gnc:restore-report)
 
 ;; html-barchart.scm

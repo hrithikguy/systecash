@@ -450,11 +450,11 @@ gnc_counter_end_handler (gpointer data_for_children,
         if (be_data.ok == FALSE)
         {
             PERR ("Unknown type: %s", type ? type : "(null)");
-            /* Do *NOT* flag this as an error. Gnucash 1.8 writes invalid
+            /* Do *NOT* flag this as an error. systecash 1.8 writes invalid
              * xml by writing the 'cd:type' attribute without providing
              * the namespace in the gnc:count-data tag.  The parser is
              * entirely within its rights to refuse to read this bad
-             * attribute. Gnucash will function correctly without the data
+             * attribute. systecash will function correctly without the data
              * in this tag, so just let the error pass. */
             ret = TRUE;
         }
@@ -1292,7 +1292,7 @@ gboolean
 gnc_xml2_write_namespace_decl (FILE* out, const char* name_space)
 {
     g_return_val_if_fail (name_space, FALSE);
-    return fprintf (out, "\n     xmlns:%s=\"http://www.gnucash.org/XML/%s\"",
+    return fprintf (out, "\n     xmlns:%s=\"http://www.systecash.org/XML/%s\"",
                     name_space, name_space) >= 0;
 }
 

@@ -36,8 +36,8 @@ TARGET_LINK_LIBRARIES(gncmod-bi_import
 TARGET_COMPILE_DEFINITIONS(gncmod-bi_import PRIVATE -DG_LOG_DOMAIN=\"gnc.plugin.bi-import\")
 
 INSTALL(TARGETS gncmod-bi_import
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 # No headers to install.
 

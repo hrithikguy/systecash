@@ -1,6 +1,6 @@
 /********************************************************************\
  * dialog-account-picker.h -- window for picking a GNUcash account  *
- *                       (GnuCash)                                  *
+ *                       (systecash)                                  *
  * Copyright (C) 2000 Bill Gribble <grib@billgribble.com>           *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *

@@ -88,7 +88,7 @@ SET(GUILE_DEPENDS      scm-app-utils scm-scm)
 
 GNC_ADD_SCHEME_TARGETS(scm-test-engine
   "${engine_test_SCHEME}"
-  gnucash/engine/test
+  systecash/engine/test
   "${GUILE_MODULES}"
   "${GUILE_LOAD_DIRS}"
   "${GUILE_LIBRARY_DIRS}"

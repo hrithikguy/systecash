@@ -8,14 +8,14 @@ This document is becoming obsolete. Please refer to the design
 documentation in src/doc/design for a complete description of the
 Engine architecture.
 
-The only remaining architecture flaw is related to the GnuCash XML v2
+The only remaining architecture flaw is related to the systecash XML v2
 backend modularisation. QofSession includes a dynamic method of loading
 a QofBackend that supercedes the use of gnc_module_load that currently
 loads the module using guile/scheme. When the old XML backend is replaced
 by Sqlite, this will be resolved.
 
 Note that this flaw <b>does not appear in QOF</b> itself. The C code 
-enabling the entire guile/scheme load mechanism is GnuCash only.
+enabling the entire guile/scheme load mechanism is systecash only.
 
 \subsection oldflaw Architecture Flaw
 
@@ -37,7 +37,7 @@ This is the remaining architecture flaw, see above.
 \section oldreview Accounting Engine
 
 This document reviews the operation of, and various design points 
-pertinent to the GnuCash accounting engine.  The latest version
+pertinent to the systecash accounting engine.  The latest version
 of this document can be found in the engine source-code directory.
 
 \section enginestock Stocks, non-Currency-Denominated Assets
@@ -414,7 +414,7 @@ See also the \ref todo.
 
 \section engineenhance Ideas for engine enhancements:
 
--# Have (by default) gnucash immediately re-read a file after every
+-# Have (by default) systecash immediately re-read a file after every
      write, and compare the two resulting AccountGroups for equality.\n
      During development, this is a good idea, as it will help uncover
      thinko's more quickly, instead of letting them hide for weeks or months

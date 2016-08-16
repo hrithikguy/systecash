@@ -33,15 +33,15 @@
 ;
 
 
-(define-module (gnucash report stylesheet-head-or-tail))
+(define-module (systecash report stylesheet-head-or-tail))
 
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash core-utils)) ; for gnc:version
-(use-modules (gnucash gettext))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
+(use-modules (systecash core-utils)) ; for gnc:version
+(use-modules (systecash gettext))
 
-(gnc:module-load "gnucash/html" 0)   ; added for 'gnc-html-engine-supports-css'
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/html" 0)   ; added for 'gnc-html-engine-supports-css'
+(gnc:module-load "systecash/report/report-system" 0)
 
 (define (head-or-tail-options)
   (let* ((options (gnc:new-options))
@@ -87,8 +87,8 @@
     (opt-register
      (gnc:make-simple-boolean-option
       (N_ "General")
-      (N_ "Show GnuCash Version") "g"
-      (N_ "Show the currently used GnuCash version.")
+      (N_ "Show systecash Version") "g"
+      (N_ "Show the currently used systecash version.")
       #t))
     (opt-register
      (gnc:make-simple-boolean-option
@@ -130,8 +130,8 @@
     (opt-register
      (gnc:make-simple-boolean-option
       (N_ "General")
-      (N_ "Show GnuCash version at bottom") "m"
-      (N_ "Per default the GnuCash version will be shown before the report data.")
+      (N_ "Show systecash version at bottom") "m"
+      (N_ "Per default the systecash version will be shown before the report data.")
       #f))
 
     (opt-register
@@ -263,12 +263,12 @@
 	 (show-receiver? (opt-val (N_ "General") (N_ "Show receiver info")))
 	 (show-date? (opt-val (N_ "General") (N_ "Show date")))
 	 (show-time? (opt-val (N_ "General") (N_ "Show time in addition to date")))
-	 (show-gnucash-version? (opt-val (N_ "General") (N_ "Show GnuCash Version")))
+	 (show-systecash-version? (opt-val (N_ "General") (N_ "Show systecash Version")))
          (show-preparer-at-bottom? (opt-val (N_ "General") (N_ "Show preparer info at bottom")))
          (show-receiver-at-bottom? (opt-val (N_ "General") (N_ "Show receiver info at bottom")))
          (show-date-time-at-bottom? (opt-val (N_ "General") (N_ "Show date/time at bottom")))
          (show-comments-at-bottom? (opt-val (N_ "General") (N_ "Show comments at bottom")))
-         (show-gnucash-version-at-bottom? (opt-val (N_ "General") (N_ "Show GnuCash version at bottom")))
+         (show-systecash-version-at-bottom? (opt-val (N_ "General") (N_ "Show systecash version at bottom")))
 	 (links? (opt-val (N_ "General") (N_ "Enable Links")))
 	 (additional-comments (opt-val (N_ "General") (N_ "Additional Comments")))
 	 (bgcolor (color-val (N_ "Colors") (N_ "Background Color")))
@@ -550,11 +550,11 @@
             )
             " "
           )
-          (if (and show-gnucash-version? (not show-gnucash-version-at-bottom?))
-            ;; print the GnuCash version string as additional header info
+          (if (and show-systecash-version? (not show-systecash-version-at-bottom?))
+            ;; print the systecash version string as additional header info
             (gnc:make-html-text
               (gnc:html-markup-i
-                "GnuCash "
+                "systecash "
                 gnc:version
               )
               (gnc:html-markup-br)
@@ -575,7 +575,7 @@
                 (and show-preparer? (not show-preparer-at-bottom?))
                 (and show-receiver? (not show-receiver-at-bottom?))
                 (and show-date? (not show-date-time-at-bottom?))
-                (and show-gnucash-version? (not show-gnucash-version-at-bottom?))
+                (and show-systecash-version? (not show-systecash-version-at-bottom?))
                 (not show-comments-at-bottom?)
               )
             (gnc:make-html-text
@@ -623,7 +623,7 @@
               (and show-preparer? show-preparer-at-bottom?)
               (and show-receiver? show-receiver-at-bottom?)
               (and show-date? show-date-time-at-bottom?)
-              (and show-gnucash-version? show-gnucash-version-at-bottom?)
+              (and show-systecash-version? show-systecash-version-at-bottom?)
               show-comments-at-bottom?
             )
           (gnc:make-html-text
@@ -675,11 +675,11 @@
           )
           " "
         )
-        (if (and show-gnucash-version? show-gnucash-version-at-bottom?)
-          ;; print the GnuCash version string as additional header info
+        (if (and show-systecash-version? show-systecash-version-at-bottom?)
+          ;; print the systecash version string as additional header info
           (gnc:make-html-text
             (gnc:html-markup-i
-              (_ "GnuCash ")
+              (_ "systecash ")
               gnc:version
             )
             (gnc:html-markup-br)

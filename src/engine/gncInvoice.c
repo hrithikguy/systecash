@@ -556,7 +556,7 @@ void gncInvoiceSetIsCreditNote (GncInvoice *invoice, gboolean credit_note)
     gncInvoiceCommitEdit (invoice);
 
     /* If this is a credit note, set a feature flag for it in the book
-     * This will prevent older GnuCash versions that don't support
+     * This will prevent older systecash versions that don't support
      * credit notes to open this file. */
     if (credit_note)
         gnc_features_set_used (gncInvoiceGetBook (invoice), GNC_FEATURE_CREDIT_NOTES);
@@ -1653,7 +1653,7 @@ gncInvoiceUnpost (GncInvoice *invoice, gboolean reset_tax_tables)
      * invoices).
      * If this is the case, recreate the link transaction between all the remaining lots.
      *
-     * Note that before GnuCash 2.6 payments were not stored in separate lots, but
+     * Note that before systecash 2.6 payments were not stored in separate lots, but
      * always ended up in invoice lots when matched to an invoice. Over-payments
      * were copied to a new lot, to which later an invoice was added again and so on.
      * These over-payments were handled with automatic payment forward transactions.

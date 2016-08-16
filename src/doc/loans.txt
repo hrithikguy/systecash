@@ -1,5 +1,5 @@
-/** \page loanhandling Handling loan repayment in GnuCash::Scheduled Transactions
-\sa The original email thread at <http://lists.gnucash.org/pipermail/gnucash-devel/2002-July/006438.html>.
+/** \page loanhandling Handling loan repayment in systecash::Scheduled Transactions
+\sa The original email thread at <http://lists.systecash.org/pipermail/systecash-devel/2002-July/006438.html>.
 
 July, 2002 - jsled@asynchronous.org
 
@@ -23,7 +23,7 @@ Identifiers:\n
 P  : the original principal.  This is the overall principal afforded by the
      loan at the time of it's creation.\n
 P' : The beginning principal.  This is the principal at the time of entry
-     into GnuCash.\n
+     into systecash.\n
 I :  The interest rate associated with the loan.  Note that this may change
      over time [based on an addition to the Prime rate, for instance], at
      various frequencies [yearly, monthly, quarterly...].  Ideally, we can
@@ -360,7 +360,7 @@ Review/Approval
 \subsection loansdruidintro Intro
 
 "This is a step-by-step method of creating a loan
- repayment setup within GnuCash.  In this Druid,
+ repayment setup within systecash.  In this Druid,
  you can input the parameters of your loan and
  it's repayment and give the details of it's
  payback.  Using that information, the appropriate
@@ -460,7 +460,7 @@ http://www.interest.com/hugh/calc/mort_links.html
 
 \verbatim
 <Wilddev> jsled: <auspex> Wilddev: The labels need colons, mnemonics, and right-alignment. 
-<Wilddev> <auspex> Wilddev: It may be worthwhile for gnucash to create GtkSpinButton subclasses which show the percent symbol and others within the field.
+<Wilddev> <auspex> Wilddev: It may be worthwhile for systecash to create GtkSpinButton subclasses which show the percent symbol and others within the field.
 <Wilddev> <auspex> Wilddev: I don't know how complicated that will be.
 <Wilddev> <Wilddev> me either :P
 <Wilddev> <auspex> Wilddev: The strings need review, but there may be other changes to make first.

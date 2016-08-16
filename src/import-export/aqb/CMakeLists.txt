@@ -55,8 +55,8 @@ TARGET_INCLUDE_DIRECTORIES(gncmod-aqbanking PRIVATE ${AQBANKING_INCLUDE_DIRS}
        ${GWENHYWFAR_INCLUDE_DIRS} ${KTOBLZCHECK_INCLUDE_DIRS})
 
 INSTALL(TARGETS gncmod-aqbanking
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 # No headers to install
 
@@ -64,13 +64,13 @@ SET(aqbanking_GLADE assistant-ab-initial.glade dialog-ab.glade)
 
 SET(aqbanking_UI gnc-plugin-aqbanking-ui.xml)
 
-INSTALL(FILES ${aqbanking_GLADE} DESTINATION share/gnucash/gtkbuilder)
+INSTALL(FILES ${aqbanking_GLADE} DESTINATION share/systecash/gtkbuilder)
 
-INSTALL(FILES ${aqbanking_UI} DESTINATION share/gnucash/ui)
+INSTALL(FILES ${aqbanking_UI} DESTINATION share/systecash/ui)
 
 IF (GNC_BUILD_AS_INSTALL)
   FILE(COPY ${aqbanking_UI}
-    DESTINATION ${DATADIR_BUILD}/gnucash/ui)
+    DESTINATION ${DATADIR_BUILD}/systecash/ui)
   FILE(COPY ${aqbanking_GLADE}
-    DESTINATION ${DATADIR_BUILD}/gnucash/gtkbuilder)
+    DESTINATION ${DATADIR_BUILD}/systecash/gtkbuilder)
 ENDIF()

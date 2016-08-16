@@ -24,10 +24,10 @@
  Boston, MA  02110-1301,  USA       gnu@gnu.org
 -->
 <xsl:stylesheet version="1.0" 
-		xmlns="http://www.gnucash.org/XML/"
+		xmlns="http://www.systecash.org/XML/"
 		xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-		xmlns:gnc="http://www.gnucash.org/XML/gnc"
-		xmlns:act="http://www.gnucash.org/XML/act">
+		xmlns:gnc="http://www.systecash.org/XML/gnc"
+		xmlns:act="http://www.systecash.org/XML/act">
   <xsl:output method="text" encoding="utf-8"/>
   <xsl:strip-space elements="*"/>
 

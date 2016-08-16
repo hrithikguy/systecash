@@ -41,7 +41,7 @@ hammered on it on a white board and weren't able to poke any holes.
     security involved) into the Transaction's balancing currency.
 
 The balancing semantics of this approach are unambiguous, no existing
-balanced gnucash transactions would be disallowed (the transaction's
+balanced systecash transactions would be disallowed (the transaction's
 common currency just gets saved in a pointer) and the fuzzy
 distinction between the account's currency, security, damount, value
 is cleared up.

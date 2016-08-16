@@ -17,9 +17,9 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash business-core))
-(use-modules (gnucash gnc-module))
-(gnc:module-load "gnucash/engine" 0)
+(define-module (systecash business-core))
+(use-modules (systecash gnc-module))
+(gnc:module-load "systecash/engine" 0)
 
 (define (gnc:owner-get-address owner)
   (let ((type (gncOwnerGetType owner)))

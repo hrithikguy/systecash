@@ -24,13 +24,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash report utility-reports))
+(define-module (systecash report utility-reports))
 
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash report hello-world))
-(use-modules (gnucash report view-column))
-(use-modules (gnucash report welcome-to-gnucash))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash report hello-world))
+(use-modules (systecash report view-column))
+(use-modules (systecash report welcome-to-systecash))
 
-;;(use-modules (gnucash report test-graphing))
+;;(use-modules (systecash report test-graphing))
 
 (re-export gnc:make-welcome-report)

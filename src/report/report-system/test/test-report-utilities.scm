@@ -1,12 +1,12 @@
-(use-modules (gnucash gnc-module))
+(use-modules (systecash gnc-module))
 
-(gnc:module-begin-syntax (gnc:module-load "gnucash/app-utils" 0))
-(gnc:module-begin-syntax (gnc:module-load "gnucash/report/report-system" 0))
+(gnc:module-begin-syntax (gnc:module-load "systecash/app-utils" 0))
+(gnc:module-begin-syntax (gnc:module-load "systecash/report/report-system" 0))
 
 
-(use-modules (gnucash engine test test-extras))
-(use-modules (gnucash report report-system test test-extras))
-(use-modules (gnucash report report-system))
+(use-modules (systecash engine test test-extras))
+(use-modules (systecash report report-system test test-extras))
+(use-modules (systecash report report-system))
 
 (define (run-test)
   (test-account-get-trans-type-splits-interval))

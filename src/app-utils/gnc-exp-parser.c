@@ -1,6 +1,6 @@
 /********************************************************************\
  * gnc-exp-parser.c -- Implementation of expression parsing for     *
- *                     GnuCash using the routines in 'calculation'. *
+ *                     systecash using the routines in 'calculation'. *
  * Copyright (C) 2000 Dave Peticolas <dave@krondo.com>              *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
@@ -61,7 +61,7 @@ static gboolean      parser_inited     = FALSE;
 static gchar *
 gnc_exp_parser_filname (void)
 {
-    return gnc_build_dotgnucash_path("expressions-2.0");
+    return gnc_build_dotsystecash_path("expressions-2.0");
 }
 
 void

@@ -329,11 +329,11 @@ gnc_quote_source_add_new (const char *source_name, gboolean supported)
     new_source->index = g_list_length(new_quote_sources);
 
     /* This name can be changed if/when support for this price source is
-     * integrated into gnucash. */
+     * integrated into systecash. */
     new_source->user_name = g_strdup(source_name);
 
     /* This name is permanent and must be kept the same if/when support
-     * for this price source is integrated into gnucash (i.e. for a
+     * for this price source is integrated into systecash (i.e. for a
      * nice user name). */
     new_source->old_internal_name = g_strdup(source_name);
     new_source->internal_name = g_strdup(source_name);
@@ -514,7 +514,7 @@ gnc_quote_source_get_internal_name (const gnc_quote_source *source)
 /********************************************************************
  * gnc_quote_source_set_fq_installed
  *
- * Update gnucash internal tables on what Finance::Quote sources are
+ * Update systecash internal tables on what Finance::Quote sources are
  * installed.
  ********************************************************************/
 void
@@ -1521,7 +1521,7 @@ gnc_commodity_increment_usage_count(gnc_commodity *cm)
             && gnc_commodity_get_auto_quote_control_flag(cm)
             && gnc_commodity_is_iso(cm))
     {
-        /* compatability hack - Gnucash 1.8 gets currency quotes when a
+        /* compatability hack - systecash 1.8 gets currency quotes when a
            non-default currency is assigned to an account.  */
         gnc_commodity_begin_edit(cm);
         gnc_commodity_set_quote_flag(cm, TRUE);

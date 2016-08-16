@@ -23,7 +23,7 @@
 #ifndef GNC_SESSION_HPP
 #define GNC_SESSION_HPP
 
-// gnucash includes
+// systecash includes
 #include "config.h" // required by qof/qofutil.h
 #include <glib/gi18n.h>
 extern "C"
@@ -41,11 +41,11 @@ namespace gnc
 
 class Book;
 
-/** Wrapper around a gnucash ::QofSession pointer with C++ methods for
+/** Wrapper around a systecash ::QofSession pointer with C++ methods for
  * easier setter and getter access.
  *
  * Unfortunately this object has no information about whether the
- * underlying gnucash ::QofSession object is still alive or has been
+ * underlying systecash ::QofSession object is still alive or has been
  * deleted.
  */
 class Session : public WeakPointer< ::QofSession >

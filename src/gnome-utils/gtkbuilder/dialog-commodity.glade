@@ -870,8 +870,8 @@
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
                     <property name="has_tooltip">True</property>
-                    <property name="tooltip_markup">These are quote sources that were recently added to F::Q. GnuCash does not know if these sources retrieve information from a single site or from multiple sites on the internet.</property>
-                    <property name="tooltip_text" translatable="yes">These are quote sources that were recently added to F::Q. GnuCash does not know if these sources retrieve information from a single site or from multiple sites on the internet.</property>
+                    <property name="tooltip_markup">These are quote sources that were recently added to F::Q. systecash does not know if these sources retrieve information from a single site or from multiple sites on the internet.</property>
+                    <property name="tooltip_text" translatable="yes">These are quote sources that were recently added to F::Q. systecash does not know if these sources retrieve information from a single site or from multiple sites on the internet.</property>
                     <property name="use_action_appearance">False</property>
                     <property name="use_underline">True</property>
                     <property name="draw_indicator">True</property>

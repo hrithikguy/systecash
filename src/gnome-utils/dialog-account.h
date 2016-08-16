@@ -1,6 +1,6 @@
 /********************************************************************\
  * dialog-account.h -- window for creating and editing accounts for *
- *                     GnuCash                                      *
+ *                     systecash                                      *
  * Copyright (C) 2000 Dave Peticolas <petcola@cs.ucdavis.edu>       *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *

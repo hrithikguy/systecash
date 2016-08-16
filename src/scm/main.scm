@@ -15,8 +15,8 @@
 ;; 51 Franklin Street, Fifth Floor    Fax:    +1-617-542-2652
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 
-(define-module (gnucash main)
-  #:use-module (gnucash printf))
+(define-module (systecash main)
+  #:use-module (systecash printf))
 
 ;; This is to silence warnings with guile-1.8:
 (if (and (>= (string->number (major-version)) 1) 
@@ -31,14 +31,14 @@
     (set! %auto-compilation-options 
           '(#:warnings (arity-mismatch format duplicate-case-datum bad-case-datum))))
 
-(use-modules (gnucash core-utils))
+(use-modules (systecash core-utils))
 
 ;; Load the srfis (eventually, we should see where these are needed
 ;; and only have the use-modules statements in those files).
 (use-modules (srfi srfi-1))
 (use-modules (srfi srfi-8))
 
-(use-modules (gnucash gnc-module))
+(use-modules (systecash gnc-module))
 
 ;; files we can load from the top-level because they're "well behaved"
 ;; (these should probably be in modules eventually)

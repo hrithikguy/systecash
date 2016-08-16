@@ -77,8 +77,8 @@ main_helper (void *closure, int argc, char **argv)
 {
     int count = 50;
 
-    gnc_module_load("gnucash/engine", 0);
-    gnc_module_load("gnucash/app-utils", 0);
+    gnc_module_load("systecash/engine", 0);
+    gnc_module_load("systecash/app-utils", 0);
 
     if (argc > 1)
         count = atoi (argv[1]);

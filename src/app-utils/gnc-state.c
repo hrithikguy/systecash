@@ -50,18 +50,18 @@ static GKeyFile *state_file = NULL;
 /* Determine which file name to use for the state file. This name is based
  * the current book's uri and guid.
  *
- * The state files will be searched for in the books directory in GnuCash'
+ * The state files will be searched for in the books directory in systecash'
  * private configuration directory. This configuration directory is
  * platform dependent and can be overridden with environment variable
- * DOT_GNUCASH_DIR. On linux for example this is ~/.gnucash by default.
+ * DOT_GNUCASH_DIR. On linux for example this is ~/.systecash by default.
  *
  * The URL is used to compute the base name of the state file and the
  * guid is used to differentiate when the user has multiple data files
  * with the same name.
  *
- * As of GnuCash 2.4.1 state files will have their own extension to
+ * As of systecash 2.4.1 state files will have their own extension to
  * differentiate them from data files saved by the user. New state
- * files will always be created with such an extension. But GnuCash
+ * files will always be created with such an extension. But systecash
  * will continue to search for state files without an extension if
  * no proper state file with extension is found. */
 

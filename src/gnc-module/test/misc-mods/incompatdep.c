@@ -1,4 +1,4 @@
-/* incompatdep.c : a gnucash module that depends on an incompatible
+/* incompatdep.c : a systecash module that depends on an incompatible
  * version of another module. the initialization should fail. */
 /********************************************************************\
  * This program is free software; you can redistribute it and/or    *
@@ -39,7 +39,7 @@ int libgncmod_incompatdep_gnc_module_revision = 0;
 char *
 libgncmod_incompatdep_gnc_module_path(void)
 {
-    return g_strdup("gnucash/incompatdep");
+    return g_strdup("systecash/incompatdep");
 }
 
 char *
@@ -51,7 +51,7 @@ libgncmod_incompatdep_gnc_module_description(void)
 int
 libgncmod_incompatdep_gnc_module_init(int refcount)
 {
-    if (gnc_module_load("gnucash/foo", 25))
+    if (gnc_module_load("systecash/foo", 25))
     {
         return TRUE;
     }

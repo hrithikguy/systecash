@@ -18,5 +18,5 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report locale-specific de_DE))
-(use-modules (gnucash report taxtxf-de_DE))  
+(define-module (systecash report locale-specific de_DE))
+(use-modules (systecash report taxtxf-de_DE))  

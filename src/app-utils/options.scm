@@ -201,7 +201,7 @@
                  (lambda (port) (write value port)))))
        ;; Guile 1.8 has a bug that it serializes a space in a symbol to "\ "
        ;; but can't deserialize this back to a symbol afterwards. Stripping the
-       ;; "\" appears to work around this (see gnucash bug  721654 which lead to this issue)
+       ;; "\" appears to work around this (see systecash bug  721654 which lead to this issue)
        (cond-expand
          (guile-2 )
          (else (set! result (regexp-substitute/global #f "\\\\ " result 'pre " " 'post))))

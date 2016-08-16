@@ -38,7 +38,7 @@ TARGET_COMPILE_DEFINITIONS (gncmod-ledger-core PRIVATE -DG_LOG_DOMAIN=\"gnc.regi
 TARGET_INCLUDE_DIRECTORIES(gncmod-ledger-core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 INSTALL(TARGETS gncmod-ledger-core
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 # No headers to install

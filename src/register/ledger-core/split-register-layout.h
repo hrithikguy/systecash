@@ -40,7 +40,7 @@
  *
  *  This implementation hard-codes the layout in C, although the
  *  original intent was that the layout would be fetched from a
- *  config file that could be tweaked for a specific, non-GnuCash
+ *  config file that could be tweaked for a specific, non-systecash
  *  application.
  */
 

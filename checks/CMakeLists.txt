@@ -8,8 +8,8 @@ SET(checks_DATA
   quicken_3part.chk
 )
 
-INSTALL(FILES ${checks_DATA} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/gnucash/checks)
+INSTALL(FILES ${checks_DATA} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/systecash/checks)
 
 IF (GNC_BUILD_AS_INSTALL)
-  FILE(COPY ${checks_DATA} DESTINATION ${DATADIR_BUILD}/gnucash/checks)
+  FILE(COPY ${checks_DATA} DESTINATION ${DATADIR_BUILD}/systecash/checks)
 ENDIF()

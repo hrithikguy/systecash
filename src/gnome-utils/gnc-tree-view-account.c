@@ -2347,7 +2347,7 @@ gnc_tree_view_account_save(GncTreeViewAccount *view,
 }
 
 /** Expand a row in the tree that was expanded when the user last quit
- *  gnucash.  Its job is to map from account name to tree row and
+ *  systecash.  Its job is to map from account name to tree row and
  *  expand the row.
  *
  *  @param view A pointer to the GncTreeViewAccount.
@@ -2369,7 +2369,7 @@ tree_restore_expanded_row (GncTreeViewAccount *view,
 
 
 /** Select the row in the tree that was selected when the user last
- *  quit gnucash.  Its job is to map from account name to tree row and
+ *  quit systecash.  Its job is to map from account name to tree row and
  *  select the row.
  *
  *  @param tree A pointer to the GncTreeViewAccount embedded.

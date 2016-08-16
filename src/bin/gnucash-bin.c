@@ -1,5 +1,5 @@
 /*
- * gnucash-bin.c -- The program entry point for GnuCash
+ * systecash-bin.c -- The program entry point for systecash
  *
  * Copyright (C) 2006 Chris Shoemaker <c.shoemaker@cox.net>
  *
@@ -77,7 +77,7 @@ static int is_development_version = FALSE;
 #endif
 
 /* Command-line option variables */
-static int          gnucash_show_version = 0;
+static int          systecash_show_version = 0;
 static int          debugging        = 0;
 static int          extra            = 0;
 static gchar      **log_flags        = NULL;
@@ -92,8 +92,8 @@ static gchar      **args_remaining   = NULL;
 static GOptionEntry options[] =
 {
     {
-        "version", 'v', 0, G_OPTION_ARG_NONE, &gnucash_show_version,
-        N_("Show GnuCash version"), NULL
+        "version", 'v', 0, G_OPTION_ARG_NONE, &systecash_show_version,
+        N_("Show systecash version"), NULL
     },
 
     {
@@ -114,7 +114,7 @@ static GOptionEntry options[] =
 
     {
         "logto", '\0', 0, G_OPTION_ARG_STRING, &log_to_filename,
-        N_("File to log into; defaults to \"/tmp/gnucash.trace\"; can be \"stderr\" or \"stdout\"."),
+        N_("File to log into; defaults to \"/tmp/systecash.trace\"; can be \"stderr\" or \"stdout\"."),
         NULL
     },
 
@@ -131,7 +131,7 @@ static GOptionEntry options[] =
     },
     {
         "add-price-quotes", '\0', 0, G_OPTION_ARG_STRING, &add_quotes_file,
-        N_("Add price quotes to given GnuCash datafile"),
+        N_("Add price quotes to given systecash datafile"),
         /* Translators: Argument description for autohelp; see
            http://developer.gnome.org/doc/API/2.0/glib/glib-Commandline-option-parser.html */
         N_("FILE")
@@ -155,9 +155,9 @@ gnc_print_unstable_message(void)
 
     g_print("\n\n%s\n%s\n%s\n%s\n",
             _("This is a development version. It may or may not work."),
-            _("Report bugs and other problems to gnucash-devel@gnucash.org"),
+            _("Report bugs and other problems to systecash-devel@systecash.org"),
             _("You can also lookup and file bug reports at http://bugzilla.gnome.org"),
-            _("To find the last stable version, please refer to http://www.gnucash.org"));
+            _("To find the last stable version, please refer to http://www.systecash.org"));
 }
 
 #ifdef MAC_INTEGRATION
@@ -344,7 +344,7 @@ try_load_config_array(const gchar *fns[])
 
     for (i = 0; fns[i]; i++)
     {
-        filename = gnc_build_dotgnucash_path(fns[i]);
+        filename = gnc_build_dotsystecash_path(fns[i]);
         if (gfec_try_load(filename))
         {
             g_free(filename);
@@ -424,7 +424,7 @@ gnc_parse_command_line(int *argc, char ***argv)
 {
 
     GError *error = NULL;
-    GOptionContext *context = g_option_context_new (_("- GnuCash personal and small business finance management"));
+    GOptionContext *context = g_option_context_new (_("- systecash personal and small business finance management"));
 
     g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
     g_option_context_add_group (context, gtk_get_option_group(FALSE));
@@ -437,13 +437,13 @@ gnc_parse_command_line(int *argc, char ***argv)
     }
     g_option_context_free (context);
 
-    if (gnucash_show_version)
+    if (systecash_show_version)
     {
         gchar *fixed_message;
 
         if (is_development_version)
         {
-            fixed_message = g_strdup_printf(_("GnuCash %s development version"), VERSION);
+            fixed_message = g_strdup_printf(_("systecash %s development version"), VERSION);
 
             /* Translators: 1st %s is a fixed message, which is translated independently;
                             2nd %s is the scm type (svn/svk/git/bzr);
@@ -455,7 +455,7 @@ gnc_parse_command_line(int *argc, char ***argv)
         }
         else
         {
-            fixed_message = g_strdup_printf(_("GnuCash %s"), VERSION);
+            fixed_message = g_strdup_printf(_("systecash %s"), VERSION);
 
             /* Translators: 1st %s is a fixed message, which is translated independently;
                             2nd %s is the scm (svn/svk/git/bzr) revision number;
@@ -482,7 +482,7 @@ gnc_parse_command_line(int *argc, char ***argv)
 }
 
 static void
-load_gnucash_modules()
+load_systecash_modules()
 {
     int i, len;
     struct
@@ -492,28 +492,28 @@ load_gnucash_modules()
         gboolean optional;
     } modules[] =
     {
-        { "gnucash/app-utils", 0, FALSE },
-        { "gnucash/engine", 0, FALSE },
-        { "gnucash/register/ledger-core", 0, FALSE },
-        { "gnucash/register/register-core", 0, FALSE },
-        { "gnucash/register/register-gnome", 0, FALSE },
-        { "gnucash/import-export/qif-import", 0, FALSE },
-        { "gnucash/import-export/ofx", 0, TRUE },
-        { "gnucash/import-export/csv-import", 0, TRUE },
-        { "gnucash/import-export/csv-export", 0, TRUE },
-        { "gnucash/import-export/log-replay", 0, TRUE },
-        { "gnucash/import-export/aqbanking", 0, TRUE },
-        { "gnucash/report/report-system", 0, FALSE },
-        { "gnucash/report/stylesheets", 0, FALSE },
-        { "gnucash/report/standard-reports", 0, FALSE },
-        { "gnucash/report/utility-reports", 0, FALSE },
-        { "gnucash/report/locale-specific/us", 0, FALSE },
-        { "gnucash/report/report-gnome", 0, FALSE },
-        { "gnucash/business-gnome", 0, TRUE },
-        { "gnucash/gtkmm", 0, TRUE },
-        { "gnucash/python", 0, TRUE },
-        { "gnucash/plugins/bi_import", 0, TRUE},
-        { "gnucash/plugins/customer_import", 0, TRUE},
+        { "systecash/app-utils", 0, FALSE },
+        { "systecash/engine", 0, FALSE },
+        { "systecash/register/ledger-core", 0, FALSE },
+        { "systecash/register/register-core", 0, FALSE },
+        { "systecash/register/register-gnome", 0, FALSE },
+        { "systecash/import-export/qif-import", 0, FALSE },
+        { "systecash/import-export/ofx", 0, TRUE },
+        { "systecash/import-export/csv-import", 0, TRUE },
+        { "systecash/import-export/csv-export", 0, TRUE },
+        { "systecash/import-export/log-replay", 0, TRUE },
+        { "systecash/import-export/aqbanking", 0, TRUE },
+        { "systecash/report/report-system", 0, FALSE },
+        { "systecash/report/stylesheets", 0, FALSE },
+        { "systecash/report/standard-reports", 0, FALSE },
+        { "systecash/report/utility-reports", 0, FALSE },
+        { "systecash/report/locale-specific/us", 0, FALSE },
+        { "systecash/report/report-gnome", 0, FALSE },
+        { "systecash/business-gnome", 0, TRUE },
+        { "systecash/gtkmm", 0, TRUE },
+        { "systecash/python", 0, TRUE },
+        { "systecash/plugins/bi_import", 0, TRUE},
+        { "systecash/plugins/customer_import", 0, TRUE},
     };
 
     /* module initializations go here */
@@ -531,10 +531,10 @@ load_gnucash_modules()
     if (!gnc_engine_is_initialized())
     {
         /* On Windows this check used to fail anyway, see
-         * https://lists.gnucash.org/pipermail/gnucash-devel/2006-September/018529.html
+         * https://lists.systecash.org/pipermail/systecash-devel/2006-September/018529.html
          * but more recently it seems to work as expected
          * again. 2006-12-20, cstim. */
-        g_warning("GnuCash engine failed to initialize.  Exiting.\n");
+        g_warning("systecash engine failed to initialize.  Exiting.\n");
         exit(1);
     }
 }
@@ -547,13 +547,13 @@ inner_main_add_price_quotes(void *closure, int argc, char **argv)
 
     scm_c_eval_string("(debug-set! stack 200000)");
 
-    mod = scm_c_resolve_module("gnucash price-quotes");
+    mod = scm_c_resolve_module("systecash price-quotes");
     scm_set_current_module(mod);
 
     /* Don't load the modules since the stylesheet module crashes if the
        GUI is not initialized */
 #ifdef PRICE_QUOTES_NEED_MODULES
-    load_gnucash_modules();
+    load_systecash_modules();
 #endif
     gnc_prefs_init ();
     qof_event_suspend();
@@ -617,14 +617,14 @@ inner_main (void *closure, int argc, char **argv)
 
     scm_c_eval_string("(debug-set! stack 200000)");
 
-    main_mod = scm_c_resolve_module("gnucash main");
+    main_mod = scm_c_resolve_module("systecash main");
     scm_set_current_module(main_mod);
 
-    /* GnuCash switched to gsettings to store its preferences in version 2.5.6
+    /* systecash switched to gsettings to store its preferences in version 2.5.6
      * Migrate the user's preferences from gconf if needed */
     gnc_gsettings_migrate_from_gconf();
 
-    load_gnucash_modules();
+    load_systecash_modules();
 
     /* Load the config before starting up the gui. This insures that
      * custom reports have been read into memory before the Reports
@@ -634,7 +634,7 @@ inner_main (void *closure, int argc, char **argv)
 
     /* Setting-up the report menu must come after the module
        loading but before the gui initialization. */
-    scm_c_use_module("gnucash report report-gnome");
+    scm_c_use_module("systecash report report-gnome");
     scm_c_eval_string("(gnc:report-menu-setup)");
 
     /* TODO: After some more guile-extraction, this should happen even
@@ -645,7 +645,7 @@ inner_main (void *closure, int argc, char **argv)
 
     /* Install Price Quote Sources */
     gnc_update_splash_screen(_("Checking Finance::Quote..."), GNC_SPLASH_PERCENTAGE_UNKNOWN);
-    scm_c_use_module("gnucash price-quotes");
+    scm_c_use_module("systecash price-quotes");
     scm_c_eval_string("(gnc:price-quotes-install-sources)");
 
     gnc_hook_run(HOOK_STARTUP, NULL);
@@ -686,7 +686,7 @@ gnc_log_init()
     {
         /* initialize logging to our file. */
         gchar *tracefilename;
-        tracefilename = g_build_filename(g_get_tmp_dir(), "gnucash.trace",
+        tracefilename = g_build_filename(g_get_tmp_dir(), "systecash.trace",
                                          (gchar *)NULL);
         qof_log_init_filename(tracefilename);
         g_free(tracefilename);
@@ -706,7 +706,7 @@ gnc_log_init()
 
     {
         gchar *log_config_filename;
-        log_config_filename = gnc_build_dotgnucash_path("log.conf");
+        log_config_filename = gnc_build_dotsystecash_path("log.conf");
         if (g_file_test(log_config_filename, G_FILE_TEST_EXISTS))
             qof_log_parse_log_config(log_config_filename);
         g_free(log_config_filename);

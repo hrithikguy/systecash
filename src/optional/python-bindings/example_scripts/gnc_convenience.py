@@ -8,8 +8,8 @@
 # @brief some functions to make life easier when using python-bindings
 #
 
-from gnucash import Session, Account, Transaction, Split
-import gnucash
+from systecash import Session, Account, Transaction, Split
+import systecash
 
 
 def get_transaction_list(account):
@@ -104,7 +104,7 @@ def find_lot(lot_list,search_string):
   rlist=[]
   for lot in lot_list:
     if type(lot).__name__ == 'SwigPyObject':
-        lot = gnucash.GncLot(instance=lot)
+        lot = systecash.GncLot(instance=lot)
     ltitle=lot.get_title()
     if search_string in ltitle: 
       rlist.append(lot)

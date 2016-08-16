@@ -2,9 +2,9 @@
 <interface>
   <requires lib="gtk+" version="2.24"/>
   <!-- interface-naming-policy project-wide -->
-  <object class="GtkDialog" id="GnuCash Preferences">
+  <object class="GtkDialog" id="systecash Preferences">
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">GnuCash Preferences</property>
+    <property name="title" translatable="yes">systecash Preferences</property>
     <property name="default_width">600</property>
     <property name="default_height">400</property>
     <property name="type_hint">normal</property>
@@ -1373,8 +1373,8 @@ many months before the current month:</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
                     <property name="has_tooltip">True</property>
-                    <property name="tooltip_markup">Display hints for using GnuCash at startup.</property>
-                    <property name="tooltip_text" translatable="yes">Display hints for using GnuCash at startup.</property>
+                    <property name="tooltip_markup">Display hints for using systecash at startup.</property>
+                    <property name="tooltip_text" translatable="yes">Display hints for using systecash at startup.</property>
                     <property name="use_underline">True</property>
                     <property name="draw_indicator">True</property>
                   </object>
@@ -1768,8 +1768,8 @@ many months before the current month:</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
                     <property name="has_tooltip">True</property>
-                    <property name="tooltip_markup">If active, GnuCash shows a confirmation question each time the auto-save feature is started. Otherwise no extra explanation is shown.</property>
-                    <property name="tooltip_text" translatable="yes">If active, GnuCash shows a confirmation question each time the auto-save feature is started. Otherwise no extra explanation is shown.</property>
+                    <property name="tooltip_markup">If active, systecash shows a confirmation question each time the auto-save feature is started. Otherwise no extra explanation is shown.</property>
+                    <property name="tooltip_text" translatable="yes">If active, systecash shows a confirmation question each time the auto-save feature is started. Otherwise no extra explanation is shown.</property>
                     <property name="use_underline">True</property>
                     <property name="draw_indicator">True</property>
                   </object>
@@ -2515,13 +2515,13 @@ many months before the current month:</property>
                 </child>
                 <child>
                   <object class="GtkCheckButton" id="pref/general.register/use-theme-colors">
-                    <property name="label" translatable="yes">Don't _use GnuCash built-in colors</property>
+                    <property name="label" translatable="yes">Don't _use systecash built-in colors</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
                     <property name="has_tooltip">True</property>
-                    <property name="tooltip_markup">GnuCash uses a yellow/green theme by default for register windows. Check this if you want to use the system color theme instead.</property>
-                    <property name="tooltip_text" translatable="yes">GnuCash uses a yellow/green theme by default for register windows. Check this if you want to use the system color theme instead.</property>
+                    <property name="tooltip_markup">systecash uses a yellow/green theme by default for register windows. Check this if you want to use the system color theme instead.</property>
+                    <property name="tooltip_text" translatable="yes">systecash uses a yellow/green theme by default for register windows. Check this if you want to use the system color theme instead.</property>
                     <property name="use_underline">True</property>
                     <property name="draw_indicator">True</property>
                   </object>

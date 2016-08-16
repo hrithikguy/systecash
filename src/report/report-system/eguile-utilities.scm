@@ -22,16 +22,16 @@
 ;; Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
 ;; 02111-1307 USA
 
-(define-module (gnucash report eguile-utilities))
+(define-module (systecash report eguile-utilities))
 
 ; using all of these seems like overkill -- 
 ; not sure which are really required
-(use-modules (gnucash main))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash app-utils))
-(use-modules (gnucash core-utils))
-(gnc:module-load "gnucash/report/report-system" 0)
-(gnc:module-load "gnucash/app-utils" 0)
+(use-modules (systecash main))
+(use-modules (systecash gnc-module))
+(use-modules (systecash app-utils))
+(use-modules (systecash core-utils))
+(gnc:module-load "systecash/report/report-system" 0)
+(gnc:module-load "systecash/app-utils" 0)
 ; Syncase is deprecated and redundant in guile 2
 (cond-expand
   (guile-2 )
@@ -78,11 +78,11 @@
 
 (define-public (find-file fname)
   ;; Find the file 'fname', and return its full path.
-  ;; First look in the user's .gnucash directory.
-  ;; Then look in Gnucash's standard report directory.
+  ;; First look in the user's .systecash directory.
+  ;; Then look in systecash's standard report directory.
   ;; If no file is found, returns just 'fname' for use in error messages.
   ;; Note: this has been tested on Linux and Windows Vista so far...
-  (let* ((userpath (gnc-build-dotgnucash-path fname))
+  (let* ((userpath (gnc-build-dotsystecash-path fname))
          (syspath  (gnc-build-report-path fname)))
     ; make sure there's a trailing delimiter
       (if (access? userpath R_OK)

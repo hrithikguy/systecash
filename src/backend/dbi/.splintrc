@@ -1,6 +1,6 @@
 -DHAVE_CONFIG_H
 -DG_LOG_DOMAIN="gnc.backend.dbi"
--DLOCALE_DIR="/opt/gnucash2-svn/share/locale"
+-DLOCALE_DIR="/opt/systecash2-svn/share/locale"
 -DORBIT2=1
 -D_FORTIFY_SOURCE=2
 -I.

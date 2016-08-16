@@ -1,6 +1,6 @@
 /*
  * gnc-tree-model.h -- base implementation for a tree model in
- *                     Gnucash.  This only implements the object, not
+ *                     systecash.  This only implements the object, not
  *                     the model interface.
  *
  * Copyright (C) 2005 David Hampton <hampton@employees.org>
@@ -25,10 +25,10 @@
 
 /** @addtogroup GUI
     @{ */
-/** @addtogroup GuiTreeModel GnuCash Tree Model
+/** @addtogroup GuiTreeModel systecash Tree Model
     @{ */
 /** @file gnc-tree-model.h
-    @brief GtkTreeModel implementation for a generic gnucash tree.
+    @brief GtkTreeModel implementation for a generic systecash tree.
     @author David Hampton <hampton@employees.org>
 */
 

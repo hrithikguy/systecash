@@ -854,7 +854,7 @@ gnc_tree_model_owner_iter_parent (GtkTreeModel *tree_model,
 /************************************************************/
 
 /*
- * Convert a model/iter pair to a gnucash owner.  This routine should
+ * Convert a model/iter pair to a systecash owner.  This routine should
  * only be called from an owner tree view filter function.
  */
 GncOwner *

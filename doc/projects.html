@@ -2,8 +2,8 @@
 
 <html>
   <head>
-    <title>GnuCash Project Goals</title>
-    <meta name="description" content= "The Linux GnuCash project 
+    <title>systecash Project Goals</title>
+    <meta name="description" content= "The Linux systecash project 
                 aims at creating a world-class personal finance package. 
                 Goals include ease-of use, double entry, OFX support, 
                 charts, and reports, and multi-user support.">
@@ -13,15 +13,15 @@
 
   <body bgcolor="#d6dacb" fgcolor="#000000">
 
-    <div align=center><a href="http://www.gnucash.org/" target="_top">
-    <img border=0 width=470 height=62 alt="GnuCash Personal Finance Manager"
-     src="GnuCash_Long.jpg"></a><br>
+    <div align=center><a href="http://www.systecash.org/" target="_top">
+    <img border=0 width=470 height=62 alt="systecash Personal Finance Manager"
+     src="systecash_Long.jpg"></a><br>
     </div>
 
-    <h1>GnuCash Project Goals</h1>
+    <h1>systecash Project Goals</h1>
 
     <p>
-    The people behind <a href="http://www.gnucash.org">GnuCash</a>
+    The people behind <a href="http://www.systecash.org">systecash</a>
     aim to create a world-class GPL'ed Open Source Personal
     Financial Application for GNU/Linux and other Unix's. This page
     reviews some of the technical issues and development status
@@ -29,21 +29,21 @@
     developers and contributors, providing status, and suggesting
     directions and technologies for deploying new features. If you
     simply want to get a better idea of what <a href=
-    "http://www.gnucash.org">GnuCash</a> is and what it does, visit its
-    <a href="http://www.gnucash.org">home page</a>. The home page
+    "http://www.systecash.org">systecash</a> is and what it does, visit its
+    <a href="http://www.systecash.org">home page</a>. The home page
     contains screen shots, news items, and mailing list
     archives.
     </p>
 
     <p>
-    There are currently several different versions of GnuCash.
+    There are currently several different versions of systecash.
     We've adopted the kernel numbering scheme: even minor release
     numbers (1.4.x, 1.6.x) are considered to mark stable releases,
     while odd numbers (1.5.x, 1.7.x) mark development releases.
     </p>
 
     <ul>
-      <li>The current stable, production release is gnucash-1.6.0 and
+      <li>The current stable, production release is systecash-1.6.0 and
           is based on the <a href= "http://www.gnome.org">Gnome</a> / 
           <a href= "http://www.gtk.org">GTK</a> libraries.
       </li>
@@ -57,7 +57,7 @@
     The latest version is available only via CVS.  Occasionally,
     some of the more stable CVS versions are given a version number,
     and packaged as a precompiled deb or RPM install package. Naive or
-    beginning users should probably stick to version gnucash-1.6.0.
+    beginning users should probably stick to version systecash-1.6.0.
     More adventurous users can try one of the 1.7.x releases, However,
     keep in mind that they are in a state of constant change and will
     often be unstable.
@@ -111,7 +111,7 @@
     </ul>
 
     <p>
-    GnuCash also needs to deal with multiple distributed data
+    systecash also needs to deal with multiple distributed data
     sources: stock quotations from the net or transaction
     confirmations from online banks and brokerage houses, or from
     more mundane sources, such as file imports, or merger of data
@@ -131,7 +131,7 @@
     on.</p>
 
     <h2>The Financial Engine</h2>
-    In GnuCash, the Model is implemented via the <b>Engine</b> API,
+    In systecash, the Model is implemented via the <b>Engine</b> API,
     and the View is the data that is currently in the <b>
     Engine</b>. Thus, the Engine is a set of programming API's that
     the GUI (or a script, or even a clever command-line-addict) can
@@ -190,7 +190,7 @@
           enabling multi-user and auditing functions.
 	  </li>
 
-      <li>It can talk, via RPC, to a gnucash server.  (This code is 
+      <li>It can talk, via RPC, to a systecash server.  (This code is 
           'alpha' and incomplete/broken).
 	  </li>
 	  
@@ -205,25 +205,25 @@
     between the GUI and the financial data, it is really intended
     to be able to do much more.
     In particular, it should be possible to create a peer-to-peer
-    network model, where gnucash peers can synchronize data between
+    network model, where systecash peers can synchronize data between
     themselves.  The engine should also be expandable to handle other 
     sources of data, such as OFX/IFX, the Open Trading Protocol, or 
     the OMG CORBA General Ledger submission.  In particular, it
-    should be possible to use GnuCash not only to view data from
+    should be possible to use systecash not only to view data from
     these sources, but also to manipulate it and send it back.
     </p>
 
     <h2>Modularity, Extensibility and Customization</h2>
 
-    <p>The above structure should lead us to view GnuCash not so
+    <p>The above structure should lead us to view systecash not so
     much as a tightly integrated application, but rather as a loose
     confederation of component objects, libraries and interfaces.
     This has a number of advantages for both the deeloper and the 
     user.  For the developer, it allows parts to evolve semi-independently
-    of one-another, and to be used in other, non-gnucash projects.
+    of one-another, and to be used in other, non-systecash projects.
     For the user, a good extensibility allows the use of
     <a href="#arrangements">arrangements</a>: a way of broadly
-    customizing the appearence and behaviour of gnucash, and then 
+    customizing the appearence and behaviour of systecash, and then 
     allowing users to very easily share these customizations with 
     one another.  Such arrangements might be collections of canned 
     reports, e.g. for business or home user.  Or they might be
@@ -235,7 +235,7 @@
     <p>
     In order to facilitate the gluing together of these parts, as
     well as simplify the questions of customizability, change and
-    rapid development, GnuCash makes use of the 
+    rapid development, systecash makes use of the 
     <a href= "http://www.swiss.ai.mit.edu/projects/scheme/index.html">
     Scheme</a> extension language (as implemented in the FSF 
     <a href="http://www.gnu.org/software/guile/guile.html">Guile</a>
@@ -251,23 +251,23 @@
     <p>More and more finacial data is moving onto the web.  
     People shop on-line. They pay bills on-line.  There are
     even some promising e-wallet systems (such as 
-    <a href="http://www.webfunds.org">WebFunds</a>).  For GnuCash
+    <a href="http://www.webfunds.org">WebFunds</a>).  For systecash
     to be relevent in this on-line world, it must be able to interact
     with these systems.  There are several steps that can be taken
     along this path.  First, it must be possible to simply and
     transparently import financial data off the web.   Click on a QIF
-    file, mime-type "application/x-qif"? Gnucash sucks it in without 
-    burping.  But, in a more distant future, can GnuCash originate
+    file, mime-type "application/x-qif"? systecash sucks it in without 
+    burping.  But, in a more distant future, can systecash originate
     transactions? It should be able to!  
     </p>
     <p>
-    GnuCash can be and should be "The Sophisticated Financial Web Browser".
-    All GnuCash reports and the help system are HTML-based.  In fact,
-    GnuCash has a built-in web browser that can view ordinary web sites.
-    Interactive gnucash components such as the bar and pie charts, or
+    systecash can be and should be "The Sophisticated Financial Web Browser".
+    All systecash reports and the help system are HTML-based.  In fact,
+    systecash has a built-in web browser that can view ordinary web sites.
+    Interactive systecash components such as the bar and pie charts, or
     the graphs and reports, can all be served up by a remote web server,
-    as well as locally through the GnuCash application.  This allows
-    GnuCash to blur the line between web browser and financial application,
+    as well as locally through the systecash application.  This allows
+    systecash to blur the line between web browser and financial application,
     and offer the best of both worlds.
     </p>
     <p>
@@ -276,11 +276,11 @@
     browsers to view the financial data. But there are problems:
     dynamically-generated html and cgi-bins aren't as pretty or easy 
     to use, or as fast, responsive or sophisticated, as what you can 
-    do with a custom client.   That is, GnuCash can be more interactive,
+    do with a custom client.   That is, systecash can be more interactive,
     easier to user, slicker and more professional looking in style 
     and presentation than a plain-old dynamic website.  Financial
     ASP's simply cannot currently offer the kind of utility, flexibility,
-    responsiveness and integration that GnuCash can offer.
+    responsiveness and integration that systecash can offer.
     </p>
     <p>
     In theory, the 'Java revolution' was supposed to provide this 
@@ -301,18 +301,18 @@
     with graphs and reports (all for a monthly fee).  The existance of
     these services highlights a problem: the inability to aggregate
     the same data on the users desktop, in a simple, coherent fashion.
-    Let us posit that GnuCash, with the right on-line interfaces, 
+    Let us posit that systecash, with the right on-line interfaces, 
     would be a natural for this.  For the paranoid,
     this has the added advantage that no one business has access to
     all of your financial records.
     </p>
 
     <p>
-    To put it another way, GnuCash can provide a centralized, trusted 
+    To put it another way, systecash can provide a centralized, trusted 
     store for financial data that no other application can provide.  
     The convenience 
     factor:  if you have trading accounts at e*trade and charles schwab,
-    then GnuCash can be the central place where you can oversee 
+    then systecash can be the central place where you can oversee 
     <b>all</b> of your investments.  The trust factor:  
     maybe you can trust your web bank. Maybe you can trust your web 
     stock account.  But can you trust a single web entity with *all*
@@ -324,7 +324,7 @@
     that you trust it not to have any built-in covert channels:
     nothing that might send back the make and model of your CPU and 
     the last ten transactions 'home to mommy' for 'diagnostic purposes'.
-    Because open source software, such as GnuCash, can be audited
+    Because open source software, such as systecash, can be audited
     it can be trusted in ways that no proprietary software can be.
     In an increasingly net-connected world, the ability to build 
     trust through audits will be increasingly important.
@@ -332,7 +332,7 @@
 
     <h2>Looking Into the Future</h2>
     Things like support for OFX, and small-business features are
-    hopefully in the near term future of gnucash.  Lets take a look
+    hopefully in the near term future of systecash.  Lets take a look
     at some more far-out possibilities.
     </p>
     <dl>
@@ -343,12 +343,12 @@
 	monthly fees.  It should provide you with some measure
 	of anonymity and privacy.  An e-wallet should also do 
 	something no ordinary wallet can do: show you a monthly
-	report of expenditures.  GnuCash should get e-wallet 
+	report of expenditures.  systecash should get e-wallet 
 	features. </dd>
 
    <dt><b>Authentication, Authorization and Access Control</b></dt>
    <dd>How does an on-line merchant know that you are who you say
-       you are?  How can you use GnuCash to authorize a bill payment?
+       you are?  How can you use systecash to authorize a bill payment?
        Sooner or later, smart-cards will provide the sort of 
        authentication and access control that is only groped for 
        with PGP/GPG, keyrings, x.509 certificates, and Microsoft 
@@ -362,8 +362,8 @@
         send you a bill, and wants you to go to thier website to
 	pay that bill (they want your eyeballs).  Of course, for
 	the user, it would be more convenient to have the bill
-	show up on the desktop, inside of gnucash, and get authenticated
-	and paid out from the desktop (by gnucash), as you would
+	show up on the desktop, inside of systecash, and get authenticated
+	and paid out from the desktop (by systecash), as you would
 	do with all of your other bills.
     </dl>
 
@@ -374,7 +374,7 @@
     <h1>Requirements</h1>
     </a>
     Lets take a look at who the current and potential future users
-    of GnuCash are, and how they might use it.   The classes:
+    of systecash are, and how they might use it.   The classes:
 
     <ul>
       <li>Basic Household Accounting/Budgeting</li>
@@ -427,7 +427,7 @@
           save time typing.
       <li>Basic Audit features.  There's a problem with blindly
           allowing on-line data (prices, transactions) to enter
-	  GnuCash.  It may not be clear where it came from,
+	  systecash.  It may not be clear where it came from,
 	  and even if the source is beleived to be 'reputable',
 	  there still may be factual errors in the data.  Thus,
 	  there must be a way of audting newly-arrived (or even old)
@@ -533,7 +533,7 @@
     </ul>
 
     <p>It may be that these will require <em>completely</em>
-    different systems, and that GnuCash cannot be "all things to
+    different systems, and that systecash cannot be "all things to
     all people." This remains to be seen.</p>
     <hr>
     <!--===================================================-->
@@ -935,7 +935,7 @@
 
       <dd>
         All menus, markup and help-text should be
-        internationalized, so that GnuCash may be usable in any
+        internationalized, so that systecash may be usable in any
         country. This would include the printing of currency values
         in the local country conventions. 
 
@@ -1112,7 +1112,7 @@
               totally settable/controllable -- drag/move callbacks 
               when segments are click-dragged.
           </li>
-	  <li>Basic pie charts and bar charts are used in GnuCash
+	  <li>Basic pie charts and bar charts are used in systecash
 	      reports.  There are problems: dates along the bottom
 	      of a bar-chart are not well-spaced/autoscaled. 
 	      The over look is a bit klunky.
@@ -1191,8 +1191,8 @@
           <li>
             <p><b>Hint-of-the-Day</b>. A collection of a some
             50-100 hints-of-the-day: short (2-4 sentence)
-            hints/tips on how to use gnucash. Every time the user
-            starts gnucash, an new hint shows up ...
+            hints/tips on how to use systecash. Every time the user
+            starts systecash, an new hint shows up ...
             <b>Status:</b> Hint infrastructure complete (RGMerkel, 
 	    version 1.4.0).  Need to add
             hints  (only a dozen are currently available).
@@ -1239,7 +1239,7 @@
             accounts.
 	    This is mostly solved by having the MDI interface 
 	    have reports, and the use of multi-paning.  But the
-	    default display for gnucash should be changed to 
+	    default display for systecash should be changed to 
 	    show a very small (1-4 line) networth and P&L report,
 	    and maybe a cash-flow report.
             See the section <a href="#arrangements">Arrangements</a> for
@@ -1512,7 +1512,7 @@
         Yahoo Check Printing</a> provides a list of vendors & printers.
 	<p>
 	Print vendor/client/payee address on the check (so that check
-	can be mailed with window envelopes.) This requires gnucash
+	can be mailed with window envelopes.) This requires systecash
 	to integrate with addressbook.
 
         <p><b>Status:</b>
@@ -1590,11 +1590,11 @@
         The idea is similar to, but not the same as 'skins'/'themes'.  Its similar
         to, but not the same as allowing a user to set 'preferences'.  Its similar 
         to, but not the same as, allowing a user to generate customized financial 
-        reports.  In the context of GnuCash, a 'arrangement' should be a file
+        reports.  In the context of systecash, a 'arrangement' should be a file
         (that can be traded by users, uploaded and shared) that controls important
         aspects of how the application is configured.
         <p>
-        In particular, the GnuCash Arrangement should include the following:
+        In particular, the systecash Arrangement should include the following:
         <ul>
         <li>A list of sample/initial accounts.  These might be tailored for a 
             home user (groceries, gas, electric), an apartment dweller 
@@ -1617,7 +1617,7 @@
             banking seems to require the display of account numbers in separate
             columns in the register.
         </ul>
-        A good arrangement infrastructure will not only allow gnucash to be configured
+        A good arrangement infrastructure will not only allow systecash to be configured
         for different application domains, but also will allow users to fine-tune
         thier own prefered arrangement.   It can also simplify the code base: 
         instead of having two products, a home-user application, and a small-business 
@@ -1636,8 +1636,8 @@
 	<p>
 	<b>Status:</b>
 	Not started. Individually, all these cusomizable things exist
-	here and there in gnucash, but they cannot be shared between
-	users: a gnucash user cannot mail her favorite 'arrangement'
+	here and there in systecash, but they cannot be shared between
+	users: a systecash user cannot mail her favorite 'arrangement'
 	to her freind.
 	</p>
 
@@ -1664,12 +1664,12 @@
               Implemented in home-grown scheme. (version 1.4.0,
 	      rlb)</li>
 
-          <li>These are saved in the '.gnucash/config.auto' file.
+          <li>These are saved in the '.systecash/config.auto' file.
               The current file format is raw scheme code, rather
               delicate to tweak by hand ...</li>
 	  
           <li>Session management mostly works, but doesn't use the 
-	      sawmill/gnome/X ICCCM system.  GnuCash remembers MDI
+	      sawmill/gnome/X ICCCM system.  systecash remembers MDI
 	      based reports, restart reopens in same state. Sizes
 	      and shapes and positions are remembered.
 	      Done in version 1.6.0
@@ -2366,13 +2366,13 @@ next due date mm/dd/yy
 &gt;&gt;
 &gt;&gt; With a simple click to an icon on my desktop, ZKA4BTX logs into
 &gt;&gt; T-Online, gets all my account datas from several banks, and writes
-&gt;&gt; (adds) it to my CBB, Xfinans or GnuCash (QIF) files.
+&gt;&gt; (adds) it to my CBB, Xfinans or systecash (QIF) files.
 &gt;&gt;
 &gt;&gt; Another very important thing is that I can do all my transfers
 &gt;&gt; offline, editing a transfer sheet, and ZKA4BTX sends these
 &gt;&gt; transfers in one step to my bank.
 &gt;
-&gt;One thing we could do in the short-medium term is have gnucash
+&gt;One thing we could do in the short-medium term is have systecash
 &gt;launch ZKA4BTX to get the data, export it to QIF, and then load
 &gt;it in, all through one command.
 </pre>
@@ -2406,7 +2406,7 @@ etc ...
 </pre>
 
         <p>It is a very simple, very basic flat table format. The
-        use of <tt>/rdb</tt> with GnuCash should try to match with
+        use of <tt>/rdb</tt> with systecash should try to match with
         SQL schemas as much as possible in order to minimize I/O
         complexity and incompatibility.</p>
       </dd>
@@ -2548,7 +2548,7 @@ etc ...
         A module is necessary to allow data to be fetched from an
         SQL database, and for that database to be updated. 
         There has been <em>much</em> discussion about this on
-        mailing lists both for GnuCash and 
+        mailing lists both for systecash and 
         <a href="http://www.menet.umn.edu/~curt/cbb/">CBB.</a> 
         Major points have included:
 
@@ -2569,18 +2569,18 @@ etc ...
           <br><br>
 
           <li>Using a client/server SQL database might make it easier
-              to turn GnuCash into a multi-user system.
+              to turn systecash into a multi-user system.
           </li>
           <br><br>
 
           <li>By using a well-known DBMS, outside programs are
               provided a well-defined way of getting at, and
-              perhaps even modifying, GnuCash data. 
-              (Actually, this is not true: GnuCash already provides
+              perhaps even modifying, systecash data. 
+              (Actually, this is not true: systecash already provides
               a uniform, well-documented, preferred data access API.  
               As long as this
               API is used, there is some guarantee that data is stored
-              in a self-consistent fashion.  Not using the GnuCash 
+              in a self-consistent fashion.  Not using the systecash 
               programming interfaces risks corrupting the data.
               Direct access to the data is dangerous and discouraged.
               Furthermore, The API is guaranteed to be backwards
@@ -2602,7 +2602,7 @@ etc ...
 % su -
 Password:
 # cd /tmp
-# rpm -i gnucash-4.1.3.i386.rpm
+# rpm -i systecash-4.1.3.i386.rpm
 # exit
 </pre>
             to be challenging.
@@ -2625,10 +2625,10 @@ Password:
 
           <br><br>
           <li>
-            GnuCash presently uses a document-oriented model, where
+            systecash presently uses a document-oriented model, where
             the <em>entire</em> set of books are loaded in, and
             dumped out, all at one fell swoop. 
-            GnuCash needs to be modified to access the database
+            systecash needs to be modified to access the database
             in a transactional manner. This is at least partly
             implemented with the <tt>Begin()/End()</tt> constructs
             in the engine.
@@ -2660,7 +2660,7 @@ Password:
         </ul>
         <p>
 	<b>Status:</b>
-	Done, more or less, gnucash version 1.6.0, Linas Vepstas.
+	Done, more or less, systecash version 1.6.0, Linas Vepstas.
 	Theres still a laundry list of things that need to be 
 	cleaned up, see the README file in src/engine/sql/README.
 	
@@ -2695,7 +2695,7 @@ Password:
           <li>encryption of network connections</li>
         </ul>
         <p>
-	<b>Status:</b> Partly done.  (gnucash 1.6.0, Linas)
+	<b>Status:</b> Partly done.  (systecash 1.6.0, Linas)
 	The postgres backend fully
 	supports multiple simltaneous users. This includes 
 	events for automatic updates of all GUI displays.
@@ -2769,7 +2769,7 @@ Password:
         Payroll introduces a <em>sizable</em> amount of complexity
         in terms of the need to comply with constantly-changing
         government regulations in whatever country one is in. 
-        While the GnuCash "engine" might remain free,
+        While the systecash "engine" might remain free,
         maintenance of payroll functionality would require
         "subscribing" to an update scheme; it might be troublesome
         to try to provide such a "subscription" free of charge.
@@ -2832,8 +2832,8 @@ Password:
 
     <h1>References</h1>
     All software and technical standard references have been moved to
-    <a href="http://www.gnucash.org/links.php3">
-    http://www.gnucash.org/links.php3</a>
+    <a href="http://www.systecash.org/links.php3">
+    http://www.systecash.org/links.php3</a>
 
     <hr>
     Draft version 0.51 -- June 2001 

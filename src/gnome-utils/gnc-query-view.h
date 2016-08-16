@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-query-view.h -- GnuCash GNOME query display view widget      *
+ * gnc-query-view.h -- systecash GNOME query display view widget      *
  * Copyright (C) 2003 Derek Atkins <derek@ihtfp.com>                *
  * Copyright (C) 2012 Robert Fewell                                 *
  *                                                                  *

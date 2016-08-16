@@ -1,5 +1,5 @@
-# gnucash_core.py -- High level python wrapper classes for the core parts
-#                    of GnuCash
+# systecash_core.py -- High level python wrapper classes for the core parts
+#                    of systecash
 #
 # Copyright (C) 2008 ParIT Worker Co-operative <paritinfo@parit.ca>
 # This program is free software; you can redistribute it and/or
@@ -23,12 +23,12 @@
 
 # The following is for doxygen
 ## @file
-#  @brief High level python wrapper classes for the core parts of GnuCash
+#  @brief High level python wrapper classes for the core parts of systecash
 #  @author Mark Jenkins, ParIT Worker Co-operative <mark@parit.ca>
 #  @author Jeff Green,   ParIT Worker Co-operative <jeff@parit.ca>
 #  @ingroup python_bindings
 
-import gnucash_core_c
+import systecash_core_c
 
 from function_class import \
      ClassFromFunctions, extract_attributes_with_prefix, \
@@ -36,7 +36,7 @@ from function_class import \
      methods_return_instance, process_list_convert_to_instance, \
      method_function_returns_instance_list, methods_return_instance_lists
 
-from gnucash_core_c import gncInvoiceLookup, gncInvoiceGetInvoiceFromTxn, \
+from systecash_core_c import gncInvoiceLookup, gncInvoiceGetInvoiceFromTxn, \
     gncInvoiceGetInvoiceFromLot, gncEntryLookup, gncInvoiceLookup, \
     gncCustomerLookup, gncVendorLookup, gncJobLookup, gncEmployeeLookup, \
     gncTaxTableLookup, gncTaxTableLookupByName, gnc_search_invoice_on_id, \
@@ -44,8 +44,8 @@ from gnucash_core_c import gncInvoiceLookup, gncInvoiceGetInvoiceFromTxn, \
     gnc_search_vendor_on_id, gncInvoiceNextID, gncCustomerNextID, \
     gncVendorNextID, gncTaxTableGetTables
 
-class GnuCashCoreClass(ClassFromFunctions):
-    _module = gnucash_core_c
+class systecashCoreClass(ClassFromFunctions):
+    _module = systecash_core_c
 
     def do_lookup_create_oo_instance(self, lookup_function, cls, *args):
         thing = lookup_function(self.get_instance(), *args)
@@ -54,13 +54,13 @@ class GnuCashCoreClass(ClassFromFunctions):
         return thing
 
 
-class GnuCashBackendException(Exception):
+class systecashBackendException(Exception):
     def __init__(self, msg, errors):
         Exception.__init__(self, msg)
         self.errors = errors
 
-class Session(GnuCashCoreClass):
-    """A GnuCash book editing session
+class Session(systecashCoreClass):
+    """A systecash book editing session
 
     To commit changes to the session you may need to call save,
     (this is always the case with the file backend).
@@ -68,7 +68,7 @@ class Session(GnuCashCoreClass):
     When you're down with a session you may need to call end()
 
     Every Session has a Book in the book attribute, which you'll definitely
-    be interested in, as every GnuCash entity (Transaction, Split, Vendor,
+    be interested in, as every systecash entity (Transaction, Split, Vendor,
     Invoice..) is associated with a particular book where it is stored.
     """
 
@@ -95,11 +95,11 @@ class Session(GnuCashCoreClass):
 
 
 
-        This function can raise a GnuCashBackendException. If it does,
+        This function can raise a systecashBackendException. If it does,
         you don't need to cleanup and call end() and destroy(), that is handled
         for you, and the exception is raised.
         """
-        GnuCashCoreClass.__init__(self)
+        systecashCoreClass.__init__(self)
         if book_uri is not None:
             try:
                 self.begin(book_uri, ignore_lock, is_new, force_new)
@@ -110,20 +110,20 @@ class Session(GnuCashCoreClass):
                 # More background: https://bugzilla.gnome.org/show_bug.cgi?id=726891
                 if book_uri[:3] != "xml" or not is_new:
                     self.load()
-            except GnuCashBackendException, backend_exception:
+            except systecashBackendException, backend_exception:
                 self.end()
                 self.destroy()
                 raise
 
     def raise_backend_errors(self, called_function="qof_session function"):
-        """Raises a GnuCashBackendException if there are outstanding
+        """Raises a systecashBackendException if there are outstanding
         QOF_BACKEND errors.
 
         set called_function to name the function that was last called
         """
         errors = self.pop_all_errors()
         if errors != ():
-            raise GnuCashBackendException(
+            raise systecashBackendException(
                 "call to %s resulted in the "
                 "following errors, %s" % (called_function, backend_error_dict[errors[0]]),
                 errors )
@@ -152,9 +152,9 @@ class Session(GnuCashCoreClass):
             return return_value
         return new_function
 
-class Book(GnuCashCoreClass):
-    """A Book encapsulates all of the GnuCash data, it is the place where
-    all GnuCash entities (Transaction, Split, Vendor, Invoice...), are
+class Book(systecashCoreClass):
+    """A Book encapsulates all of the systecash data, it is the place where
+    all systecash entities (Transaction, Split, Vendor, Invoice...), are
     stored. You'll notice that all of the constructors for those entities
     need a book to be associated with.
 
@@ -172,92 +172,92 @@ class Book(GnuCashCoreClass):
     get_table -- Returns a commodity lookup table, of type GncCommodityTable
     """
     def InvoiceLookup(self, guid):
-        from gnucash_business import Invoice
+        from systecash_business import Invoice
         return self.do_lookup_create_oo_instance(
             gncInvoiceLookup, Invoice, guid.get_instance() )
 
     def EntryLookup(self, guid):
-        from gnucash_business import Entry
+        from systecash_business import Entry
         return self.do_lookup_create_oo_instance(
             gncEntryLookup, Entry, guid.get_instance() )
 
     def CustomerLookup(self, guid):
-        from gnucash_business import Customer
+        from systecash_business import Customer
         return self.do_lookup_create_oo_instance(
             gncCustomerLookup, Customer, guid.get_instance())
 
     def JobLookup(self, guid):
-        from gnucash_business import Job
+        from systecash_business import Job
         return self.do_lookup_create_oo_instance(
             gncJobLookup, Job, guid.get_instance() )
 
     def VendorLookup(self, guid):
-        from gnucash_business import Vendor
+        from systecash_business import Vendor
         return self.do_lookup_create_oo_instance(
             gncVendorLookup, Vendor, guid.get_instance() )
 
     def EmployeeLookup(self, guid):
-        from gnucash_business import Employee
+        from systecash_business import Employee
         return self.do_lookup_create_oo_instance(
             gncEmployeeLookup, Employee, guid.get_instance() )
 
     def TaxTableLookup(self, guid):
-        from gnucash_business import TaxTable
+        from systecash_business import TaxTable
         return self.do_lookup_create_oo_instance(
             gncTaxTableLookup, TaxTable, guid.get_instance() )
 
     def TaxTableLookupByName(self, name):
-        from gnucash_business import TaxTable
+        from systecash_business import TaxTable
         return self.do_lookup_create_oo_instance(
             gncTaxTableLookupByName, TaxTable, name)
 
     def TaxTableGetTables(self):
-        from gnucash_business import TaxTable
+        from systecash_business import TaxTable
         return [ TaxTable(instance=item) for item in gncTaxTableGetTables(self.instance) ]
 
     def BillLookupByID(self, id):
-        from gnucash_business import Bill
+        from systecash_business import Bill
         return self.do_lookup_create_oo_instance(
             gnc_search_bill_on_id, Bill, id)
 
     def InvoiceLookupByID(self, id):
-        from gnucash_business import Invoice
+        from systecash_business import Invoice
         return self.do_lookup_create_oo_instance(
             gnc_search_invoice_on_id, Invoice, id)
 
     def CustomerLookupByID(self, id):
-        from gnucash_business import Customer
+        from systecash_business import Customer
         return self.do_lookup_create_oo_instance(
             gnc_search_customer_on_id, Customer, id)
 
     def VendorLookupByID(self, id):
-        from gnucash_business import Vendor
+        from systecash_business import Vendor
         return self.do_lookup_create_oo_instance(
             gnc_search_vendor_on_id, Vendor, id)
             
     def InvoiceNextID(self, customer):
       ''' Return the next invoice ID. 
       This works but I'm not entirely happy with it.  FIX ME'''
-      from gnucash.gnucash_core_c import gncInvoiceNextID
+      from systecash.systecash_core_c import gncInvoiceNextID
       return gncInvoiceNextID(self.get_instance(),customer.GetEndOwner().get_instance()[1])
       
     def BillNextID(self, vendor):
       ''' Return the next Bill ID. '''
-      from gnucash.gnucash_core_c import gncInvoiceNextID
+      from systecash.systecash_core_c import gncInvoiceNextID
       return gncInvoiceNextID(self.get_instance(),vendor.GetEndOwner().get_instance()[1])
 
     def CustomerNextID(self):
       ''' Return the next Customer ID. '''
-      from gnucash.gnucash_core_c import gncCustomerNextID
+      from systecash.systecash_core_c import gncCustomerNextID
       return gncCustomerNextID(self.get_instance())
 
     def VendorNextID(self):
       ''' Return the next Vendor ID. '''
-      from gnucash.gnucash_core_c import gncVendorNextID
+      from systecash.systecash_core_c import gncVendorNextID
       return gncVendorNextID(self.get_instance())
 
-class GncNumeric(GnuCashCoreClass):
-    """Object used by GnuCash to store all numbers. Always consists of a
+class GncNumeric(systecashCoreClass):
+    """Object used by systecash to store all numbers. Always consists of a
     numerator and denominator.
 
     The constants GNC_DENOM_AUTO,
@@ -276,9 +276,9 @@ class GncNumeric(GnuCashCoreClass):
         leave them blank with a default value of 0 (not a good idea since there
         is currently no way to alter the value after instantiation)
         """
-        GnuCashCoreClass.__init__(self, num, denom, **kargs)
+        systecashCoreClass.__init__(self, num, denom, **kargs)
         #if INSTANCE_ARG in kargs:
-        #    GnuCashCoreClass.__init__(**kargs)
+        #    systecashCoreClass.__init__(**kargs)
         #else:
         #    self.set_denom(denom) # currently undefined
         #    self.set_num(num)     # currently undefined
@@ -296,7 +296,7 @@ class GncNumeric(GnuCashCoreClass):
         """returns a human readable numeric value string as bytes."""
         return unicode(self).encode('utf-8')
 
-class GncPrice(GnuCashCoreClass):
+class GncPrice(systecashCoreClass):
     '''
     Each priceEach price in the database represents an "instantaneous"
     quote for a given commodity with respect to another commodity.
@@ -318,15 +318,15 @@ class GncPrice(GnuCashCoreClass):
       commodity with respect to another commodity.
       For example, a given price might represent the value of LNUX in USD on 2001-02-03.
 
-      See also http://code.gnucash.org/docs/head/group__Price.html
+      See also http://code.systecash.org/docs/head/group__Price.html
     '''
     pass
 GncPrice.add_methods_with_prefix('gnc_price_')
 
 
-class GncPriceDB(GnuCashCoreClass):
+class GncPriceDB(systecashCoreClass):
     '''
-    a simple price database for gnucash.
+    a simple price database for systecash.
     The PriceDB is intended to be a database of price quotes, or more specifically,
     a database of GNCPrices. For the time being, it is still a fairly simple
     database supporting only fairly simple queries. It is expected that new
@@ -337,7 +337,7 @@ class GncPriceDB(GnuCashCoreClass):
     Every QofBook contains a GNCPriceDB, accessible via gnc_pricedb_get_db.
 
     Definition in file gnc-pricedb.h.
-    See also http://code.gnucash.org/docs/head/gnc-pricedb_8h.html
+    See also http://code.systecash.org/docs/head/gnc-pricedb_8h.html
     '''
 
 GncPriceDB.add_methods_with_prefix('gnc_pricedb_')
@@ -353,9 +353,9 @@ GncPriceDB.get_prices = method_function_returns_instance_list(
     GncPriceDB.get_prices, GncPrice )
 
 
-class GncCommodity(GnuCashCoreClass): pass
+class GncCommodity(systecashCoreClass): pass
 
-class GncCommodityTable(GnuCashCoreClass):
+class GncCommodityTable(systecashCoreClass):
     """A CommodityTable provides a way to store and lookup commodities.
     Commodities are primarily currencies, but other tradable things such as
     stocks, mutual funds, and material substances are possible.
@@ -363,23 +363,23 @@ class GncCommodityTable(GnuCashCoreClass):
     Users of this library should not create their own CommodityTable, instead
     the get_table method from the Book class should be used.
 
-    This table is automatically populated with the GnuCash default commodity's
+    This table is automatically populated with the systecash default commodity's
     which includes most of the world's currencies.
     """
 
     pass
 
-class GncCommodityNamespace(GnuCashCoreClass):
+class GncCommodityNamespace(systecashCoreClass):
     pass
 
-class GncLot(GnuCashCoreClass):
+class GncLot(systecashCoreClass):
     def GetInvoiceFromLot(self):
-        from gnucash_business import Invoice
+        from systecash_business import Invoice
         return self.do_lookup_create_oo_instance(
             gncInvoiceGetInvoiceFromLot, Invoice )
 
-class Transaction(GnuCashCoreClass):
-    """A GnuCash Transaction
+class Transaction(systecashCoreClass):
+    """A systecash Transaction
 
     Consists of at least one (generally two) splits to represent a transaction
     between two accounts.
@@ -397,7 +397,7 @@ class Transaction(GnuCashCoreClass):
         return self.GetSplitList().pop(n)
 
     def GetInvoiceFromTxn(self):
-        from gnucash_business import Transaction
+        from systecash_business import Transaction
         return self.do_lookup_create_oo_instance(
             gncInvoiceGetInvoiceFromTxn, Transaction )
 
@@ -410,16 +410,16 @@ def decorate_monetary_list_returning_function(orig_function):
                 for item in orig_function(self) ]
     return new_function
 
-class Split(GnuCashCoreClass):
-    """A GnuCash Split
+class Split(systecashCoreClass):
+    """A systecash Split
 
     The most basic representation of a movement of currency from one account to
     another.
     """
     _new_instance = 'xaccMallocSplit'
 
-class Account(GnuCashCoreClass):
-    """A GnuCash Account.
+class Account(systecashCoreClass):
+    """A systecash Account.
 
     A fundamental entity in accounting, an Account provides representation
     for a financial object, such as a ACCT_TYPE_BANK account, an
@@ -427,7 +427,7 @@ class Account(GnuCashCoreClass):
     a ACCT_TYPE_LIABILITY (such as a bank loan), a summary of some type of
     ACCT_TYPE_EXPENSE, or a summary of some source of ACCT_TYPE_INCOME .
 
-    The words in upper case are the constants that GnuCash and this library uses
+    The words in upper case are the constants that systecash and this library uses
     to describe account type. Here is the full list:
     ACCT_TYPE_ASSET, ACCT_TYPE_BANK, ACCT_TYPE_CASH, ACCT_TYPE_CHECKING, \
     ACCT_TYPE_CREDIT, ACCT_TYPE_EQUITY, ACCT_TYPE_EXPENSE, ACCT_TYPE_INCOME, \
@@ -439,7 +439,7 @@ class Account(GnuCashCoreClass):
     """
     _new_instance = 'xaccMallocAccount'
 
-class GUID(GnuCashCoreClass):
+class GUID(systecashCoreClass):
     _new_instance = 'guid_new_return'
 
 # Session
@@ -459,34 +459,34 @@ Session.book = property( Session.get_book )
 # import all of the session backend error codes into this module
 this_module_dict = globals()
 for error_name, error_value, error_name_after_prefix in \
-    extract_attributes_with_prefix(gnucash_core_c, 'ERR_'):
+    extract_attributes_with_prefix(systecash_core_c, 'ERR_'):
     this_module_dict[ error_name ] = error_value
 
 #backend error codes used for reverse lookup
 backend_error_dict = {}
 for error_name, error_value, error_name_after_prefix in \
-    extract_attributes_with_prefix(gnucash_core_c, 'ERR_'):
+    extract_attributes_with_prefix(systecash_core_c, 'ERR_'):
     backend_error_dict[ error_value ] = error_name
 
 # GncNumeric denominator computation schemes
 # Used for the denom argument in arithmetic functions like GncNumeric.add
-from gnucash.gnucash_core_c import GNC_DENOM_AUTO
+from systecash.systecash_core_c import GNC_DENOM_AUTO
 
 # GncNumeric rounding instructions
 # used for the how argument in arithmetic functions like GncNumeric.add
-from gnucash.gnucash_core_c import \
+from systecash.systecash_core_c import \
     GNC_HOW_RND_FLOOR, GNC_HOW_RND_CEIL, GNC_HOW_RND_TRUNC, \
     GNC_HOW_RND_PROMOTE, GNC_HOW_RND_ROUND_HALF_DOWN, \
     GNC_HOW_RND_ROUND_HALF_UP, GNC_HOW_RND_ROUND, GNC_HOW_RND_NEVER
 
 # GncNumeric denominator types
 # used for the how argument in arithmetic functions like GncNumeric.add
-from gnucash.gnucash_core_c import \
+from systecash.systecash_core_c import \
     GNC_HOW_DENOM_EXACT, GNC_HOW_DENOM_REDUCE, GNC_HOW_DENOM_LCD, \
     GNC_HOW_DENOM_FIXED
 
 # import account types
-from gnucash.gnucash_core_c import \
+from systecash.systecash_core_c import \
     ACCT_TYPE_ASSET, ACCT_TYPE_BANK, ACCT_TYPE_CASH, ACCT_TYPE_CHECKING, \
     ACCT_TYPE_CREDIT, ACCT_TYPE_EQUITY, ACCT_TYPE_EXPENSE, ACCT_TYPE_INCOME, \
     ACCT_TYPE_LIABILITY, ACCT_TYPE_MUTUAL, ACCT_TYPE_PAYABLE, \
@@ -699,24 +699,24 @@ guid_dict = {
 methods_return_instance(GUID, guid_dict)
 
 #GUIDString
-class GUIDString(GnuCashCoreClass):
+class GUIDString(systecashCoreClass):
     pass
 
 GUIDString.add_constructor_and_methods_with_prefix('string_', 'to_guid')
 
 #Query
-from gnucash_core_c import \
+from systecash_core_c import \
     QOF_QUERY_AND, \
     QOF_QUERY_OR, \
     QOF_QUERY_NAND, \
     QOF_QUERY_NOR, \
     QOF_QUERY_XOR
 
-from gnucash_core_c import \
+from systecash_core_c import \
     QOF_STRING_MATCH_NORMAL, \
     QOF_STRING_MATCH_CASEINSENSITIVE
 
-from gnucash_core_c import \
+from systecash_core_c import \
     QOF_COMPARE_LT, \
     QOF_COMPARE_LTE, \
     QOF_COMPARE_EQUAL, \
@@ -724,13 +724,13 @@ from gnucash_core_c import \
     QOF_COMPARE_GTE, \
     QOF_COMPARE_NEQ
 
-from gnucash_core_c import \
+from systecash_core_c import \
     INVOICE_TYPE
 
-from gnucash_core_c import \
+from systecash_core_c import \
     INVOICE_IS_PAID
 
-class Query(GnuCashCoreClass):
+class Query(systecashCoreClass):
     pass
 
 Query.add_constructor_and_methods_with_prefix('qof_query_', 'create')
@@ -744,31 +744,31 @@ Query.add_method('qof_query_add_guid_list_match', 'add_guid_list_match')
 Query.add_method('qof_query_add_guid_match', 'add_guid_match')
 Query.add_method('qof_query_destroy', 'destroy')
 
-class QueryStringPredicate(GnuCashCoreClass):
+class QueryStringPredicate(systecashCoreClass):
     pass
 
 QueryStringPredicate.add_constructor_and_methods_with_prefix(
     'qof_query_','string_predicate')
 
-class QueryBooleanPredicate(GnuCashCoreClass):
+class QueryBooleanPredicate(systecashCoreClass):
     pass
 
 QueryBooleanPredicate.add_constructor_and_methods_with_prefix(
     'qof_query_', 'boolean_predicate')
 
-class QueryInt32Predicate(GnuCashCoreClass):
+class QueryInt32Predicate(systecashCoreClass):
     pass
 
 QueryInt32Predicate.add_constructor_and_methods_with_prefix(
     'qof_query_', 'int32_predicate')
 
-class QueryDatePredicate(GnuCashCoreClass):
+class QueryDatePredicate(systecashCoreClass):
     pass
 
 QueryDatePredicate.add_constructor_and_methods_with_prefix(
     'qof_query_', 'date_predicate')
 
-class QueryGuidPredicate(GnuCashCoreClass):
+class QueryGuidPredicate(systecashCoreClass):
     pass
 
 QueryGuidPredicate.add_constructor_and_methods_with_prefix(

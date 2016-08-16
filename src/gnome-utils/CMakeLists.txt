@@ -8,10 +8,10 @@ ADD_SUBDIRECTORY(test)
 SET (SWIG_GNOME_UTILS_C ${CMAKE_CURRENT_BINARY_DIR}/swig-gnome-utils.c)
 GNC_ADD_SWIG_COMMAND (${SWIG_GNOME_UTILS_C} ${CMAKE_CURRENT_SOURCE_DIR}/gnome-utils.i)
 
-CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/gschemas/org.gnucash.warnings.gschema.xml.in.in
-               ${CMAKE_CURRENT_BINARY_DIR}/gschemas/org.gnucash.warnings.gschema.xml.in)
+CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/gschemas/org.systecash.warnings.gschema.xml.in.in
+               ${CMAKE_CURRENT_BINARY_DIR}/gschemas/org.systecash.warnings.gschema.xml.in)
 
-SET (WARNINGS_SCHEMA gschemas/org.gnucash.warnings.gschema.xml.in)
+SET (WARNINGS_SCHEMA gschemas/org.systecash.warnings.gschema.xml.in)
 SET (GNC_WARNINGS_C ${CMAKE_CURRENT_BINARY_DIR}/gnc-warnings.c)
 SET (GNC_WARNINGS_H ${CMAKE_CURRENT_BINARY_DIR}/gnc-warnings.h)
 
@@ -227,11 +227,11 @@ TARGET_INCLUDE_DIRECTORIES(gncmod-gnome-utils
 
 
 INSTALL(TARGETS gncmod-gnome-utils
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 
-INSTALL(FILES ${gnome_utils_HEADERS} DESTINATION include/gnucash)
+INSTALL(FILES ${gnome_utils_HEADERS} DESTINATION include/systecash)
 
 
 # Scheme
@@ -243,7 +243,7 @@ SET(GUILE_DEPENDS      gncmod-gnome-utils scm-core-utils scm-gnc-module scm-scm)
 
 GNC_ADD_SCHEME_TARGETS(scm-gnome-utils-1
   gnome-utils.scm
-  gnucash
+  systecash
   "${GUILE_MODULES}"
   "${GUILE_LOAD_DIRS}"
   "${GUILE_LIBRARY_DIRS}"

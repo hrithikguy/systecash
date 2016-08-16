@@ -1,5 +1,5 @@
 ;; test of a Scheme module called gnc-mod-foo, which should get 
-;; loaded by the Gnucash module "foo"
+;; loaded by the systecash module "foo"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -20,7 +20,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash foo))
+(define-module (systecash foo))
 
 (export foo:scheme-hello)
 

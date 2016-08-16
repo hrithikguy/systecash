@@ -50,19 +50,19 @@ extern "C"
     char*
     libgncmod_backend_file_gnc_module_path (void)
     {
-        return g_strdup ("gnucash/backend/file");
+        return g_strdup ("systecash/backend/file");
     }
 
     char*
     libgncmod_backend_file_gnc_module_description (void)
     {
-        return g_strdup ("The binary and XML (v1 and v2) backends for GnuCash");
+        return g_strdup ("The binary and XML (v1 and v2) backends for systecash");
     }
 
     int
     libgncmod_backend_file_gnc_module_init (int refcount)
     {
-        engine = gnc_module_load ("gnucash/engine", 0);
+        engine = gnc_module_load ("systecash/engine", 0);
         if (!engine) return FALSE;
 
         return TRUE;

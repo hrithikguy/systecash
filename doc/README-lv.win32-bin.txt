@@ -1,8 +1,8 @@
-﻿GnuCash ir bezmaksas grāmatvedības programma, ko izplata saskaņā ar
+﻿systecash ir bezmaksas grāmatvedības programma, ko izplata saskaņā ar
 GNU General Public License (GPL) licenci. To var izmantot uz GNU/Linux,
 *BSD, Solaris, Mac OSX un Microsoft Windows datoriem.
 
-GnuCash ir veidots tā, lai to būtu vienkārši lietot, tajā pat laikā tas
+systecash ir veidots tā, lai to būtu vienkārši lietot, tajā pat laikā tas
 ir pietiekami jaudīgs un ļauj uzskaitīt skaidru naudu, banku kontus,
 akcijas, ieņēmumus un izdevumus.
 Tajā var ātri un ērti reģistrēt darījumu, un tā ir balstīta uz 
@@ -13,12 +13,12 @@ precīzus pārskatus.
 
 Tehniskā palīdzība
 
-Tiešsaistes palīdzība:    http://wiki.gnucash.org/wiki/FAQ
-Vēstkopas:  http://wiki.gnucash.org/wiki/Mailing_Lists
-IRC (sazņa): #gnucash on server irc.gnome.org, skatīt arī http://wiki.gnucash.org/wiki/IRC
+Tiešsaistes palīdzība:    http://wiki.systecash.org/wiki/FAQ
+Vēstkopas:  http://wiki.systecash.org/wiki/Mailing_Lists
+IRC (sazņa): #systecash on server irc.gnome.org, skatīt arī http://wiki.systecash.org/wiki/IRC
 
 Ja atklājat kļūdas vai problēmas, nekautrējieties tās reģistrēt "Bugzilla" kļūdu apstrādes 
-sistēmā http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash
+sistēmā http://bugzilla.gnome.org/enter_bug.cgi?product=systecash
 
 -------------------
 
@@ -41,12 +41,12 @@ Vairāk informācijas un sākotnējā apmācība pieejama aktivizējot izvēlni
 
 Par šo programmu:
 
-GnuCash ir bezmaksas grāmatvedības programma, ko izplata saskaņā ar 
+systecash ir bezmaksas grāmatvedības programma, ko izplata saskaņā ar 
 GNU General Public License (GPL) licenci. Tās galvenie izstrādātāji ir
 12 cilvēki, kas sadarbojas ar atbalstītājiem vairāk kā 6 valstīs.
 
-GnuCash izstrāde sākās 1997. gadā un tās pirmais laidiens bija 1998. gadā.
+systecash izstrāde sākās 1997. gadā un tās pirmais laidiens bija 1998. gadā.
 
 -------------------
 
-Šis ir GnuCash 2.2.x README fails Windows binārajai pakotnei.
+Šis ir systecash 2.2.x README fails Windows binārajai pakotnei.

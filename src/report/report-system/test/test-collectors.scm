@@ -18,12 +18,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (debug-set! stack 50000)
-(use-modules (gnucash gnc-module))
-(gnc:module-begin-syntax (gnc:module-load "gnucash/app-utils" 0))
+(use-modules (systecash gnc-module))
+(gnc:module-begin-syntax (gnc:module-load "systecash/app-utils" 0))
 (use-modules (srfi srfi-1))
 
-(use-modules (gnucash report report-system collectors))
-(use-modules (gnucash engine test test-extras))
+(use-modules (systecash report report-system collectors))
+(use-modules (systecash engine test test-extras))
 
 (define (run-test)
   (and (test test-empty)

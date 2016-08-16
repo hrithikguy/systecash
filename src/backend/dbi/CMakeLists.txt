@@ -26,8 +26,8 @@ TARGET_COMPILE_DEFINITIONS(gncmod-backend-dbi PRIVATE -DG_LOG_DOMAIN=\"gnc.backe
 TARGET_INCLUDE_DIRECTORIES(gncmod-backend-dbi PRIVATE ${LIBDBI_INCLUDE_PATH})
 
 INSTALL(TARGETS gncmod-backend-dbi
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 # No headers to install
 

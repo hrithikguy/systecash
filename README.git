@@ -1,9 +1,9 @@
-This file contains guidelines for using GnuCash from a git repository.
+This file contains guidelines for using systecash from a git repository.
 They have been adapted from the guidelines for gnome-libs by
 Miguel de Icaza who adapted them from guidelines written by
 Owen Taylor.
 
- + In order to build GnuCash from git, you need to run the autogen.sh
+ + In order to build systecash from git, you need to run the autogen.sh
    command to generate a configure script:
 
 	./autogen.sh
@@ -12,7 +12,7 @@ Owen Taylor.
    with all the usual options.  See ./configure --help for a
    reminder.  For example:
 
-	./configure --enable-ofx --enable-opt-style-install --prefix=/opt/gnucash
+	./configure --enable-ofx --enable-opt-style-install --prefix=/opt/systecash
 
    If in doubt, you can run autogen.sh, run ./configure --help,
    then re-run ./configure with your options.
@@ -39,22 +39,22 @@ Owen Taylor.
 
         git checkout configure.ac Makefile.am
 
-When making changes to GnuCash and trying to commit to the repository:
+When making changes to systecash and trying to commit to the repository:
 
  + Ask first. If your changes are major, or could possibly break existing
    code, you should always ask. If your change is minor and you have
-   been working on gnucash for a while it is probably not necessary
+   been working on systecash for a while it is probably not necessary
    to ask. But when in doubt, ask. Even if your change is correct,
    somebody may know a better way to do things.
 
    Since you want other people to review your code before it goes in,
-   you can submit your changes as a patch to gnucash-devel@gnucash.org.
+   you can submit your changes as a patch to systecash-devel@systecash.org.
    See README for details.
 
-   If you are making changes to gnucash SVN, you should be subscribed
-   to gnucash-devel@gnucash.org and to gnucash-changes@gnucash.org.
-   (Subscription address: http://www.gnucash.org/en/lists.phtml)
-   gnucash-devel@gnucash.org is a good place to ask about intended
+   If you are making changes to systecash SVN, you should be subscribed
+   to systecash-devel@systecash.org and to systecash-changes@systecash.org.
+   (Subscription address: http://www.systecash.org/en/lists.phtml)
+   systecash-devel@systecash.org is a good place to ask about intended
    changes.
 
  + You must not break the build! Never check in changes that do not

@@ -5,7 +5,7 @@
               ; i.e. to avoid "Bad define placement" error
 
 ;; receipt.eguile.scm
-;; GnuCash report template
+;; systecash report template
 ;;
 ;; This file is a mixture of HTML and Guile --
 ;; see eguile-gnc.scm for details.

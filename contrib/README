@@ -2,7 +2,7 @@ GC-export_en.xls
 ----------------
 
 From: Jannick Asmus <jannick.news gmail com>
-http://lists.gnucash.org/pipermail/gnucash-devel/2008-January/022342.html
+http://lists.systecash.org/pipermail/systecash-devel/2008-January/022342.html
 
 I have attached an Excel2003 file for exporting data out of GC to Excel. It
 works pretty easily - even for non-advanced users. I checked it for Excel2003
@@ -29,7 +29,7 @@ gnuc2ooo.py
 
 http://extensions.services.openoffice.org/project/gnuc2ooo
 
-This is an OOo-macro that will read GnuCash output data and import it
+This is an OOo-macro that will read systecash output data and import it
 into OpenOffice.org's embedded database, so that thereafter you can
 evaluate them e.g. in OOo-Calc. A German description on its use can be
 found on http://www.alice-dsl.net/gnuc2ooo/index.html .

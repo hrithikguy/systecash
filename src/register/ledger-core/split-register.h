@@ -34,7 +34,7 @@
  *  @{
  */
 /** @addtogroup SplitRegister Split Register
- *  @brief GnuCash-specific ledger and journal displays based on
+ *  @brief systecash-specific ledger and journal displays based on
  *  RegisterCore.
  *
  * @details The split register is a spreadsheet-like area that looks like
@@ -117,13 +117,13 @@
  * But that still doesn't avoid the overhead of reloading the table
  * from the engine.
  *
- * The Register itself is independent of GnuCash, and is designed
+ * The Register itself is independent of systecash, and is designed
  * so that it can be used with other applications.
- * The Ledger is an adaptation of the Register for use by GnuCash.
+ * The Ledger is an adaptation of the Register for use by systecash.
  * The Ledger sets up an explicit visual layout, putting certain
  * types of cells in specific locations (e.g. date on left, summary
  * in middle, value at right), and hooks up these cells to
- * the various GnuCash financial objects.
+ * the various systecash financial objects.
  *
  * This code is also theoretically independent of the actual GUI
  * toolkit/widget-set (it once worked with both Motif and Gnome).

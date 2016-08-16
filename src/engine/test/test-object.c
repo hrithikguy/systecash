@@ -2,7 +2,7 @@
  *            test-object.c
  *
  *  Tue Sep 27 19:37:28 2005
- *  Copyright  2005  GnuCash team
+ *  Copyright  2005  systecash team
  ****************************************************************************/
 /*
  *  This program is free software; you can redistribute it and/or modify

@@ -149,7 +149,7 @@ struct _GncABTransDialog
     /* The aqbanking transaction that got created here */
     AB_TRANSACTION *ab_trans;
 
-    /* The gnucash transaction that got created here */
+    /* The systecash transaction that got created here */
     Transaction *gnc_trans;
 
 #if HAVE_KTOBLZCHECK_H
@@ -609,7 +609,7 @@ gnc_ab_trans_dialog_verify_values(GncABTransDialog *td)
             gnc_error_dialog(td->dialog,
                              _("Your local bank account does not yet have the SEPA account information stored."
                                " We are sorry, but in this development version one additional step is necessary "
-                               "which has not yet been implemented directly in gnucash. "
+                               "which has not yet been implemented directly in systecash. "
                                "Please execute the command line program \"aqhbci-tool\" for your account, as follows: "
                                "aqhbci-tool4 getaccsepa -b %s -a %s"),
                              (localBankCode ? localBankCode : ""),

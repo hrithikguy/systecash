@@ -41,17 +41,17 @@
 #include "QuickFill.h"
 #include "combocell.h"
 #include "gnc-prefs.h"
-#include "gnucash-item-edit.h"
-#include "gnucash-item-list.h"
-#include "gnucash-sheet.h"
-#include "gnucash-sheetP.h"
+#include "systecash-item-edit.h"
+#include "systecash-item-list.h"
+#include "systecash-sheet.h"
+#include "systecash-sheetP.h"
 #include "table-allgui.h"
 
 #define GNC_PREF_AUTO_RAISE_LISTS "auto-raise-lists"
 
 typedef struct _PopBox
 {
-    GnucashSheet *sheet;
+    systecashSheet *sheet;
     GncItemEdit  *item_edit;
     GncItemList  *item_list;
     GtkListStore *tmp_store;
@@ -168,7 +168,7 @@ select_item_cb (GncItemList *item_list, char *item_string, gpointer data)
     PopBox *box = cell->cell.gui_private;
 
     box->in_list_select = TRUE;
-    gnucash_sheet_modify_current_cell (box->sheet, item_string);
+    systecash_sheet_modify_current_cell (box->sheet, item_string);
     box->in_list_select = FALSE;
 
     gnc_item_edit_hide_popup (box->item_edit);
@@ -182,7 +182,7 @@ change_item_cb (GncItemList *item_list, char *item_string, gpointer data)
     PopBox *box = cell->cell.gui_private;
 
     box->in_list_select = TRUE;
-    gnucash_sheet_modify_current_cell (box->sheet, item_string);
+    systecash_sheet_modify_current_cell (box->sheet, item_string);
     box->in_list_select = FALSE;
 }
 
@@ -744,8 +744,8 @@ gnc_combo_cell_direct_update (BasicCell *bcell,
 static void
 gnc_combo_cell_gui_realize (BasicCell *bcell, gpointer data)
 {
-    GnucashSheet *sheet = data;
-    GncItemEdit *item_edit = gnucash_sheet_get_item_edit (sheet);
+    systecashSheet *sheet = data;
+    GncItemEdit *item_edit = systecash_sheet_get_item_edit (sheet);
     ComboCell *cell = (ComboCell *) bcell;
     PopBox *box = cell->cell.gui_private;
 

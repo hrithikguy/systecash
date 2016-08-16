@@ -1,4 +1,4 @@
-/** \page financeconstraints Financial Constraints in GnuCash
+/** \page financeconstraints Financial Constraints in systecash
 
 				Linas Vepstas <linas@linas.org>
                         September 2003
@@ -6,7 +6,7 @@
 
 \section financeoverview Overview:
 
-The GnuCash Engine implements a set of financial constraints so
+The systecash Engine implements a set of financial constraints so
 that a set of basic/core accounting rules are obeyed.  The best
 known example is the "double-entry" constraint: the total value
 of a transaction must always be zero.  A more mundane example
@@ -23,7 +23,7 @@ easier to add and work with new types of constraints.
 
 \section financeintro Introduction:
 
-There are three very different classes of constraints within GnuCash,
+There are three very different classes of constraints within systecash,
 which should not be confused with each other. They work in very
 different ways and have very different goals.  First, there are
 the "GUI Constraints", which are implemented as events: they make
@@ -36,7 +36,7 @@ that make sure that the financial data recorded in the engine meets
 a set of core and extended accounting rules.  This document deals 
 primarily with this third class.
 
-Note that some financial constraints are so core, so key to GnuCash 
+Note that some financial constraints are so core, so key to systecash 
 that they are woven into the object design itself.  For example, the 
 posted date is a part of the transaction: different splits cannot 
 possibly have different posted dates, as there is no mechanism to 
@@ -55,7 +55,7 @@ cosntraint, there is no (easy) way to reflect it directly in the
 object design; thus, it acts as a rule that must be periodically
 imposed.
 
-At this time, the financial constraints within gnucash are impelmented
+At this time, the financial constraints within systecash are impelmented
 in an ad-hoc manner, with no governing framework.  This may change,
 as there is pressure to support more complex constraints that vary
 by region/country, by account type, by industry, etc.
@@ -81,7 +81,7 @@ subroutine.
 \section financelist List of Constraints
 
 The following is a list of the constraints that are currently
-implemented in the GnuCash Engine, with a short description of what
+implemented in the systecash Engine, with a short description of what
 they are, and how they work.
 
 - Double Entry

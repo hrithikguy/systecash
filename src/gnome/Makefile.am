@@ -65,14 +65,14 @@ libgnc_gnome_la_SOURCES = \
 
 gnomeappdir = ${datadir}/applications
 
-gnomeapp_in_files = gnucash.desktop.in
+gnomeapp_in_files = systecash.desktop.in
 gnomeapp_DATA = $(gnomeapp_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 appicondir = $(datadir)/pixmaps
 
 appdatadir = $(datadir)/appdata
-appdata_in_files = gnucash.appdata.xml.in
+appdata_in_files = systecash.appdata.xml.in
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
 @INTLTOOL_XML_RULE@
 
@@ -159,7 +159,7 @@ AM_CPPFLAGS = \
 # The line below breaks automake 1.5.  
 ##OMIT_DEPENDENCIES = gnc-dir.h
 
-CLEANFILES = gnucash.desktop gnucash.appdata.xml
+CLEANFILES = systecash.desktop systecash.appdata.xml
 MAINTAINERCLEANFILES = swig-gnome.c
 
 AM_CPPFLAGS += -DG_LOG_DOMAIN=\"gnc.gui\"

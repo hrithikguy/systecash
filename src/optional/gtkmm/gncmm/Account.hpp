@@ -23,7 +23,7 @@
 #ifndef GNC_ACCOUNT_HPP
 #define GNC_ACCOUNT_HPP
 
-// gnucash includes
+// systecash includes
 extern "C"
 {
 #include "qof.h"
@@ -46,7 +46,7 @@ namespace gnc
 class Account;
 class Commodity;
 
-/** Wrapper around a gnucash ::Account pointer with C++ methods for
+/** Wrapper around a systecash ::Account pointer with C++ methods for
  * easier setter and getter access.
  */
 class Account : public GncInstance

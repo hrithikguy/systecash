@@ -30,22 +30,22 @@ configdir = ${GNC_CONFIGDIR}
 # Some settings are platform dependent. Let's define them per platform.
 if PLATFORM_WIN32
 # Windows specific settings go here:
-GNUCASH_RESOURCE_FILE = gnucash.rc
-dist_noinst_DATA = gnucash.rc
+GNUCASH_RESOURCE_FILE = systecash.rc
+dist_noinst_DATA = systecash.rc
 
 .rc.o:
 	$(AM_V_GEN)$(RC) -I${top_srcdir}/src/pixmaps -i '$<' --input-format=rc -o '$@' -O coff
 
 else !PLATFORM_WIN32
 # All other platforms use these settings:
-PLATFORM_FILES = gnucash-valgrind
+PLATFORM_FILES = systecash-valgrind
 
 endif !PLATFORM_WIN32
 
-BIN_NAME = gnucash
+BIN_NAME = systecash
 bin_PROGRAMS = ${BIN_NAME}
-gnucash_SOURCES = gnucash-bin.c ${GNUCASH_RESOURCE_FILE}
-gnucash_LDADD = \
+systecash_SOURCES = systecash-bin.c ${GNUCASH_RESOURCE_FILE}
+systecash_LDADD = \
   ${top_builddir}/src/register/ledger-core/libgncmod-ledger-core.la \
   ${top_builddir}/src/report/report-gnome/libgncmod-report-gnome.la \
   ${top_builddir}/src/gnome/libgnc-gnome.la \
@@ -61,12 +61,12 @@ gnucash_LDADD = \
   ${GTK_LIBS}
 
 if WITH_GOOGLE_PROFILER
-gnucash_LDADD += -lprofiler
+systecash_LDADD += -lprofiler
 endif
 
 GNUCASH_BIN_INSTALL_NAME=`echo ${BIN_NAME} | sed -e '$(transform)'`
 
-gnucash-valgrind: gnucash-valgrind.in ${top_builddir}/config.status Makefile
+systecash-valgrind: systecash-valgrind.in ${top_builddir}/config.status Makefile
 	rm -f $@.tmp
 	sed < $< > $@.tmp \
 	    -e "s#@-TOP_SRC_DIR-@#${abs_top_srcdir}#g" \
@@ -83,12 +83,12 @@ if CUSTOM_GNC_DBD_DIR
 	echo 'GNC_DBD_DIR=@GNC_DBD_DIR@' >> $@.tmp
 endif
     # Set XDG_DATA_DIRS if necessary.  The three components of the search path are the
-    # directory used by GnuCash, whatever was specified in the environment at run time, and
+    # directory used by systecash, whatever was specified in the environment at run time, and
     # the default value specified via configure.
 	if [ "a$(datadir)" != "a/usr/share" ] && [ "a$(datadir)" != "a/usr/local/share" ]; \
 	then \
 		echo >> $@.tmp; \
-		echo "# GnuCash was not installed in the default location" >> $@.tmp; \
+		echo "# systecash was not installed in the default location" >> $@.tmp; \
 		echo "# XDG_DATA_DIRS will be set so that our documentation" >> $@.tmp; \
 		echo "# and gsettings schemas are found." >> $@.tmp; \
 		echo "XDG_DATA_DIRS=$(datadir);{XDG_DATA_DIRS};${GNC_SYSTEM_XDG_DATA_DIRS}" >> $@.tmp; \
@@ -106,15 +106,15 @@ endif
 CLEANFILES = $(BUILT_SOURCES) ${config_DATA} ${PLATFORM_FILES}
 
 if !PLATFORM_WIN32
-# The gnucash scripts don't make sense on Windows, so will only be
+# The systecash scripts don't make sense on Windows, so will only be
 # generated and included on the other platforms.
-# We handle gnucash scripts in a somewhat unexpected way, but we do
+# We handle systecash scripts in a somewhat unexpected way, but we do
 # this so that a user who doesn't necessarily have the right
 # directories in their path can still invoke these commands via their
-# full path, say /some/dir/not/in/path/gnucash and still have the
+# full path, say /some/dir/not/in/path/systecash and still have the
 # right thing happen (i.e. they'll still get the right guile, and the
 # right scripts if they sub-exec anything from their scripts).  If you
-# want to add another gnucash script, please add the name here (which
+# want to add another systecash script, please add the name here (which
 # will cause the bindir wrapper to be created, and then put the actual
 # code in a script of the same name in ./overrides.  Oh, and don't
 # forget to add your script to configure.in's "Adjustments" section if
@@ -123,7 +123,7 @@ if !PLATFORM_WIN32
 # For testing and other reasons, overrides/* scripts should not modify
 # the path to re-insert the overrides dir.  This should only be done
 # by these top-level "common" scripts.
-gnc_common_scripts = gnucash-env gnucash-make-guids
+gnc_common_scripts = systecash-env systecash-make-guids
 
 bin_SCRIPTS = \
     ${gnc_common_scripts} \
@@ -132,7 +132,7 @@ bin_SCRIPTS = \
 # if you change gncoverridedir, make sure you change ./overrides/Makefile.am too.
 gncoverridesdir = ${GNC_LIBEXECDIR}/overrides
 
-## Gnucash scripts -- real code is in overrides, these just get you there.
+## systecash scripts -- real code is in overrides, these just get you there.
 ${gnc_common_scripts}: generate-gnc-script ${top_builddir}/config.status
 	${srcdir}/generate-gnc-script $@ "${gncoverridesdir}"
 
@@ -142,7 +142,7 @@ endif
 
 EXTRA_DIST = \
     generate-gnc-script \
-	gnucash-valgrind.in \
+	systecash-valgrind.in \
 	environment.in
 
 AM_CPPFLAGS += -DG_LOG_DOMAIN=\"gnc.bin\"

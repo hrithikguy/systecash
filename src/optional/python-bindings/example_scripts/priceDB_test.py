@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # Test file for price database stuff
 # To update the price database call
-# $PATH/gnucash  --add-price-quotes $PATHTOFILE
+# $PATH/systecash  --add-price-quotes $PATHTOFILE
 # before running this.
 # Adding to a calling bash script would be better
 # Although calling it from here would be even better!
 #  OR:  export PYTHONPATH=$HOME/progs/lib/python2.6/site-packages
-# Then: gnucash-env ipython
+# Then: systecash-env ipython
 # The account file is not saved but always use a disposable copy.
 # Change, FILE, CURRENCY and STOCK to those defined in your test account.
 
@@ -15,9 +15,9 @@
 #   @author Mike Evans 
 #   @ingroup python_bindings_examples
 
-from gnucash import Session
+from systecash import Session
 
-# FILE should be the path to your existing gnucash file/database
+# FILE should be the path to your existing systecash file/database
 # For a file, simply pass the pathname, for a database you can use
 # these forms:
 # mysql://user:password@host/dbname

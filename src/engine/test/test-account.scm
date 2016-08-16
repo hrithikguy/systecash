@@ -1,10 +1,10 @@
-(use-modules (gnucash gnc-module))
+(use-modules (systecash gnc-module))
 
-(gnc:module-begin-syntax (gnc:module-load "gnucash/app-utils" 0))
+(gnc:module-begin-syntax (gnc:module-load "systecash/app-utils" 0))
 
-(use-modules (gnucash engine))
+(use-modules (systecash engine))
 
-(use-modules (gnucash engine test test-extras))
+(use-modules (systecash engine test test-extras))
 
 (define (run-test)
   (test test-account-same?)

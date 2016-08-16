@@ -17,9 +17,9 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash tax de_DE))
+(define-module (systecash tax de_DE))
 
-(use-modules (gnucash gnc-module))
+(use-modules (systecash gnc-module))
 (cond-expand
   (guile-2
     (eval-when
@@ -29,7 +29,7 @@
   (else ))
 (use-modules (sw_app_utils))
 (use-modules (sw_engine))
-(use-modules (gnucash app-utils))
+(use-modules (systecash app-utils))
 
 (export gnc:txf-get-payer-name-source)
 (export gnc:txf-get-form)

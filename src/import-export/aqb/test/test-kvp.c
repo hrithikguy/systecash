@@ -56,8 +56,8 @@ test_qofsession_aqb_kvp( void )
     /* load the accounts from the users datafile */
     /* but first, check to make sure we've got a session going. */
     QofBackendError io_err;
-    char *file1 = get_filepath("file-book.gnucash");
-    char *file2 = get_filepath("file-book-hbcislot.gnucash");
+    char *file1 = get_filepath("file-book.systecash");
+    char *file2 = get_filepath("file-book-hbcislot.systecash");
 
     if (1)
     {

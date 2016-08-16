@@ -62,7 +62,7 @@ endif
 endif
 endif
 
-gncscmmoddir = ${GNC_SCM_INSTALL_DIR}/gnucash/report
+gncscmmoddir = ${GNC_SCM_INSTALL_DIR}/systecash/report
 gncscmmod_DATA = report-gnome.scm
 
 noinst_DATA = .scm-links
@@ -90,15 +90,15 @@ SCM_FILE_LINKS = ${gncscmmod_DATA}
 endif
 
 .scm-links: 
-	$(RM) -rf gnucash
-	mkdir -p  gnucash
-	mkdir -p  gnucash/report
+	$(RM) -rf systecash
+	mkdir -p  systecash
+	mkdir -p  systecash/report
 if GNUCASH_SEPARATE_BUILDDIR
 	for X in ${SCM_FILE_LINKS} ; do \
 	  $(LN_S) -f ${srcdir}/$$X . ; \
 	done
 endif
-	( cd gnucash/report; for A in $(gncscmmod_DATA) ; do $(LN_S) -f ../../$$A . ; done )
+	( cd systecash/report; for A in $(gncscmmod_DATA) ; do $(LN_S) -f ../../$$A . ; done )
 if ! OS_WIN32
 # Windows knows no "ln -s" but uses "cp": must copy every time (see bug #566567).
 	touch .scm-links
@@ -132,12 +132,12 @@ GUILE_COMPILE_ENV = \
 	$(shell ${abs_top_srcdir}/src/gnc-test-env.pl --noexports ${GUILE_COMPILE_ENV}) \
 	$(GUILD) compile -o $@ $<
 
-gncscmmodcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@/gnucash/report
+gncscmmodcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@/systecash/report
 gncscmmodcache_DATA = $(gncscmmod_DATA:.scm=.go)
 endif
 
 clean-local:
-	rm -rf gnucash
+	rm -rf systecash
 
 CLEANFILES = report .scm-links ${SCM_FILE_LINKS} ${gncscmmodcache_DATA}
 MAINTAINERCLEANFILES = swig-report-gnome.c

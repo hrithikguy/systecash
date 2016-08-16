@@ -30,13 +30,13 @@ newrelease=$2
 
 dir=`dirname "$0"`
 
-oldrev=$(svn info --xml http://svn.gnucash.org/repo/gnucash/tags/$oldrelease | xsltproc "$dir/getlastcommit.xslt" -)
+oldrev=$(svn info --xml http://svn.systecash.org/repo/systecash/tags/$oldrelease | xsltproc "$dir/getlastcommit.xslt" -)
 if [ "x$2" == "x" ]
 then
   newrev=$(svn info -r HEAD --xml | xsltproc "$dir/getlastcommit.xslt" -)
   svn log -r$newrev:$oldrev --xml | xsltproc "$dir/log2ul.xslt" -
 else
-  newrev=$(svn info --xml http://svn.gnucash.org/repo/gnucash/tags/$newrelease | xsltproc "$dir/getlastcommit.xslt" -)
-  svn log -r$newrev:$oldrev --xml http://svn.gnucash.org/repo/gnucash/tags/$newrelease | xsltproc "$dir/log2ul.xslt" -
+  newrev=$(svn info --xml http://svn.systecash.org/repo/systecash/tags/$newrelease | xsltproc "$dir/getlastcommit.xslt" -)
+  svn log -r$newrev:$oldrev --xml http://svn.systecash.org/repo/systecash/tags/$newrelease | xsltproc "$dir/log2ul.xslt" -
 fi
 

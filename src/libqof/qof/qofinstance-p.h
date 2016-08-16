@@ -21,7 +21,7 @@
 \********************************************************************/
 /*
  * Object instance holds many common fields that most
- * gnucash objects use.
+ * systecash objects use.
  *
  * Copyright (C) 2003 Linas Vepstas <linas@linas.org>
  * Copyright (c) 2007 David Hampton <hampton@employees.org>

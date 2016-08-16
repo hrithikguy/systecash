@@ -29,31 +29,31 @@
  * @addtogroup Gnome
  * @{
  */
-/** @file gnucash-sheet.h
- * @brief Public declarations of GnucashSheet class.
+/** @file systecash-sheet.h
+ * @brief Public declarations of systecashSheet class.
  */
 
 #define CELL_VPADDING 2
 #define CELL_HPADDING 5
 
 
-#define GNUCASH_TYPE_REGISTER     (gnucash_register_get_type ())
-#define GNUCASH_REGISTER(obj)     (G_TYPE_CHECK_INSTANCE_CAST((obj), GNUCASH_TYPE_REGISTER, GnucashRegister))
+#define GNUCASH_TYPE_REGISTER     (systecash_register_get_type ())
+#define GNUCASH_REGISTER(obj)     (G_TYPE_CHECK_INSTANCE_CAST((obj), GNUCASH_TYPE_REGISTER, systecashRegister))
 #define GNUCASH_REGISTER_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), GNUCASH_TYPE_REGISTER))
 #define GNUCASH_IS_REGISTER(o)    (G_TYPE_CHECK_INSTANCE_TYPE((o), GNUCASH_TYPE_REGISTER))
 
 
-#define GNUCASH_TYPE_SHEET     (gnucash_sheet_get_type ())
-#define GNUCASH_SHEET(obj)     (G_TYPE_CHECK_INSTANCE_CAST((obj), GNUCASH_TYPE_SHEET, GnucashSheet))
+#define GNUCASH_TYPE_SHEET     (systecash_sheet_get_type ())
+#define GNUCASH_SHEET(obj)     (G_TYPE_CHECK_INSTANCE_CAST((obj), GNUCASH_TYPE_SHEET, systecashSheet))
 #define GNUCASH_SHEET_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), GNUCASH_TYPE_SHEET))
 #define GNUCASH_IS_SHEET(o)    (G_TYPE_CHECK_INSTANCE_TYPE((o), GNUCASH_TYPE_SHEET))
 
 
 typedef struct _SheetBlockStyle SheetBlockStyle;
-typedef struct _GnucashSheet GnucashSheet;
-typedef struct _GnucashSheetClass GnucashSheetClass;
-typedef struct _GnucashRegister GnucashRegister;
-typedef struct _GnucashRegisterClass GnucashRegisterClass;
+typedef struct _systecashSheet systecashSheet;
+typedef struct _systecashSheetClass systecashSheetClass;
+typedef struct _systecashRegister systecashRegister;
+typedef struct _systecashRegisterClass systecashRegisterClass;
 
 
 typedef struct
@@ -68,84 +68,84 @@ typedef struct
 } SheetBlock;
 
 
-GType      gnucash_sheet_get_type (void);
-GtkWidget *gnucash_sheet_new (Table *table);
+GType      systecash_sheet_get_type (void);
+GtkWidget *systecash_sheet_new (Table *table);
 
-void gnucash_sheet_table_load (GnucashSheet *sheet, gboolean do_scroll);
+void systecash_sheet_table_load (systecashSheet *sheet, gboolean do_scroll);
 
-void gnucash_sheet_recompute_block_offsets (GnucashSheet *sheet);
+void systecash_sheet_recompute_block_offsets (systecashSheet *sheet);
 
-GType gnucash_register_get_type (void);
+GType systecash_register_get_type (void);
 
 /** this already has scrollbars attached */
-GtkWidget *gnucash_register_new (Table *table);
+GtkWidget *systecash_register_new (Table *table);
 
-SheetBlock *gnucash_sheet_get_block (GnucashSheet *sheet,
+SheetBlock *systecash_sheet_get_block (systecashSheet *sheet,
                                      VirtualCellLocation vcell_loc);
 
-gint gnucash_sheet_col_max_width (GnucashSheet *sheet,
+gint systecash_sheet_col_max_width (systecashSheet *sheet,
                                   gint virt_col, gint cell_col);
 
-void gnucash_sheet_redraw_all (GnucashSheet *sheet);
-void gnucash_sheet_redraw_help (GnucashSheet *sheet);
+void systecash_sheet_redraw_all (systecashSheet *sheet);
+void systecash_sheet_redraw_help (systecashSheet *sheet);
 
-void gnucash_sheet_redraw_block (GnucashSheet *sheet,
+void systecash_sheet_redraw_block (systecashSheet *sheet,
                                  VirtualCellLocation vcell_loc);
 
-void gnucash_sheet_cursor_set (GnucashSheet *gsheet, VirtualLocation virt_loc);
+void systecash_sheet_cursor_set (systecashSheet *gsheet, VirtualLocation virt_loc);
 
-const char * gnucash_sheet_modify_current_cell(GnucashSheet *sheet,
+const char * systecash_sheet_modify_current_cell(systecashSheet *sheet,
         const gchar *new_text);
 
-gboolean gnucash_sheet_block_set_from_table (GnucashSheet *sheet,
+gboolean systecash_sheet_block_set_from_table (systecashSheet *sheet,
         VirtualCellLocation vcell_loc);
 
-void gnucash_sheet_set_scroll_region (GnucashSheet *sheet);
+void systecash_sheet_set_scroll_region (systecashSheet *sheet);
 
-void gnucash_sheet_cursor_set_from_table (GnucashSheet *sheet,
+void systecash_sheet_cursor_set_from_table (systecashSheet *sheet,
         gboolean do_scroll);
 
-void gnucash_sheet_compute_visible_range (GnucashSheet *sheet);
+void systecash_sheet_compute_visible_range (systecashSheet *sheet);
 
-void gnucash_sheet_make_cell_visible (GnucashSheet *sheet,
+void systecash_sheet_make_cell_visible (systecashSheet *sheet,
                                       VirtualLocation virt_loc);
 
-void gnucash_sheet_show_range (GnucashSheet *sheet,
+void systecash_sheet_show_range (systecashSheet *sheet,
                                VirtualCellLocation start_loc,
                                VirtualCellLocation end_loc);
 
-void gnucash_sheet_update_adjustments (GnucashSheet *sheet);
+void systecash_sheet_update_adjustments (systecashSheet *sheet);
 
-void gnucash_sheet_set_window (GnucashSheet *sheet, GtkWidget *window);
+void systecash_sheet_set_window (systecashSheet *sheet, GtkWidget *window);
 
-void gnucash_register_goto_virt_cell (GnucashRegister *reg,
+void systecash_register_goto_virt_cell (systecashRegister *reg,
                                       VirtualCellLocation vcell_loc);
 
-void gnucash_register_goto_virt_loc (GnucashRegister *reg,
+void systecash_register_goto_virt_loc (systecashRegister *reg,
                                      VirtualLocation virt_loc);
 
-void gnucash_register_goto_next_virt_row (GnucashRegister *reg);
+void systecash_register_goto_next_virt_row (systecashRegister *reg);
 
 typedef gboolean (*VirtualLocationMatchFunc) (VirtualLocation virt_loc,
         gpointer user_data);
 
-void gnucash_register_goto_next_matching_row (GnucashRegister *reg,
+void systecash_register_goto_next_matching_row (systecashRegister *reg,
         VirtualLocationMatchFunc match,
         gpointer user_data);
 
-void gnucash_register_attach_popup(GnucashRegister *reg, GtkWidget *popup,
+void systecash_register_attach_popup(systecashRegister *reg, GtkWidget *popup,
                                    gpointer data);
 
-gboolean gnucash_register_has_selection (GnucashRegister *reg);
-void gnucash_register_cut_clipboard (GnucashRegister *reg);
-void gnucash_register_copy_clipboard (GnucashRegister *reg);
-void gnucash_register_paste_clipboard (GnucashRegister *reg);
-void gnucash_register_refresh_from_prefs (GnucashRegister *reg);
-void gnucash_register_set_moved_cb (GnucashRegister *reg,
+gboolean systecash_register_has_selection (systecashRegister *reg);
+void systecash_register_cut_clipboard (systecashRegister *reg);
+void systecash_register_copy_clipboard (systecashRegister *reg);
+void systecash_register_paste_clipboard (systecashRegister *reg);
+void systecash_register_refresh_from_prefs (systecashRegister *reg);
+void systecash_register_set_moved_cb (systecashRegister *reg,
                                     GFunc cb, gpointer cb_data);
 
-GnucashSheet *gnucash_register_get_sheet (GnucashRegister *reg);
+systecashSheet *systecash_register_get_sheet (systecashRegister *reg);
 
-GdkColor *get_gtkrc_color (GnucashSheet *sheet, RegisterColor field_type);
+GdkColor *get_gtkrc_color (systecashSheet *sheet, RegisterColor field_type);
 /** @} */
 #endif

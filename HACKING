@@ -1,13 +1,13 @@
 Hacking Guidelines
 ==================
 
-This document is an introduction to hacking on GnuCash.
+This document is an introduction to hacking on systecash.
 
 Related Documents
 -----------------
 
 In addition to this file, you should read the README file, which
-explains the details of getting the SVN source, building GnuCash,
+explains the details of getting the SVN source, building systecash,
 and creating patches for submission.
 
 The src/doc/design directory contains a preliminary design document
@@ -45,7 +45,7 @@ C:
    own. Glib linked lists and pointer arrays are very convenient and
    have been extensively used and tested.
 
- * All gnucash functions and global variables are prefixed with gnc_
+ * All systecash functions and global variables are prefixed with gnc_
 
  * Use static functions whenever possible
 
@@ -54,7 +54,7 @@ C:
 
 Scheme:
 
- * All gnucash functions and global variables are prefixed with gnc:
+ * All systecash functions and global variables are prefixed with gnc:
 
  * All global variables are enclosed in ** (i.e. gnc:*load-path*)
 
@@ -73,23 +73,23 @@ August 22, 2000
 TIPS AND HINTS
 ==============
 
-Starting GnuCash from the build tree
+Starting systecash from the build tree
 ------------------------------------
 This is known to not work very well.  Instead, `--prefix` your build into /opt/gnc/svn/ (or some such).
 
-Getting Trace Messages From GnuCash
+Getting Trace Messages From systecash
 -----------------------------------
 See the doxygen comments in lib/libqof/qof/qoflog.h (and .c)
 
-Starting GnuCash in GDB
+Starting systecash in GDB
 -----------------------
-To run gdb on an installed version of gnucash (installed in /opt/gnc/unstable:)
+To run gdb on an installed version of systecash (installed in /opt/gnc/unstable:)
 
-    % gdb /opt/gnc/unstable/bin/gnucash
+    % gdb /opt/gnc/unstable/bin/systecash
 
-OS X/Quartz developers can't run gnucash in gdb this way. They should instead use:
+OS X/Quartz developers can't run systecash in gdb this way. They should instead use:
 
-    % /opt/gnc/unstable/bin/gnucash-gdb
+    % /opt/gnc/unstable/bin/systecash-gdb
 
 You'll also probably want to know about these:
 
@@ -100,7 +100,7 @@ You'll also probably want to know about these:
 It may be the case that running GDB from within emacs doesn't work for you,
 with the following error:
 
-[C-u M-x gdb /opt/gnucash-cvs/bin/gnucash
+[C-u M-x gdb /opt/systecash-cvs/bin/systecash
  ...in buffer *gud-gdb*:]
 
     (gdb) attach <pid>
@@ -114,31 +114,31 @@ jsled needed to re-define a gud.el function as such:
 jsled does not need the above with emacs-22, thankfully.  It was getting quite tiresome.
 
 
-Using Electric Fence with GnuCash
+Using Electric Fence with systecash
 ---------------------------------
     % configure --enable-efence
 (except this doesn't actually enable efence :-( need to hack
 configure.in and add $LIBS = -lefence and re-run ./autogen.sh)
 
-Don't know why, efence does not currently work with gnucash:
+Don't know why, efence does not currently work with systecash:
 I get a bunch of errors:
    warning: Cannot initialize thread debugging library: unknown thread_db error '22'
 
 If you know how to fix this, please update these instructions.
 
 
-Using Valgrind with GnuCash
+Using Valgrind with systecash
 ---------------------------
--- run ${prefix}/bin/gnucash-valgrind
+-- run ${prefix}/bin/systecash-valgrind
 
 However, I did not find valgrind to be useful.  It reported a bunch of
 guile bugs, some g_hash_table bugs, and then the program exited prematurely 
 for no apparent reason. :-( 
 
-For the moment, gnucash-valgrind uses the suppressions in 
+For the moment, systecash-valgrind uses the suppressions in 
 src/debug/valgrind/valgrind-*.supp
 
-For valgrind-gnucash.supp, this comment was made (but is perhaps outdated 
+For valgrind-systecash.supp, this comment was made (but is perhaps outdated 
 by now ?):
 This file needs to be cleaned up in two ways:
 
@@ -191,46 +191,46 @@ for A in `find src/business/business-core -name '*.so'`; do \
 XCode project
 -------------
 
-There is an XCode project available in gnucash.xcodeproj at the root of the
+There is an XCode project available in systecash.xcodeproj at the root of the
 source tree.  This project can be used with XCode on a Macintosh to debug
-GnuCash.  It is not set up to build GnuCash, but only to debug it. Building must
+systecash.  It is not set up to build systecash, but only to debug it. Building must
 be done using the normal command line tools.
 
-This project is designed to be used with the X Window version of GnuCash, not
-the native Quartz version.  To use it you must build and install GnuCash into
+This project is designed to be used with the X Window version of systecash, not
+the native Quartz version.  To use it you must build and install systecash into
 directories "build" and "install" parallel to the source directory.  Furthermore
 the architecture dependent parts of the install are put in a subdirectory
 "install/darwin".
 
-To build, then, if the source directory is somewhere/gnucash you must create the
+To build, then, if the source directory is somewhere/systecash you must create the
 directories somewhere/build/darwin and somewhere/install/darwin/bin, cd into
 somewhere/build/darwin and execute
 
-    ../../gnucash/configure --prefix=../../install \
+    ../../systecash/configure --prefix=../../install \
                             --exec-prefix=../../install/bin \
                             --enable-debug \
                             ...other options...
     make
     make install
 
-This will build and install a copy of GnuCash that can be debugged using the
+This will build and install a copy of systecash that can be debugged using the
 XCode project.
 
 The debug target in the project is set with a build tool of /usr/bin/true so
 building in XCode won't hurt anything, it just won't do much.  It is also set to
-not launch GnuCash automatically, but rather to wait for it to be launched
+not launch systecash automatically, but rather to wait for it to be launched
 manually. This lets you run it from a command prompt and see the console output
 which can often be useful.  Hence to initiate a debugging session in XCode, tell
-XCode to run GnuCash then go to a terminal window and launch install/darwin/bin/gnucash
+XCode to run systecash then go to a terminal window and launch install/darwin/bin/systecash
 with whatever options you want.  XCode will notice that it has been launched and
 attach to the process.
 
 Since there seems to be no way to make the path to the executable a relative
-path, you must make one change to the debug scheme before you can run gnucash
+path, you must make one change to the debug scheme before you can run systecash
 under XCode.  In XCode 5 (other versions may be different) go to
-Product->Scheme->Edit Scheme and select the "info" tab of the "Run gnucash"
+Product->Scheme->Edit Scheme and select the "info" tab of the "Run systecash"
 pane. Select "Other..." in the "Executable" menu and select the installed binary
-for gnucash in the resulting file open dialog.  This should be
-install/darwin/bin/gnucash as described above.  This, and the act of opening the
+for systecash in the resulting file open dialog.  This should be
+install/darwin/bin/systecash as described above.  This, and the act of opening the
 project in XCode, will change some of the files in the XCode project directory.
 You can, or course, commit these locally, but please don't push them upstream.

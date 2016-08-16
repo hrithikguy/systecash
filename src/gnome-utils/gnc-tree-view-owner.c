@@ -422,7 +422,7 @@ gnc_tree_view_owner_new (GncOwnerType owner_type)
 
     priv->name_column
         = gnc_tree_view_add_text_column(view, owner_name, GNC_OWNER_TREE_NAME_COL,
-                                        NULL, "GnuCash Inc.",
+                                        NULL, "systecash Inc.",
                                         GNC_TREE_MODEL_OWNER_COL_NAME,
                                         GNC_TREE_VIEW_COLUMN_VISIBLE_ALWAYS,
                                         sort_by_string);
@@ -443,7 +443,7 @@ gnc_tree_view_owner_new (GncOwnerType owner_type)
                                   GNC_TREE_VIEW_COLUMN_VISIBLE_ALWAYS,
                                   sort_by_string);
     gnc_tree_view_add_text_column(view, _("Address Name"), GNC_OWNER_TREE_ADDRESS_NAME_COL,
-                                  NULL, "GnuCash Inc.",
+                                  NULL, "systecash Inc.",
                                   GNC_TREE_MODEL_OWNER_COL_ADDRESS_NAME,
                                   GNC_TREE_VIEW_COLUMN_VISIBLE_ALWAYS,
                                   sort_by_string);
@@ -1294,7 +1294,7 @@ gnc_tree_view_owner_save(GncTreeViewOwner *view,
 }
 
 /** Select the row in the tree that was selected when the user last
- *  quit gnucash.  Its job is to map from owner name to tree row and
+ *  quit systecash.  Its job is to map from owner name to tree row and
  *  select the row.
  *
  *  @param tree A pointer to the GncTreeViewOwner embedded.

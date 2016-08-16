@@ -3,10 +3,10 @@
 
 @strong{This whole document is completely outdated. Don't read this. All
 function names and every described structure has changed
-completely. Only read this if you want to know how gnucash looked like
+completely. Only read this if you want to know how systecash looked like
 in 1999. This is completely outdated!}
 
-GnuCash is written primarily in two languages: C and Scheme. The
+systecash is written primarily in two languages: C and Scheme. The
 engine/server is written in C primarily for speed, portability,
 stability and historical purposes. Much of the day-to-day workhorse code
 is written in Scheme, primarily for its power, expressiveness and ease
@@ -14,24 +14,24 @@ of development.  The user interface is Gtk/Gnome, some of it written in
 C, some in scheme, and some with the GUI designer tool Glade
 @uref{glade.pn.org}.
 
-GnuCash is modular, thereby allowing separate individuals
+systecash is modular, thereby allowing separate individuals
 to maintain, develop and enhance certain modules without
 disturbing the overall development. (Never mind that 
 modules help avoid spaghetti code and nasty, ugly hacks).
 The interfaces between modules are documented, and, for the
 most part, stable and unchanging.
 
-GnuCash currently consists of the following modules:
+systecash currently consists of the following modules:
 
 
 @section The Engine
 
 The @dfn{Engine} (located under the @file{src/engine} directory in the
-GnuCash codebase) provides an interface for creating, manipulating, and
+systecash codebase) provides an interface for creating, manipulating, and
 destroying three basic financial entities: Accounts, Transactions (known
 as Journal Entries in accounting practice), and Splits (known as Ledger
 Entries). These three entities are the central data structures of the
-GnuCash financial data model.
+systecash financial data model.
 
 The Engine code contains no GUI code whatsoever.
 
@@ -80,7 +80,7 @@ output-only. Cells can be assigned unique colors. The currently
 active ledger row-block can be highlighted with a unique color.
 
 The register code is completely independent of the engine code, knows
-nothing about accounting or any of the other GnuCash subsystems. It
+nothing about accounting or any of the other systecash subsystems. It
 can be used in independent projects that have nothing to do with
 accounting.
 
@@ -114,14 +114,14 @@ Jon Trowbridge (@url{http://www.gnome.org/guppi}).
 @section Price Quotes
 
 The @dfn{Price Quotes} module (@file{src/quotes}) is a Perl system to
-fetch stock price data off the Internet and insert it into the GnuCash
+fetch stock price data off the Internet and insert it into the systecash
 Engine. This module requires the functionality of the Finance::Quote
 module available at SourceForge. The Finance::Quote module can fetch
 price quotes from many different sources including Yahoo, Yahoo Europe,
 and some international exchanges.
 
 The Finance::Quote module also supports fetching currency exchange
-rates. GnuCash will be extended to allow the fetching and use of
+rates. systecash will be extended to allow the fetching and use of
 currency exchange rates.
 
 
@@ -138,7 +138,7 @@ which will be invoked when preferences change.
 
 Preference values which are different from the default values
 are stored as scheme forms in a user-specific preferences file
-(@file{~/.gnucash/config.auto}). This file is automatically
+(@file{~/.systecash/config.auto}). This file is automatically
 loaded upon startup.
 
 
@@ -146,18 +146,18 @@ loaded upon startup.
 
 The @dfn{QIF Import} module (@file{src/scm/qif-import}) provides
 functionality for importing QIF (Quicken Interchange Format) data
-into GnuCash.
+into systecash.
 
 
-@section GnuCash
+@section systecash
 
-The GnuCash module (@file{src/gnome}, @file{src/register/gnome} and
+The systecash module (@file{src/gnome}, @file{src/register/gnome} and
 @file{src/*.[ch]}) is the main GUI application. It consists of a
 collection of miscellaneous GUI code to glue together all of the pieces
 above into a coherent, point-and-click whole. It is meant to be easy to
 use and intuitive to the novice user without sacrificing the power and
 flexibility that a professional might expect. When people say that
-GnuCash is trying to be a "Quicken or MS Money look/work/act-alike",
+systecash is trying to be a "Quicken or MS Money look/work/act-alike",
 this is the piece that they are referring to. It really is meant to
 be a personal-finance manager with enough power for the power user
 and the ease of use for the beginner.

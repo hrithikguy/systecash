@@ -1,6 +1,6 @@
 /*
  * gnc-plugin.h -- A module or plugin which can add more
- *	functionality to GnuCash.
+ *	functionality to systecash.
  * Copyright (C) 2003 Jan Arne Petersen <jpetersen@uni-bonn.de>
  * Copyright (C) 2003,2005 David Hampton <hampton@employees.org>
  *
@@ -58,12 +58,12 @@
 /** @addtogroup MenuPluginBase Common object and functions
     @{ */
 /** @file gnc-plugin.h
-    @brief Functions for adding plugins to a GnuCash window.
+    @brief Functions for adding plugins to a systecash window.
     @author Copyright (C) 2003 Jan Arne Petersen
     @author Copyright (C) 2003,2005 David Hampton <hampton@employees.org>
 
     A GncPlugin is the basic object for adding a menu item or items to
-    the GnuCash user interface.  This object should be instantiated
+    the systecash user interface.  This object should be instantiated
     once at startup time and passed to the plugin manager.  Whenever a
     new window is opened, the main window code will ask the plugin
     manager for a list of all plugins, and will add each plugin to the
@@ -115,15 +115,15 @@ typedef struct
 
     /** A name for the set of actions that will be added by this
      *  plugin.  The actual name is irrelevant, as long as it is
-     *  unique within GnuCash. */
+     *  unique within systecash. */
     const gchar *actions_name;
     /** An array of actions that should automatically be added to
-     *  any GnuCash "main" content window that is opened. */
+     *  any systecash "main" content window that is opened. */
     GtkActionEntry *actions;
     /** The number of actions in the actions array. */
     guint n_actions;
     /** An array of toggle actions that should automatically be added to
-     *  any GnuCash "main" content window that is opened. */
+     *  any systecash "main" content window that is opened. */
     GtkToggleActionEntry *toggle_actions;
     /** The number of toggle actions in the toggle actions array. */
     guint n_toggle_actions;

@@ -52,7 +52,7 @@
 ;;        #f)))
 ;;    eq?
 ;;    #f))
-(use-modules (gnucash gettext))
+(use-modules (systecash gettext))
 
 ;; Old-school config files depend on this API
  (define (gnc:config-file-format-version version) #t)

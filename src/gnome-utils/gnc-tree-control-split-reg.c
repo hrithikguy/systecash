@@ -286,7 +286,7 @@ gnc_tree_control_split_reg_balance_trans (GncTreeViewSplitReg *view, Transaction
     radio_list = g_list_append (radio_list,
                                 _("Balance it _manually"));
     radio_list = g_list_append (radio_list,
-                                _("Let GnuCash _add an adjusting split"));
+                                _("Let systecash _add an adjusting split"));
 
     if (model->type < NUM_SINGLE_REGISTER_TYPES2 && !multi_currency)
     {

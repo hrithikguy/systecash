@@ -17,17 +17,17 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash business-gnome))
-(use-modules (gnucash gnc-module))
+(define-module (systecash business-gnome))
+(use-modules (systecash gnc-module))
 
-(gnc:module-load "gnucash/gnome-utils" 0)
-(gnc:module-load "gnucash/app-utils" 0)
-(gnc:module-load "gnucash/gnome-search" 0)
+(gnc:module-load "systecash/gnome-utils" 0)
+(gnc:module-load "systecash/app-utils" 0)
+(gnc:module-load "systecash/gnome-search" 0)
 
-(gnc:module-load "gnucash/report/report-gnome" 0)
+(gnc:module-load "systecash/report/report-gnome" 0)
 
-(use-modules (gnucash report business-reports))
-(use-modules (gnucash main))		;for gnc:debug
+(use-modules (systecash report business-reports))
+(use-modules (systecash main))		;for gnc:debug
 
 (define (business-report-function)
   (gnc-add-scm-extension

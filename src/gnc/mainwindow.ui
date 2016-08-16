@@ -11,11 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>GnuCash Qt Example</string>
+   <string>systecash Qt Example</string>
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>:/pixmaps/gnucash-icon-32x32.png</normaloff>:/pixmaps/gnucash-icon-32x32.png</iconset>
+    <normaloff>:/pixmaps/systecash-icon-32x32.png</normaloff>:/pixmaps/systecash-icon-32x32.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -67,13 +67,13 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt; font-weight:600;&quot;&gt;Cutecash&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt; font-weight:600;&quot;&gt;Free Finance Software. Easy to develop, easy to use.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;Currently this is more or less a proof-of-concept for developers:&lt;/span&gt;&lt;/p&gt;
-&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-family:'Sans'; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Load an existing gnucash XML file&lt;/li&gt;
+&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-family:'Sans'; font-size:10pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Load an existing systecash XML file&lt;/li&gt;
 &lt;li style=&quot; font-family:'Sans'; font-size:10pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;It will show the account tree in a tree view and also a list view &lt;/li&gt;
 &lt;li style=&quot; font-family:'Sans'; font-size:10pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Double-click on any account in either view; it will open the list of splits in that account.&lt;/li&gt;
 &lt;li style=&quot; font-family:'Sans'; font-size:10pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Save and Save-As works as normal.&lt;/li&gt;
 &lt;li style=&quot; font-family:'Sans'; font-size:10pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Edit any of the existing transaction/splits: Date, Description, or Amount. Click Undo. Click Redo. Click Undo. Etc. etc.&lt;/li&gt;
 &lt;li style=&quot; font-family:'Sans'; font-size:10pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Delete any of the existings transactions. Or entering a new one. Click Undo. Click Redo. Etc. etc.&lt;/li&gt;&lt;/ol&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;The list of splits in the account is comparable to gnucash's single line view.  Amounts, balance, date, all there.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;The list of splits in the account is comparable to systecash's single line view.  Amounts, balance, date, all there.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt;&quot;&gt;The following parts are still missing:&lt;/span&gt;&lt;/p&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; Currently the accout selection of a transaction cannot be edited. &lt;/li&gt;
 &lt;li style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Editing or adding multi-split transactions are not yet supported (it shows only the string &amp;quot;--Split Transaction--&amp;quot;). &lt;/li&gt;
@@ -81,7 +81,7 @@ p, li { white-space: pre-wrap; }
 &lt;li style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Any of the more specialized account views are not yet implemented.&lt;/li&gt;&lt;/ul&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;The fun part is how easy it was to add this. Let's see how far we will get...&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:600;&quot;&gt;Images&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/pixmaps/gnucash_splash.png&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/pixmaps/systecash_splash.png&quot; /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;We can also embed images here in this compiled-in HTML page, as you can see above. Eventually, this page should explain what this software can do for the new user. Maybe a &lt;/span&gt;&lt;a href=&quot;gnc:test&quot;&gt;&lt;span style=&quot; font-family:'Sans'; font-size:10pt; text-decoration: underline; color:#0000ff;&quot;&gt;hyperlink &lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;here?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="openLinks">
@@ -93,7 +93,7 @@ p, li { white-space: pre-wrap; }
       </widget>
       <widget class="QWidget" name="tableViewTab">
        <attribute name="icon">
-        <iconset resource="gnucash.qrc">
+        <iconset resource="systecash.qrc">
          <normaloff>:/pixmaps/gnc-account.png</normaloff>:/pixmaps/gnc-account.png</iconset>
        </attribute>
        <attribute name="title">
@@ -114,7 +114,7 @@ p, li { white-space: pre-wrap; }
       </widget>
       <widget class="QWidget" name="treeViewTab">
        <attribute name="icon">
-        <iconset resource="gnucash.qrc">
+        <iconset resource="systecash.qrc">
          <normaloff>:/pixmaps/gnc-account.png</normaloff>:/pixmaps/gnc-account.png</iconset>
        </attribute>
        <attribute name="title">
@@ -261,7 +261,7 @@ p, li { white-space: pre-wrap; }
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="gnucash.qrc">
+    <iconset resource="systecash.qrc">
      <normaloff>:/pixmaps/gnc-account-new.png</normaloff>:/pixmaps/gnc-account-new.png</iconset>
    </property>
    <property name="text">
@@ -273,7 +273,7 @@ p, li { white-space: pre-wrap; }
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="gnucash.qrc">
+    <iconset resource="systecash.qrc">
      <normaloff>:/pixmaps/gnc-account-open.png</normaloff>:/pixmaps/gnc-account-open.png</iconset>
    </property>
    <property name="text">
@@ -285,7 +285,7 @@ p, li { white-space: pre-wrap; }
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="gnucash.qrc">
+    <iconset resource="systecash.qrc">
      <normaloff>:/pixmaps/gnc-account-edit.png</normaloff>:/pixmaps/gnc-account-edit.png</iconset>
    </property>
    <property name="text">
@@ -321,7 +321,7 @@ p, li { white-space: pre-wrap; }
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="gnucash.qrc">
+    <iconset resource="systecash.qrc">
      <normaloff>:/pixmaps/gnc-account-delete.png</normaloff>:/pixmaps/gnc-account-delete.png</iconset>
    </property>
    <property name="text">
@@ -406,7 +406,7 @@ p, li { white-space: pre-wrap; }
   </action>
  </widget>
  <resources>
-  <include location="gnucash.qrc"/>
+  <include location="systecash.qrc"/>
   <include location="gtk-icons.qrc"/>
  </resources>
  <connections>

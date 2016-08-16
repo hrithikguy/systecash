@@ -4,7 +4,7 @@
       A Simple Checkbook
     </gnc-act:title>
     <gnc-act:short-description>
-     The minimal set of accounts to use GnuCash.
+     The minimal set of accounts to use systecash.
     </gnc-act:short-description>
     <gnc-act:long-description>
      Use this if you just want to balance your checkbook.  Later on, you can start tracking income and expenses in more detail if you feel the need.

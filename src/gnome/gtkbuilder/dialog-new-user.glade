@@ -103,7 +103,7 @@
               <object class="GtkLabel" id="newAccountCancelDialog_ShouldRunAgainLable">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">If you press the &lt;i&gt;Yes&lt;/i&gt; button, the &lt;i&gt;Welcome to GnuCash&lt;/i&gt; dialog will be displayed again next time you start GnuCash. If you press the &lt;i&gt;No&lt;/i&gt; button, it will not be displayed again.</property>
+                <property name="label" translatable="yes">If you press the &lt;i&gt;Yes&lt;/i&gt; button, the &lt;i&gt;Welcome to systecash&lt;/i&gt; dialog will be displayed again next time you start systecash. If you press the &lt;i&gt;No&lt;/i&gt; button, it will not be displayed again.</property>
                 <property name="use_markup">True</property>
                 <property name="wrap">True</property>
               </object>
@@ -216,7 +216,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="xalign">0</property>
-                <property name="label" translatable="yes">&lt;span size="larger" weight="bold"&gt;Welcome to GnuCash!&lt;/span&gt;</property>
+                <property name="label" translatable="yes">&lt;span size="larger" weight="bold"&gt;Welcome to systecash!&lt;/span&gt;</property>
                 <property name="use_markup">True</property>
               </object>
               <packing>
@@ -236,7 +236,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">There are some predefined actions available that most new users prefer to get started with GnuCash. Select one of these actions from below and click the &lt;i&gt;OK&lt;/i&gt; button or press the &lt;i&gt;Cancel&lt;/i&gt; button if you don't want to perform any of them.</property>
+                    <property name="label" translatable="yes">There are some predefined actions available that most new users prefer to get started with systecash. Select one of these actions from below and click the &lt;i&gt;OK&lt;/i&gt; button or press the &lt;i&gt;Cancel&lt;/i&gt; button if you don't want to perform any of them.</property>
                     <property name="use_markup">True</property>
                     <property name="wrap">True</property>
                   </object>

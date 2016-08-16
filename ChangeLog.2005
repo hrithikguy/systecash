@@ -135,7 +135,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/gnome/ui/gnc-plugin-page-account-tree-ui.xml: Migrate the
 	account page options to a new "Filter By" dialog.  Add a new
 	option to filter out accounts with zero total balances.  Remember
-	the current filter state across invocations of GnuCash.
+	the current filter state across invocations of systecash.
 
 	* src/gnome-utils/ui/gnc-main-window-ui.xml:
 	* src/gnome-utils/gnc-main-window.c:
@@ -194,7 +194,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 2005-12-28  Chris Shoemaker <c.shoemaker@cox.net>
 
 	* [r12191] trunk/src/bin/Makefile.am: trigger regeneration of
-	  gnucash scripts when the configuration changes pulled from 1.8
+	  systecash scripts when the configuration changes pulled from 1.8
 
 	* [r12190] trunk/NEWS: Pulled NEWS history from 1.8 branch into
 	  trunk.
@@ -261,7 +261,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	  gcc as a compiler.
 
 	* [r12186] trunk/README.patches, trunk/README.svn,
-	  trunk/make-gnucash-patch.in: Update patch submitting
+	  trunk/make-systecash-patch.in: Update patch submitting
 	  instructions.
 
 2005-12-27  Derek Atkins  <derek@ihtfp.com>
@@ -305,7 +305,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 2005-12-15  Christian Stimming  <stimming@tuhh.de>
 
 	* src/import-export/hbci/gnc-hbci-transfer.c: The amount of the
-	online transfer somehow needs to be negated in the gnucash account
+	online transfer somehow needs to be negated in the systecash account
 	now.
 
 2005-12-10  David Hampton  <hampton@employees.org>
@@ -322,7 +322,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	"object" is provided to the callback.  (This is an unused code
 	path that is about to be used.)
 
-	* src/register/register-gnome/gnucash-grid.c: Andreas Köhler's
+	* src/register/register-gnome/systecash-grid.c: Andreas Köhler's
 	patch to fix the alignment of cells in the register.
 
 2005-12-09  Derek Atkins  <derek@ihtfp.com>
@@ -425,7 +425,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/engine/gnc-associate-account.c:
 	* lib/libqof/qof/qofquery.c: Don't ignore the return value of glib
 	list functions.  This will likely become a warning in future
-	version of glib, which translates to an error for gnucash since it
+	version of glib, which translates to an error for systecash since it
 	compiles with the -Werror flag.
 
 2005-12-04  Derek Atkins  <derek@ihtfp.com>
@@ -459,7 +459,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* GNOME2_STATUS: remove GOG-porting notes, spelling fixes.
 	
 	* sched-xact.glade: 
-	* apps_gnucash_dialog_scheduled_transctions.schemas: 
+	* apps_systecash_dialog_scheduled_transctions.schemas: 
 	* dialog-scheduledxaction.c (schedXact_editor_create_ledger):
 	Remove the not-really-respected-anyways option to change the
 	number of register lines in the SX editor dialog.
@@ -471,7 +471,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 2005-11-30  David Hampton  <hampton@employees.org>
 
-	* src/register/register-gnome/gnucash-header.c:
+	* src/register/register-gnome/systecash-header.c:
 	* src/business/business-gnome/dialog-date-close.c:
 	* src/gnome-utils/gnc-date-edit.c:
 	* src/gnome-utils/gnc-html-graph-gog.c:
@@ -483,7 +483,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/gnome-search/dialog-search.c: Eliminate the deprecated
 	function gtk_widget_set_usize().
 
-	* src/register/register-gnome/gnucash-date-picker.c:
+	* src/register/register-gnome/systecash-date-picker.c:
 	* src/business/business-gnome/search-owner.c:
 	* src/gnome-utils/gnc-query-list.c:
 	* src/gnome/gnc-split-reg.c: Finish converting type creation over
@@ -513,7 +513,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* lib/guppi-legend.patch:
 	* configure.in: Remove all remaining references to guppi.
 
-	* rpm/gnucash.spec.in: Quick update for 2.0 requirements.  Needs
+	* rpm/systecash.spec.in: Quick update for 2.0 requirements.  Needs
 	to actually be tested.
 
 	* src/import-export/qif/qif-parse.c:
@@ -561,7 +561,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/backend/postgres/price.c:
 	* src/engine/gnc-pricedb.[ch]:
 	* src/engine/gnc-pricedb-p.h: Better integrate stock prices with
-	QOF.  Gnucash now warns you about unsaved stock price changes.
+	QOF.  systecash now warns you about unsaved stock price changes.
 
 2005-11-26  David Hampton  <hampton@employees.org>
 
@@ -686,17 +686,17 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/engine/gw-engine-spec.scm:
 	* src/app-utils/file-utils.c:
 	* src/app-utils/gnc-exp-parser.c: Consolidate the creation of all
-	file names under ~/.gnucash, and also consolidate checks for the
-	existence of ~/.gnucash and ~/.gnucash/books.  Add better error
+	file names under ~/.systecash, and also consolidate checks for the
+	existence of ~/.systecash and ~/.systecash/books.  Add better error
 	messages when there is a problem.
 
 2005-11-22  David Hampton  <hampton@employees.org>
 
-	* src/import-export/schemas/apps_gnucash_import_generic_matcher.schemas:
+	* src/import-export/schemas/apps_systecash_import_generic_matcher.schemas:
 	* src/import-export/import-main-matcher.c:
 	* src/import-export/generic-import.glade:
 	* src/import-export/import-match-picker.c:
-	* src/import-export/hbci/schemas/apps_gnucash_dialog_hbci.schemas:
+	* src/import-export/hbci/schemas/apps_systecash_dialog_hbci.schemas:
 	* src/import-export/hbci/hbci-interaction.c:
 	* src/import-export/hbci/glade/hbci.glade:
 	* src/import-export/hbci/glade/hbcipass.glade: Dialog makeovers.
@@ -749,7 +749,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	Take care of some resizing problems.
 
 	* src/import-export/import-main-matcher.c:
-	* src/register/register-gnome/gnucash-sheet.c: Use gtk version of
+	* src/register/register-gnome/systecash-sheet.c: Use gtk version of
 	various functions instead of gnome versions.  Rest of the file was
 	converted long ago.
 
@@ -1190,7 +1190,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* po/glossary/gnc-glossary.txt: Add explanations to new strings in
 	glossary. Merge these into the language glossaries.
 
-	* make-gnucash-potfiles.in: Update potfiles script so that it
+	* make-systecash-potfiles.in: Update potfiles script so that it
 	works without the old cvsignore files again.
 
 2005-11-13  David Hampton  <hampton@employees.org>
@@ -1249,7 +1249,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 	Moving QSF to lib/libqof/backend/file
 	* src/backend/qsf/qsf-backend.c
-	* src/backend/qsf/pilot-qsf-GnuCashInvoice.xml
+	* src/backend/qsf/pilot-qsf-systecashInvoice.xml
 	* src/backend/qsf/qsf-dir.h.in
 	* src/backend/qsf/qsf-map.xsd.xml
 	* src/backend/qsf/qsf-xml-map.c
@@ -1388,11 +1388,11 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 2005-11-09  Scott Oonk  <scott.oonk@gmail.com>
 
-	* src/register/register-gnome/gnucash-item-edit.c: Draw cursor at
+	* src/register/register-gnome/systecash-item-edit.c: Draw cursor at
 	correct x,y offset from GdkDrawable.  Will now correctly draw
 	cursor on initial entry into a cell.
 
-	* src/register/register-gnome/gnucash-item-edit.c: Fix some
+	* src/register/register-gnome/systecash-item-edit.c: Fix some
 	alignment problems in the register.
 
 	It removes the pango_layout_set_alignment code.  Since we are
@@ -1429,7 +1429,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	Stylesheets" menu item should always be visible.
 
 	* doc/README.dependencies: Document the devel packages needed to
-	compile gnucash on FC4.
+	compile systecash on FC4.
 
 	* src/gnome-utils/gnc-embedded-window.c:
 	* src/gnome-utils/gnc-menu-extensions.c:
@@ -1440,17 +1440,17 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 2005-11-09  Scott Oonk  <scott.oonk@gmail.com>
 
-	* src/register/register-gnome/gnucash-item-edit.c: This patch
+	* src/register/register-gnome/systecash-item-edit.c: This patch
 	allows selection of the last character in a cell.  Also fix
 	selection/highlighting of multi-byte characters.
 
-	* src/register/register-gnome/gnucash-sheet.c: This patch
-	simplifies the keyboard selection in gnucash-sheet.  Fixes a
+	* src/register/register-gnome/systecash-sheet.c: This patch
+	simplifies the keyboard selection in systecash-sheet.  Fixes a
 	problem where selection does not work correctly when holding
 	'shift' and hitting the left arrow key.
 	
-	* src/register/register-gnome/gnucash-item-edit.[ch]: This patch
-	simplifies the mouse selection logic in gnucash-item-edit.  It
+	* src/register/register-gnome/systecash-item-edit.[ch]: This patch
+	simplifies the mouse selection logic in systecash-item-edit.  It
 	also fixes a problem where selection with the mouse does not work
 	correctly if you start draging in one direction, then drag back
 	over the original start point.
@@ -1604,7 +1604,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	with window resizing when switching between pages, or when turning
 	the summary bar off and on.
 
-	* src/register/register-gnome/gnucash-sheet.c
+	* src/register/register-gnome/systecash-sheet.c
 	(compute_optimal_height): This routine should always return the
 	minimal height the widget will accept, not the current height of
 	the widget.  Returning the current height causes all sorts of
@@ -1671,14 +1671,14 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 	* macros/autogen.sh: Remove obsolete warning about gettext.
 
-	* various: Final sync from HEAD to the gnucash-gnome2-dev branch.
+	* various: Final sync from HEAD to the systecash-gnome2-dev branch.
 
 2005-10-30  Joshua Sled  <jsled@asynchronous.org>
 
 	* GNOME2_STATUS: Updates
 	* src/gnome-utils/gnc-dense-cal.c (gnc_dense_cal_button_press):
 	Better transient-window positioning.
-	* src/gnome/schemas/apps_gnucash_dialog_scheduled_transctions.schemas:
+	* src/gnome/schemas/apps_systecash_dialog_scheduled_transctions.schemas:
 	* src/gnome/dialog-scheduledxaction.[ch]: 
 	* src/gnome/dialog-sx-from-trans.c: 
 	Rename "notify-days" to "remind-days", as it should have been in
@@ -1705,13 +1705,13 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 	Patches from Scott Oonk <scott.oonk@gmail.com>:
 	* src/register/register-gnome/combocell-gnome.c:
-	* src/register/register-gnome/gnucash-item-list.c:
+	* src/register/register-gnome/systecash-item-list.c:
 	Remove sort-state flag, code.
-	* src/register/register-gnome/gnucash-item-list.c
+	* src/register/register-gnome/systecash-item-list.c
 	(gnc_item_list_show_selected): scroll to selected position.
 	* src/register/register-gnome/combocell-gnome.c
 	(gnc_combo_cell_autopop_init): auto-raise popups when initialized.
-	* src/register/register-gnome/gnucash-item-list.c:
+	* src/register/register-gnome/systecash-item-list.c:
 	Change signal emission so initial-combobox-display, keyboard
 	arrows/return and selection work correctly.
 	* GNOME2_STATUS: Remove items as per fixes.  Yay! :)
@@ -1824,7 +1824,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/gnome-utils/gnc-date-edit.c: Add extra initialization to fix
 	compilation errors on some gcc4 systems.
 
-	* src/bin/update-gnucash-gconf.in:
+	* src/bin/update-systecash-gconf.in:
 	* src/gnome-utils/druid-gconf-setup.c:
 	* src/gnome-utils/druid-gconf-setup.glade: Fix items from Volker
 	Englisch's review of the setup druid.  The initial window now sets
@@ -1883,7 +1883,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	OK quickly. (#319546) Patch from Arnout 'raboof' Engelen
 	<gnomebugzilla at bzzt.net>.
 	
-	* src/register/register-gnome/gnucash-sheet.c: Patch from Scott
+	* src/register/register-gnome/systecash-sheet.c: Patch from Scott
 	Oonk to re-enable mouse scrolling in the account register.
 
 	* src/gnome-utils/dialog-options.c: Patch from Scott Oonk to fix
@@ -1898,7 +1898,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 2005-10-20  Neil Williams <linux@codehelp.co.uk>
 
-	* configure.in: Allow GnuCash to use QOF externally,
+	* configure.in: Allow systecash to use QOF externally,
 	where available, otherwise use internal QOF.
 	* src/app-utils/gnc-ui-util.c : Didier Vital's patch to
 	solve pango warnings with non UTF-8 locales.
@@ -1972,7 +1972,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 2005-10-17  Derek Atkins  <derek@ihtfp.com>
 
 	* src/bin/gnc-generate-script: revert Neils utf-8 change.
-	  Gnucash should accept and use non-utf8 locales, and
+	  systecash should accept and use non-utf8 locales, and
 	  instead use g_locale_to_utf8() to convert locale-specific
 	  strings to utf8 (e.g. currency symbol).
 
@@ -2020,7 +2020,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 2005-10-14  David Hampton  <hampton@employees.org>
 
-	* src/register/register-gnome/gnucash-item-edit.c: Didier Vidal's
+	* src/register/register-gnome/systecash-item-edit.c: Didier Vidal's
 	patch to restore horizontal scrolling in the editable cells of the
 	register if the content is too wide. It also maintains the cell
 	alignment when you switch to edit mode.
@@ -2075,7 +2075,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	macros into one place.
 
 	* src/engine/gnc-engine-util.[ch]: Patch from Chris Shoemaker to
-	privatize the gnucash string cache code and force all usage
+	privatize the systecash string cache code and force all usage
 	through gnc_string_cache_{remove,insert}() functions.  This makes
 	debugging various uses (and misuses) of the cache easier.
 
@@ -2289,7 +2289,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/business/business-core/test/Makefile.am: GModule changes
 	* src/engine/Account.c: qof_begin_edit change
 	* src/engine/Makefile.am: qofsql.h is not a distributed header - 
-	GnuCash does not yet use SQL with QOF.
+	systecash does not yet use SQL with QOF.
 	* src/engine/Period.h: Doxygen tweak.
 	* src/engine/Transaction.c: qof_begin_edit changes.
 	* src/engine/gnc-engine.c: Load the two default GModules.
@@ -2323,9 +2323,9 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	arguments.
 
 	* src/valgrind-gdk.supp:
-	* src/valgrind-gnucash.supp:
+	* src/valgrind-systecash.supp:
 	* src/valgrind-x11.supp: Patch from Chris Shoemaker to add some
-	additional suppressions when invoking gnucash via valgrind.
+	additional suppressions when invoking systecash via valgrind.
 
 	* Makefile.TAGS: Patch from Chris Shoemaker to exclude emacs
 	temporary files from etags table.
@@ -2340,8 +2340,8 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/business/business-core/gncVendor.c:
 	* src/engine/Account.c:
 	* src/engine/Transaction.c:
-	* src/register/register-gnome/gnucash-grid.c:
-	* src/register/register-gnome/gnucash-sheet.c: Patch from Chris
+	* src/register/register-gnome/systecash-grid.c:
+	* src/register/register-gnome/systecash-sheet.c: Patch from Chris
 	Shoemaker to remove the G_INLINE_FUNC macro from various function
 	definitions.  Fixes undefined symbol errors preventing him from
 	linking the program.
@@ -2350,7 +2350,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 	* Makefile.am:
 	* configure.in:
-	* make-gnucash-potfiles.in:
+	* make-systecash-potfiles.in:
 	* doc/Makefile.am:
 	* lib/goffice/Makefile.am:
 	* lib/goffice/split/Makefile.am:
@@ -2384,12 +2384,12 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 	* configure.in: Remove the stdc++ link requirement from the OFX
 	test.  Add the -Wno-pointer-sign flag when using GCC4.  With this
-	flag all of gnucash can be compiled with GCC4. (Without it
+	flag all of systecash can be compiled with GCC4. (Without it
 	lib/goffice fails.)
 
 2005-10-10  Christian Stimming  <stimming@tuhh.de>
 
-	* src/register/register-gnome/gnucash-grid.c: Patch by Didier
+	* src/register/register-gnome/systecash-grid.c: Patch by Didier
 	Vidal: Implement real right justify in the register.
 
 2005-10-09  Christian Stimming  <stimming@tuhh.de>
@@ -2475,7 +2475,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 2005-10-07  Joshua Sled  <jsled@asynchronous.org>
 
-	* src/register/register-gnome/gnucash-item-list.c
+	* src/register/register-gnome/systecash-item-list.c
 	(tree_view_selection_changed): Condition handling; avoid a set of
 	setfaults in use of the auto-complete.
 
@@ -2493,7 +2493,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/report/report-system/html-style-sheet.scm:
 	* src/scm/main.scm:
 	* src/scm/path.scm: Put the saved stylesheets into their own file
-	in the .gnucash directory.
+	in the .systecash directory.
 
 	* src/app-utils/Makefile.am:
 	* src/app-utils/gnc-exp-parser.c: Convert the expression parser
@@ -2511,7 +2511,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 2005-10-07  Joshua Sled  <jsled@asynchronous.org>
 
-	* src/register/register-gnome/gnucash-sheet.c
+	* src/register/register-gnome/systecash-sheet.c
 	(GTK_ALLOWED_SELECTION_WITHIN_INSERT_SIGNAL): Use
 	autocompletion-selection workaround for	gtk 2.(<6).*
 
@@ -2558,7 +2558,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 2005-10-06  Joshua Sled  <jsled@asynchronous.org>
 
 	Patch from Didier Vidal <didier-devel@9online.fr>:
-	* src/register/register-gnome/gnucash-sheet.c
+	* src/register/register-gnome/systecash-sheet.c
 	(compute_optimal_width): Fix to allow register resize.
 
 2005-10-03  David Hampton  <hampton@employees.org>
@@ -2572,7 +2572,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 	* src/import-export/import-backend.c:
 	* src/import-export/import-settings.c:
-	* src/import-export/schemas/apps_gnucash_import_generic_matcher.schemas:
+	* src/import-export/schemas/apps_systecash_import_generic_matcher.schemas:
 	Add the 'bayesian matching' preference that was hidden in the
 	code.
 
@@ -2590,7 +2590,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/gnome/top-level.c:
 	* src/gnome-utils/gnc-html.[ch]:
 	* src/gnome-utils/gw-gnome-utils-spec.scm: Finish pulling all
-	references to the old "gnucash network" code.
+	references to the old "systecash network" code.
 
 	* src/engine/Transaction.c: Temporary fix to remove ISO C90
 	warning.  Real fix should occur when converted back to
@@ -2600,7 +2600,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 	Patches from Didier Vidal <didier-devel@9online.fr>:
 	
-	* src/register/register-gnome/gnucash-item-edit.c: Fixes to show
+	* src/register/register-gnome/systecash-item-edit.c: Fixes to show
 	pango cursor in register edit cells.
 	* src/engine/Transaction.c (xaccTransBeginEdit): runtime crash
 	when committing partially-editing transaction.
@@ -2610,7 +2610,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 	* GNOME2_STATUS: updates for status
 
-	* src/register/register-gnome/gnucash-item-list.c
+	* src/register/register-gnome/systecash-item-list.c
 	(gnc_item_list_select): re-implement to get register combocells
 	working better.
 
@@ -2619,7 +2619,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/app-utils/prefs.scm:
 	* src/gnome/window-main-summarybar.c:
 	* src/gnome/schemas/Makefile.am:
-	* src/gnome/schemas/apps_gnucash_window_pages_account_tree.schemas:
+	* src/gnome/schemas/apps_systecash_window_pages_account_tree.schemas:
 	* src/gnome-utils/gnc-main-window.c:
 	* src/gnome-utils/preferences.glade:
 	* src/gnome-utils/ui/gnc-main-window-ui.xml: Convert the account
@@ -2635,7 +2635,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	and non-gui supporting functions for choosing accounting periods.
 
 	* src/engine/Account.c: Revert change to xaccAccountCommitEdit()
-	that causes gnucash to crash at exit.
+	that causes systecash to crash at exit.
 	
 2005-10-01  David Hampton  <hampton@employees.org>
 
@@ -2764,8 +2764,8 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/engine/test/test-transaction-voiding.c
 	* src/gnome-utils/gnc-dense-cal.c
 	* src/gnome-utils/search-param.c
-	* src/register/register-gnome/gnucash-item-list.c
-	* src/register/register-gnome/gnucash-style.c
+	* src/register/register-gnome/systecash-item-list.c
+	* src/register/register-gnome/systecash-style.c
 
 	Change from short int module to QofLogModule log_module
 	and use new log_module identifiers.
@@ -2838,7 +2838,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 	* src/app-utils/global-options.c:
 	* src/app-utils/prefs.scm:
-	* src/gnome/schemas/apps_gnucash_general.schemas:
+	* src/gnome/schemas/apps_systecash_general.schemas:
 	* src/gnome-utils/dialog-preferences.c:
 	* src/gnome-utils/preferences.glade: Convert the default currency
 	preferences over to gconf.
@@ -2846,7 +2846,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/app-utils/prefs.scm:
 	* src/core-utils/gnc-gconf-utils.h:
 	* src/gnome/top-level.c:
-	* src/gnome/schemas/apps_gnucash_general.schemas:
+	* src/gnome/schemas/apps_systecash_general.schemas:
 	* src/gnome-utils/dialog-options.c:
 	* src/gnome-utils/dialog-preferences.c:
 	* src/gnome-utils/preferences.glade: Convert the date and time
@@ -2858,7 +2858,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	"Advanced Preferences" page.
 	
 	* src/app-utils/prefs.scm:
-	* src/gnome/schemas/apps_gnucash_dialog_common.schemas:
+	* src/gnome/schemas/apps_systecash_dialog_common.schemas:
 	* src/gnome-search/dialog-search.c:
 	* src/gnome-utils/preferences.glade: Convert the "search limit"
 	preference over to gconf.
@@ -2875,7 +2875,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/core-utils/gnc-gconf-utils.h:
 	* src/gnome/gnc-plugin-page-account-tree.c:
 	* src/gnome/gnc-split-reg.c:
-	* src/gnome/schemas/apps_gnucash_general.schemas:
+	* src/gnome/schemas/apps_systecash_general.schemas:
 	* src/gnome-utils/preferences.glade:
 	Convert the "EURO support" preference over to gconf.
 
@@ -2884,7 +2884,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/gnome/reconcile-list.h:
 	* src/gnome/window-reconcile.c:
 	* src/gnome/schemas/Makefile.am:
-	* src/gnome/schemas/apps_gnucash_dialog_reconcile.schemas:
+	* src/gnome/schemas/apps_systecash_dialog_reconcile.schemas:
 	* src/gnome-utils/preferences.glade:
 	Convert the reconcile window preferences over to gconf.
 
@@ -2900,7 +2900,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/import-export/qif-import/qif.glade:
 	* src/import-export/schemas/.cvsignore:
 	* src/import-export/schemas/Makefile.am:
-	* src/import-export/schemas/apps_gnucash_import_generic_matcher.schemas:
+	* src/import-export/schemas/apps_systecash_import_generic_matcher.schemas:
 	Migrate QIF and 'Generic Matcher' preferences over to gconf.
 
 	* src/import-export/qif-import/qif.glade: Remove non-standard
@@ -2932,7 +2932,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	register window "Check & Repair" menu items.
 
 	* src/app-utils/prefs.scm:
-	* src/gnome/schemas/apps_gnucash_dialog_common.schemas: Finish
+	* src/gnome/schemas/apps_systecash_dialog_common.schemas: Finish
 	conversion of the hidden "first startup" preference.
 
 	* src/gnome-utils/gnc-file.c:
@@ -2944,7 +2944,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	where gconf_client_set_string() can return FALSE without setting
 	the error variable.  Also modify this function to return NULL if
 	gconf returns an empty string.  This is more in line with what all
-	the rest of GnuCash code expects.  Centralize error handling in
+	the rest of systecash code expects.  Centralize error handling in
 	this file.
 
 2005-09-14  David Hampton  <hampton@employees.org>
@@ -2970,7 +2970,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* lib/libc/Makefile.am:
 	* lib/libc/setenv.[ch]:
 	* src/core-utils/Makefile.am:
-	* src/core-utils/core-utils.[ch]: Move the gnucash
+	* src/core-utils/core-utils.[ch]: Move the systecash
 	gnc_setenv/gnc_unsetenv functions to the library directory and
 	rename them to setenv/unsetenv.  These functions are only compiled
 	if not provided by the system libc library.
@@ -3039,7 +3039,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 2005-09-02  David Hampton  <hampton@employees.org>
 
-	* src/gnome/schemas/apps_gnucash_general.schemas:
+	* src/gnome/schemas/apps_systecash_general.schemas:
 	* src/gnome-utils/gnc-main-window.c:
 	* src/gnome-utils/preferences.glade: Frederic Leroy's patch
 	(#314512) to add a close box to each notebook tab.  Enhanced to
@@ -3069,7 +3069,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 2005-08-26  Derek Atkins  <derek@ihtfp.com>
 
 	* src/gnome-utils/Makefile.am:  move the module back into
-	  pkglibdir so that gnucash actually runs properly instead
+	  pkglibdir so that systecash actually runs properly instead
 	  of dying at runtime.
 
 2005-08-23  Joshua Sled  <jsled@asynchronous.org>
@@ -3097,7 +3097,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 2005-08-22  Neil Williams <linux@codehelp.co.uk>
 
 	* configure.in: Provisional building of libgoffice.
-	* make-gnucash-potfiles.in: Support for perl in gettext.
+	* make-systecash-potfiles.in: Support for perl in gettext.
 	* src/backend/file/gnc-backend-file.c: New backend
 	configuration support using translatable XML and KVP.
 	* src/backend/file/gnc-book-xml-v2.c: Avoid private headers.
@@ -3123,7 +3123,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/backend/file/sixtp-utils.c: Avoid building core-utils functions
 	in the backend - not portable to CashUtil. FIXME.
 	* src/backend/qsf/qsf-backend.c: Beginning to isolate file type
-	determination from the GnuCash backend to build separately.
+	determination from the systecash backend to build separately.
 	* src/backend/qsf/qsf-object.xsd.xml: Language tweak.
 	* src/business/business-core/gncAddress.c: QOF_TYPE_CHOICE
 	* src/business/business-core/gncBillTerm.c: CashUtil sync.
@@ -3142,7 +3142,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/business/business-core/gncVendor.c: CashUtil sync.
 
 	Removal of guile code from test cases - tests pass but report
-	a redundant gnucash-backend interface failure.
+	a redundant systecash-backend interface failure.
 	* src/business/business-core/test/test-address.c:
 	* src/business/business-core/test/test-customer.c:
 	* src/business/business-core/test/test-employee.c:
@@ -3267,7 +3267,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	QOF Sync.
 	* src/backend/qsf/.cvsignore :
 	* src/backend/qsf/Makefile.am : Tweaked
-	* src/backend/qsf/pilot-qsf-GnuCashInvoice.xml : QOF_TYPE_CHOICE
+	* src/backend/qsf/pilot-qsf-systecashInvoice.xml : QOF_TYPE_CHOICE
 	* src/backend/qsf/qof-backend-qsf.h : Tweak
 	* src/backend/qsf/qsf-backend.c : QOF_TYPE_CHOICE
 	* src/backend/qsf/qsf-object.xsd.xml : QOF_TYPE_CHOICE
@@ -3421,7 +3421,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/gnome-utils/gnc-plugin-menu-additions.c: Frederic Leroy's
 	update to Dan Widyono's patch to compile cleanly on 64 bit systems.
 
-	* src/register/register-gnome/gnucash-item-edit.c: Scott Oonk's fix
+	* src/register/register-gnome/systecash-item-edit.c: Scott Oonk's fix
 	to make the cursor visible in the register.
 
 2005-08-12  Neil Williams <linux@codehelp.co.uk>
@@ -3469,7 +3469,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/gnome/gw-gnc-spec.scm:
 	* src/gnome/top-level.c:
 	* src/gnome/glade/sched-xact.glade:
-	* src/gnome/schemas/apps_gnucash_dialog_scheduled_transctions.schemas:
+	* src/gnome/schemas/apps_systecash_dialog_scheduled_transctions.schemas:
 	* src/gnome/ui/gnc-plugin-page-sxregister-ui.xml:
 	* src/gnome/ui/gnc-sxed-window-ui.xml:
 	* src/scm/main.scm: Convert scheduled transactions over to the new
@@ -3500,7 +3500,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 	* Lots 'o files: Remove unnecessary includes.
 
-	* Lots 'o files: Guile 1.6 is now required for gnucash.  Finish
+	* Lots 'o files: Guile 1.6 is now required for systecash.  Finish
 	removal of all functions deprecated in that version.  Don't enable
 	warnings as g-wrap 1.3 still uses some deprecated functions.
 
@@ -3526,7 +3526,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/import-export/hbci/glade/hbcipass.glade:
 	* src/import-export/hbci/glade/hbciprefs.glade:
 	* src/import-export/hbci/schemas/Makefile.am:
-	* src/import-export/hbci/schemas/apps_gnucash_dialog_hbci.schemas:
+	* src/import-export/hbci/schemas/apps_systecash_dialog_hbci.schemas:
 	Make HBCI setup work again.  Use gconf and the new preferences
 	dialog for HBCI preferences.  (Would be nice if these could be
 	pushed out to the dialogs where they apply.)
@@ -3559,7 +3559,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/gnome/druid-hierarchy.[ch]:
 	* src/gnome/gw-gnc-spec.scm:
 	* src/gnome/top-level.c:
-	* src/gnome/schemas/apps_gnucash_dialog_common.schemas:
+	* src/gnome/schemas/apps_systecash_dialog_common.schemas:
 	* src/gnome-utils/preferences.glade:
 	* src/scm/main.scm: Finish converting the "Tip of the Day" dialog
 	and the New File Hierarchy druid over to storing data in gconf.
@@ -3595,7 +3595,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	to make gcc4 happy.
 
 	* src/gnome-utils/gw-gnome-utils-spec.scm: Remove references to
-	deleted data structures.  Gnucash now compiles against
+	deleted data structures.  systecash now compiles against
 	g-wrap-1.9.6 as well as g-wrap-1.3.
 
 2005-07-24  Christian Stimming  <stimming@tuhh.de>
@@ -3646,7 +3646,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	only one flag per dialog.  Actually wire up the callbacks.
 
 	* src/gnome/schemas/Makefile.am:
-	* src/gnome/schemas/apps_gnucash_warnings.schemas:
+	* src/gnome/schemas/apps_systecash_warnings.schemas:
 	* src/register/ledger-core/split-register-control.c:
 	* src/register/ledger-core/split-register-model.c: Use the new
 	dialog that remembers whether or not it should suppress further
@@ -3654,10 +3654,10 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 	* src/business/business-gnome/dialog-invoice.h:
 	* src/business/business-gnome/gnc-plugin-page-invoice.c:
-	* src/business/business-gnome/schemas/apps_gnucash_dialog_business_common.schemas:
+	* src/business/business-gnome/schemas/apps_systecash_dialog_business_common.schemas:
 	* src/core-utils/gnc-gconf-utils.h:
 	* src/gnome/gnc-plugin-page-register.c:
-	* src/gnome/schemas/apps_gnucash_general.schemas:
+	* src/gnome/schemas/apps_systecash_general.schemas:
 	* src/gnome-utils/gnc-main-window.[ch]:
 	* src/gnome-utils/gnc-plugin-page.[ch[:
 	* src/register/register-core/table-allgui.h:
@@ -3718,7 +3718,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/app-file/gw-app-file-spec.scm: Folded into
 	gw-gnome-utils-spec.scm in the gnome-utils directory.
 
-	* src/app-file/schemas/apps_gnucash_history.schemas: Moved to the
+	* src/app-file/schemas/apps_systecash_history.schemas: Moved to the
 	gnome-utils directory.
 
 	* various: Update file include statements, remove files no longer
@@ -3737,7 +3737,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/gnome/ui/gnc-plugin-basic-commands-ui.xml: Move a couple
 	menu items within the Actions menu.
 
-	* src/gnome/schemas/apps_gnucash_dialog_common.schemas:
+	* src/gnome/schemas/apps_systecash_dialog_common.schemas:
 	* src/gnome-utils/Makefile.am:
 	* src/gnome-utils/dialog-reset-warnings.[ch]:
 	* src/gnome-utils/dialog-reset-warnings.glade:
@@ -3782,7 +3782,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/gnome-utils/Makefile.am:
 	* src/gnome-utils/druid-gconf-setup.[ch]:
 	* src/gnome-utils/druid-gconf-setup.glade:
-	* src/gnome-utils/gnc-dir.h.in: Test whether or not Gnucash can
+	* src/gnome-utils/gnc-dir.h.in: Test whether or not systecash can
 	find its GConf keys.  If not present the user with a warning
 	message.  If the user chooses to setup gconf, launch a druid to
 	lead them through the process.
@@ -3793,8 +3793,8 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	available.
 
 	* src/bin/Makefile.am:
-	* src/bin/update-gnucash-gconf.in: New script to install all of
-	Gnucash's gconf schemas into the users ~/.gconf directory.
+	* src/bin/update-systecash-gconf.in: New script to install all of
+	systecash's gconf schemas into the users ~/.gconf directory.
 
 	* configure.in:
 	* src/app-file/schemas/Makefile.am:
@@ -3815,7 +3815,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	register configuration keys and update any registers.  This gives
 	live updating when changes are made.
 
-	* doc/gtkrc-2.0.gnucash:
+	* doc/gtkrc-2.0.systecash:
 	* src/app-utils/prefs.scm:
 	* src/business/business-gnome/dialog-invoice.c:
 	* src/business/business-gnome/dialog-order.c:
@@ -3823,20 +3823,20 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/business/business-ledger/gncEntryLedgerModel.c:
 	* src/gnome/top-level.c:
 	* src/gnome/schemas/Makefile.am:
-	* src/gnome/schemas/apps_gnucash_general.schemas:
+	* src/gnome/schemas/apps_systecash_general.schemas:
 	* src/register/ledger-core/Makefile.am:
 	* src/register/ledger-core/split-register-model.[ch]:
 	* src/register/ledger-core/split-register.h:
 	* src/register/register-core/table-allgui.[ch]:
-	* src/register/register-gnome/gnucash-grid.c:
-	* src/register/register-gnome/gnucash-header.c:
-	* src/register/register-gnome/gnucash-item-edit.c:
-	* src/register/register-gnome/gnucash-sheet.[ch]:
-	* src/register/register-gnome/gnucash-style.[ch]: Add code to
+	* src/register/register-gnome/systecash-grid.c:
+	* src/register/register-gnome/systecash-header.c:
+	* src/register/register-gnome/systecash-item-edit.c:
+	* src/register/register-gnome/systecash-sheet.[ch]:
+	* src/register/register-gnome/systecash-style.[ch]: Add code to
 	allow the register colors to be set by the system theme (i.e from
 	gtkrc files).  Remove the preferences to set the register colors.
 	Add a gconf keys to 1) specify whether to use the gtkrc colors or
-	the default gnucash colors, 2) display the horizontal/vertical
+	the default systecash colors, 2) display the horizontal/vertical
 	lines in the register, and 3) set the alternate coloring mode.
 
 2005-07-07  David Hampton  <hampton@employees.org>
@@ -3883,7 +3883,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 2005-07-06  David Hampton  <hampton@employees.org>
 
-	* src/register/register-gnome/gnucash-sheet.c: The register uses a
+	* src/register/register-gnome/systecash-sheet.c: The register uses a
 	non-visible GtkEntry to handle its data input.  Except this widget
 	from being shown by gtk_widget_show_all.
 
@@ -4142,8 +4142,8 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 	* src/core-utils/gnc-gobject-utils.[ch]: Add functions for
 	tracking GObject based items.  To help find memory leaks, if
-	gnucash is compiled with --enable-ref-counts-dumps the contents of
-	this database will be dumped when gnucash quits.
+	systecash is compiled with --enable-ref-counts-dumps the contents of
+	this database will be dumped when systecash quits.
 
 	* src/gnome-utils/gnc-tree-model.[ch]: New base tree model that
 	utilizes the new object tracking functions.
@@ -4151,7 +4151,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/gnome-utils/gnc-plugin.c:
 	* src/gnome-utils/gnc-plugin-page.c:
 	* src/gnome-utils/gnc-tree-view.[ch]: Utilize the new object
-	tracking functions in these gnucash base class objects.
+	tracking functions in these systecash base class objects.
 
 	* various: Remove old debugging code that is no longer
 	needed. Debugging is now in the base class objects.
@@ -4200,7 +4200,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 2005-06-06  David Hampton  <hampton@employees.org>
 
-	* gnucash/src/backend/qsf/qsf-backend.c: Couple of bug fixes.
+	* systecash/src/backend/qsf/qsf-backend.c: Couple of bug fixes.
 
 	* src/gnome/gnc-plugin-basic-commands.c: Forgot to change the
 	callback data provided to these commands now that they're provided
@@ -4234,18 +4234,18 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 	* src/gnome/top-level.c:
 
-	* gnucash/src/gnc-ui.h:
+	* systecash/src/gnc-ui.h:
 	* src/report/stylesheets/Makefile.am: Revert temporary workaround.
 
 	(Now removed) Temporary workaround.
 
-	* gnucash/src/gnc-ui.h:
-	* gnucash/src/gnome/gnc-main-window.h:
-	* gnucash/src/gnome/gnc-window.h:
-	* gnucash/src/gnome/gw-gnc-spec.scm:
-	* gnucash/src/gnome-utils/gw-gnome-utils-spec.scm:
-	* gnucash/src/report/report-gnome/gw-report-gnome-spec.scm:
-	* gnucash/src/report/stylesheets/ Makefile.am: Temporary
+	* systecash/src/gnc-ui.h:
+	* systecash/src/gnome/gnc-main-window.h:
+	* systecash/src/gnome/gnc-window.h:
+	* systecash/src/gnome/gw-gnc-spec.scm:
+	* systecash/src/gnome-utils/gw-gnome-utils-spec.scm:
+	* systecash/src/report/report-gnome/gw-report-gnome-spec.scm:
+	* systecash/src/report/stylesheets/ Makefile.am: Temporary
 	workaround to resolve circular build dependency:
 
 2005-06-05  David Hampton  <hampton@employees.org>
@@ -4403,7 +4403,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/core-utils/gnc-gconf-utils.[ch]: Add some more utility
 	functions.
 
-	* src/gnome/schemas/apps_gnucash_dialog_commodities.schemas:
+	* src/gnome/schemas/apps_systecash_dialog_commodities.schemas:
 	* src/gnome-utils/gnc-tree-view-commodity.c: Renamed "exchange
 	code" to "cusip code".  The former seems like it is referring to
 	NASDAQ, NYSE, etc, not a code that is unique to a specific
@@ -4549,11 +4549,11 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/scm/tip-list.scm:
 	* src/scm/tip-of-the-day.scm: Remove old "tip of the day" code.
 
-	* make-gnucash-potfiles.in:
+	* make-systecash-potfiles.in:
 	* doc/tip_of_the_day.list.in:
 	* src/gnome/dialog-totd.[ch]:
 	* src/gnome/glade/totd.glade:
-	* src/gnome/schemas/apps_gnucash_dialog_totd.schemas: New "tip of
+	* src/gnome/schemas/apps_systecash_dialog_totd.schemas: New "tip of
 	the day" code entirely written in C.  The installed tip file can
 	still be updated by users, but is now essentially a free-form file
 	where tips are separated by two consecutive newline characters.
@@ -4570,7 +4570,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/app-utils/option-util.c:
 	* src/app-utils/option-util.h: Removing deprecated QOF code
 	DateFormat.
-	* src/backend/qsf/pilot-qsf-GnuCashInvoice.xml:
+	* src/backend/qsf/pilot-qsf-systecashInvoice.xml:
 	Making allowance for FreqSpec in pilotqof.
 	* src/backend/qsf/qsf-backend.c: Support for
 	reporting write errors to the user from the backend.
@@ -4661,42 +4661,42 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 2005-04-24  David Hampton  <hampton@employees.org>
 
-	* gnucash/src/core-utils/gnc-gconf-utils.[ch]:
-	* gnucash/src/gnome-utils/gnc-gconf-utils.[ch]: Moved files from
+	* systecash/src/core-utils/gnc-gconf-utils.[ch]:
+	* systecash/src/gnome-utils/gnc-gconf-utils.[ch]: Moved files from
 	the gnome-utils directory to the core-utils directory. Clean up
 	the usage of these functions.  Document the functions with
 	doxygen.
 
 	* various: Changes for the move/cleanup of gnc-gconf.
 
-	* gnucash/src/gnome/schemas/apps_gnucash_dialog_commodities.schemas:
-	* gnucash/src/gnome/schemas/apps_gnucash_dialog_prices.schemas:
-	* gnucash/src/gnome-utils/gnc-tree-view-account.c:
-	* gnucash/src/gnome-utils/gnc-tree-view-commodity.c:
-	* gnucash/src/gnome-utils/gnc-tree-view-price.c: Remove old
+	* systecash/src/gnome/schemas/apps_systecash_dialog_commodities.schemas:
+	* systecash/src/gnome/schemas/apps_systecash_dialog_prices.schemas:
+	* systecash/src/gnome-utils/gnc-tree-view-account.c:
+	* systecash/src/gnome-utils/gnc-tree-view-commodity.c:
+	* systecash/src/gnome-utils/gnc-tree-view-price.c: Remove old
 	references to the GtkTreeView "rules_hint" property.  This
 	property is now controlled via the .gtkrc file (where it should
 	be).
 
-	* gnucash/src/gnome/gnc-plugin.[ch]: Add infrastructure for
+	* systecash/src/gnome/gnc-plugin.[ch]: Add infrastructure for
 	plugins to easily request notification of changes to gconf for a
-	specific section of gnucash variables.
+	specific section of systecash variables.
 
 	* configure.in:
-	* gnucash/src/app-file/Makefile.am:
-	* gnucash/src/app-file/gnc-file-history.[ch]:
-	* gnucash/src/app-file/gnc-file-p.h:
-	* gnucash/src/app-file/gw-app-file-spec.scm:
-	* gnucash/src/gnome/gnc-plugin-file-history.[ch]:
-	* gnucash/src/gnome/ui/gnc-plugin-file-history-ui.xml:
-	* gnucash/src/app-file/schemas/Makefile.am:
-	* gnucash/src/app-file/schemas/apps_gnucash_history.schemas: Hook
+	* systecash/src/app-file/Makefile.am:
+	* systecash/src/app-file/gnc-file-history.[ch]:
+	* systecash/src/app-file/gnc-file-p.h:
+	* systecash/src/app-file/gw-app-file-spec.scm:
+	* systecash/src/gnome/gnc-plugin-file-history.[ch]:
+	* systecash/src/gnome/ui/gnc-plugin-file-history-ui.xml:
+	* systecash/src/app-file/schemas/Makefile.am:
+	* systecash/src/app-file/schemas/apps_systecash_history.schemas: Hook
 	the file history list into gconf.
 
-	* gnucash/src/gnome/gnc-main-window.c:
-	* gnucash/src/gnome/gnc-plugin-page-account-tree.c:
-	* gnucash/src/gnome/gnc-plugin-page.[ch]:
-	* gnucash/src/gnome/window-main-summarybar.c: Move the summary bar
+	* systecash/src/gnome/gnc-main-window.c:
+	* systecash/src/gnome/gnc-plugin-page-account-tree.c:
+	* systecash/src/gnome/gnc-plugin-page.[ch]:
+	* systecash/src/gnome/window-main-summarybar.c: Move the summary bar
 	to the body of the page, just below the account tree.  Implement
 	support for changing the summary bar when the page is changed,
 	since the register page has a different summary bar. Hook the main
@@ -4781,7 +4781,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* configure.in: Remove reqirement for Berkeley DB.  The G2 branch
 	compiles and runs fine without it.
 
-	* src/gnome-utils/gnc-gnome-utils.c: Have gnucash read a private
+	* src/gnome-utils/gnc-gnome-utils.c: Have systecash read a private
 	RC file.  This makes it easy to apply styles to entire classes of
 	widgets in gnucsah without affecting any other application.
 
@@ -4790,7 +4790,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/gnome-utils/gnc-tree-view-price.c: Name a couple of new
 	widgets to make it easier to apply styles to them.
 
-	* doc/gtkrc-2.0.gnucash: Provide a sample RC file for gnucash.
+	* doc/gtkrc-2.0.systecash: Provide a sample RC file for systecash.
 	This file needs work.
 
 2005-03-25  Neil Williams <linux@codehelp.co.uk>
@@ -4833,7 +4833,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* GNOME2_STATUS: Updates; removed some incorrectness, updated for
 	other changes.  Added many new things. :(
 
-	* src/register/register-gnome/gnucash-item-edit.c
+	* src/register/register-gnome/systecash-item-edit.c
 	(gnc_item_edit_set_cursor_pos): Fix reverse dragging/selection,
 	broken because of a change in gtk_editable semantics. :(
 	(gnc_item_edit_draw_info): Turn off pango line wrapping.
@@ -4961,7 +4961,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 	* src/app-file/gnc-file.c: Adding messages to handlers for
 	new QSF backend errors.
-	* src/backend/qsf/pilot-qsf-GnuCashInvoice.xml: Correcting
+	* src/backend/qsf/pilot-qsf-systecashInvoice.xml: Correcting
 	the schema namespace URL.
 	* src/backend/qsf/qsf-backend.c:
 	* src/backend/qsf/qsf-xml-map.c:
@@ -5101,11 +5101,11 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	Stephen Evanchik's patch to convert GncItemEdit to GObject/GLib
 	and fix signal processing:
 
-        * src/register/register-gnome/gnucash-item-edit.h:
+        * src/register/register-gnome/systecash-item-edit.h:
           Made the gnc_item_edit_get_type function return GType
-        * src/register/register-gnome/gnucash-item-edit.h:
+        * src/register/register-gnome/systecash-item-edit.h:
           Made the gnc_item_edit_get_type function use GObject
-        * src/register/register-gnome/gnucash-item-list.c:
+        * src/register/register-gnome/systecash-item-list.c:
           Removed an extra button_press_event handler
 
 2005-01-10  Derek Atkins  <derek@ihtfp.com>
@@ -5154,7 +5154,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 2005-10-06  David Hampton  <hampton@employees.org>
 
 	* src/app-utils/date-utilities.scm: Patch from Yves-Eric Martin
-	<yem_lists.gnucash.org@filter.yve.net> to make it easier for users
+	<yem_lists.systecash.org@filter.yve.net> to make it easier for users
 	to change the financial year end date.  They still have to edit a
 	scheme file though.
 
@@ -5288,7 +5288,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 	* src/engine/qofsession.h:
 	* src/engine/qofsession.c:
 	Documentation tweaks to bring them into line with QOF and the
-	gnucash-gnome2-dev branch.
+	systecash-gnome2-dev branch.
 
 2005-02-16  Derek Atkins  <derek@ihtfp.com>
 
@@ -5397,7 +5397,7 @@ r12228 | chris | 2005-12-31 17:28:42 -0500 (Sat, 31 Dec 2005) | 2 lines
 
 2005-01-12  Christian Stimming  <stimming@tuhh.de>
 
-	* rpm/gnucash.spec.in, rpm/README: Remove obsolete package
+	* rpm/systecash.spec.in, rpm/README: Remove obsolete package
 	requirements from rpm spec file. Add warnings about using these
 	spec files with caution.
 

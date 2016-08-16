@@ -908,7 +908,7 @@ do_popup_menu (RecnWindow2 *recnData, GdkEventButton *event)
 }
 
 
-/** Callback function invoked when the user requests that Gnucash
+/** Callback function invoked when the user requests that systecash
  *  popup the contextual menu via the keyboard context-menu request
  *  key combination (Shift-F10 by default).
  *
@@ -931,7 +931,7 @@ gnc_reconcile_window_popup_menu_cb (GtkWidget *widget,
 
 
 /*  Callback function invoked when the user clicks in the content of
- *  any Gnucash window.  If this was a "right-click" then Gnucash will
+ *  any systecash window.  If this was a "right-click" then systecash will
  *  popup the contextual menu.
  */
 static gboolean
@@ -1592,7 +1592,7 @@ recnWindow2 (GtkWidget *parent, Account *account)
         return NULL;
 
     /* The last time reconciliation was attempted during the current
-     * execution of gnucash, the date was stored. Use that date if
+     * execution of systecash, the date was stored. Use that date if
      * possible. This helps with balancing multiple accounts for which
      * statements are issued at the same time, like multiple bank
      * accounts on a single statement. */
@@ -2224,7 +2224,7 @@ static GtkActionEntry recnWindow2_actions [] =
 
     {
         "HelpHelpAction", NULL, N_("_Help"), NULL,
-        N_("Open the GnuCash help window"),
+        N_("Open the systecash help window"),
         G_CALLBACK(gnc_ui_reconcile_window_help_cb)
     },
 };

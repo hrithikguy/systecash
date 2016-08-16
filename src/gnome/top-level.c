@@ -1,5 +1,5 @@
 /********************************************************************\
- * top-level.c -- Gnome GUI main for GnuCash                        *
+ * top-level.c -- Gnome GUI main for systecash                        *
  * Copyright (C) 1997 Robin D. Clark                                *
  * Copyright (C) 1998-2000 Linas Vepstas                            *
  *                                                                  *
@@ -62,9 +62,9 @@
 #include "gnc-state.h"
 #include "gnc-ui.h"
 #include "gnc-ui-util.h"
-#include "gnucash-color.h"
-#include "gnucash-sheet.h"
-#include "gnucash-style.h"
+#include "systecash-color.h"
+#include "systecash-sheet.h"
+#include "systecash-style.h"
 #include "guile-util.h"
 #include "top-level.h"
 #include "window-report.h"
@@ -362,9 +362,9 @@ gnc_main_gui_init (void)
 {
     ENTER(" ");
 
-    if (!gnucash_style_init())
+    if (!systecash_style_init())
         gnc_shutdown(1);
-    gnucash_color_init();
+    systecash_color_init();
 
     gnc_html_register_url_handler (URL_TYPE_REGISTER,
                                    gnc_html_register_url_cb);

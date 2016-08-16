@@ -17,7 +17,7 @@
                BlueprintIdentifier = "6E0F8138098D492A00D0BB5C"
                BuildableName = "debug"
                BlueprintName = "debug"
-               ReferencedContainer = "container:gnucash.xcodeproj">
+               ReferencedContainer = "container:systecash.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "6E0F8138098D492A00D0BB5C"
             BuildableName = "debug"
             BlueprintName = "debug"
-            ReferencedContainer = "container:gnucash.xcodeproj">
+            ReferencedContainer = "container:systecash.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -49,7 +49,7 @@
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
       <PathRunnable
-         FilePath = "/tools/gnucash-git/install/darwin/bin/gnucash">
+         FilePath = "/tools/systecash-git/install/darwin/bin/systecash">
       </PathRunnable>
       <MacroExpansion>
          <BuildableReference
@@ -57,7 +57,7 @@
             BlueprintIdentifier = "6E0F8138098D492A00D0BB5C"
             BuildableName = "debug"
             BlueprintName = "debug"
-            ReferencedContainer = "container:gnucash.xcodeproj">
+            ReferencedContainer = "container:systecash.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <CommandLineArguments>

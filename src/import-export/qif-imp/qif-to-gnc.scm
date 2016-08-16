@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;  qif-to-gnc.scm
 ;;;  this is where QIF transactions are transformed into a
-;;;  Gnucash account tree.
+;;;  systecash account tree.
 ;;;
 ;;;  Copyright 2000-2001 Bill Gribble <grib@billgribble.com>
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -26,7 +26,7 @@
 
 
 (use-modules (srfi srfi-13))
-(use-modules (gnucash printf))
+(use-modules (systecash printf))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -73,13 +73,13 @@
                   (string-append short-name (sprintf #f " %a" count)))))
           short-name))
 
-    ;; If a GnuCash account already exists in the old root with the same
+    ;; If a systecash account already exists in the old root with the same
     ;; name, that doesn't necessarily mean we can use it. The type and
     ;; commodity must be  compatible.
     (if (and same-gnc-account (not (null? same-gnc-account)))
         (if (compatible? same-gnc-account)
             (begin
-              ;; The existing GnuCash account is compatible, so we
+              ;; The existing systecash account is compatible, so we
               ;; can use it. Make sure we use the same type.
               (set! make-new-acct #f)
               (set! incompatible-acct #f)
@@ -97,7 +97,7 @@
           (set! incompatible-acct #f)))
 
     ;; here, existing-account means a previously *created* account
-    ;; (possibly a new account, possibly a copy of an existing gnucash
+    ;; (possibly a new account, possibly a copy of an existing systecash
     ;; acct)
     (if (and (and existing-account (not (null? existing-account)))
              (compatible? existing-account))
@@ -221,7 +221,7 @@
 ;; qif-import:qif-to-gnc
 ;;
 ;; This is the top-level of the back end conversion from QIF
-;; to GnuCash. All the account mappings and so on should be
+;; to systecash. All the account mappings and so on should be
 ;; done before this is called.
 ;;
 ;; This procedure returns:
@@ -398,7 +398,7 @@
             (update-progress)
 
             (if (not (qif-xtn:mark xtn))
-                ;; Convert into a GnuCash transaction.
+                ;; Convert into a systecash transaction.
                 (let ((gnc-xtn (xaccMallocTransaction
                                 (gnc-get-current-book))))
                   (xaccTransBeginEdit gnc-xtn)
@@ -438,8 +438,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; qif-import:qif-xtn-to-gnc-xtn
-;; translate a single transaction to a set of gnucash splits and
-;; a gnucash transaction structure.
+;; translate a single transaction to a set of systecash splits and
+;; a systecash transaction structure.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define (qif-import:qif-xtn-to-gnc-xtn qif-xtn qif-file gnc-xtn
@@ -677,7 +677,7 @@
           (set! qif-far-acct (cadr qif-accts))
           (set! qif-commission-acct (caddr qif-accts))
 
-          ;; Translate the QIF account names into GnuCash accounts.
+          ;; Translate the QIF account names into systecash accounts.
           (if (and qif-near-acct qif-far-acct)
               (begin
                 ;; Determine the near account.

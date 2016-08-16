@@ -28,7 +28,7 @@
 /** @addtogroup RegisterPlugin Register Page
     @{ */
 /** @file gnc-plugin-page-register.c
-    @brief  Functions providing a register page for the GnuCash UI
+    @brief  Functions providing a register page for the systecash UI
     @author Copyright (C) 2003 Jan Arne Petersen <jpetersen@uni-bonn.de>
     @author Copyright (C) 2003,2005 David Hampton <hampton@employees.org>
 */
@@ -1334,7 +1334,7 @@ static const gchar *style_names[] =
 #define SPLIT_REGISTER_GUID "SplitRegister GUID"
 
 /** Save enough information about this register page that it can be
- *  recreated next time the user starts gnucash.
+ *  recreated next time the user starts systecash.
  *
  *  @param plugin_page The page to save.
  *
@@ -1472,7 +1472,7 @@ gnc_plugin_page_register2_restore_edit_menu (GncPluginPage *page,
 }
 
 /** Create a new register page based on the information saved during a
- *  previous instantiation of gnucash.
+ *  previous instantiation of systecash.
  *
  *  @param window The window where this page should be installed.
  *

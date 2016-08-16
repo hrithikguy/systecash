@@ -27,7 +27,7 @@
 /** @addtogroup GuiTreeModel
  *  @{ */
 /** @file gnc-tree-view-commodity.h
-    @brief GtkTreeView implementation for gnucash commodity tree.
+    @brief GtkTreeView implementation for systecash commodity tree.
     @author David Hampton <hampton@employees.org>
 */
 
@@ -72,10 +72,10 @@ GType gnc_tree_view_commodity_get_type (void);
  @{ */
 
 /** Create a new commodity tree view.  This view may or may not show a
- *  pseudo top-level commodity.  The gnucash engine does not have a
+ *  pseudo top-level commodity.  The systecash engine does not have a
  *  single top level commodity (it has a list of top level commodities),
  *  but this code provides one so that it can be used with all parts
- *  of the gnucash gui.
+ *  of the systecash gui.
  *
  *  @param book The book containing the commodities to show.
  *
@@ -165,7 +165,7 @@ void gnc_tree_view_commodity_set_filter (GncTreeViewCommodity *view,
 /** This function forces the commodity tree filter to be evaluated.  It
  *  may be necessary to call this function if the initial state of the
  *  view is incorrect.  This appears to only be necessary if the
- *  filter affects one of the top level commodities in gnucash.
+ *  filter affects one of the top level commodities in systecash.
  *
  *  @note This calls a function in gtk that is annotated in the
  *  sources as being slow.  You have been warned.

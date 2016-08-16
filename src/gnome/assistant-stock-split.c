@@ -1,5 +1,5 @@
 /********************************************************************\
- * assistant-stock-split.c -- stock split assistant for GnuCash     *
+ * assistant-stock-split.c -- stock split assistant for systecash     *
  * Copyright (C) 2001 Gnumatic, Inc.                                *
  * Copyright (c) 2001 Dave Peticolas <dave@krondo.com>              *
  * Copyright (c) 2006 David Hampton <hampton@employees.org>         *

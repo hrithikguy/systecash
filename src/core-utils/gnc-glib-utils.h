@@ -56,7 +56,7 @@
 int safe_utf8_collate (const char *str1, const char *str2);
 
 /**
- * @brief Validates UTF-8 encoded text for use in GnuCash.
+ * @brief Validates UTF-8 encoded text for use in systecash.
  *
  * Validates the strict subset of UTF-8 that is valid XML text, as detailed in
  * http://www.w3.org/TR/REC-xml/#NT-Char linked from bug #346535.

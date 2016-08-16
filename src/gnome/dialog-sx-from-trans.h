@@ -1,7 +1,7 @@
 /********************************************************************
  * dialog-sx-from-trans.h -- a simple dialog for creating a         *
  *                           scheduled transaction from a real one  *
- *                       (GnuCash)                                  *
+ *                       (systecash)                                  *
  * Copyright (C) 2000 Robert Merkel <rgmerk@mira.net>               *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *

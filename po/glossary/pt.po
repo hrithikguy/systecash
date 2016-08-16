@@ -1,10 +1,10 @@
-# gnucash-glossary's Portuguese Translation
+# systecash-glossary's Portuguese Translation
 # Copyright (C) 2001 Free Software Foundation, Inc.
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2001
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnucash-2.4\n"
+"Project-Id-Version: systecash-2.4\n"
 "POT-Creation-Date: 2014-10-13 00:33+0200\n"
 "PO-Revision-Date: 2011-08-17 13:23-0000\n"
 "Last-Translator: Tiago Neiva <tneiva@gmail.com>\n"
@@ -92,7 +92,7 @@ msgstr "tipo de conta: a prazo"
 msgid "account type: Stock"
 msgstr "tipo de conta: Ações"
 
-#. "This account type (new in gnucash-2.4.0) is used when exchanging or trading amounts from one currency into another"
+#. "This account type (new in systecash-2.4.0) is used when exchanging or trading amounts from one currency into another"
 #, fuzzy
 msgid "account type: trading"
 msgstr "tipo de conta: a prazo"
@@ -209,7 +209,7 @@ msgstr "balancear"
 msgid "bank"
 msgstr "banco"
 
-#. "A written statement of money owed for goods or services supplied. In Gnucash, a 'bill' is a statement that we received (from a vendor), whereas an 'invoice' is one that we sent out (to a customer)."
+#. "A written statement of money owed for goods or services supplied. In systecash, a 'bill' is a statement that we received (from a vendor), whereas an 'invoice' is one that we sent out (to a customer)."
 msgid "bill"
 msgstr "fatura de compra"
 
@@ -222,7 +222,7 @@ msgstr "condições de pagamento"
 msgid "billing terms"
 msgstr "condições de pagamento"
 
-#. "The dataset that encapsulates all the collections of entities (accounts etc.) in gnucash. The written records of the financial affairs of a business."
+#. "The dataset that encapsulates all the collections of entities (accounts etc.) in systecash. The written records of the financial affairs of a business."
 msgid "Book"
 msgstr "Livro"
 
@@ -410,7 +410,7 @@ msgstr "ganho"
 msgid "imbalance"
 msgstr "desequilíbrio"
 
-#. "Process of extracting data from a non-Gnucash format into a Gnucash file. E.g. QIF Import."
+#. "Process of extracting data from a non-systecash format into a systecash file. E.g. QIF Import."
 msgid "import"
 msgstr "importar"
 
@@ -422,7 +422,7 @@ msgstr "declaração de rendimentos"
 msgid "interest"
 msgstr "juro"
 
-#. "A list of goods sold or services provided together with the prices charged; see also: a bill. In Gnucash, an 'invoice' is a statement that we sent out (to a customer), whereas a 'bill' is one that we received (from a vendor)."
+#. "A list of goods sold or services provided together with the prices charged; see also: a bill. In systecash, an 'invoice' is a statement that we sent out (to a customer), whereas a 'bill' is one that we received (from a vendor)."
 msgid "invoice"
 msgstr "fatura"
 
@@ -468,12 +468,12 @@ msgstr "combinar"
 msgid "marker"
 msgstr "marcador"
 
-#. "1. Some text annotation, but this meaning isn't used inside gnucash. 2. In the Customer summary report: The ratio of profit vs. sales, i.e. the profit amount divided by the sales amount, shown in percent."
+#. "1. Some text annotation, but this meaning isn't used inside systecash. 2. In the Customer summary report: The ratio of profit vs. sales, i.e. the profit amount divided by the sales amount, shown in percent."
 #, fuzzy
 msgid "markup"
 msgstr "marcador"
 
-#. "The way how more than one window is displayed in GnuCash at the same time. MDI = Multiple Document Interface."
+#. "The way how more than one window is displayed in systecash at the same time. MDI = Multiple Document Interface."
 msgid "MDI modus"
 msgstr "Modo MDI"
 
@@ -525,7 +525,7 @@ msgstr "saldo inicial"
 msgid "options"
 msgstr "opções"
 
-#. "Watch out: Although this word exists in gnucash program code, all that program code in gnucash is currently not activated. In the future, it will be used in business accounting as follows: A particular request to make or supply goods, but belonging to a (larger) job. Such a request can come from a customer or be sent to a vendor. An order will probably generate one invoice or bill."
+#. "Watch out: Although this word exists in systecash program code, all that program code in systecash is currently not activated. In the future, it will be used in business accounting as follows: A particular request to make or supply goods, but belonging to a (larger) job. Such a request can come from a customer or be sent to a vendor. An order will probably generate one invoice or bill."
 msgid "order"
 msgstr "nota de encomenda"
 
@@ -797,7 +797,7 @@ msgstr "valor (numa parcela)"
 msgid "vendor"
 msgstr "fornecedor"
 
-#. "The terms 'Voucher' and 'Expense Voucher' are used interchangeably in gnucash. The 'Expense Voucher' is also a bit of a misnomer -- it's more like an 'Expense Report' in gnucash.  The phrase is meant to be a list of expenses incurred by an employee for which the company will reminburse them."
+#. "The terms 'Voucher' and 'Expense Voucher' are used interchangeably in systecash. The 'Expense Voucher' is also a bit of a misnomer -- it's more like an 'Expense Report' in systecash.  The phrase is meant to be a list of expenses incurred by an employee for which the company will reminburse them."
 msgid "voucher"
 msgstr "comprovativo de despesa"
 
@@ -806,7 +806,7 @@ msgid "withdraw (in the reconcile dialog)"
 msgstr "levantamento (no diálogo de reconciliação)"
 
 #~ msgid ""
-#~ "account type: trading This account type (new in gnucash-2.4.0) is used "
+#~ "account type: trading This account type (new in systecash-2.4.0) is used "
 #~ "when exchanging or trading amounts from one currency into another"
 #~ msgstr "tipo de conta: câmbios"
 
@@ -819,7 +819,7 @@ msgstr "levantamento (no diálogo de reconciliação)"
 
 #~ msgid ""
 #~ "markup1. Some text annotation, but this meaning isn't used inside "
-#~ "gnucash. 2. In the Customer summary report: The ratio of profit vs. "
+#~ "systecash. 2. In the Customer summary report: The ratio of profit vs. "
 #~ "sales, i.e. the profit amount divided by the sales amount, shown in "
 #~ "percent."
 #~ msgstr "margem de lucro"

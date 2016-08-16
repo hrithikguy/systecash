@@ -37,13 +37,13 @@ INSTALL(TARGETS gnc-module
   ARCHIVE DESTINATION lib
   RUNTIME DESTINATION bin)
 
-INSTALL(FILES ${gnc_module_HEADERS} DESTINATION include/gnucash)
+INSTALL(FILES ${gnc_module_HEADERS} DESTINATION include/systecash)
 
 # --- Compile Scheme file(s) ---
 
 SET (gnc_module_SCHEME gnc-module.scm)
 
-SET(GUILE_OUTPUT_DIR   gnucash)
+SET(GUILE_OUTPUT_DIR   systecash)
 SET(GUILE_MODULES      "")
 SET(GUILE_LOAD_DIRS    "")
 SET(GUILE_LIBRARY_DIRS "")

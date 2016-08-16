@@ -1,11 +1,11 @@
-(use-modules (gnucash gnc-module))
+(use-modules (systecash gnc-module))
 (use-modules (srfi srfi-1))
 
-(gnc:module-begin-syntax (gnc:module-load "gnucash/app-utils" 0))
+(gnc:module-begin-syntax (gnc:module-load "systecash/app-utils" 0))
 
-(use-modules (gnucash engine))
-(use-modules (gnucash engine test test-extras))
-(use-modules (gnucash app-utils))
+(use-modules (systecash engine))
+(use-modules (systecash engine test test-extras))
+(use-modules (systecash app-utils))
 
 (define (run-test)
   (test test-split-in-list?))

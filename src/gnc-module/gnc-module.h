@@ -1,5 +1,5 @@
 /*************************************************************
- * gnc-module.h -- loadable plugin/module system for gnucash
+ * gnc-module.h -- loadable plugin/module system for systecash
  * Copyright 2001 Linux Developers Group, Inc.
  *************************************************************/
 /********************************************************************\
@@ -30,7 +30,7 @@
 
 typedef void * GNCModule;
 
-#define DEFAULT_MODULE_PATH "/usr/local/gnucash/lib/modules"
+#define DEFAULT_MODULE_PATH "/usr/local/systecash/lib/modules"
 #define GNC_MODULE_PREFIX "libgncmod"
 
 /* the basics: initialize the module system, refresh its module

@@ -24,17 +24,17 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 
 
-(define-module (gnucash report job-report))
+(define-module (systecash report job-report))
 
 (use-modules (srfi srfi-1))
-(use-modules (gnucash printf))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash main))		; for gnc:debug
-(use-modules (gnucash gettext))
+(use-modules (systecash printf))
+(use-modules (systecash gnc-module))
+(use-modules (systecash main))		; for gnc:debug
+(use-modules (systecash gettext))
 
-(gnc:module-load "gnucash/report/report-system" 0)
-(use-modules (gnucash report standard-reports))
-(use-modules (gnucash report business-reports))
+(gnc:module-load "systecash/report/report-system" 0)
+(use-modules (systecash report standard-reports))
+(use-modules (systecash report business-reports))
 
 (define acct-string (N_ "Account"))
 (define owner-string (N_ "Job"))

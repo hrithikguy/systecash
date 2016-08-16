@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
- <id type="desktop">gnucash.desktop</id>
+ <id type="desktop">systecash.desktop</id>
  <licence>CC0</licence>
  <description>
   <_p>
-   GnuCash is a program for personal and small-business financial-accounting.
+   systecash is a program for personal and small-business financial-accounting.
   </_p>
   <_p>
-   Designed to be easy to use, yet powerful and flexible, GnuCash allows you
+   Designed to be easy to use, yet powerful and flexible, systecash allows you
    to track bank accounts, stocks, income and expenses. As quick
    and intuitive to use as a checkbook register, it is based on professional
    accounting principles like double-entry accounting to ensure balanced books
    and accurate reports. 
   </_p>
-  <_p>With GnuCash you can (but are not limited to):</_p>
+  <_p>With systecash you can (but are not limited to):</_p>
   <ul>
    <_li>Keep track of your day to day personal income and expenses</_li>
    <_li>Manage your stock, bond and mutual fund accounts with ease</_li>
@@ -25,10 +25,10 @@
   </ul>
  </description>
  <screenshots>
-  <screenshot type="default" width="1049" height="590">http://www.gnucash.org/images/features/feature_accounts_lg.png</screenshot>
-  <screenshot width="1049" height="590">http://www.gnucash.org/images/features/feature_register_lg.png</screenshot>
-  <screenshot width="1049" height="590">http://www.gnucash.org/images/features/feature_bar_chart_lg.png</screenshot>
+  <screenshot type="default" width="1049" height="590">http://www.systecash.org/images/features/feature_accounts_lg.png</screenshot>
+  <screenshot width="1049" height="590">http://www.systecash.org/images/features/feature_register_lg.png</screenshot>
+  <screenshot width="1049" height="590">http://www.systecash.org/images/features/feature_bar_chart_lg.png</screenshot>
  </screenshots>
- <url type="homepage">http://www.gnucash.org/</url>
- <updatecontact>gnucash-devel@gnucash.org</updatecontact>
+ <url type="homepage">http://www.systecash.org/</url>
+ <updatecontact>systecash-devel@systecash.org</updatecontact>
 </application>

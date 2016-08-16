@@ -22,17 +22,17 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash report stylesheet-plain))
+(define-module (systecash report stylesheet-plain))
 
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash core-utils))
-(use-modules (gnucash gettext))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
+(use-modules (systecash core-utils))
+(use-modules (systecash gettext))
 (use-modules (srfi srfi-13))
 (use-modules (srfi srfi-14))
 
-(gnc:module-load "gnucash/html" 0)   ; added for 'gnc-html-engine-supports-css'
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/html" 0)   ; added for 'gnc-html-engine-supports-css'
+(gnc:module-load "systecash/report/report-system" 0)
 
 ;; plain style sheet
 ;; this should generally be the default style sheet for most reports.

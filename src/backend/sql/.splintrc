@@ -4,7 +4,7 @@
 -DG_LOG_DOMAIN="gnc.backend.sql"
 -I..
 -I../..
--DLOCALE_DIR="/opt/gnucash2-svn/share/locale"
+-DLOCALE_DIR="/opt/systecash2-svn/share/locale"
 -I../../../src/backend
 -I../../../src/engine
 -I../../../src/core-utils

@@ -1,6 +1,6 @@
 /********************************************************************\
  * assistant-qif-import.c -- window for importing QIF files         *
- *                        (GnuCash)                                 *
+ *                        (systecash)                                 *
  * Copyright (C) 2000 Bill Gribble <grib@billgribble.com>           *
  * Copyright (c) 2006 David Hampton <hampton@employees.org>         *
  * Copyright (c) 2011 Robert Fewell                                 *
@@ -534,7 +534,7 @@ create_account_picker_view(GtkWidget *widget,
     gtk_tree_view_append_column(view, column);
 
     renderer = gtk_cell_renderer_text_new();
-    column = gtk_tree_view_column_new_with_attributes(_("GnuCash account name"),
+    column = gtk_tree_view_column_new_with_attributes(_("systecash account name"),
              renderer,
              "text",
              ACCOUNT_COL_GNC_NAME,
@@ -570,9 +570,9 @@ create_account_picker_view(GtkWidget *widget,
  * rematch_line
  *
  * This is a helper function for tree controls used by some assistant
- * pages for mapping QIF values to GnuCash accounts. It processes
+ * pages for mapping QIF values to systecash accounts. It processes
  * the selected rows when a user tries to edit the account mappings.
- * The account picker is displayed, and the chosen GnuCash account
+ * The account picker is displayed, and the chosen systecash account
  * becomes the new mapping for each row.  Finally, the update_page
  * function is called.
  ********************************************************************/
@@ -623,7 +623,7 @@ rematch_line(QIFImportWindow *wind, GtkTreeSelection *selection,
     scm_hash_set_x(map_info, scm_call_1(get_qif_name, map_entry), map_entry);
 
     /*
-     * Map all other selected rows to the same GnuCash account.
+     * Map all other selected rows to the same systecash account.
      */
     for (current = pathlist->next; current; current = current->next)
     {
@@ -652,7 +652,7 @@ rematch_line(QIFImportWindow *wind, GtkTreeSelection *selection,
  * gnc_ui_qif_import_account_activate_cb
  *
  * This handler is invoked when a row is double-clicked in the "Match
- * QIF accounts to GnuCash accounts" page.
+ * QIF accounts to systecash accounts" page.
  ********************************************************************/
 static void
 gnc_ui_qif_import_account_activate_cb(GtkTreeView *view, GtkTreePath *path,
@@ -709,7 +709,7 @@ gnc_ui_qif_import_account_select_cb(GtkTreeSelection *selection,
  * gnc_ui_qif_import_category_activate_cb
  *
  * This handler is invoked when a row is double-clicked in the "Match
- * QIF categories to GnuCash accounts" page.
+ * QIF categories to systecash accounts" page.
  ********************************************************************/
 static void
 gnc_ui_qif_import_category_activate_cb(GtkTreeView *view, GtkTreePath *path,
@@ -767,7 +767,7 @@ gnc_ui_qif_import_category_select_cb(GtkTreeSelection *selection,
  *  gnc_ui_qif_import_memo_activate_cb
  *
  * This handler is invoked when a row is double-clicked in the "Match
- * QIF payee/memo to GnuCash accounts" page.
+ * QIF payee/memo to systecash accounts" page.
  ********************************************************************/
 static void
 gnc_ui_qif_import_memo_activate_cb(GtkTreeView *view, GtkTreePath *path,
@@ -978,7 +978,7 @@ prepare_security_pages(QIFImportWindow * wind)
         }
         else
         {
-            /* Get the GnuCash commodity corresponding to the new QIF security. */
+            /* Get the systecash commodity corresponding to the new QIF security. */
             comm_ptr_token = scm_call_2(hash_ref,
                                         wind->security_hash,
                                         SCM_CAR(securities));
@@ -1436,7 +1436,7 @@ initialize_scheme(QIFImportWindow *wind)
     wind->match_transactions    = SCM_BOOL_F;
 
     /* Get the saved state of mappings from Quicken accounts and
-     * categories to GnuCash accounts. */
+     * categories to systecash accounts. */
     load_map_prefs = scm_c_eval_string("qif-import:load-map-prefs");
     mapping_info = scm_call_0(load_map_prefs); /* <- gets/creates session/book */
     wind->gnc_acct_info         = scm_list_ref(mapping_info, scm_from_int (0));
@@ -1951,7 +1951,7 @@ gnc_ui_qif_import_load_progress_prepare (GtkAssistant  *assistant, gpointer user
     /* Reset the progress display. */
     gnc_progress_dialog_set_primary(wind->load_progress, "");
     gnc_progress_dialog_set_secondary(wind->load_progress,
-                                      _("When you press the Start Button, GnuCash will load your QIF file. If there are no errors or warnings, you will automatically proceed to the next step. Otherwise, the details will be shown below for your review."));
+                                      _("When you press the Start Button, systecash will load your QIF file. If there are no errors or warnings, you will automatically proceed to the next step. Otherwise, the details will be shown below for your review."));
     gnc_progress_dialog_set_sub(wind->load_progress, " ");
     gnc_progress_dialog_reset_value(wind->load_progress);
     gnc_progress_dialog_reset_log(wind->load_progress);
@@ -2308,7 +2308,7 @@ gnc_ui_qif_import_account_match_prepare(GtkAssistant *assistant,
  * gnc_ui_qif_import_account_rematch_cb
  *
  * This handler is invoked when the user clicks the "Change
- * GnuCash account" button on the account mapping page. This
+ * systecash account" button on the account mapping page. This
  * button is an alternative to double-clicking a row.
  ****************************************************************/
 void
@@ -2393,7 +2393,7 @@ gnc_ui_qif_import_catagory_match_prepare(GtkAssistant *assistant,
  * gnc_ui_qif_import_category_rematch_cb
  *
  * This handler is invoked when the user clicks the "Change
- * GnuCash account" button on the category mapping page. This
+ * systecash account" button on the category mapping page. This
  * button is an alternative to double-clicking a row.
  ****************************************************************/
 void
@@ -2478,7 +2478,7 @@ gnc_ui_qif_import_memo_match_prepare (GtkAssistant *assistant,
  * gnc_ui_qif_import_memo_rematch_cb
  *
  * This handler is invoked when the user clicks the "Change
- * GnuCash account" button on the memo mapping page. This
+ * systecash account" button on the memo mapping page. This
  * button is an alternative to double-clicking a row.
  ****************************************************************/
 void
@@ -2545,7 +2545,7 @@ gnc_ui_qif_import_currency_prepare(GtkAssistant *assistant,
  * gnc_ui_qif_import_new_securities
  *
  * This function creates or updates the list of QIF securities
- * for which no corresponding GnuCash commodity existed prior to
+ * for which no corresponding systecash commodity existed prior to
  * import. If there are any such securities, TRUE is returned.
  * Otherwise, FALSE is returned.
  ****************************************************************/
@@ -2834,7 +2834,7 @@ gnc_ui_qif_import_convert_progress_start_cb(GtkButton * button,
     gnc_ui_qif_import_commodity_update(wind);
 
     /*
-     * Convert the QIF data into GnuCash data.
+     * Convert the QIF data into systecash data.
      *
      * A Scheme function does all the work.  The return value is the
      * root account of an account tree containing all the new accounts
@@ -3010,7 +3010,7 @@ gnc_ui_qif_import_convert_progress_prepare(GtkAssistant *assistant,
     /* Reset the progress display. */
     gnc_progress_dialog_set_primary(wind->convert_progress, "");
     gnc_progress_dialog_set_secondary(wind->convert_progress,
-                                      _("When you press the Start Button, GnuCash will import your QIF data. If there are no errors or warnings, you will automatically proceed to the next step. Otherwise, the details will be shown below for your review."));
+                                      _("When you press the Start Button, systecash will import your QIF data. If there are no errors or warnings, you will automatically proceed to the next step. Otherwise, the details will be shown below for your review."));
     gnc_progress_dialog_set_sub(wind->convert_progress, " ");
     gnc_progress_dialog_reset_value(wind->convert_progress);
     gnc_progress_dialog_reset_log(wind->convert_progress);
@@ -3206,7 +3206,7 @@ gnc_ui_qif_import_finish_cb (GtkAssistant *gtkassistant,
 
     if (scm_result == SCM_BOOL_F)
         gnc_warning_dialog(wind->window, "%s",
-                           _("GnuCash was unable to save your mapping preferences."));
+                           _("systecash was unable to save your mapping preferences."));
 
     /* Open an account tab in the main window if one doesn't exist already. */
     gnc_main_window_foreach_page(gnc_ui_qif_import_check_acct_tree,
@@ -3463,19 +3463,19 @@ build_views(QIFImportWindow *wind)
                      G_CALLBACK(gnc_ui_qif_import_select_loaded_file_cb),
                      wind);
 
-    /* Set up the QIF account to GnuCash account matcher. */
+    /* Set up the QIF account to systecash account matcher. */
     create_account_picker_view(wind->acct_view, _("QIF account name"),
                                G_CALLBACK(gnc_ui_qif_import_account_activate_cb),
                                G_CALLBACK(gnc_ui_qif_import_account_select_cb),
                                wind);
 
-    /* Set up the QIF category to GnuCash account matcher. */
+    /* Set up the QIF category to systecash account matcher. */
     create_account_picker_view(wind->cat_view,  _("QIF category name"),
                                G_CALLBACK(gnc_ui_qif_import_category_activate_cb),
                                G_CALLBACK(gnc_ui_qif_import_category_select_cb),
                                wind);
 
-    /* Set up the QIF payee/memo to GnuCash account matcher. */
+    /* Set up the QIF payee/memo to systecash account matcher. */
     create_account_picker_view(wind->memo_view, _("QIF payee/memo"),
                                G_CALLBACK(gnc_ui_qif_import_memo_activate_cb),
                                G_CALLBACK(gnc_ui_qif_import_memo_select_cb),

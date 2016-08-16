@@ -4,12 +4,12 @@
  * Copyright (C) 1997, 1998, 1999, 2000 Free Software Foundation
  * All rights reserved.
  *
- * Gnucash is free software; you can redistribute it and/or
+ * systecash is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public License
  * as published by the Free Software Foundation; either version 2 of the
  * License, or (at your option) any later version.
  *
- * Gnucash is distributed in the hope that it will be useful,
+ * systecash is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Library General Public License for more details.
@@ -45,13 +45,13 @@
  *  share across all extant version of the widget, or even build the
  *  list store once and maintain for the life of the application.
  *
- *  When the GtkComboCellEntry widget supports completion, this Gnucash
+ *  When the GtkComboCellEntry widget supports completion, this systecash
  *  widget should be modified so that it is based upon that widget.
  *  That would give users the capability to select a currency by typing
  *  its ISO 4217 code (e.g. USD, GBP, etc).  Moving to that widget
  *  today, however, would cause more problems that its worth.  There is
  *  currently no way to get access to the embedded GtkEntry widget, and
- *  therefore no way to implement completion in gnucash or prevent the
+ *  therefore no way to implement completion in systecash or prevent the
  *  user from typing in random data.
  */
 

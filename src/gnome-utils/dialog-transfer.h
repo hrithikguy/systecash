@@ -1,5 +1,5 @@
 /********************************************************************\
- * dialog-transfer.h -- transfer dialog for GnuCash                 *
+ * dialog-transfer.h -- transfer dialog for systecash                 *
  * Copyright (C) 1999 Linas Vepstas                                 *
  * Copyright (C) 2000 Dave Peticolas                                *
  *                                                                  *

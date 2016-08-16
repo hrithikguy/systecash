@@ -46,8 +46,8 @@ TARGET_INCLUDE_DIRECTORIES(gncmod-csv-import PRIVATE
 )
 
 INSTALL(TARGETS gncmod-csv-import
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 
 # No headers to install
@@ -55,15 +55,15 @@ INSTALL(TARGETS gncmod-csv-import
 SET(csv_import_GLADE assistant-csv-account-import.glade assistant-csv-fixed-trans-import.glade
       assistant-csv-trans-import.glade)
 
-INSTALL(FILES ${csv_import_GLADE} DESTINATION share/gnucash/gtkbuilder)
+INSTALL(FILES ${csv_import_GLADE} DESTINATION share/systecash/gtkbuilder)
 
 SET(csv_import_UI gnc-plugin-csv-import-ui.xml)
 
-INSTALL(FILES ${csv_import_UI} DESTINATION share/gnucash/ui)
+INSTALL(FILES ${csv_import_UI} DESTINATION share/systecash/ui)
 
 IF (GNC_BUILD_AS_INSTALL)
   FILE(COPY ${csv_import_UI}
-    DESTINATION ${DATADIR_BUILD}/gnucash/ui)
+    DESTINATION ${DATADIR_BUILD}/systecash/ui)
   FILE(COPY ${csv_import_GLADE}
-    DESTINATION ${DATADIR_BUILD}/gnucash/gtkbuilder)
+    DESTINATION ${DATADIR_BUILD}/systecash/gtkbuilder)
 ENDIF()

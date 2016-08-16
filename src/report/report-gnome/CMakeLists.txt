@@ -33,11 +33,11 @@ TARGET_COMPILE_DEFINITIONS (gncmod-report-gnome PRIVATE -DG_LOG_DOMAIN=\"gnc.rep
 TARGET_INCLUDE_DIRECTORIES(gncmod-report-gnome PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 INSTALL(TARGETS gncmod-report-gnome
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 
-INSTALL(FILES ${report_gnome_HEADERS} DESTINATION include/gnucash)
+INSTALL(FILES ${report_gnome_HEADERS} DESTINATION include/systecash)
 
 # Scheme
 
@@ -45,7 +45,7 @@ SET(report_gnome_SCHEME
     report-gnome.scm
 )
 
-SET(GUILE_OUTPUT_DIR   gnucash/report)
+SET(GUILE_OUTPUT_DIR   systecash/report)
 SET(GUILE_MODULES      src/app-utils src/scm src/engine src/gnc-module src/gnome-utils src/reports/report-system src/report/utility-reports)
 SET(GUILE_LOAD_DIRS    src/app-utils src/gnc-module src/engine src/scm src/core-utils src/gnome-utils)
 SET(GUILE_LIBRARY_DIRS src/app-utils src/core-utils src/engine src/gnc-module src/gnome-utils src/report-gnome)
@@ -63,15 +63,15 @@ GNC_ADD_SCHEME_TARGETS(scm-report-gnome
 
 SET(report_gnome_GLADE dialog-custom-report.glade dialog-report.glade)
 
-INSTALL(FILES ${report_gnome_GLADE} DESTINATION share/gnucash/gtkbuilder)
+INSTALL(FILES ${report_gnome_GLADE} DESTINATION share/systecash/gtkbuilder)
 
 SET(report_gnome_UI gnc-plugin-page-report-ui.xml)
 
-INSTALL(FILES ${report_gnome_UI} DESTINATION share/gnucash/ui)
+INSTALL(FILES ${report_gnome_UI} DESTINATION share/systecash/ui)
 
 IF (GNC_BUILD_AS_INSTALL)
   FILE(COPY ${report_gnome_UI}
-    DESTINATION ${DATADIR_BUILD}/gnucash/ui)
+    DESTINATION ${DATADIR_BUILD}/systecash/ui)
   FILE(COPY ${report_gnome_GLADE}
-    DESTINATION ${DATADIR_BUILD}/gnucash/gtkbuilder)
+    DESTINATION ${DATADIR_BUILD}/systecash/gtkbuilder)
 ENDIF()

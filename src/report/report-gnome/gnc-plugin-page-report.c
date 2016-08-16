@@ -77,7 +77,7 @@
 
 /* NW: you can add GNC_MOD_REPORT to gnc-engine.h
 or simply define it locally. Any unique string with
-a gnucash- prefix will do. Then just set a log level
+a systecash- prefix will do. Then just set a log level
 with qof_log_set_level().*/
 static QofLogModule log_module = GNC_MOD_GUI;
 
@@ -715,7 +715,7 @@ gnc_plugin_page_report_destroy_widget(GncPluginPage *plugin_page)
 
 
 /** Save enough information about this report page that it can be
- *  recreated next time the user starts gnucash.
+ *  recreated next time the user starts systecash.
  *
  *  @param plugin_page The page to save.
  *
@@ -795,7 +795,7 @@ gnc_plugin_page_report_save_page (GncPluginPage *plugin_page,
 
 
 /** Create a new report page based on the information saved during a
- *  previous instantiation of gnucash.
+ *  previous instantiation of systecash.
  *
  *  @param window The window where this page should be installed.
  *
@@ -1038,13 +1038,13 @@ static GtkActionEntry report_actions[] =
     {
         "ReportSaveAction", GTK_STOCK_SAVE, N_("Save _Report Configuration"), "<control><alt>s",
         N_("Update the current report's saved configuration. "
-        "The report will be saved in the file ~/.gnucash/saved-reports-2.4. "),
+        "The report will be saved in the file ~/.systecash/saved-reports-2.4. "),
         G_CALLBACK(gnc_plugin_page_report_save_cb)
     },
     {
         "ReportSaveAsAction", GTK_STOCK_SAVE_AS, N_("Save Report Configuration As..."), "<control><alt><shift>s",
         N_("Add the current report's configuration to the `Saved Report Configurations' menu. "
-        "The report will be saved in the file ~/.gnucash/saved-reports-2.4. "),
+        "The report will be saved in the file ~/.systecash/saved-reports-2.4. "),
         G_CALLBACK(gnc_plugin_page_report_save_as_cb)
     },
     {
@@ -1620,7 +1620,7 @@ static gchar *report_create_jobname(GncPluginPageReportPrivate *priv)
     gchar *report_name = NULL;
     const gchar *report_number = "";
     gchar *job_date;
-    const gchar *default_jobname = N_("GnuCash-Report");
+    const gchar *default_jobname = N_("systecash-Report");
 
     g_assert(priv);
 

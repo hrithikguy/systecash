@@ -1,14 +1,14 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.gnucash" path="/org/gnucash/">
-    <child name="general" schema="org.gnucash.general"/>
-    <child name="dev" schema="org.gnucash.dev"/>
+  <schema id="org.systecash" path="/org/systecash/">
+    <child name="general" schema="org.systecash.general"/>
+    <child name="dev" schema="org.systecash.dev"/>
   </schema>
 
-  <schema id="org.gnucash.general" path="/org/gnucash/general/">
+  <schema id="org.systecash.general" path="/org/systecash/general/">
     <key name="save-window-geometry" type="b">
       <default>true</default>
       <summary>Save window sizes and locations</summary>
-      <description>If active, the size and location of each dialog window will be saved when it is closed. The sizes and locations of content windows will be remembered when you quit GnuCash. Otherwise the sizes will not be saved.</description>
+      <description>If active, the size and location of each dialog window will be saved when it is closed. The sizes and locations of content windows will be remembered when you quit systecash. Otherwise the sizes will not be saved.</description>
     </key>
     <key name="account-separator" type="s">
       <default>'colon'</default>
@@ -23,7 +23,7 @@
     <key name="autosave-show-explanation" type="b">
       <default>true</default>
       <summary>Show auto-save explanation</summary>
-      <description>If active, GnuCash shows an explanation of the auto-save feature the first time that feature is started. Otherwise no extra explanation is shown.</description>
+      <description>If active, systecash shows an explanation of the auto-save feature the first time that feature is started. Otherwise no extra explanation is shown.</description>
     </key>
     <key name="autosave-interval-minutes" type="d">
       <default>5</default>
@@ -48,7 +48,7 @@
     <key name="auto-decimal-point" type="b">
       <default>false</default>
       <summary>Automatically insert a decimal point</summary>
-      <description>If active, GnuCash will automatically insert a decimal point into values that are entered without one. Otherwise GnuCash will not modify entered numbers.</description>
+      <description>If active, systecash will automatically insert a decimal point into values that are entered without one. Otherwise systecash will not modify entered numbers.</description>
     </key>
     <key name="auto-decimal-places" type="i">
       <default>2</default>
@@ -58,7 +58,7 @@
     <key name="migrate-prefs-done" type="b">
       <default>false</default>
       <summary>Tool to migrate preferences from old backend (CGonf) to new one (GSettings) has run successfully.</summary>
-      <description>GnuCash switched to another backend to store user preferences between 2.4 and 2.6. To smooth the transition, most preferences will be migrated the first time a 2.6 version of GnuCash is run. This migration should only run once. This preference keeps track whether or not this migration tool has run successfully.</description>
+      <description>systecash switched to another backend to store user preferences between 2.4 and 2.6. To smooth the transition, most preferences will be migrated the first time a 2.6 version of systecash is run. This migration should only run once. This preference keeps track whether or not this migration tool has run successfully.</description>
     </key>
     <key name="retain-type-never" type="b">
       <default>false</default>
@@ -123,12 +123,12 @@
     <key name="currency-choice-locale" type="b">
       <default>true</default>
       <summary>Use the system locale currency for all newly created accounts.</summary>
-      <description>This setting controls the source of the default currency for new accounts. If set to "locale" then GnuCash will retrieve the default currency from the user's locale setting. If set to "other", GnuCash will use the setting specified by the currency-other key.</description>
+      <description>This setting controls the source of the default currency for new accounts. If set to "locale" then systecash will retrieve the default currency from the user's locale setting. If set to "other", systecash will use the setting specified by the currency-other key.</description>
     </key>
     <key name="currency-choice-other" type="b">
       <default>false</default>
       <summary>Use the specified currency for all newly created accounts.</summary>
-      <description>This setting controls the source of the default currency for new accounts. If set to "locale" then GnuCash will retrieve the default currency from the user's locale setting. If set to "other", GnuCash will use the setting specified by the currency-other key.</description>
+      <description>This setting controls the source of the default currency for new accounts. If set to "locale" then systecash will retrieve the default currency from the user's locale setting. If set to "other", systecash will use the setting specified by the currency-other key.</description>
     </key>
     <key name="currency-other" type="s">
       <default>'USD'</default>
@@ -143,7 +143,7 @@
     <key name="date-format" type="i">
       <default>4</default>
       <summary>Date format choice</summary>
-      <description>This setting chooses the way dates are displayed in GnuCash. Possible values for this setting are "locale" to use the system locale setting, "ce" for Continental Europe style dates, "iso" for ISO 8601 standard dates , "uk" for United Kingdom style dates, and "us" for United States style dates.</description>
+      <description>This setting chooses the way dates are displayed in systecash. Possible values for this setting are "locale" to use the system locale setting, "ce" for Continental Europe style dates, "iso" for ISO 8601 standard dates , "uk" for United Kingdom style dates, and "us" for United States style dates.</description>
     </key>
     <key name="date-completion-thisyear" type="b">
       <default>false</default>
@@ -205,15 +205,15 @@
       <summary>Set book option on new files to use split "action" field for "Num" field on registers/reports</summary>
       <description>If selected, the default book option for new files is set so that the 'Num' cell on registers shows/updates the split 'action' field and the transaction 'num' field is shown on the second line in double line mode (and is not visible in single line mode). Otherwise, the default book option for new files is set so that the 'Num' cell on registers shows/updates the transaction 'num' field.</description>
     </key>
-    <child name="register" schema="org.gnucash.general.register"/>
-    <child name="report" schema="org.gnucash.general.report"/>
+    <child name="register" schema="org.systecash.general.register"/>
+    <child name="report" schema="org.systecash.general.report"/>
   </schema>
 
-  <schema id="org.gnucash.general.register" path="/org/gnucash/general/register/">
+  <schema id="org.systecash.general.register" path="/org/systecash/general/register/">
     <key name="use-theme-colors" type="b">
       <default>false</default>
       <summary>Color the register as specified by the system theme</summary>
-      <description>If active, the register will be colored as specified by the system theme. This can be overridden to provide custom colors by editing the gtkrc file in the users home directory. Otherwise the standard register colors will be used that GnuCash has always used.</description>
+      <description>If active, the register will be colored as specified by the system theme. This can be overridden to provide custom colors by editing the gtkrc file in the users home directory. Otherwise the standard register colors will be used that systecash has always used.</description>
     </key>
     <key name="enter-moves-to-end" type="b">
       <default>false</default>
@@ -312,7 +312,7 @@
     </key>
   </schema>
   
-  <schema id="org.gnucash.general.report" path="/org/gnucash/general/report/">
+  <schema id="org.systecash.general.report" path="/org/systecash/general/report/">
     <key name="use-new-window" type="b">
       <default>false</default>
       <summary>Create a new window for each new report</summary>
@@ -321,21 +321,21 @@
     <key name="currency-choice-locale" type="b">
       <default>true</default>
       <summary>Use the system locale currency for all newly created reports.</summary>
-      <description>This setting controls the default currency used for reports. If set to "locale" then GnuCash will retrieve the default currency from the user's locale setting. If set to "other", GnuCash will use the setting specified by the currency-other key.</description>
+      <description>This setting controls the default currency used for reports. If set to "locale" then systecash will retrieve the default currency from the user's locale setting. If set to "other", systecash will use the setting specified by the currency-other key.</description>
     </key>
     <key name="currency-choice-other" type="b">
       <default>false</default>
       <summary>Use the specified currency for all newly created reports.</summary>
-      <description>This setting controls the source of the default currency for new accounts. If set to "locale" then GnuCash will retrieve the default currency from the user's locale setting. If set to "other", GnuCash will use the setting specified by the currency-other key.</description>
+      <description>This setting controls the source of the default currency for new accounts. If set to "locale" then systecash will retrieve the default currency from the user's locale setting. If set to "other", systecash will use the setting specified by the currency-other key.</description>
     </key>
     <key name="currency-other" type="s">
       <default>'USD'</default>
       <summary>Default currency for new reports</summary>
-      <description>This setting controls the default currency used for reports. If set to "locale" then GnuCash will retrieve the default currency from the user's locale setting. If set to "other", GnuCash will use the setting specified by the currency-other key.</description>
+      <description>This setting controls the default currency used for reports. If set to "locale" then systecash will retrieve the default currency from the user's locale setting. If set to "other", systecash will use the setting specified by the currency-other key.</description>
     </key>
-    <child name="pdf-export" schema="org.gnucash.general.report.pdf-export"/>
+    <child name="pdf-export" schema="org.systecash.general.report.pdf-export"/>
   </schema>
-  <schema id="org.gnucash.general.report.pdf-export" path="/org/gnucash/general/report/pdf-export/">
+  <schema id="org.systecash.general.report.pdf-export" path="/org/systecash/general/report/pdf-export/">
     <key name="filename-format" type="s">
       <default>'%1$s-%2$s-%3$s'</default>
       <summary>PDF export file name format</summary>
@@ -347,11 +347,11 @@
       <description>This setting chooses the way dates are used in the filename of PDF export. Possible values for this setting are "locale" to use the system locale setting, "ce" for Continental Europe style dates, "iso" for ISO 8601 standard dates , "uk" for United Kingdom style dates, and "us" for United States style dates.</description>
     </key>
   </schema>
-  <schema id="org.gnucash.dev" path="/org/gnucash/dev/">
+  <schema id="org.systecash.dev" path="/org/systecash/dev/">
     <key name="allow-file-incompatibility" type="b">
       <default>false</default>
       <summary>Allow file incompatibility with older versions.</summary>
-      <description>If active, gnucash will be allowed to intentionally break file compatibility with older versions, so that a data file saved in this version cannot be read by an older version again. Otherwise gnucash will write data files only in formats that can be read by older versions as well.</description>
+      <description>If active, systecash will be allowed to intentionally break file compatibility with older versions, so that a data file saved in this version cannot be read by an older version again. Otherwise systecash will write data files only in formats that can be read by older versions as well.</description>
     </key>
   </schema>
 </schemalist>

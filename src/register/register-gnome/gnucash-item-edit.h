@@ -22,14 +22,14 @@
 #define GNUCASH_ITEM_EDIT_H
 
 
-#include "gnucash-date-picker.h"
-#include "gnucash-item-list.h"
-#include "gnucash-sheet.h"
+#include "systecash-date-picker.h"
+#include "systecash-item-list.h"
+#include "systecash-sheet.h"
 /** @ingroup Register
  * @addtogroup Gnome
  * @{
  */
-/** @file gnucash-item-edit.h
+/** @file systecash-item-edit.h
  * @brief Public declarations for GncItemEdit class
  */
 #define GNC_TYPE_ITEM_EDIT        (gnc_item_edit_get_type ())
@@ -76,7 +76,7 @@ typedef struct
 
     GnomeCanvasGroup *parent;
 
-    GnucashSheet *sheet;
+    systecashSheet *sheet;
 
     /* The editor whose status we reflect on the sheet */
     GtkWidget *editor;
@@ -123,7 +123,7 @@ void gnc_item_edit_get_pixel_coords (GncItemEdit *item_edit,
                                      int *w, int *h);
 
 GnomeCanvasItem *gnc_item_edit_new (GnomeCanvasGroup *parent,
-                                    GnucashSheet *sheet, GtkWidget *entry);
+                                    systecashSheet *sheet, GtkWidget *entry);
 
 GncItemList * gnc_item_edit_new_list (GncItemEdit *item_edit, GtkListStore *shared_store);
 GNCDatePicker * gnc_item_edit_new_date_picker (GncItemEdit *item_edit);

@@ -26,17 +26,17 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report standard-reports daily-reports))
+(define-module (systecash report standard-reports daily-reports))
 
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
 (use-modules (srfi srfi-1))
 (use-modules (ice-9 regex))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(use-modules (gnucash printf))
+(use-modules (systecash printf))
 
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
 (define menuname-income (N_ "Income vs. Day of Week"))
 (define menuname-expense (N_ "Expenses vs. Day of Week"))

@@ -21,16 +21,16 @@ TARGET_LINK_LIBRARIES(gncmod-log-replay gncmod-gnome-utils gncmod-app-utils gncm
 TARGET_COMPILE_DEFINITIONS(gncmod-log-replay PRIVATE -DG_LOG_DOMAIN=\"gnc.import.log-replay\")
 
 INSTALL(TARGETS gncmod-log-replay
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 # No headers to install.
 
 SET(log_replay_UI gnc-plugin-log-replay-ui.xml)
 
-INSTALL(FILES ${log_replay_UI} DESTINATION share/gnucash/ui)
+INSTALL(FILES ${log_replay_UI} DESTINATION share/systecash/ui)
 
 IF (GNC_BUILD_AS_INSTALL)
   FILE(COPY ${log_replay_UI}
-    DESTINATION ${DATADIR_BUILD}/gnucash/ui)
+    DESTINATION ${DATADIR_BUILD}/systecash/ui)
 ENDIF()

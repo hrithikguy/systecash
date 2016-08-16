@@ -185,7 +185,7 @@ gnc_ab_gettrans(GtkWidget *parent, Account *gnc_acc)
     /* Ignore the return value of AB_Banking_ExecuteJobs(), as the job's
      * status always describes better whether the job was actually
      * transferred to and accepted by the bank.  See also
-     * http://lists.gnucash.org/pipermail/gnucash-de/2008-September/006389.html
+     * http://lists.systecash.org/pipermail/systecash-de/2008-September/006389.html
      */
     job_status = AB_Job_GetStatus(job);
     if (job_status != AB_Job_StatusFinished

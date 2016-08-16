@@ -1,11 +1,11 @@
 #!/bin/sh
 
-# Usage: gnucash-build-env
+# Usage: systecash-build-env
 
-# Usage: gnucash-build-env any-cmd [ args ... ]
-# runs any-cmd in gnucash's build environment.
+# Usage: systecash-build-env any-cmd [ args ... ]
+# runs any-cmd in systecash's build environment.
 
-# As with all the other gnucash overrides scripts, expects PATH to be
+# As with all the other systecash overrides scripts, expects PATH to be
 # set appropriately.
 
 top_srcdir="@-GNC_SRCDIR-@"

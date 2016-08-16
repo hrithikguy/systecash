@@ -1,5 +1,5 @@
 /*
- * gnc-window.c -- structure which represents a GnuCash window.
+ * gnc-window.c -- structure which represents a systecash window.
  *
  * Copyright (C) 2003 Jan Arne Petersen <jpetersen@uni-bonn.de>
  * Copyright (C) 2003 David Hampton <hampton@employees.org>

@@ -1,5 +1,5 @@
 /********************************************************************\
- * io-utils.h -- api for gnucash file i/o                           *
+ * io-utils.h -- api for systecash file i/o                           *
  *                                                                  *
  * Copyright (C) 2001 James LewisMoss <dres@debian.org>             *
  *                                                                  *

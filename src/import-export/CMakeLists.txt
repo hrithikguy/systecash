@@ -61,19 +61,19 @@ TARGET_INCLUDE_DIRECTORIES(gncmod-generic-import PUBLIC ${CMAKE_CURRENT_SOURCE_D
 
 
 INSTALL(TARGETS gncmod-generic-import
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin
 )
 
-INSTALL(FILES ${generic_import_HEADERS} DESTINATION include/gnucash)
+INSTALL(FILES ${generic_import_HEADERS} DESTINATION include/systecash)
 
 SET(generic_import_GLADE dialog-import.glade)
 
-INSTALL(FILES ${generic_import_GLADE} DESTINATION share/gnucash/gtkbuilder)
+INSTALL(FILES ${generic_import_GLADE} DESTINATION share/systecash/gtkbuilder)
 
 
 IF (GNC_BUILD_AS_INSTALL)
   FILE(COPY ${generic_import_GLADE}
-    DESTINATION ${DATADIR_BUILD}/gnucash/gtkbuilder)
+    DESTINATION ${DATADIR_BUILD}/systecash/gtkbuilder)
 ENDIF()

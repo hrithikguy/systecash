@@ -33,7 +33,7 @@
 #include "gnc-gui-query.h"
 #include "gnc-ui-util.h"
 #include "qof.h"
-#include "gnucash-sheet.h"
+#include "systecash-sheet.h"
 #include "dialog-search.h"
 #include "search-param.h"
 
@@ -96,7 +96,7 @@ struct _order_window
     GtkWidget *	owner_label;
     GtkWidget *	owner_choice;
 
-    GnucashRegister *	reg;
+    systecashRegister *	reg;
     GncEntryLedger *	ledger;
 
     OrderDialogType	dialog_type;
@@ -641,10 +641,10 @@ gnc_order_new_window (QofBook *bookp, OrderDialogType type,
     //  gnc_entry_ledger_load (entry_ledger, entries);
 
     /* Watch the order of operations, here... */
-    regWidget = gnucash_register_new (gnc_entry_ledger_get_table (entry_ledger));
+    regWidget = systecash_register_new (gnc_entry_ledger_get_table (entry_ledger));
     gnc_table_init_gui( regWidget, NULL);
     ow->reg = GNUCASH_REGISTER (regWidget);
-    gnucash_sheet_set_window (gnucash_register_get_sheet (ow->reg), ow->dialog);
+    systecash_sheet_set_window (systecash_register_get_sheet (ow->reg), ow->dialog);
     gnc_entry_ledger_set_parent (entry_ledger, ow->dialog);
 
     vbox = GTK_WIDGET(gtk_builder_get_object (builder, "ledger_vbox"));

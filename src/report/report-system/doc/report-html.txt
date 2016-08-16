@@ -321,7 +321,7 @@ We have three different kinds of style control information available:
      with a date, letterhead or other graphics in the background, and
      so on.  Some or all of this should be customized in the style
      sheet's parameter editor, which uses the same framework as the
-     report parameters editor and the Gnucash preferences editor. 
+     report parameters editor and the systecash preferences editor. 
 
      Creating stylesheets:
 
@@ -348,7 +348,7 @@ We have three different kinds of style control information available:
      options editor, it changes it in every report that uses that
      style sheet.
 
-     There's a new "Style Sheet Dialog" in gnucash that lets you copy
+     There's a new "Style Sheet Dialog" in systecash that lets you copy
      and modify existing stylesheets from the GUI, so you can take a
      distributed stylesheet, copy it with a new name, and change the
      parameters to customize it.

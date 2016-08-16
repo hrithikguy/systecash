@@ -25,8 +25,8 @@ and then returns control so we dont have a nested gtk_main().
 Nesting gtk_main() can result in crashes.  If the originating window
 is destroyed then when control returns we've jumped back into invalid
 data space.  This has happened on numerous occasions within the
-gnucash code over time and has caused numerous bugs.  For example, the
-'Save while saving crashes gnucash' bug was due to a nested gtk_main
+systecash code over time and has caused numerous bugs.  For example, the
+'Save while saving crashes systecash' bug was due to a nested gtk_main
 caused by the progress-bar.  Consequently, the best way to avoid this
 problem is not to introduce this problem and avoid nested gtk_main()
 whenever possible.  This means the importer should be GUI-driven, not
@@ -38,7 +38,7 @@ For a generic importer druid, we want to create a single druid (or set
 of druid components) that all importers can use.  Moreover, this
 framework should be UI-widget independent.  The problem is that
 different importer backends have different requirements for the UI.
-For example, the QIF importer needs to map QIF Categories to GnuCash
+For example, the QIF importer needs to map QIF Categories to systecash
 Accounts, but OFX or HBCI have no such mapping requirement.
 
 Another issue is that some sub-processes of the importing process

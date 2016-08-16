@@ -17,10 +17,10 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash gnome-utils))
+(define-module (systecash gnome-utils))
 
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
 
 (cond-expand
   (guile-2
@@ -29,7 +29,7 @@
       (load-extension "libgncmod-gnome-utils" "scm_init_sw_gnome_utils_module")))
   (else ))
 (use-modules (sw_gnome_utils))
-(gnc:module-load "gnucash/app-utils" 0)
+(gnc:module-load "systecash/app-utils" 0)
 
 ;; from gnc-menu-extensions.scm
 (export gnc:extension-type)

@@ -1531,7 +1531,7 @@ checkcert_cb(GWEN_GUI *gwen_gui, const GWEN_SSLCERTDESCR *cert,
 
     if (g_hash_table_lookup(gui->accepted_certs, cert_hash))
     {
-        /* Certificate has been accepted by Gnucash before */
+        /* Certificate has been accepted by systecash before */
         LEAVE("Automatically accepting certificate");
         return 0;
     }

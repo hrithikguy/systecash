@@ -138,7 +138,7 @@ cases.  The importation process automatically takes care of negating
 the values for Actions that move funds out of an account (for example:
 sales, expenses and transfers).
 
-Be aware that GnuCash's file format stores the share quantity and the
+Be aware that systecash's file format stores the share quantity and the
 total value of the transaction.  Prices are not stored.
 
 

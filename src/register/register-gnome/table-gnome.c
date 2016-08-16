@@ -43,9 +43,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "gnucash-sheet.h"
-#include "gnucash-sheetP.h"
-#include "gnucash-style.h"
+#include "systecash-sheet.h"
+#include "systecash-sheetP.h"
+#include "systecash-style.h"
 #include "table-allgui.h"
 #include "table-gnome.h"
 #include "gnc-prefs.h"
@@ -67,7 +67,7 @@ static QofLogModule log_module = GNC_MOD_REGISTER;
 void
 gnc_table_save_state (Table *table, gchar * state_section)
 {
-    GnucashSheet *sheet;
+    systecashSheet *sheet;
     GNCHeaderWidths widths;
     GList *node;
     gchar *key;
@@ -86,7 +86,7 @@ gnc_table_save_state (Table *table, gchar * state_section)
 
     widths = gnc_header_widths_new ();
 
-    gnucash_sheet_get_header_widths (sheet, widths);
+    systecash_sheet_get_header_widths (sheet, widths);
 
     node = gnc_table_layout_get_cells (table->layout);
     for (; node; node = node->next)
@@ -113,7 +113,7 @@ gnc_table_save_state (Table *table, gchar * state_section)
 static void
 table_ui_redraw_cb (Table *table)
 {
-    GnucashSheet *sheet;
+    systecashSheet *sheet;
 
     if (table == NULL)
         return;
@@ -123,13 +123,13 @@ table_ui_redraw_cb (Table *table)
 
     sheet = GNUCASH_SHEET (table->ui_data);
 
-    gnucash_sheet_redraw_help (sheet);
+    systecash_sheet_redraw_help (sheet);
 }
 
 static void
 table_destroy_cb (Table *table)
 {
-    GnucashSheet *sheet;
+    systecashSheet *sheet;
 
     if (table == NULL)
         return;
@@ -146,8 +146,8 @@ table_destroy_cb (Table *table)
 
 
 /* Um, this function checks that data is not null but never uses it.
-   Weird.  Also, since this function only works with a GnucashRegister
-   widget, maybe some of it should be moved to gnucash-sheet.c. */
+   Weird.  Also, since this function only works with a systecashRegister
+   widget, maybe some of it should be moved to systecash-sheet.c. */
 /* Adding to previous note:  Since data doesn't appear do anything and to 
    align the function with save_state() I've removed the check for 
    NULL and changed two calls in dialog_order.c and dialog_invoice.c 
@@ -157,8 +157,8 @@ void
 gnc_table_init_gui (GtkWidget *widget, gchar * state_section)
 {
     GNCHeaderWidths widths;
-    GnucashSheet *sheet;
-    GnucashRegister *greg;
+    systecashSheet *sheet;
+    systecashRegister *greg;
     Table *table;
     GList *node;
     gchar *key;
@@ -207,15 +207,15 @@ gnc_table_init_gui (GtkWidget *widget, gchar * state_section)
         }
     }
 
-    gnucash_sheet_create_styles (sheet);
+    systecash_sheet_create_styles (sheet);
 
-    gnucash_sheet_set_header_widths (sheet, widths);
+    systecash_sheet_set_header_widths (sheet, widths);
 
-    gnucash_sheet_compile_styles (sheet);
+    systecash_sheet_compile_styles (sheet);
 
-    gnucash_sheet_table_load (sheet, TRUE);
-    gnucash_sheet_cursor_set_from_table (sheet, TRUE);
-    gnucash_sheet_redraw_all (sheet);
+    systecash_sheet_table_load (sheet, TRUE);
+    systecash_sheet_cursor_set_from_table (sheet, TRUE);
+    systecash_sheet_redraw_all (sheet);
 
     gnc_header_widths_destroy (widths);
 
@@ -225,7 +225,7 @@ gnc_table_init_gui (GtkWidget *widget, gchar * state_section)
 void
 gnc_table_refresh_gui (Table * table, gboolean do_scroll)
 {
-    GnucashSheet *sheet;
+    systecashSheet *sheet;
 
     if (!table)
         return;
@@ -236,9 +236,9 @@ gnc_table_refresh_gui (Table * table, gboolean do_scroll)
 
     sheet = GNUCASH_SHEET(table->ui_data);
 
-    gnucash_sheet_styles_recompile (sheet);
-    gnucash_sheet_table_load (sheet, do_scroll);
-    gnucash_sheet_redraw_all (sheet);
+    systecash_sheet_styles_recompile (sheet);
+    systecash_sheet_table_load (sheet, do_scroll);
+    systecash_sheet_redraw_all (sheet);
 }
 
 
@@ -247,7 +247,7 @@ gnc_table_refresh_cursor_gnome (Table * table,
                                 VirtualCellLocation vcell_loc,
                                 gboolean do_scroll)
 {
-    GnucashSheet *sheet;
+    systecashSheet *sheet;
 
     if (!table || !table->ui_data)
         return;
@@ -259,17 +259,17 @@ gnc_table_refresh_cursor_gnome (Table * table,
 
     sheet = GNUCASH_SHEET (table->ui_data);
 
-    gnucash_sheet_cursor_set_from_table (sheet, do_scroll);
+    systecash_sheet_cursor_set_from_table (sheet, do_scroll);
 
-    if (gnucash_sheet_block_set_from_table (sheet, vcell_loc))
+    if (systecash_sheet_block_set_from_table (sheet, vcell_loc))
     {
-        gnucash_sheet_recompute_block_offsets (sheet);
-        gnucash_sheet_set_scroll_region (sheet);
-        gnucash_sheet_compute_visible_range (sheet);
-        gnucash_sheet_redraw_all (sheet);
+        systecash_sheet_recompute_block_offsets (sheet);
+        systecash_sheet_set_scroll_region (sheet);
+        systecash_sheet_compute_visible_range (sheet);
+        systecash_sheet_redraw_all (sheet);
     }
     else
-        gnucash_sheet_redraw_block (sheet, vcell_loc);
+        systecash_sheet_redraw_block (sheet, vcell_loc);
 }
 
 void
@@ -277,7 +277,7 @@ gnc_table_show_range (Table *table,
                       VirtualCellLocation start_loc,
                       VirtualCellLocation end_loc)
 {
-    GnucashSheet *sheet;
+    systecashSheet *sheet;
 
     if (!table || !table->ui_data)
         return;
@@ -292,7 +292,7 @@ gnc_table_show_range (Table *table,
 
     sheet = GNUCASH_SHEET (table->ui_data);
 
-    gnucash_sheet_show_range (sheet, start_loc, end_loc);
+    systecash_sheet_show_range (sheet, start_loc, end_loc);
 }
 
 void

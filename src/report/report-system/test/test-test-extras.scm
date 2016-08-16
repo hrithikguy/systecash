@@ -18,8 +18,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (debug-set! stack 50000)
-(use-modules (gnucash report report-system test test-extras))
-(use-modules (gnucash engine test test-extras))
+(use-modules (systecash report report-system test test-extras))
+(use-modules (systecash engine test test-extras))
 
 (use-modules (ice-9 streams))
 
@@ -94,12 +94,12 @@
 ;;
 ;;
 
-;(use-modules (gnucash engine))
-;(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-;(use-modules (gnucash printf))
-;(use-modules (gnucash report report-system))
-;(use-modules (gnucash app-utils))
-(use-modules (gnucash engine))
+;(use-modules (systecash engine))
+;(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+;(use-modules (systecash printf))
+;(use-modules (systecash report report-system))
+;(use-modules (systecash app-utils))
+(use-modules (systecash engine))
 (use-modules (sw_engine))
 
 (define (test-create-account-structure)

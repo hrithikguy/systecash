@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-features.h -- manage GnuCash features table                  *
+ * gnc-features.h -- manage systecash features table                  *
  * Copyright (C) 2011 Derek Atkins <derek@ihtfp.com>                *
  * Copyright (C) 2012 Geert Janssens <geert@kobaltwit.be>           *
  *                                                                  *
@@ -28,8 +28,8 @@
  *  @author Copyright (C) 2011 Derek Atkins <derek@ihtfp.com>
  *  @author Copyright (C) 2012 Geert Janssens <geert@kobaltwit.be>
  *
- *  These functions help you to manage features that GnuCash supports.
- *  This is mainly used to prevent older GnuCash versions from opening
+ *  These functions help you to manage features that systecash supports.
+ *  This is mainly used to prevent older systecash versions from opening
  *  book with data they aren't capable of processing properly.
  */
 
@@ -51,7 +51,7 @@
 
 /**
  * Test if the current book relies on features only introduced in a more
- * recent version of GnuCash.
+ * recent version of systecash.
  *
  * Returns a message to display if we found unknown features, NULL if we're okay.
  */
@@ -59,7 +59,7 @@ gchar *gnc_features_test_unknown (QofBook *book);
 
 /**
  * Indicate that the current book uses the given feature. This will prevent
- * older versions of GnuCash that don't support this feature to refuse to load
+ * older versions of systecash that don't support this feature to refuse to load
  * this book.
  */
 void gnc_features_set_used (QofBook *book, const gchar *feature);

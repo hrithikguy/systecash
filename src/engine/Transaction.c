@@ -529,7 +529,7 @@ xaccMallocTransaction (QofBook *book)
 
 #ifdef DUMP_FUNCTIONS
 /* Please don't delete this function.  Although it is not called by
-   any other code in GnuCash, it is useful when debugging.  For example
+   any other code in systecash, it is useful when debugging.  For example
    it can be called using the gdb "call" command when stopped at a
    breakpoint.  */
 void

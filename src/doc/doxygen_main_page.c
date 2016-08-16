@@ -1,12 +1,12 @@
-/** \mainpage GnuCash design and developer's reference
+/** \mainpage systecash design and developer's reference
 
-This is the new developer and design manual for GnuCash.
+This is the new developer and design manual for systecash.
 
 \section maindocs Documentation Sections.
 
 The documentation is organised in a rough sequence:
 
--# \ref manualguide Start with the main GnuCash manual.
+-# \ref manualguide Start with the main systecash manual.
 -# \ref texihtml Design overview.
 -# \ref doxylist Individual topic overviews, linked into the
 	full API reference for each topic, generated from source code.
@@ -15,13 +15,13 @@ The documentation is organised in a rough sequence:
 \subsection manualguide External documentation.
 
 Please refer to the main
-<a href="http://www.gnucash.org/docs.phtml">documentation
-page</a> on the gnucash website which includes links to the
-GnuCash Manual and the Concepts Guide in various formats.
+<a href="http://www.systecash.org/docs.phtml">documentation
+page</a> on the systecash website which includes links to the
+systecash Manual and the Concepts Guide in various formats.
 
 \subsection texihtml Documentation elsewhere in the source tree.
 
-There is also the "GnuCash Design Overview" which can be generated
+There is also the "systecash Design Overview" which can be generated
 from the source using texi2html from the texinfo files in
 src/doc/design, but this is even more outdated.
 
@@ -49,7 +49,7 @@ in relation to existing code.
 - \ref multicurrency
 - \ref plugindesign
 - \ref pricedocs
-- \ref gnucashextension
+- \ref systecashextension
 - \ref python_bindings_page
 - \ref qif
 - \ref backendapi
@@ -222,8 +222,8 @@ the last highlighted line to refresh the highlighting. Some editors have a speci
 refresh option.
 
 [cstim 2003-03-25] The "Data Structures" page of doxygen doesn't show
-anything useful for GnuCash. Obviously doxygen only accepts "real" C
-struct definitions for inclusion on that page. However, all GnuCash
+anything useful for systecash. Obviously doxygen only accepts "real" C
+struct definitions for inclusion on that page. However, all systecash
 data structures are defined somewhere in private headers, and only the
 typedefs are publically visible. Isn't there a way to have doxygen
 show the documentation for the <i>typedefs</i> on the "Data
@@ -258,11 +258,11 @@ blocks: http://www.stack.nl/~dimitri/doxygen/commands.html
 \section contact Contacts
 
 \subsection web Web Site
-News about GnuCash as well as the latest version can always be found at http://www.gnucash.org/
+News about systecash as well as the latest version can always be found at http://www.systecash.org/
 
 \subsection email Email
 If you have any suggestions concerning this documentation, do not hesitate to send suggestions to
-gnucash-devel (see http://www.gnucash.org/en/lists.phtml for details)
+systecash-devel (see http://www.systecash.org/en/lists.phtml for details)
 
 Benoit Grégoire <bock@step.polymtl.ca>
 Neil Williams <linux@codehelp.co.uk>

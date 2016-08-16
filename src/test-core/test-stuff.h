@@ -3,7 +3,7 @@
  * print_test_results, set_success_print.
  *
  * Modified by bstanley 20010323
- * removed testing functionality which depends on the rest of gnucash -
+ * removed testing functionality which depends on the rest of systecash -
  * separated into gnc-test-stuff.h
  *
  */

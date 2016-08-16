@@ -41,7 +41,7 @@
 #include "gnc-ui-util.h"
 #include "gnc-date-edit.h"
 #include "gnc-amount-edit.h"
-#include "gnucash-sheet.h"
+#include "systecash-sheet.h"
 #include "window-report.h"
 #include "dialog-search.h"
 #include "search-param.h"
@@ -182,7 +182,7 @@ struct _invoice_window
     gint         width;
 
     GncBillTerm     * terms;
-    GnucashRegister * reg;
+    systecashRegister * reg;
     GncEntryLedger  * ledger;
 
     invoice_sort_type_t last_sort;
@@ -542,7 +542,7 @@ gnc_invoice_window_recordCB (GtkWidget *widget, gpointer data)
     if (!gnc_entry_ledger_commit_entry (iw->ledger))
         return;
 
-    gnucash_register_goto_next_virt_row (iw->reg);
+    systecash_register_goto_next_virt_row (iw->reg);
 }
 
 void
@@ -637,7 +637,7 @@ gnc_invoice_window_blankCB (GtkWidget *widget, gpointer data)
             return;
 
         if (gnc_entry_ledger_get_entry_virt_loc (iw->ledger, blank, &vcell_loc))
-            gnucash_register_goto_virt_cell (iw->reg, vcell_loc);
+            systecash_register_goto_virt_cell (iw->reg, vcell_loc);
     }
 }
 
@@ -1008,19 +1008,19 @@ gnc_invoice_window_unpostCB (GtkWidget *widget, gpointer data)
 void gnc_invoice_window_cut_cb (GtkWidget *widget, gpointer data)
 {
     InvoiceWindow *iw = data;
-    gnucash_register_cut_clipboard (iw->reg);
+    systecash_register_cut_clipboard (iw->reg);
 }
 
 void gnc_invoice_window_copy_cb (GtkWidget *widget, gpointer data)
 {
     InvoiceWindow *iw = data;
-    gnucash_register_copy_clipboard (iw->reg);
+    systecash_register_copy_clipboard (iw->reg);
 }
 
 void gnc_invoice_window_paste_cb (GtkWidget *widget, gpointer data)
 {
     InvoiceWindow *iw = data;
-    gnucash_register_paste_clipboard (iw->reg);
+    systecash_register_paste_clipboard (iw->reg);
 }
 
 void gnc_invoice_window_new_invoice_cb (GtkWidget *widget, gpointer data)
@@ -1534,7 +1534,7 @@ gnc_invoice_reset_total_label (GtkLabel *label, gnc_numeric amt, gnc_commodity *
 }
 
 static void
-gnc_invoice_redraw_all_cb (GnucashRegister *g_reg, gpointer data)
+gnc_invoice_redraw_all_cb (systecashRegister *g_reg, gpointer data)
 {
     InvoiceWindow *iw = data;
     GncInvoice * invoice;
@@ -2416,7 +2416,7 @@ gnc_invoice_create_page (InvoiceWindow *iw, gpointer page)
         GtkWidget *regWidget, *frame, *window;
 
         /* Watch the order of operations, here... */
-        regWidget = gnucash_register_new (gnc_entry_ledger_get_table
+        regWidget = systecash_register_new (gnc_entry_ledger_get_table
                                           (entry_ledger));
         gtk_widget_show(regWidget);
         gnc_table_init_gui( regWidget, NULL);
@@ -2426,7 +2426,7 @@ gnc_invoice_create_page (InvoiceWindow *iw, gpointer page)
 
         iw->reg = GNUCASH_REGISTER (regWidget);
         window = gnc_plugin_page_get_window(iw->page);
-        gnucash_sheet_set_window (gnucash_register_get_sheet (iw->reg), window);
+        systecash_sheet_set_window (systecash_register_get_sheet (iw->reg), window);
 
         g_signal_connect (G_OBJECT (regWidget), "activate_cursor",
                           G_CALLBACK (gnc_invoice_window_recordCB), iw);
@@ -3018,7 +3018,7 @@ gnc_invoice_search (GncInvoice *start, GncOwner *owner, QofBook *book)
     static GNCSearchCallbackButton emp_buttons[] =
     {
         /* Translators: The terms 'Voucher' and 'Expense Voucher' are used
-           interchangeably in gnucash and mean the same thing. */
+           interchangeably in systecash and mean the same thing. */
         { N_("View/Edit Voucher"), edit_invoice_cb, NULL, TRUE},
         { N_("Process Payment"), pay_invoice_cb, NULL, FALSE},
         { N_("Duplicate"), NULL, multi_duplicate_invoice_cb, FALSE},

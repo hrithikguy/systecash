@@ -19,7 +19,7 @@
 \********************************************************************/
 
 /*
- * The Gnucash Grid Canvas Item
+ * The systecash Grid Canvas Item
  *
  *  Based heavily (i.e., cut and pasted from) on the Gnumeric ItemGrid.
  *
@@ -32,18 +32,18 @@
 #include <string.h>
 #include <libgnomecanvas/libgnomecanvas.h>
 
-#include "gnucash-sheet.h"
-#include "gnucash-sheetP.h"
-#include "gnucash-grid.h"
-#include "gnucash-color.h"
-#include "gnucash-style.h"
+#include "systecash-sheet.h"
+#include "systecash-sheetP.h"
+#include "systecash-grid.h"
+#include "systecash-color.h"
+#include "systecash-style.h"
 
 
-struct _GnucashGrid
+struct _systecashGrid
 {
     GnomeCanvasItem canvas_item;
 
-    GnucashSheet *sheet;
+    systecashSheet *sheet;
 
     /* The first and last displayed block */
     int        top_block;
@@ -63,12 +63,12 @@ struct _GnucashGrid
 };
 
 
-struct _GnucashGridClass
+struct _systecashGridClass
 {
     GnomeCanvasItemClass parent_class;
 };
 
-static GnomeCanvasItem *gnucash_grid_parent_class;
+static GnomeCanvasItem *systecash_grid_parent_class;
 
 /* Our arguments */
 enum
@@ -79,74 +79,74 @@ enum
 
 
 static void
-gnucash_grid_realize (GnomeCanvasItem *item)
+systecash_grid_realize (GnomeCanvasItem *item)
 {
     GdkWindow *window;
-    GnucashGrid *gnucash_grid;
+    systecashGrid *systecash_grid;
     GdkGC *gc;
 
-    if (GNOME_CANVAS_ITEM_CLASS (gnucash_grid_parent_class)->realize)
+    if (GNOME_CANVAS_ITEM_CLASS (systecash_grid_parent_class)->realize)
         (GNOME_CANVAS_ITEM_CLASS
-         (gnucash_grid_parent_class)->realize)(item);
+         (systecash_grid_parent_class)->realize)(item);
 
-    gnucash_grid = GNUCASH_GRID (item);
+    systecash_grid = GNUCASH_GRID (item);
     window = gtk_widget_get_window (GTK_WIDGET (item->canvas));
 
     /* Configure the default grid gc */
-    gnucash_grid->grid_gc = gc = gdk_gc_new (window);
-    gnucash_grid->fill_gc = gdk_gc_new (window);
-    gnucash_grid->gc = gdk_gc_new (window);
+    systecash_grid->grid_gc = gc = gdk_gc_new (window);
+    systecash_grid->fill_gc = gdk_gc_new (window);
+    systecash_grid->gc = gdk_gc_new (window);
 
     /* Allocate the default colors */
-    gnucash_grid->background = gn_white;
-    gnucash_grid->grid_color = gn_black;
-    gnucash_grid->default_color = gn_black;
+    systecash_grid->background = gn_white;
+    systecash_grid->grid_color = gn_black;
+    systecash_grid->default_color = gn_black;
 
-    gdk_gc_set_foreground (gc, &gnucash_grid->grid_color);
-    gdk_gc_set_background (gc, &gnucash_grid->background);
+    gdk_gc_set_foreground (gc, &systecash_grid->grid_color);
+    gdk_gc_set_background (gc, &systecash_grid->background);
 
-    gdk_gc_set_foreground (gnucash_grid->fill_gc,
-                           &gnucash_grid->background);
-    gdk_gc_set_background (gnucash_grid->fill_gc,
-                           &gnucash_grid->grid_color);
+    gdk_gc_set_foreground (systecash_grid->fill_gc,
+                           &systecash_grid->background);
+    gdk_gc_set_background (systecash_grid->fill_gc,
+                           &systecash_grid->grid_color);
 }
 
 
 static void
-gnucash_grid_unrealize (GnomeCanvasItem *item)
+systecash_grid_unrealize (GnomeCanvasItem *item)
 {
-    GnucashGrid *gnucash_grid = GNUCASH_GRID (item);
+    systecashGrid *systecash_grid = GNUCASH_GRID (item);
 
-    if (gnucash_grid->grid_gc != NULL)
+    if (systecash_grid->grid_gc != NULL)
     {
-        g_object_unref(gnucash_grid->grid_gc);
-        gnucash_grid->grid_gc = NULL;
+        g_object_unref(systecash_grid->grid_gc);
+        systecash_grid->grid_gc = NULL;
     }
 
-    if (gnucash_grid->fill_gc != NULL)
+    if (systecash_grid->fill_gc != NULL)
     {
-        g_object_unref(gnucash_grid->fill_gc);
-        gnucash_grid->fill_gc = NULL;
+        g_object_unref(systecash_grid->fill_gc);
+        systecash_grid->fill_gc = NULL;
     }
 
-    if (gnucash_grid->gc != NULL)
+    if (systecash_grid->gc != NULL)
     {
-        g_object_unref(gnucash_grid->gc);
-        gnucash_grid->gc = NULL;
+        g_object_unref(systecash_grid->gc);
+        systecash_grid->gc = NULL;
     }
 
-    if (GNOME_CANVAS_ITEM_CLASS (gnucash_grid_parent_class)->unrealize)
+    if (GNOME_CANVAS_ITEM_CLASS (systecash_grid_parent_class)->unrealize)
         (*GNOME_CANVAS_ITEM_CLASS
-         (gnucash_grid_parent_class)->unrealize)(item);
+         (systecash_grid_parent_class)->unrealize)(item);
 }
 
 
 static void
-gnucash_grid_update (GnomeCanvasItem *item, double *affine,
+systecash_grid_update (GnomeCanvasItem *item, double *affine,
                      ArtSVP *clip_path, int flags)
 {
-    if (GNOME_CANVAS_ITEM_CLASS (gnucash_grid_parent_class)->update)
-        (* GNOME_CANVAS_ITEM_CLASS (gnucash_grid_parent_class)->update)
+    if (GNOME_CANVAS_ITEM_CLASS (systecash_grid_parent_class)->update)
+        (* GNOME_CANVAS_ITEM_CLASS (systecash_grid_parent_class)->update)
         (item, affine, clip_path, flags);
 
     item->x1 = 0;
@@ -166,7 +166,7 @@ gnucash_grid_update (GnomeCanvasItem *item, double *affine,
  * All coordinates are with respect to the canvas origin.
  */
 static SheetBlock *
-gnucash_grid_find_block_by_pixel (GnucashGrid *grid,
+systecash_grid_find_block_by_pixel (systecashGrid *grid,
                                   gint x, gint y,
                                   VirtualCellLocation *vcell_loc)
 {
@@ -178,7 +178,7 @@ gnucash_grid_find_block_by_pixel (GnucashGrid *grid,
 
     do
     {
-        block = gnucash_sheet_get_block (grid->sheet, vc_loc);
+        block = systecash_sheet_get_block (grid->sheet, vc_loc);
         if (!block)
             return NULL;
 
@@ -199,7 +199,7 @@ gnucash_grid_find_block_by_pixel (GnucashGrid *grid,
 
     do
     {
-        block = gnucash_sheet_get_block (grid->sheet, vc_loc);
+        block = systecash_sheet_get_block (grid->sheet, vc_loc);
         if (!block)
             return NULL;
 
@@ -222,7 +222,7 @@ gnucash_grid_find_block_by_pixel (GnucashGrid *grid,
 }
 
 static gboolean
-gnucash_grid_find_cell_by_pixel (GnucashGrid *grid, gint x, gint y,
+systecash_grid_find_cell_by_pixel (systecashGrid *grid, gint x, gint y,
                                  VirtualLocation *virt_loc)
 {
     SheetBlock *block;
@@ -233,7 +233,7 @@ gnucash_grid_find_cell_by_pixel (GnucashGrid *grid, gint x, gint y,
 
     g_return_val_if_fail (virt_loc != NULL, FALSE);
 
-    block = gnucash_sheet_get_block (grid->sheet, virt_loc->vcell_loc);
+    block = systecash_sheet_get_block (grid->sheet, virt_loc->vcell_loc);
     if (block == NULL)
         return FALSE;
 
@@ -247,7 +247,7 @@ gnucash_grid_find_cell_by_pixel (GnucashGrid *grid, gint x, gint y,
 
     do
     {
-        cd = gnucash_style_get_cell_dimensions (style, row, 0);
+        cd = systecash_style_get_cell_dimensions (style, row, 0);
 
         if (y >= cd->origin_y && y < cd->origin_y + cd->pixel_height)
             break;
@@ -261,7 +261,7 @@ gnucash_grid_find_cell_by_pixel (GnucashGrid *grid, gint x, gint y,
 
     do
     {
-        cd = gnucash_style_get_cell_dimensions (style, row, col);
+        cd = systecash_style_get_cell_dimensions (style, row, col);
 
         if (x >= cd->origin_x && x < cd->origin_x + cd->pixel_width)
             break;
@@ -282,7 +282,7 @@ gnucash_grid_find_cell_by_pixel (GnucashGrid *grid, gint x, gint y,
 }
 
 gboolean
-gnucash_grid_find_loc_by_pixel (GnucashGrid *grid, gint x, gint y,
+systecash_grid_find_loc_by_pixel (systecashGrid *grid, gint x, gint y,
                                 VirtualLocation *virt_loc)
 {
     SheetBlock *block;
@@ -290,12 +290,12 @@ gnucash_grid_find_loc_by_pixel (GnucashGrid *grid, gint x, gint y,
     if (virt_loc == NULL)
         return FALSE;
 
-    block = gnucash_grid_find_block_by_pixel (grid, x, y,
+    block = systecash_grid_find_block_by_pixel (grid, x, y,
             &virt_loc->vcell_loc);
     if (block == NULL)
         return FALSE;
 
-    return gnucash_grid_find_cell_by_pixel (grid, x, y, virt_loc);
+    return systecash_grid_find_cell_by_pixel (grid, x, y, virt_loc);
 }
 
 G_INLINE_FUNC void
@@ -340,19 +340,19 @@ draw_cell_line (GdkDrawable *drawable,
 }
 
 static void
-get_cell_borders (GnucashSheet *sheet, VirtualLocation virt_loc,
+get_cell_borders (systecashSheet *sheet, VirtualLocation virt_loc,
                   PhysicalCellBorders *borders)
 {
     VirtualLocation v_loc;
     PhysicalCellBorders neighbor;
 
-    gnucash_sheet_get_borders (sheet, virt_loc, borders);
+    systecash_sheet_get_borders (sheet, virt_loc, borders);
 
     /* top */
     v_loc = virt_loc;
     if (gnc_table_move_vertical_position (sheet->table, &v_loc, -1))
     {
-        gnucash_sheet_get_borders (sheet, v_loc, &neighbor);
+        systecash_sheet_get_borders (sheet, v_loc, &neighbor);
         borders->top = MAX (borders->top, neighbor.bottom);
     }
 
@@ -360,7 +360,7 @@ get_cell_borders (GnucashSheet *sheet, VirtualLocation virt_loc,
     v_loc = virt_loc;
     if (gnc_table_move_vertical_position (sheet->table, &v_loc, 1))
     {
-        gnucash_sheet_get_borders (sheet, v_loc, &neighbor);
+        systecash_sheet_get_borders (sheet, v_loc, &neighbor);
         borders->bottom = MAX (borders->bottom, neighbor.top);
     }
 
@@ -369,7 +369,7 @@ get_cell_borders (GnucashSheet *sheet, VirtualLocation virt_loc,
     v_loc.phys_col_offset--;
     if (gnc_table_virtual_loc_valid (sheet->table, v_loc, TRUE))
     {
-        gnucash_sheet_get_borders (sheet, v_loc, &neighbor);
+        systecash_sheet_get_borders (sheet, v_loc, &neighbor);
         borders->left = MAX (borders->left, neighbor.right);
     }
 
@@ -378,13 +378,13 @@ get_cell_borders (GnucashSheet *sheet, VirtualLocation virt_loc,
     v_loc.phys_col_offset++;
     if (gnc_table_virtual_loc_valid (sheet->table, v_loc, TRUE))
     {
-        gnucash_sheet_get_borders (sheet, v_loc, &neighbor);
+        systecash_sheet_get_borders (sheet, v_loc, &neighbor);
         borders->right = MAX (borders->right, neighbor.left);
     }
 }
 
 void
-gnucash_draw_hatching (GdkDrawable *drawable, GdkGC *gc,
+systecash_draw_hatching (GdkDrawable *drawable, GdkGC *gc,
                        int x, int y, int width, int height)
 {
     gdk_gc_set_foreground (gc, &gn_light_gray);
@@ -451,7 +451,7 @@ static guint32 dec_intensity_10percent(guint32 argb)
 }
 
 static void
-draw_cell (GnucashGrid *grid,
+draw_cell (systecashGrid *grid,
            SheetBlock *block,
            VirtualLocation virt_loc,
            GdkDrawable *drawable,
@@ -490,7 +490,7 @@ draw_cell (GnucashGrid *grid,
         {
             argb = dec_intensity_10percent(argb);
         }
-        bg_color = gnucash_color_argb_to_gdk (argb);
+        bg_color = systecash_color_argb_to_gdk (argb);
     }
 
     gdk_gc_set_foreground (grid->gc, bg_color);
@@ -536,7 +536,7 @@ draw_cell (GnucashGrid *grid,
                     borders.right);
 
     if (hatching)
-        gnucash_draw_hatching (drawable, grid->gc,
+        systecash_draw_hatching (drawable, grid->gc,
                                x, y, width, height);
 
     /* dividing line upper (red) */
@@ -651,7 +651,7 @@ draw_cell (GnucashGrid *grid,
             argb = inc_intensity_10percent(argb);
         }
 #endif
-        fg_color = gnucash_color_argb_to_gdk (argb);
+        fg_color = systecash_color_argb_to_gdk (argb);
     }
 
     gdk_gc_set_foreground (grid->gc, fg_color);
@@ -730,7 +730,7 @@ exit:
 }
 
 static void
-draw_block (GnucashGrid *grid,
+draw_block (systecashGrid *grid,
             SheetBlock *block,
             VirtualLocation virt_loc,
             GdkDrawable *drawable,
@@ -749,7 +749,7 @@ draw_block (GnucashGrid *grid,
                 virt_loc.phys_col_offset < block->style->ncols ;
                 virt_loc.phys_col_offset++ )
         {
-            cd = gnucash_style_get_cell_dimensions
+            cd = systecash_style_get_cell_dimensions
                  (block->style,
                   virt_loc.phys_row_offset,
                   virt_loc.phys_col_offset);
@@ -781,10 +781,10 @@ draw_block (GnucashGrid *grid,
 }
 
 static void
-gnucash_grid_draw (GnomeCanvasItem *item, GdkDrawable *drawable,
+systecash_grid_draw (GnomeCanvasItem *item, GdkDrawable *drawable,
                    int x, int y, int width, int height)
 {
-    GnucashGrid *grid = GNUCASH_GRID (item);
+    systecashGrid *grid = GNUCASH_GRID (item);
     VirtualLocation virt_loc;
     SheetBlock *sheet_block;
 
@@ -792,7 +792,7 @@ gnucash_grid_draw (GnomeCanvasItem *item, GdkDrawable *drawable,
         return;
 
     /* compute our initial values where we start drawing */
-    sheet_block = gnucash_grid_find_block_by_pixel (grid, x, y,
+    sheet_block = systecash_grid_find_block_by_pixel (grid, x, y,
                   &virt_loc.vcell_loc);
     if (!sheet_block || !sheet_block->style)
         return;
@@ -802,7 +802,7 @@ gnucash_grid_draw (GnomeCanvasItem *item, GdkDrawable *drawable,
     {
         while (TRUE)
         {
-            sheet_block = gnucash_sheet_get_block
+            sheet_block = systecash_sheet_get_block
                           (grid->sheet, virt_loc.vcell_loc);
 
             if (!sheet_block || !sheet_block->style)
@@ -824,7 +824,7 @@ gnucash_grid_draw (GnomeCanvasItem *item, GdkDrawable *drawable,
 
 
 static void
-gnucash_grid_init (GnucashGrid *grid)
+systecash_grid_init (systecashGrid *grid)
 {
     GnomeCanvasItem *item = GNOME_CANVAS_ITEM (grid);
 
@@ -840,12 +840,12 @@ gnucash_grid_init (GnucashGrid *grid)
 
 
 static void
-gnucash_grid_set_property (GObject         *object,
+systecash_grid_set_property (GObject         *object,
                            guint            prop_id,
                            const GValue    *value,
                            GParamSpec      *pspec)
 {
-    GnucashGrid *grid = GNUCASH_GRID (object);
+    systecashGrid *grid = GNUCASH_GRID (object);
 
     switch (prop_id)
     {
@@ -866,12 +866,12 @@ gnucash_grid_set_property (GObject         *object,
  * ref the object when used in get_property().
  */
 static void
-gnucash_grid_get_property (GObject         *object,
+systecash_grid_get_property (GObject         *object,
                            guint            prop_id,
                            GValue          *value,
                            GParamSpec      *pspec)
 {
-    GnucashGrid *grid = GNUCASH_GRID (object);
+    systecashGrid *grid = GNUCASH_GRID (object);
 
     switch (prop_id)
     {
@@ -885,7 +885,7 @@ gnucash_grid_get_property (GObject         *object,
 
 
 static void
-gnucash_grid_class_init (GnucashGridClass *klass)
+systecash_grid_class_init (systecashGridClass *klass)
 {
     GObjectClass  *object_class;
     GnomeCanvasItemClass *item_class;
@@ -893,17 +893,17 @@ gnucash_grid_class_init (GnucashGridClass *klass)
     object_class = G_OBJECT_CLASS (klass);
     item_class = GNOME_CANVAS_ITEM_CLASS (klass);
 
-    gnucash_grid_parent_class = g_type_class_peek_parent (klass);
+    systecash_grid_parent_class = g_type_class_peek_parent (klass);
 
     /* GObject method overrides */
-    object_class->set_property = gnucash_grid_set_property;
-    object_class->get_property = gnucash_grid_get_property;
+    object_class->set_property = systecash_grid_set_property;
+    object_class->get_property = systecash_grid_get_property;
 
     /* GnomeCanvasItem method overrides */
-    item_class->update      = gnucash_grid_update;
-    item_class->realize     = gnucash_grid_realize;
-    item_class->unrealize   = gnucash_grid_unrealize;
-    item_class->draw        = gnucash_grid_draw;
+    item_class->update      = systecash_grid_update;
+    item_class->realize     = systecash_grid_realize;
+    item_class->unrealize   = systecash_grid_unrealize;
+    item_class->draw        = systecash_grid_draw;
 
     /* properties */
     g_object_class_install_property
@@ -918,32 +918,32 @@ gnucash_grid_class_init (GnucashGridClass *klass)
 
 
 GType
-gnucash_grid_get_type (void)
+systecash_grid_get_type (void)
 {
-    static GType gnucash_grid_type = 0;
+    static GType systecash_grid_type = 0;
 
-    if (!gnucash_grid_type)
+    if (!systecash_grid_type)
     {
-        static const GTypeInfo gnucash_grid_info =
+        static const GTypeInfo systecash_grid_info =
         {
-            sizeof (GnucashGridClass),
+            sizeof (systecashGridClass),
             NULL,		/* base_init */
             NULL,		/* base_finalize */
-            (GClassInitFunc) gnucash_grid_class_init,
+            (GClassInitFunc) systecash_grid_class_init,
             NULL,		/* class_finalize */
             NULL,		/* class_data */
-            sizeof (GnucashGrid),
+            sizeof (systecashGrid),
             0,		/* n_preallocs */
-            (GInstanceInitFunc) gnucash_grid_init
+            (GInstanceInitFunc) systecash_grid_init
         };
 
-        gnucash_grid_type =
+        systecash_grid_type =
             g_type_register_static (gnome_canvas_item_get_type (),
-                                    "GnucashGrid",
-                                    &gnucash_grid_info, 0);
+                                    "systecashGrid",
+                                    &systecash_grid_info, 0);
     }
 
-    return gnucash_grid_type;
+    return systecash_grid_type;
 }
 
 

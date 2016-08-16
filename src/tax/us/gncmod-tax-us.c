@@ -60,11 +60,11 @@ libgncmod_tax_us_gnc_module_path(void)
     gboolean is_de_DE = (strncmp(thislocale, "de_DE", 5) == 0);
 # endif /* G_OS_WIN32 */
     if (is_de_DE)
-        return g_strdup("gnucash/tax/de_DE");
+        return g_strdup("systecash/tax/de_DE");
     else
-        return g_strdup("gnucash/tax/us");
+        return g_strdup("systecash/tax/us");
 #endif /* LOCALE_SPECIFIC_TAX */
-    return g_strdup("gnucash/tax/us");
+    return g_strdup("systecash/tax/us");
 }
 
 char *
@@ -97,10 +97,10 @@ libgncmod_tax_us_gnc_module_init(int refcount)
     gboolean is_de_DE = (strncmp(thislocale, "de_DE", 5) == 0);
 # endif /* G_OS_WIN32 */
     if (is_de_DE)
-        lmod("(gnucash tax de_DE)");
+        lmod("(systecash tax de_DE)");
     else
 #endif /* LOCALE_SPECIFIC_TAX */
-        lmod("(gnucash tax us)");
+        lmod("(systecash tax us)");
     return TRUE;
 }
 

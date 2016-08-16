@@ -1,5 +1,5 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.gnucash.dialogs.commodities" path="/org/gnucash/dialogs/commodities/">
+  <schema id="org.systecash.dialogs.commodities" path="/org/systecash/dialogs/commodities/">
     <key name="include-iso" type="b">
       <default>false</default>
       <summary>Show currencies in this dialog</summary>

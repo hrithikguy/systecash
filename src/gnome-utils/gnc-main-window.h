@@ -1,6 +1,6 @@
 /*
  * gnc-main-window.h -- GtkWindow which represents the
- *	GnuCash main window.
+ *	systecash main window.
  *
  * Copyright (C) 2003 Jan Arne Petersen <jpetersen@uni-bonn.de>
  * Copyright (C) 2003,2005 David Hampton <hampton@employees.org>
@@ -302,7 +302,7 @@ void gnc_main_window_set_progressbar_window( GncMainWindow *window );
 
 
 /** Callback function invoked when the user clicks in the content of
- *  any Gnucash window.  If this was a "right-click" then Gnucash will
+ *  any systecash window.  If this was a "right-click" then systecash will
  *  popup the contextual menu.
  *
  *  @param whatever Whatever widget had focus when the user issued the
@@ -315,7 +315,7 @@ void gnc_main_window_set_progressbar_window( GncMainWindow *window );
  *  @param page This is the GncPluginPage corresponding to the visible
  *  page.
  *
- *  @return Returns TRUE if this was a right-click, meaning Gnucash
+ *  @return Returns TRUE if this was a right-click, meaning systecash
  *  handled the click.
  */
 gboolean gnc_main_window_button_press_cb (GtkWidget *whatever,
@@ -348,7 +348,7 @@ void gnc_main_window_restore_default_state(GncMainWindow *window);
  * gtk_action_group_add_actions().
  *
  * This is copied from gtk's gtk_action_group_set_translation_domain()
- * into GnuCash in order to fix problems when empty msgids were passed
+ * into systecash in order to fix problems when empty msgids were passed
  * through gettext().
  *
  * See http://bugzilla.gnome.org/show_bug.cgi?id=326200 . If that bug

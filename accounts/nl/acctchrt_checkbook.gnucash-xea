@@ -4,7 +4,7 @@
       Eenvoudige betaalrekening
     </gnc-act:title>
     <gnc-act:short-description>
-     De minimaal benodigde rekeningen binnen GnuCash.
+     De minimaal benodigde rekeningen binnen systecash.
     </gnc-act:short-description>
     <gnc-act:long-description>
      Deze verzameling bevat uitsluitend de minimaal benodigde rekeningen. Eventuele verfijningen kunt u zelf op een later tijdstip probleemloos toevoegen.

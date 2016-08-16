@@ -48,14 +48,14 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report standard-reports account-summary))
+(define-module (systecash report standard-reports account-summary))
 
 (use-modules (srfi srfi-1))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
 ;; account summary report prints a table of account information,
 ;; optionally with clickable links to open the corresponding register

@@ -75,7 +75,7 @@ static const gchar *new_book_finish_tree_string = N_(
             "You can verify your selections by clicking on 'Back' or 'Cancel' to Abort Import.\n\n"
             "If this is your initial import into a new file, you will first see "
             "a dialog for setting book options, since these can affect how "
-            "imported data is converted to GnuCash transactions.\n"
+            "imported data is converted to systecash transactions.\n"
             "Note: After import, you may need to use 'View / Filter By / Other' menu option "
             "and select to show unused Accounts.\n");
 

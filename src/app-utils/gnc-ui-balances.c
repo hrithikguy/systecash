@@ -1,7 +1,7 @@
 /********************************************************************\
  * gnc-ui-balances.c -- utility functions for calculating           *
  *                      account and owner balances used in the      *
- *                      the GnuCash UI                              *
+ *                      the systecash UI                              *
  * Copyright (C) 2000 Dave Peticolas <dave@krondo.com>              *
  * Copyright (C) 2011 Geert Janssens <geert@kobaltwit.be>           *
  *                                                                  *

@@ -31,7 +31,7 @@ guile_main(void *closure, int argc, char ** argv)
 {
     GNCModule foo;
     gchar *msg1 = "Module '../../../src/gnc-module/test/misc-mods/.libs/libgncmod_futuremodsys.so' requires newer module system\n";
-    gchar *msg2 = "Could not locate module gnucash/futuremodsys interface v.0";
+    gchar *msg2 = "Could not locate module systecash/futuremodsys interface v.0";
     gchar *logdomain = "gnc.module";
     guint loglevel = G_LOG_LEVEL_WARNING;
     TestErrorStruct check1 = { loglevel, logdomain, msg1 };
@@ -45,7 +45,7 @@ guile_main(void *closure, int argc, char ** argv)
 
     gnc_module_system_init();
 
-    foo = gnc_module_load("gnucash/futuremodsys", 0);
+    foo = gnc_module_load("systecash/futuremodsys", 0);
 
     if (!foo)
     {

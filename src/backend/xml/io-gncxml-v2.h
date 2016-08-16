@@ -1,5 +1,5 @@
 /********************************************************************\
- * io-gncxml-v2.h -- api for gnucash xml i/o                        *
+ * io-gncxml-v2.h -- api for systecash xml i/o                        *
  *                                                                  *
  * Copyright (c) 2001 Gnumatic Incorporated                         *
  *                                                                  *
@@ -24,7 +24,7 @@
 
 /**
  * @file io-gncxml-v2.h
- * @brief api for GnuCash version 2 XML-based file format
+ * @brief api for systecash version 2 XML-based file format
  * @author Initial code by James LewisMoss, 2001
  */
 
@@ -102,7 +102,7 @@ QofBookFileType gnc_is_xml_data_file_v2 (const gchar* name,
                                          gboolean* with_encoding);
 
 /** Write a name-space declaration for the provided namespace data type
- * within the GNC XML namespace at http://www.gnucash.org/XML.
+ * within the GNC XML namespace at http://www.systecash.org/XML.
  */
 gboolean gnc_xml2_write_namespace_decl (FILE* out, const char* name_space);
 

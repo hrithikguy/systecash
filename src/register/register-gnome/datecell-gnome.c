@@ -41,17 +41,17 @@
 #include "datecell.h"
 #include "dialog-utils.h"
 #include "gnc-ui-util.h"
-#include "gnucash-date-picker.h"
-#include "gnucash-item-edit.h"
-#include "gnucash-sheet.h"
-#include "gnucash-sheetP.h"
+#include "systecash-date-picker.h"
+#include "systecash-item-edit.h"
+#include "systecash-sheet.h"
+#include "systecash-sheetP.h"
 
 
 #define DATE_BUF (MAX_DATE_LENGTH+1)
 
 typedef struct _PopBox
 {
-    GnucashSheet  *sheet;
+    systecashSheet  *sheet;
     GncItemEdit      *item_edit;
     GNCDatePicker *date_picker;
 
@@ -247,7 +247,7 @@ date_picked_cb (GNCDatePicker *gdp, gpointer data)
     qof_print_date_dmy_buff (buffer, MAX_DATE_LENGTH, day, month + 1, year);
 
     box->in_date_select = TRUE;
-    gnucash_sheet_modify_current_cell (box->sheet, buffer);
+    systecash_sheet_modify_current_cell (box->sheet, buffer);
     box->in_date_select = FALSE;
 
     gnc_item_edit_hide_popup (box->item_edit);
@@ -267,7 +267,7 @@ date_selected_cb (GNCDatePicker *gdp, gpointer data)
     qof_print_date_dmy_buff (buffer, MAX_DATE_LENGTH, day, month + 1, year);
 
     box->in_date_select = TRUE;
-    gnucash_sheet_modify_current_cell (box->sheet, buffer);
+    systecash_sheet_modify_current_cell (box->sheet, buffer);
     box->in_date_select = FALSE;
 }
 
@@ -599,8 +599,8 @@ gnc_date_cell_modify_verify (BasicCell *_cell,
 static void
 gnc_date_cell_realize (BasicCell *bcell, gpointer data)
 {
-    GnucashSheet *sheet = data;
-    GncItemEdit *item_edit = gnucash_sheet_get_item_edit (sheet);
+    systecashSheet *sheet = data;
+    GncItemEdit *item_edit = systecash_sheet_get_item_edit (sheet);
     DateCell *cell = (DateCell *) bcell;
     PopBox *box = cell->cell.gui_private;
 

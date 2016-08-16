@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-gnome-utils.c -- utility functions for gnome for GnuCash     *
+ * gnc-gnome-utils.c -- utility functions for gnome for systecash     *
  * Copyright (C) 2001 Linux Developers Group                        *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
@@ -178,7 +178,7 @@ gnc_gtk_add_rc_file (void)
     var = g_get_home_dir ();
     if (var)
     {
-        str = g_build_filename (var, ".gtkrc-2.0.gnucash", (char *)NULL);
+        str = g_build_filename (var, ".gtkrc-2.0.systecash", (char *)NULL);
         gtk_rc_add_default_file (str);
         g_free (str);
     }
@@ -219,7 +219,7 @@ else if ([subdir compare: @HF_GUIDE] == NSOrderedSame)
          * add some more pieces, and put it all back together again. Then,
          * because the gettext way of handling localizations is different from
          * OSX's, we have to figure out which translation to use. */
-NSArray *components = [NSArray arrayWithObjects: @"share", @"doc", @"gnucash-docs", nil ];
+NSArray *components = [NSArray arrayWithObjects: @"share", @"doc", @"systecash-docs", nil ];
         NSString *prefix = [[[NSBundle mainBundle] resourcePath]
                             stringByDeletingLastPathComponent];
         NSArray *prefix_comps = [[prefix pathComponents]
@@ -233,8 +233,8 @@ subdir = [[[subdir lowercaseString] componentsSeparatedByString: @" "]
 if (![[NSFileManager defaultManager] fileExistsAtPath: docs_dir])
         {
             const gchar *message =
-                _("GnuCash could not find the files for the help documentation. "
-                  "This is likely because the 'gnucash-docs' package is not installed");
+                _("systecash could not find the files for the help documentation. "
+                  "This is likely because the 'systecash-docs' package is not installed");
             gnc_error_dialog(NULL, "%s at %s", message, [docs_dir UTF8String]);
             [pool release];
             return;
@@ -326,8 +326,8 @@ url = [NSURL fileURLWithPath: [[NSBundle mainBundle]
     else
     {
         const gchar *message =
-            _("GnuCash could not find the files for the help documentation. "
-              "This is likely because the 'gnucash-docs' package is not installed.");
+            _("systecash could not find the files for the help documentation. "
+              "This is likely because the 'systecash-docs' package is not installed.");
         gnc_error_dialog(NULL, "%s", message);
     }
     [pool release];
@@ -357,7 +357,7 @@ gnc_gnome_help (const char *file_name, const char *anchor)
     if (!found)
     {
         const gchar *message =
-            _("GnuCash could not find the files for the help documentation.");
+            _("systecash could not find the files for the help documentation.");
         gnc_error_dialog (NULL, message);
     }
     else
@@ -388,8 +388,8 @@ gnc_gnome_help (const char *file_name, const char *anchor)
     g_assert(error != NULL);
     {
         const gchar *message =
-            _("GnuCash could not find the files for the help documentation. "
-              "This is likely because the 'gnucash-docs' package is not installed.");
+            _("systecash could not find the files for the help documentation. "
+              "This is likely because the 'systecash-docs' package is not installed.");
         gnc_error_dialog(NULL, "%s", message);
     }
     PERR ("%s", error->message);
@@ -412,7 +412,7 @@ gnc_launch_assoc (const char *uri)
     NSString *uri_str = [NSString stringWithUTF8String: uri];
     NSURL *url = [[[NSURL alloc] initWithString: uri_str] autorelease];
     const gchar *message =
-        _("GnuCash could not find the associated file.");
+        _("systecash could not find the associated file.");
 
     if (url)
     {
@@ -449,7 +449,7 @@ gnc_launch_assoc (const char *uri)
 				   NULL, NULL, SW_SHOWNORMAL) <= 32)
 	{
 	    const gchar *message =
-		_("GnuCash could not find the associated file");
+		_("systecash could not find the associated file");
 	    gnc_error_dialog(NULL, "%s: %s", message, uri);
 	}
 	g_free (wincmd);
@@ -475,7 +475,7 @@ gnc_launch_assoc (const char *uri)
     g_assert(error != NULL);
     {
         const gchar *message =
-            _("GnuCash could not open the associated URI:");
+            _("systecash could not open the associated URI:");
         gnc_error_dialog(NULL, "%s\n%s", message, uri);
     }
     PERR ("%s", error->message);
@@ -636,9 +636,9 @@ gnc_gui_init(void)
     gchar *data_dir;
 #endif
     int idx;
-    char *icon_filenames[] = {"gnucash-icon-16x16.png",
-                              "gnucash-icon-32x32.png",
-                              "gnucash-icon-48x48.png",
+    char *icon_filenames[] = {"systecash-icon-16x16.png",
+                              "systecash-icon-32x32.png",
+                              "systecash-icon-48x48.png",
                               NULL
                              };
     GList *icons = NULL;
@@ -718,7 +718,7 @@ gnc_gui_init(void)
     gnc_window_set_progressbar_window (GNC_WINDOW(main_window));
 
 #ifdef MAC_INTEGRATION
-    map = gnc_build_dotgnucash_path(ACCEL_MAP_NAME);
+    map = gnc_build_dotsystecash_path(ACCEL_MAP_NAME);
     if (!g_file_test (map, G_FILE_TEST_EXISTS))
     {
 	g_free (map);
@@ -727,7 +727,7 @@ gnc_gui_init(void)
 	g_free(data_dir);
     }
 #else
-    map = gnc_build_dotgnucash_path(ACCEL_MAP_NAME);
+    map = gnc_build_dotsystecash_path(ACCEL_MAP_NAME);
 #endif /* MAC_INTEGRATION */
     gtk_accel_map_load(map);
     g_free(map);
@@ -740,7 +740,7 @@ gnc_gui_init(void)
 }
 
 gboolean
-gnucash_ui_is_running(void)
+systecash_ui_is_running(void)
 {
     return gnome_is_running;
 }
@@ -762,20 +762,20 @@ gnc_gui_shutdown (void)
     if (gnome_is_running && !gnome_is_terminating)
     {
         gnome_is_terminating = TRUE;
-        map = gnc_build_dotgnucash_path(ACCEL_MAP_NAME);
+        map = gnc_build_dotsystecash_path(ACCEL_MAP_NAME);
         gtk_accel_map_save(map);
         g_free(map);
         gtk_main_quit();
     }
 }
 
-/*  shutdown gnucash.  This function will initiate an orderly
+/*  shutdown systecash.  This function will initiate an orderly
  *  shutdown, and when that has finished it will exit the program.
  */
 void
 gnc_shutdown (int exit_status)
 {
-    if (gnucash_ui_is_running())
+    if (systecash_ui_is_running())
     {
         if (!gnome_is_terminating)
         {

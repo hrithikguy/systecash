@@ -23,7 +23,7 @@
  */
 
 /* @file test-load-xml2.c
- * @brief test the loading of a version-2 gnucash XML file
+ * @brief test the loading of a version-2 systecash XML file
  */
 #include <guid.hpp>
 extern "C"

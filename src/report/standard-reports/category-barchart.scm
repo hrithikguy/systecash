@@ -23,18 +23,18 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; depends must be outside module scope -- and should eventually go away.
-(define-module (gnucash report standard-reports category-barchart))
-(use-modules (gnucash report report-system report-collectors))
-(use-modules (gnucash report report-system collectors))
+(define-module (systecash report standard-reports category-barchart))
+(use-modules (systecash report report-system report-collectors))
+(use-modules (systecash report report-system collectors))
 (use-modules (srfi srfi-1))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
 (use-modules (ice-9 regex))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(use-modules (gnucash printf))
+(use-modules (systecash printf))
 
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
 ;; included since Bug726449
 (use-modules (ice-9 regex)) ;; for regexp-substitute/global, used by jpqplot

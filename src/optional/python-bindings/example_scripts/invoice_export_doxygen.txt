@@ -34,9 +34,9 @@ LaTeX or other output formats as desired.
 \par Goals / Issues:
 - How much logic in the template, how much preprocessing in the python script ?
 - Internationalization - currencies, formatting of numbers, templates
-- Providing data of gnucash owner. 
+- Providing data of systecash owner. 
 
-  At the moment this has to be put into the invoices (template/final file) by hand. Access of this data is in KVPs. No support in python-bindings at the moment. c-API to access these values is work in progress. A fork to access these is https://github.com/c-holtermann/gnucash/tree/python-kvp. This is very much work in progress. A discussion can be found in thread http://lists.gnucash.org/pipermail/gnucash-devel/2014-June/037768.html.
+  At the moment this has to be put into the invoices (template/final file) by hand. Access of this data is in KVPs. No support in python-bindings at the moment. c-API to access these values is work in progress. A fork to access these is https://github.com/c-holtermann/systecash/tree/python-kvp. This is very much work in progress. A discussion can be found in thread http://lists.systecash.org/pipermail/systecash-devel/2014-June/037768.html.
 - A jinja2 template mimicking the original html invoices
 
 \par See also:

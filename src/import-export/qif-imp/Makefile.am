@@ -28,7 +28,7 @@ libgncmod_qif_import_la_LIBADD = \
   ${GLIB_LIBS}
 
 
-gncscmmoddir = ${GNC_SCM_INSTALL_DIR}/gnucash/import-export
+gncscmmoddir = ${GNC_SCM_INSTALL_DIR}/systecash/import-export
 gncscmmod_DATA = qif-import.scm 
 
 gncscmdir = ${GNC_SCM_INSTALL_DIR}/qif-import
@@ -84,15 +84,15 @@ endif
 noinst_DATA = .scm-links
 
 .scm-links: 
-	$(RM) -rf gnucash
-	mkdir -p  gnucash qif-import
-	mkdir -p  gnucash/import-export
+	$(RM) -rf systecash
+	mkdir -p  systecash qif-import
+	mkdir -p  systecash/import-export
 if GNUCASH_SEPARATE_BUILDDIR
 	for X in ${SCM_FILE_LINKS} ; do \
 	  $(LN_S) -f ${srcdir}/$$X . ; \
 	done
 endif
-	( cd gnucash/import-export; for A in $(gncscmmod_DATA) ; do $(LN_S) -f ../../$$A . ; done )
+	( cd systecash/import-export; for A in $(gncscmmod_DATA) ; do $(LN_S) -f ../../$$A . ; done )
 	( cd qif-import; for A in $(gncscm_DATA) ; do $(LN_S) -f ../$$A . ; done )
 if ! OS_WIN32
 # Windows knows no "ln -s" but uses "cp": must copy every time (see bug #566567).
@@ -128,7 +128,7 @@ GUILE_COMPILE_ENV = \
 	$(shell ${abs_top_srcdir}/src/gnc-test-env.pl --noexports ${GUILE_COMPILE_ENV}) \
 	$(GUILD) compile -o $@ $<
 
-gncscmmodcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@/gnucash/import-export
+gncscmmodcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@/systecash/import-export
 gncscmmodcache_DATA = $(gncscmmod_DATA:.scm=.go)
 
 gncscmcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@/qif-import
@@ -136,7 +136,7 @@ gncscmcache_DATA = $(gncscm_DATA:.scm=.go)
 endif
 
 clean-local:
-	$(RM) -rf gnucash qif-import
+	$(RM) -rf systecash qif-import
 
 CLEANFILES += .scm-links ${gncscmmodcache_DATA} ${gncscmcache_DATA}
 DISTCLEANFILES = ${SCM_FILE_LINKS}

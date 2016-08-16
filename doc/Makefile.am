@@ -15,7 +15,7 @@ doc_DATA = \
   projects.html 
 
 dist_man_MANS = \
-  gnucash.1 \
+  systecash.1 \
   gnc-fq-dump.1 \
   gnc-fq-helper.1 
 
@@ -31,8 +31,8 @@ EXTRA_DIST = \
   TRANSLATION_HOWTO \
   build-aix.txt \
   build-solaris.txt \
-  gnucash.1.in \
-  gtkrc-2.0.gnucash \
+  systecash.1.in \
+  gtkrc-2.0.systecash \
   misc-notes.txt \
   tip_of_the_day.list.in
 
@@ -40,7 +40,7 @@ EXTRA_DIST = \
 ## brackets here, instead of the usual @...@.  This prevents autoconf
 ## from substituting the values directly into the left-hand sides of
 ## the sed substitutions.
-gnucash.1: gnucash.1.in Makefile
+systecash.1: systecash.1.in Makefile
 	rm -f $@.tmp
 	${SED} < $< > $@.tmp \
             -e 's:@-VERSION-@:${VERSION}:g' \
@@ -61,6 +61,6 @@ else
 endif
 
 DISTCLEANFILES = \
-	gnucash.1 \
+	systecash.1 \
 	tip_of_the_day.list \
 	tip_of_the_day.list.bak

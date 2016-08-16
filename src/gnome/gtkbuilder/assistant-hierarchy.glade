@@ -17,7 +17,7 @@
       <object class="GtkLabel" id="intro_page_label">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">This assistant will help you create a set of GnuCash accounts for your assets (such as investments, checking or savings accounts), liabilities (such as loans) and different kinds of income and expenses you might have.
+        <property name="label" translatable="yes">This assistant will help you create a set of systecash accounts for your assets (such as investments, checking or savings accounts), liabilities (such as loans) and different kinds of income and expenses you might have.
 
 You can pick a set of accounts here that seem close to your needs. After the assistant completes you will be able to add, rename, modify, and remove accounts, at any time later on. You will also be able to add sub-accounts, as well as move accounts (along with their sub-accounts) from one parent to another.
 
@@ -111,7 +111,7 @@ Please choose the currency to use for new accounts.</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="label" translatable="yes">
-Select categories that correspond to the ways that you foresee you will use GnuCash. Each category you select will cause several accounts to be created.
+Select categories that correspond to the ways that you foresee you will use systecash. Each category you select will cause several accounts to be created.
 
 &lt;b&gt;Note:&lt;/b&gt; the selection you make here is only the starting point for your personalized account hierarchy. Accounts can be added, renamed, moved, or deleted by hand later at any time.</property>
             <property name="use_markup">True</property>

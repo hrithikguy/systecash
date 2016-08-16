@@ -38,7 +38,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(use-modules (gnucash app-utils))
+(use-modules (systecash app-utils))
 
 (define txf-tax-entity-types
   (list

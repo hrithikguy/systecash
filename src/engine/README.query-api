@@ -1,4 +1,4 @@
-Gnucash Query API 
+systecash Query API 
 
 
 BASIC QUERY API: With this API you can create arbitrary logical
@@ -31,7 +31,7 @@ Frees the resources associate with a Query object.
 -----------------------------------------------------------------
 void xaccQuerySetGroup(Query * q, AccountGroup * group) 
 
-Set the Gnucash account group that the query applies to.
+Set the systecash account group that the query applies to.
 xaccQuerySetGroup must be called before a Query object created with
 xaccMallocQuery can be used.  Queries created with xaccQueryInvert and
 xaccQueryMerge inherit the account group of the arguments to those

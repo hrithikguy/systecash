@@ -107,7 +107,7 @@ find_or_create_txn(struct CloseAccountsCB* cacb, gnc_commodity* cmdty)
         /* Watch out: The book-closing txn currently assume that their
         posted-date is the end date plus 12 hours, so that the closing txn can
         be distinguished from normal txns of the last day. This is the only
-        case within GnuCash where the PostedDate is a different time-of-day
+        case within systecash where the PostedDate is a different time-of-day
         that what the GDate normally says as a normalized date. */
         xaccTransSetDatePostedSecs(txn->txn, cacb->cbw->close_date);
 

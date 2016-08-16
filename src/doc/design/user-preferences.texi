@@ -4,7 +4,7 @@
 
 @strong{This whole document is completely outdated. Don't read this. All
 function names and every described structure has changed
-completely. Only read this if you want to know how gnucash looked like
+completely. Only read this if you want to know how systecash looked like
 in 1999. This is completely outdated!}
 
 The options system is used to obtain user preferences, both globally,
@@ -12,7 +12,7 @@ and when displaying a report. A wide variety of option types are
 supported, so it should be possible to create an option for just about
 any property the user might wish to specify.  New option types can be
 added if necessary, but as the process requires detailed knowledge of
-GnuCash internals and GTK+/GNOME, it is not documented here.
+systecash internals and GTK+/GNOME, it is not documented here.
 
 At present, users are most likely to come across the options system when
 designing custom reports, and are consequently mostly going to use the
@@ -49,10 +49,10 @@ display.
 @node Option Types, Option Creation, Option Databases, User Preferences
 @section Option Types
 
-Sometimes, GnuCash requires the user to specify true/false properties.
+Sometimes, systecash requires the user to specify true/false properties.
 Others properties most easily specified by selections from a list,
 others from a number, others still by selecting dates, or one or more
-accounts in the account hierachy, or even colors.  GnuCash supports all
+accounts in the account hierachy, or even colors.  systecash supports all
 of these and more:
 
 @table @code
@@ -269,7 +269,7 @@ for currency selection.
 Create an option that isn't controlled through the options GUI.  This is
 used mainly by the GUI to store state that should be preserved from 
 session to session but isn't really configurable from a dialog box, 
-such as the size of the GnuCash main window.  
+such as the size of the systecash main window.  
 @end deffn
 
 @deffn Function gnc:make-number-range-option section name sort-tag documentation-string default-value lower-bound upper-bound num-decimals step-size

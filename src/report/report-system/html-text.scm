@@ -30,7 +30,7 @@
 ;;  doc as arg to get the string out. 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(use-modules (gnucash printf))
+(use-modules (systecash printf))
 
 (define <html-text> 
   (make-record-type "<html-text>"

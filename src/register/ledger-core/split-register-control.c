@@ -136,7 +136,7 @@ gnc_split_register_balance_trans (SplitRegister *reg, Transaction *trans)
     radio_list = g_list_append (radio_list,
                                 _("Balance it _manually"));
     radio_list = g_list_append (radio_list,
-                                _("Let GnuCash _add an adjusting split"));
+                                _("Let systecash _add an adjusting split"));
 
     if (reg->type < NUM_SINGLE_REGISTER_TYPES && !multi_currency)
     {

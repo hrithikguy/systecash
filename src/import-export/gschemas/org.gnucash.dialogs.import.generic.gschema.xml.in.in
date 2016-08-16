@@ -1,5 +1,5 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.gnucash.dialogs.import.generic" path="/org/gnucash/dialogs/import/generic/">
+  <schema id="org.systecash.dialogs.import.generic" path="/org/systecash/dialogs/import/generic/">
     <key name="enable-skip" type="b">
       <default>true</default>
       <summary>Enable SKIP transaction action</summary>
@@ -23,7 +23,7 @@
     <key name="auto-add-threshold" type="d">
       <default>3.0</default>
       <summary>Add matching transactions below this score</summary>
-      <description>This field specifies the threshold below which a matching transaction will be added automatically. A transaction whose best match's score is in the red zone (above the display minimum score but below or equal to the Add match score) will be added to the GnuCash file by default.</description>
+      <description>This field specifies the threshold below which a matching transaction will be added automatically. A transaction whose best match's score is in the red zone (above the display minimum score but below or equal to the Add match score) will be added to the systecash file by default.</description>
     </key>
     <key name="auto-clear-threshold" type="d">
       <default>6.0</default>
@@ -40,11 +40,11 @@
       <summary>Automatically create new commodities</summary>
       <description>Enables the automatic creation of new commodities if any unknown commodity is encountered during import. Otherwise the user will be asked what to do with each unknown commodity.</description>
     </key>
-    <child name="match-picker" schema="org.gnucash.dialogs.import.generic.match-picker"/>
-    <child name="transaction-list" schema="org.gnucash.dialogs.import.generic.transaction-list"/>
+    <child name="match-picker" schema="org.systecash.dialogs.import.generic.match-picker"/>
+    <child name="transaction-list" schema="org.systecash.dialogs.import.generic.transaction-list"/>
   </schema>
 
-  <schema id="org.gnucash.dialogs.import.generic.match-picker" path="/org/gnucash/dialogs/import/generic/match-picker/">
+  <schema id="org.systecash.dialogs.import.generic.match-picker" path="/org/systecash/dialogs/import/generic/match-picker/">
     <key name="last-geometry" type="(iiii)">
       <default>(-1,-1,-1,-1)</default>
       <summary>Last window position and size</summary>
@@ -54,7 +54,7 @@
     </key>
   </schema>
 
-  <schema id="org.gnucash.dialogs.import.generic.transaction-list" path="/org/gnucash/dialogs/import/generic/transaction-list/">
+  <schema id="org.systecash.dialogs.import.generic.transaction-list" path="/org/systecash/dialogs/import/generic/transaction-list/">
     <key name="last-geometry" type="(iiii)">
       <default>(-1,-1,-1,-1)</default>
       <summary>Last window position and size</summary>

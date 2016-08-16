@@ -123,32 +123,32 @@ IF (${CMAKE_VERSION} VERSION_GREATER 3.1)
 ENDIF()
 
 ADD_CUSTOM_COMMAND(
-    OUTPUT gnucash.appdata.xml
+    OUTPUT systecash.appdata.xml
     COMMAND ${CMAKE_COMMAND_TMP}
       LC_ALL=C
       ${PERL_EXECUTABLE} ${INTLTOOL_MERGE} -x -u -c ${CMAKE_SOURCE_DIR}/po/.intltool-merge-cache ${CMAKE_SOURCE_DIR}/po
-        ${CMAKE_CURRENT_SOURCE_DIR}/gnucash.appdata.xml.in gnucash.appdata.xml
-    MAIN_DEPENDENCY ${CMAKE_CURRENT_SOURCE_DIR}/gnucash.appdata.xml.in
+        ${CMAKE_CURRENT_SOURCE_DIR}/systecash.appdata.xml.in systecash.appdata.xml
+    MAIN_DEPENDENCY ${CMAKE_CURRENT_SOURCE_DIR}/systecash.appdata.xml.in
 )
 
-ADD_CUSTOM_TARGET(gnucash-appdata ALL DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/gnucash.appdata.xml)
+ADD_CUSTOM_TARGET(systecash-appdata ALL DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/systecash.appdata.xml)
 
-INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/gnucash.appdata.xml DESTINATION share/appdata)
+INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/systecash.appdata.xml DESTINATION share/appdata)
 
 #=======
 
-CONFIGURE_FILE(gnucash.desktop.in.in gnucash.desktop.in)
+CONFIGURE_FILE(systecash.desktop.in.in systecash.desktop.in)
 
 
 ADD_CUSTOM_COMMAND(
-    OUTPUT gnucash.desktop
+    OUTPUT systecash.desktop
     COMMAND ${CMAKE_COMMAND_TMP}
       LC_ALL=C
       ${PERL_EXECUTABLE} ${INTLTOOL_MERGE} -d -u -c ${CMAKE_SOURCE_DIR}/po/.intltool-merge-cache ${CMAKE_SOURCE_DIR}/po
-        gnucash.desktop.in gnucash.desktop
-    MAIN_DEPENDENCY gnucash.desktop.in
+        systecash.desktop.in systecash.desktop
+    MAIN_DEPENDENCY systecash.desktop.in
 )
 
-ADD_CUSTOM_TARGET(gnucash-desktop ALL DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/gnucash.desktop)
+ADD_CUSTOM_TARGET(systecash-desktop ALL DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/systecash.desktop)
 
-INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/gnucash.desktop DESTINATION share/applications)
+INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/systecash.desktop DESTINATION share/applications)

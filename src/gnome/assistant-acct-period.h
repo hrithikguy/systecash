@@ -1,5 +1,5 @@
 /********************************************************************\
- * assistant-acct-period.h - accounting period assistant for GnuCash*
+ * assistant-acct-period.h - accounting period assistant for systecash*
  * Copyright (C) 2003 Linas Vepstas <linas@linas.org>               *
  * Copyright (C) 2011 Robert Fewell                                 *
  *                                                                  *

@@ -1,5 +1,5 @@
 /********************************************************************\
- * io-gncxml.h -- api for gnucash xml i/o                           *
+ * io-gncxml.h -- api for systecash xml i/o                           *
  *                                                                  *
  * Copyright (c) 2000,2001 Gnumatic Incorporated                    *
  *                                                                  *

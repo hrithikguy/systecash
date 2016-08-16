@@ -45,13 +45,13 @@ int libgncmod_test_engine_gnc_module_age      = 0;
 char *
 libgncmod_test_engine_gnc_module_path(void)
 {
-    return g_strdup("gnucash/engine/test");
+    return g_strdup("systecash/engine/test");
 }
 
 char *
 libgncmod_test_engine_gnc_module_description(void)
 {
-    return g_strdup("GnuCash Engine test infrastructure.");
+    return g_strdup("systecash Engine test infrastructure.");
 }
 
 int

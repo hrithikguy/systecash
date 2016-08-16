@@ -1,4 +1,4 @@
-/* gnc-mod-foo.c : the Gnucash plugin that wraps the library
+/* gnc-mod-foo.c : the systecash plugin that wraps the library
  * 'libfoo.so'. it does this by being linked against libfoo.so */
 /********************************************************************\
  * This program is free software; you can redistribute it and/or    *
@@ -40,7 +40,7 @@ int libgncmodfoo_gnc_module_revision = 0;
 char *
 libgncmodfoo_gnc_module_path(void)
 {
-    return g_strdup("gnucash/foo");
+    return g_strdup("systecash/foo");
 }
 
 char *
@@ -57,7 +57,7 @@ libgncmodfoo_gnc_module_init(int refcount)
     scm_c_eval_string("(use-modules (sw_foo))");
 
     /* use the Scheme "foo" module */
-    scm_c_eval_string("(use-modules (gnucash foo))");
+    scm_c_eval_string("(use-modules (systecash foo))");
 
     return TRUE;
 }

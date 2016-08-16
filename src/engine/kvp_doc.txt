@@ -1,13 +1,13 @@
-/** \page kvpvalues KVP Values used By GnuCash
+/** \page kvpvalues KVP Values used By systecash
 
                     Date Last Revised: August 2003
 
 API: \ref KVP
 
 This file documents the use of keys in the key-value pair system
-used by the GnuCash Application (both the engine, and non-engine, GUI
+used by the systecash Application (both the engine, and non-engine, GUI
 pieces).  Before assigning keys for use, please read the Key-Value
-Policy in the GnuCash Design Document located under src/doc/design.
+Policy in the systecash Design Document located under src/doc/design.
 
 The format of the data below is:
 
@@ -273,7 +273,7 @@ protocol HBCI
 Name: /hbci/account-id
 Type: string
 Entities: Account
-Use: HBCI Account code of the HBCI counterpart of this gnucash account
+Use: HBCI Account code of the HBCI counterpart of this systecash account
 in the real world
 \endverbatim
 
@@ -409,7 +409,7 @@ Name: old-docref
 Type: string
 Entities: Transactions, Splits
 Use: This string holds the old Docref value which was supported in earlier
-     versions of GnuCash but which was never used for any purpose. The
+     versions of systecash but which was never used for any purpose. The
      value is retained in case any users were making use of it.
 \endverbatim
 
@@ -418,7 +418,7 @@ Name: old-price-source
 Type: string
 Entities: Account
 Use: This string holds the old Price Source code used by earlier versions
-     of GnuCash and stored in the obsolete AccInfo structure. The use of
+     of systecash and stored in the obsolete AccInfo structure. The use of
      this value will be deprecated when the new version of Finance::Quote
      is fully supported. The new version of Finance::Quote uses a different
      scheme to identify sources for price quotes.

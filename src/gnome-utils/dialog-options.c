@@ -1716,8 +1716,8 @@ gnc_options_dialog_new_modal(gboolean modal, gchar *title)
 
     retval = g_new0(GNCOptionWin, 1);
     builder = gtk_builder_new();
-    gnc_builder_add_from_file (builder, "dialog-options.glade", "GnuCash Options");
-    retval->dialog = GTK_WIDGET(gtk_builder_get_object (builder, "GnuCash Options"));
+    gnc_builder_add_from_file (builder, "dialog-options.glade", "systecash Options");
+    retval->dialog = GTK_WIDGET(gtk_builder_get_object (builder, "systecash Options"));
     retval->page_list = GTK_WIDGET(gtk_builder_get_object (builder, "page_list_scroll"));
 
     /* Page List */

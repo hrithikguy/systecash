@@ -111,7 +111,7 @@ INSTALL(TARGETS gnc-qof
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib
   RUNTIME DESTINATION bin)
-INSTALL(FILES ${gnc_qof_HEADERS} DESTINATION include/gnucash)
+INSTALL(FILES ${gnc_qof_HEADERS} DESTINATION include/systecash)
 
 SET(qof_test_HEADERS
     qof/kvp_frame.hpp
@@ -121,4 +121,4 @@ SET(qof_test_HEADERS
     qof/qofsession.h
 )
 
-INSTALL(FILES ${qof_test_HEADERS} DESTINATION libexec/gnucash/src/libqof/qof/test)
+INSTALL(FILES ${qof_test_HEADERS} DESTINATION libexec/systecash/src/libqof/qof/test)

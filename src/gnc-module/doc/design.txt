@@ -1,7 +1,7 @@
-What is a Gnucash module? 
+What is a systecash module? 
 -------------------------
 
-A gnucash module is a dynamically loadable libtool library that
+A systecash module is a dynamically loadable libtool library that
 defines the following symbols:
 
     /* what version of the module system interface is assumed */
@@ -60,8 +60,8 @@ separated by /.  The path will be used to structure views of available
 modules so that similar modules can be grouped together; it may or may
 not actually correspond to a filesystem path.  The last element of the
 module path is the name of this module.  For example,
-  char * path = "gnucash/core/engine";
-defines the "engine" module, which is in the gnucash/core group of 
+  char * path = "systecash/core/engine";
+defines the "engine" module, which is in the systecash/core group of 
 modules. 
 
 gnc_module_description should return a newly-allocated 1-line
@@ -77,7 +77,7 @@ gnc_module_system_init from C (see below from Scheme).  This scans the
 directories in the GNC_MODULE_PATH and builds a database of the
 available modules.
 
-In Scheme, you need to (use-modules (gnucash gnc-module)) and call
+In Scheme, you need to (use-modules (systecash gnc-module)) and call
 (gnc:module-system-init) if it was not called from C.  You will need
 to use-modules this module is you intend to use any module system 
 functions from Scheme.  
@@ -87,7 +87,7 @@ function.  It uses Guile's dynamic-link to open the libgncmodule.la
 library directly and call gnc_module_system_init.  dynamic-link uses
 lt_dlopen() under the hood, so you need to make sure that the
 libgncmodule.la install directory is in your LD_LIBRARY_PATH or
-LTDL_LIBRARY_PATH.  The Gnucash app will set up this path by default.
+LTDL_LIBRARY_PATH.  The systecash app will set up this path by default.
 
 You can rebuild the module database at any time (say, if you know a
 new module has been installed or the user has changed the module path

@@ -50,7 +50,7 @@ int libgncmod_app_utils_gnc_module_age      = 0;
 char *
 libgncmod_app_utils_gnc_module_path(void)
 {
-    return g_strdup("gnucash/app-utils");
+    return g_strdup("systecash/app-utils");
 }
 
 char *
@@ -81,7 +81,7 @@ int
 libgncmod_app_utils_gnc_module_init(int refcount)
 {
     /* load the engine (we depend on it) */
-    if (!gnc_module_load("gnucash/engine", 0))
+    if (!gnc_module_load("systecash/engine", 0))
     {
         return FALSE;
     }
@@ -90,7 +90,7 @@ libgncmod_app_utils_gnc_module_init(int refcount)
     /* publish swig bindings */
     /* load the scheme code */
     lmod("(sw_app_utils)");
-    lmod("(gnucash app-utils)");
+    lmod("(systecash app-utils)");
 
     if (refcount == 0)
     {

@@ -91,11 +91,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash report taxtxf))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
+(define-module (systecash report taxtxf))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
 (use-modules (srfi srfi-1))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
 (cond-expand
   (guile-2
@@ -105,12 +105,12 @@
   (else ))
 (use-modules (sw_gnome_utils)) ;; to get to gnc-error-dialog
 
-(use-modules (gnucash printf))
-(use-modules (gnucash core-utils)) ; for gnc:version
+(use-modules (systecash printf))
+(use-modules (systecash core-utils)) ; for gnc:version
 
-(gnc:module-load "gnucash/html" 0)   ; added for 'gnc-html-engine-supports-css'
-(gnc:module-load "gnucash/tax/us" 0)
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/html" 0)   ; added for 'gnc-html-engine-supports-css'
+(gnc:module-load "systecash/tax/us" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
 (define reportname (N_ "Tax Schedule Report/TXF Export"))
 
@@ -3017,7 +3017,7 @@
                                   (output-txf
                                     (list
                                       "V041" crlf
-                                      "AGnuCash " gnc:version crlf
+                                      "Asystecash " gnc:version crlf
                                       today-date crlf
                                       "^" crlf
                                       output

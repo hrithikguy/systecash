@@ -1,5 +1,5 @@
 /*************************************************************
- * gnc-module.c -- loadable plugin/module system for gnucash
+ * gnc-module.c -- loadable plugin/module system for systecash
  * Copyright 2001 Linux Developers Group, Inc.
  *************************************************************/
 /********************************************************************\
@@ -466,7 +466,7 @@ gnc_module_load_common(const char * module_name, gint iface, gboolean optional)
 
     /* if the module's already loaded, just increment its use count.
      * otherwise, load it and check for the initializer
-     * "gnc_module_init".  if we find that, assume it's a gnucash module
+     * "gnc_module_init".  if we find that, assume it's a systecash module
      * and run the function. */
 
     if (info)

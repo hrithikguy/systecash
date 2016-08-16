@@ -1,6 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;  gnc-module.scm
-;;;  Guile module which allows initialization of the gnucash module
+;;;  Guile module which allows initialization of the systecash module
 ;;;  system from Scheme 
 ;;;
 ;;;  Copyright 2001 Linux Developers Group
@@ -25,7 +25,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash gnc-module))
+(define-module (systecash gnc-module))
 
 ;; Guile 2 needs to find the symbols from the extension at compile time already
 (cond-expand

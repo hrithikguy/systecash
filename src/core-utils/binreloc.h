@@ -49,7 +49,7 @@ typedef enum
     GNC_GBR_INIT_ERROR_READ_MAPS,
     /** The file format of /proc/self/maps is invalid; kernel bug? */
     GNC_GBR_INIT_ERROR_INVALID_MAPS,
-    /** BinReloc determined that gnucash is not running from a bundle */
+    /** BinReloc determined that systecash is not running from a bundle */
     GNC_GBR_INIT_ERROR_MAC_NOT_BUNDLE,
     /** Binreloc determined that the bundle is not an app bundle */
     GNC_GBR_INIT_ERROR_MAC_NOT_APP_BUNDLE,
@@ -72,7 +72,7 @@ gchar   *gnc_gbr_find_etc_dir     (const gchar *default_etc_dir);
 
 /** Sets the executable path to the given value. This is useful if the
  * binreloc lookup code will not be used, but instead the executable
- * location is obtained from somewhere else (e.g. qt) but the gnucash
+ * location is obtained from somewhere else (e.g. qt) but the systecash
  * code should nevertheless use this path internally. */
 void gnc_gbr_set_exe (const gchar* default_exe);
 

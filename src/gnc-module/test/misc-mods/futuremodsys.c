@@ -1,5 +1,5 @@
-/* futuremodsys.c : a gnucash module compiled with a future version of
- * the module system.  gnucash should not be able to load it.  but if
+/* futuremodsys.c : a systecash module compiled with a future version of
+ * the module system.  systecash should not be able to load it.  but if
  * it doesn't notice that, the actual interface is compatible with
  * version 0 so it will load all the way before failing. */
 /********************************************************************\
@@ -39,7 +39,7 @@ int libgncmod_futuremodsys_gnc_module_revision = 0;
 char *
 libgncmod_futuremodsys_gnc_module_path(void)
 {
-    return g_strdup("gnucash/futuremodsys");
+    return g_strdup("systecash/futuremodsys");
 }
 
 char *

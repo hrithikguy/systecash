@@ -1,5 +1,5 @@
 ;; test of a Scheme module called gnc-mod-baz, which should get 
-;; loaded by the Gnucash module "baz"
+;; loaded by the systecash module "baz"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -20,7 +20,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash baz))
+(define-module (systecash baz))
 
 (export baz:scheme-hello)
 

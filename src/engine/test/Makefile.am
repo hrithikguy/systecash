@@ -130,9 +130,9 @@ EXTRA_DIST += \
 TEST_PROGS += test-engine
 
 .scm-links:
-	$(RM) -rf gnucash
-	mkdir -p  gnucash/engine/test
-	( cd gnucash/engine/test; for A in $(SCM_TEST_HELPERS) ; do $(LN_S) -f $(abs_srcdir)/$$A . ; done )
+	$(RM) -rf systecash
+	mkdir -p  systecash/engine/test
+	( cd systecash/engine/test; for A in $(SCM_TEST_HELPERS) ; do $(LN_S) -f $(abs_srcdir)/$$A . ; done )
 if ! OS_WIN32
 # Windows knows no "ln -s" but uses "cp": must copy every time (see bug #566567).
 	touch .scm-links

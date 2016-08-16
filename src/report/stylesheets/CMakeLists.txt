@@ -16,7 +16,7 @@ TARGET_LINK_LIBRARIES(gncmod-stylesheets gncmod-report-gnome gncmod-report-syste
 
 TARGET_COMPILE_DEFINITIONS(gncmod-stylesheets PRIVATE -DG_LOG_DOMAIN=\"gnc.report.core\")
 
-SET(LIB_DIR lib/gnucash)
+SET(LIB_DIR lib/systecash)
 IF (WIN32)
   SET(LIB_DIR bin)
 ENDIF(WIN32)
@@ -43,7 +43,7 @@ SET(stylesheets_SCHEME_2
   stylesheets.scm
 )
 
-SET(GUILE_OUTPUT_DIR gnucash/report)
+SET(GUILE_OUTPUT_DIR systecash/report)
 SET(GUILE_MODULES src/app-utils src/engine src/html src/gnome-utils src/report/report-system)
 SET(GUILE_LOAD_DIRS src/app-utils src/core-utils src/engine src/gnc-module src/gnome-utils src/report/report-system src/scm)
 SET(GUILE_LIBRARY_DIRS src/engine src/app-utils src/core-utils src/gnc-module src/gnome-utils src/html src/report/report-system)
@@ -73,9 +73,9 @@ ADD_CUSTOM_TARGET(scm-report-stylesheets ALL DEPENDS scm-report-stylesheets-1 sc
 
 SET(stylesheets_UI gnc-plugin-stylesheets-ui.xml)
 
-INSTALL(FILES ${stylesheets_UI} DESTINATION share/gnucash/ui)
+INSTALL(FILES ${stylesheets_UI} DESTINATION share/systecash/ui)
 
 IF (GNC_BUILD_AS_INSTALL)
   FILE(COPY ${stylesheets_UI}
-    DESTINATION ${DATADIR_BUILD}/gnucash/ui)
+    DESTINATION ${DATADIR_BUILD}/systecash/ui)
 ENDIF()

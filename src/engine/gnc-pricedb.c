@@ -1,5 +1,5 @@
 /********************************************************************
- * gnc-pricedb.c -- a simple price database for gnucash.            *
+ * gnc-pricedb.c -- a simple price database for systecash.            *
  * Copyright (C) 2001 Rob Browning                                  *
  * Copyright (C) 2001,2003 Linas Vepstas <linas@linas.org>          *
  *                                                                  *

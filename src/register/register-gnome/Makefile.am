@@ -20,33 +20,33 @@ libgncmod_register_gnome_la_SOURCES = \
   combocell-gnome.c \
   datecell-gnome.c \
   formulacell-gnome.c \
-  gnucash-color.c \
-  gnucash-cursor.c \
-  gnucash-date-picker.c \
-  gnucash-grid.c \
-  gnucash-header.c \
-  gnucash-item-edit.c \
-  gnucash-item-list.c \
-  gnucash-scrolled-window.c \
-  gnucash-sheet.c \
-  gnucash-style.c \
+  systecash-color.c \
+  systecash-cursor.c \
+  systecash-date-picker.c \
+  systecash-grid.c \
+  systecash-header.c \
+  systecash-item-edit.c \
+  systecash-item-list.c \
+  systecash-scrolled-window.c \
+  systecash-sheet.c \
+  systecash-style.c \
   pricecell-gnome.c \
   quickfillcell-gnome.c \
   table-gnome.c 
 
 noinst_HEADERS = \
   formulacell-gnome.h \
-  gnucash-color.h \
-  gnucash-cursor.h \
-  gnucash-date-picker.h \
-  gnucash-grid.h \
-  gnucash-header.h \
-  gnucash-item-edit.h \
-  gnucash-item-list.h \
-  gnucash-scrolled-window.h \
-  gnucash-sheet.h \
-  gnucash-sheetP.h \
-  gnucash-style.h \
+  systecash-color.h \
+  systecash-cursor.h \
+  systecash-date-picker.h \
+  systecash-grid.h \
+  systecash-header.h \
+  systecash-item-edit.h \
+  systecash-item-list.h \
+  systecash-scrolled-window.h \
+  systecash-sheet.h \
+  systecash-sheetP.h \
+  systecash-style.h \
   pricecell-gnome.h \
   quickfillcell-gnome.h \
   table-gnome.h

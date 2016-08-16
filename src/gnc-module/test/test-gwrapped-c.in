@@ -1,5 +1,5 @@
 #! @SHELL@
-${GUILE} -c "(use-modules (gnucash unittest-support))
+${GUILE} -c "(use-modules (systecash unittest-support))
           (define log-domain \"gnc.module\")
           (define check (new-TestErrorStruct))
           (define log-level (G-LOG-LEVEL-WARNING))
@@ -8,8 +8,8 @@ ${GUILE} -c "(use-modules (gnucash unittest-support))
           (TestErrorStruct-log-level-set check log-level)
           (TestErrorStruct-msg-set check msg)
           (define handler (test-set-checked-handler log-domain log-level check))
-          (use-modules (gnucash gnc-module))
+          (use-modules (systecash gnc-module))
           (gnc:module-system-init)
-          (gnc:module-load \"gnucash/foo\" 0)
+          (gnc:module-load \"systecash/foo\" 0)
           (exit (eq? 10 (foo-hello)))
           (g-log-remove-handler log-domain handler)"

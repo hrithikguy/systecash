@@ -27,14 +27,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash report stylesheet-easy))
+(define-module (systecash report stylesheet-easy))
 
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(gnc:module-load "gnucash/html" 0)   ; added for 'gnc-html-engine-supports-css'
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/html" 0)   ; added for 'gnc-html-engine-supports-css'
+(gnc:module-load "systecash/report/report-system" 0)
 
 (define (easy-options)
   (let* ((options (gnc:new-options))

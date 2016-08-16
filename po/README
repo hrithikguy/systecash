@@ -1,16 +1,16 @@
-Notes on I18n for GnuCash
+Notes on I18n for systecash
 -------------------------
 
 A HOWTO for translators, including instructions about what to do with .po files,
 can be found here:
-http://wiki.gnucash.org/wiki/Translation
+http://wiki.systecash.org/wiki/Translation
 
 Notes for this directory
 ------------------------
 
 The subdirectory glossary/ contains a glossary of the financial terms
-used inside GnuCash. To achieve a decent consistency in terminology
-within GnuCash, it is recommended to translate it and to use it during
+used inside systecash. To achieve a decent consistency in terminology
+within systecash, it is recommended to translate it and to use it during
 the translation process. There is one po files per translation of the
 glossary. The english definitions are in the file gnc-glossary.txt
 which is a tab-delimited ASCII table with each table cell enclosed in
@@ -19,7 +19,7 @@ you can build a new glossary.pot file by using the shell script
 txt-to-pot.sh so that you can update the po file.
 
 
-GnuCash .pot files contain some strings of the form:
+systecash .pot files contain some strings of the form:
 
 sample:<some text>
 Reconciled:R

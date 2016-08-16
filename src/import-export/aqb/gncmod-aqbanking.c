@@ -49,7 +49,7 @@ gint libgncmod_aqbanking_gnc_module_age      = 0;
 gchar *
 libgncmod_aqbanking_gnc_module_path(void)
 {
-    return g_strdup("gnucash/import-export/aqbanking");
+    return g_strdup("systecash/import-export/aqbanking");
 }
 
 gchar *
@@ -62,10 +62,10 @@ gint
 libgncmod_aqbanking_gnc_module_init(gint refcount)
 {
     /* Load modules we depend on */
-    if (!gnc_module_load("gnucash/engine", 0)
-            || !gnc_module_load("gnucash/app-utils", 0)
-            || !gnc_module_load("gnucash/gnome-utils", 0)
-            || !gnc_module_load("gnucash/import-export", 0))
+    if (!gnc_module_load("systecash/engine", 0)
+            || !gnc_module_load("systecash/app-utils", 0)
+            || !gnc_module_load("systecash/gnome-utils", 0)
+            || !gnc_module_load("systecash/import-export", 0))
     {
         return FALSE;
     }

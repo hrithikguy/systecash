@@ -1,4 +1,4 @@
-/* gnc-mod-baz.c : the Gnucash plugin that wraps the library
+/* gnc-mod-baz.c : the systecash plugin that wraps the library
  * 'libbaz.so'. it does this by being linked against libbaz.so */
 /********************************************************************\
  * This program is free software; you can redistribute it and/or    *
@@ -41,7 +41,7 @@ int libgncmodbaz_gnc_module_revision = 0;
 char *
 libgncmodbaz_gnc_module_path(void)
 {
-    return g_strdup("gnucash/baz");
+    return g_strdup("systecash/baz");
 }
 
 char *
@@ -54,14 +54,14 @@ int
 libgncmodbaz_gnc_module_init(int refcount)
 {
     /* load libfoo */
-    if (gnc_module_load("gnucash/foo", 0))
+    if (gnc_module_load("systecash/foo", 0))
     {
         /* publish the wrapped Scheme bindings for libbaz */
         scm_init_sw_baz_module();
         scm_c_eval_string("(use-modules (sw_baz))");
 
         /* use the Scheme "baz" module */
-        scm_c_eval_string("(use-modules (gnucash baz))");
+        scm_c_eval_string("(use-modules (systecash baz))");
 
         return TRUE;
     }

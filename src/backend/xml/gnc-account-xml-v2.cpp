@@ -66,7 +66,7 @@ const gchar* account_version_string = "2.0.0";
 #define act_parent_string "act:parent"
 #define act_lots_string "act:lots"
 /* The currency and security strings should not appear in newer
- * xml files (anything post-gnucash-1.6) */
+ * xml files (anything post-systecash-1.6) */
 #define act_currency_string "act:currency"
 #define act_currency_scu_string "act:currency-scu"
 #define act_security_string "act:security"
@@ -453,7 +453,7 @@ static struct dom_tree_handler account_handlers_v2[] =
     { act_placeholder_string, account_placeholder_handler, 0, 0 },
 
     /* These should not appear in  newer xml files; only in old
-     * (circa gnucash-1.6) xml files. We maintain them for backward
+     * (circa systecash-1.6) xml files. We maintain them for backward
      * compatibility. */
     { act_currency_string, deprecated_account_currency_handler, 0, 0 },
     { act_currency_scu_string, deprecated_account_currency_scu_handler, 0, 0 },

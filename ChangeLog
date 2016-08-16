@@ -64,7 +64,7 @@
 
 2016-05-29 John Ralls 
 
-	* Bug 766960 - gnucash-make-guids fails to run due to hardcoded paths.
+	* Bug 766960 - systecash-make-guids fails to run due to hardcoded paths.
 
 2016-05-21 Geert Janssens 
 
@@ -384,7 +384,7 @@
 
 2016-03-10 John Ralls 
 
-	* Bug 763279 - GnuCash has empty reports
+	* Bug 763279 - systecash has empty reports
 
 2016-03-08 John Ralls 
 
@@ -396,7 +396,7 @@
 
 2016-03-10 Robert Fewell 
 
-	* Make gnucash 2.7+ rerun bayesian data conversion whenever needed
+	* Make systecash 2.7+ rerun bayesian data conversion whenever needed
 
 2016-02-20 Robert Fewell 
 
@@ -648,7 +648,7 @@
 
 2015-12-07 Rob Gowin 
 
-	* Add ability to build GnuCash with CMake
+	* Add ability to build systecash with CMake
 
 2016-01-12 John Ralls 
 
@@ -700,7 +700,7 @@
 
 2016-01-07 John Ralls 
 
-	* Don't make the $prefix/share/gnucash/gnome link on OSX_QUARTZ
+	* Don't make the $prefix/share/systecash/gnome link on OSX_QUARTZ
 
 2016-01-05 John Ralls 
 

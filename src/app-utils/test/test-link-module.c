@@ -27,7 +27,7 @@ guile_main(void *closure, int argc, char ** argv)
 {
     GNCModule mod;
     gnc_module_system_init();
-    mod = gnc_module_load("gnucash/app-utils", 0);
+    mod = gnc_module_load("systecash/app-utils", 0);
 
     exit(mod == NULL);
 }

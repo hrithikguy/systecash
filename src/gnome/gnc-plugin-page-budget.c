@@ -487,7 +487,7 @@ gnc_plugin_page_budget_destroy_widget (GncPluginPage *plugin_page)
 
 /***********************************************************************
  *  Save enough information about this plugin page that it can         *
- *  be recreated next time the user starts gnucash.                    *
+ *  be recreated next time the user starts systecash.                    *
  *                                                                     *
  *  @param page The page to save.                                      *
  *                                                                     *
@@ -526,7 +526,7 @@ gnc_plugin_page_budget_save_page (GncPluginPage *plugin_page,
 
 /***********************************************************************
  *  Create a new plugin page based on the information saved
- *  during a previous instantiation of gnucash.
+ *  during a previous instantiation of systecash.
  *
  *  @param window The window where this page should be installed.
  *

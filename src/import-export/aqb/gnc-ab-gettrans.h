@@ -41,7 +41,7 @@ G_BEGIN_DECLS
  * Execute a GetTransactions job.
  *
  * @param parent Widget to use as parent, may be NULL
- * @param gnc_acc GnuCash account to fetch transactions for
+ * @param gnc_acc systecash account to fetch transactions for
  */
 void gnc_ab_gettrans(GtkWidget *parent, Account *gnc_acc);
 

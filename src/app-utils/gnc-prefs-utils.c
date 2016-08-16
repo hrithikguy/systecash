@@ -92,8 +92,8 @@ void gnc_prefs_init (void)
 
     /* Check for invalid retain_type (days)/retain_days (0) combo.
      * This can happen either because a user changed the preferences
-     * manually outside of GnuCash, or because the user upgraded from
-     * gnucash version 2.3.15 or older. Back then, 0 retain_days meant
+     * manually outside of systecash, or because the user upgraded from
+     * systecash version 2.3.15 or older. Back then, 0 retain_days meant
      * "keep forever". From 2.3.15 on this is controlled via a multiple
      * choice ("retain_type").
      * So if we find a 0 retain_days value with a "days" retain_type,

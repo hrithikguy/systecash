@@ -1,11 +1,11 @@
-/** \page osxbuild Building GnuCash on OSX
+/** \page osxbuild Building systecash on OSX
 
 \section dependency Automake dependency
 
-automake1.4 is NOT compatible with gnucash on OSX. If fink replaces
+automake1.4 is NOT compatible with systecash on OSX. If fink replaces
 a later automake during an update of other packages, you will need
 to replace with a later version. Fink will then remove automake1.4 
-in favour of the later version. GnuCash has been tested on OSX with
+in favour of the later version. systecash has been tested on OSX with
 automake1.9
 
 \section building Build advice
@@ -15,7 +15,7 @@ source tree, remove the installation directory with 'rm -rf'.
 
 \section osxprepare Preparation
 
-There are notable problems building gnucash with the default
+There are notable problems building systecash with the default
 auto tools installed in OSX and even installing the GNU versions
 via fink may not be sufficient - OSX may still call the BSD version
 in preference to the newly installed GNU version.
@@ -53,7 +53,7 @@ remove the autom4te.cache/ directory before running autogen.sh again.
 
 \section osxtools OSX tools
 
-GnuCash recommends <b>only>/b> the most recent versions of each of the 
+systecash recommends <b>only>/b> the most recent versions of each of the 
 GNU auto tools available via Fink. As of November 2005, these were:
 
 \verbatim

@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-xml-gen.c -- implementation for gnucash xml i/o              *
+ * gnc-xml-gen.c -- implementation for systecash xml i/o              *
  *                                                                  *
  * Copyright (C) 2001 James LewisMoss <dres@debian.org>             *
  *                                                                  *

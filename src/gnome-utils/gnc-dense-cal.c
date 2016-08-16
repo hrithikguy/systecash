@@ -449,9 +449,9 @@ gnc_dense_cal_init(GncDenseCal *dcal)
         const char *week_start_str;
 
         /* Use this renaming macro to avoid extraction of the message
-           string into the gnucash.pot file when calling xgettext. */
+           string into the systecash.pot file when calling xgettext. */
 #define dgettext_noextract dgettext
-        /* Translators: This string must not show up in gnucash.pot as
+        /* Translators: This string must not show up in systecash.pot as
            it is looked up in the "gtk20" translation domain
            instead. */
         week_start_str = dgettext_noextract("gtk20", "calendar:week_start:0");

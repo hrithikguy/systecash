@@ -51,13 +51,13 @@ int libgncmod_gnome_utils_gnc_module_age      = 0;
 char *
 libgncmod_gnome_utils_gnc_module_path(void)
 {
-    return g_strdup("gnucash/gnome-utils");
+    return g_strdup("systecash/gnome-utils");
 }
 
 char *
 libgncmod_gnome_utils_gnc_module_description(void)
 {
-    return g_strdup("Utilities for using Gnome/Gtk with GnuCash");
+    return g_strdup("Utilities for using Gnome/Gtk with systecash");
 }
 
 static void
@@ -74,19 +74,19 @@ int
 libgncmod_gnome_utils_gnc_module_init(int refcount)
 {
     /* load the engine (we depend on it) */
-    if (!gnc_module_load("gnucash/engine", 0))
+    if (!gnc_module_load("systecash/engine", 0))
     {
         return FALSE;
     }
 
-    if (!gnc_module_load("gnucash/app-utils", 0))
+    if (!gnc_module_load("systecash/app-utils", 0))
     {
         return FALSE;
     }
 
     scm_init_sw_gnome_utils_module();
     lmod("(sw_gnome_utils)");
-    lmod("(gnucash gnome-utils)");
+    lmod("(systecash gnome-utils)");
 
     /* Initialize the options-ui database */
     if (refcount == 0)

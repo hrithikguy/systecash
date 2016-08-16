@@ -1,11 +1,11 @@
-# import all the symbols from gnucash_core, so basic gnucash stuff can be
+# import all the symbols from systecash_core, so basic systecash stuff can be
 # loaded with:
-# >>> from gnucash import thingy
+# >>> from systecash import thingy
 # instead of
-# >>> from gnucash.gnucash_core import thingy
-from gnucash_core import *
+# >>> from systecash.systecash_core import thingy
+from systecash_core import *
 ##  @file
-#   @brief helper file for the importing of gnucash
+#   @brief helper file for the importing of systecash
 #   @author Mark Jenkins, ParIT Worker Co-operative <mark@parit.ca>
 #   @author Jeff Green,   ParIT Worker Co-operative <jeff@parit.ca>
 #   @ingroup python_bindings

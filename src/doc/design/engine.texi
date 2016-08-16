@@ -4,18 +4,18 @@
 
 @strong{This whole document is completely outdated. Don't read this. All
 function names and every described structure has changed
-completely. Only read this if you want to know how gnucash looked like
+completely. Only read this if you want to know how systecash looked like
 in 1999. This is completely outdated!}
 
 The Engine provides an interface to a financial engine with three basic
 financial entities: Accounts, Transactions (known as Journal Entries in
 accounting practice), and Splits (known as Ledger Entries). These three
-entities are the central data structures of the GnuCash financial data
+entities are the central data structures of the systecash financial data
 model.
 
 In addition, the Engine provides the abstraction of Account Groups
 (collections of related accounts) and GNCBooks. A GNCBook abstracts both
-a set of related GnuCash data (financial entities plus additional
+a set of related systecash data (financial entities plus additional
 information such as budgets, per-file preferences, etc.) plus a
 file-editing session allowing transparent support for locking and
 implementation with other backends such as SQL.
@@ -106,7 +106,7 @@ Splits plus the value of all of its sub-Accounts.
 Engine API calls are named using a specific convention. For example,
 the function to access the Memo field of a Split is
 @code{xaccSplitGetMemo}.  The prefix @code{xacc} comes
-first@footnote{The @code{xacc} prefix is a historical artifact. GnuCash
+first@footnote{The @code{xacc} prefix is a historical artifact. systecash
 was derived from X-Accountant by Robin Clark.}, followed by the name of
 the entity for which the API call applies (@code{Split}), followed by
 the action performed by the call (@code{Get}), followed by the name of
@@ -131,7 +131,7 @@ able to handle @code{NULL} return values from Engine calls as well.
 
 It is common for Engine structures to reference other Engine structures.
 For example, an Account must reference its Splits, its parent Account
-Group, and its child Account Group. Furthermore, other GnuCash modules
+Group, and its child Account Group. Furthermore, other systecash modules
 may need to reference Engine structures. For example, a GUI
 implementation may wish to save a list of Accounts which the user has
 open when the application exits in order to restore that same state upon
@@ -163,7 +163,7 @@ structure. Engine GUIDs have the following features:
 @itemize
 
 @item
-The GUID is permanent, i.e., it persists between invocations of GnuCash.
+The GUID is permanent, i.e., it persists between invocations of systecash.
 
 @item
 The GUID is guaranteed to be unique with the set of all Splits,
@@ -172,7 +172,7 @@ is a member.
 
 @item
 With very high probability, the GUID is unique among all GUIDs
-created by any invocation of GnuCash, all over the world.
+created by any invocation of systecash, all over the world.
 
 @item
 GUIDs can be efficiently encoded in a string representation.
@@ -184,7 +184,7 @@ GUIDs can be efficiently encoded in a string representation.
 * When to use GUIDs::           
 * GUID Types::                  
 * How to use GUIDs::            
-* GUIDs and GnuCash Entities::  
+* GUIDs and systecash Entities::  
 * The GUID Generator::          
 @end menu
 
@@ -215,17 +215,17 @@ be deleted in between accesses to the saved reference.
 @subsection GUID Types
 @tindex GNCIdType
 
-The GUIDs in GnuCash are typed using the enum @code{GNCIdType}.
+The GUIDs in systecash are typed using the enum @code{GNCIdType}.
 Possible values and their meanings for GUID types are:
 
 @table @code
 
 @item GNC_ID_NONE
-The GUID does not currently refer to a GnuCash entity, though it
+The GUID does not currently refer to a systecash entity, though it
 could refer to one in the future.
 
 @item GNC_ID_NULL
-The GUID does not, and never will, refer to a GnuCash entity.
+The GUID does not, and never will, refer to a systecash entity.
 
 @item GNC_ID_ACCOUNT
 The GUID refers to an Account (@pxref{Accounts}).
@@ -247,7 +247,7 @@ Return a GUID which is guaranteed to always have type @code{GNC_ID_NULL}.
 @end deftypefun
 
 
-@node How to use GUIDs, GUIDs and GnuCash Entities, GUID Types, Globally Unique Identifiers
+@node How to use GUIDs, GUIDs and systecash Entities, GUID Types, Globally Unique Identifiers
 @subsection How to use GUIDs
 
 The Engine API functions which access the GUID for a specific entity
@@ -341,18 +341,18 @@ Return a new @code{GHashTable} which uses GUIDs as keys.
 @end deftypefun
 
 
-@node GUIDs and GnuCash Entities, The GUID Generator, How to use GUIDs, Globally Unique Identifiers
-@subsection GUIDs and GnuCash Entities
+@node GUIDs and systecash Entities, The GUID Generator, How to use GUIDs, Globally Unique Identifiers
+@subsection GUIDs and systecash Entities
 
 This section documents a low-level API for associating entities with
 GUIDs. User code and general engine code should not use this API;
-instead use the API documented in the sections for the specific GnuCash
+instead use the API documented in the sections for the specific systecash
 entities such as Accounts and Transactions.
 
 @deftypefun void xaccGUIDNew (GUID * @var{guid})
 Generate a new guid. This function is guaranteed to return a guid that
-is unique within the scope of all GnuCash entities being managed by the
-the current invocation of GnuCash. GnuCash routines should always use
+is unique within the scope of all systecash entities being managed by the
+the current invocation of systecash. systecash routines should always use
 this function and not @code{guid_replace}!
 @end deftypefun
 
@@ -371,7 +371,7 @@ entity is not changed in any way.
 @end deftypefun
 
 
-@node The GUID Generator,  , GUIDs and GnuCash Entities, Globally Unique Identifiers
+@node The GUID Generator,  , GUIDs and systecash Entities, Globally Unique Identifiers
 @subsection The GUID Generator
 @cindex The GUID Generator
 
@@ -380,7 +380,7 @@ low-level and should not be used by user-code.
 
 @deftypefun void guid_replace (GUID * @var{guid})
 Create a new GUID and store it in @var{guid}. This is a low-level function!
-GnuCash code should use @code{xaccGUIDNew}.
+systecash code should use @code{xaccGUIDNew}.
 @end deftypefun
 
 
@@ -393,16 +393,16 @@ GnuCash code should use @code{xaccGUIDNew}.
   and has been superseeded by the gnc_numeric docs in the header file.
 =========================================
 
-Financial quantities in GnuCash (Split quantities and values) are stored
+Financial quantities in systecash (Split quantities and values) are stored
 as exact quantities measured in the smallest denominational unit of the
 appropriate currency. For example, 100.50 US Dollars would be stored as
-(10050 / 100) US Dollars. GnuCash uses the @code{gnc_numeric} datatype
+(10050 / 100) US Dollars. systecash uses the @code{gnc_numeric} datatype
 to store financial quantities.
 
 The @code{gnc_numeric} API provides data types and functions for
 manipulating exact numeric quantities. While the @code{gnc_numeric}
 library was developed to represent and operate on exact financial
-quantities in GnuCash, the library is also (hopefully) suitable for use
+quantities in systecash, the library is also (hopefully) suitable for use
 in any application where exact numeric representation for rational
 numbers is needed.
 
@@ -844,7 +844,7 @@ user's ownership of a stock might need to store information about
 retrieving price quotes online such as the ticker symbol and the
 exchange.
 
-To meet this need for varying data storage, the GnuCash accounting
+To meet this need for varying data storage, the systecash accounting
 entities use Key-Value Pair Frames (hereafter referred to as the
 datatype @code{kvp_frame}). A @code{kvp_frame} is a set of associations
 between character strings (keys) and @code{KvpValue} structures. A
@@ -1957,7 +1957,7 @@ accounting, a Transaction is balanced when the sum of the debits equals
 the sum of the credits.
 
 @item The entry date
-The date the transaction was entered into GnuCash.
+The date the transaction was entered into systecash.
 
 @item The post date
 The date the transaction was posted. This is often the date the
@@ -2281,7 +2281,7 @@ Possible values are:
   are national currencies.
 
   @item INCOME
-  Denotes an income account. The GnuCash financial model does not
+  Denotes an income account. The systecash financial model does not
   use 'categories'. Actual accounts are used instead.
 
   @item EXPENSE
@@ -2531,7 +2531,7 @@ Set the tax-related flag of @var{account}.
 
 @deftypefun {const char *} xaccAccountGetTaxUSCode (Account * @var{account})
 Get the US-specific tax code associated with @var{account}, or
-@code{NULL} if there is none. These codes are internal to GnuCash
+@code{NULL} if there is none. These codes are internal to systecash
 and currently defined in @file{src/scm/report/txf-export.scm}.
 @end deftypefun
 
@@ -2556,7 +2556,7 @@ Set the payer name source associated with @var{account}.
 Account Groups are used by the Engine to connect Accounts
 together into an Account hierarchy. Account Groups do not
 correspond to any accounting concept -- they are specific
-to the GnuCash engine. Account Groups contain the following
+to the systecash engine. Account Groups contain the following
 pieces of information:
 
 @table @asis
@@ -2686,7 +2686,7 @@ should not be freed or modified in any way.
 @tindex GNCBook
 
 The @dfn{GNCBook} interface encapsulates all the information about a
-GnuCash dataset, including the methods used to read and write the
+systecash dataset, including the methods used to read and write the
 dataset to datastores.  This class provides several important services:
 
 @itemize
@@ -2732,7 +2732,7 @@ The book id must be a string in the form of a URI/URL.  In the current
 implementation, only one type of URI is supported, and that is the file
 URI: anything of the form @url{file:/home/somewhere/somedir/file.xac}
 The path part must be a valid path.  The file-part must be a valid
-GnuCash data file. Paths may be relative or absolute. If the path is
+systecash data file. Paths may be relative or absolute. If the path is
 relative; that is, if the argument is @url{file:somefile.xac} then a
 sequence of search paths are checked for a file of this name.
 

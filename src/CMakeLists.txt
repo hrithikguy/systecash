@@ -4,7 +4,7 @@
 
 # Create config.h
 
-SET (GETTEXT_PACKAGE "gnucash")
+SET (GETTEXT_PACKAGE "systecash")
 
 SET(GNOME 1)
 
@@ -151,8 +151,8 @@ SET (SWIG_RUNTIME_H ${CMAKE_CURRENT_BINARY_DIR}/swig-runtime.h)
 #)
 # ############################################################
 
-SET(SCHEME_INSTALLED_SOURCE_DIR ${CMAKE_INSTALL_PREFIX}/share/gnucash/scm)
-SET(SCHEME_INSTALLED_CACHE_DIR ${CMAKE_INSTALL_PREFIX}/lib/gnucash/scm/ccache/${GUILE_EFFECTIVE_VERSION})
+SET(SCHEME_INSTALLED_SOURCE_DIR ${CMAKE_INSTALL_PREFIX}/share/systecash/scm)
+SET(SCHEME_INSTALLED_CACHE_DIR ${CMAKE_INSTALL_PREFIX}/lib/systecash/scm/ccache/${GUILE_EFFECTIVE_VERSION})
 
 # The subdirectories
 ADD_SUBDIRECTORY (libqof)

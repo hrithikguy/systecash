@@ -7,17 +7,17 @@ SET(GUILE ${GUILE_EXECUTABLE})
 SET(GNC_SRCDIR ${CMAKE_SOURCE_DIR})
 SET(GNC_BUILDDIR ${CMAKE_BINARY_DIR})
 
-CONFIGURE_FILE(gnucash-make-guids.in ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/gnucash-make-guids)
-GNC_CONFIGURE(gnucash-env.in ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/gnucash-env)
+CONFIGURE_FILE(systecash-make-guids.in ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/systecash-make-guids)
+GNC_CONFIGURE(systecash-env.in ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/systecash-env)
 GNC_CONFIGURE(guile.in ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/guile) #not installed
-GNC_CONFIGURE(gnucash-build-env.in ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/gnucash-build-env)   # not installed
+GNC_CONFIGURE(systecash-build-env.in ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/systecash-build-env)   # not installed
 
 SET(SCRIPT_OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR})
 IF (GNC_BUILD_AS_INSTALL)
-  SET(SCRIPT_OUTPUT_DIR ${LIBDIR_BUILD}exec/gnucash/overrides)
+  SET(SCRIPT_OUTPUT_DIR ${LIBDIR_BUILD}exec/systecash/overrides)
 ENDIF()
 
-FOREACH(file gnucash-make-guids gnucash-env guile gnucash-build-env)
+FOREACH(file systecash-make-guids systecash-env guile systecash-build-env)
   FILE(COPY ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/${file}
        DESTINATION ${SCRIPT_OUTPUT_DIR}
        FILE_PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
@@ -26,7 +26,7 @@ ENDFOREACH(file)
 
 INSTALL(
     PROGRAMS
-      ${SCRIPT_OUTPUT_DIR}/gnucash-env
-      ${SCRIPT_OUTPUT_DIR}/gnucash-make-guids
-    DESTINATION libexec/gnucash/overrides
+      ${SCRIPT_OUTPUT_DIR}/systecash-env
+      ${SCRIPT_OUTPUT_DIR}/systecash-make-guids
+    DESTINATION libexec/systecash/overrides
 )

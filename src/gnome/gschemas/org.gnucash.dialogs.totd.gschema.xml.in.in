@@ -1,5 +1,5 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.gnucash.dialogs.totd" path="/org/gnucash/dialogs/tip-of-the-day/">
+  <schema id="org.systecash.dialogs.totd" path="/org/systecash/dialogs/tip-of-the-day/">
     <key name="current-tip" type="i">
       <default>0</default>
       <summary>The next tip to show.</summary>
@@ -14,8 +14,8 @@
     </key>
     <key name="show-at-startup" type="b">
       <default>true</default>
-      <summary>Show "Tip Of The Day" at GnuCash start</summary>
-      <description>Enables the "Tip Of The Day" when GnuCash starts up. If active, the dialog will be shown. Otherwise it will not be shown.</description>
+      <summary>Show "Tip Of The Day" at systecash start</summary>
+      <description>Enables the "Tip Of The Day" when systecash starts up. If active, the dialog will be shown. Otherwise it will not be shown.</description>
     </key>
   </schema>
 </schemalist>

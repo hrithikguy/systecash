@@ -46,19 +46,19 @@ static GNCModule engine;
 gchar*
 gnc_module_path (void)
 {
-    return g_strdup ("gnucash/backend/dbi");
+    return g_strdup ("systecash/backend/dbi");
 }
 
 gchar*
 gnc_module_description (void)
 {
-    return g_strdup ("The DBI/SQL backend for GnuCash");
+    return g_strdup ("The DBI/SQL backend for systecash");
 }
 
 int
 gnc_module_init (int refcount)
 {
-    engine = gnc_module_load ("gnucash/engine", 0);
+    engine = gnc_module_load ("systecash/engine", 0);
     if (!engine) return FALSE;
 
     return TRUE;

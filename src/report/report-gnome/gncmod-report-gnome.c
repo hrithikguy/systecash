@@ -52,13 +52,13 @@ int libgncmod_report_gnome_gnc_module_age      = 0;
 char *
 libgncmod_report_gnome_gnc_module_path(void)
 {
-    return g_strdup("gnucash/report/report-gnome");
+    return g_strdup("systecash/report/report-gnome");
 }
 
 char *
 libgncmod_report_gnome_gnc_module_description(void)
 {
-    return g_strdup("Gnome component of GnuCash report generation system");
+    return g_strdup("Gnome component of systecash report generation system");
 }
 
 static void
@@ -73,24 +73,24 @@ extern SCM scm_init_sw_report_gnome_module(void);
 int
 libgncmod_report_gnome_gnc_module_init(int refcount)
 {
-    if (!gnc_module_load("gnucash/app-utils", 0))
+    if (!gnc_module_load("systecash/app-utils", 0))
     {
         return FALSE;
     }
 
-    if (!gnc_module_load("gnucash/gnome-utils", 0))
+    if (!gnc_module_load("systecash/gnome-utils", 0))
     {
         return FALSE;
     }
 
-    if (!gnc_module_load("gnucash/report/report-system", 0))
+    if (!gnc_module_load("systecash/report/report-system", 0))
     {
         return FALSE;
     }
     scm_init_sw_report_gnome_module();
 
     lmod ("(sw_report_gnome)");
-    lmod ("(gnucash report report-gnome)");
+    lmod ("(systecash report report-gnome)");
 
     if (refcount == 0)
         gnc_report_init ();

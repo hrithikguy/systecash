@@ -36,7 +36,7 @@ TARGET_LINK_LIBRARIES(test-core-guile test-core ${GUILE_LDFLAGS} ${GLIB2_LDFLAGS
 
 SET(test_core_SCHEME unittest-support.scm)
 
-SET(GUILE_OUTPUT_DIR   gnucash)
+SET(GUILE_OUTPUT_DIR   systecash)
 SET(GUILE_MODULES      "")
 SET(GUILE_LOAD_DIRS    "")
 SET(GUILE_LIBRARY_DIRS src/test-core src/libqof)
@@ -67,4 +67,4 @@ IF(GTEST_FOUND)
       ${GMOCK_INCLUDE_DIR} ${GMOCK_SRC_DIR})
   ENDIF()
 ENDIF()
-INSTALL(FILES unittest-support.h DESTINATION libexec/gnucash/src/libqof/qof/test)
+INSTALL(FILES unittest-support.h DESTINATION libexec/systecash/src/libqof/qof/test)

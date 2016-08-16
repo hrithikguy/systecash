@@ -2,7 +2,7 @@
  *            test-split-vs-account.c
  *
  *  Tue Sep 27 19:44:50 2005
- *  Copyright  2005  GnuCash team
+ *  Copyright  2005  systecash team
  *  linux@codehelp.co.uk
  ****************************************************************************/
 /*

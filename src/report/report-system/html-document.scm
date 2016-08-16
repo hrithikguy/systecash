@@ -21,8 +21,8 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(gnc:module-load "gnucash/html" 0)
-(use-modules (gnucash printf))
+(gnc:module-load "systecash/html" 0)
+(use-modules (systecash printf))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;  <html-document> class 
@@ -155,8 +155,8 @@
               (begin 
                 ;;This is the only place where <html> appears
                 ;;with the exception of 2 reports: 
-                ;;./share/gnucash/scm/gnucash/report/taxinvoice.eguile.scm:<html>
-                ;;./share/gnucash/scm/gnucash/report/balsheet-eg.eguile.scm:<html>
+                ;;./share/systecash/scm/systecash/report/taxinvoice.eguile.scm:<html>
+                ;;./share/systecash/scm/systecash/report/balsheet-eg.eguile.scm:<html>
 
                 ;; Validate against HTML4 Transitional:
                 (push "<!DOCTYPE!DOCTYPE html PUBLIC -//W3C//DTD HTML 4.01 Transitional//EN\" \n\"http://www.w3.org/TR/html4/loose.dtd\">")

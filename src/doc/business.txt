@@ -4,7 +4,7 @@ API: \ref Business
 
 \section businessoverview Business Objects
 
-The GnuCash Business objects, in src/business/business-core, implement
+The systecash Business objects, in src/business/business-core, implement
 certain basic small-business accounting functions.  Below follows a summary
 overview of the objects and the data that they store.  These are listed in
 order of complexity; with the basic building blocks first, and the more 

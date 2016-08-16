@@ -1,5 +1,5 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.gnucash.dialogs.import.ofx" path="/org/gnucash/dialogs/import/ofx/">
+  <schema id="org.systecash.dialogs.import.ofx" path="/org/systecash/dialogs/import/ofx/">
     <key name="last-path" type="s">
       <default>''</default>
       <summary>Last pathname used</summary>

@@ -1,6 +1,6 @@
 2013-12-31 John Ralls 
 
-	* Bug 721260 - Crash on startup: gnucash cannot handle default locale
+	* Bug 721260 - Crash on startup: systecash cannot handle default locale
 
 2013-12-31 John Ralls 
 
@@ -96,7 +96,7 @@
 
 2013-12-22 John Ralls 
 
-	* Bug 710824 - GnuCash should sanitise UTF-8 before serialising files
+	* Bug 710824 - systecash should sanitise UTF-8 before serialising files
 
 2013-12-22 Mike Alexander 
 
@@ -216,7 +216,7 @@
 
 2013-12-13 Geert Janssens 
 
-	* Bug 719481 - GnuCash report crashes with Guile2
+	* Bug 719481 - systecash report crashes with Guile2
 
 2013-12-13 Geert Janssens 
 
@@ -268,7 +268,7 @@
 
 2013-12-11 Geert Janssens 
 
-	* Bug 720235 - Python bindings should load environment file just like gnucash does
+	* Bug 720235 - Python bindings should load environment file just like systecash does
 
 2013-12-10 Mike Alexander 
 
@@ -404,7 +404,7 @@
 
 2013-12-02 John Ralls 
 
-	* Bug 708526 - GnuCash Crashes when opening About page
+	* Bug 708526 - systecash Crashes when opening About page
 
 2013-12-02 John Ralls 
 
@@ -576,7 +576,7 @@
 
 2013-11-22 Geert Janssens 
 
-	* Win32: more consistent use of @PACKAGE@ for gnucash package name in installer script
+	* Win32: more consistent use of @PACKAGE@ for systecash package name in installer script
 
 2013-11-22 Geert Janssens 
 
@@ -736,7 +736,7 @@
 
 2013-11-04 Geert Janssens 
 
-	* Bug 711294 - Gnucash repeatedly ask associated income account when import qfx file
+	* Bug 711294 - systecash repeatedly ask associated income account when import qfx file
 
 2013-11-04 Geert Janssens 
 
@@ -776,7 +776,7 @@
 
 2013-11-02 John Ralls 
 
-	* Mac: Don't append 'Gnucash' to the 'Preferences' menu item title.
+	* Mac: Don't append 'systecash' to the 'Preferences' menu item title.
 
 2013-11-02 John Ralls 
 
@@ -920,7 +920,7 @@
 
 2013-10-25 Geert Janssens 
 
-	* Register rewrite Update, revised removal update for next release. This update adds a configure option --enable-register2 which will enable the register2 changes at compile time, there are also some changes to use the Gnucash --extra parameter that displays some of the new register2 functionality for testing. Author: Robert Fewell
+	* Register rewrite Update, revised removal update for next release. This update adds a configure option --enable-register2 which will enable the register2 changes at compile time, there are also some changes to use the systecash --extra parameter that displays some of the new register2 functionality for testing. Author: Robert Fewell
 
 2013-10-25 Christian Stimming 
 
@@ -1024,7 +1024,7 @@
 
 2013-10-19 Geert Janssens 
 
-	* Do not remove gnucash_core.c in clean rule
+	* Do not remove systecash_core.c in clean rule
 
 2013-10-18 Geert Janssens 
 
@@ -1068,7 +1068,7 @@
 
 2013-10-13 John Ralls 
 
-	* Remove gnucash-launcher and related scripting files.
+	* Remove systecash-launcher and related scripting files.
 
 2013-10-09 John Ralls 
 
@@ -1264,7 +1264,7 @@
 
 2013-10-07 Geert Janssens 
 
-	* Gnc-Prefs: migrate 24hour_clock preference and fix the code so it actually works. (It's not actively used though in GnuCash)
+	* Gnc-Prefs: migrate 24hour_clock preference and fix the code so it actually works. (It's not actively used though in systecash)
 
 2013-10-07 Geert Janssens 
 
@@ -1716,7 +1716,7 @@
 
 2013-07-14 John Ralls 
 
-	* Bug #704185: GnuCash 2.5 doesn't build on FreeBSD
+	* Bug #704185: systecash 2.5 doesn't build on FreeBSD
 
 2013-07-10 Cristian Marchi 
 
@@ -1844,7 +1844,7 @@
 
 2013-06-29 Mike Alexander 
 
-	* Make it possible to post multiple invoices from the find dialog. GnuCash was crashing if you searched for all unposted invoices, selected two or more of them, and posted them.  This was because the list of invoices to be posted changed while it was being processed.  As part of fixing this the prompt for post date, due date, etc. will only be given once, not once per invoice.
+	* Make it possible to post multiple invoices from the find dialog. systecash was crashing if you searched for all unposted invoices, selected two or more of them, and posted them.  This was because the list of invoices to be posted changed while it was being processed.  As part of fixing this the prompt for post date, due date, etc. will only be given once, not once per invoice.
 
 2013-06-29 Mike Alexander 
 
@@ -2520,7 +2520,7 @@
 
 2013-03-23 Mike Alexander 
 
-	* One more try to get initialization right. This doesn't change things unless --add-price-quotes is given.  If it is then it must be handled before gtk is initialized since DISPLAY might not be set which will cause gtk initialization to fail.  This happens when running the X version of GnuCash from launchd on a Mac to get price quotes updated.
+	* One more try to get initialization right. This doesn't change things unless --add-price-quotes is given.  If it is then it must be handled before gtk is initialized since DISPLAY might not be set which will cause gtk initialization to fail.  This happens when running the X version of systecash from launchd on a Mac to get price quotes updated.
 
 2013-03-22 Christian Stimming 
 
@@ -2532,7 +2532,7 @@
 
 2013-03-22 Christian Stimming 
 
-	* Again reorder the initialization in gnucash-bin: gtk_init_check must be called before gnc_module_system_init.
+	* Again reorder the initialization in systecash-bin: gtk_init_check must be called before gnc_module_system_init.
 
 2013-03-11 Geert Janssens 
 
@@ -2544,7 +2544,7 @@
 
 2013-03-06 Christian Stimming 
 
-	* Adding statement about GPLv2 and v3 license as discussed on gnucash-devel yesterday.
+	* Adding statement about GPLv2 and v3 license as discussed on systecash-devel yesterday.
 
 2013-03-03 John Ralls 
 
@@ -2680,7 +2680,7 @@
 
 2013-02-18 Christian Stimming 
 
-	* Aqbanking online transfer: Set the date in the gnucash txn dialog to non-sensitive.
+	* Aqbanking online transfer: Set the date in the systecash txn dialog to non-sensitive.
 
 2013-02-18 Christian Stimming 
 

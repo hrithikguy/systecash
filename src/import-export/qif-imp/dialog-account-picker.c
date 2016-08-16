@@ -1,5 +1,5 @@
 /********************************************************************\
- * dialog-account-picker.c -- window for picking a Gnucash account  *
+ * dialog-account-picker.c -- window for picking a systecash account  *
  * from the QIF importer.                                           *
  * Copyright (C) 2000-2001 Bill Gribble <grib@billgribble.com>      *
  * Copyright (c) 2006 David Hampton <hampton@employees.org>         *

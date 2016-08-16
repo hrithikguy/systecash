@@ -27,7 +27,7 @@
 /** @addtogroup GuiTreeModel
  * @{ */
 /** @file gnc-tree-view-owner.h
-    @brief GtkTreeView implementation for gnucash owner tree.
+    @brief GtkTreeView implementation for systecash owner tree.
     @author Copyright (C) 2003,2005,2006 David Hampton <hampton@employees.org>
 */
 
@@ -201,7 +201,7 @@ void gnc_tree_view_owner_set_filter (GncTreeViewOwner *owner_view,
 /** This function forces the owner tree filter to be evaluated.  It
  *  may be necessary to call this function if the initial state of the
  *  view is incorrect.  This appears to only be necessary if the
- *  filter affects one of the top level owners in gnucash.
+ *  filter affects one of the top level owners in systecash.
  *
  *  @note This calls a function in gtk that is annotated in the
  *  sources as being slow.  You have been warned.

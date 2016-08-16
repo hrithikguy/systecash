@@ -26,7 +26,7 @@
 /** @addtogroup InvoicePlugin Business Invoice Page
     @{ */
 /** @file gnc-plugin-page-invoice.h
-    @brief  utility functions for the GnuCash UI
+    @brief  utility functions for the systecash UI
     @author Copyright (C) 2005,2006 David Hampton <hampton@employees.org>
 */
 

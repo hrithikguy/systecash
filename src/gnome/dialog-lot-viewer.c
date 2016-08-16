@@ -1,5 +1,5 @@
 /*******************************************************************\
- * dialog-lot-viewer.c -- a basic lot viewer for GnuCash            *
+ * dialog-lot-viewer.c -- a basic lot viewer for systecash            *
  * Copyright (C) 2003 Linas Vepstas <linas@linas.org>               *
  * Copyright (C) 2011 Geert Janssens <geert@kobaltwit.be>           *
  *                                                                  *

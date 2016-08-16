@@ -1,6 +1,6 @@
 2014-10-19 Ralf Habacker 
 
-	* Bug 738749 - Broken account template en_GB/uk-vat.gnucash-xea.
+	* Bug 738749 - Broken account template en_GB/uk-vat.systecash-xea.
 
 2014-12-29 Geert Janssens 
 
@@ -12,7 +12,7 @@
 
 2014-12-24 Geert Janssens 
 
-	* Revisit "Bug 741810 - Compilation fails because of creating .gnucash"
+	* Revisit "Bug 741810 - Compilation fails because of creating .systecash"
 
 2014-12-23 John Ralls 
 
@@ -24,7 +24,7 @@
 
 2014-12-10 Mike Alexander 
 
-	* Tell Guile (and others) to look in install/lib/gnucash for libraries. Without this Guile can't find libgncmod-engine and GnuCash won't start. I don't know how this worked before, perhaps because the correct path was in src/bin/overrides/gnucash-env.in
+	* Tell Guile (and others) to look in install/lib/systecash for libraries. Without this Guile can't find libgncmod-engine and systecash won't start. I don't know how this worked before, perhaps because the correct path was in src/bin/overrides/systecash-env.in
 
 2014-12-23 Francisco 
 
@@ -32,11 +32,11 @@
 
 2014-12-23 Geert Janssens 
 
-	* Cherry-pick "Bug 741810 - Compilation fails because of creating .gnucash"
+	* Cherry-pick "Bug 741810 - Compilation fails because of creating .systecash"
 
 2014-12-10 Mike Alexander 
 
-	* Tell Guile (and others) to look in install/lib/gnucash for ligraries. Without this Guile can't find libgncmod-engine and GnuCash won't start, at least sometimes.
+	* Tell Guile (and others) to look in install/lib/systecash for ligraries. Without this Guile can't find libgncmod-engine and systecash won't start, at least sometimes.
 
 2014-12-21 John Ralls 
 
@@ -48,7 +48,7 @@
 
 2014-12-21 John Ralls 
 
-	* Bug 739584 - gnucash-2.6.4 segfaults regularly on transfer .
+	* Bug 739584 - systecash-2.6.4 segfaults regularly on transfer .
 
 2014-12-21 John Ralls 
 
@@ -336,7 +336,7 @@
 
 2014-10-06 John Ralls 
 
-	* Bug 736359 - Date of 0000-00-00 in MySQL backend crashes GnuCash
+	* Bug 736359 - Date of 0000-00-00 in MySQL backend crashes systecash
 
 2014-10-06 John Ralls 
 
@@ -372,7 +372,7 @@
 
 2014-09-23 valdis 
 
-	* Updated resource files for Latvian: po/lv.po and  accounts/lv/acctchrt_business.gnucash-xea
+	* Updated resource files for Latvian: po/lv.po and  accounts/lv/acctchrt_business.systecash-xea
 
 2014-09-27 Chenxiong Qi 
 
@@ -504,7 +504,7 @@
 
 2014-09-21 John Ralls 
 
-	* Bug 732545 - gnucash-2.6.3 segfaults when started
+	* Bug 732545 - systecash-2.6.3 segfaults when started
 
 2014-09-21 Mark Haanen 
 
@@ -836,7 +836,7 @@
 
 2014-06-02 Mike Evans 
 
-	* Merge branch 'maint' of https://github.com/Gnucash/gnucash into maint
+	* Merge branch 'maint' of https://github.com/systecash/systecash into maint
 
 2014-06-01 John Ralls 
 
@@ -904,11 +904,11 @@
 
 2014-05-20 Geert Janssens 
 
-	* Merge branch 'scheduled_tx_i18n_prefix' of https://github.com/zeldigas/gnucash into maint
+	* Merge branch 'scheduled_tx_i18n_prefix' of https://github.com/zeldigas/systecash into maint
 
 2014-05-19 Geert Janssens 
 
-	* Bug 610202 - gnucash silently closes when no X11/$DISPLAY is present
+	* Bug 610202 - systecash silently closes when no X11/$DISPLAY is present
 
 2014-05-19 Dmitry Pavlov 
 
@@ -940,7 +940,7 @@
 
 2014-05-09 Geert Janssens 
 
-	* Bug 688965 - Page Up, Page Down keys cause GnuCash to hang
+	* Bug 688965 - Page Up, Page Down keys cause systecash to hang
 
 2014-05-08 Geert Janssens 
 
@@ -1036,7 +1036,7 @@
 
 2014-04-24 Geert Janssens 
 
-	* Prevent older gnucash versions from opening a data file if previously unhandled kvps are used
+	* Prevent older systecash versions from opening a data file if previously unhandled kvps are used
 
 2014-04-24 Michalis Kamprianis 
 
@@ -1048,11 +1048,11 @@
 
 2014-04-22 Jeff Earickson 
 
-	* Gnucash translation into Konkani, shown in Latin script.
+	* systecash translation into Konkani, shown in Latin script.
 
 2014-04-22 Jeff Earickson 
 
-	* Gnucash translation into Konkani in the Devanagari script.
+	* systecash translation into Konkani in the Devanagari script.
 
 2014-04-22 Jeff Earickson 
 
@@ -1080,7 +1080,7 @@
 
 2014-04-13 John Ralls 
 
-	* Re-enable loading and saving gnucashdotdir/accelerator-home on OSX
+	* Re-enable loading and saving systecashdotdir/accelerator-home on OSX
 
 2014-04-15 Moritz Lipp 
 
@@ -1168,11 +1168,11 @@
 
 2014-03-28 John Ralls 
 
-	* Bug 724995 - Gnucash crashes due to assertion failed when opening sqlite file
+	* Bug 724995 - systecash crashes due to assertion failed when opening sqlite file
 
 2014-03-28 John Ralls 
 
-	* Set Gnucash version and GNUCASH_RESAVE_VERSION in init_version_info
+	* Set systecash version and GNUCASH_RESAVE_VERSION in init_version_info
 
 2014-03-26 Geert Janssens 
 
@@ -1260,7 +1260,7 @@
 
 2014-03-01 John Ralls 
 
-	* Release GnuCash 2.6.2 (tag: 2.6.2)
+	* Release systecash 2.6.2 (tag: 2.6.2)
 
 2014-03-01 John Ralls 
 
@@ -1296,7 +1296,7 @@
 
 2014-02-23 John Ralls 
 
-	* Revert "Bug 721822 - GnuCash 2.6.0 loads data file much slower than 2.4.x"
+	* Revert "Bug 721822 - systecash 2.6.0 loads data file much slower than 2.4.x"
 
 2014-02-23 Mike Alexander 
 
@@ -1304,7 +1304,7 @@
 
 2014-02-22 John Ralls 
 
-	* Bug 721822 - GnuCash 2.6.0 loads data file much slower than 2.4.x
+	* Bug 721822 - systecash 2.6.0 loads data file much slower than 2.4.x
 
 2014-02-22 John Ralls 
 
@@ -1464,7 +1464,7 @@
 
 2014-02-01 Cristian Marchi 
 
-	* Link to help button in New Employee window the new employees section in GnuCash help.
+	* Link to help button in New Employee window the new employees section in systecash help.
 
 2014-01-31 Christian Stimming 
 
@@ -1476,7 +1476,7 @@
 
 2014-01-30 John Ralls 
 
-	* Replace type="guid" with type="new" in gnucash-xea files
+	* Replace type="guid" with type="new" in systecash-xea files
 
 2014-01-29 Mike Alexander 
 
@@ -1512,7 +1512,7 @@
 
 2014-01-26 John Ralls 
 
-	* Fix handling of gnucash.appdata.xml
+	* Fix handling of systecash.appdata.xml
 
 2014-01-25 John Ralls 
 
@@ -1740,7 +1740,7 @@
 
 2014-01-19 Mike Alexander 
 
-	* Remove the max_count test in gnc_plugin_page_report_name_changed. This limits the total number of times it can be called per invocation of GnuCash for no obvious reason.
+	* Remove the max_count test in gnc_plugin_page_report_name_changed. This limits the total number of times it can be called per invocation of systecash for no obvious reason.
 
 2014-01-18 John Ralls 
 
@@ -1772,7 +1772,7 @@
 
 2014-01-17 John Ralls 
 
-	* Bug 721576 - Gnucash can not work with files, that have russian symbols in path.
+	* Bug 721576 - systecash can not work with files, that have russian symbols in path.
 
 2014-01-16 John Ralls 
 
@@ -1836,7 +1836,7 @@
 
 2014-01-08 Cristian Marchi 
 
-	* Bug #721607 and #721608: fix GnuCash version numbers and remove/update links.
+	* Bug #721607 and #721608: fix systecash version numbers and remove/update links.
 
 2014-01-07 Christian Stimming 
 

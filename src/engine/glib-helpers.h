@@ -1,5 +1,5 @@
 /********************************************************************\
- * glib-helpers.h -- gnucash glib helper functions                  *
+ * glib-helpers.h -- systecash glib helper functions                  *
  * Copyright (C) 2000 Linas Vepstas                                 *
  * Copyright (C) 2006 Chris Shoemaker <c.shoemaker@cox.net>         *
  *                                                                  *

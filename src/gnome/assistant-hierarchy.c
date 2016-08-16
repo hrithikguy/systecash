@@ -193,7 +193,7 @@ set_final_balance (GHashTable *hash, Account *account, gnc_numeric in_balance)
 
 #ifdef PLATFORM_OSX
 /* Repeat retrieving the locale from defaults in case it was overridden in
- * gnucash-bin because it wasn't a supported POSIX locale.
+ * systecash-bin because it wasn't a supported POSIX locale.
  */
 static char*
 mac_locale()
@@ -1176,7 +1176,7 @@ gnc_create_hierarchy_assistant (gboolean use_defaults, GncHierarchyAssistantFini
     data = g_new0 (hierarchy_data, 1);
 
     /* Presumably this assistant is only used to create a new book but we check.
-     * When gnucash is started with --nofile, there is initially no session (and
+     * When systecash is started with --nofile, there is initially no session (and
      * no book), but by the time we get here, one could have been created (for
      * example, if an empty account tree tab is opened, a session is created
      * which creates a new, but empty, book). */

@@ -157,11 +157,11 @@ TARGET_INCLUDE_DIRECTORIES (gncmod-engine
 )
 
 INSTALL(TARGETS gncmod-engine
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 
-INSTALL(FILES ${engine_HEADERS} DESTINATION include/gnucash)
+INSTALL(FILES ${engine_HEADERS} DESTINATION include/systecash)
 
 # Scheme
 
@@ -192,7 +192,7 @@ SET(GUILE_DEPENDS      ${BACKEND_DEPENDS} gnc-module gncmod-engine scm-gnc-modul
 
 GNC_ADD_SCHEME_TARGETS(scm-engine-0
   "${engine_SCHEME_0}"
-  gnucash
+  systecash
   "${GUILE_MODULES}"
   "${GUILE_LOAD_DIRS}"
   "${GUILE_LIBRARY_DIRS}"

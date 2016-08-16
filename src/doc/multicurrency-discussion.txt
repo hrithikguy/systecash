@@ -59,7 +59,7 @@ collection of splits in different currencies to be displayed?
 <cstim> yes
 
 <goonie> cstim: but even VB or Carlton Draught is an improvement on soap suds . . . er, Budweiser.
- but back to Gnucash matters . . . 
+ but back to systecash matters . . . 
 
 <cstim> yes
 
@@ -104,7 +104,7 @@ collection of splits in different currencies to be displayed?
 <goonie> So, in the short term, your assumption is correct.
  In the long term, not the case.
 
-<cstim> What I would usually call the "currency" of an account is in Gnucash acctually called "security".
+<cstim> What I would usually call the "currency" of an account is in systecash acctually called "security".
 \a gnc:account-get-commodity will return this security of the account.
 
 <goonie> Gotta love terminology.
@@ -184,7 +184,7 @@ the amount of the account-commodity involved.
  Maybe that functions need some name change in the future.
 
 <goonie> perhaps.
- the trouble is that there are so many things that need names in gnucash, that you start to run out :)
+ the trouble is that there are so many things that need names in systecash, that you start to run out :)
 
 <cstim> :)
  We could \a gnc:split-get-share-amount => \a gnc:split-get-damount
@@ -276,6 +276,6 @@ of a particular *transaction* is easy -- that's just the fraction value/damount 
 history. But using the last known exchange rate instead may be useful at times. Maybe I'll 
 implmement something like that maybe if i have time :)
 
-<goonie>diff -up 'gnucash/src/engine/ Query.c' 'gnucash_transaction_report/src/engine/ Query.c'
+<goonie>diff -up 'systecash/src/engine/ Query.c' 'systecash_transaction_report/src/engine/ Query.c'
 
 */

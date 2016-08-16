@@ -16,8 +16,8 @@
 # - get_all_customers should be a query like get_all_invoices
 
 try:
-    import gnucash
-    from gnucash.gnucash_business import Customer, Employee, Vendor, Job, \
+    import systecash
+    from systecash.systecash_business import Customer, Employee, Vendor, Job, \
         Address, Invoice, Entry, TaxTable, TaxTableEntry, GNC_AMT_TYPE_PERCENT, \
             GNC_DISC_PRETAX
     import str_methods
@@ -32,7 +32,7 @@ def get_all_lots(account):
   descs = account.get_descendants()
   for desc in descs:
     if type(desc).__name__ == 'SwigPyObject':
-        desc = gnucash.Account(instance=desc)
+        desc = systecash.Account(instance=desc)
     ll=desc.GetLotList()
     ltotal+=ll
   return ltotal
@@ -46,9 +46,9 @@ def get_all_invoices_from_lots(account):
   invoice_list=[]
   for lot in lot_list:
     if type(lot).__name__ == 'SwigPyObject':
-        lot = gnucash.GncLot(instance=lot)
+        lot = systecash.GncLot(instance=lot)
 
-    invoice=gnucash.gnucash_core_c.gncInvoiceGetInvoiceFromLot(lot.instance)
+    invoice=systecash.systecash_core_c.gncInvoiceGetInvoiceFromLot(lot.instance)
     if invoice:
       invoice_list.append(Invoice(instance=invoice))
   return invoice_list
@@ -59,34 +59,34 @@ def get_all_invoices(book, is_paid=None, is_active=None):
     posts a query to search for all invoices.
 
     arguments:
-        book                the gnucash book to work with
+        book                the systecash book to work with
     keyword-arguments:
         is_paid     int     1 to search for invoices having been paid, 0 for not, None to ignore.
         is_active   int     1 to search for active invoices
     """
 
-    query = gnucash.Query()
+    query = systecash.Query()
     query.search_for('gncInvoice')
     query.set_book(book)
 
     if is_paid == 0:
-        query.add_boolean_match([gnucash.INVOICE_IS_PAID], False, gnucash.QOF_QUERY_AND)
+        query.add_boolean_match([systecash.INVOICE_IS_PAID], False, systecash.QOF_QUERY_AND)
     elif is_paid == 1:
-        query.add_boolean_match([gnucash.INVOICE_IS_PAID], True, gnucash.QOF_QUERY_AND)
+        query.add_boolean_match([systecash.INVOICE_IS_PAID], True, systecash.QOF_QUERY_AND)
     elif is_paid == None:
         pass
 
     # active = JOB_IS_ACTIVE
     if is_active == 0:
-        query.add_boolean_match(['active'], False, gnucash.QOF_QUERY_AND)
+        query.add_boolean_match(['active'], False, systecash.QOF_QUERY_AND)
     elif is_active == 1:
-        query.add_boolean_match(['active'], True, gnucash.QOF_QUERY_AND)
+        query.add_boolean_match(['active'], True, systecash.QOF_QUERY_AND)
     elif is_active == None:
         pass
 
     # return only invoices (1 = invoices)
-    pred_data = gnucash.gnucash_core.QueryInt32Predicate(gnucash.QOF_COMPARE_EQUAL, 1)
-    query.add_term([gnucash.INVOICE_TYPE], pred_data, gnucash.QOF_QUERY_AND)
+    pred_data = systecash.systecash_core.QueryInt32Predicate(systecash.QOF_COMPARE_EQUAL, 1)
+    query.add_term([systecash.INVOICE_TYPE], pred_data, systecash.QOF_QUERY_AND)
 
     invoice_list = []
 

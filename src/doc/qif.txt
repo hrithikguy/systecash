@@ -14,7 +14,7 @@ to maintain and hard to re-integrate into the shared import
 architecture.  Similarly, the half-completed re-write in qif-io-core
 is similarly hard to maintain (although it is arguably easier to
 integrate).  One problem with both of these solutions is that they are
-written in Scheme, a language that many gnucash developers just don't
+written in Scheme, a language that many systecash developers just don't
 understand well.  Another issue is that the code is not commented and
 no documentation exists to help future developers track down bugs or
 extend the importer as QIF changes over time (c.f. Memorized
@@ -90,10 +90,10 @@ multiple parts of the same transaction it can (and should) combine
 them into a single transaction, thereby pinning down the near and far
 accounts.
 
-The next series of steps maps QIF data objects to GnuCash data
+The next series of steps maps QIF data objects to systecash data
 objects.  In particular, the importer needs the help of the UI to map
-unknown QIF Accounts and Categories to GnuCash Accounts (the latter to
-Income and Expense Accounts) and QIF Securities to GnuCash
+unknown QIF Accounts and Categories to systecash Accounts (the latter to
+Income and Expense Accounts) and QIF Securities to systecash
 Commodities.  Finally the importer can use the generic transaction
 matcher to map the existing transactions to potential duplicates and
 also Payee/Memo fields to "destination accounts".
@@ -190,9 +190,9 @@ b. Add/Remove files to be imported
    - repeat (b) as necessary until user choses to move to (c)
 c. Once all files are chosen, merge internally and continue the process
    - qif_context_merge_files
-d. map qif accounts to gnucash accounts
-e. map qif categories to gnucash accounts
-f. map qif securities to gnucash commodities
-g. duplicate detection with existing gnucash txns
+d. map qif accounts to systecash accounts
+e. map qif categories to systecash accounts
+f. map qif securities to systecash commodities
+g. duplicate detection with existing systecash txns
 h. transaction matcher (map one-sided txns using Payee/Memo info)
 */

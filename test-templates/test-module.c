@@ -37,7 +37,7 @@ main (int argc, char *argv[])
 			* whether the module you're testing or any
 			* dependencies use GObject. */
     qof_log_init_filename_special("/dev/null");    /* Initialize the
-			* gnucash logging system. Your tests will
+			* systecash logging system. Your tests will
 			* crash on the first logging call otherwise */
     g_test_init ( &argc, &argv, NULL ); /* initialize test program */
     test_suite_module1();           /* Call each suite assembly function */

@@ -50,22 +50,22 @@
 /* Don't use deprecated gnome functions */
 #cmakedefine GNOME_DISABLE_DEPRECATED
 
-/* Most recent stable GnuCash series */
+/* Most recent stable systecash series */
 #define GNUCASH_LATEST_STABLE_SERIES "@GNUCASH_LATEST_STABLE_SERIES@"
 
-/* GnuCash Major version number */
+/* systecash Major version number */
 #define GNUCASH_MAJOR_VERSION @GNUCASH_MAJOR_VERSION@
 
-/* GnuCash Micro version number */
+/* systecash Micro version number */
 #define GNUCASH_MICRO_VERSION @GNUCASH_MICRO_VERSION@
 
-/* GnuCash Minor version number */
+/* systecash Minor version number */
 #define GNUCASH_MINOR_VERSION @GNUCASH_MINOR_VERSION@
 
-/* GnuCash Nano version number */
+/* systecash Nano version number */
 #define GNUCASH_NANO_VERSION @GNUCASH_NANO_VERSION@
 
-/* GnuCash earliest compatible databaseversion number */
+/* systecash earliest compatible databaseversion number */
 #define GNUCASH_RESAVE_VERSION @GNUCASH_RESAVE_VERSION@
 
 /* Don't use deprecated gtk functions */

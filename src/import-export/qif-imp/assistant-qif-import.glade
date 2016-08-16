@@ -14,9 +14,9 @@
       <object class="GtkLabel" id="start_page">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">GnuCash can import financial data from QIF (Quicken Interchange Format) files written by Quicken/QuickBooks, MS Money, Moneydance, and many other programs. 
+        <property name="label" translatable="yes">systecash can import financial data from QIF (Quicken Interchange Format) files written by Quicken/QuickBooks, MS Money, Moneydance, and many other programs. 
 
-The import process has several steps. Your GnuCash accounts will not be changed until you click "Apply" at the end of the process. 
+The import process has several steps. Your systecash accounts will not be changed until you click "Apply" at the end of the process. 
 
 Click "Forward" to start loading your QIF data, or "Cancel" to abort the process. </property>
         <property name="wrap">True</property>
@@ -501,9 +501,9 @@ Click "Forward" to finish loading files and move to the next step of the QIF imp
           <object class="GtkLabel" id="label830">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">On the next page, the accounts in your QIF files and any stocks or mutual funds you own will be matched with GnuCash accounts. If a GnuCash account already exists with the same name, or a similar name and compatible type, that account will be used as a match; otherwise, GnuCash will create a new account with the same name and type as the QIF account. If you do not like the suggested GnuCash account, double-click to change it.
+            <property name="label" translatable="yes">On the next page, the accounts in your QIF files and any stocks or mutual funds you own will be matched with systecash accounts. If a systecash account already exists with the same name, or a similar name and compatible type, that account will be used as a match; otherwise, systecash will create a new account with the same name and type as the QIF account. If you do not like the suggested systecash account, double-click to change it.
 
-Note that GnuCash will be creating many accounts that did not exist on your other personal finance program, including a separate account for each stock you own, separate accounts for the brokerage commissions, special "Equity" accounts (subaccounts of Retained Earnings, by default) which are the source of your opening balances, etc. All of these accounts will appear on the next page so you can change them if you want to, but it is safe to leave them alone.
+Note that systecash will be creating many accounts that did not exist on your other personal finance program, including a separate account for each stock you own, separate accounts for the brokerage commissions, special "Equity" accounts (subaccounts of Retained Earnings, by default) which are the source of your opening balances, etc. All of these accounts will appear on the next page so you can change them if you want to, but it is safe to leave them alone.
 </property>
             <property name="wrap">True</property>
           </object>
@@ -597,7 +597,7 @@ Note that GnuCash will be creating many accounts that did not exist on your othe
             </child>
             <child>
               <object class="GtkButton" id="account_page_change">
-                <property name="label" translatable="yes">Change GnuCash _Account...</property>
+                <property name="label" translatable="yes">Change systecash _Account...</property>
                 <property name="visible">True</property>
                 <property name="sensitive">False</property>
                 <property name="can_focus">True</property>
@@ -622,7 +622,7 @@ Note that GnuCash will be creating many accounts that did not exist on your othe
       </object>
       <packing>
         <property name="page_type">content</property>
-        <property name="title" translatable="yes">Match QIF accounts with GnuCash accounts</property>
+        <property name="title" translatable="yes">Match QIF accounts with systecash accounts</property>
       </packing>
     </child>
     <child>
@@ -634,11 +634,11 @@ Note that GnuCash will be creating many accounts that did not exist on your othe
           <object class="GtkLabel" id="label840">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">GnuCash uses separate Income and Expense accounts rather than categories to classify your transactions. Each of the categories in your QIF file will be converted to a GnuCash account. 
+            <property name="label" translatable="yes">systecash uses separate Income and Expense accounts rather than categories to classify your transactions. Each of the categories in your QIF file will be converted to a systecash account. 
 
-On the next page, you will have an opportunity to look at the suggested matches between QIF categories and GnuCash accounts. You may change matches that you do not like by double-clicking on the line containing the category name.
+On the next page, you will have an opportunity to look at the suggested matches between QIF categories and systecash accounts. You may change matches that you do not like by double-clicking on the line containing the category name.
 
-If you change your mind later, you can reorganize the account structure safely within GnuCash.</property>
+If you change your mind later, you can reorganize the account structure safely within systecash.</property>
             <property name="wrap">True</property>
           </object>
           <packing>
@@ -731,7 +731,7 @@ If you change your mind later, you can reorganize the account structure safely w
             </child>
             <child>
               <object class="GtkButton" id="category_page_change">
-                <property name="label" translatable="yes">Change GnuCash _Account...</property>
+                <property name="label" translatable="yes">Change systecash _Account...</property>
                 <property name="visible">True</property>
                 <property name="sensitive">False</property>
                 <property name="can_focus">True</property>
@@ -756,7 +756,7 @@ If you change your mind later, you can reorganize the account structure safely w
       </object>
       <packing>
         <property name="page_type">content</property>
-        <property name="title" translatable="yes">Match QIF categories with GnuCash accounts</property>
+        <property name="title" translatable="yes">Match QIF categories with systecash accounts</property>
       </packing>
     </child>
     <child>
@@ -768,9 +768,9 @@ If you change your mind later, you can reorganize the account structure safely w
           <object class="GtkLabel" id="label847707">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">QIF files downloaded from banks and other financial institutions may not have information about Accounts and Categories which would allow them to be correctly assigned to GnuCash accounts. 
+            <property name="label" translatable="yes">QIF files downloaded from banks and other financial institutions may not have information about Accounts and Categories which would allow them to be correctly assigned to systecash accounts. 
 
-In the following page, you will see the text that appears in the Payee and Memo fields of transactions with no QIF Account or Category. By default these transactions are assigned to the 'Unspecified' account in GnuCash. If you select a different account, it will be remembered for future QIF files. </property>
+In the following page, you will see the text that appears in the Payee and Memo fields of transactions with no QIF Account or Category. By default these transactions are assigned to the 'Unspecified' account in systecash. If you select a different account, it will be remembered for future QIF files. </property>
             <property name="wrap">True</property>
           </object>
           <packing>
@@ -863,7 +863,7 @@ In the following page, you will see the text that appears in the Payee and Memo 
             </child>
             <child>
               <object class="GtkButton" id="memo_page_change">
-                <property name="label" translatable="yes">Change GnuCash _Account...</property>
+                <property name="label" translatable="yes">Change systecash _Account...</property>
                 <property name="visible">True</property>
                 <property name="sensitive">False</property>
                 <property name="can_focus">True</property>
@@ -888,7 +888,7 @@ In the following page, you will see the text that appears in the Payee and Memo 
       </object>
       <packing>
         <property name="page_type">content</property>
-        <property name="title" translatable="yes">Match payees/memos to GnuCash accounts</property>
+        <property name="title" translatable="yes">Match payees/memos to systecash accounts</property>
       </packing>
     </child>
     <child>
@@ -960,7 +960,7 @@ In the following page, you will see the text that appears in the Payee and Memo 
           <object class="GtkLabel" id="book_option_message_label">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Since you are creating a new file, you will next see a dialog for setting book options. These can affect how GnuCash imports transactions. If you come back to this page without cancelling and starting over, the dialog for setting book options will not be shown a second time when you go forward. You can access it directly from the menu via File->Properties.</property>
+            <property name="label" translatable="yes">Since you are creating a new file, you will next see a dialog for setting book options. These can affect how systecash imports transactions. If you come back to this page without cancelling and starting over, the dialog for setting book options will not be shown a second time when you go forward. You can access it directly from the menu via File->Properties.</property>
             <property name="wrap">True</property>
           </object>
           <packing>
@@ -983,7 +983,7 @@ In the following page, you will see the text that appears in the Payee and Memo 
           <object class="GtkLabel" id="label833">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">In the following pages you will be asked to provide information about stocks, mutual funds, and other investments that appear in the QIF file(s) you are importing. GnuCash needs some additional details about these investments that the QIF format does not provide. 
+            <property name="label" translatable="yes">In the following pages you will be asked to provide information about stocks, mutual funds, and other investments that appear in the QIF file(s) you are importing. systecash needs some additional details about these investments that the QIF format does not provide. 
 
 Each stock, mutual fund, or other investment must have a name and an abbreviation, such as a stock symbol. Because some unrelated investments have the same abbreviation, you also need to indicate what type of abbreviation you have entered. For example, you could select the exchange that assigned the symbol (NASDAQ, NYSE, etc.), or select an investment type.
 
@@ -1158,7 +1158,7 @@ If you don't see your exchange listed, or none of the available choices are appr
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="label" translatable="yes">
-If you are importing a QIF file from a bank or other financial institution, some of the transactions may already exist in your GnuCash accounts. To avoid duplication, GnuCash has tried to identify matches and needs your help to review them.
+If you are importing a QIF file from a bank or other financial institution, some of the transactions may already exist in your systecash accounts. To avoid duplication, systecash has tried to identify matches and needs your help to review them.
 
 On the next page you will be shown a list of imported transactions. As you select each one, a list of possible matches will be shown below it. If you find a correct match, click on it. Your selection will be confirmed by a check mark in the "Match?" column.
 
@@ -1280,7 +1280,7 @@ Click "Forward" to review the possible matches.</property>
       <object class="GtkLabel" id="end_page">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Click "Apply" to import data from the staging area and update your GnuCash accounts. The account and category matching information you have entered will be saved and used for defaults the next time you use the QIF import facility. 
+        <property name="label" translatable="yes">Click "Apply" to import data from the staging area and update your systecash accounts. The account and category matching information you have entered will be saved and used for defaults the next time you use the QIF import facility. 
 
 Click "Back" to review your account and category matchings, to change currency and security settings for new accounts, or to add more files to the staging area.
 
@@ -1289,7 +1289,7 @@ Click "Cancel" to abort the QIF import process.</property>
       </object>
       <packing>
         <property name="page_type">confirm</property>
-        <property name="title" translatable="yes">Update your GnuCash accounts</property>
+        <property name="title" translatable="yes">Update your systecash accounts</property>
       </packing>
     </child>
     <child>

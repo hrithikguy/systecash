@@ -1,6 +1,6 @@
 /*
  * gnc-main-window.c -- GtkWindow which represents the
- *	GnuCash main window.
+ *	systecash main window.
  *
  * Copyright (C) 2003 Jan Arne Petersen <jpetersen@uni-bonn.de>
  * Copyright (C) 2003 David Hampton <hampton@employees.org>
@@ -200,7 +200,7 @@ gnc_embedded_window_get_page (GncEmbeddedWindow *window)
 }
 
 
-/** Initialize the class for a new gnucash embedded window.  This will
+/** Initialize the class for a new systecash embedded window.  This will
  *  set up any function pointers that override functions in the parent
  *  class.
  *
@@ -223,7 +223,7 @@ gnc_embedded_window_class_init (GncEmbeddedWindowClass *klass)
 }
 
 
-/** Initialize a new instance of a gnucash embedded window.  This
+/** Initialize a new instance of a systecash embedded window.  This
  *  function initializes the object private storage space.  It also
  *  adds the new object to a list (for memory tracking purposes).
  *
@@ -310,7 +310,7 @@ gnc_embedded_window_add_widget (GtkUIManager *merge,
 }
 
 
-/** Initialize the data structures of a gnucash embedded window.
+/** Initialize the data structures of a systecash embedded window.
  *
  *  @param window The object to initialize. */
 static void

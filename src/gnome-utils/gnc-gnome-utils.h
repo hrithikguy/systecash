@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-gnome-utils.h -- utility functions for gnome for GnuCash     *
+ * gnc-gnome-utils.h -- utility functions for gnome for systecash     *
  * Copyright (C) 2001 Linux Developers Group                        *
  * Copyright (C) 2003 David Hampton <hampton@employees.org>         *
  *                                                                  *
@@ -94,7 +94,7 @@ GtkWidget * gnc_gnome_get_pixmap (const char *name);
 GdkPixbuf * gnc_gnome_get_gdkpixbuf (const char *name);
 
 
-/** Shutdown gnucash.  This function will initiate an orderly
+/** Shutdown systecash.  This function will initiate an orderly
  *  shutdown, and when that has finished it will exit the program.
  *
  *  @param exit_status The exit status for the program.
@@ -102,10 +102,10 @@ GdkPixbuf * gnc_gnome_get_gdkpixbuf (const char *name);
 void gnc_shutdown (int exit_status);
 
 
-/** Initialize the gnucash gui */
+/** Initialize the systecash gui */
 GncMainWindow *gnc_gui_init (void);
 int gnc_ui_start_event_loop (void);
-gboolean gnucash_ui_is_running (void);
+gboolean systecash_ui_is_running (void);
 
 #endif
 /** @} */

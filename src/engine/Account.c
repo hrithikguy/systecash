@@ -698,7 +698,7 @@ gnc_account_class_init (AccountClass *klass)
                            "the commodity SCU.  This indicates a case "
                            "where the two were accidentally set to "
                            "mismatched values in older versions of "
-                           "GnuCash.",
+                           "systecash.",
                            FALSE,
                            G_PARAM_READWRITE));
 
@@ -5460,7 +5460,7 @@ change_imap_entry (GncImportMatchMap *imap, gchar *kvp_path, int64_t token_count
     qof_instance_set_kvp (QOF_INSTANCE (imap->acc), kvp_path, &value);
 
     /* Set a feature flag in the book for the change to use guid.
-     * This will prevent older GnuCash versions that don't support this feature
+     * This will prevent older systecash versions that don't support this feature
      * from opening this file. */
     gnc_features_set_used (imap->book, GNC_FEATURE_GUID_BAYESIAN);
 }

@@ -135,7 +135,7 @@ INSTALL(TARGETS gnc-core-utils
 
 SET (core_utils_SCHEME core-utils.scm)
 
-SET(GUILE_OUTPUT_DIR   gnucash)
+SET(GUILE_OUTPUT_DIR   systecash)
 SET(GUILE_MODULES      "")
 SET(GUILE_LOAD_DIRS    src/core-utils)
 SET(GUILE_LIBRARY_DIRS src/core-utils)

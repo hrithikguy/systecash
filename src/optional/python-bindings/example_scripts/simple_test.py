@@ -3,9 +3,9 @@
 # @brief Creates a basic set of accounts and a couple of transactions
 # @ingroup python_bindings_examples
 
-from gnucash import Session, Account, Transaction, Split, GncNumeric
+from systecash import Session, Account, Transaction, Split, GncNumeric
 
-FILE_1 = "/tmp/example.gnucash"
+FILE_1 = "/tmp/example.systecash"
 
 session = Session("xml://%s" % FILE_1, is_new=True)
 

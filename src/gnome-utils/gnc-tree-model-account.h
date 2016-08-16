@@ -25,10 +25,10 @@
 
 /** @addtogroup GUI
     @{ */
-/** @addtogroup GuiTreeModel GnuCash Tree Model
+/** @addtogroup GuiTreeModel systecash Tree Model
     @{ */
 /** @file gnc-tree-model-account.h
-    @brief GtkTreeModel implementation for gnucash account tree.
+    @brief GtkTreeModel implementation for systecash account tree.
     @author Jan Arne Petersen <jpetersen@uni-bonn.de>
     @author David Hampton <hampton@employees.org>
 */
@@ -126,7 +126,7 @@ GType gnc_tree_model_account_get_type (void);
 /** @name Account Tree Model Constructors
  @{ */
 
-/** Create a new GtkTreeModel for manipulating gnucash accounts.
+/** Create a new GtkTreeModel for manipulating systecash accounts.
  *
  *  @param root The account group to put at the top level of the tree
  *  hierarchy. */
@@ -137,7 +137,7 @@ GtkTreeModel *gnc_tree_model_account_new (Account *root);
 /** @name Account Tree Model Get/Set Functions
   @{ */
 
-/** Convert a model/iter pair to a gnucash account.  This routine should
+/** Convert a model/iter pair to a systecash account.  This routine should
  *  only be called from an account tree view filter function.  The
  *  model and iter values will be provided as part of the call to the
  *  filter.

@@ -21,16 +21,16 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report standard-reports portfolio))
+(define-module (systecash report standard-reports portfolio))
 
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
 (use-modules (srfi srfi-1))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(use-modules (gnucash printf))
+(use-modules (systecash printf))
 
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
 (define reportname (N_ "Investment Portfolio"))
 
@@ -41,7 +41,7 @@
 (define (options-generator)
   (let* ((options (gnc:new-options))
          ;; This is just a helper function for making options.
-         ;; See gnucash/src/scm/options.scm for details.
+         ;; See systecash/src/scm/options.scm for details.
          (add-option
           (lambda (new-option)
             (gnc:register-option options new-option))))

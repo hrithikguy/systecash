@@ -40,7 +40,7 @@ See \ref gncnumericexample
 
 @{ */
 /** @file gnc-numeric.h
-    @brief An exact-rational-number library for gnucash.
+    @brief An exact-rational-number library for systecash.
 	(to be renamed qofnumeric.h in libqof2)
     @author Copyright (C) 2000 Bill Gribble
     @author Copyright (C) 2004 Linas Vepstas <linas@linas.org>

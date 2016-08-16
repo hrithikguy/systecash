@@ -1,5 +1,5 @@
 /********************************************************************
- * top-level.h -- public gnucash UI functions                       *
+ * top-level.h -- public systecash UI functions                       *
  * Copyright (C) 2001 Bill Gribble <grib@gnumatic.com>              *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *

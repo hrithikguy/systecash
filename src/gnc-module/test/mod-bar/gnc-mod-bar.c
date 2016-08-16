@@ -1,4 +1,4 @@
-/* gnc-mod-bar.c : the Gnucash plugin that wraps the library
+/* gnc-mod-bar.c : the systecash plugin that wraps the library
  * 'libbar.so'. it does this by being linked against libbar.so */
 /********************************************************************\
  * This program is free software; you can redistribute it and/or    *
@@ -40,7 +40,7 @@ int libgncmodbar_gnc_module_revision = 0;
 char *
 libgncmodbar_gnc_module_path(void)
 {
-    return g_strdup("gnucash/bar");
+    return g_strdup("systecash/bar");
 }
 
 char *
@@ -57,7 +57,7 @@ libgncmodbar_gnc_module_init(int refcount)
     scm_c_eval_string("(use-modules (sw_bar))");
 
     /* use the Scheme "bar" module */
-    scm_c_eval_string("(use-modules (gnucash bar))");
+    scm_c_eval_string("(use-modules (systecash bar))");
 
     return TRUE;
 }

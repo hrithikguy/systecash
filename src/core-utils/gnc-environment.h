@@ -1,6 +1,6 @@
 /********************************************************************\
  * gnc-environment.h -- code to set up the environment for proper   *
- *                      gnucash functioning                         *
+ *                      systecash functioning                         *
  *                                                                  *
  * Copyright (C) 2013 Geert Janssens <geert@kobaltwit.be>           *
  *                                                                  *
@@ -30,25 +30,25 @@
     The API in this file is used to read the environment configuration
     file and set up a number of environment variables based on the values
     found in it. These parameters can be used to configure certain aspects
-    of gnucash or components it depends on.
+    of systecash or components it depends on.
 
     For example if not installed in the standard prefix "/usr", environment
     variable XDG_DATA_DIRS should be set such that glib can find the
-    gsettings schemas installed by GnuCash and yelp can find the help file
+    gsettings schemas installed by systecash and yelp can find the help file
     and guide (if these are installed).
 
     @{ */
 /** @file gnc-environment.h
- *  @brief code to set up the environment for proper gnucash functioning.
+ *  @brief code to set up the environment for proper systecash functioning.
  *  @author Copyright (C) 2013 Geert Janssens <geert@kobaltwit.be>
  */
 
 #ifndef GNC_ENVIRONMENT_H
 #define GNC_ENVIRONMENT_H
 
-/** Parse <prefix>/etc/gnucash/environment and set environment variables
+/** Parse <prefix>/etc/systecash/environment and set environment variables
  *  based on the contents of that file. Read the comments in
- *  <prefix>/etc/gnucash/environment for more details.
+ *  <prefix>/etc/systecash/environment for more details.
  */
 void gnc_environment_setup (void);
 

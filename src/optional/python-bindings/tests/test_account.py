@@ -1,6 +1,6 @@
 from unittest import main
 from datetime import datetime
-from gnucash import Book, Account, Split, GncCommodity, GncNumeric, \
+from systecash import Book, Account, Split, GncCommodity, GncNumeric, \
     Transaction
 
 from test_book import BookSession

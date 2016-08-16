@@ -10,7 +10,7 @@ before_install:
   - sudo apt-get update -qq
 install:
 #  - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.9; export CXX="g++-4.9" CC="gcc-4.9"; fi
-  - sudo apt-get build-dep -qq gnucash
+  - sudo apt-get build-dep -qq systecash
   - sudo apt-get install -qq swig
   - sudo apt-get install -qq libboost-all-dev
   - sudo apt-get --reinstall install -qq language-pack-en language-pack-fr

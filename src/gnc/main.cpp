@@ -69,7 +69,7 @@ extern "C"
 namespace gnc
 {
 
-#define APP_GNUCASH "/apps/gnucash"
+#define APP_GNUCASH "/apps/systecash"
 
 /* GNUCASH_SCM is defined whenever we're building from an svn/svk/git/bzr tree */
 #ifdef GNUCASH_SCM
@@ -92,7 +92,7 @@ gnc_log_init()
     {
         /* initialize logging to our file. */
         gchar *tracefilename;
-        tracefilename = g_build_filename(g_get_tmp_dir(), "gnucash.trace",
+        tracefilename = g_build_filename(g_get_tmp_dir(), "systecash.trace",
                                          (gchar *)NULL);
         qof_log_init_filename(tracefilename);
         g_free(tracefilename);
@@ -112,7 +112,7 @@ gnc_log_init()
 
     {
         gchar *log_config_filename;
-        log_config_filename = gnc_build_dotgnucash_path("log.conf");
+        log_config_filename = gnc_build_dotsystecash_path("log.conf");
         if (g_file_test(log_config_filename, G_FILE_TEST_EXISTS))
             qof_log_parse_log_config(log_config_filename);
         g_free(log_config_filename);

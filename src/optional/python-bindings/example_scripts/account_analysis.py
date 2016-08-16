@@ -34,16 +34,16 @@ from decimal import Decimal
 from math import log10
 import csv
 
-# gnucash imports
-from gnucash import Session, GncNumeric, Split
+# systecash imports
+from systecash import Session, GncNumeric, Split
 
 # Invoke this script like the following example
-# $ gnucash-env python account_analysis.py gnucash_file.gnucash \
+# $ systecash-env python account_analysis.py systecash_file.systecash \
 #   2010 1 monthly 12 \
 #   debits-show credits-show Assets 'Test Account'
 #
 # That will do an analysis on the account 'Assets:Test Account' from
-# gnucash_file.xac, all of the debits and all of the credits will be shown
+# systecash_file.xac, all of the debits and all of the credits will be shown
 # and summed on for 12 monthly periods starting from January (1st month) 2010
 # 
 # if you just want to see the credit and debit sums for each period, use
@@ -56,7 +56,7 @@ from gnucash import Session, GncNumeric, Split
 #
 # available period types are monthly quarterly and yearly
 #
-# At the moment this script only supports GnuCash files of the sqllite3 type
+# At the moment this script only supports systecash files of the sqllite3 type
 # its an easy edit to switch to xml: etc...
 
 
@@ -155,14 +155,14 @@ def main():
         print 'not enough parameters'
         print 'usage: account_analysis.py {book url} {start year} {start month, numeric} {period type: monthly, quarterly, or yearly} {number of periods to show, from start year and month} {whether to show debits: debits-show for true, all other values false} {whether to show credits: credits-show for true, all other values false} {space separated account path, as many nested levels as desired} '
         print 'examples:\n'
-        print "The following example analyzes 12 months of 'Assets:Test Account' from /home/username/test.gnucash, starting in January of 2010, and shows both credits and debits"
-        print "gnucash-env python account_analysis.py '/home/username/test.gnucash' 2010 1 monthly 12 debits-show credits-show Assets 'Test Account'\n"
-        print "The following example analyzes 2 quarters of 'Liabilities:First Level:Second Level' from /home/username/test.gnucash, starting March 2011, and shows credits but not debits"
-        print "gnucash-env python account_analysis.py '/home/username/test.gnucash' 2011 3 quarterly 2 debits-noshow credits-show Liabilities 'First Level' 'Second Level"
+        print "The following example analyzes 12 months of 'Assets:Test Account' from /home/username/test.systecash, starting in January of 2010, and shows both credits and debits"
+        print "systecash-env python account_analysis.py '/home/username/test.systecash' 2010 1 monthly 12 debits-show credits-show Assets 'Test Account'\n"
+        print "The following example analyzes 2 quarters of 'Liabilities:First Level:Second Level' from /home/username/test.systecash, starting March 2011, and shows credits but not debits"
+        print "systecash-env python account_analysis.py '/home/username/test.systecash' 2011 3 quarterly 2 debits-noshow credits-show Liabilities 'First Level' 'Second Level"
         return
 
     try:
-        (gnucash_file, start_year, start_month, period_type, periods,
+        (systecash_file, start_year, start_month, period_type, periods,
          debits_show, credits_show) = argv[1:8]
         start_year, start_month, periods = [int(blah)
                                             for blah in (start_year, start_month,
@@ -173,8 +173,8 @@ def main():
 
         account_path = argv[8:]
 
-        gnucash_session = Session(gnucash_file, is_new=False)
-        root_account = gnucash_session.book.get_root_account()
+        systecash_session = Session(systecash_file, is_new=False)
+        root_account = systecash_session.book.get_root_account()
         account_of_interest = account_from_path(root_account, account_path)
 
         # a list of all the periods of interest, for each period
@@ -266,10 +266,10 @@ def main():
                 csv_writer.writerow( () )
 
         # no save needed, we're just reading..
-        gnucash_session.end()
+        systecash_session.end()
     except:
-        if "gnucash_session" in locals():
-            gnucash_session.end()
+        if "systecash_session" in locals():
+            systecash_session.end()
 
         raise
 

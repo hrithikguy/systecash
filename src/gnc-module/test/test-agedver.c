@@ -40,7 +40,7 @@ guile_main(void *closure, int argc, char ** argv)
 
     gnc_module_system_init();
 
-    foo = gnc_module_load("gnucash/agedver", 5);
+    foo = gnc_module_load("systecash/agedver", 5);
 
     if (foo)
     {

@@ -1,10 +1,10 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.gnucash.dialogs.sxs" path="/org/gnucash/dialogs/scheduled-trans/">
-    <child name="since-last-run" schema="org.gnucash.dialogs.sxs.since-last-run"/>
-    <child name="transaction-editor" schema="org.gnucash.dialogs.sxs.transaction-editor"/>
+  <schema id="org.systecash.dialogs.sxs" path="/org/systecash/dialogs/scheduled-trans/">
+    <child name="since-last-run" schema="org.systecash.dialogs.sxs.since-last-run"/>
+    <child name="transaction-editor" schema="org.systecash.dialogs.sxs.transaction-editor"/>
   </schema>
 
-  <schema id="org.gnucash.dialogs.sxs.since-last-run" path="/org/gnucash/dialogs/scheduled-trans/since-last-run/">
+  <schema id="org.systecash.dialogs.sxs.since-last-run" path="/org/systecash/dialogs/scheduled-trans/since-last-run/">
     <key name="last-geometry" type="(iiii)">
       <default>(-1,-1,-1,-1)</default>
       <summary>Last window position and size</summary>
@@ -15,16 +15,16 @@
     <key name="show-at-file-open" type="b">
       <default>true</default>
       <summary>Run "since last run" dialog when a file is opened.</summary>
-      <description>This setting controls whether the scheduled transactions "since last run" processing is run automatically when a data file is opened. This includes the initial opening of the data file when GnuCash starts. If this setting is active, run the "since last run" process, otherwise it is not run.</description>
+      <description>This setting controls whether the scheduled transactions "since last run" processing is run automatically when a data file is opened. This includes the initial opening of the data file when systecash starts. If this setting is active, run the "since last run" process, otherwise it is not run.</description>
     </key>
     <key name="show-notify-window-at-file-open" type="b">
       <default>true</default>
       <summary>Show "since last run" notification dialog when a file is opened.</summary>
-      <description>This setting controls whether the scheduled transactions notification-only "since last run" dialog is shown when a data file is opened (if "since last run" processing is enabled on file open).  This includes the initial opening of the data file when GnuCash starts.  If this setting is active, show the dialog, otherwise it is not shown.</description>
+      <description>This setting controls whether the scheduled transactions notification-only "since last run" dialog is shown when a data file is opened (if "since last run" processing is enabled on file open).  This includes the initial opening of the data file when systecash starts.  If this setting is active, show the dialog, otherwise it is not shown.</description>
     </key>
   </schema>
 
-  <schema id="org.gnucash.dialogs.sxs.transaction-editor" path="/org/gnucash/dialogs/scheduled-trans/transaction-editor/">
+  <schema id="org.systecash.dialogs.sxs.transaction-editor" path="/org/systecash/dialogs/scheduled-trans/transaction-editor/">
     <key name="create-auto" type="b">
       <default>false</default>
       <summary>Set the "auto create" flag by default</summary>

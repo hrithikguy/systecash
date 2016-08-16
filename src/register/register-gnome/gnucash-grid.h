@@ -22,32 +22,32 @@
 #define GNUCASH_GRID_H
 
 #include "table-allgui.h"
-#include "gnucash-sheet.h"
+#include "systecash-sheet.h"
 
 /** @ingroup Register
  * @addtogroup Gnome
  * @{
  */
-/** @file gnucash-grid.h
- * @brief GnucashGrid declarations
+/** @file systecash-grid.h
+ * @brief systecashGrid declarations
  */
 
-#define GNUCASH_TYPE_GRID     (gnucash_grid_get_type ())
-#define GNUCASH_GRID(obj)     (G_TYPE_CHECK_INSTANCE_CAST((obj), GNUCASH_TYPE_GRID, GnucashGrid))
-#define GNUCASH_GRID_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), GNUCASH_TYPE_GRID, GnucashGridClass))
+#define GNUCASH_TYPE_GRID     (systecash_grid_get_type ())
+#define GNUCASH_GRID(obj)     (G_TYPE_CHECK_INSTANCE_CAST((obj), GNUCASH_TYPE_GRID, systecashGrid))
+#define GNUCASH_GRID_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), GNUCASH_TYPE_GRID, systecashGridClass))
 #define GNUCASH_IS_GRID(o)    (G_TYPE_CHECK_INSTANCE_TYPE((o), GNUCASH_TYPE_GRID))
 
-typedef struct _GnucashGrid GnucashGrid;
-typedef struct _GnucashGridClass GnucashGridClass;
+typedef struct _systecashGrid systecashGrid;
+typedef struct _systecashGridClass systecashGridClass;
 
 
-GType      gnucash_grid_get_type (void);
-GtkWidget *gnucash_grid_new 	 (GnucashSheet *sheet);
+GType      systecash_grid_get_type (void);
+GtkWidget *systecash_grid_new 	 (systecashSheet *sheet);
 
-gboolean   gnucash_grid_find_loc_by_pixel (GnucashGrid *grid, gint x, gint y,
+gboolean   systecash_grid_find_loc_by_pixel (systecashGrid *grid, gint x, gint y,
         VirtualLocation *vcell_loc);
 
-void       gnucash_draw_hatching (GdkDrawable *drawable, GdkGC *gc,
+void       systecash_draw_hatching (GdkDrawable *drawable, GdkGC *gc,
                                   int x, int y, int width, int height);
 /** @} */
 #endif /* GNUCASH_GRID_H */

@@ -1,4 +1,4 @@
-/** \page gnucashextension Proposed GnuCash Extensions
+/** \page systecashextension Proposed systecash Extensions
 
 The following are proposals for various, as-yet-unimplemented
 enhancements.  The goal of this document is to understand some

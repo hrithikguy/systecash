@@ -25,22 +25,22 @@ wamu.qfx
     Washington Mutual checking account with debit card
 
 
-Guide to *.gnucash Files:
+Guide to *.systecash Files:
 ---------------------
-Many of the *.gnucash files are from older versions of X-Accountant,
+Many of the *.systecash files are from older versions of X-Accountant,
 and will cause a warning message to be displayed.  They are
 here to help ensure backwards-compatibility with older
-versions of GnuCash.  They should otherwise work just fine.
-currency_tree_xml.gnucash  reg_doc_example.gnucash  taxreport.gnucash
-currency_tree_xml.gnucash
+versions of systecash.  They should otherwise work just fine.
+currency_tree_xml.systecash  reg_doc_example.systecash  taxreport.systecash
+currency_tree_xml.systecash
     A simple demo showing a book with accounts in multiple currencies.
     This demo can be used to test the multi-currency features of
-    GnuCash.
+    systecash.
 
-reg_doc_example.gnucash
+reg_doc_example.systecash
     This is the demo file that is used in much of the documentation.
 
-taxreport.gnucash
+taxreport.systecash
     A demo that can be used with the tax report to show income tax
     related income and expenses.
 

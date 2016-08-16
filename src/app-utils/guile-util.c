@@ -1,5 +1,5 @@
 /********************************************************************\
- * guile-util.c -- utility functions for using guile for GnuCash    *
+ * guile-util.c -- utility functions for using guile for systecash    *
  * Copyright (C) 1999 Linas Vepstas                                 *
  * Copyright (C) 2000 Dave Peticolas                                *
  *                                                                  *

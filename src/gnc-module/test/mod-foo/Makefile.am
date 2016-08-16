@@ -25,7 +25,7 @@ libgncmodfoo_la_LIBADD = \
 
 EXTRA_DIST = \
   foo.i \
-  gnucash/foo.scm
+  systecash/foo.scm
 
 if BUILDING_FROM_VCS
 swig-foo.c: foo.i

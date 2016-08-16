@@ -21,10 +21,10 @@ AM_CPPFLAGS = \
   ${GUILE_CFLAGS} ${GLIB_CFLAGS}
 
 ## This is unused and therefore no longer installed and/or loaded
-gncscmrptdir = ${GNC_SCM_INSTALL_DIR}/gnucash/report/locale-specific
+gncscmrptdir = ${GNC_SCM_INSTALL_DIR}/systecash/report/locale-specific
 gncscmrpt_DATA = us.scm de_DE.scm
 
-gncscmmoddir = ${GNC_SCM_INSTALL_DIR}/gnucash/report/
+gncscmmoddir = ${GNC_SCM_INSTALL_DIR}/systecash/report/
 gncscmmod_DATA = taxtxf.scm taxtxf-de_DE.scm
 
 if GNUCASH_SEPARATE_BUILDDIR
@@ -35,17 +35,17 @@ SCM_FILE_LINKS = \
 endif
 
 .scm-links:
-	$(RM) -rf gnucash
-	mkdir -p  gnucash
-	mkdir -p  gnucash/report
-	mkdir -p  gnucash/report/locale-specific
+	$(RM) -rf systecash
+	mkdir -p  systecash
+	mkdir -p  systecash/report
+	mkdir -p  systecash/report/locale-specific
 if GNUCASH_SEPARATE_BUILDDIR
 	for X in ${SCM_FILE_LINKS} ; do \
 	  $(LN_S) -f ${srcdir}/$$X . ; \
 	done
 endif
-	( cd gnucash/report/locale-specific; for A in $(gncscmrpt_DATA) ; do $(LN_S) -f ../../../$$A . ; done )
-	( cd gnucash/report; for A in $(gncscmmod_DATA) ; do $(LN_S) -f ../../$$A . ; done )
+	( cd systecash/report/locale-specific; for A in $(gncscmrpt_DATA) ; do $(LN_S) -f ../../../$$A . ; done )
+	( cd systecash/report; for A in $(gncscmmod_DATA) ; do $(LN_S) -f ../../$$A . ; done )
 if ! OS_WIN32
 # Windows knows no "ln -s" but uses "cp": must copy every time (see bug #566567).
 	touch .scm-links
@@ -84,15 +84,15 @@ GUILE_COMPILE_ENV = \
 	$(shell ${abs_top_srcdir}/src/gnc-test-env.pl --noexports ${GUILE_COMPILE_ENV}) \
 	$(GUILD) compile -o $@ $<
 
-gncscmmodcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@/gnucash/report
+gncscmmodcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@/systecash/report
 gncscmmodcache_DATA = $(gncscmmod_DATA:.scm=.go)
 
-gncscmrptcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@/gnucash/report/locale-specific
+gncscmrptcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@/systecash/report/locale-specific
 gncscmrptcache_DATA = $(gncscmrpt_DATA:.scm=.go)
 endif
 
 clean-local:
-	$(RM) -rf gnucash
+	$(RM) -rf systecash
 
 noinst_DATA = .scm-links
 

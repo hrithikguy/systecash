@@ -155,7 +155,7 @@ gnc_plugin_account_tree_class_init (GncPluginAccountTreeClass *klass)
 }
 
 
-/** Initialize a new instance of a gnucash content plugin.  This
+/** Initialize a new instance of a systecash content plugin.  This
  *  function currently does nothing.
  *
  *  @param page The new object instance created by the object

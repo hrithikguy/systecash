@@ -27,7 +27,7 @@
 (define (gnc:foobar val) val)
 
 ;; pretty literal copies of similar code from gnumeric-1.0.8, except we want
-;; positive values to be returned (as gnucash will handle the credit/debit
+;; positive values to be returned (as systecash will handle the credit/debit
 ;; appropriately)
 
 ;; interest payment amount:
@@ -50,7 +50,7 @@
   (* -1 (calc-pmt rate nper pv fv type))
 )
 
-;; 2 functions from http://lists.gnucash.org/pipermail/gnucash-user/2005-February/012964.html
+;; 2 functions from http://lists.systecash.org/pipermail/systecash-user/2005-February/012964.html
 ;; future value of deposits with compound interests:
 (define (gnc:futureValue a r n t)
     ;; Parameters:
@@ -122,7 +122,7 @@
 
 ;; Second difference is for rounding. My experience shows that all banks do not use
 ;; the exact same rounding parameters. Moreover, on top of that situation, numerical calculations 
-;; in gnucash using the original gnc:pmt, gnc:ipmt and gnc:ppmt functions above can also 
+;; in systecash using the original gnc:pmt, gnc:ipmt and gnc:ppmt functions above can also 
 ;; create another set of rounding issues. Both problems create the "odd-penny imbalance" problem.
 
 ;; So the gnc:cpd_Zpmt functions do automatic rounding, the goal being to have PPMT = PMT - I 

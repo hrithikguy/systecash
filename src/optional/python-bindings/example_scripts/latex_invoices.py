@@ -28,7 +28,7 @@
 #
 # Additional information :
 #
-# - Doxygen docs: see page \ref py_invoice_export at http://svn.gnucash.org/docs/HEAD/
+# - Doxygen docs: see page \ref py_invoice_export at http://svn.systecash.org/docs/HEAD/
 # - http://www.uweziegenhagen.de/latex/documents/rechnung/rechnungen.pdf (german)
 #
 # Credits to and ideas from
@@ -45,7 +45,7 @@
 #
 # To Do:
 #
-# - get own contact data from gnucash
+# - get own contact data from systecash
 # - have own bank information in footline
 # - nicer formatting of invoice date and date due
 # - is there anything else missing in this invoice ?
@@ -53,7 +53,7 @@
 try:
     import sys
     import getopt
-    import gnucash
+    import systecash
     import str_methods
     from gncinvoicefkt import *
     from IPython import version_info as IPython_version_info
@@ -61,7 +61,7 @@ try:
         from IPython.terminal.ipapp import TerminalIPythonApp
     else:
         from IPython.frontend.terminal.ipapp import TerminalIPythonApp
-    from gnucash.gnucash_business import Customer, Employee, Vendor, Job, \
+    from systecash.systecash_business import Customer, Employee, Vendor, Job, \
         Address, Invoice, Entry, TaxTable, TaxTableEntry, GNC_AMT_TYPE_PERCENT, \
             GNC_DISC_PRETAX
     import locale
@@ -236,7 +236,7 @@ def main(argv=None):
 
     # Try to open the given input
     try:
-        session = gnucash.Session(input_url,ignore_lock=ignore_lock)
+        session = systecash.Session(input_url,ignore_lock=ignore_lock)
     except Exception as exception:
         print "Problem opening input."
         print exception

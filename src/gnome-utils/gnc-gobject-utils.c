@@ -38,7 +38,7 @@ static void gnc_gobject_weak_cb (gpointer user_data, GObject *object);
 
 
 /** Get a pointer to the hash table used by the tracking database.  If
- *  the hash table doesn't exist, it will be created.  If gnucash was
+ *  the hash table doesn't exist, it will be created.  If systecash was
  *  compiled with --enable-ref-count-dumps, this function is also the
  *  point where the gnc_gobject_tracking_dump() function is registered
  *  to be called the GTK exits.
@@ -93,7 +93,7 @@ gnc_gobject_dump_list (const gchar *name, GList *list, gpointer user_data)
 
 
 /** Dump the entire object tracking database via the g_log() family of
- *  functions.  This function is only called when gnucash exits, and
+ *  functions.  This function is only called when systecash exits, and
  *  at that point all of the objects should have been removed from the
  *  database and freed.  Any object remaining is the result of a
  *  memory/object leakage.
@@ -115,7 +115,7 @@ gnc_gobject_tracking_dump (void)
 }
 
 
-/** Tell gnucash to remember this object in the database.
+/** Tell systecash to remember this object in the database.
  */
 void
 gnc_gobject_tracking_remember (GObject *object, GObjectClass *klass)
@@ -195,7 +195,7 @@ gnc_gobject_tracking_forget_internal (GObject *object)
 }
 
 
-/** Tell gnucash to remember this object in the database.
+/** Tell systecash to remember this object in the database.
  */
 void
 gnc_gobject_tracking_forget (GObject *object)

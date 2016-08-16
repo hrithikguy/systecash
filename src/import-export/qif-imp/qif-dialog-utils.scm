@@ -754,9 +754,9 @@
 ;;  qif-import:update-security-hash
 ;;
 ;;  For each QIF security in acct-hash, find a matching
-;;  GnuCash security or create a new one, then add it to the
+;;  systecash security or create a new one, then add it to the
 ;;  security-hash table. Return a list of security-hash keys
-;;  for all newly created GnuCash securities, or #f if none.
+;;  for all newly created systecash securities, or #f if none.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define (qif-import:update-security-hash security-hash ticker-map
@@ -791,7 +791,7 @@
                      (hash-set! security-hash security-name commodity))
 
                    ;; Otherwise, since we can't definitively match this QIF
-                   ;; security to a GnuCash security, create a new one with
+                   ;; security to a systecash security, create a new one with
                    ;; some (hopefully) intelligent defaults.
                    (let* ((qif-symbol
                             (qif-ticker-map:lookup-symbol ticker-map

@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-exp-parser.h -- Interface to expression parsing for GnuCash  *
+ * gnc-exp-parser.h -- Interface to expression parsing for systecash  *
  * Copyright (C) 2000 Dave Peticolas <dave@krondo.com>              *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *

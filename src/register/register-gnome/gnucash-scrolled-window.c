@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnucash-scrolled-window.c -- gnucash specific scrolled window    *
+ * systecash-scrolled-window.c -- systecash specific scrolled window    *
  * Copyright (C) 2001 Gnumatic, Inc.                                *
  * Author: Dave Peticolas <dave@krondo.com>                         *
  *                                                                  *
@@ -23,7 +23,7 @@
 
 #include "config.h"
 
-#include "gnucash-scrolled-window.h"
+#include "systecash-scrolled-window.h"
 
 
 /** Static Globals ****************************************************/

@@ -125,12 +125,12 @@ void gnc_AB_BANKING_delete(AB_BANKING *api);
 gint gnc_AB_BANKING_fini(AB_BANKING *api);
 
 /**
- * Get the corresponding AqBanking account to the GnuCash account @a gnc_acc.
- * Of course this only works after the GnuCash account has been set up for
+ * Get the corresponding AqBanking account to the systecash account @a gnc_acc.
+ * Of course this only works after the systecash account has been set up for
  * AqBanking use, i.e. the account's hbci data have been set up and populated.
  *
  * @param api The AB_BANKING to get the AB_ACCOUNT from
- * @param gnc_acc The GnuCash account to query for AB_ACCOUNT reference data
+ * @param gnc_acc The systecash account to query for AB_ACCOUNT reference data
  * @return The AB_ACCOUNT found or NULL otherwise
  */
 AB_ACCOUNT *gnc_ab_get_ab_account(const AB_BANKING *api, Account *gnc_acc);
@@ -181,7 +181,7 @@ gchar *gnc_ab_get_remote_name(const AB_TRANSACTION *ab_trans);
 gchar *gnc_ab_get_purpose(const AB_TRANSACTION *ab_trans);
 
 /**
- * Create the appropriate description field for a GnuCash Transaction by the
+ * Create the appropriate description field for a systecash Transaction by the
  * information given in the AB_TRANSACTION @a ab_trans.  The returned string
  * must be g_free'd by the caller.
  *
@@ -191,7 +191,7 @@ gchar *gnc_ab_get_purpose(const AB_TRANSACTION *ab_trans);
 gchar *gnc_ab_description_to_gnc(const AB_TRANSACTION *ab_trans);
 
 /**
- * Create the appropriate memo field for a GnuCash Split by the information
+ * Create the appropriate memo field for a systecash Split by the information
  * given in the AB_TRANSACTION @a ab_trans.  The returned string must be
  * g_free'd by the caller.
  *
@@ -201,18 +201,18 @@ gchar *gnc_ab_description_to_gnc(const AB_TRANSACTION *ab_trans);
 gchar *gnc_ab_memo_to_gnc(const AB_TRANSACTION *ab_trans);
 
 /**
- * Create an unbalanced and dirty GnuCash transaction with a split to @a gnc_acc
+ * Create an unbalanced and dirty systecash transaction with a split to @a gnc_acc
  * from the information available in the AqBanking transaction @a ab_trans.
  *
  * @param ab_trans AqBanking transaction
  * @param gnc_acc Account of to use for the split
- * @return A dirty GnuCash transaction or NULL otherwise
+ * @return A dirty systecash transaction or NULL otherwise
  */
 Transaction *gnc_ab_trans_to_gnc(const AB_TRANSACTION *ab_trans, Account *gnc_acc);
 
 /**
  * Import balances and transactions found in a AB_IMEXPORTER_CONTEXT into
- * GnuCash.  By using @a awaiting the caller can specify what the user will
+ * systecash.  By using @a awaiting the caller can specify what the user will
  * expect to receive.  By using @a execute_txns, transactions in @a context can
  * be used to generate corresponding AqBanking jobs, e.g. after a file import.
  *

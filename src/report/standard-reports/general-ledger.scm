@@ -7,7 +7,7 @@
 ;;    
 ;;    See any "FIXME"s in the code.
 ;;    
-;; Largely borrowed from welcome-to-gnucash.scm by
+;; Largely borrowed from welcome-to-systecash.scm by
 ;;  Bill Gribble <grib@gnumatic.com>
 ;;
 ;; This program is free software; you can redistribute it and/or    
@@ -29,13 +29,13 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report standard-reports general-ledger))
+(define-module (systecash report standard-reports general-ledger))
 (export gnc:make-general-ledger-report)
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
 (define reportname (N_ "General Ledger"))
 (define xactrptguid "2fe3b9833af044abb929a88d5a59620f")

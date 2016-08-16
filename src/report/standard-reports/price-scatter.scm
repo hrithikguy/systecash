@@ -22,17 +22,17 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report standard-reports price-scatter))
+(define-module (systecash report standard-reports price-scatter))
 
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
 (use-modules (srfi srfi-1))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash core-utils))
-(use-modules (gnucash gettext))
+(use-modules (systecash gnc-module))
+(use-modules (systecash core-utils))
+(use-modules (systecash gettext))
 
-(use-modules (gnucash printf))
+(use-modules (systecash printf))
 
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
 (define optname-from-date (N_ "Start Date"))
 (define optname-to-date (N_ "End Date"))

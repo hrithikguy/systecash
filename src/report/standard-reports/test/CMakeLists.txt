@@ -13,7 +13,7 @@ SET(scm_test_standard_reports_SOURCES
 
 GNC_ADD_SCHEME_TARGETS(scm-test-standard-reports
   "${scm_test_standard_reports_SOURCES}"
-  gnucash/report/standard-reports/test
+  systecash/report/standard-reports/test
   ""
   ""
   ""

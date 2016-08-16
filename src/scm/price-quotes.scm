@@ -20,18 +20,18 @@
 ;;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash price-quotes))
+(define-module (systecash price-quotes))
 
 (export gnc:book-add-quotes) ;; called from gnome/dialog-price-edit-db.c
 (export gnc:price-quotes-install-sources)
 
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash core-utils))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
+(use-modules (systecash core-utils))
 (use-modules (srfi srfi-1))
 
-(gnc:module-load "gnucash/gnome-utils" 0) ;; for gnucash-ui-is-running
-(gnc:module-load "gnucash/app-utils" 0)
+(gnc:module-load "systecash/gnome-utils" 0) ;; for systecash-ui-is-running
+(gnc:module-load "systecash/app-utils" 0)
 
 (define (item-list->hash! lst hash
 			  getkey getval
@@ -495,17 +495,17 @@
     (cond
      ((eq? fq-call-data #f)
       (set! keep-going? #f)
-      (if (gnucash-ui-is-running)
+      (if (systecash-ui-is-running)
           (gnc-error-dialog window (_ "No commodities marked for quote retrieval."))
 	  (gnc:warn (_ "No commodities marked for quote retrieval."))))
      ((eq? fq-results #f)
       (set! keep-going? #f)
-      (if (gnucash-ui-is-running)
+      (if (systecash-ui-is-running)
           (gnc-error-dialog window (_ "Unable to get quotes or diagnose the problem."))
 	  (gnc:warn (_ "Unable to get quotes or diagnose the problem."))))
      ((member 'missing-lib fq-results)
       (set! keep-going? #f)
-      (if (gnucash-ui-is-running)
+      (if (systecash-ui-is-running)
           (gnc-error-dialog window
            (_ "You are missing some needed Perl libraries.
 Run 'gnc-fq-update' as root to install them."))
@@ -513,17 +513,17 @@ Run 'gnc-fq-update' as root to install them."))
 Run 'gnc-fq-update' as root to install them.") "\n")))
      ((member 'system-error fq-results)
       (set! keep-going? #f)
-      (if (gnucash-ui-is-running)
+      (if (systecash-ui-is-running)
           (gnc-error-dialog window
            (_ "There was a system error while retrieving the price quotes."))
           (gnc:warn (_ "There was a system error while retrieving the price quotes.") "\n")))
      ((not (list? (car fq-results)))
       (set! keep-going? #f)
-      (if (gnucash-ui-is-running)
+      (if (systecash-ui-is-running)
           (gnc-error-dialog window
            (_ "There was an unknown error while retrieving the price quotes."))
           (gnc:warn (_ "There was an unknown error while retrieving the price quotes.") "\n")))
-     ((and (not commod-tz-quote-triples) (gnucash-ui-is-running))
+     ((and (not commod-tz-quote-triples) (systecash-ui-is-running))
       (gnc-error-dialog window
        (_ "Unable to get quotes or diagnose the problem."))
        (set! keep-going? #f))
@@ -531,7 +531,7 @@ Run 'gnc-fq-update' as root to install them.") "\n")))
       (gnc:warn (_ "Unable to get quotes or diagnose the problem."))
       (set! keep-going? #f))
      ((not (null? problem-syms))
-      (if (gnucash-ui-is-running)
+      (if (systecash-ui-is-running)
           (if (and ok-syms (not (null? ok-syms)))
               (set!
                keep-going?
@@ -571,7 +571,7 @@ Run 'gnc-fq-update' as root to install them.") "\n")))
                           (commodity-tz-quote-triple->price book triple))
                         ok-syms)))
        (if (any string? prices)
-           (if (gnucash-ui-is-running)
+           (if (systecash-ui-is-running)
                (set!
                 keep-going?
                 (gnc-verify-dialog window #t

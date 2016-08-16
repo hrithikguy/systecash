@@ -1,7 +1,7 @@
 <prefs>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.commodities</gschemaid>
+    <gschemaid>org.systecash.dialogs.commodities</gschemaid>
     <gconfpath>dialogs-edit_commodities.xml</gconfpath>
 
     <pref>
@@ -12,7 +12,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.totd</gschemaid>
+    <gschemaid>org.systecash.dialogs.totd</gschemaid>
     <gconfpath>dialogs-tip_of_the_day.xml</gconfpath>
     
     <pref>
@@ -28,7 +28,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.reconcile</gschemaid>
+    <gschemaid>org.systecash.dialogs.reconcile</gschemaid>
     <gconfpath>dialogs-reconcile.xml</gconfpath>
     
     <pref>
@@ -54,7 +54,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.tax-info</gschemaid>
+    <gschemaid>org.systecash.dialogs.tax-info</gschemaid>
     <gconfpath>dialogs-tax_info.xml</gconfpath>
     
     <pref>
@@ -65,7 +65,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.find</gschemaid>
+    <gschemaid>org.systecash.dialogs.find</gschemaid>
     <gconfpath>dialogs-find.xml</gconfpath>
     
     <pref>
@@ -76,7 +76,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.export-accounts</gschemaid>
+    <gschemaid>org.systecash.dialogs.export-accounts</gschemaid>
     <gconfpath>dialogs-export_accounts.xml</gconfpath>
     
     <pref>
@@ -87,7 +87,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.log-replay</gschemaid>
+    <gschemaid>org.systecash.dialogs.log-replay</gschemaid>
     <gconfpath>dialogs-log_replay.xml</gconfpath>
     
     <pref>
@@ -98,7 +98,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.open-save</gschemaid>
+    <gschemaid>org.systecash.dialogs.open-save</gschemaid>
     <gconfpath>dialogs-open_save.xml</gconfpath>
     
     <pref>
@@ -109,7 +109,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.report</gschemaid>
+    <gschemaid>org.systecash.dialogs.report</gschemaid>
     <gconfpath>dialogs-report.xml</gconfpath>
     
     <pref>
@@ -120,7 +120,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.lot-viewer</gschemaid>
+    <gschemaid>org.systecash.dialogs.lot-viewer</gschemaid>
     <gconfpath>dialogs-lot_viewer.xml</gconfpath>
     
     <pref>
@@ -136,7 +136,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.new-user</gschemaid>
+    <gschemaid>org.systecash.dialogs.new-user</gschemaid>
     <gconfpath>dialogs-new_user.xml</gconfpath>
     
     <pref>
@@ -147,7 +147,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.new-hierarchy</gschemaid>
+    <gschemaid>org.systecash.dialogs.new-hierarchy</gschemaid>
     <gconfpath>dialogs-new_hierarchy.xml</gconfpath>
     
     <pref>
@@ -158,7 +158,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.search</gschemaid>
+    <gschemaid>org.systecash.dialogs.search</gschemaid>
     <gconfpath>dialogs-search.xml</gconfpath>
     
     <pref>
@@ -169,7 +169,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.sxs.since-last-run</gschemaid>
+    <gschemaid>org.systecash.dialogs.sxs.since-last-run</gschemaid>
     <gconfpath>dialogs-scheduled_trans-since_last_run.xml</gconfpath>
     
     <pref>
@@ -180,7 +180,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.sxs.transaction-editor</gschemaid>
+    <gschemaid>org.systecash.dialogs.sxs.transaction-editor</gschemaid>
     <gconfpath>dialogs-scheduled_trans-transaction_editor.xml</gconfpath>
     
     <pref>
@@ -206,7 +206,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.window.pages.account-tree.summary</gschemaid>
+    <gschemaid>org.systecash.window.pages.account-tree.summary</gschemaid>
     <gconfpath>window-pages-account_tree-summary.xml</gconfpath>
     
     <pref>
@@ -262,7 +262,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.general</gschemaid>
+    <gschemaid>org.systecash.general</gschemaid>
     <gconfpath>general.xml</gconfpath>
     
     <pref>
@@ -453,7 +453,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.general.register</gschemaid>
+    <gschemaid>org.systecash.general.register</gschemaid>
     <gconfpath>general-register.xml</gconfpath>
     
     <pref>
@@ -554,7 +554,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.general.report</gschemaid>
+    <gschemaid>org.systecash.general.report</gschemaid>
     <gconfpath>general-report.xml</gconfpath>
     
     <pref>
@@ -580,7 +580,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.general.report.pdf-export</gschemaid>
+    <gschemaid>org.systecash.general.report.pdf-export</gschemaid>
     <gconfpath>general-report-pdf_export.xml</gconfpath>
     
     <pref>
@@ -596,7 +596,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dev</gschemaid>
+    <gschemaid>org.systecash.dev</gschemaid>
     <gconfpath>dev.xml</gconfpath>
     
     <pref>
@@ -607,7 +607,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.checkprinting</gschemaid>
+    <gschemaid>org.systecash.dialogs.checkprinting</gschemaid>
     <gconfpath>dialogs-print_checks.xml</gconfpath>
     
     <pref>
@@ -720,7 +720,7 @@
 @MIGRATABLE_PREFS_OFX@
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.export.csv</gschemaid>
+    <gschemaid>org.systecash.dialogs.export.csv</gschemaid>
     <gconfpath>dialogs-export-csv.xml</gconfpath>
     
     <pref>
@@ -738,7 +738,7 @@
 @MIGRATABLE_PREFS_AQBANKING@
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.import.generic</gschemaid>
+    <gschemaid>org.systecash.dialogs.import.generic</gschemaid>
     <gconfpath>dialogs-import-generic-matcher.xml</gconfpath>
     
     <pref>
@@ -784,7 +784,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.import.csv</gschemaid>
+    <gschemaid>org.systecash.dialogs.import.csv</gschemaid>
     <gconfpath>dialogs-import-csv.xml</gconfpath>
     
     <pref>
@@ -795,7 +795,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.import.qif</gschemaid>
+    <gschemaid>org.systecash.dialogs.import.qif</gschemaid>
     <gconfpath>dialogs-import-qif.xml</gconfpath>
     
     <pref>
@@ -826,7 +826,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.history</gschemaid>
+    <gschemaid>org.systecash.history</gschemaid>
     <gconfpath>history.xml</gconfpath>
     
     <pref>
@@ -887,7 +887,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.business.customer-search</gschemaid>
+    <gschemaid>org.systecash.dialogs.business.customer-search</gschemaid>
     <gconfpath>dialogs-business-customer_search.xml</gconfpath>
     
     <pref>
@@ -898,7 +898,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.business.employee-search</gschemaid>
+    <gschemaid>org.systecash.dialogs.business.employee-search</gschemaid>
     <gconfpath>dialogs-business-employee_search.xml</gconfpath>
     
     <pref>
@@ -909,7 +909,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.business.invoice-search</gschemaid>
+    <gschemaid>org.systecash.dialogs.business.invoice-search</gschemaid>
     <gconfpath>dialogs-business-invoice_search.xml</gconfpath>
     
     <pref>
@@ -920,7 +920,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.business.job-search</gschemaid>
+    <gschemaid>org.systecash.dialogs.business.job-search</gschemaid>
     <gconfpath>dialogs-business-job_search.xml</gconfpath>
     
     <pref>
@@ -931,7 +931,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.business.order-search</gschemaid>
+    <gschemaid>org.systecash.dialogs.business.order-search</gschemaid>
     <gconfpath>dialogs-business-order_search.xml</gconfpath>
     
     <pref>
@@ -942,7 +942,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.business.vendor-search</gschemaid>
+    <gschemaid>org.systecash.dialogs.business.vendor-search</gschemaid>
     <gconfpath>dialogs-business-vendor_search.xml</gconfpath>
     
     <pref>
@@ -953,7 +953,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.business.invoice</gschemaid>
+    <gschemaid>org.systecash.dialogs.business.invoice</gschemaid>
     <gconfpath>dialogs-business-invoice.xml</gconfpath>
     
     <pref>
@@ -984,7 +984,7 @@
   </prefsgroup>
 
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.business.bill</gschemaid>
+    <gschemaid>org.systecash.dialogs.business.bill</gschemaid>
     <gconfpath>dialogs-business-bill.xml</gconfpath>
     
     <pref>

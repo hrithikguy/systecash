@@ -2,7 +2,7 @@
  *            test-resolve-file-path.c
  *
  *  Thu Sep 29 22:48:57 2005
- *  Copyright  2005  GnuCash team
+ *  Copyright  2005  systecash team
  ****************************************************************************/
 /*
  *  This program is free software; you can redistribute it and/or modify
@@ -42,8 +42,8 @@ typedef struct test_strings_struct test_strings;
 test_strings strs[] =
 {
     {
-        G_DIR_SEPARATOR_S ".gnucash" G_DIR_SEPARATOR_S "test-account-name",
-        G_DIR_SEPARATOR_S ".gnucash" G_DIR_SEPARATOR_S "test-account-name", 1
+        G_DIR_SEPARATOR_S ".systecash" G_DIR_SEPARATOR_S "test-account-name",
+        G_DIR_SEPARATOR_S ".systecash" G_DIR_SEPARATOR_S "test-account-name", 1
     },
     {
         G_DIR_SEPARATOR_S "tmp" G_DIR_SEPARATOR_S "test-account-name2",

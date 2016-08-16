@@ -4,7 +4,7 @@ exec ${GUILE} -s "$0"
 
 (define exit-code 0)
 (setenv "GNC_UNINSTALLED" "1")
-(use-modules (gnucash gnc-module))
+(use-modules (systecash gnc-module))
 (gnc:module-system-init)
 
 ;; Guile 2 needs to load external modules at compile time
@@ -18,11 +18,11 @@ exec ${GUILE} -s "$0"
    (else
     (define begin-for-syntax begin)))
 
-(begin-for-syntax (define loaded-module (gnc:module-load "gnucash/app-utils" 0)))
+(begin-for-syntax (define loaded-module (gnc:module-load "systecash/app-utils" 0)))
 (if loaded-module
-    (display "Module gnucash/app-utils loaded successfully\n")
+    (display "Module systecash/app-utils loaded successfully\n")
     (begin
-      (display "Failed - module gnucash/app-utils not loaded successfully\n")
+      (display "Failed - module systecash/app-utils not loaded successfully\n")
       (set! exit-code -1)))
 
 (if (procedure? gnc:error->string)

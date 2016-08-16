@@ -4,7 +4,7 @@
       単純小切手帳
     </gnc-act:title>
     <gnc-act:short-description>
-     GnuCashを使う上で最小限の勘定科目集
+     systecashを使う上で最小限の勘定科目集
     </gnc-act:short-description>
     <gnc-act:long-description>
      小切手帳の収支を合わせるだけであればこれを使ってください。必要になれば、あとから詳細な収益や費用の管理を始めることができます。

@@ -5,10 +5,10 @@
 #   @ingroup python_bindings_examples
 
 import sys
-from gnucash import Session
+from systecash import Session
 
-# We need to tell GnuCash the data format to create the new file as (xml://)
-uri = "xml:///tmp/simple_book.gnucash"
+# We need to tell systecash the data format to create the new file as (xml://)
+uri = "xml:///tmp/simple_book.systecash"
 
 print "uri:", uri
 ses = Session(uri, is_new=True)

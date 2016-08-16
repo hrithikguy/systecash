@@ -1,8 +1,8 @@
 #!/bin/sh
 
-# Usage: gnucash-env any-cmd [ args ... ]
-# runs any-cmd in an environment appropriate for gnucash.
-# we'll also add a gnucash-build-env later for running from the install tree.
+# Usage: systecash-env any-cmd [ args ... ]
+# runs any-cmd in an environment appropriate for systecash.
+# we'll also add a systecash-build-env later for running from the install tree.
 
 GNC_MODULE_PATH="@-GNC_PKGLIB_INSTALLDIR-@:${GNC_MODULE_PATH}"
 

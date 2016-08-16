@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnucash-item-list.c -- A scrollable list box                     *
+ * systecash-item-list.c -- A scrollable list box                     *
  *                                                                  *
  * Initial copyright not recorded.                                  *
  * Copyright (c) 2006 David Hampton <hampton@employees.org>         *
@@ -34,8 +34,8 @@
 #include <libgnomecanvas/libgnomecanvas.h>
 
 #include "gnc-engine.h"
-#include "gnucash-item-list.h"
-#include "gnucash-scrolled-window.h"
+#include "systecash-item-list.h"
+#include "systecash-scrolled-window.h"
 
 /* Item list signals */
 enum

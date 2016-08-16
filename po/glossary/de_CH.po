@@ -1,10 +1,10 @@
-# Glossary of terms in GnuCash
+# Glossary of terms in systecash
 # Copyright (C) 2001 Free Software Foundation, Inc.
 # Christian Stimming <stimming@tuhh.de>, 2001
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnucash 1.7\n"
+"Project-Id-Version: systecash 1.7\n"
 "POT-Creation-Date: 2014-10-13 00:33+0200\n"
 "PO-Revision-Date: 2008-03-03 00:47+0100\n"
 "Last-Translator: Raffael Luthiger <r.luthiger@huanga.com>\n"
@@ -88,7 +88,7 @@ msgstr "Sparkonto"
 msgid "account type: Stock"
 msgstr "Aktienkonto (früher: Depot)"
 
-#. "This account type (new in gnucash-2.4.0) is used when exchanging or trading amounts from one currency into another"
+#. "This account type (new in systecash-2.4.0) is used when exchanging or trading amounts from one currency into another"
 #, fuzzy
 msgid "account type: trading"
 msgstr "Sparkonto"
@@ -205,7 +205,7 @@ msgstr "Ausgleichen "
 msgid "bank"
 msgstr "Bank"
 
-#. "A written statement of money owed for goods or services supplied. In Gnucash, a 'bill' is a statement that we received (from a vendor), whereas an 'invoice' is one that we sent out (to a customer)."
+#. "A written statement of money owed for goods or services supplied. In systecash, a 'bill' is a statement that we received (from a vendor), whereas an 'invoice' is one that we sent out (to a customer)."
 msgid "bill"
 msgstr "Rechnung (Rechnungseingang, Empfangene Rechnung)"
 
@@ -218,7 +218,7 @@ msgstr "Zahlungsbedingungen"
 msgid "billing terms"
 msgstr "Zahlungsbedingungen"
 
-#. "The dataset that encapsulates all the collections of entities (accounts etc.) in gnucash. The written records of the financial affairs of a business."
+#. "The dataset that encapsulates all the collections of entities (accounts etc.) in systecash. The written records of the financial affairs of a business."
 msgid "Book"
 msgstr "Geschäftsbuch (Bücher, Buch, Handelsbuch)"
 
@@ -404,7 +404,7 @@ msgstr "Wertzuwachs (Gewinn, Zunahme, Profit, Ertrag)"
 msgid "imbalance"
 msgstr "Ausgleichskonto"
 
-#. "Process of extracting data from a non-Gnucash format into a Gnucash file. E.g. QIF Import."
+#. "Process of extracting data from a non-systecash format into a systecash file. E.g. QIF Import."
 msgid "import"
 msgstr "Import"
 
@@ -416,7 +416,7 @@ msgstr "Mittelflussrechnung"
 msgid "interest"
 msgstr "Zinsen"
 
-#. "A list of goods sold or services provided together with the prices charged; see also: a bill. In Gnucash, an 'invoice' is a statement that we sent out (to a customer), whereas a 'bill' is one that we received (from a vendor)."
+#. "A list of goods sold or services provided together with the prices charged; see also: a bill. In systecash, an 'invoice' is a statement that we sent out (to a customer), whereas a 'bill' is one that we received (from a vendor)."
 msgid "invoice"
 msgstr "Rechnung (Rechnungsausgang, Versandte Rechnung)"
 
@@ -461,12 +461,12 @@ msgstr "fusionieren"
 msgid "marker"
 msgstr "Markierung"
 
-#. "1. Some text annotation, but this meaning isn't used inside gnucash. 2. In the Customer summary report: The ratio of profit vs. sales, i.e. the profit amount divided by the sales amount, shown in percent."
+#. "1. Some text annotation, but this meaning isn't used inside systecash. 2. In the Customer summary report: The ratio of profit vs. sales, i.e. the profit amount divided by the sales amount, shown in percent."
 #, fuzzy
 msgid "markup"
 msgstr "Markierung"
 
-#. "The way how more than one window is displayed in GnuCash at the same time. MDI = Multiple Document Interface."
+#. "The way how more than one window is displayed in systecash at the same time. MDI = Multiple Document Interface."
 msgid "MDI modus"
 msgstr "Fenstermodus"
 
@@ -518,7 +518,7 @@ msgstr "Anfangsbestand"
 msgid "options"
 msgstr "Optionen"
 
-#. "Watch out: Although this word exists in gnucash program code, all that program code in gnucash is currently not activated. In the future, it will be used in business accounting as follows: A particular request to make or supply goods, but belonging to a (larger) job. Such a request can come from a customer or be sent to a vendor. An order will probably generate one invoice or bill."
+#. "Watch out: Although this word exists in systecash program code, all that program code in systecash is currently not activated. In the future, it will be used in business accounting as follows: A particular request to make or supply goods, but belonging to a (larger) job. Such a request can come from a customer or be sent to a vendor. An order will probably generate one invoice or bill."
 msgid "order"
 msgstr "Bestellung"
 
@@ -691,7 +691,7 @@ msgstr "Quelle"
 
 #. "One of the two or several parts a transaction is divided into"
 msgid "split"
-msgstr "Buchungsteil (bis gnucash 1.8.7: Buchung)"
+msgstr "Buchungsteil (bis systecash 1.8.7: Buchung)"
 
 #. "This sets the particular design or shape of a report."
 msgid "style sheet"
@@ -782,7 +782,7 @@ msgstr "Wert "
 msgid "vendor"
 msgstr "Lieferant"
 
-#. "The terms 'Voucher' and 'Expense Voucher' are used interchangeably in gnucash. The 'Expense Voucher' is also a bit of a misnomer -- it's more like an 'Expense Report' in gnucash.  The phrase is meant to be a list of expenses incurred by an employee for which the company will reminburse them."
+#. "The terms 'Voucher' and 'Expense Voucher' are used interchangeably in systecash. The 'Expense Voucher' is also a bit of a misnomer -- it's more like an 'Expense Report' in systecash.  The phrase is meant to be a list of expenses incurred by an employee for which the company will reminburse them."
 msgid "voucher"
 msgstr "Auslagenerstattung"
 

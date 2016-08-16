@@ -26,7 +26,7 @@
 
 /**
  * A callback (provided by the caller) to be invoked when the assistant
- * completes successfully.  I.e., the new-user assistant can finish the GnuCash
+ * completes successfully.  I.e., the new-user assistant can finish the systecash
  * New-User Experience, create an account plugin-page, &c.
  **/
 

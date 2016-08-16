@@ -1,7 +1,7 @@
 LEG22102001 - es_NI-policy.txt
 
 En este documento se describen las normas aplicadas al traducir los
-textos de GnuCash al idioma español
+textos de systecash al idioma español
 
 Nota: El autor no es native speaker del español, ni especialista
       contable.  Cualquier recomendación o corrección es muy
@@ -17,7 +17,7 @@ se prefiere términos oficiales/contables ante términos del habla
 común.
 
 La explicación de estos términos a una persona privada que quiere usar
-GnuCash es tarea de la documentación.
+systecash es tarea de la documentación.
 
 
 Mayuscula/Menuscula:
@@ -68,7 +68,7 @@ Forward		avanzar
 Top-Level	primer plano
 
 Account Tree	jerarquía de cuentas
-GnuCash Network	Red GnuCash
+systecash Network	Red systecash
 
 -- estoy buscando el término correcto para
 

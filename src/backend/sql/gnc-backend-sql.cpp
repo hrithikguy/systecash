@@ -3324,9 +3324,9 @@ gnc_sql_init_version_info (GncSqlBackend* be)
     else
     {
         do_create_table (be, VERSION_TABLE_NAME, version_table);
-        gnc_sql_set_table_version (be, "Gnucash",
+        gnc_sql_set_table_version (be, "systecash",
                                    gnc_prefs_get_long_version ());
-        gnc_sql_set_table_version (be, "Gnucash-Resave",
+        gnc_sql_set_table_version (be, "systecash-Resave",
                                    GNUCASH_RESAVE_VERSION);
     }
 }
@@ -3355,8 +3355,8 @@ reset_version_info (GncSqlBackend* be)
         g_hash_table_remove_all (be->versions);
     }
 
-    gnc_sql_set_table_version (be, "Gnucash", gnc_prefs_get_long_version ());
-    gnc_sql_set_table_version (be, "Gnucash-Resave", GNUCASH_RESAVE_VERSION);
+    gnc_sql_set_table_version (be, "systecash", gnc_prefs_get_long_version ());
+    gnc_sql_set_table_version (be, "systecash-Resave", GNUCASH_RESAVE_VERSION);
     return ok;
 }
 

@@ -21,7 +21,7 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(use-modules (gnucash gettext))
+(use-modules (systecash gettext))
 
 (define *gnc:_style-sheet-templates_* (make-hash-table 23))
 (define *gnc:_style-sheets_* (make-hash-table 23))
@@ -127,7 +127,7 @@
   (record-accessor <html-style-sheet> 'style))
 
 (define gnc:current-saved-stylesheets
-  (gnc-build-dotgnucash-path "stylesheets-2.0"))
+  (gnc-build-dotsystecash-path "stylesheets-2.0"))
 
 (define (gnc:save-style-sheet-options) 
   (let ((port (false-if-exception

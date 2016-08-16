@@ -26,12 +26,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash report standard-reports average-balance))
+(define-module (systecash report standard-reports average-balance))
 (use-modules (srfi srfi-1))
-(use-modules (gnucash main))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
-(gnc:module-load "gnucash/report/report-system" 0)
+(use-modules (systecash main))
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
+(gnc:module-load "systecash/report/report-system" 0)
 
 (define reportname (N_ "Average Balance"))
 

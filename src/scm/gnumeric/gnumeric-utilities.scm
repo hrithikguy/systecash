@@ -95,7 +95,7 @@
     (make-gmr-item "application"
                    "gnumeric")
     (make-gmr-item "Author"
-                   "GnuCash Generator"))))
+                   "systecash Generator"))))
 
 ;;; This function generates a goodly chunk of the document structure;
 ;;; gmr:Workbook is the base element for Gnumeric

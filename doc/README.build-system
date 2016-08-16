@@ -3,7 +3,7 @@
 ===========================================================================
 Automake
 
-GnuCash uses automake to handle the build process.  Make sure you
+systecash uses automake to handle the build process.  Make sure you
 understand what automake provides/requires before you add anything
 particularly fancy to the Makefile.am files.
 
@@ -60,7 +60,7 @@ properly expanded at the right times.
 
 Note that on OSX, you MUST have the GNU version of sed installed
 via fink - the BSD version installed by default will not work with
-some of the substitution operators used in the gnucash build.
+some of the substitution operators used in the systecash build.
 
 The only non-Makefiles files that must be handled directly by
 AC_OUTPUT are files that refer to variables that, when expanded, may

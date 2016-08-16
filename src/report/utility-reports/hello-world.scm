@@ -19,14 +19,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-;; This is a sample guile report generator for GnuCash.
+;; This is a sample guile report generator for systecash.
 ;; It illustrates the basic techniques used to create
-;; new reports for GnuCash.
+;; new reports for systecash.
 
-(define-module (gnucash report hello-world))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(define-module (systecash report hello-world))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
 ;; 'debug is deprecated and unused since guile 2
 (cond-expand
@@ -35,16 +35,16 @@
     (debug-enable 'debug)))
 (debug-enable 'backtrace)
 
-(gnc:module-load "gnucash/report/report-system" 0)
-(gnc:module-load "gnucash/html" 0) ;for gnc-build-url
+(gnc:module-load "systecash/report/report-system" 0)
+(gnc:module-load "systecash/html" 0) ;for gnc-build-url
 
-;; This function will generate a set of options that GnuCash
+;; This function will generate a set of options that systecash
 ;; will use to display a dialog where the user can select
 ;; values for your report's parameters.
 (define (options-generator)    
   (let* ((options (gnc:new-options)) 
          ;; This is just a helper function for making options.
-         ;; See gnucash/src/app-utils/options.scm for details.
+         ;; See systecash/src/app-utils/options.scm for details.
          (add-option 
           (lambda (new-option)
             (gnc:register-option options new-option))))
@@ -335,7 +335,7 @@ option like this.")
       ;; the function gnc:make-html-text can take any number of 
       ;; arguments.  The gnc:html-markup functions are designed
       ;; to work with the style system so that you can control
-      ;; the appearance of the report from the Gnucash UI; you 
+      ;; the appearance of the report from the systecash UI; you 
       ;; should use the HTML markup functions whenever possible
       ;; rather than including literal HTML in your report.
 
@@ -344,7 +344,7 @@ option like this.")
        (gnc:make-html-text         
         (gnc:html-markup-p
          (gnc:html-markup/format
-          (_ "This is a sample GnuCash report. \
+          (_ "This is a sample systecash report. \
 See the guile (scheme) source code in the scm/report directory \
 for details on writing your own reports, \
 or extending existing reports.")))
@@ -353,9 +353,9 @@ or extending existing reports.")))
           (_ "For help on writing reports, or to contribute your brand \
 new, totally cool report, consult the mailing list %s.")
           (gnc:html-markup-anchor 
-           "mailto:gnucash-devel@gnucash.org"
-           (gnc:html-markup-tt "gnucash-devel@gnucash.org")))
-         (_ "For details on subscribing to that list, see &lt;http://www.gnucash.org/&gt;.")
+           "mailto:systecash-devel@systecash.org"
+           (gnc:html-markup-tt "systecash-devel@systecash.org")))
+         (_ "For details on subscribing to that list, see &lt;http://www.systecash.org/&gt;.")
          (_ "You can learn more about writing scheme at &lt;http://www.scheme.com/tspl2d/&gt;."))
 
         (gnc:html-markup-p
@@ -440,7 +440,7 @@ new, totally cool report, consult the mailing list %s.")
       
       ;; here's a bullet list of accounts.  We can mark up the
       ;; account name with an <a></a> anchor with a special HREF to
-      ;; open a Gnucash register when the link is clicked.  What you
+      ;; open a systecash register when the link is clicked.  What you
       ;; need to do is pass the HREF "gnc-register:account=My
       ;; Account Name" to html-markup-anchor.  The account name
       ;; passed must be the "full" account name that you get from
@@ -476,7 +476,7 @@ new, totally cool report, consult the mailing list %s.")
       (gnc:html-document-add-object! 
        document 
        (gnc:make-html-text 
-        (gnc:html-markup-anchor (gnc-build-url URL-TYPE-HELP "gnucash-guide" "") (_ "Display help"))))
+        (gnc:html-markup-anchor (gnc-build-url URL-TYPE-HELP "systecash-guide" "") (_ "Display help"))))
 
       (gnc:html-document-add-object! 
        document 

@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-datetime.cpp -- Date and Time classes for GnuCash            *
+ * gnc-datetime.cpp -- Date and Time classes for systecash            *
  *                                                                  *
  * Copyright 2015 John Ralls <jralls@ceridwen.us>                   *
  *                                                                  *
@@ -85,7 +85,7 @@ private:
     std::unique_ptr<GncDateImpl> m_impl;
 };
 
-/** GnuCash DateTime class
+/** systecash DateTime class
  *
  * Represents local time in the current timezone.
  * As with GncDate, the represented time is limited to the period

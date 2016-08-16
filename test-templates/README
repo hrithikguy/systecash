@@ -48,4 +48,4 @@ for detailed documentation.
 
 There are some helpful macros and message-trapping functions in
 src/test-core/unittest-support.h, whose Doxygen documentation is at
-http://code.gnucash.org/docs/head/unittest-support_8h_source.html
+http://code.systecash.org/docs/head/unittest-support_8h_source.html

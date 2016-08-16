@@ -24,17 +24,17 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report aging))
+(define-module (systecash report aging))
 
-(use-modules (gnucash main))
-(use-modules (gnucash printf))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash main))
+(use-modules (systecash printf))
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
-(use-modules (gnucash report standard-reports))
-(use-modules (gnucash report business-reports))
+(use-modules (systecash report standard-reports))
+(use-modules (systecash report business-reports))
 
 (define optname-to-date (N_ "To"))
 (define optname-sort-by (N_ "Sort By"))

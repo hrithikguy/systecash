@@ -1,11 +1,11 @@
-# traditional Chinese translation of gnucash-glossary
+# traditional Chinese translation of systecash-glossary
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Chao-Hsiung Liao <pesder@seed.net.tw>, 2002.
 # Kuang-che Wu <kcwu@csie.org>, 2007, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnucash-glossary\n"
+"Project-Id-Version: systecash-glossary\n"
 "POT-Creation-Date: 2014-10-13 00:33+0200\n"
 "PO-Revision-Date: 2011-03-10 22:11+0800\n"
 "Last-Translator: Kuang-che Wu <kcwu@csie.org>\n"
@@ -89,7 +89,7 @@ msgstr "科目類型：儲蓄"
 msgid "account type: Stock"
 msgstr "科目類型：股票"
 
-#. "This account type (new in gnucash-2.4.0) is used when exchanging or trading amounts from one currency into another"
+#. "This account type (new in systecash-2.4.0) is used when exchanging or trading amounts from one currency into another"
 #, fuzzy
 msgid "account type: trading"
 msgstr "科目類型：儲蓄"
@@ -206,7 +206,7 @@ msgstr "使收支平衡"
 msgid "bank"
 msgstr "銀行"
 
-#. "A written statement of money owed for goods or services supplied. In Gnucash, a 'bill' is a statement that we received (from a vendor), whereas an 'invoice' is one that we sent out (to a customer)."
+#. "A written statement of money owed for goods or services supplied. In systecash, a 'bill' is a statement that we received (from a vendor), whereas an 'invoice' is one that we sent out (to a customer)."
 msgid "bill"
 msgstr "帳單"
 
@@ -219,7 +219,7 @@ msgstr "支付條款"
 msgid "billing terms"
 msgstr "支付條款"
 
-#. "The dataset that encapsulates all the collections of entities (accounts etc.) in gnucash. The written records of the financial affairs of a business."
+#. "The dataset that encapsulates all the collections of entities (accounts etc.) in systecash. The written records of the financial affairs of a business."
 msgid "Book"
 msgstr ""
 
@@ -401,7 +401,7 @@ msgstr "獲利"
 msgid "imbalance"
 msgstr "失調"
 
-#. "Process of extracting data from a non-Gnucash format into a Gnucash file. E.g. QIF Import."
+#. "Process of extracting data from a non-systecash format into a systecash file. E.g. QIF Import."
 msgid "import"
 msgstr "匯入"
 
@@ -413,7 +413,7 @@ msgstr "損益表"
 msgid "interest"
 msgstr "利息"
 
-#. "A list of goods sold or services provided together with the prices charged; see also: a bill. In Gnucash, an 'invoice' is a statement that we sent out (to a customer), whereas a 'bill' is one that we received (from a vendor)."
+#. "A list of goods sold or services provided together with the prices charged; see also: a bill. In systecash, an 'invoice' is a statement that we sent out (to a customer), whereas a 'bill' is one that we received (from a vendor)."
 msgid "invoice"
 msgstr "發票"
 
@@ -458,12 +458,12 @@ msgstr "合併, 到"
 msgid "marker"
 msgstr "標記"
 
-#. "1. Some text annotation, but this meaning isn't used inside gnucash. 2. In the Customer summary report: The ratio of profit vs. sales, i.e. the profit amount divided by the sales amount, shown in percent."
+#. "1. Some text annotation, but this meaning isn't used inside systecash. 2. In the Customer summary report: The ratio of profit vs. sales, i.e. the profit amount divided by the sales amount, shown in percent."
 #, fuzzy
 msgid "markup"
 msgstr "標記"
 
-#. "The way how more than one window is displayed in GnuCash at the same time. MDI = Multiple Document Interface."
+#. "The way how more than one window is displayed in systecash at the same time. MDI = Multiple Document Interface."
 msgid "MDI modus"
 msgstr "MDI 樣式"
 
@@ -515,7 +515,7 @@ msgstr "起始結餘"
 msgid "options"
 msgstr "選項"
 
-#. "Watch out: Although this word exists in gnucash program code, all that program code in gnucash is currently not activated. In the future, it will be used in business accounting as follows: A particular request to make or supply goods, but belonging to a (larger) job. Such a request can come from a customer or be sent to a vendor. An order will probably generate one invoice or bill."
+#. "Watch out: Although this word exists in systecash program code, all that program code in systecash is currently not activated. In the future, it will be used in business accounting as follows: A particular request to make or supply goods, but belonging to a (larger) job. Such a request can come from a customer or be sent to a vendor. An order will probably generate one invoice or bill."
 msgid "order"
 msgstr ""
 
@@ -778,7 +778,7 @@ msgstr "價值(在分割中)"
 msgid "vendor"
 msgstr "廠商"
 
-#. "The terms 'Voucher' and 'Expense Voucher' are used interchangeably in gnucash. The 'Expense Voucher' is also a bit of a misnomer -- it's more like an 'Expense Report' in gnucash.  The phrase is meant to be a list of expenses incurred by an employee for which the company will reminburse them."
+#. "The terms 'Voucher' and 'Expense Voucher' are used interchangeably in systecash. The 'Expense Voucher' is also a bit of a misnomer -- it's more like an 'Expense Report' in systecash.  The phrase is meant to be a list of expenses incurred by an employee for which the company will reminburse them."
 msgid "voucher"
 msgstr "憑證"
 

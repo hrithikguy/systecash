@@ -1,6 +1,6 @@
 '''
 
-gnucash_simple.py -- A helper file to convert Gnucash objects into
+systecash_simple.py -- A helper file to convert systecash objects into
 dictionaries for easier conversion to JSON
 
 Copyright (C) 2013 Tom Lofts <dev@loftx.co.uk>
@@ -26,8 +26,8 @@ Boston, MA 02110-1301, USA gnu@gnu.org
 
 '''
 
-import gnucash
-from gnucash.gnucash_business import Entry, Split, Account
+import systecash
+from systecash.systecash_business import Entry, Split, Account
 
 def addressToDict(address):
     if address is None:

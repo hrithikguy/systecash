@@ -44,7 +44,7 @@ int libgncmod_ledger_core_gnc_module_age      = 0;
 char *
 libgncmod_ledger_core_gnc_module_path(void)
 {
-    return g_strdup("gnucash/register/ledger-core");
+    return g_strdup("systecash/register/ledger-core");
 }
 
 char *
@@ -56,17 +56,17 @@ libgncmod_ledger_core_gnc_module_description(void)
 int
 libgncmod_ledger_core_gnc_module_init(int refcount)
 {
-    if (!gnc_module_load("gnucash/engine", 0))
+    if (!gnc_module_load("systecash/engine", 0))
     {
         return FALSE;
     }
 
-    if (!gnc_module_load("gnucash/register/register-core", 0))
+    if (!gnc_module_load("systecash/register/register-core", 0))
     {
         return FALSE;
     }
 
-    if (!gnc_module_load("gnucash/app-utils", 0))
+    if (!gnc_module_load("systecash/app-utils", 0))
     {
         return FALSE;
     }

@@ -27,12 +27,12 @@
     sellable; for example, currencies, stocks, bonds, grain,
     copper, and oil are all commodities.  This file provides
     an API for defining a commodities, and for working with
-    collections of commodities.  All GnuCash financial transactions
+    collections of commodities.  All systecash financial transactions
     must identify the commodity that is being traded.
 
     @warning The system used here does not follow the object
     handling and identification system (GncGUID's, Entities, etc.)
-    that the other parts of GnuCash use.  The API really should be
+    that the other parts of systecash use.  The API really should be
     ported over.  This would allow us to get rid of the
     commodity table routines defined below.
 
@@ -125,7 +125,7 @@ typedef enum
 			 *   web sites.  For example, the australia
 			 *   source may pull from ASX, yahoo, etc. */
     SOURCE_UNKNOWN,	/**< This is a locally installed quote source
-			 *   that gnucash knows nothing about. May
+			 *   that systecash knows nothing about. May
 			 *   pull from single or multiple
 			 *   locations. */
     SOURCE_MAX,
@@ -134,16 +134,16 @@ typedef enum
 
 /** This function indicates whether or not the Finance::Quote module
  *  is installed on a users computer.  This includes any other related
- *  modules that gnucash need to process F::Q information.
+ *  modules that systecash need to process F::Q information.
  *
  *  @return TRUE is F::Q is installed properly.
  */
 gboolean gnc_quote_source_fq_installed (void);
 
-/** Update gnucash internal tables based on what Finance::Quote
+/** Update systecash internal tables based on what Finance::Quote
  *  sources are installed.  Sources that have been explicitly coded
- *  into gnucash are marked sensitive/insensitive based upon whether
- *  they are present. New sources that gnucash doesn't know about are
+ *  into systecash are marked sensitive/insensitive based upon whether
+ *  they are present. New sources that systecash doesn't know about are
  *  added to its internal tables.
  *
  *  @param sources_list A list of strings containing the source names
@@ -172,7 +172,7 @@ gint gnc_quote_source_num_entries(QuoteSourceType type);
  */
 gnc_quote_source *gnc_quote_source_add_new(const char * name, gboolean supported);
 
-/** Given the internal (gnucash or F::Q) name of a quote source, find
+/** Given the internal (systecash or F::Q) name of a quote source, find
  *  the data structure identified by this name.
  *
  *  @param internal_name The name of this quote source.
@@ -235,7 +235,7 @@ gint gnc_quote_source_get_index (const gnc_quote_source *source);
 const char *gnc_quote_source_get_user_name (const gnc_quote_source *source);
 
 /** Given a gnc_quote_source data structure, return the internal name
- *  of this quote source.  This is the name used by both gnucash and
+ *  of this quote source.  This is the name used by both systecash and
  *  by Finance::Quote.  E.G. "yahoo_australia" or "australia"
  *
  *  @param source The quote source in question.

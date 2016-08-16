@@ -19,7 +19,7 @@
 \********************************************************************/
 
 /*
- * The Gnucash Header Canvas
+ * The systecash Header Canvas
  *
  * Authors:
  *     Heath Martin <martinh@pegasus.cc.ucf.edu>
@@ -30,15 +30,15 @@
 
 #include <string.h>
 
-#include "gnucash-sheet.h"
-#include "gnucash-sheetP.h"
-#include "gnucash-color.h"
-#include "gnucash-style.h"
-#include "gnucash-grid.h"
-#include "gnucash-cursor.h"
-#include "gnucash-item-edit.h"
+#include "systecash-sheet.h"
+#include "systecash-sheetP.h"
+#include "systecash-color.h"
+#include "systecash-style.h"
+#include "systecash-grid.h"
+#include "systecash-cursor.h"
+#include "systecash-item-edit.h"
 
-#include "gnucash-header.h"
+#include "systecash-header.h"
 
 static GnomeCanvasItem *parent_class;
 
@@ -100,9 +100,9 @@ gnc_header_draw (GnomeCanvasItem *item, GdkDrawable *drawable,
     else
     {
         argb = gnc_table_get_bg_color (table, virt_loc, NULL);
-        bg_color = gnucash_color_argb_to_gdk (argb);
+        bg_color = systecash_color_argb_to_gdk (argb);
         argb = gnc_table_get_fg_color (table, virt_loc);
-        fg_color = gnucash_color_argb_to_gdk (argb);
+        fg_color = systecash_color_argb_to_gdk (argb);
     }
 
     h = style->dimensions->height;
@@ -126,7 +126,7 @@ gnc_header_draw (GnomeCanvasItem *item, GdkDrawable *drawable,
     gdk_gc_set_line_attributes (header->gc, 1, GDK_LINE_SOLID, GDK_CAP_NOT_LAST, GDK_JOIN_MITER);
     gdk_gc_set_background (header->gc, &gn_white);
     gdk_gc_set_foreground (header->gc, fg_color);
-    /*font = gnucash_register_font;*/
+    /*font = systecash_register_font;*/
 
     vcell = gnc_table_get_virtual_cell
             (table, table->current_cursor_loc.vcell_loc);
@@ -153,7 +153,7 @@ gnc_header_draw (GnomeCanvasItem *item, GdkDrawable *drawable,
 
             virt_loc.phys_col_offset = j;
 
-            cd = gnucash_style_get_cell_dimensions (style, i, j);
+            cd = systecash_style_get_cell_dimensions (style, i, j);
 
             if (header->in_resize && (j == header->resize_col))
                 w = header->resize_col_width;
@@ -297,7 +297,7 @@ void
 gnc_header_reconfigure (GncHeader *header)
 {
     GnomeCanvas *canvas;
-    GnucashSheet *sheet;
+    systecashSheet *sheet;
     SheetBlockStyle *old_style;
     int w, h;
 
@@ -308,7 +308,7 @@ gnc_header_reconfigure (GncHeader *header)
     sheet = GNUCASH_SHEET(header->sheet);
     old_style = header->style;
 
-    header->style = gnucash_sheet_get_style_from_cursor
+    header->style = systecash_sheet_get_style_from_cursor
                     (sheet, header->cursor_name);
 
     if (header->style == NULL)
@@ -373,7 +373,7 @@ pointer_on_resize_line (GncHeader *header, int x, int y, int *col)
 
     for (j = 0; j < style->ncols; j++)
     {
-        cd = gnucash_style_get_cell_dimensions (style, 0, j);
+        cd = systecash_style_get_cell_dimensions (style, 0, j);
         pixels += cd->pixel_width;
         if (x >= pixels - 1 && x <= pixels + 1)
             on_the_line = TRUE;
@@ -399,14 +399,14 @@ find_resize_col (GncHeader *header, int col)
 
     /* skip to the right over zero-width columns */
     while ((col + 1 < style->ncols) &&
-            (cd = gnucash_style_get_cell_dimensions (style, 0, col + 1)) &&
+            (cd = systecash_style_get_cell_dimensions (style, 0, col + 1)) &&
             (cd->pixel_width == 0))
         col++;
 
     /* now go back left till we have a resizable column */
     while (col >= start)
     {
-        if (gnucash_style_col_is_resizable (style, col))
+        if (systecash_style_col_is_resizable (style, col))
             return col;
         else
             col--;
@@ -419,19 +419,19 @@ find_resize_col (GncHeader *header, int col)
 static void
 gnc_header_resize_column (GncHeader *header, gint col, gint width)
 {
-    GnucashSheet *sheet = header->sheet;
+    systecashSheet *sheet = header->sheet;
 
-    gnucash_sheet_set_col_width (sheet, col, width);
+    systecash_sheet_set_col_width (sheet, col, width);
 
-    gnucash_cursor_configure (GNUCASH_CURSOR(sheet->cursor));
-    gnc_item_edit_configure (gnucash_sheet_get_item_edit (sheet));
+    systecash_cursor_configure (GNUCASH_CURSOR(sheet->cursor));
+    gnc_item_edit_configure (systecash_sheet_get_item_edit (sheet));
 
     gnc_header_reconfigure (header);
-    gnucash_sheet_set_scroll_region (sheet);
-    gnucash_sheet_update_adjustments (sheet);
+    systecash_sheet_set_scroll_region (sheet);
+    systecash_sheet_update_adjustments (sheet);
 
     gnc_header_request_redraw (header);
-    gnucash_sheet_redraw_all (sheet);
+    systecash_sheet_redraw_all (sheet);
 }
 
 static void
@@ -439,7 +439,7 @@ gnc_header_auto_resize_column (GncHeader *header, gint col)
 {
     int width;
 
-    width = gnucash_sheet_col_max_width (header->sheet, 0, col);
+    width = systecash_sheet_col_max_width (header->sheet, 0, col);
 
     gnc_header_resize_column (header, col, width);
 }
@@ -487,7 +487,7 @@ gnc_header_event (GnomeCanvasItem *item, GdkEvent *event)
         }
 
         if (pointer_on_resize_line(header, x, y, &col) &&
-                gnucash_style_col_is_resizable (header->style, col))
+                systecash_style_col_is_resizable (header->style, col))
             gdk_window_set_cursor (gtk_widget_get_window (GTK_WIDGET(canvas)),
                                    header->resize_cursor);
         else
@@ -514,7 +514,7 @@ gnc_header_event (GnomeCanvasItem *item, GdkEvent *event)
         {
             CellDimensions *cd;
 
-            cd = gnucash_style_get_cell_dimensions
+            cd = systecash_style_get_cell_dimensions
                  (header->style, 0, col);
 
             header->in_resize = TRUE;
@@ -753,7 +753,7 @@ gnc_header_realized (GtkWidget *widget, gpointer data)
 
 
 GtkWidget *
-gnc_header_new (GnucashSheet *sheet)
+gnc_header_new (systecashSheet *sheet)
 {
     GnomeCanvasGroup *group;
     GnomeCanvasItem *item;

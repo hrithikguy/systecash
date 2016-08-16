@@ -1,5 +1,5 @@
 This document describes some loosely related notes about the different
-things needed to translate GnuCash for a particular locale.
+things needed to translate systecash for a particular locale.
 
 NOTE: A much more up to date and exhaustive HOWTO for translators can
 be found in the file TRANSLATION_HOWTO. 
@@ -7,27 +7,27 @@ be found in the file TRANSLATION_HOWTO.
 
 Table Of Contents
 
-1. How to create a GnuCash translation file for use with gettext
+1. How to create a systecash translation file for use with gettext
 
 2. Remarks about the keyword 'fuzzy' in the po file
 
-3. How to translate the GnuCash manual
+3. How to translate the systecash manual
 
 4. How to translate the files containing the new account hierarchies
 
 ----------------------------------------------------------------------
 
 
- 1. How to create a GnuCash translation file for use with gettext
+ 1. How to create a systecash translation file for use with gettext
 
-This section explains how to create a GnuCash translation file for
+This section explains how to create a systecash translation file for
 use with GNU gettext.
 
    by Yannick  LE  NY <y-le-ny@ifrance.com>, the French translator
                            V1.1 - 20000813
 
 
-1) Take the file gnucash.pot, edit it with any text editor and save it
+1) Take the file systecash.pot, edit it with any text editor and save it
    as 'CODE-COUNTRY.po' (it must be a plain text file only not formatted text)
    where the CODE-COUNTRY is two or more letters which denote the language
    and country for the translation.
@@ -48,7 +48,7 @@ You need to update this with the current information.
 
 For example in the de.po file, we have this:
 
-# Messages in Deutsch für GnuCash
+# Messages in Deutsch für systecash
 # Copyright (C) 1999 Free Software Foundation, Inc.
 # Jan-Uwe Finck <Jan-Uwe.Finck@bigfoot.de>, 1999.
 
@@ -60,7 +60,7 @@ Before:
 
 #: messages-i18n.c:11
 msgid ""
-"The GnuCash personal finance manager.\n"
+"The systecash personal finance manager.\n"
 "The GNU way to manage your money!"
 msgstr ""
 
@@ -68,30 +68,30 @@ After, the translation in the de.po file:
 
 #: messages-i18n.c:11
 msgid ""
-"The GnuCash personal finance manager.\n"
+"The systecash personal finance manager.\n"
 "The GNU way to manage your money!"
 msgstr ""
-"GnuCash: Ihr persönlicher Finanzmanager.\n"
+"systecash: Ihr persönlicher Finanzmanager.\n"
 "Der GNU-Weg, ihr Geld zu verwalten !"
 
 
 4) When you are ready to test out the strings you have translated,
-   save the file in the 'po' directory of the gnucash source tree.
+   save the file in the 'po' directory of the systecash source tree.
    You can test if your file is good with this command line:
    msgfmt -c -v -o /dev/null FILE.po where FILE is the CODE-COUNTRY.
    If you have fuzzy errors, take a look at the end of this document.
 
 
 5) Now, if you have the gettext package installed, you can compile your
-   po file with this command (run it in the gnucash/po directory):
+   po file with this command (run it in the systecash/po directory):
 
-msgfmt fr.po --output=./gnucash.mo
+msgfmt fr.po --output=./systecash.mo
 
-   This will create the file 'gnucash.mo' which you can copy to the
+   This will create the file 'systecash.mo' which you can copy to the
    appropriate locale directory for your installation. On a RedHat 6.1
    
    installation, the directory is /usr/share/locale/fr/LC_MESSAGES.
-   Alternatively, instead of creating and installing the gnucash.mo
+   Alternatively, instead of creating and installing the systecash.mo
    file by hand, you can edit the file 'configure.in' and the file 
    'configure' and add your language string ('it', 'fr', etc.) to 
    the definition of the ALL_LINGUAS variable.
@@ -100,9 +100,9 @@ msgfmt fr.po --output=./gnucash.mo
    and the new line is in the 2 files:
    ALL_LINGUAS = "de en_GB fr it ja ru sv be"
    Now rerun 'make' and 'make install' to build and install the
-   gnucash.mo file.
+   systecash.mo file.
 
-When running GnuCash, you must set the appropriate locale environment
+When running systecash, you must set the appropriate locale environment
 variables:
 
 In French, with bash:
@@ -114,7 +114,7 @@ In French, with tcsh:
 6) Once you have a finished, working po file, need to compress your file
    with gzip. On command line, type 'gzip fr.po' (for the French file) and
    now you have a new compressed file named 'fr.po.gz'.
-   Email this file to gnucash-patches@gnucash.org.
+   Email this file to systecash-patches@systecash.org.
 
 
 ------------------------------------------------------------------------------
@@ -126,12 +126,12 @@ You can get more information about gettext and the po file format in
 the 'info' pages for GNU gettext. Type 'info gettext' at the command
 line.
 
-Dave Peticolas <dave@krondo.com>, the CVS maintainer for GnuCash,
+Dave Peticolas <dave@krondo.com>, the CVS maintainer for systecash,
 regularly updates the po files, and you may need to add some
 translations to the file or correct some strings.
 
 In the updated po files, you should not have the word 'fuzzy',
-otherwise GnuCash will not use the translated string.
+otherwise systecash will not use the translated string.
 
 Two examples from the file de.po:
 
@@ -179,14 +179,14 @@ msgstr "Einnahmen/Ausgaben anzeigen"
 ----------------------------------------------------------------------
 
 
- 3. How to translate the GnuCash manual
+ 3. How to translate the systecash manual
 
 This section describes the actions needed to translate the manual.
 
 1) Create a new directory doc/sgml/<locale> (where <locale> is
    something like es, en_GB, or pt_PT).
 2) Copy the files from doc/sgml/C into this directory.
-3) Recreate the image files in doc/sgml/C/gnucash so that they are
+3) Recreate the image files in doc/sgml/C/systecash so that they are
    appropriate to the locale.
 4) Edit all the sgml files and translate for the locale.
 
@@ -213,7 +213,7 @@ Note: You absolutely don't need to translate all of the files from
 accounts/C.  A subset of those are fine as well. Probably several of
 them will not apply to your local legislative/economic system anyway.
 For a really customized account hierarchy you might better create a
-new account hierarchy file in GnuCash, and then, by hand-editing the
+new account hierarchy file in systecash, and then, by hand-editing the
 xml code, split it up into several files and cut&paste the appropriate
 tags from the accounts/C/acctchrt_* files.
 ----------------------------------------------------------------------

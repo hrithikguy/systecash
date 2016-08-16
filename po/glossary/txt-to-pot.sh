@@ -3,14 +3,14 @@
 # Its not clever but it took me 2 minutes to write :)
 # Michael Twomey <michael.twomey@ireland.sun.com>
 # 23 March 2001
-# with slight GnuCash modifications by Christian Stimming <stimming@tuhh.de> 
+# with slight systecash modifications by Christian Stimming <stimming@tuhh.de> 
 # 19 Aug 2001
 
 #check args
 if [ $# -eq 0 ]
 then
 	cat <<!
-Usage: `basename $0` gnc-glossary.txt > gnucash-glossary.pot
+Usage: `basename $0` gnc-glossary.txt > systecash-glossary.pot
 !
 	exit 1;
 fi

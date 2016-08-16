@@ -141,7 +141,7 @@
 ;;         the ending date of the reporting period over which to
 ;;         report balances for this account.  if end-date is #f, there
 ;;         will be no limit on how late a counted transaction may
-;;         ocurr. note: i do not know if GnuCash, right now, supports
+;;         ocurr. note: i do not know if systecash, right now, supports
 ;;         transactions in the future. so be prepared for the
 ;;         possibility that this may match transactions which haven't
 ;;         ocurred, yet. [CAS: I don't think end-date of #f works.

@@ -23,14 +23,14 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report business-reports))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash app-utils))
-(use-modules (gnucash report report-system))
-(gnc:module-load "gnucash/report/standard-reports" 0)
+(define-module (systecash report business-reports))
+(use-modules (systecash gnc-module))
+(use-modules (systecash app-utils))
+(use-modules (systecash report report-system))
+(gnc:module-load "systecash/report/standard-reports" 0)
 
 ;; to define gnc-build-url
-(gnc:module-load "gnucash/html" 0)
+(gnc:module-load "systecash/html" 0)
 
 (define (guid-ref idstr type guid)
   (gnc-build-url type (string-append idstr guid) ""))
@@ -110,17 +110,17 @@
         0
         ))
 
-(use-modules (gnucash report fancy-invoice))
-(use-modules (gnucash report invoice))
-(use-modules (gnucash report easy-invoice))
-(use-modules (gnucash report taxinvoice))
-(use-modules (gnucash report receipt))
-(use-modules (gnucash report owner-report))
-(use-modules (gnucash report job-report))
-(use-modules (gnucash report payables))
-(use-modules (gnucash report receivables))
-(use-modules (gnucash report customer-summary))
-(use-modules (gnucash report balsheet-eg))
+(use-modules (systecash report fancy-invoice))
+(use-modules (systecash report invoice))
+(use-modules (systecash report easy-invoice))
+(use-modules (systecash report taxinvoice))
+(use-modules (systecash report receipt))
+(use-modules (systecash report owner-report))
+(use-modules (systecash report job-report))
+(use-modules (systecash report payables))
+(use-modules (systecash report receivables))
+(use-modules (systecash report customer-summary))
+(use-modules (systecash report balsheet-eg))
 
 (define (gnc:payables-report-create account title show-zeros?)
   (payables-report-create-internal account title show-zeros?))

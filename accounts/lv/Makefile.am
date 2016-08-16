@@ -2,23 +2,23 @@
 accountdir = ${GNC_ACCOUNTS_DIR}/lv
 
 account_DATA = \
-  acctchrt_brokerage.gnucash-xea \
-  acctchrt_business.gnucash-xea \
-  acctchrt_carloan.gnucash-xea \
-  acctchrt_cdmoneymkt.gnucash-xea \
-  acctchrt_checkbook.gnucash-xea \
-  acctchrt_childcare.gnucash-xea \
-  acctchrt_common.gnucash-xea \
-  acctchrt_eduloan.gnucash-xea \
-  acctchrt_fixedassets.gnucash-xea \
-  acctchrt_homeloan.gnucash-xea \
-  acctchrt_homeown.gnucash-xea \
-  acctchrt_otherloan.gnucash-xea \
-  acctchrt_renter.gnucash-xea \
-  acctchrt_retiremt.gnucash-xea \
-  acctchrt_spouseinc.gnucash-xea \
-  acctchrt_spouseretire.gnucash-xea
+  acctchrt_brokerage.systecash-xea \
+  acctchrt_business.systecash-xea \
+  acctchrt_carloan.systecash-xea \
+  acctchrt_cdmoneymkt.systecash-xea \
+  acctchrt_checkbook.systecash-xea \
+  acctchrt_childcare.systecash-xea \
+  acctchrt_common.systecash-xea \
+  acctchrt_eduloan.systecash-xea \
+  acctchrt_fixedassets.systecash-xea \
+  acctchrt_homeloan.systecash-xea \
+  acctchrt_homeown.systecash-xea \
+  acctchrt_otherloan.systecash-xea \
+  acctchrt_renter.systecash-xea \
+  acctchrt_retiremt.systecash-xea \
+  acctchrt_spouseinc.systecash-xea \
+  acctchrt_spouseretire.systecash-xea
 
 EXTRA_DIST = \
   ${account_DATA} \
-  acctchrt_full.gnucash-xea 
+  acctchrt_full.systecash-xea 

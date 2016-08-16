@@ -40,11 +40,11 @@
  *  Cellblocks, Cursors, and the Table.
  *
  *  The register core should not have any 'knowledge' of the accounting model
- *  of GnuCash or of the workings of the main application. It should not be
+ *  of systecash or of the workings of the main application. It should not be
  *  specific to a particular GUI (such as Gnome/GTK). It should be possible
  *  to use the register core in a stand-alone fashion.
  *
- *  For information on the GnuCash-specific register implementation that has
+ *  For information on the systecash-specific register implementation that has
  *  been built atop this core, see @ref SplitRegister.
  *
  *  @{

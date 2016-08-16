@@ -36,30 +36,30 @@ SET(accounts_SUBDIRS
 )
 
 
-# Most of the account subdirectories that have acctchrt_full.gnucash-xea do not install it. Don't know why.
+# Most of the account subdirectories that have acctchrt_full.systecash-xea do not install it. Don't know why.
 # But these subdirectories do.
 SET(accounts_fullcharts_SUBDIRS ja nb nl)
 
 FOREACH(dir ${accounts_SUBDIRS})
-  INSTALL(DIRECTORY ${dir} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/gnucash/accounts
+  INSTALL(DIRECTORY ${dir} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/systecash/accounts
                            PATTERN Makefile.* EXCLUDE
-                           PATTERN acctchrt_full.gnucash-xea EXCLUDE
+                           PATTERN acctchrt_full.systecash-xea EXCLUDE
                            PATTERN README.bas_2012 EXCLUDE)
   IF (GNC_BUILD_AS_INSTALL)
-    FILE(COPY ${dir} DESTINATION ${DATADIR_BUILD}/gnucash/accounts
+    FILE(COPY ${dir} DESTINATION ${DATADIR_BUILD}/systecash/accounts
       PATTERN Makefile.* EXCLUDE
-      PATTERN acctchrt_full.gnucash-xea EXCLUDE
+      PATTERN acctchrt_full.systecash-xea EXCLUDE
       PATTERN README.bas_2012 EXCLUDE
     )
   ENDIF()
 ENDFOREACH(dir)
 
 FOREACH(dir ${accounts_fullcharts_SUBDIRS})
-  INSTALL(DIRECTORY ${dir} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/gnucash/accounts
+  INSTALL(DIRECTORY ${dir} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/systecash/accounts
       PATTERN Makefile.* EXCLUDE
       PATTERN README.bas_2012 EXCLUDE)
   IF (GNC_BUILD_AS_INSTALL)
-    FILE(COPY ${dir} DESTINATION ${DATADIR_BUILD}/gnucash/accounts
+    FILE(COPY ${dir} DESTINATION ${DATADIR_BUILD}/systecash/accounts
       PATTERN Makefile.* EXCLUDE
       PATTERN README.bas_2012 EXCLUDE
     )

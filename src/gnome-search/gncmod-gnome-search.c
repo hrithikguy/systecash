@@ -48,25 +48,25 @@ int libgncmod_gnome_search_gnc_module_age      = 0;
 char *
 libgncmod_gnome_search_gnc_module_path(void)
 {
-    return g_strdup("gnucash/gnome-search");
+    return g_strdup("systecash/gnome-search");
 }
 
 char *
 libgncmod_gnome_search_gnc_module_description(void)
 {
-    return g_strdup("The GnuCash Gnome Search UI");
+    return g_strdup("The systecash Gnome Search UI");
 }
 
 int
 libgncmod_gnome_search_gnc_module_init(int refcount)
 {
     /* load the engine (we depend on it) */
-    if (!gnc_module_load("gnucash/engine", 0))
+    if (!gnc_module_load("systecash/engine", 0))
     {
         return FALSE;
     }
 
-    if (!gnc_module_load("gnucash/gnome-utils", 0))
+    if (!gnc_module_load("systecash/gnome-utils", 0))
     {
         return FALSE;
     }

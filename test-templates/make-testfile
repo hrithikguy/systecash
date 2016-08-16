@@ -90,7 +90,7 @@ sub scan_file {
 sub search_external {
     my ($name, $inpath) = @_;
     my ($invol, $indir, $infile) = File::Spec->splitpath($inpath);
-    my @excludes = qw(test* utest* swig* gnucash_core.c);
+    my @excludes = qw(test* utest* swig* systecash_core.c);
     push @excludes, $infile;
     my $exclude_string = "--exclude=" . join(" --exclude=", @excludes);
     my $calls = `egrep -r $name --include="*.c" $exclude_string src | wc -l`;

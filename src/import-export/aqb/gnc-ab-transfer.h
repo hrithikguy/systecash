@@ -44,7 +44,7 @@ G_BEGIN_DECLS
  * FIXME
  *
  * @param parent Widget to use as parent, may be NULL
- * @param gnc_acc GnuCash account to fetch balance for
+ * @param gnc_acc systecash account to fetch balance for
  * @param trans_type Type of transaction
  */
 void gnc_ab_maketrans(GtkWidget *parent, Account *gnc_acc,

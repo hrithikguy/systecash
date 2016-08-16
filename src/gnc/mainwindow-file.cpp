@@ -34,7 +34,7 @@
 #include "mainwindow.hpp"
 #include "ui_mainwindow.h"
 
-// gnucash includes
+// systecash includes
 #include <glib/gi18n.h>
 extern "C"
 {
@@ -98,7 +98,7 @@ bool MainWindow::show_session_error (QWidget *parent,
 
     case ERR_BACKEND_NO_BACKEND:
         QMessageBox::critical(parent, tr("Error"),
-                              tr("The URL %1 is not supported by this version of GnuCash.").arg(filename));
+                              tr("The URL %1 is not supported by this version of systecash.").arg(filename));
         break;
 
     case ERR_BACKEND_BAD_URL:
@@ -121,7 +121,7 @@ bool MainWindow::show_session_error (QWidget *parent,
     case ERR_BACKEND_TOO_NEW:
         QMessageBox::critical(parent, tr("Error"),
                               tr("This file/URL appears to be from a newer version "
-                                 "of GnuCash. You must upgrade your version of GnuCash "
+                                 "of systecash. You must upgrade your version of systecash "
                                  "to work with this data."));
         break;
 
@@ -141,28 +141,28 @@ bool MainWindow::show_session_error (QWidget *parent,
         {
         case GNC_FILE_DIALOG_OPEN:
         default:
-            fmt = tr("GnuCash could not obtain the lock for %1. "
+            fmt = tr("systecash could not obtain the lock for %1. "
                      "That database may be in use by another user, "
                      "in which case you should not open the database. "
                      "Do you want to proceed with opening the database?");
             break;
 
         case GNC_FILE_DIALOG_IMPORT:
-            fmt = tr("GnuCash could not obtain the lock for %1. "
+            fmt = tr("systecash could not obtain the lock for %1. "
                      "That database may be in use by another user, "
                      "in which case you should not import the database. "
                      "Do you want to proceed with importing the database?");
             break;
 
         case GNC_FILE_DIALOG_SAVE:
-            fmt = tr("GnuCash could not obtain the lock for %1. "
+            fmt = tr("systecash could not obtain the lock for %1. "
                      "That database may be in use by another user, "
                      "in which case you should not save the database. "
                      "Do you want to proceed with saving the database?");
             break;
 
         case GNC_FILE_DIALOG_EXPORT:
-            fmt = tr("GnuCash could not obtain the lock for %1. "
+            fmt = tr("systecash could not obtain the lock for %1. "
                      "That database may be in use by another user, "
                      "in which case you should not export the database. "
                      "Do you want to proceed with exporting the database?");
@@ -181,7 +181,7 @@ bool MainWindow::show_session_error (QWidget *parent,
 
     case ERR_BACKEND_READONLY:
         QMessageBox::critical(parent, tr("Error"),
-                              tr("GnuCash could not write to %1. "
+                              tr("systecash could not write to %1. "
                                  "That database may be on a read-only file system, "
                                  "or you may not have write permission for the directory.").arg(filename));
         break;
@@ -189,7 +189,7 @@ bool MainWindow::show_session_error (QWidget *parent,
     case ERR_BACKEND_DATA_CORRUPT:
         QMessageBox::critical(parent, tr("Error"),
                               tr("The file/URL %1 "
-                                 "does not contain GnuCash data or the data is corrupt.").arg(filename));
+                                 "does not contain systecash data or the data is corrupt.").arg(filename));
         break;
 
     case ERR_BACKEND_SERVER_ERR:
@@ -244,7 +244,7 @@ bool MainWindow::show_session_error (QWidget *parent,
 
     case ERR_FILEIO_FILE_TOO_OLD:
         if (QMessageBox::question(parent, tr("Continue?"),
-                                  tr("This file is from an older version of GnuCash. "
+                                  tr("This file is from an older version of systecash. "
                                      "Do you want to continue?"),
                                   QMessageBox::Ok | QMessageBox::Cancel)
                 == QMessageBox::Ok)
@@ -277,7 +277,7 @@ bool MainWindow::show_session_error (QWidget *parent,
 
     case ERR_SQL_DB_TOO_OLD:
         if (QMessageBox::question(parent, tr("Upgrade Database?"),
-                                  tr("This database is from an older version of GnuCash. "
+                                  tr("This database is from an older version of systecash. "
                                      "Do you want to want to upgrade the database "
                                      "to the current version?"),
                                   QMessageBox::Yes | QMessageBox::No, QMessageBox::No)
@@ -389,7 +389,7 @@ void MainWindow::loadFile(const QString &fileName)
     /* if file appears to be locked, ask the user ... */
     if (ERR_BACKEND_LOCKED == io_err || ERR_BACKEND_READONLY == io_err)
     {
-        QString fmt1 = tr("GnuCash could not obtain the lock for %1. ").arg(fileName);
+        QString fmt1 = tr("systecash could not obtain the lock for %1. ").arg(fileName);
         QString fmt2 =
             ((ERR_BACKEND_LOCKED == io_err)
              ? tr("That database may be in use by another user, "
@@ -507,7 +507,7 @@ void MainWindow::loadFile(const QString &fileName)
         xaccLogEnable();
 
         /* well, no matter what, I think it's a good idea to have a root
-         * account around.  For example, early in the gnucash startup
+         * account around.  For example, early in the systecash startup
          * sequence, the user opens a file; if this open fails for any
          * reason, we don't want to leave them high & dry without a root
          * account, because if the user continues, then bad things will

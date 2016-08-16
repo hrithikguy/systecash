@@ -97,7 +97,7 @@ gnc_new_tip_number (TotdDialog *totd_dialog, gint offset)
      * placeholder, optionally followed by a | and a (non-translated)
      * string to put in the placeholder. For example:
      *
-     *  Welcome to GnuCash version %s|2.4
+     *  Welcome to systecash version %s|2.4
      */
     if (tip_list[current_tip_number])
 	tip_components = g_strsplit(tip_list[current_tip_number], "|", 0);

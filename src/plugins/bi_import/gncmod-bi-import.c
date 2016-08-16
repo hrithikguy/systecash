@@ -53,27 +53,27 @@ int libgncmod_bi_import_gnc_module_age      = 0;
 char *
 libgncmod_bi_import_gnc_module_path (void)
 {
-    return g_strdup("gnucash/plugins/bi_import");
+    return g_strdup("systecash/plugins/bi_import");
 }
 
 char *
 libgncmod_bi_import_gnc_module_description (void)
 {
-    return g_strdup("The GnuCash bi_import plugin");
+    return g_strdup("The systecash bi_import plugin");
 }
 
 int
 libgncmod_bi_import_gnc_module_init (int refcount)
 {
-    if (!gnc_module_load ("gnucash/app-utils", 0))
+    if (!gnc_module_load ("systecash/app-utils", 0))
     {
         return FALSE;
     }
-    if (!gnc_module_load ("gnucash/gnome-utils", 0))
+    if (!gnc_module_load ("systecash/gnome-utils", 0))
     {
         return FALSE;
     }
-    if (!gnc_module_load ("gnucash/engine", 0))
+    if (!gnc_module_load ("systecash/engine", 0))
     {
         return FALSE;
     }

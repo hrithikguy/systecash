@@ -46,7 +46,7 @@ int libgncmod_standard_reports_gnc_module_age      = 0;
 char *
 libgncmod_standard_reports_gnc_module_path(void)
 {
-    return g_strdup("gnucash/report/standard-reports");
+    return g_strdup("systecash/report/standard-reports");
 }
 
 char *
@@ -59,13 +59,13 @@ int
 libgncmod_standard_reports_gnc_module_init(int refcount)
 {
     /* load the report system */
-    if (!gnc_module_load("gnucash/report/report-system", 0))
+    if (!gnc_module_load("systecash/report/report-system", 0))
     {
         return FALSE;
     }
 
     /* load the report generation scheme code */
-    if (scm_c_eval_string("(use-modules (gnucash report standard-reports))") ==
+    if (scm_c_eval_string("(use-modules (systecash report standard-reports))") ==
             SCM_BOOL_F)
     {
         return FALSE;

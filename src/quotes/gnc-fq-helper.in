@@ -30,7 +30,7 @@ use Date::Manip;
 
 =head1 NAME
 
-gnc-fq-helper  -  allows gnucash to communicate with Finance::Quote
+gnc-fq-helper  -  allows systecash to communicate with Finance::Quote
                   over pipes from guile. The requests and responses
                   are scheme forms.
 

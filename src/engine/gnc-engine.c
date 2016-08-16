@@ -1,5 +1,5 @@
 /********************************************************************
- * gnc-engine.c  -- top-level initialization for GnuCash Engine     *
+ * gnc-engine.c  -- top-level initialization for systecash Engine     *
  * Copyright 2000 Bill Gribble <grib@billgribble.com>               *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *

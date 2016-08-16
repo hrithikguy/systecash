@@ -18,19 +18,19 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (debug-set! stack 50000)
-;(use-modules (gnucash report new-reports reports-2))
+;(use-modules (systecash report new-reports reports-2))
 
-(use-modules (gnucash gnc-module))
+(use-modules (systecash gnc-module))
 
-(gnc:module-begin-syntax (gnc:module-load "gnucash/report/report-system" 0))
+(gnc:module-begin-syntax (gnc:module-load "systecash/report/report-system" 0))
 
-(use-modules (gnucash engine))
+(use-modules (systecash engine))
 (use-modules (sw_engine))
 
-(use-modules (gnucash report report-system test test-extras))
+(use-modules (systecash report report-system test test-extras))
 
-(use-modules (gnucash report standard-reports test test-generic-net-barchart))
-(use-modules (gnucash report standard-reports net-barchart))
+(use-modules (systecash report standard-reports test test-generic-net-barchart))
+(use-modules (systecash report standard-reports net-barchart))
 
 ;; Explicitly set locale to make the report output predictable
 (setlocale LC_ALL "C")

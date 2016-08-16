@@ -27,7 +27,7 @@
 /** @addtogroup RegisterPlugin Register Page
     @{ */
 /** @file gnc-plugin-page-register.h
-    @brief  Functions providing a register page for the GnuCash UI
+    @brief  Functions providing a register page for the systecash UI
     @author Copyright (C) 2003 Jan Arne Petersen <jpetersen@uni-bonn.de>
     @author Copyright (C) 2003 David Hampton <hampton@employees.org>
 */

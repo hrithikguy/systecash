@@ -4,7 +4,7 @@
       Egyszerű folyószámla
     </gnc-act:title>
     <gnc-act:short-description>
-     Minimális számlakészlet GnuCash használatához.
+     Minimális számlakészlet systecash használatához.
     </gnc-act:short-description>
     <gnc-act:long-description>
      Akkor érdemes ezt kiválasztani, ha csak a folyószámlája forgalmát kívánja ellenőrizni. Később elkezdheti a bevételei és költségei alaposabb nyomonkövetését, ha szükségét érzi.

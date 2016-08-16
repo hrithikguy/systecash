@@ -23,7 +23,7 @@
 #ifndef GNC_GNCINSTANCE_HPP
 #define GNC_GNCINSTANCE_HPP
 
-// gnucash includes
+// systecash includes
 #include "config.h"
 extern "C"
 {

@@ -299,14 +299,14 @@
                                 <property name="has_tooltip">True</property>
                                 <property name="tooltip_markup">The amount to pay for this invoice.
 
-If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
+If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
 
-In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
+In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
                                 <property name="tooltip_text" translatable="yes">The amount to pay for this invoice.
 
-If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
+If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
 
-In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
+In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
                                 <property name="xalign">1</property>
                                 <property name="label" translatable="yes">&lt;b&gt;Amount&lt;/b&gt;</property>
                                 <property name="use_markup">True</property>
@@ -326,14 +326,14 @@ In case of an over-payment or if no invoice was selected, GnuCash will automatic
                                 <property name="has_tooltip">True</property>
                                 <property name="tooltip_markup">The amount to pay for this invoice.
 
-If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
+If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
 
-In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
+In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
                                 <property name="tooltip_text" translatable="yes">The amount to pay for this invoice.
 
-If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
+If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
 
-In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
+In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
                                 <property name="xalign">1</property>
                                 <property name="label" translatable="yes">Payment</property>
                                 <property name="justify">right</property>
@@ -352,14 +352,14 @@ In case of an over-payment or if no invoice was selected, GnuCash will automatic
                                 <property name="has_tooltip">True</property>
                                 <property name="tooltip_markup">The amount to pay for this invoice.
 
-If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
+If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
 
-In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
+In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
                                 <property name="tooltip_text" translatable="yes">The amount to pay for this invoice.
 
-If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
+If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
 
-In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
+In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
                                 <property name="xalign">1</property>
                                 <property name="label" translatable="yes">Refund</property>
                                 <property name="justify">right</property>
@@ -408,14 +408,14 @@ In case of an over-payment or if no invoice was selected, GnuCash will automatic
                                 <property name="has_tooltip">True</property>
                                 <property name="tooltip_markup">The amount to pay for this invoice.
 
-If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
+If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
 
-In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
+In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
                                 <property name="tooltip_text" translatable="yes">The amount to pay for this invoice.
 
-If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
+If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
 
-In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
+In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
                                 <child>
                                   <placeholder/>
                                 </child>
@@ -434,14 +434,14 @@ In case of an over-payment or if no invoice was selected, GnuCash will automatic
                                 <property name="has_tooltip">True</property>
                                 <property name="tooltip_markup">The amount to pay for this invoice.
 
-If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
+If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
 
-In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
+In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
                                 <property name="tooltip_text" translatable="yes">The amount to pay for this invoice.
 
-If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
+If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
 
-In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
+In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
                                 <child>
                                   <placeholder/>
                                 </child>
@@ -488,14 +488,14 @@ In case of an over-payment or if no invoice was selected, GnuCash will automatic
                                 <property name="has_tooltip">True</property>
                                 <property name="tooltip_markup">The amount to pay for this invoice.
 
-If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
+If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
 
-In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
+In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
                                 <property name="tooltip_text" translatable="yes">The amount to pay for this invoice.
 
-If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
+If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
 
-In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
+In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
                                 <child>
                                   <placeholder/>
                                 </child>
@@ -515,14 +515,14 @@ In case of an over-payment or if no invoice was selected, GnuCash will automatic
                                 <property name="has_tooltip">True</property>
                                 <property name="tooltip_markup">The amount to pay for this invoice.
 
-If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
+If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
 
-In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
+In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
                                 <property name="tooltip_text" translatable="yes">The amount to pay for this invoice.
 
-If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
+If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.
 
-In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
+In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company.</property>
                                 <child>
                                   <placeholder/>
                                 </child>

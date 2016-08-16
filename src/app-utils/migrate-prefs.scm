@@ -29,7 +29,7 @@
 
 (define-module (migrate-prefs))
 
-(use-modules (gnucash main))
+(use-modules (systecash main))
 
 (define gconf-dir "")
 (define prefix-length 0)
@@ -88,7 +88,7 @@
       (begin
         (gnc:msg "Clear previous migration tmp dir " migration-dir)
         (migration-cleanup-internal)))
-  (gnc:warn "*** GnuCash switched to a new preferences system ***")
+  (gnc:warn "*** systecash switched to a new preferences system ***")
   (gnc:warn "Attempt to migrate your preferences from the old to the new system")
   (mkdir migration-dir)
   (gnc:msg "Copy all gconf files to tmp dir " migration-dir)
@@ -98,7 +98,7 @@
 )
 
 (define (migration-prepare base-dir)
-  (set! gconf-dir (string-append base-dir "/.gconf/apps/gnucash"))
+  (set! gconf-dir (string-append base-dir "/.gconf/apps/systecash"))
   ; Note: calling script should already have checked whether 
   ;       gconf-dir and its parent directories exist
   (set! prefix-length (+ (string-length gconf-dir) 1))

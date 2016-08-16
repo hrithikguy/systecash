@@ -1,47 +1,47 @@
-HOWTO: Translating GnuCash
+HOWTO: Translating systecash
 Last update: 2003-07-04
 
 The concept of this document is to give you step-by-step instructions on 
 how to update (or create if non-existant) language translations for the 
-gnucash project.  
+systecash project.  
 
 Any additions or corrections to this file should be sent to either Jon 
 Lapham <lapham@extracta.com.br>, Christain Stimming <stimming@tuhh.de>, 
-or directly to the gnucash-devel mailing list.
+or directly to the systecash-devel mailing list.
 
 Sections:
 1) Mailing lists, IRC and web sites
 2) Get the source
 3) Contact the maintainer of your language
-4) Building, Installing and running GnuCash
+4) Building, Installing and running systecash
 5) The glossary file
 6) Initial processing of the translation file
 7) Translating the .po file
 8) Testing and submitting your translations
 9) Problems
-10) How to translate the GnuCash guide and/or help files
+10) How to translate the systecash guide and/or help files
 11) How to translate the files containing the new account hierarchies
 
 ==============================================================================
 1) Mailing lists, IRC and web sites
 
-Translators will probably find 3 gnucash mailing lists of interest.  General
-use questions and answers are found on the gnucash-users mailing list, 
-specific development questions go to the gnucash-devel list and your finished
-translation file are sent to the gnucash-devel list.
+Translators will probably find 3 systecash mailing lists of interest.  General
+use questions and answers are found on the systecash-users mailing list, 
+specific development questions go to the systecash-devel list and your finished
+translation file are sent to the systecash-devel list.
 
-To subscribe or view archives of these lists, go the the gnucash web site, 
+To subscribe or view archives of these lists, go the the systecash web site, 
 and follow the links to the mailing lists:
-https://lists.gnucash.org/mailman/listinfo
+https://lists.systecash.org/mailman/listinfo
 
 Another excellent place to get help is on IRC, as many of the developers hang 
-out there and are eager to help.  Go to the #gnucash channel at 
+out there and are eager to help.  Go to the #systecash channel at 
 "irc.gnome.org".  If you don't know what that mean, fire up an IRC client 
 (for example, xchat), connect to irc.gnome.org and then type "/join 
-#gnucash".
+#systecash".
 
-The main gnucash web site is loaded with information:
-http://www.gnucash.org/
+The main systecash web site is loaded with information:
+http://www.systecash.org/
 
 The GNU Translation Project is another way to submit translations:
 http://www.iro.umontreal.ca/contrib/po/HTML/
@@ -49,9 +49,9 @@ http://www.iro.umontreal.ca/contrib/po/HTML/
 ==============================================================================
 2) Get the source
 
-The first thing to do is to download the latest STABLE branch of gnucash.
+The first thing to do is to download the latest STABLE branch of systecash.
 This could be easily done by visiting
-http://www.gnucash.org/pub/gnucash/sources/stable/
+http://www.systecash.org/pub/systecash/sources/stable/
 and grab the latest stable source package.
 
 Please do not use the HEAD branch from SVN, since the text in the HEAD branch 
@@ -78,7 +78,7 @@ The beginning of your .po file should look something similar to this:
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: GnuCash 2.0.0\n"
+"Project-Id-Version: systecash 2.0.0\n"
 "POT-Creation-Date: 2003-05-16 16:42-0300\n"
 "PO-Revision-Date: 2003-06-02 12:00-0300\n"
 "Last-Translator: Jon Lapham <lapham@extracta.com.br>\n"
@@ -97,12 +97,12 @@ the maintainer and you should change the "Last-translator" to your name and
 email address.
 
 ==============================================================================
-4) Building, Installing and running GnuCash
+4) Building, Installing and running systecash
 
 Before starting to work on your translations, it is suggested that you 
-buiild the gnucash source code.  This way you can get your system set up 
+buiild the systecash source code.  This way you can get your system set up 
 correctly with all the development packages you need.  It is a good idea
-to actually run gnucash with your new translations because it is quite 
+to actually run systecash with your new translations because it is quite 
 helpful to see the phrases in the context of the running program.
 
 For how to build and install, please refer to ../README
@@ -110,22 +110,22 @@ For how to build and install, please refer to ../README
 After installation, insure that it works by running (as a normal user,
 no need to be root here):
 
-$ /usr/local/bin/gnucash
+$ /usr/local/bin/systecash
 
 It is a good idea to use absolute paths like this to insure you run 
-the proper gnucash executable.  To run your OS pre-installed version of
-gnucash, usually you can type:
+the proper systecash executable.  To run your OS pre-installed version of
+systecash, usually you can type:
 
-$ /usr/bin/gnucash
+$ /usr/bin/systecash
 
 Unless on some special systems, e.g. FreeBSD, where the OS installed
 version sits in /usr/local/bin/, in which case you need OS-specific knowledge.
 
 In either case, you can easily switch between the various languages the 
-gnucash has available by setting the LANG env var before the call to the
+systecash has available by setting the LANG env var before the call to the
 executable. In sh-like shell environment this could be done by:
 
-$ LANG=pt_BR /usr/local/bin/gnucash
+$ LANG=pt_BR /usr/local/bin/systecash
 
 (other shell like tcsh may behave differently, please to refer to related
 manuals)
@@ -134,7 +134,7 @@ manuals)
 5) The glossary file
 
 Inside the po/glossary/ directory should be a "glossary" file for your 
-language.  This file contains a bunch of commonly used terms found in gnucash.
+language.  This file contains a bunch of commonly used terms found in systecash.
 It is recommended that you get this file translated first, and use it as a 
 guide when translating the real .po file.  
 
@@ -157,27 +157,27 @@ Now, open your language's glossary file and translate it completely.
 ==============================================================================
 6) Initial processing of the translation file
 
-Before you begin actualy translation work, you should update the gnucash.pot 
+Before you begin actualy translation work, you should update the systecash.pot 
 file and use this to update your .po file.  This process will insure that 
 you have the latest translatable strings.
 
 cd po/
-rm gnucash.pot
-make gnucash.pot
+rm systecash.pot
+make systecash.pot
 
-If your language file does not exist, use the gnucash.pot file as a template
+If your language file does not exist, use the systecash.pot file as a template
 for it:
 
-cp gnucash.pot XXXX.po
+cp systecash.pot XXXX.po
 
 If your language file does exist, update it using the msgmerge program:
 
-/usr/bin/msgmerge -o XXXX.po XXXX.po gnucash.pot
+/usr/bin/msgmerge -o XXXX.po XXXX.po systecash.pot
 
 The top of the .po file should be editted somewhat.  The comments at the 
 top of the file should be changed to be current:
 
-# Messages in Deutsch für GnuCash
+# Messages in Deutsch für systecash
 # Copyright (C) 1999 Free Software Foundation, Inc.
 # Jan-Uwe Finck <Jan-Uwe.Finck@bigfoot.de>, 1999.
 
@@ -192,7 +192,7 @@ Make sure that the header of your .po file contains this line:
 Finally.  You are ready to do some translating!
 
 There are many transaltion editors, KBabel, for example, works well for 
-GnuCash.  Some Editors are noted here:
+systecash.  Some Editors are noted here:
 http://translationproject.org/html/software.html
 
 If you are familiar with a text editor, e.g. vim or emacs, you can also 
@@ -202,7 +202,7 @@ into German:
 Before:
 #: messages-i18n.c:11
 msgid ""
-"The GnuCash personal finance manager.\n"
+"The systecash personal finance manager.\n"
 "The GNU way to manage your money!"
 msgstr ""
 
@@ -210,10 +210,10 @@ After, the tranlation in the de.po file:
 
 #: messages-i18n.c:11
 msgid ""
-"The GnuCash personal finance manager.\n"
+"The systecash personal finance manager.\n"
 "The GNU way to manage your money!"
 msgstr ""
-"GnuCash: Ihr persönlicher Finanzmanager.\n"
+"systecash: Ihr persönlicher Finanzmanager.\n"
 "Der GNU-Weg, ihr Geld zu verwalten !"
 
 You should read through every translation in the .po file at least once.  
@@ -269,19 +269,19 @@ that there are no unclosed quotes, etc).  To do this, use the msgfmt program
 
 This will report any errors in your .po file if it finds them.
 
-If you want to see your translations within a running version of gnucash,
-simply place your .po file in your SVN copy of the gnucash source code (which
+If you want to see your translations within a running version of systecash,
+simply place your .po file in your SVN copy of the systecash source code (which
 you have previously installed) and from within the po/ directory type (you
 may need to be root to do this):
 
 make install
 
-Now you can run gnucash with your new translations:
+Now you can run systecash with your new translations:
 
-$ LANG=XXXX /usr/local/bin/gnucash
+$ LANG=XXXX /usr/local/bin/systecash
 
 When you are happy with the new translation file, email a gzipped version
-of it to the gnucash-devel mailing list.
+of it to the systecash-devel mailing list.
 
 gzip XXXX.po
 (email this file using your favorite mail client)
@@ -295,19 +295,19 @@ helpful if there are more than one people working on one translation file.
 ==============================================================================
 9) Problems
 
-If you see any "Gtk-CRITICAL" messages while running gnucash, it is probably
+If you see any "Gtk-CRITICAL" messages while running systecash, it is probably
 because you translated a string differently than how it exists in some other
 gnome library. You must discover which string you translated differently, and
 change the translation to exactly match that of the gnome libraries.
 
-To do this, you need to run gnucash under gdb:
+To do this, you need to run systecash under gdb:
 
-LANG=XXXX /usr/local/bin/gnucash-env gdb /usr/bin/guile
+LANG=XXXX /usr/local/bin/systecash-env gdb /usr/bin/guile
 
 Then, from within gdb, issue:
-run -e main -s /usr/local/libexec/gnucash/overrides/gnucash --g-fatal-warnings
+run -e main -s /usr/local/libexec/systecash/overrides/systecash --g-fatal-warnings
 
-Eventually, gnucash should crash (because of the --g-fatal-warnings 
+Eventually, systecash should crash (because of the --g-fatal-warnings 
 directive), when it does, issue from within gdb:
 
 backtrace
@@ -332,25 +332,25 @@ gnc-mdi-utils.c:574"?  Open that source file and find line 574:
 
 So, the problem is with the translation of "_View/_Toolbar".  The "/" is a 
 menu seperator, so you now know that the problem is with either the 
-translation of "_View" or "_Toolbar".  By switching to an English gnucash
+translation of "_View" or "_Toolbar".  By switching to an English systecash
 and looking through your .po file, you should be able to find the problem.
-Change the offending translation to whatever you see in the gnucash app.
+Change the offending translation to whatever you see in the systecash app.
 Remember that the translations must contain the proper underscores.
 
 ------------
-To follow gnucash as it access files, 
-strace /usr/local/bin/gnucash
+To follow systecash as it access files, 
+strace /usr/local/bin/systecash
 
 ==============================================================================
-10) How to translate the GnuCash guide and/or help files
+10) How to translate the systecash guide and/or help files
 
 This section describes the actions needed to translate the manual.
 
-First, you must *have* the gnucash-doc package installed:
+First, you must *have* the systecash-doc package installed:
 
 1) Checkout the documentation
-cvs -z3 -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot checkout \
-	gnucash-docs
+cvs -z3 -d :pserver:cvs@cvs.systecash.org:/home/cvs/cvsroot checkout \
+	systecash-docs
   FIXME: change the cvs command to svn here
 2) Create a new directory (if it doesn't already exist) in guide/<locale> 
    where <locale> is something like es, en_GB, or pt_PT.
@@ -359,7 +359,7 @@ cvs -z3 -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot checkout \
    appropriate to the locale.
 5) Edit all the xml files and translate for the locale.
 6) Test that your xml file has no syntax errors
-   xmllint --valid --noout gnucash-guide.xml
+   xmllint --valid --noout systecash-guide.xml
 
 To translate the help files, repeat steps 2-5 but replace the "guide"
 directory with "help".
@@ -385,7 +385,7 @@ Note: You absolutely don't need to translate all of the files from
 accounts/C.  A subset of those are fine as well. Probably several of
 them will not apply to your local legislative/economic system anyway.
 For a really customized account hierarchy you might better create a
-new account hierarchy file in GnuCash, and then, by hand-editing the
+new account hierarchy file in systecash, and then, by hand-editing the
 xml code, split it up into several files and cut&paste the appropriate
 tags from the accounts/C/acctchrt_* files.
 

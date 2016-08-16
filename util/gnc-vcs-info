@@ -29,7 +29,7 @@ my_die()
 if [ "$BUILDING_FROM_VCS" = "0" -o \
      "$BUILDING_FROM_VCS" = "no" -o \
      "$BUILDING_FROM_VCS" = "false" ]; then
-  # Something outside of the Gnucash build system knows that we
+  # Something outside of the systecash build system knows that we
   # are NOT building from svn, svk or git checkout.
   # We should believe it (needed by packagers that maintain the
   # packaging code in svn, svk or git too)

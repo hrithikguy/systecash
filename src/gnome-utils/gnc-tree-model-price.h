@@ -28,7 +28,7 @@
 /** @addtogroup GuiTreeModel
  * @{ */
 /** @file gnc-tree-model-price.h
-    @brief GtkTreeModel implementation for gnucash price database.
+    @brief GtkTreeModel implementation for systecash price database.
     @author Jan Arne Petersen <jpetersen@uni-bonn.de>
     @author David Hampton <hampton@employees.org>
 */
@@ -97,7 +97,7 @@ GType gnc_tree_model_price_get_type (void);
 /** @name Account Tree Model Constructors
  @{ */
 
-/** Create a new GtkTreeModel for manipulating gnucash commodity prices.
+/** Create a new GtkTreeModel for manipulating systecash commodity prices.
  *
  *  @param book The book that holds these prices.
  *
@@ -159,7 +159,7 @@ gboolean gnc_tree_model_price_iter_is_price (GncTreeModelPrice *model,
         GtkTreeIter *iter);
 
 
-/** Convert a model/iter pair to a gnucash commodity namespace.  This
+/** Convert a model/iter pair to a systecash commodity namespace.  This
  *  routine should only be called from a commodity tree view filter
  *  function.  The model and iter values will be provided as part of
  *  the call to the filter.
@@ -174,7 +174,7 @@ gnc_commodity_namespace *gnc_tree_model_price_get_namespace (GncTreeModelPrice *
         GtkTreeIter *iter);
 
 
-/** Convert a model/iter pair to a gnucash commodity.  This routine
+/** Convert a model/iter pair to a systecash commodity.  This routine
  *  should only be called from a commodity tree view filter function.
  *  The model and iter values will be provided as part of the call to
  *  the filter.
@@ -189,7 +189,7 @@ gnc_commodity *gnc_tree_model_price_get_commodity (GncTreeModelPrice *model,
         GtkTreeIter *iter);
 
 
-/** Convert a model/iter pair to a gnucash price.  This routine should
+/** Convert a model/iter pair to a systecash price.  This routine should
  *  only be called from a price tree view filter function.  The model
  *  and iter values will be provided as part of the call to the
  *  filter.
@@ -213,7 +213,7 @@ GNCPrice *gnc_tree_model_price_get_price (GncTreeModelPrice *model,
  *
  *  @param model A pointer to the price tree model.
  *
- *  @param namespace A pointer to the gnucash commodity namespace.
+ *  @param namespace A pointer to the systecash commodity namespace.
  *
  *  @param iter A pointer to a GtkTreeIter.  This iter will be filled
  *  in to point where the namespace appears in the price tree.
@@ -227,7 +227,7 @@ gboolean gnc_tree_model_price_get_iter_from_namespace (GncTreeModelPrice *model,
  *
  *  @param model A pointer to the price tree model.
  *
- *  @param commodity A pointer to the gnucash commodity.
+ *  @param commodity A pointer to the systecash commodity.
  *
  *  @param iter A pointer to a GtkTreeIter.  This iter will be filled
  *  in to point where the commodity appears in the price tree.
@@ -241,7 +241,7 @@ gboolean gnc_tree_model_price_get_iter_from_commodity (GncTreeModelPrice *model,
  *
  *  @param model A pointer to the price tree model.
  *
- *  @param price A pointer to the gnucash price.
+ *  @param price A pointer to the systecash price.
  *
  *  @param iter A pointer to a GtkTreeIter.  This iter will be filled
  *  in to point where the price appears in the price tree.

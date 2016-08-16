@@ -31,15 +31,15 @@
 ;; periods. Apart from this, all display options are taken from
 ;; account-summary unchangedly.
 
-(define-module (gnucash report standard-reports sx-summary))
+(define-module (systecash report standard-reports sx-summary))
 
 (use-modules (srfi srfi-1))
-(use-modules (gnucash main))
-(use-modules (gnucash printf))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash main))
+(use-modules (systecash printf))
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
 
 (define reportname (N_ "Future Scheduled Transactions Summary"))

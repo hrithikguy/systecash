@@ -1,6 +1,6 @@
 
 This directory contains unit test cases to exercise basic 
-GnuCash engine functions.
+systecash engine functions.
 
 To run the tests, just do 'make check'
 
@@ -25,7 +25,7 @@ supposed to be cleared by the backend only.
 
 We are in the engine test code however. In here it's not possible
 to load a backend without creating some circular dependencies
-between gnucash modules.
+between systecash modules.
 
 Just for completeness, this was said on the dirty flag tests before
 these test cases got moved to the engine:
@@ -37,5 +37,5 @@ Until its saved, it lives in perpetual dirtiness.  Thus, the
 test cases need to specify a backend, then do the commit, 
 then test the dirty flag.
 
-Actually, the use of the dirty flag in gnucash is, at this time,
+Actually, the use of the dirty flag in systecash is, at this time,
 mildly ambiguous, and its semantics are not clearly defined."

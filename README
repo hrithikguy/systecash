@@ -1,5 +1,5 @@
 ############################################################
-          GnuCash 2.6.x README file.
+          systecash 2.6.x README file.
 
 The last known stable series is the 2.6.0 series.
 ------------------------------------------------------------
@@ -16,13 +16,13 @@ Table of Contents:
   - Supported Platforms
   - Additional Download Sites
   - Getting the Source via SVN
-  - Developing GnuCash
+  - Developing systecash
 
 ########
 Overview
 --------
 
-GnuCash is a personal finance manager. A check-book like register GUI
+systecash is a personal finance manager. A check-book like register GUI
 allows you to enter and track bank accounts, stocks, income and even
 currency trades. A full set of reports allow you to see the state of
 your finances. The interface is designed to be simple and easy to use,
@@ -32,11 +32,11 @@ balanced books.
 Features include:
 
   - An easy-to-use interface.  If you can use the register in the back
-    of your checkbook, you can use GnuCash.  Type directly into the
+    of your checkbook, you can use systecash.  Type directly into the
     register, tab between fields, and use quick-fill to automatically
     complete the transaction.
 
-  - Scheduled Transactions: GnuCash has the ability to automatically
+  - Scheduled Transactions: systecash has the ability to automatically
     create and enter transactions, remind when a transaction is due,
     give a choice of entering a transaction or postponing it and
     remove an automated transaction after a certain period.
@@ -44,17 +44,17 @@ Features include:
   - Mortgage & Loan Repayment Assistant: Used to setup a variable
     payment loan scheduled transaction.
 
-  - Small Business Accounting Features: GnuCash can be used
+  - Small Business Accounting Features: systecash can be used
     for Customer and Vendor tracking, Invoicing and Bill Payment,
     and using different Tax and Billing	Terms in a small business.
 
-  - OFX Import: GnuCash can import downloaded OFX/QFX files and
+  - OFX Import: systecash can import downloaded OFX/QFX files and
     retrieve account info and transactions via OFXDirect. The results
     are passed through a transaction matching system that accurately
     picks duplicate transactions and assigns contra accounts based on
     similar previously-imported transactions.
 
-  - HBCI Support: GnuCash also supports the German Home Banking
+  - HBCI Support: systecash also supports the German Home Banking
     Computer Interface protocol which includes statement download,
     initiate bank transfers and direct debits.
 
@@ -80,7 +80,7 @@ Features include:
     supported and can be bought and sold (traded).  Currency movements
     between accounts are fully balanced when double-entry is enabled.
 
-  - New Multi-Currency Transaction Handling: GnuCash no longer
+  - New Multi-Currency Transaction Handling: systecash no longer
     requires separate currency exchange accounts to handle multiple
     currency transfers.
 
@@ -121,10 +121,10 @@ Features include:
 
 
 Home Page:
-http://www.gnucash.org/
+http://www.systecash.org/
 
 Precompiled binaries:
-http://www.gnucash.org/download
+http://www.systecash.org/download
 
 
 
@@ -132,7 +132,7 @@ http://www.gnucash.org/download
 Dependencies
 ------------
 
-The following packages are required to be installed to run GnuCash:
+The following packages are required to be installed to run systecash:
 
 [see README.dependencies]
 
@@ -149,12 +149,12 @@ for 10.7 and 10.8, you can get Xcode for free from the App store. 10.9
 has a cool feature that detects an attempt to compile and offers to
 install the command-line build tools for you.
 
-Microsoft Windows users can use the "Install Online Quotes" program in the Start menu's Gnucash group.
+Microsoft Windows users can use the "Install Online Quotes" program in the Start menu's systecash group.
 
 To use the OFX and HBCI import features you need to obtain
 the following;
   libofx: This library provide support for OFX file imports. 
-    GnuCash-2.0.0 and newer needs at least the version libofx-0.7.0
+    systecash-2.0.0 and newer needs at least the version libofx-0.7.0
     or newer. Sources can be found at
     http://sourceforge.net/projects/libofx/
   aqbanking: This library provide support for HBCI and openOFX online actions.
@@ -166,26 +166,26 @@ the following;
 Running
 -------
 
-For GnuCash invocation details, see the manpage in doc/gnucash.1.
-You can also run gnucash --help for the command line options.
+For systecash invocation details, see the manpage in doc/systecash.1.
+You can also run systecash --help for the command line options.
 
-You can start GnuCash at the command-line, with "gnucash" or "gnucash
-<filename>", where <filename> is a GnuCash account file.  Sample
-accounts can be found in the "doc/examples" subdirectory.  *.gnucash
-files are GnuCash accounts that can be opened with the "Open File" menu entry.
+You can start systecash at the command-line, with "systecash" or "systecash
+<filename>", where <filename> is a systecash account file.  Sample
+accounts can be found in the "doc/examples" subdirectory.  *.systecash
+files are systecash accounts that can be opened with the "Open File" menu entry.
 *.qif files are Quicken Import Format files that can be opened with the
 "Import QIF" menu entry.
 
-GnuCash responds to the following environment variables:
+systecash responds to the following environment variables:
 
   GNC_BOOTSTRAP_SCM - the location of the initial bootstrapping scheme code.
 
-  GUILE_LOAD_PATH - an override for the GnuCash load path, used when
+  GUILE_LOAD_PATH - an override for the systecash load path, used when
   loading scheme files.  It should be a string in the same form as the
   PATH or LD_LIBRARY_PATH environment variable.
 
-  GNC_MODULE_PATH - an override for the GnuCash load path, used when
-  loading gnucash modules.  It should be a string representing a
+  GNC_MODULE_PATH - an override for the systecash load path, used when
+  loading systecash modules.  It should be a string representing a
   proper scheme list.  It should be a string in the same form as the
   PATH or LD_LIBRARY_PATH environment variable.
 
@@ -198,10 +198,10 @@ Internationalization
 --------------------
 
 Message catalogs exist for many different languages. In general
-GnuCash will use the locale configured in the desktop environment if
+systecash will use the locale configured in the desktop environment if
 we have a translation for it, but this may be overridden if one
 likes. Instructions for overriding the locale settings may be found at
-http://wiki.gnucash.org/wiki/Locale_Settings
+http://wiki.systecash.org/wiki/Locale_Settings
 
 #####################
 Building & Installing
@@ -209,12 +209,12 @@ Building & Installing
 
 (For additional build system details, see doc/README.build-system.)
 
-GnuCash uses GNU Automake to handle the build process, so for most of
+systecash uses GNU Automake to handle the build process, so for most of
 the details, see the generic instructions in INSTALL.  (If you are
 building directory from Git, read the README.git file for more instructions.)
-Below we detail the GnuCash specific bits.
+Below we detail the systecash specific bits.
 
-Prior to building GnuCash, you will have to obtain and install the
+Prior to building systecash, you will have to obtain and install the
 following packages:
 
 
@@ -245,7 +245,7 @@ you'll need for the systems we know about:
   SuSE:
     see README.dependencies
 
-GnuCash understands a few non-standard ./configure options.  You
+systecash understands a few non-standard ./configure options.  You
 should run ./configure --help for the most up to date summary of the
 supported options.
 
@@ -294,7 +294,7 @@ details.
 Supported Platforms
 -------------------
 
-GnuCash 2.x is known to work with the following operating systems:
+systecash 2.x is known to work with the following operating systems:
 
 GNU/Linux             -- x86, Sparc, PPC
 FreeBSD               -- x86
@@ -302,17 +302,17 @@ OpenBSD               -- x86
 MacOS X		      -- PPC and Intel, Versions 10.5 and later
 
 
-GnuCash can probably be made to work on any platform for which Gtk+ can,
+systecash can probably be made to work on any platform for which Gtk+ can,
 given sufficient effort. If you try and encounter difficulty, please join
-the developer's mailing list, gnucash-devel@gnucash.org.
+the developer's mailing list, systecash-devel@systecash.org.
 
 #########################
 Downloads
 -------------------------
 
-GnuCash sources and Mac and Windows binaries are hosted at
+systecash sources and Mac and Windows binaries are hosted at
 SourceForge. Links for the current version are provided at
-http://www.gnucash.org. We depend upon distribution packagers for
+http://www.systecash.org. We depend upon distribution packagers for
 GNU/Linux and *BSD binaries, so if you want a more recent version than
 your distribution provides you'll have to build from source.
 
@@ -321,29 +321,29 @@ Getting Source with Git
 ------------------------------
 
 We maintain a mirror of our master repository on Github. You can
-browse the code at https://github.com/Gnucash/gnucash. Clone URIs are
+browse the code at https://github.com/systecash/systecash. Clone URIs are
 on that page, or if you have a Github account you can fork it
 there.
 
 ##################
-Developing GnuCash
+Developing systecash
 ------------------
-Before you start developing GnuCash, you should do the following:
+Before you start developing systecash, you should do the following:
 
-1. Read http://wiki.gnucash.org/wiki/Development
+1. Read http://wiki.systecash.org/wiki/Development
 
 2. Look over the doxygen-generated documentation at
-    http://code.gnucash.org/docs/HEAD/
+    http://code.systecash.org/docs/HEAD/
 
-3. Go to the GnuCash website and skim the archives of the GnuCash
+3. Go to the systecash website and skim the archives of the systecash
    development mailing list.
 
-4. Join the GnuCash development mailing list. See the GnuCash website
+4. Join the systecash development mailing list. See the systecash website
    for details on how to do this.
 
 
 Submitting a Patch:
 
-  Please read http://wiki.gnucash.org/wiki/Development#Submitting_Patches.
+  Please read http://wiki.systecash.org/wiki/Development#Submitting_Patches.
 
 Thank you.

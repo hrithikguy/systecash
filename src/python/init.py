@@ -1,6 +1,6 @@
 import sys
 import _sw_app_utils
-from gnucash import *
+from systecash import *
 from _sw_core_utils import gnc_prefs_is_extra_enabled
 import gtk
 import os
@@ -8,7 +8,7 @@ sys.path.append(os.path.dirname(__file__))
 noisy = gnc_prefs_is_extra_enabled()
 if noisy:
     print "woop", os.path.dirname(__file__)
-# Importing the console class causes SIGTTOU to be thrown if GnuCash is
+# Importing the console class causes SIGTTOU to be thrown if systecash is
 # started in the background.  This causes a hang if it is not handled, 
 # so ignore it for the duration
 import signal
@@ -27,7 +27,7 @@ if noisy:
    #root = _sw_app_utils.gnc_get_current_root_account()
 
    #print "test", dir(root), root.__class__
-    print "test3", dir(gnucash_core_c)
+    print "test3", dir(systecash_core_c)
 
    #acct = Account(instance = root)
 
@@ -35,7 +35,7 @@ if noisy:
    #print acct.GetName()
    #print acct.GetBalance()
    #print acct.GetSplitList()
-   #print "test2", dir(gnucash.gnucash_core_c)
+   #print "test2", dir(systecash.systecash_core_c)
 
 class Console (cons.Console):
     """ GTK python console """
@@ -81,7 +81,7 @@ class Console (cons.Console):
         return False
 
 
-# Change this to "if True:" to switch on a python console at gnucash
+# Change this to "if True:" to switch on a python console at systecash
 # startup:
 if False:
     console = Console(argv = [], shelltype = 'python', banner = [['woop', 'title']], size = 100)
@@ -90,7 +90,7 @@ if False:
     window.set_position(gtk.WIN_POS_CENTER)
     window.set_default_size(800,600)
     window.set_border_width(0)
-    # Hm. gtk.main_quit will kill gnucash without closing the file
+    # Hm. gtk.main_quit will kill systecash without closing the file
     # properly. That's kinda bad.
     window.connect('destroy-event', gtk.main_quit)
     window.connect('delete-event', gtk.main_quit)

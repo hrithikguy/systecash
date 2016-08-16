@@ -23,7 +23,7 @@
 #ifndef GNC_TRANSACTION_HPP
 #define GNC_TRANSACTION_HPP
 
-// gnucash includes
+// systecash includes
 #include "config.h"
 extern "C"
 {
@@ -54,7 +54,7 @@ class Account;
 class Split;
 class TmpSplit;
 
-/** Wrapper around a gnucash ::Transaction pointer with C++ methods for
+/** Wrapper around a systecash ::Transaction pointer with C++ methods for
  * easier setter and getter access.
  */
 class Transaction : public GncInstance

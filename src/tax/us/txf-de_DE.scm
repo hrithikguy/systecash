@@ -13,7 +13,7 @@
 ;;   Rolf Leggewie
 ;; 
 ;; Der gesamte Inhalt zu den vier Abschnitten der "Umsatzsteuer-Kategorien" wurden im
-;; Dezember 2010 für GnuCash Vers. 2.4.0 vollständig überarbeitet und alle Einträge gemäß
+;; Dezember 2010 für systecash Vers. 2.4.0 vollständig überarbeitet und alle Einträge gemäß
 ;; der "Umsatzsteuer-Voranmeldung 2011" umfassend berichtigt und komplettiert von FJSW - Franz Stoll
 ;; 
 ;; This file holds all the Kennzahlen for the
@@ -45,7 +45,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(use-modules (gnucash app-utils))
+(use-modules (systecash app-utils))
 
 (define txf-tax-entity-types
   (list
@@ -109,7 +109,7 @@
         (cdr pair)
         "Keine Hilfe verfügbar, da nur Gruppenüberschrift.
 Diese Kategorie ohne Nummer ==>> N I C H T   V E R W E N D E N !
-USt-Kategorien 2011 für GnuCash Vers. 2.4.0 entwickelt und erstellt von: FJSW
+USt-Kategorien 2011 für systecash Vers. 2.4.0 entwickelt und erstellt von: FJSW
 Fehlermeldungen + Dankschreiben an: stoll@bomhardt.de")))
 
 (define (gnc:txf-get-codes categories tax-entity-type)

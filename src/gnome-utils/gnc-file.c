@@ -1,5 +1,5 @@
 /********************************************************************\
- * FileDialog.c -- file-handling utility dialogs for gnucash.       *
+ * FileDialog.c -- file-handling utility dialogs for systecash.       *
  *                                                                  *
  * Copyright (C) 1997 Robin D. Clark                                *
  * Copyright (C) 1998, 1999, 2000 Linas Vepstas                     *
@@ -220,7 +220,7 @@ show_session_error (QofBackendError io_error,
         break;
 
     case ERR_BACKEND_NO_BACKEND:
-        fmt = _("The URL %s is not supported by this version of GnuCash.");
+        fmt = _("The URL %s is not supported by this version of systecash.");
         gnc_error_dialog (parent, fmt, displayname);
         break;
 
@@ -243,7 +243,7 @@ show_session_error (QofBackendError io_error,
 
     case ERR_BACKEND_TOO_NEW:
         fmt = _("This file/URL appears to be from a newer version "
-                "of GnuCash. You must upgrade your version of GnuCash "
+                "of systecash. You must upgrade your version of systecash "
                 "to work with this data.");
         gnc_error_dialog (parent, "%s", fmt);
         break;
@@ -263,7 +263,7 @@ show_session_error (QofBackendError io_error,
         case GNC_FILE_DIALOG_OPEN:
         default:
             label = GTK_STOCK_OPEN;
-            fmt = _("GnuCash could not obtain the lock for %s. "
+            fmt = _("systecash could not obtain the lock for %s. "
                     "That database may be in use by another user, "
                     "in which case you should not open the database. "
                     "Do you want to proceed with opening the database?");
@@ -271,7 +271,7 @@ show_session_error (QofBackendError io_error,
 
         case GNC_FILE_DIALOG_IMPORT:
             label = _("Import");
-            fmt = _("GnuCash could not obtain the lock for %s. "
+            fmt = _("systecash could not obtain the lock for %s. "
                     "That database may be in use by another user, "
                     "in which case you should not import the database. "
                     "Do you want to proceed with importing the database?");
@@ -279,7 +279,7 @@ show_session_error (QofBackendError io_error,
 
         case GNC_FILE_DIALOG_SAVE:
             label = GTK_STOCK_SAVE;
-            fmt = _("GnuCash could not obtain the lock for %s. "
+            fmt = _("systecash could not obtain the lock for %s. "
                     "That database may be in use by another user, "
                     "in which case you should not save the database. "
                     "Do you want to proceed with saving the database?");
@@ -287,7 +287,7 @@ show_session_error (QofBackendError io_error,
 
         case GNC_FILE_DIALOG_EXPORT:
             label = _("Export");
-            fmt = _("GnuCash could not obtain the lock for %s. "
+            fmt = _("systecash could not obtain the lock for %s. "
                     "That database may be in use by another user, "
                     "in which case you should not export the database. "
                     "Do you want to proceed with exporting the database?");
@@ -312,7 +312,7 @@ show_session_error (QofBackendError io_error,
         break;
 
     case ERR_BACKEND_READONLY:
-        fmt = _("GnuCash could not write to %s. "
+        fmt = _("systecash could not write to %s. "
                 "That database may be on a read-only file system, "
                 "or you may not have write permission for the directory.");
         gnc_error_dialog (parent, fmt, displayname);
@@ -320,7 +320,7 @@ show_session_error (QofBackendError io_error,
 
     case ERR_BACKEND_DATA_CORRUPT:
         fmt = _("The file/URL %s "
-                "does not contain GnuCash data or the data is corrupt.");
+                "does not contain systecash data or the data is corrupt.");
         gnc_error_dialog (parent, fmt, displayname);
         break;
 
@@ -372,7 +372,7 @@ show_session_error (QofBackendError io_error,
         break;
 
     case ERR_FILEIO_FILE_TOO_OLD:
-        fmt = _("This file is from an older version of GnuCash. "
+        fmt = _("This file is from an older version of systecash. "
                 "Do you want to continue?");
         if (gnc_verify_dialog (parent, TRUE, "%s", fmt))
         {
@@ -404,16 +404,16 @@ show_session_error (QofBackendError io_error,
 
     case ERR_FILEIO_RESERVED_WRITE:
         /* Translators: the first %s is a path in the filesystem,
-         * the second %s is PACKAGE_NAME, which by default is "GnuCash"
+         * the second %s is PACKAGE_NAME, which by default is "systecash"
          */
         fmt = _("You attempted to save in\n%s\nor a subdirectory thereof. "
                 "This is not allowed as %s reserves that directory for internal use.\n\n"
                 "Please try again in a different directory.");
-        gnc_error_dialog (parent, fmt, gnc_dotgnucash_dir(), PACKAGE_NAME);
+        gnc_error_dialog (parent, fmt, gnc_dotsystecash_dir(), PACKAGE_NAME);
         break;
 
     case ERR_SQL_DB_TOO_OLD:
-        fmt = _("This database is from an older version of GnuCash. "
+        fmt = _("This database is from an older version of systecash. "
                 "Select OK to upgrade it to the current version, Cancel "
                 "to mark it read-only.");
 
@@ -422,7 +422,7 @@ show_session_error (QofBackendError io_error,
         break;
 
     case ERR_SQL_DB_TOO_NEW:
-        fmt = _("This database is from a newer version of GnuCash. "
+        fmt = _("This database is from a newer version of systecash. "
                 "This version can read it, but cannot safely save to it. "
                 "It will be marked read-only until you do File>Save As, "
                 "but data may be lost in writing to the old version.");
@@ -442,8 +442,8 @@ show_session_error (QofBackendError io_error,
     case ERR_SQL_BAD_DBI:
 
         fmt = _("The library \"libdbi\" installed on your system doesn't correctly "
-                "store large numbers. This means GnuCash cannot use SQL databases "
-                "correctly. Gnucash will not open or save to SQL databases until this is "
+                "store large numbers. This means systecash cannot use SQL databases "
+                "correctly. systecash will not open or save to SQL databases until this is "
                 "fixed by installing a different version of \"libdbi\". Please see "
                 "https://bugzilla.gnome.org/show_bug.cgi?id=611936 for more "
                 "information.");
@@ -453,7 +453,7 @@ show_session_error (QofBackendError io_error,
 
     case ERR_SQL_DBI_UNTESTABLE:
 
-        fmt = _("GnuCash could not complete a critical test for the presence of "
+        fmt = _("systecash could not complete a critical test for the presence of "
                 "a bug in the \"libdbi\" library. This may be caused by a "
                 "permissions misconfiguration of your SQL database. Please see "
                 "https://bugzilla.gnome.org/show_bug.cgi?id=645216 for more "
@@ -463,9 +463,9 @@ show_session_error (QofBackendError io_error,
         break;
 
     case ERR_FILEIO_FILE_UPGRADE:
-        fmt = _("This file is from an older version of GnuCash and will be "
+        fmt = _("This file is from an older version of systecash and will be "
                 "upgraded when saved by this version. You will not be able "
-                "to read the saved file from the older version of Gnucash "
+                "to read the saved file from the older version of systecash "
                 "(it will report an \"error parsing the file\"). If you wish "
                 "to preserve the old version, exit without saving.");
         gnc_warning_dialog (parent, "%s", fmt);
@@ -742,7 +742,7 @@ RESTART:
         GtkWidget *dialog;
         gchar *displayname = NULL;
 
-        char *fmt1 = _("GnuCash could not obtain the lock for %s.");
+        char *fmt1 = _("systecash could not obtain the lock for %s.");
         char *fmt2 = ((ERR_BACKEND_LOCKED == io_err) ?
                       _("That database may be in use by another user, "
                         "in which case you should not open the database. "
@@ -854,7 +854,7 @@ RESTART:
         Account *new_root;
 
         /* If the new "file" is a database, attempt to store the password
-         * in a keyring. GnuCash itself will not save it.
+         * in a keyring. systecash itself will not save it.
          */
         if ( !gnc_uri_is_file_protocol (protocol))
             gnc_keyring_set_password ( protocol, hostname, port,
@@ -955,7 +955,7 @@ RESTART:
         xaccLogEnable();
 
         /* well, no matter what, I think it's a good idea to have a root
-         * account around.  For example, early in the gnucash startup
+         * account around.  For example, early in the systecash startup
          * sequence, the user opens a file; if this open fails for any
          * reason, we don't want to leave them high & dry without a root
          * account, because if the user continues, then bad things will
@@ -1102,15 +1102,15 @@ check_file_path (const char *path)
 {
     /* Remember the directory as the default. */
      gchar *dir = g_path_get_dirname(path);
-     const gchar *dotgnucash = gnc_dotgnucash_dir();
+     const gchar *dotsystecash = gnc_dotsystecash_dir();
      char *dirpath = dir;
 
-     /* Prevent user from storing file in GnuCash' private configuration
-      * directory (~/.gnucash by default in linux, but can be overridden)
+     /* Prevent user from storing file in systecash' private configuration
+      * directory (~/.systecash by default in linux, but can be overridden)
       */
      while (strcmp(dir = g_path_get_dirname(dirpath), dirpath) != 0)
      {
-         if (strcmp(dirpath, dotgnucash) == 0)
+         if (strcmp(dirpath, dotsystecash) == 0)
          {
              g_free (dir);
              g_free (dirpath);
@@ -1502,7 +1502,7 @@ gnc_file_do_save_as (const char* filename)
     }
 
     /* If the new "file" is a database, attempt to store the password
-     * in a keyring. GnuCash itself will not save it.
+     * in a keyring. systecash itself will not save it.
      */
     if ( !gnc_uri_is_file_protocol (protocol))
         gnc_keyring_set_password ( protocol, hostname, port,

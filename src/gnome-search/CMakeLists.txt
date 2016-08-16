@@ -49,12 +49,12 @@ TARGET_COMPILE_DEFINITIONS(gncmod-gnome-search PRIVATE -DG_LOG_DOMAIN=\"gnc.gui.
 TARGET_INCLUDE_DIRECTORIES(gncmod-gnome-search PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 INSTALL(TARGETS gncmod-gnome-search
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 
-INSTALL(FILES ${gnome_search_HEADERS} DESTINATION include/gnucash)
+INSTALL(FILES ${gnome_search_HEADERS} DESTINATION include/systecash)
 
 SET(gnome_search_GLADE dialog-search.glade)
 
-INSTALL(FILES ${gnome_search_GLADE} DESTINATION share/gnucash/gtkbuilder)
+INSTALL(FILES ${gnome_search_GLADE} DESTINATION share/systecash/gtkbuilder)

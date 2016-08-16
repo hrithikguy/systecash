@@ -12,8 +12,8 @@ TARGET_COMPILE_DEFINITIONS(gncmod-standard-reports PRIVATE -DG_LOG_DOMAIN=\"gnc.
 TARGET_INCLUDE_DIRECTORIES(gncmod-standard-reports PRIVATE ${GUILE_INCLUDE_DIRS})
 
 INSTALL(TARGETS gncmod-standard-reports
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 
 # No headers to install
@@ -58,7 +58,7 @@ SET(GUILE_DEPENDS      gncmod-html scm-app-utils scm-gnome-utils scm-report-syst
 
 GNC_ADD_SCHEME_TARGETS(scm-standard-reports
   "${standard_reports_SCHEME}"
-  "gnucash/report"
+  "systecash/report"
   "${GUILE_MODULES}"
   "${GUILE_LOAD_DIRS}"
   "${GUILE_LIBRARY_DIRS}"
@@ -68,7 +68,7 @@ GNC_ADD_SCHEME_TARGETS(scm-standard-reports
 
 GNC_ADD_SCHEME_TARGETS(scm-standard-reports-2
   "${standard_reports_SCHEME_2}"
-  "gnucash/report/standard-reports"
+  "systecash/report/standard-reports"
   "${GUILE_MODULES}"
   "${GUILE_LOAD_DIRS}"
   "${GUILE_LIBRARY_DIRS}"
@@ -78,7 +78,7 @@ GNC_ADD_SCHEME_TARGETS(scm-standard-reports-2
 
 # FIXME: This is a hack since core-utils assumes an autotools build environment.
 
-SET(STD_RPT_DIR ${CMAKE_CURRENT_BINARY_DIR}/gnucash/report)
+SET(STD_RPT_DIR ${CMAKE_CURRENT_BINARY_DIR}/systecash/report)
 FILE(MAKE_DIRECTORY ${STD_RPT_DIR})
 FILE(COPY standard-reports.scm DESTINATION ${STD_RPT_DIR})
 

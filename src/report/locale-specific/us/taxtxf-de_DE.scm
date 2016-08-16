@@ -3,7 +3,7 @@
 ;; This file was copied from the file txf.scm by  Richard -Gilligan- Uschold
 ;;
 ;; In part English text with German text replaced and completed
-;; for GnuCash Vers. 2.4.0 in Dezember 2010 by FJSW - Franz Stoll
+;; for systecash Vers. 2.4.0 in Dezember 2010 by FJSW - Franz Stoll
 ;;
 ;; Originally, these were meant to print Tax related accounts and
 ;; exports TXF files for import to TaxCut, TurboTax, etc.  for the US
@@ -66,16 +66,16 @@
 
 ;; depends must be outside module scope -- and should eventually go away.
 
-(define-module (gnucash report taxtxf-de_DE))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
+(define-module (systecash report taxtxf-de_DE))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
 (use-modules (srfi srfi-1))
-(use-modules (gnucash printf))
-(use-modules (gnucash core-utils)) ; for gnc:version
-(use-modules (gnucash gettext))
+(use-modules (systecash printf))
+(use-modules (systecash core-utils)) ; for gnc:version
+(use-modules (systecash gettext))
 
-(use-modules (gnucash gnc-module))
-(gnc:module-load "gnucash/tax/de_DE" 0)
-(gnc:module-load "gnucash/report/report-system" 0)
+(use-modules (systecash gnc-module))
+(gnc:module-load "systecash/tax/de_DE" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
 
 (define reportname (N_ "Tax Report / TXF Export"))
@@ -802,7 +802,7 @@
 				    "  <Ordnungsnummer>"
 				    tax-nr
 				    "</Ordnungsnummer>" crlf
-                                    ;;"<software>GnuCash</software>" crlf
+                                    ;;"<software>systecash</software>" crlf
 				    ;;"<version>" gnc:version "</version>" crlf
                                     ;; today-date crlf
 				    "  <AnmeldeJahr>" to-year "</AnmeldeJahr>" crlf

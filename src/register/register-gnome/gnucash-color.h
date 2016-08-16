@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnucash-color.h -- color handling for table cells                *
+ * systecash-color.h -- color handling for table cells                *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
  * modify it under the terms of the GNU General Public License as   *
@@ -29,16 +29,16 @@
  * @addtogroup Gnome
  * @{
  */
-/** @file gnucash-color.h
+/** @file systecash-color.h
  * @brief Wrap GdkColor for use in Register Gnome classes.
  */
-void      gnucash_color_init        (void);
+void      systecash_color_init        (void);
 
 /** Return the pixel value for the given red, green and blue */
-gulong    gnucash_color_alloc       (gushort red, gushort green, gushort blue);
-void      gnucash_color_alloc_name  (const char *name, GdkColor *color);
-void      gnucash_color_alloc_gdk   (GdkColor *color);
-GdkColor *gnucash_color_argb_to_gdk (guint32 argb);
+gulong    systecash_color_alloc       (gushort red, gushort green, gushort blue);
+void      systecash_color_alloc_name  (const char *name, GdkColor *color);
+void      systecash_color_alloc_gdk   (GdkColor *color);
+GdkColor *systecash_color_argb_to_gdk (guint32 argb);
 
 extern GdkColor gn_white, gn_light_gray, gn_dark_gray;
 extern GdkColor gn_black, gn_blue, gn_red, gn_yellow;

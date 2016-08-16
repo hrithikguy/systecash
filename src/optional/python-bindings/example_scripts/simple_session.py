@@ -3,8 +3,8 @@
 #   @brief Example Script simple session
 #   @ingroup python_bindings_examples
 
-from gnucash import \
-     Session, GnuCashBackendException, \
+from systecash import \
+     Session, systecashBackendException, \
      ERR_BACKEND_LOCKED, ERR_FILEIO_FILE_NOT_FOUND
 
 FILE_1 = "/tmp/not_there.xac"
@@ -14,7 +14,7 @@ FILE_2 = "/tmp/example_file.xac"
 session = None
 try:
     session = Session(FILE_1)
-except GnuCashBackendException, backend_exception:
+except systecashBackendException, backend_exception:
     assert( ERR_FILEIO_FILE_NOT_FOUND in backend_exception.errors)
 
 
@@ -28,7 +28,7 @@ session.destroy()
 session = Session(FILE_2)
 try:
     session_2 = Session(FILE_2)
-except GnuCashBackendException, backend_exception:
+except systecashBackendException, backend_exception:
     assert( ERR_BACKEND_LOCKED in backend_exception.errors )
 session.end()
 session.destroy()

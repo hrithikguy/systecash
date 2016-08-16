@@ -1,7 +1,7 @@
 \input texinfo   @c -*-texinfo-*-
 @c %**start of header
-@setfilename gnucash-design.info
-@settitle GnuCash Design Document
+@setfilename systecash-design.info
+@settitle systecash Design Document
 @c %**end of header
 
 @comment 'version.texi' is a magic filename that, when included,
@@ -14,19 +14,19 @@
 @dircategory Programming
 
 @direntry
-* gnucash: (gnucash-design).       Design of the GnuCash program
+* systecash: (systecash-design).       Design of the systecash program
 @end direntry
 
 @end format
 @end ifinfo
 
 @ifinfo
-This file documents the design of the GnuCash program.
+This file documents the design of the systecash program.
 
 Copyright 2000 Gnumatic Incorporated
 
 This is Edition @value{EDITION}, last updated @value{UPDATED},
-of the @cite{GnuCash Design Document}, version @value{VERSION}.
+of the @cite{systecash Design Document}, version @value{VERSION}.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.1
@@ -47,7 +47,7 @@ paragraph not being relevant to the printed manual).
 @end ifinfo
 
 @titlepage
-@title GnuCash Design Document
+@title systecash Design Document
 @subtitle Edition @value{EDITION} for Version @value{VERSION}
 @author Rob Browning
 @author Bill Gribble
@@ -68,9 +68,9 @@ Free Documentation License".
 
 @ifnottex
 @node Top, GNU Free Documentation License, (dir), (dir)
-@top GnuCash Design Document
+@top systecash Design Document
 This is Edition @value{EDITION}, last updated @value{UPDATED},
-of the @cite{GnuCash Design Document}, version @value{VERSION}.
+of the @cite{systecash Design Document}, version @value{VERSION}.
 @end ifnottex
 
 @menu
@@ -114,7 +114,7 @@ Globally Unique Identifiers
 * When to use GUIDs::           
 * GUID Types::                  
 * How to use GUIDs::            
-* GUIDs and GnuCash Entities::  
+* GUIDs and systecash Entities::  
 * The GUID Generator::          
 
 Numeric Library

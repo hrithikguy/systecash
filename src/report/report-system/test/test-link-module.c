@@ -27,7 +27,7 @@ guile_main(void *closure, int argc, char ** argv)
 {
     GNCModule mod;
     gnc_module_system_init();
-    mod = gnc_module_load("gnucash/report/report-system", 0);
+    mod = gnc_module_load("systecash/report/report-system", 0);
 
     exit(mod == NULL);
 }

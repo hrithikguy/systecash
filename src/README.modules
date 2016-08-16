@@ -1,7 +1,7 @@
 -*-text-*-
 
-'Modules' in Gnucash are relatively self-contained segments of code that
-can be dynamically loaded at runtime.  Eventually we want the whole gnucash
+'Modules' in systecash are relatively self-contained segments of code that
+can be dynamically loaded at runtime.  Eventually we want the whole systecash
 source tree to be a set of modules and the app itself to be a short Scheme
 program that loads them all. 
 
@@ -34,26 +34,26 @@ register/register-core      Toolkit independent register code, formerly in
 register/register-gnome     Gnome-specific register code, formerly in 
                             src/register/gnome
 
-import-export/binary-import utils for importing old GnuCash binary files
+import-export/binary-import utils for importing old systecash binary files
 
 import-export/qif-import    the old qif importer with Gnome druid 
 import-export/qif-io-core   new qif import/export module.  unfinished.
 
 report/report-system        the report infrastructure and HTML handling 
-report/standard-reports     most of the reports that are in gnucash
+report/standard-reports     most of the reports that are in systecash
 report/utility-reports      the multicolumn view, the iframe report, etc. 
 report/locale-specific-reports  reports that should only be loaded in 
                                 certain locales. subdir per locale. 
 report/stylesheets          predefined style sheet templates 
 report/report-gnome         Gnome gui for displaying reports.
 
-app-utils                   utils for the gnucash app framework (component 
+app-utils                   utils for the systecash app framework (component 
                             mgr, cmd line processing, gettext stuff, etc)
 
 app-file                    application-level file handling
 
 gnome-utils                 Extensions and utilities for using Gnome/Gtk
-                            with GnuCash, including new widgets.
+                            with systecash, including new widgets.
 
 network-utils               Utils for network communication.
 

@@ -1,6 +1,6 @@
 /********************************************************************\
  * dialog-utils.h -- utility functions for creating dialogs         *
- *                   for GnuCash                                    *
+ *                   for systecash                                    *
  * Copyright (C) 1999-2000 Linas Vepstas                            *
  * Copyright (C) 2005 David Hampton <hampton@employees.org>         *
  *                                                                  *

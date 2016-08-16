@@ -1110,7 +1110,7 @@ static void currency_format_selected (GtkComboBoxText* currency_selector, CsvImp
 /* The following is code copied from Gnumeric 1.7.8 licensed under the
  * GNU General Public License version 2 and/or version 3. It is from the file
  * gnumeric/src/dialogs/dialog-stf-fixed-page.c, and it has been
- * modified slightly to work within GnuCash. */
+ * modified slightly to work within systecash. */
 
 /*
  * Copyright 2001 Almer S. Tigelaar <almer@gnome.org>

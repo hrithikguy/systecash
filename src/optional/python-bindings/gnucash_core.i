@@ -1,5 +1,5 @@
 /*
- * gnucash_core.i -- SWIG interface file for the core parts of GnuCash
+ * systecash_core.i -- SWIG interface file for the core parts of systecash
  *
  * Copyright (C) 2008 ParIT Worker Co-operative <paritinfo@parit.ca>
  *
@@ -25,24 +25,24 @@
  */
 
 /** @file
-    @brief SWIG interface file for the core parts of GnuCash
+    @brief SWIG interface file for the core parts of systecash
 
-        This file is processed by SWIG and the resulting files are gnucash_core.c and gnucash_core_c.py.
-        Have a look at the includes to see which parts of the GnuCash source SWIG takes as input.
+        This file is processed by SWIG and the resulting files are systecash_core.c and systecash_core_c.py.
+        Have a look at the includes to see which parts of the systecash source SWIG takes as input.
     @author Mark Jenkins, ParIT Worker Co-operative <mark@parit.ca>
     @author Jeff Green,   ParIT Worker Co-operative <jeff@parit.ca>
     @ingroup python_bindings 
 
-    @file gnucash_core.c
+    @file systecash_core.c
     @brief SWIG output file.
     @ingroup python_bindings
-    @file gnucash_core_c.py
+    @file systecash_core_c.py
     @brief SWIG output file.
     @ingroup python_bindings
 */
 
 %feature("autodoc", "1");
-%module(package="gnucash") gnucash_core_c
+%module(package="systecash") systecash_core_c
 
 %{
 #include "config.h"

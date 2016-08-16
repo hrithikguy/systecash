@@ -40,7 +40,7 @@ endif
 
 EXTRA_DIST = \
   baz.i \
-  gnucash/baz.scm
+  systecash/baz.scm
 
 BUILT_SOURCES = swig-baz.c
 MAINTAINERCLEANFILES = swig-baz.c

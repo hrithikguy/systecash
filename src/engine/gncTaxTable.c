@@ -1,5 +1,5 @@
 /********************************************************************\
- * gncTaxTable.c -- the Gnucash Tax Table interface                 *
+ * gncTaxTable.c -- the systecash Tax Table interface                 *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
  * modify it under the terms of the GNU General Public License as   *
@@ -654,7 +654,7 @@ static void table_free (QofInstance *inst)
 
 void gncTaxTableCommitEdit (GncTaxTable *table)
 {
-    /* GnuCash 2.6.3 and earlier didn't handle taxtable kvp's... */
+    /* systecash 2.6.3 and earlier didn't handle taxtable kvp's... */
      if (qof_instance_has_kvp (QOF_INSTANCE (table)))
           gnc_features_set_used (qof_instance_get_book (QOF_INSTANCE (table)),
                                  GNC_FEATURE_KVP_EXTRA_DATA);

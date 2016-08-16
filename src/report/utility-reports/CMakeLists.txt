@@ -14,7 +14,7 @@ TARGET_INCLUDE_DIRECTORIES(gncmod-utility-reports
     PRIVATE ${GUILE_INCLUDE_DIRS}
 )
 
-SET(LIB_DIR lib/gnucash)
+SET(LIB_DIR lib/systecash)
 IF (WIN32)
   SET(LIB_DIR bin)
 ENDIF(WIN32)
@@ -31,10 +31,10 @@ SET(utility_reports_SCHEME
   hello-world.scm
   utility-reports.scm
   view-column.scm
-  welcome-to-gnucash.scm
+  welcome-to-systecash.scm
 )
 
-SET(GUILE_OUTPUT_DIR     gnucash/report)
+SET(GUILE_OUTPUT_DIR     systecash/report)
 SET(GUILE_MODULES        src/app-utils src/engine src/gnome-utils src/html src/report/report-system)
 SET(GUILE_LOAD_DIRS      src/app-utils src/core-utils src/engine src/gnc-module
                             src/gnome-utils src/report/report-system src/scm)

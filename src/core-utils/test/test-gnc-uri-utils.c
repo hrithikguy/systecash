@@ -2,7 +2,7 @@
  *            test-gnc-uri-utils.c
  *
  *  Thu Sep 29 22:48:57 2005
- *  Copyright  2005  GnuCash team
+ *  Copyright  2005  systecash team
  ****************************************************************************/
 /*
  *  This program is free software; you can redistribute it and/or modify
@@ -52,142 +52,142 @@ test_strings strs[] =
 #ifndef G_OS_WIN32
     /* basic file tests in posix like environment */
     {
-        "/test/path/file.gnucash", FALSE,
-        "file", NULL, NULL, NULL, "/test/path/file.gnucash", 0,
-        "file:///test/path/file.gnucash",
-        "file:///test/path/file.gnucash", TRUE
+        "/test/path/file.systecash", FALSE,
+        "file", NULL, NULL, NULL, "/test/path/file.systecash", 0,
+        "file:///test/path/file.systecash",
+        "file:///test/path/file.systecash", TRUE
     },
     {
-        "file:///test/path/file.gnucash", FALSE,
-        "file", NULL, NULL, NULL, "/test/path/file.gnucash", 0,
-        "file:///test/path/file.gnucash",
-        "file:///test/path/file.gnucash", TRUE
+        "file:///test/path/file.systecash", FALSE,
+        "file", NULL, NULL, NULL, "/test/path/file.systecash", 0,
+        "file:///test/path/file.systecash",
+        "file:///test/path/file.systecash", TRUE
     },
     {
-        "xml:///test/path/file.gnucash", FALSE,
-        "xml", NULL, NULL, NULL, "/test/path/file.gnucash", 0,
-        "xml:///test/path/file.gnucash",
-        "xml:///test/path/file.gnucash", TRUE
+        "xml:///test/path/file.systecash", FALSE,
+        "xml", NULL, NULL, NULL, "/test/path/file.systecash", 0,
+        "xml:///test/path/file.systecash",
+        "xml:///test/path/file.systecash", TRUE
     },
     {
-        "sqlite3:///test/path/file.gnucash", FALSE,
-        "sqlite3", NULL, NULL, NULL, "/test/path/file.gnucash", 0,
-        "sqlite3:///test/path/file.gnucash",
-        "sqlite3:///test/path/file.gnucash", TRUE
+        "sqlite3:///test/path/file.systecash", FALSE,
+        "sqlite3", NULL, NULL, NULL, "/test/path/file.systecash", 0,
+        "sqlite3:///test/path/file.systecash",
+        "sqlite3:///test/path/file.systecash", TRUE
     },
 #else
     /* basic file tests in windows environment */
     {
-        "c:\\test\\path\\file.gnucash", FALSE,
-        "file", NULL, NULL, NULL, "c:\\test\\path\\file.gnucash", 0,
-        "file://c:\\test\\path\\file.gnucash",
-        "file://c:\\test\\path\\file.gnucash", TRUE
+        "c:\\test\\path\\file.systecash", FALSE,
+        "file", NULL, NULL, NULL, "c:\\test\\path\\file.systecash", 0,
+        "file://c:\\test\\path\\file.systecash",
+        "file://c:\\test\\path\\file.systecash", TRUE
     },
     {
-        "file://c:\\test\\path\\file.gnucash", FALSE,
-        "file", NULL, NULL, NULL, "c:\\test\\path\\file.gnucash", 0,
-        "file://c:\\test\\path\\file.gnucash",
-        "file://c:\\test\\path\\file.gnucash", TRUE
+        "file://c:\\test\\path\\file.systecash", FALSE,
+        "file", NULL, NULL, NULL, "c:\\test\\path\\file.systecash", 0,
+        "file://c:\\test\\path\\file.systecash",
+        "file://c:\\test\\path\\file.systecash", TRUE
     },
     {
-        "xml://c:\\test\\path\\file.gnucash", FALSE,
-        "xml", NULL, NULL, NULL, "c:\\test\\path\\file.gnucash", 0,
-        "xml://c:\\test\\path\\file.gnucash",
-        "xml://c:\\test\\path\\file.gnucash", TRUE
+        "xml://c:\\test\\path\\file.systecash", FALSE,
+        "xml", NULL, NULL, NULL, "c:\\test\\path\\file.systecash", 0,
+        "xml://c:\\test\\path\\file.systecash",
+        "xml://c:\\test\\path\\file.systecash", TRUE
     },
     {
-        "sqlite3://c:\\test\\path\\file.gnucash", FALSE,
-        "sqlite3", NULL, NULL, NULL, "c:\\test\\path\\file.gnucash", 0,
-        "sqlite3://c:\\test\\path\\file.gnucash",
-        "sqlite3://c:\\test\\path\\file.gnucash", TRUE
+        "sqlite3://c:\\test\\path\\file.systecash", FALSE,
+        "sqlite3", NULL, NULL, NULL, "c:\\test\\path\\file.systecash", 0,
+        "sqlite3://c:\\test\\path\\file.systecash",
+        "sqlite3://c:\\test\\path\\file.systecash", TRUE
     },
 #endif
     /* basic database tests */
     {
-        "mysql://www.gnucash.org/gnucash", FALSE,
-        "mysql", "www.gnucash.org", NULL, NULL, "gnucash", 0,
-        "mysql://www.gnucash.org/gnucash",
-        "mysql://www.gnucash.org/gnucash", FALSE
+        "mysql://www.systecash.org/systecash", FALSE,
+        "mysql", "www.systecash.org", NULL, NULL, "systecash", 0,
+        "mysql://www.systecash.org/systecash",
+        "mysql://www.systecash.org/systecash", FALSE
     },
     {
-        "mysql://www.gnucash.org/gnucash", TRUE,
-        "mysql", "www.gnucash.org", NULL, NULL, "gnucash", 0,
-        "mysql://www.gnucash.org/gnucash",
-        "mysql://www.gnucash.org/gnucash", FALSE
+        "mysql://www.systecash.org/systecash", TRUE,
+        "mysql", "www.systecash.org", NULL, NULL, "systecash", 0,
+        "mysql://www.systecash.org/systecash",
+        "mysql://www.systecash.org/systecash", FALSE
     },
     {
-        "mysql://dbuser@www.gnucash.org/gnucash", FALSE,
-        "mysql", "www.gnucash.org", "dbuser", NULL, "gnucash", 0,
-        "mysql://dbuser@www.gnucash.org/gnucash",
-        "mysql://dbuser@www.gnucash.org/gnucash", FALSE
+        "mysql://dbuser@www.systecash.org/systecash", FALSE,
+        "mysql", "www.systecash.org", "dbuser", NULL, "systecash", 0,
+        "mysql://dbuser@www.systecash.org/systecash",
+        "mysql://dbuser@www.systecash.org/systecash", FALSE
     },
     {
-        "mysql://dbuser@www.gnucash.org/gnucash", TRUE,
-        "mysql", "www.gnucash.org", "dbuser", NULL, "gnucash", 0,
-        "mysql://dbuser@www.gnucash.org/gnucash",
-        "mysql://dbuser@www.gnucash.org/gnucash", FALSE
+        "mysql://dbuser@www.systecash.org/systecash", TRUE,
+        "mysql", "www.systecash.org", "dbuser", NULL, "systecash", 0,
+        "mysql://dbuser@www.systecash.org/systecash",
+        "mysql://dbuser@www.systecash.org/systecash", FALSE
     },
     {
-        "mysql://dbuser:dbpass@www.gnucash.org/gnucash", FALSE,
-        "mysql", "www.gnucash.org", "dbuser", "dbpass", "gnucash", 0,
-        "mysql://dbuser:dbpass@www.gnucash.org/gnucash",
-        "mysql://dbuser@www.gnucash.org/gnucash", FALSE
+        "mysql://dbuser:dbpass@www.systecash.org/systecash", FALSE,
+        "mysql", "www.systecash.org", "dbuser", "dbpass", "systecash", 0,
+        "mysql://dbuser:dbpass@www.systecash.org/systecash",
+        "mysql://dbuser@www.systecash.org/systecash", FALSE
     },
     {
-        "mysql://dbuser:dbpass@www.gnucash.org/gnucash", TRUE,
-        "mysql", "www.gnucash.org", "dbuser", "dbpass", "gnucash", 0,
-        "mysql://dbuser:dbpass@www.gnucash.org/gnucash",
-        "mysql://dbuser:dbpass@www.gnucash.org/gnucash", FALSE
+        "mysql://dbuser:dbpass@www.systecash.org/systecash", TRUE,
+        "mysql", "www.systecash.org", "dbuser", "dbpass", "systecash", 0,
+        "mysql://dbuser:dbpass@www.systecash.org/systecash",
+        "mysql://dbuser:dbpass@www.systecash.org/systecash", FALSE
     },
     {
-        "postgres://www.gnucash.org/gnucash", FALSE,
-        "postgres", "www.gnucash.org", NULL, NULL, "gnucash", 0,
-        "postgres://www.gnucash.org/gnucash",
-        "postgres://www.gnucash.org/gnucash", FALSE
+        "postgres://www.systecash.org/systecash", FALSE,
+        "postgres", "www.systecash.org", NULL, NULL, "systecash", 0,
+        "postgres://www.systecash.org/systecash",
+        "postgres://www.systecash.org/systecash", FALSE
     },
     {
-        "postgres://www.gnucash.org/gnucash", TRUE,
-        "postgres", "www.gnucash.org", NULL, NULL, "gnucash", 0,
-        "postgres://www.gnucash.org/gnucash",
-        "postgres://www.gnucash.org/gnucash", FALSE
+        "postgres://www.systecash.org/systecash", TRUE,
+        "postgres", "www.systecash.org", NULL, NULL, "systecash", 0,
+        "postgres://www.systecash.org/systecash",
+        "postgres://www.systecash.org/systecash", FALSE
     },
     {
-        "postgres://dbuser@www.gnucash.org/gnucash", FALSE,
-        "postgres", "www.gnucash.org", "dbuser", NULL, "gnucash", 0,
-        "postgres://dbuser@www.gnucash.org/gnucash",
-        "postgres://dbuser@www.gnucash.org/gnucash", FALSE
+        "postgres://dbuser@www.systecash.org/systecash", FALSE,
+        "postgres", "www.systecash.org", "dbuser", NULL, "systecash", 0,
+        "postgres://dbuser@www.systecash.org/systecash",
+        "postgres://dbuser@www.systecash.org/systecash", FALSE
     },
     {
-        "postgres://dbuser@www.gnucash.org/gnucash", TRUE,
-        "postgres", "www.gnucash.org", "dbuser", NULL, "gnucash", 0,
-        "postgres://dbuser@www.gnucash.org/gnucash",
-        "postgres://dbuser@www.gnucash.org/gnucash", FALSE
+        "postgres://dbuser@www.systecash.org/systecash", TRUE,
+        "postgres", "www.systecash.org", "dbuser", NULL, "systecash", 0,
+        "postgres://dbuser@www.systecash.org/systecash",
+        "postgres://dbuser@www.systecash.org/systecash", FALSE
     },
     {
-        "postgres://dbuser:dbpass@www.gnucash.org/gnucash", FALSE,
-        "postgres", "www.gnucash.org", "dbuser", "dbpass", "gnucash", 0,
-        "postgres://dbuser:dbpass@www.gnucash.org/gnucash",
-        "postgres://dbuser@www.gnucash.org/gnucash", FALSE
+        "postgres://dbuser:dbpass@www.systecash.org/systecash", FALSE,
+        "postgres", "www.systecash.org", "dbuser", "dbpass", "systecash", 0,
+        "postgres://dbuser:dbpass@www.systecash.org/systecash",
+        "postgres://dbuser@www.systecash.org/systecash", FALSE
     },
     {
-        "postgres://dbuser:dbpass@www.gnucash.org/gnucash", TRUE,
-        "postgres", "www.gnucash.org", "dbuser", "dbpass", "gnucash", 0,
-        "postgres://dbuser:dbpass@www.gnucash.org/gnucash",
-        "postgres://dbuser:dbpass@www.gnucash.org/gnucash", FALSE
+        "postgres://dbuser:dbpass@www.systecash.org/systecash", TRUE,
+        "postgres", "www.systecash.org", "dbuser", "dbpass", "systecash", 0,
+        "postgres://dbuser:dbpass@www.systecash.org/systecash",
+        "postgres://dbuser:dbpass@www.systecash.org/systecash", FALSE
     },
     /* password with lots of ugly characters in it (potentially conflicting with uri syntax) */
     {
-        "postgres://dbuser:*#bad35:@xx@www.gnucash.org/gnucash", TRUE,
-        "postgres", "www.gnucash.org", "dbuser", "*#bad35:@xx", "gnucash", 0,
-        "postgres://dbuser:*#bad35:@xx@www.gnucash.org/gnucash",
-        "postgres://dbuser:*#bad35:@xx@www.gnucash.org/gnucash", FALSE
+        "postgres://dbuser:*#bad35:@xx@www.systecash.org/systecash", TRUE,
+        "postgres", "www.systecash.org", "dbuser", "*#bad35:@xx", "systecash", 0,
+        "postgres://dbuser:*#bad35:@xx@www.systecash.org/systecash",
+        "postgres://dbuser:*#bad35:@xx@www.systecash.org/systecash", FALSE
     },
     /* uri with custom port number, and hide password in normalized uri */
     {
-        "postgres://dbuser:dbpass@www.gnucash.org:744/gnucash", FALSE,
-        "postgres", "www.gnucash.org", "dbuser", "dbpass", "gnucash", 744,
-        "postgres://dbuser:dbpass@www.gnucash.org:744/gnucash",
-        "postgres://dbuser@www.gnucash.org:744/gnucash", FALSE
+        "postgres://dbuser:dbpass@www.systecash.org:744/systecash", FALSE,
+        "postgres", "www.systecash.org", "dbuser", "dbpass", "systecash", 744,
+        "postgres://dbuser:dbpass@www.systecash.org:744/systecash",
+        "postgres://dbuser@www.systecash.org:744/systecash", FALSE
     },
     /* TODO Figure out how to write tests that actually verify the relative
      * pathname resolution. The above tests only test absolute pathnames */

@@ -1,6 +1,6 @@
 /********************************************************************\
  * gnc-gsettings.c -- utility functions for storing/retrieving      *
- *              data in the GSettings database for GnuCash          *
+ *              data in the GSettings database for systecash          *
  * Copyright (C) 2013 Geert Janssens <geert@kobaltwit.be>           *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
@@ -666,7 +666,7 @@ xsltprocExternalEntityLoader(const char *URL, const char *ID,
 void gnc_gsettings_migrate_from_gconf (void)
 {
     gchar *pkgdatadir, *stylesheet, *input, *output, *command;
-    gchar *gconf_root, *gconf_apps, *gconf_gnucash;
+    gchar *gconf_root, *gconf_apps, *gconf_systecash;
     gchar *base_dir, *iter;
     SCM migr_script, result;
     xsltStylesheetPtr stylesheetptr = NULL;
@@ -693,19 +693,19 @@ void gnc_gsettings_migrate_from_gconf (void)
     /* Only attempt to migrate if there is something to migrate */
     gconf_root    = g_build_filename(base_dir, ".gconf", NULL);
     gconf_apps    = g_build_filename(gconf_root, "apps", NULL);
-    gconf_gnucash = g_build_filename(gconf_apps, "gnucash", NULL);
+    gconf_systecash = g_build_filename(gconf_apps, "systecash", NULL);
     migration_ok = (g_file_test (gconf_root, G_FILE_TEST_IS_DIR) &&
                     g_file_test (gconf_apps, G_FILE_TEST_IS_DIR) &&
-                    g_file_test (gconf_gnucash, G_FILE_TEST_IS_DIR));
+                    g_file_test (gconf_systecash, G_FILE_TEST_IS_DIR));
     g_free (gconf_root);
     g_free (gconf_apps);
-    g_free (gconf_gnucash);
+    g_free (gconf_systecash);
     if (!migration_ok)
     {
         g_free (base_dir);
         gnc_gsettings_set_bool (GNC_PREFS_GROUP_GENERAL, GNC_PREF_MIGRATE_PREFS_DONE, TRUE);
-        PINFO ("No pre-existing GConf gnucash section found.\n"
-               "Most likely this system never ran GnuCash before.\n"
+        PINFO ("No pre-existing GConf systecash section found.\n"
+               "Most likely this system never ran systecash before.\n"
                "Assume migration is not needed.");
         LEAVE ();
         return;

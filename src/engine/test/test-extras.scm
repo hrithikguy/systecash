@@ -17,13 +17,13 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash engine test test-extras))
+(define-module (systecash engine test test-extras))
 
-(use-modules (gnucash gnc-module))
+(use-modules (systecash gnc-module))
 
-(use-modules (gnucash printf))
-(use-modules (gnucash app-utils))
-(use-modules (gnucash engine))
+(use-modules (systecash printf))
+(use-modules (systecash app-utils))
+(use-modules (systecash engine))
 (use-modules (srfi srfi-1))
 (use-modules (sw_app_utils))
 (use-modules (sw_engine))
@@ -77,7 +77,7 @@
     result))
 
 ;;
-;; Gnucash specifics
+;; systecash specifics
 ;;
 
 ;; Really could do with generalising and making into a 'with' macro

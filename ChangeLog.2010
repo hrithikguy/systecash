@@ -6,7 +6,7 @@
 	  src/import-export/import-main-matcher.c,
 	  src/import-export/import-settings.c,
 	  src/import-export/import-settings.h,
-	  src/import-export/schemas/apps_gnucash_import_generic_matcher.schemas.in:
+	  src/import-export/schemas/apps_systecash_import_generic_matcher.schemas.in:
 	  Bug #373415: Replace existing transaction fields by imported
 	  transaction marked as reconcile Patch by Manfred Usselmann: This
 	  patch adds an additional update action to the import matcher as
@@ -42,7 +42,7 @@
 	* [r20015] src/import-export/qif-import/druid-qif-import.c,
 	  src/import-export/qif-import/qif-to-gnc.scm,
 	  src/import-export/qif-import/qif.glade,
-	  src/import-export/qif-import/schemas/apps_gnucash_import_qif.schemas.in:
+	  src/import-export/qif-import/schemas/apps_systecash_import_qif.schemas.in:
 	  Bug #95635: QIF import: Mark matched transactions as cleared
 	  Patch by Tristan Faujour: Please describe the problem: My bank
 	  allows me to download bank statement files in the QIF format.
@@ -60,7 +60,7 @@
 	  all due prudence.
 	* [r20014] doc/tip_of_the_day.list.in: Bug #636988: Tip about "New
 	  default date" by Tarlika Elisabeth Schmitz and Derek Atkins
-	  Contributed at gnucash-user@gnucash.org 2010-09-16
+	  Contributed at systecash-user@systecash.org 2010-09-16
 
 2010-12-31 12:07  cstim
 
@@ -84,7 +84,7 @@
 	  src/engine/gncEntry.c, src/engine/gncJob.c,
 	  src/engine/gncVendor.c: When book is being closed, destroy
 	  objects to free their memory. Doesn't matter too much when
-	  closing gnucash, but when closing one book to open another, all
+	  closing systecash, but when closing one book to open another, all
 	  memory from the old book should be freed.
 
 2010-12-31 01:38  plongstaff
@@ -114,7 +114,7 @@
 
 2010-12-30 15:53  plongstaff
 
-	* [r20003] src/bin/gnucash-bin.c: Plug more memory leaks
+	* [r20003] src/bin/systecash-bin.c: Plug more memory leaks
 
 2010-12-30 15:51  plongstaff
 
@@ -194,7 +194,7 @@
 2010-12-29 13:54  micha
 
 	* [r19990] util/gnc-svnversion: Add facility to force
-	  BUILDING_FROM_SVN=no from outside the Gnucash build system
+	  BUILDING_FROM_SVN=no from outside the systecash build system
 	  Needed by packagers that maintain the packaging code in svn, svk
 	  or git too
 
@@ -265,9 +265,9 @@
 	  src/optional/python-bindings/example_scripts/test_imbalance_transaction.py,
 	  src/optional/python-bindings/function_class.py,
 	  src/optional/python-bindings/glib.i,
-	  src/optional/python-bindings/gnucash_business.py,
-	  src/optional/python-bindings/gnucash_core.i,
-	  src/optional/python-bindings/gnucash_core.py,
+	  src/optional/python-bindings/systecash_business.py,
+	  src/optional/python-bindings/systecash_core.i,
+	  src/optional/python-bindings/systecash_core.py,
 	  src/optional/python-bindings/timespec.i: Bug #637346: A second
 	  step towards doxygen python-bindings docs Patch by Christoph
 	  Holtermann
@@ -287,8 +287,8 @@
 
 2010-12-20 17:59  plongstaff
 
-	* [r19970] configure.ac, src/bin/gnucash-bin.c: Update
-	  configure.ac to 2.4.0 Update gnucash-bin.c to indicate stable
+	* [r19970] configure.ac, src/bin/systecash-bin.c: Update
+	  configure.ac to 2.4.0 Update systecash-bin.c to indicate stable
 	  version is 2.4.0, next stable version 2.6 Here we go...
 
 2010-12-20 17:57  plongstaff
@@ -365,9 +365,9 @@
 	  src/optional/python-bindings/example_scripts/test_imbalance_transaction.py,
 	  src/optional/python-bindings/function_class.py,
 	  src/optional/python-bindings/glib.i,
-	  src/optional/python-bindings/gnucash_business.py,
-	  src/optional/python-bindings/gnucash_core.i,
-	  src/optional/python-bindings/gnucash_core.py,
+	  src/optional/python-bindings/systecash_business.py,
+	  src/optional/python-bindings/systecash_core.i,
+	  src/optional/python-bindings/systecash_core.py,
 	  src/optional/python-bindings/timespec.i: Bug #637346: Adding
 	  python-bindings to doxygen documentation Patch by Christoph
 	  Holtermann.
@@ -378,7 +378,7 @@
 	  src/optional/python-bindings/example_scripts/priceDB_test.py,
 	  src/optional/python-bindings/example_scripts/price_database_example.py,
 	  src/optional/python-bindings/function_class.py,
-	  src/optional/python-bindings/gnucash_core.py: Support for
+	  src/optional/python-bindings/systecash_core.py: Support for
 	  GncCommodityNamespace, better support for GncCommodity, and
 	  example enhancements. Patch supplied my Mark Jenkins.
 
@@ -393,7 +393,7 @@
 
 2010-12-16 22:01  cstim
 
-	* [r19952] src/bin/Makefile.am, src/bin/gnucash-bin.c,
+	* [r19952] src/bin/Makefile.am, src/bin/systecash-bin.c,
 	  src/core-utils/Makefile.am, src/core-utils/gnc-main.c,
 	  src/gnome-utils/Makefile.am, src/gnome-utils/gnc-main-window.c,
 	  src/gnome-utils/gnc-splash.c: Follow-up to r19928: Include
@@ -435,7 +435,7 @@
 	  src/optional/python-bindings/example_scripts/price_database_example.py:
 	  Move price_database_example.py to the correct place and remove
 	  incorrect path/file
-	* [r19942] src/optional/python-bindings/gnucash_core.py: Change
+	* [r19942] src/optional/python-bindings/systecash_core.py: Change
 	  indent to 4 sp
 
 2010-12-14 21:25  cstim
@@ -693,8 +693,8 @@
 	  src/libqof/qof/gnc-numeric.h: Remove variable names that
 	  conflict with Python keywords. Relevent when using SWIG autodoc
 	  feature for python bindings.
-	* [r19923] src/optional/python-bindings/gnucash_core.i: Add
-	  %feature("autodoc", "1"); to gnucash_core.i to pass C
+	* [r19923] src/optional/python-bindings/systecash_core.i: Add
+	  %feature("autodoc", "1"); to systecash_core.i to pass C
 	  documentation through to python interface.
 
 2010-12-10 12:53  mikee
@@ -714,7 +714,7 @@
 
 	* [r19920] src/backend/sql/gnc-backend-sql.c,
 	  src/core-utils/gnc-main.c, src/core-utils/gnc-main.h: Add
-	  Gnucash svn version to sql versions table.
+	  systecash svn version to sql versions table.
 
 2010-12-09 10:16  cstim
 
@@ -729,16 +729,16 @@
 2010-12-08 14:56  mikee
 
 	* [r19917] src/optional/python-bindings/Makefile.am,
-	  src/optional/python-bindings/gnucash_core.i: Re-enable -Werror
+	  src/optional/python-bindings/systecash_core.i: Re-enable -Werror
 	  in Makefile.am and remove %feature("autodoc", "1"); from
-	  gnucash_core.i
+	  systecash_core.i
 
 2010-12-08 11:52  mikee
 
 	* [r19916] src/optional/python-bindings/Makefile.am,
 	  src/optional/python-bindings/example_scripts/priceDB_test.py,
-	  src/optional/python-bindings/gnucash_core.i,
-	  src/optional/python-bindings/gnucash_core.py: Add commodity
+	  src/optional/python-bindings/systecash_core.i,
+	  src/optional/python-bindings/systecash_core.py: Add commodity
 	  price functions to bindings. See Bug 636457 for more details.
 	* [r19915] src/base-typemaps.i: Add PriceList to typemap for
 	  Python bindings
@@ -835,7 +835,7 @@
 2010-12-03 23:24  jralls
 
 	* [r19904] po/POTFILES.in, src/backend/dbi/gnc-backend-dbi.c,
-	  src/backend/sql/gnc-slots-sql.c, src/bin/gnucash-bin.c,
+	  src/backend/sql/gnc-slots-sql.c, src/bin/systecash-bin.c,
 	  src/gnome-utils/gnc-gnome-utils.c: Bug #635859: Strip all
 	  trailing '/'es from kvp_slot paths when loading. This changes
 	  round-tripping slightly (because the resulting slot key won't
@@ -861,7 +861,7 @@
 
 2010-12-01 17:07  gjanssens
 
-	* [r19901] src/backend/dbi/gnc-backend-dbi.c: Bug #635911 GnuCash
+	* [r19901] src/backend/dbi/gnc-backend-dbi.c: Bug #635911 systecash
 	  crashes out when trying to save-as MySQL Disclaimer: This fix
 	  attempt is purely based on the information given in the bug
 	  report and code reading. I never could reproduce this bug but
@@ -936,7 +936,7 @@
 2010-11-24 18:45  gjanssens
 
 	* [r19881] src/gnome-utils/dialog-options.c: Fix GtkSpinButton
-	  with page-size deprecated warning in gnucash.trace
+	  with page-size deprecated warning in systecash.trace
 
 2010-11-24 02:52  fell
 
@@ -989,7 +989,7 @@
 	  14 new strings which are already there but not yet being used.)
 	* [r19857] po/de.po: Merge German translation with latest pot
 	  template. This is merged using msgmerge --no-location de.po
-	  gnucash.pot -o de.new.po and we use "--no-location" to make the
+	  systecash.pot -o de.new.po and we use "--no-location" to make the
 	  updates actually readable. (Unfortunately this doesn't prevent
 	  the strings from changing ordering anyway. Oh well.)
 
@@ -1078,7 +1078,7 @@
 
 	* [r19828] src/gnome-utils/glade/preferences.glade,
 	  src/gnome-utils/gnc-gnome-utils.c,
-	  src/gnome/schemas/apps_gnucash_general.schemas.in: Bug #634906 -
+	  src/gnome/schemas/apps_systecash_general.schemas.in: Bug #634906 -
 	  Re-enable splash screen preference option
 
 2010-11-18 15:33  gjanssens
@@ -1091,7 +1091,7 @@
 2010-11-17 21:38  gjanssens
 
 	* [r19824] src/backend/dbi/gnc-backend-dbi.c: Bug #609581 -
-	  Gnucash 2.3.8 offers to create db and then fails to do so
+	  systecash 2.3.8 offers to create db and then fails to do so
 
 2010-11-17 02:14  jralls
 
@@ -1155,8 +1155,8 @@
 2010-11-15 19:10  jralls
 
 	* [r19812] src/optional/python-bindings/Makefile.am,
-	  src/optional/python-bindings/gnucash_core.i,
-	  src/optional/python-bindings/gnucash_core.py: Make arguments to
+	  src/optional/python-bindings/systecash_core.i,
+	  src/optional/python-bindings/systecash_core.py: Make arguments to
 	  Session.__init__() have the same order as to qof_session_begin()
 	  to reduce potential confusion.
 
@@ -1177,17 +1177,17 @@
 
 2010-11-14 13:30  cstim
 
-	* [r19808] src/optional/python-bindings/gnucash_core.py: Bug
+	* [r19808] src/optional/python-bindings/systecash_core.py: Bug
 	  #634812: Improve backend error reporting for Session begin Patch
 	  by Mike E: The current error feedback to a python scrpt/user
 	  looks something like: call to begin resulted in the following
-	  errors, (7,) This change in gnucash_core.py makes the feedback
+	  errors, (7,) This change in systecash_core.py makes the feedback
 	  similar to: call to begin resulted in the following errors,
 	  ERR_BACKEND_LOCKED This is less cryptic and aid debugging of
 	  user python scripts. My only issue though is whether this would
 	  break existing user scripts where checking of this error code is
 	  used for flow control. Although since the ERR_ codes are
-	  imported with gnucash_core_c it *should* have no effect.
+	  imported with systecash_core_c it *should* have no effect.
 
 2010-11-14 13:16  cstim
 
@@ -1233,8 +1233,8 @@
 
 2010-11-12 18:37  jralls
 
-	* [r19801] src/optional/python-bindings/gnucash_core.py: Add
-	  force_new parameter to GnuCashCoreClass.__init__, reflecting
+	* [r19801] src/optional/python-bindings/systecash_core.py: Add
+	  force_new parameter to systecashCoreClass.__init__, reflecting
 	  change to qof_session_begin() in r19798
 
 2010-11-11 06:12  jralls
@@ -1245,7 +1245,7 @@
 	  src/backend/dbi/test/test-dbi.c,
 	  src/backend/xml/gnc-backend-xml.c,
 	  src/backend/xml/test/test-load-xml2.c,
-	  src/backend/xml/test/test-save-in-lang.c, src/bin/gnucash-bin.c,
+	  src/backend/xml/test/test-save-in-lang.c, src/bin/systecash-bin.c,
 	  src/business/business-core/test/test-customer.c,
 	  src/business/business-core/test/test-employee.c,
 	  src/business/business-core/test/test-job.c,
@@ -1277,13 +1277,13 @@
 	  minor changes to gnc_file_do_save_as: gnc_add_history and
 	  gnc_hook_run are now called on new_session instead of
 	  old_session; this ensures that the new file/database is used at
-	  the next startup of gnucash. Second, the filename/url is
+	  the next startup of systecash. Second, the filename/url is
 	  filtered before displaying the "may_clobber" dialog box to
 	  prevent displaying plaintext database passwords.
 
 2010-11-10 19:49  cstim
 
-	* [r19795] src/optional/python-bindings/gnucash_core.py: Bug
+	* [r19795] src/optional/python-bindings/systecash_core.py: Bug
 	  #634165: Better dealing with a locked database in python Patch
 	  by Christoph Holtermann: For the second enhancement proposal i
 	  have attached a simple patch which adds the argument ignore_lock
@@ -1503,15 +1503,15 @@
 	* [r19733] src/business/business-gnome/dialog-invoice.c,
 	  src/business/business-gnome/dialog-order.c,
 	  src/business/business-gnome/glade/businessprefs.glade,
-	  src/business/business-gnome/schemas/apps_gnucash_dialog_business_common.schemas.in,
+	  src/business/business-gnome/schemas/apps_systecash_dialog_business_common.schemas.in,
 	  src/core-utils/gnc-gconf-utils.h,
 	  src/gnome-utils/glade/preferences.glade,
 	  src/gnome-utils/gnc-gnome-utils.c, src/gnome/dialog-sx-editor.c,
 	  src/gnome/gnc-plugin-page-register.c,
 	  src/gnome/gnc-plugin-page-register.h, src/gnome/gnc-split-reg.c,
-	  src/gnome/schemas/apps_gnucash_general.schemas.in,
-	  src/register/register-gnome/gnucash-sheet.c,
-	  src/register/register-gnome/gnucash-sheet.h: Preferences window
+	  src/gnome/schemas/apps_systecash_general.schemas.in,
+	  src/register/register-gnome/systecash-sheet.c,
+	  src/register/register-gnome/systecash-sheet.h: Preferences window
 	  improvements: * Accounting Period: reorder options so the dates
 	  are on top * Business: reorder options to clarify which options
 	  are general and which apply to invoices or bills only *
@@ -1617,7 +1617,7 @@
 	  src/register/ledger-core/split-register.c,
 	  src/register/register-core/pricecell.c: Bug #502853 - Incorrent
 	  tax rounding in invoice (rounding of .5) This patch changes the
-	  default rounding behaviour in GnuCash from "Round to nearest
+	  default rounding behaviour in systecash from "Round to nearest
 	  even" to "Round away to infinity". See the bugreport for more
 	  details on these different rounding methods.
 
@@ -1811,13 +1811,13 @@
 
 2010-10-14 13:20  gjanssens
 
-	* [r19655] doc/examples/README, doc/examples/currency.gnucash,
-	  doc/examples/reg_doc_example.gnucash,
-	  doc/examples/splitdemo.gnucash, doc/examples/taxreport.gnucash,
-	  doc/examples/test.gnucash, doc/examples/test2.gnucash,
-	  doc/examples/test3.gnucash, doc/examples/test4.gnucash,
-	  doc/examples/trading.gnucash, doc/examples/trading2.gnucash,
-	  doc/examples/xfer.gnucash: Remove incompatible example files
+	* [r19655] doc/examples/README, doc/examples/currency.systecash,
+	  doc/examples/reg_doc_example.systecash,
+	  doc/examples/splitdemo.systecash, doc/examples/taxreport.systecash,
+	  doc/examples/test.systecash, doc/examples/test2.systecash,
+	  doc/examples/test3.systecash, doc/examples/test4.systecash,
+	  doc/examples/trading.systecash, doc/examples/trading2.systecash,
+	  doc/examples/xfer.systecash: Remove incompatible example files
 	  (X-Account) and update the README file
 
 2010-10-13 16:38  gjanssens
@@ -1862,8 +1862,8 @@
 2010-10-11 20:46  gjanssens
 
 	* [r19648] src/bin/environment.in,
-	  src/bin/gnucash-setup-env-osx.in, src/gnc-module/gnc-module.c:
-	  Separate load paths for shared libraries and gnucash loadable
+	  src/bin/systecash-setup-env-osx.in, src/gnc-module/gnc-module.c:
+	  Separate load paths for shared libraries and systecash loadable
 	  modules. The former should be found on (DY)LD_LIBRARY_PATH, the
 	  latter on GNC_MODULE_PATH. These paths shouldn't overlap as that
 	  needlessly confuses things.
@@ -1877,7 +1877,7 @@
 	  handling code for GDate kvp values in SQL, too If slots table
 	  does not include gdate field, it will be added and all current
 	  slots will have a NULL value. Tested on sqlite3 and mysql.
-	  Tested using the example gnucash file referenced from the bug
+	  Tested using the example systecash file referenced from the bug
 	  report. When saved from XML -> sqlite3 -> XML, some timestamps
 	  changed their timezone because of a change of timezone (I'm in
 	  North America). I guess this is OK.
@@ -1959,7 +1959,7 @@
 	  src/import-export/aqbanking/gnc-ab-utils.c,
 	  src/import-export/aqbanking/gnc-gwen-gui.c,
 	  src/libqof/qof/gnc-date.c,
-	  src/register/register-gnome/gnucash-header.c,
+	  src/register/register-gnome/systecash-header.c,
 	  src/report/report-gnome/gnc-plugin-page-report.c: Re-indentation
 	  of source code. This re-indentation was done using astyle-1.24
 	  using the following options: astyle --indent=spaces=4
@@ -2029,13 +2029,13 @@
 
 2010-09-25 17:14  cmarchi
 
-	* [r19612] accounts/tr_TR/acctchrt_TEKDUZ.gnucash-xea,
-	  accounts/tr_TR/acctchrt_brokerage.gnucash-xea,
-	  accounts/tr_TR/acctchrt_carloan.gnucash-xea,
-	  accounts/tr_TR/acctchrt_checkbook.gnucash-xea,
-	  accounts/tr_TR/acctchrt_common.gnucash-xea,
-	  accounts/tr_TR/acctchrt_fixedassets.gnucash-xea,
-	  accounts/tr_TR/acctchrt_homeloan.gnucash-xea: Updated accounts
+	* [r19612] accounts/tr_TR/acctchrt_TEKDUZ.systecash-xea,
+	  accounts/tr_TR/acctchrt_brokerage.systecash-xea,
+	  accounts/tr_TR/acctchrt_carloan.systecash-xea,
+	  accounts/tr_TR/acctchrt_checkbook.systecash-xea,
+	  accounts/tr_TR/acctchrt_common.systecash-xea,
+	  accounts/tr_TR/acctchrt_fixedassets.systecash-xea,
+	  accounts/tr_TR/acctchrt_homeloan.systecash-xea: Updated accounts
 	  chart by Seyfi Duyan.
 
 2010-09-24 19:48  cstim
@@ -2114,7 +2114,7 @@
 	* [r19597] README.dependencies: Bug #118391: Put isocodes in
 	  README.dependencies to inform packet maintainers Additional
 	  changes in that file: 1. Link to more up to date
-	  http://wiki.gnucash.org/wiki/Dependencies 2. Introduce
+	  http://wiki.systecash.org/wiki/Dependencies 2. Introduce
 	  Structure: required, alternatives, optional, at runtime
 	  suggested 3. Add webkit
 
@@ -2184,10 +2184,10 @@
 
 2010-09-19 18:53  cstim
 
-	* [r19583] accounts/de_DE/acctchrt_skr49.gnucash-xea: Fix 2
+	* [r19583] accounts/de_DE/acctchrt_skr49.systecash-xea: Fix 2
 	  nonfatal syntax errors in german SKR49 1 missing Namespace 1
 	  forgotten replacing of the last closing tag This is now also
-	  updated in http://wiki.gnucash.org/wiki/AccountHierarchyTemplate
+	  updated in http://wiki.systecash.org/wiki/AccountHierarchyTemplate
 
 2010-09-16 16:13  cstim
 
@@ -2207,7 +2207,7 @@
 	* [r19579] po/ko.po, po/lt.po, po/ne.po, po/pt_BR.po, po/ro.po,
 	  po/ru.po, po/sk.po: Fix erroneous translation of strings with
 	  context prefix. The msgstr must not contain the prefix anymore.
-	  http://lists.gnucash.org/pipermail/gnucash-devel/2010-September/029481.html
+	  http://lists.systecash.org/pipermail/systecash-devel/2010-September/029481.html
 
 2010-09-15 19:56  cstim
 
@@ -2240,23 +2240,23 @@
 
 2010-09-13 12:14  cmarchi
 
-	* [r19572] accounts/pl/acctchrt_brokerage.gnucash-xea,
-	  accounts/pl/acctchrt_business.gnucash-xea,
-	  accounts/pl/acctchrt_carloan.gnucash-xea,
-	  accounts/pl/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/pl/acctchrt_checkbook.gnucash-xea,
-	  accounts/pl/acctchrt_childcare.gnucash-xea,
-	  accounts/pl/acctchrt_common.gnucash-xea,
-	  accounts/pl/acctchrt_eduloan.gnucash-xea,
-	  accounts/pl/acctchrt_fixedassets.gnucash-xea,
-	  accounts/pl/acctchrt_full.gnucash-xea,
-	  accounts/pl/acctchrt_homeloan.gnucash-xea,
-	  accounts/pl/acctchrt_homeown.gnucash-xea,
-	  accounts/pl/acctchrt_otherloan.gnucash-xea,
-	  accounts/pl/acctchrt_renter.gnucash-xea,
-	  accounts/pl/acctchrt_retiremt.gnucash-xea,
-	  accounts/pl/acctchrt_spouseinc.gnucash-xea,
-	  accounts/pl/acctchrt_spouseretire.gnucash-xea: Updated Polish
+	* [r19572] accounts/pl/acctchrt_brokerage.systecash-xea,
+	  accounts/pl/acctchrt_business.systecash-xea,
+	  accounts/pl/acctchrt_carloan.systecash-xea,
+	  accounts/pl/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/pl/acctchrt_checkbook.systecash-xea,
+	  accounts/pl/acctchrt_childcare.systecash-xea,
+	  accounts/pl/acctchrt_common.systecash-xea,
+	  accounts/pl/acctchrt_eduloan.systecash-xea,
+	  accounts/pl/acctchrt_fixedassets.systecash-xea,
+	  accounts/pl/acctchrt_full.systecash-xea,
+	  accounts/pl/acctchrt_homeloan.systecash-xea,
+	  accounts/pl/acctchrt_homeown.systecash-xea,
+	  accounts/pl/acctchrt_otherloan.systecash-xea,
+	  accounts/pl/acctchrt_renter.systecash-xea,
+	  accounts/pl/acctchrt_retiremt.systecash-xea,
+	  accounts/pl/acctchrt_spouseinc.systecash-xea,
+	  accounts/pl/acctchrt_spouseretire.systecash-xea: Updated Polish
 	  translations by Radzisław Galler.
 
 2010-09-13 12:13  cmarchi
@@ -2266,22 +2266,22 @@
 
 2010-09-11 20:10  cstim
 
-	* [r19570] accounts/de_AT/acctchrt_auto.gnucash-xea,
-	  accounts/de_AT/acctchrt_autoloan.gnucash-xea,
-	  accounts/de_AT/acctchrt_brokerage.gnucash-xea,
-	  accounts/de_AT/acctchrt_business.gnucash-xea,
-	  accounts/de_AT/acctchrt_common.gnucash-xea,
-	  accounts/de_AT/acctchrt_houseown.gnucash-xea,
-	  accounts/de_AT/acctchrt_investment.gnucash-xea,
-	  accounts/de_AT/acctchrt_kids.gnucash-xea,
-	  accounts/de_CH/acctchrt_brokerage.gnucash-xea,
-	  accounts/de_CH/acctchrt_chkmu.gnucash-xea,
-	  accounts/de_CH/acctchrt_common.gnucash-xea,
-	  accounts/de_CH/acctchrt_kids.gnucash-xea,
-	  accounts/de_CH/acctchrt_otherasset.gnucash-xea,
-	  accounts/de_CH/acctchrt_otherloan.gnucash-xea,
-	  accounts/de_DE/acctchrt_brokerage.gnucash-xea,
-	  accounts/de_DE/acctchrt_full.gnucash-xea: Updates for German
+	* [r19570] accounts/de_AT/acctchrt_auto.systecash-xea,
+	  accounts/de_AT/acctchrt_autoloan.systecash-xea,
+	  accounts/de_AT/acctchrt_brokerage.systecash-xea,
+	  accounts/de_AT/acctchrt_business.systecash-xea,
+	  accounts/de_AT/acctchrt_common.systecash-xea,
+	  accounts/de_AT/acctchrt_houseown.systecash-xea,
+	  accounts/de_AT/acctchrt_investment.systecash-xea,
+	  accounts/de_AT/acctchrt_kids.systecash-xea,
+	  accounts/de_CH/acctchrt_brokerage.systecash-xea,
+	  accounts/de_CH/acctchrt_chkmu.systecash-xea,
+	  accounts/de_CH/acctchrt_common.systecash-xea,
+	  accounts/de_CH/acctchrt_kids.systecash-xea,
+	  accounts/de_CH/acctchrt_otherasset.systecash-xea,
+	  accounts/de_CH/acctchrt_otherloan.systecash-xea,
+	  accounts/de_DE/acctchrt_brokerage.systecash-xea,
+	  accounts/de_DE/acctchrt_full.systecash-xea: Updates for German
 	  account templates, by Frank H. Ellenberger. He writes: Im
 	  beiliegenden Patch habe ich ziemlich mechanisch (grep, recode,
 	  sed) die folgenden Anpassungen vorgenommen: *
@@ -2354,7 +2354,7 @@
 2010-09-06 19:25  cstim
 
 	* [r19557] packaging/win32/defaults.sh,
-	  packaging/win32/gnucash.iss.in: De-activate aqbanking5 by
+	  packaging/win32/systecash.iss.in: De-activate aqbanking5 by
 	  default again because it requires gtk-2.18 or higher, which we
 	  don't have. Sigh.
 
@@ -2389,7 +2389,7 @@
 
 2010-09-05 19:14  cstim
 
-	* [r19551] packaging/win32/gnucash.iss.in: I18n: Add German
+	* [r19551] packaging/win32/systecash.iss.in: I18n: Add German
 	  translation for new installer texts. Suggested by Frank H.
 	  Ellenberger and edited by myself.
 
@@ -2462,7 +2462,7 @@
 
 2010-09-04 11:41  cmarchi
 
-	* [r19544] packaging/win32/gnucash.iss.in: Updated Japanese
+	* [r19544] packaging/win32/systecash.iss.in: Updated Japanese
 	  translation for win32 installer wizard by Yasuaki Taniguchi.
 
 2010-09-04 08:52  cstim
@@ -2472,12 +2472,12 @@
 
 2010-09-04 06:02  cmarchi
 
-	* [r19542] packaging/win32/gnucash.iss.in: Added Japanese
+	* [r19542] packaging/win32/systecash.iss.in: Added Japanese
 	  translation for win32 installer wizard by Yasuaki Taniguchi.
 
 2010-09-03 18:01  cmarchi
 
-	* [r19541] packaging/win32/gnucash.iss.in: Updated Latvian
+	* [r19541] packaging/win32/systecash.iss.in: Updated Latvian
 	  translation for win32 installer wizard by Valdis Vītoliņš.
 
 2010-09-03 16:18  cstim
@@ -2497,7 +2497,7 @@
 
 2010-09-03 14:36  gjanssens
 
-	* [r19538] src/gnome/schemas/apps_gnucash_general.schemas.in: Add
+	* [r19538] src/gnome/schemas/apps_systecash_general.schemas.in: Add
 	  newly introduced gconf parameter in the default schema.
 
 2010-09-03 10:46  gjanssens
@@ -2521,7 +2521,7 @@
 
 2010-09-02 14:08  cmarchi
 
-	* [r19534] packaging/win32/gnucash.iss.in: Updated Italian
+	* [r19534] packaging/win32/systecash.iss.in: Updated Italian
 	  translation for win32 installer wizard.
 
 2010-09-02 12:30  gjanssens
@@ -2533,7 +2533,7 @@
 
 	* [r19532] packaging/win32/defaults.sh,
 	  packaging/win32/dist-impl.sh, packaging/win32/dist.sh,
-	  packaging/win32/gnucash.iss.in, packaging/win32/install-impl.sh,
+	  packaging/win32/systecash.iss.in, packaging/win32/install-impl.sh,
 	  packaging/win32/install.sh: Remove aqbanking2 from windows build
 	  scripts. Add optional aqbanking5 instead, which works without QT.
 
@@ -2554,16 +2554,16 @@
 
 2010-09-01 13:09  gjanssens
 
-	* [r19528] packaging/win32/gnucash.iss.in: Bug #588414 - Got
-	  "Entry Point Not Found" errors starting GnuCash, but ran OK The
+	* [r19528] packaging/win32/systecash.iss.in: Bug #588414 - Got
+	  "Entry Point Not Found" errors starting systecash, but ran OK The
 	  problem is caused by leftover files from a previous install. The
-	  solution is to uninstall GnuCash before installing a new version
+	  solution is to uninstall systecash before installing a new version
 	  in such cases. This commit adds a compatibility test and
 	  uninstall step to the windows installer that will automatically
-	  uninstall the previous gnucash release if it is considered
+	  uninstall the previous systecash release if it is considered
 	  'incompatible' with the one to be installed. The user will be
 	  warned of this, so he can decide to cancel the installation if
-	  he doesn't like the idea of uninstalling his working GnuCash
+	  he doesn't like the idea of uninstalling his working systecash
 	  installation. Currently, versions are considered 'incompatible'
 	  if their major or minor version components are different, so
 	  2.3.x is incompatible with 2.2.x and will trigger an uninstall.
@@ -2577,7 +2577,7 @@
 
 2010-08-31 21:34  jralls
 
-	* [r19527] src/bin/gnucash-bin.c,
+	* [r19527] src/bin/systecash-bin.c,
 	  src/gnome-utils/gnc-gnome-utils.c,
 	  src/gnome-utils/ui/osx_accel_map: Consolidate accelerator map
 	  loading for OSX with the others. Accelerator maps can't be
@@ -2588,7 +2588,7 @@
 
 	* [r19526] packaging/win32/defaults.sh,
 	  packaging/win32/dist-impl.sh, packaging/win32/install-impl.sh:
-	  GnuCash on Windows is built with webkit, no need to install
+	  systecash on Windows is built with webkit, no need to install
 	  gtkhtml
 
 2010-08-31 19:55  gjanssens
@@ -2608,7 +2608,7 @@
 2010-08-31 17:06  gjanssens
 
 	* [r19522] src/engine/gncIDSearch.c, src/engine/gncIDSearch.h,
-	  src/optional/python-bindings/gnucash_core.py: Add vendor search
+	  src/optional/python-bindings/systecash_core.py: Add vendor search
 	  to python bindings and refactors files gncIDSearch.c/h with
 	  vendor search. Patch by Mike Evans.
 
@@ -2620,9 +2620,9 @@
 2010-08-31 14:31  gjanssens
 
 	* [r19518] configure.ac, packaging/win32/dist-impl.sh,
-	  packaging/win32/gnucash.iss.in, src/bin/Makefile.am,
+	  packaging/win32/systecash.iss.in, src/bin/Makefile.am,
 	  src/bin/environment-win32.in, src/bin/environment.in,
-	  src/bin/gnucash-bin.c: Make GnuCash more runtime relocatable by
+	  src/bin/systecash-bin.c: Make systecash more runtime relocatable by
 	  using dynamic paths in the environment file.
 
 2010-08-31 14:00  jralls
@@ -2650,13 +2650,13 @@
 2010-08-30 17:10  gjanssens
 
 	* [r19513] packaging/win32/dist-impl.sh,
-	  packaging/win32/gnucash.iss.in: Windows version: * reduce
+	  packaging/win32/systecash.iss.in: Windows version: * reduce
 	  footprint by not packaging unused files * move gnc-mod required
 	  files to bin * remove libdir from the PATH
 
 2010-08-30 17:08  gjanssens
 
-	* [r19512] packaging/win32/gnucash.iss.in: Windows version: remove
+	* [r19512] packaging/win32/systecash.iss.in: Windows version: remove
 	  obsolete and duplicate parameters from the environment file
 
 2010-08-29 20:37  cstim
@@ -2668,12 +2668,12 @@
 
 2010-08-29 20:05  gjanssens
 
-	* [r19509] src/bin/gnucash-setup-env-osx.in: Remove
-	  GNC_STANDARD_REPORTS_DIR from gnucash launcher as well.
+	* [r19509] src/bin/systecash-setup-env-osx.in: Remove
+	  GNC_STANDARD_REPORTS_DIR from systecash launcher as well.
 
 2010-08-29 19:58  gjanssens
 
-	* [r19508] doc/gnucash.1.in: Update man page following the recent
+	* [r19508] doc/systecash.1.in: Update man page following the recent
 	  removal of command line options.
 
 2010-08-29 19:43  cstim
@@ -2696,12 +2696,12 @@
 	  src/gnome/gnc-plugin-page-sx-list.c,
 	  src/gnome/gnc-plugin-page-sx-list.h: Update license after Josh
 	  Sled's relicensing of his code under GPL v2 and/or v3. He wrote
-	  to gnucash-devel on 2010-08-28: Much of the last batch code I
-	  contributed to gnucash was licensed without the "or any later
+	  to systecash-devel on 2010-08-28: Much of the last batch code I
+	  contributed to systecash was licensed without the "or any later
 	  version" clause of the GPL boilerplate, and thus specifically
 	  and only under version 2 of the GPL. I hereby extend that to
 	  version 2 and/or version 3. Any contribution I've made to
-	  gnucash which was under the GPLv2 only may be considered to be
+	  systecash which was under the GPLv2 only may be considered to be
 	  under both v2 and v3.
 	* [r19506] src/gnome/dialog-sx-editor.c: I18n: Fix last remaining
 	  user-visible mention of the abbreviation "SX". This should have
@@ -2717,31 +2717,31 @@
 	  src/core-utils/gnc-path.c, src/core-utils/gnc-path.h,
 	  src/report/standard-reports/standard-reports.scm: Calculate
 	  standard-reports dir internally instead of reading it from the
-	  environment. This is a step to make gnucash more run-time
+	  environment. This is a step to make systecash more run-time
 	  relocatable.
 
 2010-08-29 18:57  gjanssens
 
 	* [r19504] src/bin/environment.in: Readd LD_LIBRARY_PATH to
 	  environment to make sure Guile loads the proper shared libraries
-	  when multiple installations of GnuCash exist (like stable and
+	  when multiple installations of systecash exist (like stable and
 	  devel version on one system).
 
 2010-08-28 14:16  gjanssens
 
-	* [r19499] src/bin/gnucash-bin.c, src/core-utils/gnc-main.h:
+	* [r19499] src/bin/systecash-bin.c, src/core-utils/gnc-main.h:
 	  Remove the config-path and share-path command line options. The
 	  values set on the command line were never used.
 
 2010-08-26 20:37  gjanssens
 
-	* [r19478] src/bin/gnucash-bin.c: Some more uses of PACKAGE_NAME
-	  instead of "GnuCash"
+	* [r19478] src/bin/systecash-bin.c: Some more uses of PACKAGE_NAME
+	  instead of "systecash"
 
 2010-08-26 20:13  gjanssens
 
 	* [r19477] src/core-utils/binreloc.c: Fix some obsolete uses of
-	  gnucash-bin.
+	  systecash-bin.
 
 2010-08-26 17:22  gjanssens
 
@@ -2800,12 +2800,12 @@
 
 2010-08-25 12:24  cstim
 
-	* [r19471] accounts/de_DE/acctchrt_autoloan.gnucash-xea,
-	  accounts/de_DE/acctchrt_common.gnucash-xea,
-	  accounts/de_DE/acctchrt_full.gnucash-xea,
-	  accounts/de_DE/acctchrt_houseown.gnucash-xea,
-	  accounts/de_DE/acctchrt_otherloan.gnucash-xea,
-	  accounts/de_DE/acctchrt_studium.gnucash-xea: Replace misleading
+	* [r19471] accounts/de_DE/acctchrt_autoloan.systecash-xea,
+	  accounts/de_DE/acctchrt_common.systecash-xea,
+	  accounts/de_DE/acctchrt_full.systecash-xea,
+	  accounts/de_DE/acctchrt_houseown.systecash-xea,
+	  accounts/de_DE/acctchrt_otherloan.systecash-xea,
+	  accounts/de_DE/acctchrt_studium.systecash-xea: Replace misleading
 	  "Passiva" in accounts/de_DE/* by "Fremdkapital" with description
 	  "alle Verbindlichkeiten" Patch by Frank H. Ellenberger.
 
@@ -2835,12 +2835,12 @@
 	  aqbanking5 extensions of GWEN_GUI object. We need to locally
 	  store a reference to that particular GWEN_GUI object that was
 	  used in Extend because we have more than one such object in use
-	  inside gnucash (currently). If accidentally the wrong one would
+	  inside systecash (currently). If accidentally the wrong one would
 	  be used in Unextend, a crash occurs.
 
 2010-08-22 19:13  cstim
 
-	* [r19464] accounts/de_DE/acctchrt_common.gnucash-xea: Fix
+	* [r19464] accounts/de_DE/acctchrt_common.systecash-xea: Fix
 	  erroneous place of "Bildung" account in hierarchy: Was moved to
 	  top-level due to double parent tag.
 
@@ -2942,7 +2942,7 @@
 
 	* [r19445] src/import-export/aqbanking/gnc-ab-utils.h,
 	  src/import-export/aqbanking/gnc-gwen-gui.c: Add instantiation of
-	  gwengui-gtk2 object in gnucash, which enables the setup wizard
+	  gwengui-gtk2 object in systecash, which enables the setup wizard
 	  again, but it doesn't fully work yet. In particular, a quick
 	  test runs into significant UI work which is still needed, and
 	  also occasional crashes might occur. Hence, the gwengui-gtk2
@@ -2965,7 +2965,7 @@
 	* [r19442] src/engine/Makefile.am, src/engine/gncIDSearch.c,
 	  src/engine/gncIDSearch.h,
 	  src/optional/python-bindings/Makefile.am,
-	  src/optional/python-bindings/gnucash_core.i,
+	  src/optional/python-bindings/systecash_core.i,
 	  src/optional/python-bindings/utils.c,
 	  src/optional/python-bindings/utils.h: Bug #625193: Move newly
 	  introduced search-by-id functions into src/engine. Patch by Mike
@@ -2984,7 +2984,7 @@
 
 2010-08-17 12:02  cmarchi
 
-	* [r19439] accounts/lv/acctchrt_business.gnucash-xea: Updated
+	* [r19439] accounts/lv/acctchrt_business.systecash-xea: Updated
 	  Latvian translation of business account chart by Valdis Vītoliņš.
 
 2010-08-17 11:57  cmarchi
@@ -3033,8 +3033,8 @@
 	* [r19431] src/optional/python-bindings/Makefile.am,
 	  src/optional/python-bindings/example_scripts/simple_business_create.py,
 	  src/optional/python-bindings/example_scripts/simple_invoice_insert.py,
-	  src/optional/python-bindings/gnucash_core.i,
-	  src/optional/python-bindings/gnucash_core.py,
+	  src/optional/python-bindings/systecash_core.i,
+	  src/optional/python-bindings/systecash_core.py,
 	  src/optional/python-bindings/utils.c,
 	  src/optional/python-bindings/utils.h: Bug #625193: Added 'search
 	  by ID' in python binding for invoices, customers and bills.
@@ -3042,8 +3042,8 @@
 	  invoices, customers and bills, searching by ID is likely more
 	  useful than by GUID. I've added this functionality to the Python
 	  bindings. Search by ID using the python code: tmp =
-	  gnucash.gnucash_core_c.search_invoice_on_id(ID,book.instance) if
-	  tmp: invoice = gnucash.gnucash_business.Invoice(instance=tmp)
+	  systecash.systecash_core_c.search_invoice_on_id(ID,book.instance) if
+	  tmp: invoice = systecash.systecash_business.Invoice(instance=tmp)
 	  Use the invoice object as in
 	  sample_scripts/simple_invoice_insert.py I support this patch,
 	  but I've made a few improvments of my own. I switched up the
@@ -3108,7 +3108,7 @@
 
 2010-08-14 16:02  gjanssens
 
-	* [r19426] src/bin/gnucash-bin.c: Dummy commit to test mailing
+	* [r19426] src/bin/systecash-bin.c: Dummy commit to test mailing
 	  list hooks.
 
 2010-08-14 09:30  gjanssens
@@ -3149,14 +3149,14 @@
 	* [r19421] src/import-export/aqbanking/druid-ab-initial.c: Add
 	  error message if the unimplemented aqbanking setup button is
 	  pressed. Please see
-	  http://lists.gnucash.org/pipermail/gnucash-devel/2010-August/029188.html
+	  http://lists.systecash.org/pipermail/systecash-devel/2010-August/029188.html
 	  and
-	  http://lists.gnucash.org/pipermail/gnucash-devel/2010-August/029189.html
+	  http://lists.systecash.org/pipermail/systecash-devel/2010-August/029189.html
 
 2010-08-12 19:59  cstim
 
 	* [r19420] contrib/README, contrib/gnuc2ooo.py: Copy
-	  OpenOffice.org python macro for import of the gnucash file to
+	  OpenOffice.org python macro for import of the systecash file to
 	  here because its original download location is hard to reach.
 
 2010-08-10 13:34  cmarchi
@@ -3204,7 +3204,7 @@
 
 2010-08-05 21:10  gjanssens
 
-	* [r19407] src/backend/xml/gnc-backend-xml.c: Bug 623801 - gnucash
+	* [r19407] src/backend/xml/gnc-backend-xml.c: Bug 623801 - systecash
 	  file is not saved
 
 2010-08-05 19:39  gjanssens
@@ -3238,13 +3238,13 @@
 	* [r19401] src/base-typemaps.i,
 	  src/optional/python-bindings/Makefile.am,
 	  src/optional/python-bindings/example_scripts/test_imbalance_transaction.py,
-	  src/optional/python-bindings/gnucash_core.py: Bug 625976 -
+	  src/optional/python-bindings/systecash_core.py: Bug 625976 -
 	  Python Bindings Patch for Transaction.GetImbalance(), patch by
 	  Mark Jenkins
 
 2010-08-04 00:36  jralls
 
-	* [r19394] accounts/lv/acctchrt_business.gnucash-xea: New Latvian
+	* [r19394] accounts/lv/acctchrt_business.systecash-xea: New Latvian
 	  translation of the business account chart, thanks to Valdis
 	  Vītoliņš <valdis.vitolins@odo.lv>
 
@@ -3284,7 +3284,7 @@
 
 2010-07-29 20:16  cstim
 
-	* [r19383] src/optional/python-bindings/gnucash_core.py: Add
+	* [r19383] src/optional/python-bindings/systecash_core.py: Add
 	  missing return value specification of lookup_by_code() in python
 	  bindings. Patch by Daniele Varrazzo.
 
@@ -3296,7 +3296,7 @@
 
 2010-07-28 04:13  mta
 
-	* [r19381] src/bin/gnucash-bin.c: Fix crash when run with the
+	* [r19381] src/bin/systecash-bin.c: Fix crash when run with the
 	  --add-price-quotes parameter.
 
 2010-07-28 03:48  mta
@@ -3307,7 +3307,7 @@
 
 2010-07-27 22:46  mta
 
-	* [r19379] src/register/register-gnome/gnucash-header.c: Double
+	* [r19379] src/register/register-gnome/systecash-header.c: Double
 	  clicking on the balance column in a register doesn't resize the
 	  column because there is a zero width column to the right of it.
 	  This may fix all or part of bugs 563588, 345711, or 506261.
@@ -3370,7 +3370,7 @@
 	* [r19370] src/gnome/dialog-print-check.c,
 	  src/gnome/dialog-print-check.h, src/gnome/glade/print.glade,
 	  src/gnome/gnc-plugin-page-register.c,
-	  src/gnome/schemas/apps_gnucash_warnings.schemas.in: Bug #621016:
+	  src/gnome/schemas/apps_systecash_warnings.schemas.in: Bug #621016:
 	  Print multiple checks at the same time The print checks
 	  operation should be able to print more than one check with a
 	  single invocation of the "Print Check..." command. The attached
@@ -3481,7 +3481,7 @@
 	  src/business/business-core/sql/test/test-dbi-business.c,
 	  src/business/business-gnome/business-gnome.scm,
 	  src/gnc/CMakeLists.txt,
-	  src/optional/python-bindings/gnucash_core.i: Merge the sql
+	  src/optional/python-bindings/systecash_core.i: Merge the sql
 	  parsers of the business objects into the main sql module. Also,
 	  completely remove the business-core/sql module because it is no
 	  longer needed. The tests of this module have been moved into
@@ -3498,7 +3498,7 @@
 	  remove the business-core/xml module as it is no longer needed.
 	* [r19362] src/CMakeLists.txt, src/gnc/CMakeLists.txt,
 	  src/gnc/main.cpp, src/optional/python-bindings/Makefile.am,
-	  src/optional/python-bindings/gnucash_core.i: Remove the separate
+	  src/optional/python-bindings/systecash_core.i: Remove the separate
 	  business xml backend from cutecash and python as well.
 
 2010-07-13 09:55  cstim
@@ -3563,7 +3563,7 @@
 	  src/engine/CMakeLists.txt, src/engine/Makefile.am,
 	  src/engine/cashobjects.c, src/engine/gncBusiness.c,
 	  src/engine/gncBusiness.h, src/gnc/main.cpp,
-	  src/optional/python-bindings/gnucash_core.i: Remove separate
+	  src/optional/python-bindings/systecash_core.i: Remove separate
 	  object initialization in engine/gncBusiness.c and move this into
 	  one common initialization function cashobjects_register in
 	  <engine/cashobjects.h>.
@@ -3786,7 +3786,7 @@
 	  src/engine/gncTaxTableP.h, src/engine/gncVendor.c,
 	  src/engine/gncVendor.h, src/engine/gncVendorP.h,
 	  src/gnc/main.cpp: Move the business object implementations from
-	  separate module into the main gnucash engine.
+	  separate module into the main systecash engine.
 	* [r19328] src/business/business-core/gncBusiness.c,
 	  src/business/business-core/gncmod-business-core.c: Move
 	  initialization of business objects into gncBusiness.c so that
@@ -3847,32 +3847,32 @@
 
 2010-06-30 20:42  gjanssens
 
-	* [r19321] src/bin/gnucash-bin.c: Remove obsolete code.
+	* [r19321] src/bin/systecash-bin.c: Remove obsolete code.
 	* [r19320] HACKING, README, README.dependencies: Some changes to
-	  align the README files with the current state of gnucash.
+	  align the README files with the current state of systecash.
 
 2010-06-30 20:17  gjanssens
 
 	* [r19319] README, doc/examples/Makefile.am,
-	  doc/examples/currency.gnucash, doc/examples/currency.xac,
-	  doc/examples/currency_tree_xml.gnucash,
+	  doc/examples/currency.systecash, doc/examples/currency.xac,
+	  doc/examples/currency_tree_xml.systecash,
 	  doc/examples/currency_tree_xml.xac,
-	  doc/examples/reg_doc_example.gnucash,
+	  doc/examples/reg_doc_example.systecash,
 	  doc/examples/reg_doc_example.xac,
-	  doc/examples/splitdemo.gnucash, doc/examples/splitdemo.xac,
-	  doc/examples/taxreport.gnucash, doc/examples/taxreport.xac,
-	  doc/examples/test.gnucash, doc/examples/test.xac,
-	  doc/examples/test2.gnucash, doc/examples/test2.xac,
-	  doc/examples/test3.gnucash, doc/examples/test3.xac,
-	  doc/examples/test4.gnucash, doc/examples/test4.xac,
-	  doc/examples/trading.gnucash, doc/examples/trading.xac,
-	  doc/examples/trading2.gnucash, doc/examples/trading2.xac,
-	  doc/examples/xfer.gnucash, doc/examples/xfer.xac,
+	  doc/examples/splitdemo.systecash, doc/examples/splitdemo.xac,
+	  doc/examples/taxreport.systecash, doc/examples/taxreport.xac,
+	  doc/examples/test.systecash, doc/examples/test.xac,
+	  doc/examples/test2.systecash, doc/examples/test2.xac,
+	  doc/examples/test3.systecash, doc/examples/test3.xac,
+	  doc/examples/test4.systecash, doc/examples/test4.xac,
+	  doc/examples/trading.systecash, doc/examples/trading.xac,
+	  doc/examples/trading2.systecash, doc/examples/trading2.xac,
+	  doc/examples/xfer.systecash, doc/examples/xfer.xac,
 	  src/core-utils/test/test-gnc-uri-utils.c,
 	  src/experimental/cgi-bin/gnc-server.c,
 	  src/experimental/cgi-bin/hello2.c,
 	  src/experimental/cgi-bin/hello3.c: Future default file extension
-	  is .gnucash, so - rename example files to this extension -
+	  is .systecash, so - rename example files to this extension -
 	  replace references to the old extension where appropriate
 
 2010-06-30 20:15  gjanssens
@@ -3881,7 +3881,7 @@
 
 2010-06-30 20:14  gjanssens
 
-	* [r19317] src/bin/overrides/gnucash-build-env.in: More path fixes.
+	* [r19317] src/bin/overrides/systecash-build-env.in: More path fixes.
 
 2010-06-30 20:06  gjanssens
 
@@ -3891,7 +3891,7 @@
 
 2010-06-30 19:29  gjanssens
 
-	* [r19315] src/optional/python-bindings/gnucash_core.py: Python
+	* [r19315] src/optional/python-bindings/systecash_core.py: Python
 	  bindings, gncnumeric and accounttype constants, patch by Mark
 	  Jenkins.
 
@@ -3933,7 +3933,7 @@
 2010-06-27 16:35  gjanssens
 
 	* [r19306] src/libqof/qof/gnc-date.c: Bug #622953 - Enable comment
-	  for date format string again in gnucash.pot, patch by Frank H.
+	  for date format string again in systecash.pot, patch by Frank H.
 	  Ellenberger.
 
 2010-06-26 17:44  gjanssens
@@ -3958,7 +3958,7 @@
 
 	* [r19301] src/backend/sql/escape.c,
 	  src/backend/sql/gnc-backend-sql.c,
-	  src/backend/xml/gnc-backend-xml.c, src/bin/gnucash-bin.c,
+	  src/backend/xml/gnc-backend-xml.c, src/bin/systecash-bin.c,
 	  src/business/business-core/gncEntry.c,
 	  src/business/business-core/gncTaxTable.c,
 	  src/business/business-core/sql/gnc-tax-table-sql.c,
@@ -3979,7 +3979,7 @@
 	  src/libqof/qof/qofquery.c,
 	  src/register/register-core/basiccell.c,
 	  src/register/register-core/table-allgui.h,
-	  src/register/register-gnome/gnucash-sheet.c: Re-indentation of
+	  src/register/register-gnome/systecash-sheet.c: Re-indentation of
 	  source code. This re-indentation was done using astyle-1.24
 	  using the following options: astyle --indent=spaces=4
 	  --brackets=break --pad-oper --pad-header --suffix=none
@@ -3987,7 +3987,7 @@
 2010-06-25 18:22  cstim
 
 	* [r19300] src/app-utils/gnc-ui-util.c: Improve i18n comments:
-	  Comment for gnucash.pot must appear immediately before the
+	  Comment for systecash.pot must appear immediately before the
 	  marked string.
 
 2010-06-25 13:20  gjanssens
@@ -4010,7 +4010,7 @@
 2010-06-25 12:50  gjanssens
 
 	* [r19297] packaging/win32/defaults.sh,
-	  packaging/win32/dist-impl.sh, packaging/win32/gnucash.iss.in,
+	  packaging/win32/dist-impl.sh, packaging/win32/systecash.iss.in,
 	  packaging/win32/install-impl.sh: Bug #617797 - Win32 need to
 	  downgrade to gtk-2.16 (Default theme not working under Windows),
 	  second patch adding custom themes, by Tao Wang
@@ -4030,22 +4030,22 @@
 	* [r19294] src/optional/python-bindings/Makefile.am,
 	  src/optional/python-bindings/example_scripts/simple_business_create.py,
 	  src/optional/python-bindings/example_scripts/simple_invoice_insert.py,
-	  src/optional/python-bindings/gnucash_business.py,
-	  src/optional/python-bindings/gnucash_core.i,
-	  src/optional/python-bindings/gnucash_core.py: Bug #622523 -
+	  src/optional/python-bindings/systecash_business.py,
+	  src/optional/python-bindings/systecash_core.i,
+	  src/optional/python-bindings/systecash_core.py: Bug #622523 -
 	  Python bindings are crash prone when linked to guile
 
 2010-06-25 09:53  gjanssens
 
 	* [r19293] src/optional/python-bindings/Makefile.am,
-	  src/optional/python-bindings/gnucash_core.i: Bug #622520 -
-	  gnucash business objects disapear on save, patch by Mark Jenkins
+	  src/optional/python-bindings/systecash_core.i: Bug #622520 -
+	  systecash business objects disapear on save, patch by Mark Jenkins
 
 2010-06-25 09:44  gjanssens
 
-	* [r19292] accounts/en_GB/acctchrt_business.gnucash-xea,
-	  accounts/en_GB/acctchrt_common.gnucash-xea,
-	  accounts/en_GB/acctchrt_full.gnucash-xea: Bug #622271 - Category
+	* [r19292] accounts/en_GB/acctchrt_business.systecash-xea,
+	  accounts/en_GB/acctchrt_common.systecash-xea,
+	  accounts/en_GB/acctchrt_full.systecash-xea: Bug #622271 - Category
 	  'Gas' under 'Auto' should be translated to Petrol in en_GB and
 	  en_AU
 
@@ -4079,7 +4079,7 @@
 
 	* [r19286] src/bin/environment.in: Revert part of R19263.
 	  DYLD_LIBRARY_PATH must be set on MacOSX (running under X11, not
-	  Quartz) in order for GnuCash to find its dynamic libraries.
+	  Quartz) in order for systecash to find its dynamic libraries.
 
 2010-06-22 22:02  plongstaff
 
@@ -4093,7 +4093,7 @@
 
 2010-06-22 20:30  gjanssens
 
-	* [r19284] src/bin/Makefile.am: Change gnucash-bin to gnucash on
+	* [r19284] src/bin/Makefile.am: Change systecash-bin to systecash on
 	  OS X (the other platforms had been changed already)
 
 2010-06-21 19:45  cstim
@@ -4120,12 +4120,12 @@
 
 2010-06-19 15:42  gjanssens
 
-	* [r19279] packaging/win32/gnucash.iss.in,
+	* [r19279] packaging/win32/systecash.iss.in,
 	  packaging/win32/install-impl.sh, src/bin/Makefile.am,
-	  src/bin/gnucash-bin.c, src/gnome-utils/gnc-gnome-utils.c:
-	  Improve name consistency. Use "GnuCash" (or more precisely
+	  src/bin/systecash-bin.c, src/gnome-utils/gnc-gnome-utils.c:
+	  Improve name consistency. Use "systecash" (or more precisely
 	  PACKAGE_NAME), wherever the name is visible to the user, and
-	  "gnucash" (or more precisely PACKAGE) everywhere else.
+	  "systecash" (or more precisely PACKAGE) everywhere else.
 
 2010-06-19 14:50  gjanssens
 
@@ -4153,7 +4153,7 @@
 
 2010-06-18 12:03  gjanssens
 
-	* [r19274] packaging/win32/gnucash.iss.in: Fix Latvian language
+	* [r19274] packaging/win32/systecash.iss.in: Fix Latvian language
 	  support for Windows installer (should have used lv instead of
 	  lv_LV)
 
@@ -4165,7 +4165,7 @@
 2010-06-17 18:58  gjanssens
 
 	* [r19272] packaging/win32/Latvian-1-5.1.11.isl,
-	  packaging/win32/Makefile.am, packaging/win32/gnucash.iss.in: Add
+	  packaging/win32/Makefile.am, packaging/win32/systecash.iss.in: Add
 	  Latvian translation for the Windows Installer, patch by Valdis
 	  Vītoliņš
 
@@ -4190,7 +4190,7 @@
 	* [r19267] doc/README-de.win32-bin.txt,
 	  doc/README-fr.win32-bin.txt, doc/README-it.win32-bin.txt,
 	  doc/README-nl.win32-bin.txt, doc/README-zh_CN.win32-bin.txt,
-	  packaging/win32/defaults.sh, packaging/win32/gnucash.iss.in: Bug
+	  packaging/win32/defaults.sh, packaging/win32/systecash.iss.in: Bug
 	  #619709 - Upgrade Inno Setup to 5.3.x to use utf-8 in .iss
 	  script, patch by Tao Wang
 
@@ -4216,28 +4216,28 @@
 2010-06-16 12:45  gjanssens
 
 	* [r19263] packaging/win32/dist-impl.sh,
-	  packaging/win32/gnucash.iss.in, packaging/win32/install-impl.sh,
+	  packaging/win32/systecash.iss.in, packaging/win32/install-impl.sh,
 	  src/bin/Makefile.am, src/bin/environment-osx.in,
-	  src/bin/environment.in, src/bin/gnucash-gdb.in,
-	  src/bin/gnucash-launcher.in, src/bin/gnucash-valgrind.in,
-	  src/bin/gnucash.in: Finish direct binary execution on Windows
+	  src/bin/environment.in, src/bin/systecash-gdb.in,
+	  src/bin/systecash-launcher.in, src/bin/systecash-valgrind.in,
+	  src/bin/systecash.in: Finish direct binary execution on Windows
 	  and linux and cleanup bin Makefile/targets - Windows * binary
-	  name becomes GnuCash.exe * gnucash.cmd is renamed to
-	  gnucash-launcer.cmd (consistent with OS X). This file is only
-	  needed to run GnuCash straight from the source installation. It
+	  name becomes systecash.exe * systecash.cmd is renamed to
+	  systecash-launcer.cmd (consistent with OS X). This file is only
+	  needed to run systecash straight from the source installation. It
 	  is not used (or distributed) with the Windows Installer version.
-	  * gnucash-valgrind, gnucash-gdb and the override extra's have
+	  * systecash-valgrind, systecash-gdb and the override extra's have
 	  been removed as they are meant for a UNIX like environment -
-	  Linux/others * binary name becomes gnucash * the gnucash launch
-	  script has been removed together with gnucash-gdb. They no
-	  longer add value on linux. * gnucash-valgrind has been retained
+	  Linux/others * binary name becomes systecash * the systecash launch
+	  script has been removed together with systecash-gdb. They no
+	  longer add value on linux. * systecash-valgrind has been retained
 	  because it contains useful presets - OS X (Quartz) * binary name
-	  remains gnucash-bin for now (requires synchronous changes in the
-	  externally hosted OS X build system) * gnucash launcher script
-	  has been renamed to gnucash-launcher. This file is only needed
-	  to run GnuCash straight from the source installation. It is not
-	  used (or distributed) in the OS X bundle version. * gnucash-gdb
-	  and gnucash-valgrind remain and can be used for debugging the
+	  remains systecash-bin for now (requires synchronous changes in the
+	  externally hosted OS X build system) * systecash launcher script
+	  has been renamed to systecash-launcher. This file is only needed
+	  to run systecash straight from the source installation. It is not
+	  used (or distributed) in the OS X bundle version. * systecash-gdb
+	  and systecash-valgrind remain and can be used for debugging the
 	  source installation.
 
 2010-06-16 08:48  gjanssens
@@ -4267,16 +4267,16 @@
 
 2010-06-15 21:41  jralls
 
-	* [r19259] src/bin/gnucash-bin.c: OSX: Set locale and languages
+	* [r19259] src/bin/systecash-bin.c: OSX: Set locale and languages
 	  from User Defaults. This was handled in the bundle launcher
-	  script and completely ignored when gnucash is launched from the
+	  script and completely ignored when systecash is launched from the
 	  command line. Should offer better performance than the scripted
 	  version, which had some odd workarounds.
 
 2010-06-14 18:23  cstim
 
 	* [r19258] accounts/nl/Makefile.am,
-	  accounts/nl/acctchrt_checkbook.gnucash-xea: Add simple checkbook
+	  accounts/nl/acctchrt_checkbook.systecash-xea: Add simple checkbook
 	  account chart in Dutch, by Mark Haanen.
 
 2010-06-13 20:57  jralls
@@ -4331,11 +4331,11 @@
 	  src/core-utils/gnc-uri-utils.c, src/core-utils/gnc-uri-utils.h,
 	  src/gnome-utils/gnc-file.c: Bug #615347 - Use enforced,
 	  consistent data file extension across supported platforms The
-	  choice has fallen on ".gnucash". This extension will be added to
+	  choice has fallen on ".systecash". This extension will be added to
 	  all filenames that don't have it already when a user chooses
 	  "Save As...". Obviously this is only done for files, not for
 	  database storage. The backup files will from now on also end in
-	  ".gnucash" instead of the previous ".xac". The code that removes
+	  ".systecash" instead of the previous ".xac". The code that removes
 	  old backup files scans for both extensions to ensure that backup
 	  files still available with the ".xac" extension are rotated as
 	  well.
@@ -4347,7 +4347,7 @@
 
 2010-06-09 16:40  gjanssens
 
-	* [r19248] src/bin/Makefile.am, src/bin/gnucash-bin.c: Remove
+	* [r19248] src/bin/Makefile.am, src/bin/systecash-bin.c: Remove
 	  command line parameter that is ignored anyway.
 
 2010-06-09 08:12  gjanssens
@@ -4390,7 +4390,7 @@
 
 2010-06-07 21:45  jralls
 
-	* [r19238] src/bin/gnucash-bin.c: Disable enviroment_overide()
+	* [r19238] src/bin/systecash-bin.c: Disable enviroment_overide()
 	  when MAC_INTEGRATION is defined: It doesn't play well with App
 	  Bundles.
 
@@ -4406,7 +4406,7 @@
 
 2010-06-05 23:59  jralls
 
-	* [r19233] src/bin/Makefile.am, src/bin/gnucash-bin.c,
+	* [r19233] src/bin/Makefile.am, src/bin/systecash-bin.c,
 	  src/gnome-utils/ui/Makefile.am,
 	  src/gnome-utils/ui/osx_accel_map: Default key accelerator map
 	  for OSX, using Command instead of Control
@@ -4458,21 +4458,21 @@
 	* [r19224] po/Makevars: Bug #619984: Remove "Gnumatic, Inc." from
 	  po/Makevars Gnumatic Inc. does since a few years no longer
 	  exist. So it makes no sense, to have it as copyright holder of
-	  new GnuCash translations. I got Linas OK for this change on IRC:
-	  http://lists.gnucash.org/logs/2010/05/2010-05-28.html#T13:37:53
+	  new systecash translations. I got Linas OK for this change on IRC:
+	  http://lists.systecash.org/logs/2010/05/2010-05-28.html#T13:37:53
 	  - #T16:12:23
 
 2010-06-03 19:58  cstim
 
 	* [r19223] packaging/win32/ChineseSimp-12-5.1.11.isl,
 	  packaging/win32/Greek-4-5.1.11.isl,
-	  packaging/win32/gnucash.iss.in: Bug #617797: Set eol-style to
+	  packaging/win32/systecash.iss.in: Bug #617797: Set eol-style to
 	  CRLF for win32 files.
 
 2010-06-03 19:56  gjanssens
 
-	* [r19222] src/register/register-gnome/gnucash-sheet.c,
-	  src/register/register-gnome/gnucash-sheet.h: Bug #618434 -
+	* [r19222] src/register/register-gnome/systecash-sheet.c,
+	  src/register/register-gnome/systecash-sheet.h: Bug #618434 -
 	  Decimal separator is always '.' when using the keypad, patch by
 	  Yasuaki Taniguchi
 
@@ -4545,13 +4545,13 @@
 
 2010-05-25 21:35  gjanssens
 
-	* [r19207] packaging/win32/gnucash.iss.in: Fix encoding issues
+	* [r19207] packaging/win32/systecash.iss.in: Fix encoding issues
 	  introduced in r19204
 
 2010-05-25 21:16  gjanssens
 
 	* [r19206] src/gnome/dialog-print-check.c: printf with %zd is not
-	  known in mingw gcc 4.4.0 and prevents gnucash from being built
+	  known in mingw gcc 4.4.0 and prevents systecash from being built
 	  with that compiler. Since this is only a debug message, I chose
 	  to replace it with %d which should also do the right thing.
 
@@ -4565,11 +4565,11 @@
 2010-05-25 20:20  gjanssens
 
 	* [r19204] packaging/win32/dist-impl.sh,
-	  packaging/win32/gnucash.iss.in, packaging/win32/install-impl.sh,
-	  src/bin/environment-win32.in, src/bin/gnucash-bin.c,
+	  packaging/win32/systecash.iss.in, packaging/win32/install-impl.sh,
+	  src/bin/environment-win32.in, src/bin/systecash-bin.c,
 	  src/core-utils/gnc-path.c, src/gnc-module/gnc-module.c,
 	  src/gnc-module/gnc-module.h: Bug #618646 - Should be able to run
-	  gnucash-bin.exe directly, rather than gnucash.cmd Patch by Tao
+	  systecash-bin.exe directly, rather than systecash.cmd Patch by Tao
 	  Wang.
 
 2010-05-25 19:26  gjanssens
@@ -4605,7 +4605,7 @@
 
 2010-05-21 20:45  jralls
 
-	* [r19197] src/bin/Makefile.am, src/bin/gnucash-setup-env-osx.in:
+	* [r19197] src/bin/Makefile.am, src/bin/systecash-setup-env-osx.in:
 	  Fix gnc_dbd_dir foulup
 
 2010-05-21 19:37  jralls
@@ -4619,7 +4619,7 @@
 	* [r19191] configure.ac, src/backend/dbi/gnc-backend-dbi.c,
 	  src/backend/dbi/test/Makefile.am, src/bin/Makefile.am,
 	  src/bin/environment-osx.in, src/bin/environment-win32.in,
-	  src/bin/environment.in, src/bin/gnucash-setup-env-osx.in,
+	  src/bin/environment.in, src/bin/systecash-setup-env-osx.in,
 	  src/business/business-core/sql/test/Makefile.am: Fix libdbi
 	  hardcoded driver directory usage Patch by Bill Nottingham, with
 	  modifications to only set GNC_DBD_DIR if --with-dbi-dbd-path is
@@ -4637,15 +4637,15 @@
 
 2010-05-20 18:52  cstim
 
-	* [r19188] accounts/lv_LV/acctchrt_business.gnucash-xea,
-	  accounts/lv_LV/acctchrt_common.gnucash-xea,
-	  accounts/lv_LV/acctchrt_full.gnucash-xea: Update Latvian account
+	* [r19188] accounts/lv_LV/acctchrt_business.systecash-xea,
+	  accounts/lv_LV/acctchrt_common.systecash-xea,
+	  accounts/lv_LV/acctchrt_full.systecash-xea: Update Latvian account
 	  templates by Valdis Vitoliņš.
 
 2010-05-20 13:25  gjanssens
 
-	* [r19186] configure.ac, src/bin/Makefile.am, src/bin/gnucash.rc:
-	  Bug #618647 - Compile .ico as resource into gnucash-bin.exe,
+	* [r19186] configure.ac, src/bin/Makefile.am, src/bin/systecash.rc:
+	  Bug #618647 - Compile .ico as resource into systecash-bin.exe,
 	  patch by Tao Wang
 
 2010-05-20 08:34  gjanssens
@@ -4685,23 +4685,23 @@
 
 	* [r19177] accounts/Makefile.am, accounts/lv_LV,
 	  accounts/lv_LV/Makefile.am,
-	  accounts/lv_LV/acctchrt_brokerage.gnucash-xea,
-	  accounts/lv_LV/acctchrt_business.gnucash-xea,
-	  accounts/lv_LV/acctchrt_carloan.gnucash-xea,
-	  accounts/lv_LV/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/lv_LV/acctchrt_checkbook.gnucash-xea,
-	  accounts/lv_LV/acctchrt_childcare.gnucash-xea,
-	  accounts/lv_LV/acctchrt_common.gnucash-xea,
-	  accounts/lv_LV/acctchrt_eduloan.gnucash-xea,
-	  accounts/lv_LV/acctchrt_fixedassets.gnucash-xea,
-	  accounts/lv_LV/acctchrt_full.gnucash-xea,
-	  accounts/lv_LV/acctchrt_homeloan.gnucash-xea,
-	  accounts/lv_LV/acctchrt_homeown.gnucash-xea,
-	  accounts/lv_LV/acctchrt_otherloan.gnucash-xea,
-	  accounts/lv_LV/acctchrt_renter.gnucash-xea,
-	  accounts/lv_LV/acctchrt_retiremt.gnucash-xea,
-	  accounts/lv_LV/acctchrt_spouseinc.gnucash-xea,
-	  accounts/lv_LV/acctchrt_spouseretire.gnucash-xea, configure.ac:
+	  accounts/lv_LV/acctchrt_brokerage.systecash-xea,
+	  accounts/lv_LV/acctchrt_business.systecash-xea,
+	  accounts/lv_LV/acctchrt_carloan.systecash-xea,
+	  accounts/lv_LV/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/lv_LV/acctchrt_checkbook.systecash-xea,
+	  accounts/lv_LV/acctchrt_childcare.systecash-xea,
+	  accounts/lv_LV/acctchrt_common.systecash-xea,
+	  accounts/lv_LV/acctchrt_eduloan.systecash-xea,
+	  accounts/lv_LV/acctchrt_fixedassets.systecash-xea,
+	  accounts/lv_LV/acctchrt_full.systecash-xea,
+	  accounts/lv_LV/acctchrt_homeloan.systecash-xea,
+	  accounts/lv_LV/acctchrt_homeown.systecash-xea,
+	  accounts/lv_LV/acctchrt_otherloan.systecash-xea,
+	  accounts/lv_LV/acctchrt_renter.systecash-xea,
+	  accounts/lv_LV/acctchrt_retiremt.systecash-xea,
+	  accounts/lv_LV/acctchrt_spouseinc.systecash-xea,
+	  accounts/lv_LV/acctchrt_spouseretire.systecash-xea, configure.ac:
 	  Add Latvian account templates by Valdis Vitoliņš.
 
 2010-05-15 15:04  plongstaff
@@ -4749,7 +4749,7 @@
 
 2010-05-15 07:31  gjanssens
 
-	* [r19167] packaging/win32/gnucash.iss.in: Repatch Windows
+	* [r19167] packaging/win32/systecash.iss.in: Repatch Windows
 	  installer for Simplified Chinese
 
 2010-05-15 06:37  cmarchi
@@ -4786,28 +4786,28 @@
 
 	* [r19161] doc/Makefile.am, doc/README-zh_CN.win32-bin.txt,
 	  packaging/win32/ChineseSimp-12-5.1.11.isl,
-	  packaging/win32/gnucash.iss.in: zh_CN translation for Windows
+	  packaging/win32/systecash.iss.in: zh_CN translation for Windows
 	  Installer, patch by Tao Wang.
 
 2010-05-14 08:33  gjanssens
 
-	* [r19160] accounts/zh_CN/acctchrt_brokerage.gnucash-xea,
-	  accounts/zh_CN/acctchrt_business.gnucash-xea,
-	  accounts/zh_CN/acctchrt_carloan.gnucash-xea,
-	  accounts/zh_CN/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/zh_CN/acctchrt_checkbook.gnucash-xea,
-	  accounts/zh_CN/acctchrt_childcare.gnucash-xea,
-	  accounts/zh_CN/acctchrt_common.gnucash-xea,
-	  accounts/zh_CN/acctchrt_eduloan.gnucash-xea,
-	  accounts/zh_CN/acctchrt_fixedassets.gnucash-xea,
-	  accounts/zh_CN/acctchrt_full.gnucash-xea,
-	  accounts/zh_CN/acctchrt_homeloan.gnucash-xea,
-	  accounts/zh_CN/acctchrt_homeown.gnucash-xea,
-	  accounts/zh_CN/acctchrt_otherloan.gnucash-xea,
-	  accounts/zh_CN/acctchrt_renter.gnucash-xea,
-	  accounts/zh_CN/acctchrt_retiremt.gnucash-xea,
-	  accounts/zh_CN/acctchrt_spouseinc.gnucash-xea,
-	  accounts/zh_CN/acctchrt_spouseretire.gnucash-xea: Update zh_CN
+	* [r19160] accounts/zh_CN/acctchrt_brokerage.systecash-xea,
+	  accounts/zh_CN/acctchrt_business.systecash-xea,
+	  accounts/zh_CN/acctchrt_carloan.systecash-xea,
+	  accounts/zh_CN/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/zh_CN/acctchrt_checkbook.systecash-xea,
+	  accounts/zh_CN/acctchrt_childcare.systecash-xea,
+	  accounts/zh_CN/acctchrt_common.systecash-xea,
+	  accounts/zh_CN/acctchrt_eduloan.systecash-xea,
+	  accounts/zh_CN/acctchrt_fixedassets.systecash-xea,
+	  accounts/zh_CN/acctchrt_full.systecash-xea,
+	  accounts/zh_CN/acctchrt_homeloan.systecash-xea,
+	  accounts/zh_CN/acctchrt_homeown.systecash-xea,
+	  accounts/zh_CN/acctchrt_otherloan.systecash-xea,
+	  accounts/zh_CN/acctchrt_renter.systecash-xea,
+	  accounts/zh_CN/acctchrt_retiremt.systecash-xea,
+	  accounts/zh_CN/acctchrt_spouseinc.systecash-xea,
+	  accounts/zh_CN/acctchrt_spouseretire.systecash-xea: Update zh_CN
 	  account charts, patch by Tao Wang.
 
 2010-05-14 07:55  cstim
@@ -4955,7 +4955,7 @@
 2010-05-07 14:31  gjanssens
 
 	* [r19133] src/business/business-gnome/dialog-job.c: Bug #615510 -
-	  Gnucash crashes when creating new customer job
+	  systecash crashes when creating new customer job
 
 2010-05-07 10:32  gjanssens
 
@@ -5015,7 +5015,7 @@
 2010-05-06 09:02  cstim
 
 	* [r19124] src/optional/python-bindings/Makefile.am: Bug #616524:
-	  Fix missing re-generating of gnucash_core.c code. The .c file
+	  Fix missing re-generating of systecash_core.c code. The .c file
 	  gets outdated easily because the makefile doesn't contain enough
 	  of its dependencies. I would need to be regenerated each time
 	  any of the included files was changed, but currently it doesn't
@@ -5026,7 +5026,7 @@
 
 2010-05-06 09:01  cstim
 
-	* [r19123] make-gnucash-potfiles.in, po/POTFILES.in,
+	* [r19123] make-systecash-potfiles.in, po/POTFILES.in,
 	  src/app-utils/app-utils.scm, src/app-utils/options.scm,
 	  src/business/business-utils/business-prefs.scm,
 	  src/business/business-utils/business-utils.scm,
@@ -5055,7 +5055,7 @@
 	  KVP_OPTION_PATH for consistency with Guile usage *
 	  OPTION_SECTION_blahblah * OPTION_NAME_blahblah * Modify
 	  qofbookslots.h to be "SWIG-aware" * Pick up qofbookslots.h in
-	  make-gnucash-potfiles.in and po/POTFILES.in Known Issues: *
+	  make-systecash-potfiles.in and po/POTFILES.in Known Issues: *
 	  There is no selection (yet) for "Use default budget" so changing
 	  the default budget and reloading a report does not change the
 	  budget used * setter is no more robust to "bad" values than in
@@ -5065,8 +5065,8 @@
 	  a string This should not impact any 2.2.x users as nothing was
 	  saved under 2.2.x related to the default budget. This can be
 	  resolved through removing the option restore code in
-	  ~/.gnucash/saved-reports-2.4 and, if affected reports were open,
-	  in ~/.gnucash/books/<name_of_book> * Budget reports prior to
+	  ~/.systecash/saved-reports-2.4 and, if affected reports were open,
+	  in ~/.systecash/books/<name_of_book> * Budget reports prior to
 	  r18528 did not save budget selection (603215)
 
 2010-05-06 08:36  cstim
@@ -5093,7 +5093,7 @@
 	  use singular instead of a mixture. 5. add comments: a. outdated
 	  currencies prepared as in the header shown. b. for
 	  abbreviations. Background is the thread starting with
-	  https://lists.gnucash.org/pipermail/gnucash-devel/2009-October/026558.html
+	  https://lists.systecash.org/pipermail/systecash-devel/2009-October/026558.html
 
 2010-05-06 08:19  cstim
 
@@ -5139,7 +5139,7 @@
 
 2010-05-04 22:51  gjanssens
 
-	* [r19102] make-gnucash-potfiles.in, po/POTFILES.in,
+	* [r19102] make-systecash-potfiles.in, po/POTFILES.in,
 	  src/business/business-gnome/ui/gnc-plugin-business-ui.xml,
 	  src/gnome/ui/gnc-plugin-basic-commands-ui.xml: Remove some
 	  additional QSF references
@@ -5190,7 +5190,7 @@
 
 2010-05-04 09:24  gjanssens
 
-	* [r19097] src/register/register-gnome/gnucash-header.c: Bug
+	* [r19097] src/register/register-gnome/systecash-header.c: Bug
 	  #617558 - Header in register doesn't clear properly in
 	  double-line mode when switching from transaction to split, patch
 	  by Alex Aycinena
@@ -5238,28 +5238,28 @@
 
 2010-04-29 15:56  gjanssens
 
-	* [r19085] po/glossary/zh_CN.po: zh_CN translation of gnucash
+	* [r19085] po/glossary/zh_CN.po: zh_CN translation of systecash
 	  glossary file, patch by Tao Wang
 
 2010-04-29 15:44  gjanssens
 
-	* [r19084] accounts/zh_CN/acctchrt_brokerage.gnucash-xea,
-	  accounts/zh_CN/acctchrt_business.gnucash-xea,
-	  accounts/zh_CN/acctchrt_carloan.gnucash-xea,
-	  accounts/zh_CN/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/zh_CN/acctchrt_checkbook.gnucash-xea,
-	  accounts/zh_CN/acctchrt_childcare.gnucash-xea,
-	  accounts/zh_CN/acctchrt_common.gnucash-xea,
-	  accounts/zh_CN/acctchrt_eduloan.gnucash-xea,
-	  accounts/zh_CN/acctchrt_fixedassets.gnucash-xea,
-	  accounts/zh_CN/acctchrt_full.gnucash-xea,
-	  accounts/zh_CN/acctchrt_homeloan.gnucash-xea,
-	  accounts/zh_CN/acctchrt_homeown.gnucash-xea,
-	  accounts/zh_CN/acctchrt_otherloan.gnucash-xea,
-	  accounts/zh_CN/acctchrt_renter.gnucash-xea,
-	  accounts/zh_CN/acctchrt_retiremt.gnucash-xea,
-	  accounts/zh_CN/acctchrt_spouseinc.gnucash-xea,
-	  accounts/zh_CN/acctchrt_spouseretire.gnucash-xea: Updated zh_CN
+	* [r19084] accounts/zh_CN/acctchrt_brokerage.systecash-xea,
+	  accounts/zh_CN/acctchrt_business.systecash-xea,
+	  accounts/zh_CN/acctchrt_carloan.systecash-xea,
+	  accounts/zh_CN/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/zh_CN/acctchrt_checkbook.systecash-xea,
+	  accounts/zh_CN/acctchrt_childcare.systecash-xea,
+	  accounts/zh_CN/acctchrt_common.systecash-xea,
+	  accounts/zh_CN/acctchrt_eduloan.systecash-xea,
+	  accounts/zh_CN/acctchrt_fixedassets.systecash-xea,
+	  accounts/zh_CN/acctchrt_full.systecash-xea,
+	  accounts/zh_CN/acctchrt_homeloan.systecash-xea,
+	  accounts/zh_CN/acctchrt_homeown.systecash-xea,
+	  accounts/zh_CN/acctchrt_otherloan.systecash-xea,
+	  accounts/zh_CN/acctchrt_renter.systecash-xea,
+	  accounts/zh_CN/acctchrt_retiremt.systecash-xea,
+	  accounts/zh_CN/acctchrt_spouseinc.systecash-xea,
+	  accounts/zh_CN/acctchrt_spouseretire.systecash-xea: Updated zh_CN
 	  translation of accounts, patch by Tao Wang
 
 2010-04-28 17:48  plongstaff
@@ -5307,7 +5307,7 @@
 	  doc/tip_of_the_day.list.in: Bug #616696 - Development version
 	  warning string should not include hardcode version. * Improve on
 	  the previous fix: really display stable version in tooltip, not
-	  current version. * Also revert change of "What's new in GnuCash
+	  current version. * Also revert change of "What's new in systecash
 	  2.0" because that's the title actually found in the help manual.
 
 2010-04-27 15:23  gjanssens
@@ -5348,8 +5348,8 @@
 
 2010-04-23 22:32  gjanssens
 
-	* [r19070] src/pixmaps/Makefile.am, src/pixmaps/gnucash-icon.ico:
-	  Write makefile rule to create gnucash-icon.ico. This rule isn't
+	* [r19070] src/pixmaps/Makefile.am, src/pixmaps/systecash-icon.ico:
+	  Write makefile rule to create systecash-icon.ico. This rule isn't
 	  called by default though. It uses image-magick to add several
 	  png images of different size and bitdepth together. Current ico
 	  has: 16x16,8-bit 22x22,8-bit 24x24,8-bit 32x32,32-bit
@@ -5392,7 +5392,7 @@
 	  sure that printf is available whereever it is used So, the right
 	  thing is for each file to be in its own module. Barring that
 	  it's tough to see what the environment is in a given module. So
-	  to be safe, everywhere there's a printf, make sure the (gnucash
+	  to be safe, everywhere there's a printf, make sure the (systecash
 	  printf) module is duly included. Patch by Andy Wingo. Conflicts:
 	  src/business/business-reports/easy-invoice.scm
 	  src/business/business-reports/fancy-invoice.scm
@@ -5459,11 +5459,11 @@
 	  src/report/utility-reports/view-column.scm, src/scm/Makefile.am,
 	  src/scm/main.scm, src/scm/printf.scm: Bug #615168: Pull in
 	  printf from slib, change all code to use it. There is a new
-	  module, (gnucash printf). Patch by Andy Wingo.
+	  module, (systecash printf). Patch by Andy Wingo.
 
 2010-04-23 21:00  cstim
 
-	* [r19061] src/gnc/gnucash.qrc, src/gnc/mainwindow.cpp: Cutecash:
+	* [r19061] src/gnc/systecash.qrc, src/gnc/mainwindow.cpp: Cutecash:
 	  Adapt to removed icon file.
 
 2010-04-23 20:10  cstim
@@ -5501,12 +5501,12 @@
 	* [r19057] src/engine/iso-4217-currencies.scm,
 	  src/engine/iso-currencies-to-c: Revert r19051, "Bug #118391:
 	  Mark the currency names for translation." We better don't mark
-	  the currency names for translation inside gnucash.pot; instead,
+	  the currency names for translation inside systecash.pot; instead,
 	  we should use the "iso_4217" translation domain.
 
 2010-04-23 15:26  gjanssens
 
-	* [r19056] src/pixmaps/gnucash-icon.ico: Bug #616615 - Request for
+	* [r19056] src/pixmaps/systecash-icon.ico: Bug #616615 - Request for
 	  larger size icon (96x96, 128x128, 256x256): Properly include
 	  smaller icon sizes, remove duplicate size
 
@@ -5522,13 +5522,13 @@
 2010-04-23 13:01  gjanssens
 
 	* [r19054] src/pixmaps/Makefile.am,
-	  src/pixmaps/gnucash-icon-128x128.png,
-	  src/pixmaps/gnucash-icon-16x16.png,
-	  src/pixmaps/gnucash-icon-256x256.png,
-	  src/pixmaps/gnucash-icon-32x32.png,
-	  src/pixmaps/gnucash-icon-64x64.png,
-	  src/pixmaps/gnucash-icon-96x96.png,
-	  src/pixmaps/gnucash-icon.ico: Bug #616615 - Request for larger
+	  src/pixmaps/systecash-icon-128x128.png,
+	  src/pixmaps/systecash-icon-16x16.png,
+	  src/pixmaps/systecash-icon-256x256.png,
+	  src/pixmaps/systecash-icon-32x32.png,
+	  src/pixmaps/systecash-icon-64x64.png,
+	  src/pixmaps/systecash-icon-96x96.png,
+	  src/pixmaps/systecash-icon.ico: Bug #616615 - Request for larger
 	  size icon (96x96, 128x128, 256x256)
 
 2010-04-23 12:13  gjanssens
@@ -5542,8 +5542,8 @@
 
 2010-04-22 20:45  cstim
 
-	* [r19052] make-gnucash-potfiles.in, po/POTFILES.in: Add
-	  src/gnome/gnucash.desktop.in.in to the translation input files.
+	* [r19052] make-systecash-potfiles.in, po/POTFILES.in: Add
+	  src/gnome/systecash.desktop.in.in to the translation input files.
 
 2010-04-22 20:32  cstim
 
@@ -5579,7 +5579,7 @@
 2010-04-22 09:14  gjanssens
 
 	* [r19047] src/bin/Makefile.am: Makefile fixes for
-	  setup-gnucash-env on OS X
+	  setup-systecash-env on OS X
 
 2010-04-20 17:13  gjanssens
 
@@ -5611,23 +5611,23 @@
 2010-04-18 20:54  gjanssens
 
 	* [r19037] accounts/ja/Makefile.am,
-	  accounts/ja/acctchrt_brokerage.gnucash-xea,
-	  accounts/ja/acctchrt_business.gnucash-xea,
-	  accounts/ja/acctchrt_carloan.gnucash-xea,
-	  accounts/ja/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/ja/acctchrt_checkbook.gnucash-xea,
-	  accounts/ja/acctchrt_childcare.gnucash-xea,
-	  accounts/ja/acctchrt_common.gnucash-xea,
-	  accounts/ja/acctchrt_eduloan.gnucash-xea,
-	  accounts/ja/acctchrt_fixedassets.gnucash-xea,
-	  accounts/ja/acctchrt_full.gnucash-xea,
-	  accounts/ja/acctchrt_homeloan.gnucash-xea,
-	  accounts/ja/acctchrt_homeown.gnucash-xea,
-	  accounts/ja/acctchrt_otherloan.gnucash-xea,
-	  accounts/ja/acctchrt_renter.gnucash-xea,
-	  accounts/ja/acctchrt_retiremt.gnucash-xea,
-	  accounts/ja/acctchrt_spouseinc.gnucash-xea,
-	  accounts/ja/acctchrt_spouseretire.gnucash-xea,
+	  accounts/ja/acctchrt_brokerage.systecash-xea,
+	  accounts/ja/acctchrt_business.systecash-xea,
+	  accounts/ja/acctchrt_carloan.systecash-xea,
+	  accounts/ja/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/ja/acctchrt_checkbook.systecash-xea,
+	  accounts/ja/acctchrt_childcare.systecash-xea,
+	  accounts/ja/acctchrt_common.systecash-xea,
+	  accounts/ja/acctchrt_eduloan.systecash-xea,
+	  accounts/ja/acctchrt_fixedassets.systecash-xea,
+	  accounts/ja/acctchrt_full.systecash-xea,
+	  accounts/ja/acctchrt_homeloan.systecash-xea,
+	  accounts/ja/acctchrt_homeown.systecash-xea,
+	  accounts/ja/acctchrt_otherloan.systecash-xea,
+	  accounts/ja/acctchrt_renter.systecash-xea,
+	  accounts/ja/acctchrt_retiremt.systecash-xea,
+	  accounts/ja/acctchrt_spouseinc.systecash-xea,
+	  accounts/ja/acctchrt_spouseretire.systecash-xea,
 	  accounts/ja_JP.EUC: Update Japanese names of accounts. And
 	  remove empty ja_JP.EUC directory. Patch by Yasuaki Taniguchi.
 
@@ -5669,7 +5669,7 @@
 
 2010-04-17 19:01  plongstaff
 
-	* [r19029] src/bin/overrides/gnucash-build-env.in: Remove
+	* [r19029] src/bin/overrides/systecash-build-env.in: Remove
 	  reference to GNC_TEST_SRFI_LOAD_CMD since we no longer support
 	  local srfi's.
 
@@ -5783,7 +5783,7 @@
 	  src/report/standard-reports/balsheet-eg.css,
 	  src/report/standard-reports/balsheet-eg.eguile.scm,
 	  src/report/standard-reports/balsheet-eg.scm: Update eguile based
-	  balance sheet report to work with current GnuCash.
+	  balance sheet report to work with current systecash.
 
 2010-04-11 19:05  mta
 
@@ -5791,13 +5791,13 @@
 	  src/report/standard-reports/balsheet-eg.scm: Add the eguile
 	  based balance sheet report. This version is directly from the
 	  wiki at
-	  <http://wiki.gnucash.org/wiki/Custom_Reports_Using_Eguile> and
-	  won't work in the current version of GnuCash. It is included for
+	  <http://wiki.systecash.org/wiki/Custom_Reports_Using_Eguile> and
+	  won't work in the current version of systecash. It is included for
 	  reference purposes.
 
 2010-04-11 12:50  plongstaff
 
-	* [r19015] src/bin/gnucash-gdb.in: Fix gnucash-gdb.in to use gdb
+	* [r19015] src/bin/systecash-gdb.in: Fix systecash-gdb.in to use gdb
 	  from the right place
 
 2010-04-10 20:37  cstim
@@ -5836,7 +5836,7 @@
 
 2010-04-09 08:13  gjanssens
 
-	* [r19008] src/bin/gnucash-bin.c: Fix crash when trying to unset a
+	* [r19008] src/bin/systecash-bin.c: Fix crash when trying to unset a
 	  parameter via the environment config file
 
 2010-04-08 18:52  cmarchi
@@ -5872,14 +5872,14 @@
 
 2010-04-06 11:55  gjanssens
 
-	* [r19001] packaging/win32/gnucash.iss.in,
+	* [r19001] packaging/win32/systecash.iss.in,
 	  packaging/win32/install.sh: Fix Windows build after introduction
 	  of the environment config file.
 
 2010-04-06 11:03  gjanssens
 
 	* [r19000] src/bin/Makefile.am, src/bin/environment-osx.in,
-	  src/bin/gnucash-setup-env-osx.in: Revive gnucash-setup-env on
+	  src/bin/systecash-setup-env-osx.in: Revive systecash-setup-env on
 	  OSX/Quartz. This fixes the OSX issues caused by the introduction
 	  of the environment config file.
 
@@ -5891,7 +5891,7 @@
 
 2010-04-06 02:17  mta
 
-	* [r18998] src/bin/gnucash-bin.c: Initialize new_val in
+	* [r18998] src/bin/systecash-bin.c: Initialize new_val in
 	  environment_override to avoid a compiler warning.
 
 2010-04-05 18:09  gjanssens
@@ -5925,15 +5925,15 @@
 
 	* [r18994] configure.in, src/bin/Makefile.am,
 	  src/bin/environment-osx.in, src/bin/environment-win32.in,
-	  src/bin/environment.in, src/bin/gnucash-bin.c,
-	  src/bin/gnucash-ddd.in, src/bin/gnucash-gdb.in,
-	  src/bin/gnucash-setup-env-osx.in, src/bin/gnucash-setup-env.in,
-	  src/bin/gnucash-valgrind.in, src/bin/gnucash.in: Have the
-	  gnucash binary setup its required environment by itself - New
+	  src/bin/environment.in, src/bin/systecash-bin.c,
+	  src/bin/systecash-ddd.in, src/bin/systecash-gdb.in,
+	  src/bin/systecash-setup-env-osx.in, src/bin/systecash-setup-env.in,
+	  src/bin/systecash-valgrind.in, src/bin/systecash.in: Have the
+	  systecash binary setup its required environment by itself - New
 	  "environment" config file that holds the environment
 	  modifications to make - Added a parser for this file that does
-	  the actual modification of the environment (in gnucash-bin.c) -
-	  Eliminate the old gnucash-setup-env script
+	  the actual modification of the environment (in systecash-bin.c) -
+	  Eliminate the old systecash-setup-env script
 
 2010-04-05 09:21  gjanssens
 
@@ -5959,7 +5959,7 @@
 	  1.1.5 to 1.1.90. This version contains changes required to fix
 	  #588816 (Heading Banner Image does not display or print on
 	  invoice reports). Note that this bug won't be fixed until some
-	  gnucash changes are checked in as well.
+	  systecash changes are checked in as well.
 
 2010-04-04 20:11  gjanssens
 
@@ -5969,7 +5969,7 @@
 
 	* [r18989] src/gnome/dialog-price-editor.c: Can't add or update
 	  currencies in 2.3.11 Reported by Markus Scheffler on Apr 2 via
-	  gnucash-user ML
+	  systecash-user ML
 
 2010-04-02 18:45  cstim
 
@@ -6024,7 +6024,7 @@
 2010-03-30 15:32  gjanssens
 
 	* [r18981] src/gnome-utils/gnc-main-window.c: Bug #613963 -
-	  GnuCash opens empty window when no state file is found
+	  systecash opens empty window when no state file is found
 
 2010-03-30 14:41  gjanssens
 
@@ -6072,7 +6072,7 @@
 	  src/register/register-core/basiccell.h,
 	  src/register/register-core/table-allgui.c,
 	  src/register/register-core/table-allgui.h,
-	  src/register/register-gnome/gnucash-sheet.c: Bug #605802 - Can't
+	  src/register/register-gnome/systecash-sheet.c: Bug #605802 - Can't
 	  input Japanese characters at an account register window on
 	  windows with SCIM, IIIMF and XIM This patch by Yasuaki Taniguchi
 	  fixes the business register.
@@ -6089,7 +6089,7 @@
 	  init_lib function. Add possibility to set the looked-up exe path
 	  from somewhere else. Remove symbol mangling because r18940
 	  already added the gnc_* prefix, hence the symbol names are
-	  unique to gnucash anyway.
+	  unique to systecash anyway.
 
 2010-03-27 21:02  cstim
 
@@ -6307,7 +6307,7 @@
 	  renamed, but not any enums or function names. Hence, the scheme
 	  wrappers should be unchanged completely (hopefully). Discussed
 	  at
-	  http://lists.gnucash.org/pipermail/gnucash-devel/2010-March/027679.html
+	  http://lists.systecash.org/pipermail/systecash-devel/2010-March/027679.html
 
 2010-03-27 20:27  cstim
 
@@ -6514,341 +6514,341 @@
 
 2010-03-24 19:18  cstim
 
-	* [r18959] accounts/C/acctchrt_brokerage.gnucash-xea,
-	  accounts/C/acctchrt_business.gnucash-xea,
-	  accounts/C/acctchrt_carloan.gnucash-xea,
-	  accounts/C/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/C/acctchrt_checkbook.gnucash-xea,
-	  accounts/C/acctchrt_childcare.gnucash-xea,
-	  accounts/C/acctchrt_common.gnucash-xea,
-	  accounts/C/acctchrt_eduloan.gnucash-xea,
-	  accounts/C/acctchrt_fixedassets.gnucash-xea,
-	  accounts/C/acctchrt_full.gnucash-xea,
-	  accounts/C/acctchrt_homeloan.gnucash-xea,
-	  accounts/C/acctchrt_homeown.gnucash-xea,
-	  accounts/C/acctchrt_otherloan.gnucash-xea,
-	  accounts/C/acctchrt_renter.gnucash-xea,
-	  accounts/C/acctchrt_retiremt.gnucash-xea,
-	  accounts/C/acctchrt_spouseinc.gnucash-xea,
-	  accounts/C/acctchrt_spouseretire.gnucash-xea,
-	  accounts/cs/acctchrt_brokerage.gnucash-xea,
-	  accounts/cs/acctchrt_carloan.gnucash-xea,
-	  accounts/cs/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/cs/acctchrt_childcare.gnucash-xea,
-	  accounts/cs/acctchrt_common.gnucash-xea,
-	  accounts/cs/acctchrt_currency.gnucash-xea,
-	  accounts/cs/acctchrt_eduloan.gnucash-xea,
-	  accounts/cs/acctchrt_fixedassets.gnucash-xea,
-	  accounts/cs/acctchrt_homeloan.gnucash-xea,
-	  accounts/cs/acctchrt_homeown.gnucash-xea,
-	  accounts/cs/acctchrt_otherloan.gnucash-xea,
-	  accounts/cs/acctchrt_renter.gnucash-xea,
-	  accounts/cs/acctchrt_retiremt.gnucash-xea,
-	  accounts/cs/acctchrt_spouseinc.gnucash-xea,
-	  accounts/cs/acctchrt_spouseretire.gnucash-xea,
-	  accounts/da/acctchrt_car.gnucash-xea,
-	  accounts/da/acctchrt_common.gnucash-xea,
-	  accounts/da/acctchrt_homeloan.gnucash-xea,
-	  accounts/da/acctchrt_homeown.gnucash-xea,
-	  accounts/de_AT/acctchrt_auto.gnucash-xea,
-	  accounts/de_AT/acctchrt_autoloan.gnucash-xea,
-	  accounts/de_AT/acctchrt_brokerage.gnucash-xea,
-	  accounts/de_AT/acctchrt_business.gnucash-xea,
-	  accounts/de_AT/acctchrt_common.gnucash-xea,
-	  accounts/de_AT/acctchrt_houseown.gnucash-xea,
-	  accounts/de_AT/acctchrt_investment.gnucash-xea,
-	  accounts/de_AT/acctchrt_kids.gnucash-xea,
-	  accounts/de_CH/acctchrt_brokerage.gnucash-xea,
-	  accounts/de_CH/acctchrt_chkmu.gnucash-xea,
-	  accounts/de_CH/acctchrt_common.gnucash-xea,
-	  accounts/de_CH/acctchrt_kids.gnucash-xea,
-	  accounts/de_CH/acctchrt_otherasset.gnucash-xea,
-	  accounts/de_CH/acctchrt_otherloan.gnucash-xea,
-	  accounts/de_DE/acctchrt_auto.gnucash-xea,
-	  accounts/de_DE/acctchrt_autoloan.gnucash-xea,
-	  accounts/de_DE/acctchrt_brokerage.gnucash-xea,
-	  accounts/de_DE/acctchrt_common.gnucash-xea,
-	  accounts/de_DE/acctchrt_full.gnucash-xea,
-	  accounts/de_DE/acctchrt_houseown.gnucash-xea,
-	  accounts/de_DE/acctchrt_investment.gnucash-xea,
-	  accounts/de_DE/acctchrt_kids.gnucash-xea,
-	  accounts/de_DE/acctchrt_otherasset.gnucash-xea,
-	  accounts/de_DE/acctchrt_otherloan.gnucash-xea,
-	  accounts/de_DE/acctchrt_skr03.gnucash-xea,
-	  accounts/de_DE/acctchrt_skr04.gnucash-xea,
-	  accounts/de_DE/acctchrt_skr49.gnucash-xea,
-	  accounts/de_DE/acctchrt_studium.gnucash-xea,
-	  accounts/de_DE/acctchrt_wohnungsw.gnucash-xea,
-	  accounts/el_GR/acctchrt_brokerage.gnucash-xea,
-	  accounts/el_GR/acctchrt_carloan.gnucash-xea,
-	  accounts/el_GR/acctchrt_common.gnucash-xea,
-	  accounts/en_GB/acctchrt_brokerage.gnucash-xea,
-	  accounts/en_GB/acctchrt_business.gnucash-xea,
-	  accounts/en_GB/acctchrt_carloan.gnucash-xea,
-	  accounts/en_GB/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/en_GB/acctchrt_checkbook.gnucash-xea,
-	  accounts/en_GB/acctchrt_childcare.gnucash-xea,
-	  accounts/en_GB/acctchrt_common.gnucash-xea,
-	  accounts/en_GB/acctchrt_eduloan.gnucash-xea,
-	  accounts/en_GB/acctchrt_fixedassets.gnucash-xea,
-	  accounts/en_GB/acctchrt_full.gnucash-xea,
-	  accounts/en_GB/acctchrt_homeloan.gnucash-xea,
-	  accounts/en_GB/acctchrt_homeown.gnucash-xea,
-	  accounts/en_GB/acctchrt_otherloan.gnucash-xea,
-	  accounts/en_GB/acctchrt_renter.gnucash-xea,
-	  accounts/en_GB/acctchrt_retiremt.gnucash-xea,
-	  accounts/en_GB/acctchrt_spouseinc.gnucash-xea,
-	  accounts/en_GB/acctchrt_spouseretire.gnucash-xea,
-	  accounts/en_GB/uk-vat.gnucash-xea,
-	  accounts/es_ES/acctchrt_brokerage.gnucash-xea,
-	  accounts/es_ES/acctchrt_carloan.gnucash-xea,
-	  accounts/es_ES/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/es_ES/acctchrt_childcare.gnucash-xea,
-	  accounts/es_ES/acctchrt_common.gnucash-xea,
-	  accounts/es_ES/acctchrt_currency.gnucash-xea,
-	  accounts/es_ES/acctchrt_eduloan.gnucash-xea,
-	  accounts/es_ES/acctchrt_fixedassets.gnucash-xea,
-	  accounts/es_ES/acctchrt_homeloan.gnucash-xea,
-	  accounts/es_ES/acctchrt_homeown.gnucash-xea,
-	  accounts/es_ES/acctchrt_otherloan.gnucash-xea,
-	  accounts/es_ES/acctchrt_renter.gnucash-xea,
-	  accounts/es_ES/acctchrt_retiremt.gnucash-xea,
-	  accounts/es_ES/acctchrt_spouseinc.gnucash-xea,
-	  accounts/es_ES/acctchrt_spouseretire.gnucash-xea,
-	  accounts/es_MX/acctchrt_brokerage.gnucash-xea,
-	  accounts/es_MX/acctchrt_carloan.gnucash-xea,
-	  accounts/es_MX/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/es_MX/acctchrt_childcare.gnucash-xea,
-	  accounts/es_MX/acctchrt_common.gnucash-xea,
-	  accounts/es_MX/acctchrt_currency.gnucash-xea,
-	  accounts/es_MX/acctchrt_eduloan.gnucash-xea,
-	  accounts/es_MX/acctchrt_fixedassets.gnucash-xea,
-	  accounts/es_MX/acctchrt_homeloan.gnucash-xea,
-	  accounts/es_MX/acctchrt_homeown.gnucash-xea,
-	  accounts/es_MX/acctchrt_otherloan.gnucash-xea,
-	  accounts/es_MX/acctchrt_renter.gnucash-xea,
-	  accounts/es_MX/acctchrt_retiremt.gnucash-xea,
-	  accounts/es_MX/acctchrt_spouseinc.gnucash-xea,
-	  accounts/es_MX/acctchrt_spouseretire.gnucash-xea,
-	  accounts/fi_FI/acctchrt_common.gnucash-xea,
-	  accounts/fi_FI/acctchrt_ry.gnucash-xea,
-	  accounts/fr_CA/acctchrt_actifsfixes.gnucash-xea,
-	  accounts/fr_CA/acctchrt_automobile.gnucash-xea,
-	  accounts/fr_CA/acctchrt_basecommune.gnucash-xea,
-	  accounts/fr_CA/acctchrt_cdmarchemon.gnucash-xea,
-	  accounts/fr_CA/acctchrt_chequier.gnucash-xea,
-	  accounts/fr_CA/acctchrt_conjointretraite.gnucash-xea,
-	  accounts/fr_CA/acctchrt_conjointrev.gnucash-xea,
-	  accounts/fr_CA/acctchrt_courtage.gnucash-xea,
-	  accounts/fr_CA/acctchrt_etudeemprunt.gnucash-xea,
-	  accounts/fr_CA/acctchrt_garderie.gnucash-xea,
-	  accounts/fr_CA/acctchrt_locataire.gnucash-xea,
-	  accounts/fr_CA/acctchrt_proprietaire.gnucash-xea,
-	  accounts/fr_CA/acctchrt_retraite.gnucash-xea,
-	  accounts/fr_CA/acctchrt_revenus.gnucash-xea,
-	  accounts/fr_CH/acctchrt_brokerage.gnucash-xea,
-	  accounts/fr_CH/acctchrt_business.gnucash-xea,
-	  accounts/fr_CH/acctchrt_carloan.gnucash-xea,
-	  accounts/fr_CH/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/fr_CH/acctchrt_childcare.gnucash-xea,
-	  accounts/fr_CH/acctchrt_common.gnucash-xea,
-	  accounts/fr_CH/acctchrt_currency.gnucash-xea,
-	  accounts/fr_CH/acctchrt_eduloan.gnucash-xea,
-	  accounts/fr_CH/acctchrt_fixedassets.gnucash-xea,
-	  accounts/fr_CH/acctchrt_homeloan.gnucash-xea,
-	  accounts/fr_CH/acctchrt_homeown.gnucash-xea,
-	  accounts/fr_CH/acctchrt_otherloan.gnucash-xea,
-	  accounts/fr_CH/acctchrt_renter.gnucash-xea,
-	  accounts/fr_CH/acctchrt_retiremt.gnucash-xea,
-	  accounts/fr_CH/acctchrt_spouseinc.gnucash-xea,
-	  accounts/fr_CH/acctchrt_spouseretire.gnucash-xea,
-	  accounts/fr_FR/acctchrt_brokerage.gnucash-xea,
-	  accounts/fr_FR/acctchrt_business.gnucash-xea,
-	  accounts/fr_FR/acctchrt_carloan.gnucash-xea,
-	  accounts/fr_FR/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/fr_FR/acctchrt_childcare.gnucash-xea,
-	  accounts/fr_FR/acctchrt_common.gnucash-xea,
-	  accounts/fr_FR/acctchrt_currency.gnucash-xea,
-	  accounts/fr_FR/acctchrt_eduloan.gnucash-xea,
-	  accounts/fr_FR/acctchrt_fixedassets.gnucash-xea,
-	  accounts/fr_FR/acctchrt_homeloan.gnucash-xea,
-	  accounts/fr_FR/acctchrt_homeown.gnucash-xea,
-	  accounts/fr_FR/acctchrt_otherloan.gnucash-xea,
-	  accounts/fr_FR/acctchrt_renter.gnucash-xea,
-	  accounts/fr_FR/acctchrt_retiremt.gnucash-xea,
-	  accounts/fr_FR/acctchrt_spouseinc.gnucash-xea,
-	  accounts/fr_FR/acctchrt_spouseretire.gnucash-xea,
-	  accounts/hu_HU/acctchrt_brokerage.gnucash-xea,
-	  accounts/hu_HU/acctchrt_business.gnucash-xea,
-	  accounts/hu_HU/acctchrt_carloan.gnucash-xea,
-	  accounts/hu_HU/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/hu_HU/acctchrt_checkbook.gnucash-xea,
-	  accounts/hu_HU/acctchrt_childcare.gnucash-xea,
-	  accounts/hu_HU/acctchrt_common.gnucash-xea,
-	  accounts/hu_HU/acctchrt_eduloan.gnucash-xea,
-	  accounts/hu_HU/acctchrt_fixedassets.gnucash-xea,
-	  accounts/hu_HU/acctchrt_homeloan.gnucash-xea,
-	  accounts/hu_HU/acctchrt_homeown.gnucash-xea,
-	  accounts/hu_HU/acctchrt_otherloan.gnucash-xea,
-	  accounts/hu_HU/acctchrt_renter.gnucash-xea,
-	  accounts/hu_HU/acctchrt_retiremt.gnucash-xea,
-	  accounts/hu_HU/acctchrt_spouseinc.gnucash-xea,
-	  accounts/hu_HU/acctchrt_spouseretire.gnucash-xea,
-	  accounts/it/acctchrt_brokerage.gnucash-xea,
-	  accounts/it/acctchrt_carloan.gnucash-xea,
-	  accounts/it/acctchrt_checkbook.gnucash-xea,
-	  accounts/it/acctchrt_childcare.gnucash-xea,
-	  accounts/it/acctchrt_common.gnucash-xea,
-	  accounts/it/acctchrt_fixedassets.gnucash-xea,
-	  accounts/it/acctchrt_homeloan.gnucash-xea,
-	  accounts/it/acctchrt_homeown.gnucash-xea,
-	  accounts/it/acctchrt_otherloan.gnucash-xea,
-	  accounts/it/acctchrt_renter.gnucash-xea,
-	  accounts/it/acctchrt_retiremt.gnucash-xea,
-	  accounts/it/acctchrt_spouseinc.gnucash-xea,
-	  accounts/it/acctchrt_spouseretire.gnucash-xea,
-	  accounts/ja/acctchrt_brokerage.gnucash-xea,
-	  accounts/ja/acctchrt_business.gnucash-xea,
-	  accounts/ja/acctchrt_carloan.gnucash-xea,
-	  accounts/ja/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/ja/acctchrt_checkbook.gnucash-xea,
-	  accounts/ja/acctchrt_childcare.gnucash-xea,
-	  accounts/ja/acctchrt_common.gnucash-xea,
-	  accounts/ja/acctchrt_eduloan.gnucash-xea,
-	  accounts/ja/acctchrt_fixedassets.gnucash-xea,
-	  accounts/ja/acctchrt_homeloan.gnucash-xea,
-	  accounts/ja/acctchrt_homeown.gnucash-xea,
-	  accounts/ja/acctchrt_otherloan.gnucash-xea,
-	  accounts/ja/acctchrt_renter.gnucash-xea,
-	  accounts/ja/acctchrt_retiremt.gnucash-xea,
-	  accounts/ja/acctchrt_spouseinc.gnucash-xea,
-	  accounts/ja/acctchrt_spouseretire.gnucash-xea,
-	  accounts/ko/acctchrt_brokerage.gnucash-xea,
-	  accounts/ko/acctchrt_business.gnucash-xea,
-	  accounts/ko/acctchrt_carloan.gnucash-xea,
-	  accounts/ko/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/ko/acctchrt_checkbook.gnucash-xea,
-	  accounts/ko/acctchrt_childcare.gnucash-xea,
-	  accounts/ko/acctchrt_common.gnucash-xea,
-	  accounts/ko/acctchrt_eduloan.gnucash-xea,
-	  accounts/ko/acctchrt_fixedassets.gnucash-xea,
-	  accounts/ko/acctchrt_homeloan.gnucash-xea,
-	  accounts/ko/acctchrt_homeown.gnucash-xea,
-	  accounts/ko/acctchrt_otherloan.gnucash-xea,
-	  accounts/ko/acctchrt_renter.gnucash-xea,
-	  accounts/ko/acctchrt_retiremt.gnucash-xea,
-	  accounts/ko/acctchrt_spouseinc.gnucash-xea,
-	  accounts/ko/acctchrt_spouseretire.gnucash-xea,
-	  accounts/nb/acctchrt_brokerage.gnucash-xea,
-	  accounts/nb/acctchrt_business.gnucash-xea,
-	  accounts/nb/acctchrt_carloan.gnucash-xea,
-	  accounts/nb/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/nb/acctchrt_checkbook.gnucash-xea,
-	  accounts/nb/acctchrt_childcare.gnucash-xea,
-	  accounts/nb/acctchrt_common.gnucash-xea,
-	  accounts/nb/acctchrt_eduloan.gnucash-xea,
-	  accounts/nb/acctchrt_fixedassets.gnucash-xea,
-	  accounts/nb/acctchrt_full.gnucash-xea,
-	  accounts/nb/acctchrt_homeloan.gnucash-xea,
-	  accounts/nb/acctchrt_homeown.gnucash-xea,
-	  accounts/nb/acctchrt_otherloan.gnucash-xea,
-	  accounts/nb/acctchrt_renter.gnucash-xea,
-	  accounts/nb/acctchrt_retiremt.gnucash-xea,
-	  accounts/nb/acctchrt_spouseinc.gnucash-xea,
-	  accounts/nb/acctchrt_spouseretire.gnucash-xea,
-	  accounts/nl/acctchrt_full.gnucash-xea,
-	  accounts/pl/acctchrt_brokerage.gnucash-xea,
-	  accounts/pl/acctchrt_business.gnucash-xea,
-	  accounts/pl/acctchrt_carloan.gnucash-xea,
-	  accounts/pl/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/pl/acctchrt_checkbook.gnucash-xea,
-	  accounts/pl/acctchrt_childcare.gnucash-xea,
-	  accounts/pl/acctchrt_common.gnucash-xea,
-	  accounts/pl/acctchrt_eduloan.gnucash-xea,
-	  accounts/pl/acctchrt_fixedassets.gnucash-xea,
-	  accounts/pl/acctchrt_full.gnucash-xea,
-	  accounts/pl/acctchrt_homeloan.gnucash-xea,
-	  accounts/pl/acctchrt_homeown.gnucash-xea,
-	  accounts/pl/acctchrt_otherloan.gnucash-xea,
-	  accounts/pl/acctchrt_renter.gnucash-xea,
-	  accounts/pl/acctchrt_retiremt.gnucash-xea,
-	  accounts/pl/acctchrt_spouseinc.gnucash-xea,
-	  accounts/pl/acctchrt_spouseretire.gnucash-xea,
-	  accounts/pt_BR/acctchrt_brokerage.gnucash-xea,
-	  accounts/pt_BR/acctchrt_carloan.gnucash-xea,
-	  accounts/pt_BR/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/pt_BR/acctchrt_childcare.gnucash-xea,
-	  accounts/pt_BR/acctchrt_common.gnucash-xea,
-	  accounts/pt_BR/acctchrt_currency.gnucash-xea,
-	  accounts/pt_BR/acctchrt_eduloan.gnucash-xea,
-	  accounts/pt_BR/acctchrt_fixedassets.gnucash-xea,
-	  accounts/pt_BR/acctchrt_homeloan.gnucash-xea,
-	  accounts/pt_BR/acctchrt_homeown.gnucash-xea,
-	  accounts/pt_BR/acctchrt_otherloan.gnucash-xea,
-	  accounts/pt_BR/acctchrt_renter.gnucash-xea,
-	  accounts/pt_BR/acctchrt_retiremt.gnucash-xea,
-	  accounts/pt_BR/acctchrt_spouseinc.gnucash-xea,
-	  accounts/pt_BR/acctchrt_spouseretire.gnucash-xea,
-	  accounts/pt_PT/acctchrt_brokerage.gnucash-xea,
-	  accounts/pt_PT/acctchrt_carloan.gnucash-xea,
-	  accounts/pt_PT/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/pt_PT/acctchrt_childcare.gnucash-xea,
-	  accounts/pt_PT/acctchrt_common.gnucash-xea,
-	  accounts/pt_PT/acctchrt_eduloan.gnucash-xea,
-	  accounts/pt_PT/acctchrt_fixedassets.gnucash-xea,
-	  accounts/pt_PT/acctchrt_homeloan.gnucash-xea,
-	  accounts/pt_PT/acctchrt_homeown.gnucash-xea,
-	  accounts/pt_PT/acctchrt_otherloan.gnucash-xea,
-	  accounts/pt_PT/acctchrt_renter.gnucash-xea,
-	  accounts/pt_PT/acctchrt_retiremt.gnucash-xea,
-	  accounts/pt_PT/acctchrt_spouseinc.gnucash-xea,
-	  accounts/pt_PT/acctchrt_spouseretire.gnucash-xea,
-	  accounts/ru/acctchrt_common.gnucash-xea,
-	  accounts/ru/acctchrt_homeloan.gnucash-xea,
-	  accounts/ru/acctchrt_homeown.gnucash-xea,
-	  accounts/ru/acctchrt_renter.gnucash-xea,
-	  accounts/sk/acctchrt_brokerage.gnucash-xea,
-	  accounts/sk/acctchrt_carloan.gnucash-xea,
-	  accounts/sk/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/sk/acctchrt_childcare.gnucash-xea,
-	  accounts/sk/acctchrt_common.gnucash-xea,
-	  accounts/sk/acctchrt_currency.gnucash-xea,
-	  accounts/sk/acctchrt_eduloan.gnucash-xea,
-	  accounts/sk/acctchrt_fixedassets.gnucash-xea,
-	  accounts/sk/acctchrt_homeloan.gnucash-xea,
-	  accounts/sk/acctchrt_homeown.gnucash-xea,
-	  accounts/sk/acctchrt_otherloan.gnucash-xea,
-	  accounts/sk/acctchrt_renter.gnucash-xea,
-	  accounts/sk/acctchrt_retiremt.gnucash-xea,
-	  accounts/sk/acctchrt_spouseinc.gnucash-xea,
-	  accounts/sk/acctchrt_spouseretire.gnucash-xea,
-	  accounts/tr_TR/acctchrt_TEKDUZ.gnucash-xea,
-	  accounts/tr_TR/acctchrt_brokerage.gnucash-xea,
-	  accounts/tr_TR/acctchrt_carloan.gnucash-xea,
-	  accounts/tr_TR/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/tr_TR/acctchrt_checkbook.gnucash-xea,
-	  accounts/tr_TR/acctchrt_common.gnucash-xea,
-	  accounts/tr_TR/acctchrt_fixedassets.gnucash-xea,
-	  accounts/tr_TR/acctchrt_homeloan.gnucash-xea,
-	  accounts/zh_CN/acctchrt_brokerage.gnucash-xea,
-	  accounts/zh_CN/acctchrt_business.gnucash-xea,
-	  accounts/zh_CN/acctchrt_carloan.gnucash-xea,
-	  accounts/zh_CN/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/zh_CN/acctchrt_checkbook.gnucash-xea,
-	  accounts/zh_CN/acctchrt_childcare.gnucash-xea,
-	  accounts/zh_CN/acctchrt_common.gnucash-xea,
-	  accounts/zh_CN/acctchrt_eduloan.gnucash-xea,
-	  accounts/zh_CN/acctchrt_fixedassets.gnucash-xea,
-	  accounts/zh_CN/acctchrt_full.gnucash-xea,
-	  accounts/zh_CN/acctchrt_homeloan.gnucash-xea,
-	  accounts/zh_CN/acctchrt_homeown.gnucash-xea,
-	  accounts/zh_CN/acctchrt_otherloan.gnucash-xea,
-	  accounts/zh_CN/acctchrt_renter.gnucash-xea,
-	  accounts/zh_CN/acctchrt_retiremt.gnucash-xea,
-	  accounts/zh_CN/acctchrt_spouseinc.gnucash-xea,
-	  accounts/zh_CN/acctchrt_spouseretire.gnucash-xea,
-	  accounts/zh_HK/acctchrt_business.gnucash-xea,
-	  accounts/zh_TW/acctchrt_business.gnucash-xea,
+	* [r18959] accounts/C/acctchrt_brokerage.systecash-xea,
+	  accounts/C/acctchrt_business.systecash-xea,
+	  accounts/C/acctchrt_carloan.systecash-xea,
+	  accounts/C/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/C/acctchrt_checkbook.systecash-xea,
+	  accounts/C/acctchrt_childcare.systecash-xea,
+	  accounts/C/acctchrt_common.systecash-xea,
+	  accounts/C/acctchrt_eduloan.systecash-xea,
+	  accounts/C/acctchrt_fixedassets.systecash-xea,
+	  accounts/C/acctchrt_full.systecash-xea,
+	  accounts/C/acctchrt_homeloan.systecash-xea,
+	  accounts/C/acctchrt_homeown.systecash-xea,
+	  accounts/C/acctchrt_otherloan.systecash-xea,
+	  accounts/C/acctchrt_renter.systecash-xea,
+	  accounts/C/acctchrt_retiremt.systecash-xea,
+	  accounts/C/acctchrt_spouseinc.systecash-xea,
+	  accounts/C/acctchrt_spouseretire.systecash-xea,
+	  accounts/cs/acctchrt_brokerage.systecash-xea,
+	  accounts/cs/acctchrt_carloan.systecash-xea,
+	  accounts/cs/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/cs/acctchrt_childcare.systecash-xea,
+	  accounts/cs/acctchrt_common.systecash-xea,
+	  accounts/cs/acctchrt_currency.systecash-xea,
+	  accounts/cs/acctchrt_eduloan.systecash-xea,
+	  accounts/cs/acctchrt_fixedassets.systecash-xea,
+	  accounts/cs/acctchrt_homeloan.systecash-xea,
+	  accounts/cs/acctchrt_homeown.systecash-xea,
+	  accounts/cs/acctchrt_otherloan.systecash-xea,
+	  accounts/cs/acctchrt_renter.systecash-xea,
+	  accounts/cs/acctchrt_retiremt.systecash-xea,
+	  accounts/cs/acctchrt_spouseinc.systecash-xea,
+	  accounts/cs/acctchrt_spouseretire.systecash-xea,
+	  accounts/da/acctchrt_car.systecash-xea,
+	  accounts/da/acctchrt_common.systecash-xea,
+	  accounts/da/acctchrt_homeloan.systecash-xea,
+	  accounts/da/acctchrt_homeown.systecash-xea,
+	  accounts/de_AT/acctchrt_auto.systecash-xea,
+	  accounts/de_AT/acctchrt_autoloan.systecash-xea,
+	  accounts/de_AT/acctchrt_brokerage.systecash-xea,
+	  accounts/de_AT/acctchrt_business.systecash-xea,
+	  accounts/de_AT/acctchrt_common.systecash-xea,
+	  accounts/de_AT/acctchrt_houseown.systecash-xea,
+	  accounts/de_AT/acctchrt_investment.systecash-xea,
+	  accounts/de_AT/acctchrt_kids.systecash-xea,
+	  accounts/de_CH/acctchrt_brokerage.systecash-xea,
+	  accounts/de_CH/acctchrt_chkmu.systecash-xea,
+	  accounts/de_CH/acctchrt_common.systecash-xea,
+	  accounts/de_CH/acctchrt_kids.systecash-xea,
+	  accounts/de_CH/acctchrt_otherasset.systecash-xea,
+	  accounts/de_CH/acctchrt_otherloan.systecash-xea,
+	  accounts/de_DE/acctchrt_auto.systecash-xea,
+	  accounts/de_DE/acctchrt_autoloan.systecash-xea,
+	  accounts/de_DE/acctchrt_brokerage.systecash-xea,
+	  accounts/de_DE/acctchrt_common.systecash-xea,
+	  accounts/de_DE/acctchrt_full.systecash-xea,
+	  accounts/de_DE/acctchrt_houseown.systecash-xea,
+	  accounts/de_DE/acctchrt_investment.systecash-xea,
+	  accounts/de_DE/acctchrt_kids.systecash-xea,
+	  accounts/de_DE/acctchrt_otherasset.systecash-xea,
+	  accounts/de_DE/acctchrt_otherloan.systecash-xea,
+	  accounts/de_DE/acctchrt_skr03.systecash-xea,
+	  accounts/de_DE/acctchrt_skr04.systecash-xea,
+	  accounts/de_DE/acctchrt_skr49.systecash-xea,
+	  accounts/de_DE/acctchrt_studium.systecash-xea,
+	  accounts/de_DE/acctchrt_wohnungsw.systecash-xea,
+	  accounts/el_GR/acctchrt_brokerage.systecash-xea,
+	  accounts/el_GR/acctchrt_carloan.systecash-xea,
+	  accounts/el_GR/acctchrt_common.systecash-xea,
+	  accounts/en_GB/acctchrt_brokerage.systecash-xea,
+	  accounts/en_GB/acctchrt_business.systecash-xea,
+	  accounts/en_GB/acctchrt_carloan.systecash-xea,
+	  accounts/en_GB/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/en_GB/acctchrt_checkbook.systecash-xea,
+	  accounts/en_GB/acctchrt_childcare.systecash-xea,
+	  accounts/en_GB/acctchrt_common.systecash-xea,
+	  accounts/en_GB/acctchrt_eduloan.systecash-xea,
+	  accounts/en_GB/acctchrt_fixedassets.systecash-xea,
+	  accounts/en_GB/acctchrt_full.systecash-xea,
+	  accounts/en_GB/acctchrt_homeloan.systecash-xea,
+	  accounts/en_GB/acctchrt_homeown.systecash-xea,
+	  accounts/en_GB/acctchrt_otherloan.systecash-xea,
+	  accounts/en_GB/acctchrt_renter.systecash-xea,
+	  accounts/en_GB/acctchrt_retiremt.systecash-xea,
+	  accounts/en_GB/acctchrt_spouseinc.systecash-xea,
+	  accounts/en_GB/acctchrt_spouseretire.systecash-xea,
+	  accounts/en_GB/uk-vat.systecash-xea,
+	  accounts/es_ES/acctchrt_brokerage.systecash-xea,
+	  accounts/es_ES/acctchrt_carloan.systecash-xea,
+	  accounts/es_ES/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/es_ES/acctchrt_childcare.systecash-xea,
+	  accounts/es_ES/acctchrt_common.systecash-xea,
+	  accounts/es_ES/acctchrt_currency.systecash-xea,
+	  accounts/es_ES/acctchrt_eduloan.systecash-xea,
+	  accounts/es_ES/acctchrt_fixedassets.systecash-xea,
+	  accounts/es_ES/acctchrt_homeloan.systecash-xea,
+	  accounts/es_ES/acctchrt_homeown.systecash-xea,
+	  accounts/es_ES/acctchrt_otherloan.systecash-xea,
+	  accounts/es_ES/acctchrt_renter.systecash-xea,
+	  accounts/es_ES/acctchrt_retiremt.systecash-xea,
+	  accounts/es_ES/acctchrt_spouseinc.systecash-xea,
+	  accounts/es_ES/acctchrt_spouseretire.systecash-xea,
+	  accounts/es_MX/acctchrt_brokerage.systecash-xea,
+	  accounts/es_MX/acctchrt_carloan.systecash-xea,
+	  accounts/es_MX/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/es_MX/acctchrt_childcare.systecash-xea,
+	  accounts/es_MX/acctchrt_common.systecash-xea,
+	  accounts/es_MX/acctchrt_currency.systecash-xea,
+	  accounts/es_MX/acctchrt_eduloan.systecash-xea,
+	  accounts/es_MX/acctchrt_fixedassets.systecash-xea,
+	  accounts/es_MX/acctchrt_homeloan.systecash-xea,
+	  accounts/es_MX/acctchrt_homeown.systecash-xea,
+	  accounts/es_MX/acctchrt_otherloan.systecash-xea,
+	  accounts/es_MX/acctchrt_renter.systecash-xea,
+	  accounts/es_MX/acctchrt_retiremt.systecash-xea,
+	  accounts/es_MX/acctchrt_spouseinc.systecash-xea,
+	  accounts/es_MX/acctchrt_spouseretire.systecash-xea,
+	  accounts/fi_FI/acctchrt_common.systecash-xea,
+	  accounts/fi_FI/acctchrt_ry.systecash-xea,
+	  accounts/fr_CA/acctchrt_actifsfixes.systecash-xea,
+	  accounts/fr_CA/acctchrt_automobile.systecash-xea,
+	  accounts/fr_CA/acctchrt_basecommune.systecash-xea,
+	  accounts/fr_CA/acctchrt_cdmarchemon.systecash-xea,
+	  accounts/fr_CA/acctchrt_chequier.systecash-xea,
+	  accounts/fr_CA/acctchrt_conjointretraite.systecash-xea,
+	  accounts/fr_CA/acctchrt_conjointrev.systecash-xea,
+	  accounts/fr_CA/acctchrt_courtage.systecash-xea,
+	  accounts/fr_CA/acctchrt_etudeemprunt.systecash-xea,
+	  accounts/fr_CA/acctchrt_garderie.systecash-xea,
+	  accounts/fr_CA/acctchrt_locataire.systecash-xea,
+	  accounts/fr_CA/acctchrt_proprietaire.systecash-xea,
+	  accounts/fr_CA/acctchrt_retraite.systecash-xea,
+	  accounts/fr_CA/acctchrt_revenus.systecash-xea,
+	  accounts/fr_CH/acctchrt_brokerage.systecash-xea,
+	  accounts/fr_CH/acctchrt_business.systecash-xea,
+	  accounts/fr_CH/acctchrt_carloan.systecash-xea,
+	  accounts/fr_CH/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/fr_CH/acctchrt_childcare.systecash-xea,
+	  accounts/fr_CH/acctchrt_common.systecash-xea,
+	  accounts/fr_CH/acctchrt_currency.systecash-xea,
+	  accounts/fr_CH/acctchrt_eduloan.systecash-xea,
+	  accounts/fr_CH/acctchrt_fixedassets.systecash-xea,
+	  accounts/fr_CH/acctchrt_homeloan.systecash-xea,
+	  accounts/fr_CH/acctchrt_homeown.systecash-xea,
+	  accounts/fr_CH/acctchrt_otherloan.systecash-xea,
+	  accounts/fr_CH/acctchrt_renter.systecash-xea,
+	  accounts/fr_CH/acctchrt_retiremt.systecash-xea,
+	  accounts/fr_CH/acctchrt_spouseinc.systecash-xea,
+	  accounts/fr_CH/acctchrt_spouseretire.systecash-xea,
+	  accounts/fr_FR/acctchrt_brokerage.systecash-xea,
+	  accounts/fr_FR/acctchrt_business.systecash-xea,
+	  accounts/fr_FR/acctchrt_carloan.systecash-xea,
+	  accounts/fr_FR/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/fr_FR/acctchrt_childcare.systecash-xea,
+	  accounts/fr_FR/acctchrt_common.systecash-xea,
+	  accounts/fr_FR/acctchrt_currency.systecash-xea,
+	  accounts/fr_FR/acctchrt_eduloan.systecash-xea,
+	  accounts/fr_FR/acctchrt_fixedassets.systecash-xea,
+	  accounts/fr_FR/acctchrt_homeloan.systecash-xea,
+	  accounts/fr_FR/acctchrt_homeown.systecash-xea,
+	  accounts/fr_FR/acctchrt_otherloan.systecash-xea,
+	  accounts/fr_FR/acctchrt_renter.systecash-xea,
+	  accounts/fr_FR/acctchrt_retiremt.systecash-xea,
+	  accounts/fr_FR/acctchrt_spouseinc.systecash-xea,
+	  accounts/fr_FR/acctchrt_spouseretire.systecash-xea,
+	  accounts/hu_HU/acctchrt_brokerage.systecash-xea,
+	  accounts/hu_HU/acctchrt_business.systecash-xea,
+	  accounts/hu_HU/acctchrt_carloan.systecash-xea,
+	  accounts/hu_HU/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/hu_HU/acctchrt_checkbook.systecash-xea,
+	  accounts/hu_HU/acctchrt_childcare.systecash-xea,
+	  accounts/hu_HU/acctchrt_common.systecash-xea,
+	  accounts/hu_HU/acctchrt_eduloan.systecash-xea,
+	  accounts/hu_HU/acctchrt_fixedassets.systecash-xea,
+	  accounts/hu_HU/acctchrt_homeloan.systecash-xea,
+	  accounts/hu_HU/acctchrt_homeown.systecash-xea,
+	  accounts/hu_HU/acctchrt_otherloan.systecash-xea,
+	  accounts/hu_HU/acctchrt_renter.systecash-xea,
+	  accounts/hu_HU/acctchrt_retiremt.systecash-xea,
+	  accounts/hu_HU/acctchrt_spouseinc.systecash-xea,
+	  accounts/hu_HU/acctchrt_spouseretire.systecash-xea,
+	  accounts/it/acctchrt_brokerage.systecash-xea,
+	  accounts/it/acctchrt_carloan.systecash-xea,
+	  accounts/it/acctchrt_checkbook.systecash-xea,
+	  accounts/it/acctchrt_childcare.systecash-xea,
+	  accounts/it/acctchrt_common.systecash-xea,
+	  accounts/it/acctchrt_fixedassets.systecash-xea,
+	  accounts/it/acctchrt_homeloan.systecash-xea,
+	  accounts/it/acctchrt_homeown.systecash-xea,
+	  accounts/it/acctchrt_otherloan.systecash-xea,
+	  accounts/it/acctchrt_renter.systecash-xea,
+	  accounts/it/acctchrt_retiremt.systecash-xea,
+	  accounts/it/acctchrt_spouseinc.systecash-xea,
+	  accounts/it/acctchrt_spouseretire.systecash-xea,
+	  accounts/ja/acctchrt_brokerage.systecash-xea,
+	  accounts/ja/acctchrt_business.systecash-xea,
+	  accounts/ja/acctchrt_carloan.systecash-xea,
+	  accounts/ja/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/ja/acctchrt_checkbook.systecash-xea,
+	  accounts/ja/acctchrt_childcare.systecash-xea,
+	  accounts/ja/acctchrt_common.systecash-xea,
+	  accounts/ja/acctchrt_eduloan.systecash-xea,
+	  accounts/ja/acctchrt_fixedassets.systecash-xea,
+	  accounts/ja/acctchrt_homeloan.systecash-xea,
+	  accounts/ja/acctchrt_homeown.systecash-xea,
+	  accounts/ja/acctchrt_otherloan.systecash-xea,
+	  accounts/ja/acctchrt_renter.systecash-xea,
+	  accounts/ja/acctchrt_retiremt.systecash-xea,
+	  accounts/ja/acctchrt_spouseinc.systecash-xea,
+	  accounts/ja/acctchrt_spouseretire.systecash-xea,
+	  accounts/ko/acctchrt_brokerage.systecash-xea,
+	  accounts/ko/acctchrt_business.systecash-xea,
+	  accounts/ko/acctchrt_carloan.systecash-xea,
+	  accounts/ko/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/ko/acctchrt_checkbook.systecash-xea,
+	  accounts/ko/acctchrt_childcare.systecash-xea,
+	  accounts/ko/acctchrt_common.systecash-xea,
+	  accounts/ko/acctchrt_eduloan.systecash-xea,
+	  accounts/ko/acctchrt_fixedassets.systecash-xea,
+	  accounts/ko/acctchrt_homeloan.systecash-xea,
+	  accounts/ko/acctchrt_homeown.systecash-xea,
+	  accounts/ko/acctchrt_otherloan.systecash-xea,
+	  accounts/ko/acctchrt_renter.systecash-xea,
+	  accounts/ko/acctchrt_retiremt.systecash-xea,
+	  accounts/ko/acctchrt_spouseinc.systecash-xea,
+	  accounts/ko/acctchrt_spouseretire.systecash-xea,
+	  accounts/nb/acctchrt_brokerage.systecash-xea,
+	  accounts/nb/acctchrt_business.systecash-xea,
+	  accounts/nb/acctchrt_carloan.systecash-xea,
+	  accounts/nb/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/nb/acctchrt_checkbook.systecash-xea,
+	  accounts/nb/acctchrt_childcare.systecash-xea,
+	  accounts/nb/acctchrt_common.systecash-xea,
+	  accounts/nb/acctchrt_eduloan.systecash-xea,
+	  accounts/nb/acctchrt_fixedassets.systecash-xea,
+	  accounts/nb/acctchrt_full.systecash-xea,
+	  accounts/nb/acctchrt_homeloan.systecash-xea,
+	  accounts/nb/acctchrt_homeown.systecash-xea,
+	  accounts/nb/acctchrt_otherloan.systecash-xea,
+	  accounts/nb/acctchrt_renter.systecash-xea,
+	  accounts/nb/acctchrt_retiremt.systecash-xea,
+	  accounts/nb/acctchrt_spouseinc.systecash-xea,
+	  accounts/nb/acctchrt_spouseretire.systecash-xea,
+	  accounts/nl/acctchrt_full.systecash-xea,
+	  accounts/pl/acctchrt_brokerage.systecash-xea,
+	  accounts/pl/acctchrt_business.systecash-xea,
+	  accounts/pl/acctchrt_carloan.systecash-xea,
+	  accounts/pl/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/pl/acctchrt_checkbook.systecash-xea,
+	  accounts/pl/acctchrt_childcare.systecash-xea,
+	  accounts/pl/acctchrt_common.systecash-xea,
+	  accounts/pl/acctchrt_eduloan.systecash-xea,
+	  accounts/pl/acctchrt_fixedassets.systecash-xea,
+	  accounts/pl/acctchrt_full.systecash-xea,
+	  accounts/pl/acctchrt_homeloan.systecash-xea,
+	  accounts/pl/acctchrt_homeown.systecash-xea,
+	  accounts/pl/acctchrt_otherloan.systecash-xea,
+	  accounts/pl/acctchrt_renter.systecash-xea,
+	  accounts/pl/acctchrt_retiremt.systecash-xea,
+	  accounts/pl/acctchrt_spouseinc.systecash-xea,
+	  accounts/pl/acctchrt_spouseretire.systecash-xea,
+	  accounts/pt_BR/acctchrt_brokerage.systecash-xea,
+	  accounts/pt_BR/acctchrt_carloan.systecash-xea,
+	  accounts/pt_BR/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/pt_BR/acctchrt_childcare.systecash-xea,
+	  accounts/pt_BR/acctchrt_common.systecash-xea,
+	  accounts/pt_BR/acctchrt_currency.systecash-xea,
+	  accounts/pt_BR/acctchrt_eduloan.systecash-xea,
+	  accounts/pt_BR/acctchrt_fixedassets.systecash-xea,
+	  accounts/pt_BR/acctchrt_homeloan.systecash-xea,
+	  accounts/pt_BR/acctchrt_homeown.systecash-xea,
+	  accounts/pt_BR/acctchrt_otherloan.systecash-xea,
+	  accounts/pt_BR/acctchrt_renter.systecash-xea,
+	  accounts/pt_BR/acctchrt_retiremt.systecash-xea,
+	  accounts/pt_BR/acctchrt_spouseinc.systecash-xea,
+	  accounts/pt_BR/acctchrt_spouseretire.systecash-xea,
+	  accounts/pt_PT/acctchrt_brokerage.systecash-xea,
+	  accounts/pt_PT/acctchrt_carloan.systecash-xea,
+	  accounts/pt_PT/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/pt_PT/acctchrt_childcare.systecash-xea,
+	  accounts/pt_PT/acctchrt_common.systecash-xea,
+	  accounts/pt_PT/acctchrt_eduloan.systecash-xea,
+	  accounts/pt_PT/acctchrt_fixedassets.systecash-xea,
+	  accounts/pt_PT/acctchrt_homeloan.systecash-xea,
+	  accounts/pt_PT/acctchrt_homeown.systecash-xea,
+	  accounts/pt_PT/acctchrt_otherloan.systecash-xea,
+	  accounts/pt_PT/acctchrt_renter.systecash-xea,
+	  accounts/pt_PT/acctchrt_retiremt.systecash-xea,
+	  accounts/pt_PT/acctchrt_spouseinc.systecash-xea,
+	  accounts/pt_PT/acctchrt_spouseretire.systecash-xea,
+	  accounts/ru/acctchrt_common.systecash-xea,
+	  accounts/ru/acctchrt_homeloan.systecash-xea,
+	  accounts/ru/acctchrt_homeown.systecash-xea,
+	  accounts/ru/acctchrt_renter.systecash-xea,
+	  accounts/sk/acctchrt_brokerage.systecash-xea,
+	  accounts/sk/acctchrt_carloan.systecash-xea,
+	  accounts/sk/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/sk/acctchrt_childcare.systecash-xea,
+	  accounts/sk/acctchrt_common.systecash-xea,
+	  accounts/sk/acctchrt_currency.systecash-xea,
+	  accounts/sk/acctchrt_eduloan.systecash-xea,
+	  accounts/sk/acctchrt_fixedassets.systecash-xea,
+	  accounts/sk/acctchrt_homeloan.systecash-xea,
+	  accounts/sk/acctchrt_homeown.systecash-xea,
+	  accounts/sk/acctchrt_otherloan.systecash-xea,
+	  accounts/sk/acctchrt_renter.systecash-xea,
+	  accounts/sk/acctchrt_retiremt.systecash-xea,
+	  accounts/sk/acctchrt_spouseinc.systecash-xea,
+	  accounts/sk/acctchrt_spouseretire.systecash-xea,
+	  accounts/tr_TR/acctchrt_TEKDUZ.systecash-xea,
+	  accounts/tr_TR/acctchrt_brokerage.systecash-xea,
+	  accounts/tr_TR/acctchrt_carloan.systecash-xea,
+	  accounts/tr_TR/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/tr_TR/acctchrt_checkbook.systecash-xea,
+	  accounts/tr_TR/acctchrt_common.systecash-xea,
+	  accounts/tr_TR/acctchrt_fixedassets.systecash-xea,
+	  accounts/tr_TR/acctchrt_homeloan.systecash-xea,
+	  accounts/zh_CN/acctchrt_brokerage.systecash-xea,
+	  accounts/zh_CN/acctchrt_business.systecash-xea,
+	  accounts/zh_CN/acctchrt_carloan.systecash-xea,
+	  accounts/zh_CN/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/zh_CN/acctchrt_checkbook.systecash-xea,
+	  accounts/zh_CN/acctchrt_childcare.systecash-xea,
+	  accounts/zh_CN/acctchrt_common.systecash-xea,
+	  accounts/zh_CN/acctchrt_eduloan.systecash-xea,
+	  accounts/zh_CN/acctchrt_fixedassets.systecash-xea,
+	  accounts/zh_CN/acctchrt_full.systecash-xea,
+	  accounts/zh_CN/acctchrt_homeloan.systecash-xea,
+	  accounts/zh_CN/acctchrt_homeown.systecash-xea,
+	  accounts/zh_CN/acctchrt_otherloan.systecash-xea,
+	  accounts/zh_CN/acctchrt_renter.systecash-xea,
+	  accounts/zh_CN/acctchrt_retiremt.systecash-xea,
+	  accounts/zh_CN/acctchrt_spouseinc.systecash-xea,
+	  accounts/zh_CN/acctchrt_spouseretire.systecash-xea,
+	  accounts/zh_HK/acctchrt_business.systecash-xea,
+	  accounts/zh_TW/acctchrt_business.systecash-xea,
 	  doc/README-de.win32-bin.txt, doc/README-fr.win32-bin.txt,
 	  doc/README-it.win32-bin.txt, doc/README-nl.win32-bin.txt,
 	  doc/README.win32-bin.txt, doc/examples/Money95bank_fr.qif,
@@ -6985,7 +6985,7 @@
 	  src/backend/xml/test/test-xml-pricedb.c,
 	  src/backend/xml/test/test-xml-transaction.c,
 	  src/backend/xml/test/test-xml2-is-file.c, src/base-typemaps.i,
-	  src/bin/gnucash-bin.c,
+	  src/bin/systecash-bin.c,
 	  src/business/business-core/business-core.i,
 	  src/business/business-core/gncAddress.c,
 	  src/business/business-core/gncAddress.h,
@@ -7640,7 +7640,7 @@
 	  src/libqof/qof/qofsession.h, src/libqof/qof/qofsql.c,
 	  src/libqof/qof/qofsql.h, src/libqof/qof/qofutil.c,
 	  src/libqof/qof/qofutil.h, src/optional/python-bindings/glib.i,
-	  src/optional/python-bindings/gnucash_core.i,
+	  src/optional/python-bindings/systecash_core.i,
 	  src/optional/python-bindings/timespec.i, src/platform.h,
 	  src/register/ledger-core/dialog-dup-trans.c,
 	  src/register/ledger-core/gnc-ledger-display.c,
@@ -7699,26 +7699,26 @@
 	  src/register/register-gnome/formulacell-gnome.c,
 	  src/register/register-gnome/formulacell-gnome.h,
 	  src/register/register-gnome/gncmod-register-gnome.c,
-	  src/register/register-gnome/gnucash-color.c,
-	  src/register/register-gnome/gnucash-color.h,
-	  src/register/register-gnome/gnucash-cursor.c,
-	  src/register/register-gnome/gnucash-cursor.h,
-	  src/register/register-gnome/gnucash-date-picker.c,
-	  src/register/register-gnome/gnucash-date-picker.h,
-	  src/register/register-gnome/gnucash-grid.c,
-	  src/register/register-gnome/gnucash-grid.h,
-	  src/register/register-gnome/gnucash-header.c,
-	  src/register/register-gnome/gnucash-header.h,
-	  src/register/register-gnome/gnucash-item-edit.c,
-	  src/register/register-gnome/gnucash-item-edit.h,
-	  src/register/register-gnome/gnucash-item-list.c,
-	  src/register/register-gnome/gnucash-item-list.h,
-	  src/register/register-gnome/gnucash-scrolled-window.c,
-	  src/register/register-gnome/gnucash-scrolled-window.h,
-	  src/register/register-gnome/gnucash-sheet.c,
-	  src/register/register-gnome/gnucash-sheet.h,
-	  src/register/register-gnome/gnucash-style.c,
-	  src/register/register-gnome/gnucash-style.h,
+	  src/register/register-gnome/systecash-color.c,
+	  src/register/register-gnome/systecash-color.h,
+	  src/register/register-gnome/systecash-cursor.c,
+	  src/register/register-gnome/systecash-cursor.h,
+	  src/register/register-gnome/systecash-date-picker.c,
+	  src/register/register-gnome/systecash-date-picker.h,
+	  src/register/register-gnome/systecash-grid.c,
+	  src/register/register-gnome/systecash-grid.h,
+	  src/register/register-gnome/systecash-header.c,
+	  src/register/register-gnome/systecash-header.h,
+	  src/register/register-gnome/systecash-item-edit.c,
+	  src/register/register-gnome/systecash-item-edit.h,
+	  src/register/register-gnome/systecash-item-list.c,
+	  src/register/register-gnome/systecash-item-list.h,
+	  src/register/register-gnome/systecash-scrolled-window.c,
+	  src/register/register-gnome/systecash-scrolled-window.h,
+	  src/register/register-gnome/systecash-sheet.c,
+	  src/register/register-gnome/systecash-sheet.h,
+	  src/register/register-gnome/systecash-style.c,
+	  src/register/register-gnome/systecash-style.h,
 	  src/register/register-gnome/pricecell-gnome.c,
 	  src/register/register-gnome/pricecell-gnome.h,
 	  src/register/register-gnome/quickfillcell-gnome.c,
@@ -7865,7 +7865,7 @@
 
 2010-03-21 19:13  jralls
 
-	* [r18942] src/bin/gnucash-bin.c: Forgot to delete a diagnostic in
+	* [r18942] src/bin/systecash-bin.c: Forgot to delete a diagnostic in
 	  18941
 
 2010-03-21 09:37  cstim
@@ -7878,7 +7878,7 @@
 
 2010-03-21 00:40  jralls
 
-	* [r18940] src/bin/gnucash-bin.c, src/core-utils/Makefile.am,
+	* [r18940] src/bin/systecash-bin.c, src/core-utils/Makefile.am,
 	  src/core-utils/binreloc.c, src/core-utils/binreloc.h,
 	  src/core-utils/gnc-path.c, src/engine/Makefile.am,
 	  src/gnc/main.cpp: Fixup binreloc, which wasn't working correctly
@@ -7999,7 +7999,7 @@
 
 2010-03-17 10:54  gjanssens
 
-	* [r18923] packaging/win32/gnucash.iss.in: Fix Windows installer
+	* [r18923] packaging/win32/systecash.iss.in: Fix Windows installer
 	  doc to have perl >= 5.8 instead of 5.10
 
 2010-03-16 19:48  cstim
@@ -8106,7 +8106,7 @@
 	  src/gnc/Numeric.hpp, src/gnc/main.cpp: Revert r18869, "Move
 	  gnc-ui-util.[hc] and gnc-euro.[hc] from app-utils to engine"
 	  Those files indeed belong better into app-utils; the app-utils
-	  defines several not-yet-GUI parts of gnucash, like many
+	  defines several not-yet-GUI parts of systecash, like many
 	  conversions from and to strings (more than those in these two
 	  files), so these files are well suited in here.
 
@@ -8592,9 +8592,9 @@
 	* [r18847] src/gnc/ScopedPointer.hpp, src/gnc/mainwindow.cpp,
 	  src/gnc/mainwindow.hpp: Cutecash: Remove QSharedPointer because
 	  manual delete is sufficient. Also, the QSharedPointer cannot be
-	  used for bookkeeping of a C pointer to any gnucash object
+	  used for bookkeeping of a C pointer to any systecash object
 	  because it refuses to work if it doesn't know the actual struct
-	  definition, which in gnucash is always private. The
+	  definition, which in systecash is always private. The
 	  boost::shared_ptr would work without (by the custom deleter
 	  argument in the constructor), but QSharedPointer doesn't (the
 	  custom deleter is accepted only in addition to the known storage
@@ -8801,7 +8801,7 @@
 2010-03-04 21:05  cstim
 
 	* [r18822] src/gnc/CMakeLists.txt, src/gnc/gnc.qrc,
-	  src/gnc/gnucash.qrc, src/gnc/gtk-icons, src/gnc/gtk-icons.qrc,
+	  src/gnc/systecash.qrc, src/gnc/gtk-icons, src/gnc/gtk-icons.qrc,
 	  src/gnc/gtk-icons/gtk-about.png, src/gnc/gtk-icons/gtk-copy.png,
 	  src/gnc/gtk-icons/gtk-cut.png, src/gnc/gtk-icons/gtk-new.png,
 	  src/gnc/gtk-icons/gtk-open.png, src/gnc/gtk-icons/gtk-paste.png,
@@ -9225,25 +9225,25 @@
 	  src/register/register-gnome/combocell-gnome.c,
 	  src/register/register-gnome/datecell-gnome.c,
 	  src/register/register-gnome/formulacell-gnome.c,
-	  src/register/register-gnome/gnucash-color.c,
-	  src/register/register-gnome/gnucash-cursor.c,
-	  src/register/register-gnome/gnucash-cursor.h,
-	  src/register/register-gnome/gnucash-date-picker.c,
-	  src/register/register-gnome/gnucash-date-picker.h,
-	  src/register/register-gnome/gnucash-grid.c,
-	  src/register/register-gnome/gnucash-grid.h,
-	  src/register/register-gnome/gnucash-header.c,
-	  src/register/register-gnome/gnucash-header.h,
-	  src/register/register-gnome/gnucash-item-edit.c,
-	  src/register/register-gnome/gnucash-item-edit.h,
-	  src/register/register-gnome/gnucash-item-list.c,
-	  src/register/register-gnome/gnucash-item-list.h,
-	  src/register/register-gnome/gnucash-scrolled-window.c,
-	  src/register/register-gnome/gnucash-scrolled-window.h,
-	  src/register/register-gnome/gnucash-sheet.c,
-	  src/register/register-gnome/gnucash-sheet.h,
-	  src/register/register-gnome/gnucash-style.c,
-	  src/register/register-gnome/gnucash-style.h,
+	  src/register/register-gnome/systecash-color.c,
+	  src/register/register-gnome/systecash-cursor.c,
+	  src/register/register-gnome/systecash-cursor.h,
+	  src/register/register-gnome/systecash-date-picker.c,
+	  src/register/register-gnome/systecash-date-picker.h,
+	  src/register/register-gnome/systecash-grid.c,
+	  src/register/register-gnome/systecash-grid.h,
+	  src/register/register-gnome/systecash-header.c,
+	  src/register/register-gnome/systecash-header.h,
+	  src/register/register-gnome/systecash-item-edit.c,
+	  src/register/register-gnome/systecash-item-edit.h,
+	  src/register/register-gnome/systecash-item-list.c,
+	  src/register/register-gnome/systecash-item-list.h,
+	  src/register/register-gnome/systecash-scrolled-window.c,
+	  src/register/register-gnome/systecash-scrolled-window.h,
+	  src/register/register-gnome/systecash-sheet.c,
+	  src/register/register-gnome/systecash-sheet.h,
+	  src/register/register-gnome/systecash-style.c,
+	  src/register/register-gnome/systecash-style.h,
 	  src/register/register-gnome/pricecell-gnome.c,
 	  src/register/register-gnome/quickfillcell-gnome.c,
 	  src/register/register-gnome/table-gnome.c,
@@ -9433,7 +9433,7 @@
 2010-03-02 14:54  gjanssens
 
 	* [r18779] packaging/win32/install.sh: Bug #611470 Add Japanese
-	  concepts guide into GnuCash installer, patch by Yasuaki Taniguchi
+	  concepts guide into systecash installer, patch by Yasuaki Taniguchi
 
 2010-03-02 12:00  gjanssens
 
@@ -9454,7 +9454,7 @@
 	  src/gnc/bla.html, src/gnc/gnc.qrc, src/gnc/main.cpp,
 	  src/gnc/mainwindow.cpp, src/gnc/mainwindow.hpp,
 	  src/gnc/mainwindow.ui, src/test-core/test-main.c: Add example
-	  main window in C++ and Qt that links against gnucash-engine. The
+	  main window in C++ and Qt that links against systecash-engine. The
 	  example was based on Qt4's "application" example, but the main
 	  window layout is done through the .ui file already.
 	* [r18775] src/libqof/qof/qoflog.c: MSVC compatibility: Somehow
@@ -9518,11 +9518,11 @@
 
 2010-02-28 22:53  jralls
 
-	* [r18765] AUTHORS, src/bin/gnucash-setup-env-osx.in,
+	* [r18765] AUTHORS, src/bin/systecash-setup-env-osx.in,
 	  src/engine/gnc-filepath-utils.c,
 	  src/engine/gnc-filepath-utils.h, src/engine/test/Makefile.am,
 	  src/engine/test/test-resolve-file-path.c: Redo of the
-	  dot-gnucash fix (so that GNC_DOT_DIR actually works) fixing bug
+	  dot-systecash fix (so that GNC_DOT_DIR actually works) fixing bug
 	  610707, adding Doxygen comments for all functions in
 	  gnc-filepath-utils, and adding testing for xaccResolveURI and
 	  more tests for xaccResolveFilePath.
@@ -9745,9 +9745,9 @@
 
 2010-02-27 02:03  plongstaff
 
-	* [r18742] src/register/register-gnome/gnucash-item-edit.c,
-	  src/register/register-gnome/gnucash-sheet.c,
-	  src/register/register-gnome/gnucash-sheet.h: Bug 605802: Can't
+	* [r18742] src/register/register-gnome/systecash-item-edit.c,
+	  src/register/register-gnome/systecash-sheet.c,
+	  src/register/register-gnome/systecash-sheet.h: Bug 605802: Can't
 	  input Japanese characters at an account register window on
 	  windows with SCIM, IIIMF and XIM Latest patch by Yasuaki
 	  Taniguchi to fix two problems 1) Can't use account separator
@@ -9756,7 +9756,7 @@
 
 2010-02-26 21:56  jralls
 
-	* [r18741] AUTHORS, src/bin/gnucash-setup-env-osx.in,
+	* [r18741] AUTHORS, src/bin/systecash-setup-env-osx.in,
 	  src/engine/gnc-filepath-utils.c,
 	  src/engine/gnc-filepath-utils.h: Reverted 18699
 
@@ -9826,9 +9826,9 @@
 
 2010-02-25 13:39  plongstaff
 
-	* [r18732] src/register/register-gnome/gnucash-item-edit.c,
-	  src/register/register-gnome/gnucash-sheet.c,
-	  src/register/register-gnome/gnucash-sheet.h: Revert r18713
+	* [r18732] src/register/register-gnome/systecash-item-edit.c,
+	  src/register/register-gnome/systecash-sheet.c,
+	  src/register/register-gnome/systecash-sheet.h: Revert r18713
 	  (reopen 605802 "Input of Japanese characters". This commit had 2
 	  problems: 1) when entering an account name, the account
 	  separator would no longer accept at the current level of the
@@ -9848,19 +9848,19 @@
 2010-02-25 12:05  gjanssens
 
 	* [r18729] src/gnome-utils/print-session.h: Remove reference to
-	  gnome print in the comments GnuCash no longer uses gnome print.
+	  gnome print in the comments systecash no longer uses gnome print.
 	  It has been replaced with gtk print.
 
 2010-02-25 11:45  gjanssens
 
-	* [r18728] packaging/gnucash-2.1.x.ebuild,
-	  src/debug/valgrind/valgrind-gnucash.supp: Remove two more popt
+	* [r18728] packaging/systecash-2.1.x.ebuild,
+	  src/debug/valgrind/valgrind-systecash.supp: Remove two more popt
 	  references in support files.
 
 2010-02-25 11:36  gjanssens
 
 	* [r18727] configure.in: Remove popt requirement from configure
-	  GnuCash doesn't use it. At the same time, I removed a check that
+	  systecash doesn't use it. At the same time, I removed a check that
 	  has been commented out since the beginning of the revision
 	  history (somewhere in 2007). This check tested for the presence
 	  of popt.h to then run some libtool changes. As I said this whole
@@ -9870,7 +9870,7 @@
 
 2010-02-24 20:51  gjanssens
 
-	* [r18726] src/bin/gnucash-bin.c: Remove popt references - popt
+	* [r18726] src/bin/systecash-bin.c: Remove popt references - popt
 	  has been replaced with the GOption infrastructure. So there's no
 	  need to include the popt.h file. - Also rewritten the comment
 	  that was elaborating on popt vs GOption - Finally removed the
@@ -9896,7 +9896,7 @@
 
 2010-02-24 19:53  gjanssens
 
-	* [r18723] packaging/win32/gnucash.iss.in: Update documentation
+	* [r18723] packaging/win32/systecash.iss.in: Update documentation
 	  references to Active Perl (5.8->5.10)
 
 2010-02-24 19:49  gjanssens
@@ -9951,7 +9951,7 @@
 2010-02-24 18:30  gjanssens
 
 	* [r18718] doc/Makefile.am, doc/README-nl.win32-bin.txt,
-	  packaging/win32/gnucash.iss.in: Add dutch translation to the
+	  packaging/win32/systecash.iss.in: Add dutch translation to the
 	  Windows installer.
 
 2010-02-24 17:52  cstim
@@ -9986,9 +9986,9 @@
 
 2010-02-23 20:46  cstim
 
-	* [r18713] src/register/register-gnome/gnucash-item-edit.c,
-	  src/register/register-gnome/gnucash-sheet.c,
-	  src/register/register-gnome/gnucash-sheet.h: Bug #605802: Fix
+	* [r18713] src/register/register-gnome/systecash-item-edit.c,
+	  src/register/register-gnome/systecash-sheet.c,
+	  src/register/register-gnome/systecash-sheet.h: Bug #605802: Fix
 	  input of Japanese characters in register with SCIM, IIIMF and
 	  XIM Patch by Yasuaki Taniguchi. Revised and extended version of
 	  r18638. The main functions are as follows: (1) synchronization
@@ -10072,7 +10072,7 @@
 	  src/html/gnc-html-webkit.c,
 	  src/register/register-gnome/combocell-gnome.c,
 	  src/register/register-gnome/datecell-gnome.c,
-	  src/register/register-gnome/gnucash-sheet.c: Bump minimum
+	  src/register/register-gnome/systecash-sheet.c: Bump minimum
 	  required versions of gtk+, goffice and gtkhtml gtk+: 2.10
 	  goffice: 0.5.1 gtkhtml: 3.14
 
@@ -10083,8 +10083,8 @@
 
 2010-02-21 15:50  gjanssens
 
-	* [r18701] src/bin/Makefile.am, src/bin/gnucash-ddd.in: Add a
-	  starter script for gnucash under ddd (a gui frontend for gdb)
+	* [r18701] src/bin/Makefile.am, src/bin/systecash-ddd.in: Add a
+	  starter script for systecash under ddd (a gui frontend for gdb)
 
 2010-02-21 00:27  gjanssens
 
@@ -10094,10 +10094,10 @@
 
 2010-02-20 22:01  jralls
 
-	* [r18699] AUTHORS, src/bin/gnucash-setup-env-osx.in,
+	* [r18699] AUTHORS, src/bin/systecash-setup-env-osx.in,
 	  src/engine/gnc-filepath-utils.c,
 	  src/engine/gnc-filepath-utils.h: Ensure that GNC_DOT_PATH and
-	  other gnc_dotgnucash_dir() logic is used for all cases, remove
+	  other gnc_dotsystecash_dir() logic is used for all cases, remove
 	  hard-coded references to /usr/etc, /usr/share, /usr/local/etc,
 	  and /usr/local/share while providing for xaccResolveFilePath to
 	  actually search the data and sysconfdir directories used in the
@@ -10224,12 +10224,12 @@
 
 2010-02-18 13:02  gjanssens
 
-	* [r18683] accounts/C/acctchrt_full.gnucash-xea,
-	  accounts/en_GB/acctchrt_full.gnucash-xea,
-	  accounts/nb/acctchrt_full.gnucash-xea,
-	  accounts/nl/acctchrt_full.gnucash-xea,
-	  accounts/pl/acctchrt_full.gnucash-xea,
-	  accounts/zh_CN/acctchrt_full.gnucash-xea: Bug #610047 - Dutch
+	* [r18683] accounts/C/acctchrt_full.systecash-xea,
+	  accounts/en_GB/acctchrt_full.systecash-xea,
+	  accounts/nb/acctchrt_full.systecash-xea,
+	  accounts/nl/acctchrt_full.systecash-xea,
+	  accounts/pl/acctchrt_full.systecash-xea,
+	  accounts/zh_CN/acctchrt_full.systecash-xea: Bug #610047 - Dutch
 	  accounts template doesn't work Add missing closing brackets
 
 2010-02-18 05:31  cstim
@@ -10249,7 +10249,7 @@
 	  src/backend/sql/test/test-column-types.c,
 	  src/backend/xml/gnc-backend-xml.c,
 	  src/backend/xml/gnc-book-xml-v2.c,
-	  src/backend/xml/io-gncxml-v2.c, src/bin/gnucash-bin.c,
+	  src/backend/xml/io-gncxml-v2.c, src/bin/systecash-bin.c,
 	  src/business/business-core/gncmod-business-core.c,
 	  src/business/business-core/sql/gncmod-business-backend-sql.c,
 	  src/business/business-core/xml/gncmod-business-backend-xml.c,
@@ -10484,7 +10484,7 @@
 	  re-indentation was done using astyle-1.24 using the following
 	  options: astyle --indent=spaces=4 --brackets=break --pad-oper
 	  --pad-header Discussed at
-	  http://lists.gnucash.org/pipermail/gnucash-devel/2009-August/026121.html
+	  http://lists.systecash.org/pipermail/systecash-devel/2009-August/026121.html
 
 2010-02-18 05:29  cstim
 
@@ -10510,7 +10510,7 @@
 	* [r18672] src/backend/dbi/gnc-backend-dbi.c: Bug #608032: Handle
 	  MySQL connection timeouts with reconnect Patch by Tom van
 	  Braeckel: For the full discussion, see the mailing list:
-	  https://lists.gnucash.org/pipermail/gnucash-devel/2010-February/027323.html
+	  https://lists.systecash.org/pipermail/systecash-devel/2010-February/027323.html
 	  Rationale: When we try to open a database transaction, and the
 	  database reports that the "server has gone away", we try to
 	  reconnect before failing hard.
@@ -10529,7 +10529,7 @@
 	  option, as I do.
 	* [r18670] packaging/win32/install.sh: Bug #609603: Windows
 	  packing/win32/install.sh PATH fix Patch by Yasuaki Taniguchi:
-	  When I run /c/soft/gnucash/inst/bin/gnucash or gnucash.cmd after
+	  When I run /c/soft/systecash/inst/bin/systecash or systecash.cmd after
 	  I finish building win32 binary, DLL missing dialog boxes pop up.
 	  Missing DLLs are - libgcrypto.dll, - libPQ.dll, - mysql.dll, and
 	  - ssleay32.dll. This patch add search path to them to fix this
@@ -10588,9 +10588,9 @@
 
 2010-02-13 10:30  cstim
 
-	* [r18651] src/register/register-gnome/gnucash-item-edit.c,
-	  src/register/register-gnome/gnucash-sheet.c,
-	  src/register/register-gnome/gnucash-sheet.h: Revert r18638, "Bug
+	* [r18651] src/register/register-gnome/systecash-item-edit.c,
+	  src/register/register-gnome/systecash-sheet.c,
+	  src/register/register-gnome/systecash-sheet.h: Revert r18638, "Bug
 	  #605802: Fix input of Japanese characters..." Unfortunately this
 	  changes the behaviour in the amount entry cell of the register
 	  significantly: The string seems to be evaluated into a number
@@ -10605,7 +10605,7 @@
 	  Corrections to taxtxf.scm Patch by J. Alex Aycinena: I attach a
 	  patchfile that corrects two problems with taxtxf.scm: the report
 	  would not gracefully handle the cases where, 1, a datafile from
-	  an earlier version of gnucash might have tax codes assigned to
+	  an earlier version of systecash might have tax codes assigned to
 	  accounts and no tax-entity-type code assigned to the file, and,
 	  2, some cases where accounts had no tax code assigned and the
 	  tax-related flag not set.
@@ -10617,7 +10617,7 @@
 
 2010-02-12 17:46  plongstaff
 
-	* [r18645] Makefile.am: Remove gnucash.lsm from EXTRA_DIST
+	* [r18645] Makefile.am: Remove systecash.lsm from EXTRA_DIST
 
 2010-02-12 17:45  plongstaff
 
@@ -10650,9 +10650,9 @@
 
 2010-02-10 20:35  cstim
 
-	* [r18638] src/register/register-gnome/gnucash-item-edit.c,
-	  src/register/register-gnome/gnucash-sheet.c,
-	  src/register/register-gnome/gnucash-sheet.h: Bug #605802: Fix
+	* [r18638] src/register/register-gnome/systecash-item-edit.c,
+	  src/register/register-gnome/systecash-sheet.c,
+	  src/register/register-gnome/systecash-sheet.h: Bug #605802: Fix
 	  input of Japanese characters in register with SCIM, IIIMF and
 	  XIM Patch by Yasuaki Taniguchi. The main functions are (1)
 	  synchronization of preedit string in the register window and
@@ -10703,13 +10703,13 @@
 
 2010-02-09 13:29  gjanssens
 
-	* [r18630] gnucash.lsm: Remove Linux Software Map description.
+	* [r18630] systecash.lsm: Remove Linux Software Map description.
 	  It's unmaintained for years now.
 
 2010-02-09 13:14  gjanssens
 
 	* [r18629] packaging/win32/Japanese-5-5.1.11.isl,
-	  packaging/win32/Makefile.am, packaging/win32/gnucash.iss.in: Bug
+	  packaging/win32/Makefile.am, packaging/win32/systecash.iss.in: Bug
 	  #609402 Add Japanese resource to Windows (inno) setup
 
 2010-02-08 20:53  gjanssens
@@ -10742,19 +10742,19 @@
 2010-02-08 17:30  gjanssens
 
 	* [r18625] HACKING, configure.in, src/Makefile.am,
-	  src/bin/Makefile.am, src/bin/gnucash-valgrind.in, src/debug,
+	  src/bin/Makefile.am, src/bin/systecash-valgrind.in, src/debug,
 	  src/debug/Makefile.am, src/debug/valgrind,
 	  src/debug/valgrind/Makefile.am,
 	  src/debug/valgrind/valgrind-gdk.supp,
 	  src/debug/valgrind/valgrind-glib.supp,
-	  src/debug/valgrind/valgrind-gnucash.supp,
+	  src/debug/valgrind/valgrind-systecash.supp,
 	  src/debug/valgrind/valgrind-libfontconfig.supp,
 	  src/debug/valgrind/valgrind-libgda.supp,
 	  src/debug/valgrind/valgrind-libguile.supp,
 	  src/debug/valgrind/valgrind-x11.supp, src/doc/Makefile.am,
 	  src/doc/callgrind.txt, src/doc/valgrind.txt,
 	  src/valgrind-gdk.supp, src/valgrind-glib.supp,
-	  src/valgrind-gnucash.supp, src/valgrind-libfontconfig.supp,
+	  src/valgrind-systecash.supp, src/valgrind-libfontconfig.supp,
 	  src/valgrind-libgda.supp, src/valgrind-libguile.supp,
 	  src/valgrind-x11.supp: Move valgrind suppression rules to debug
 	  subdirectory This will require a new run of configure as some
@@ -10850,19 +10850,19 @@
 	  src/gnome/ui/gnc-plugin-page-account-tree-ui.xml,
 	  src/gnome/window-autoclear.c, src/gnome/window-autoclear.h: Bug
 	  #608436: Add auto-clear feature Patch by Cristian KLEIN: = Usage
-	  scenario = John keeps his personal accounting in GnuCash and
+	  scenario = John keeps his personal accounting in systecash and
 	  writes all credit card expenses therein. On weekends, we checks
 	  his Internet Banking and sees that some transactions have been
-	  recorded. He would like to clear those transactions in GnuCash,
+	  recorded. He would like to clear those transactions in systecash,
 	  but it is tiresome to go through each Internet Banking
-	  transaction and do manual comparison with GnuCash records,
+	  transaction and do manual comparison with systecash records,
 	  especially since Internet Banking transactions might be in a
-	  different order than in GnuCash. John would prefer having an
+	  different order than in systecash. John would prefer having an
 	  "auto-clear" feature. Given the "current amount" from the
-	  Internet Banking, he would like GnuCash to clear the
+	  Internet Banking, he would like systecash to clear the
 	  transactions for him, if and only if, there is a unique
 	  combination of transactions that could achieve this. If there is
-	  no solution, or if the solution is not unique, GnuCash should
+	  no solution, or if the solution is not unique, systecash should
 	  warn him and John must manually clear the transactions.
 
 2010-02-03 21:01  cstim
@@ -10896,7 +10896,7 @@
 
 2010-02-03 20:51  cstim
 
-	* [r18606] accounts/en_GB/uk-vat.gnucash-xea: Bug #608874:
+	* [r18606] accounts/en_GB/uk-vat.systecash-xea: Bug #608874:
 	  Spelling fix for Emoluments Patch by Adrian Bridgett.
 
 2010-02-03 19:19  cstim
@@ -10911,22 +10911,22 @@
 
 2010-02-02 21:35  cstim
 
-	* [r18604] accounts/ja/acctchrt_brokerage.gnucash-xea,
-	  accounts/ja/acctchrt_business.gnucash-xea,
-	  accounts/ja/acctchrt_carloan.gnucash-xea,
-	  accounts/ja/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/ja/acctchrt_checkbook.gnucash-xea,
-	  accounts/ja/acctchrt_childcare.gnucash-xea,
-	  accounts/ja/acctchrt_common.gnucash-xea,
-	  accounts/ja/acctchrt_eduloan.gnucash-xea,
-	  accounts/ja/acctchrt_fixedassets.gnucash-xea,
-	  accounts/ja/acctchrt_homeloan.gnucash-xea,
-	  accounts/ja/acctchrt_homeown.gnucash-xea,
-	  accounts/ja/acctchrt_otherloan.gnucash-xea,
-	  accounts/ja/acctchrt_renter.gnucash-xea,
-	  accounts/ja/acctchrt_retiremt.gnucash-xea,
-	  accounts/ja/acctchrt_spouseinc.gnucash-xea,
-	  accounts/ja/acctchrt_spouseretire.gnucash-xea: Remove executable
+	* [r18604] accounts/ja/acctchrt_brokerage.systecash-xea,
+	  accounts/ja/acctchrt_business.systecash-xea,
+	  accounts/ja/acctchrt_carloan.systecash-xea,
+	  accounts/ja/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/ja/acctchrt_checkbook.systecash-xea,
+	  accounts/ja/acctchrt_childcare.systecash-xea,
+	  accounts/ja/acctchrt_common.systecash-xea,
+	  accounts/ja/acctchrt_eduloan.systecash-xea,
+	  accounts/ja/acctchrt_fixedassets.systecash-xea,
+	  accounts/ja/acctchrt_homeloan.systecash-xea,
+	  accounts/ja/acctchrt_homeown.systecash-xea,
+	  accounts/ja/acctchrt_otherloan.systecash-xea,
+	  accounts/ja/acctchrt_renter.systecash-xea,
+	  accounts/ja/acctchrt_retiremt.systecash-xea,
+	  accounts/ja/acctchrt_spouseinc.systecash-xea,
+	  accounts/ja/acctchrt_spouseretire.systecash-xea: Remove executable
 	  flag from data files
 	* [r18603] packaging/win32/defaults.sh: Fix URL of ActivePerl.
 
@@ -11137,11 +11137,11 @@
 	* [r18575] src/quotes/gnc-fq-helper.in: Bug #607185: Add f-q
 	  workaround for missing date. Patch by "meo": If for whatever
 	  reason finance-quote is unable to get a date for a quote or to
-	  convert it to the standardized form, gnucash is unable to use
+	  convert it to the standardized form, systecash is unable to use
 	  the otherwise correct quote. With web pages being updated
 	  definitively more frequently than finance-quote, this is quite a
 	  nuisance. Up to now, gnc-fq-helper emits an error message + the
-	  quote, a combination gnucash is unable to process. This patch
+	  quote, a combination systecash is unable to process. This patch
 	  presents a workaround. I would prefer using the current date +
 	  12 hours rather than current date + time, but this is open for
 	  discussion.
@@ -11158,15 +11158,15 @@
 
 2010-01-15 20:43  cstim
 
-	* [r18572] src/bin/Makefile.am, src/bin/gnucash-gdb.in,
-	  src/bin/gnucash-valgrind.in, src/bin/gnucash.in: Bug #606077:
+	* [r18572] src/bin/Makefile.am, src/bin/systecash-gdb.in,
+	  src/bin/systecash-valgrind.in, src/bin/systecash.in: Bug #606077:
 	  Fix uncommon configure option --program-suffix. Patch by Peter
 	  Selinger: OK, the attached patch fixes part of this problem.
 	  Specifically, it applies the specified transform (from
 	  ./configure option --program-suffix, --program-prefix, or
-	  --program-transform-name) to the files src/bin/gnucash-valgrind
-	  src/bin/gnucash-gdb src/bin/gnucash This is done in the Makefile
-	  at compile time. In the end, I am not sure why the GnuCash
+	  --program-transform-name) to the files src/bin/systecash-valgrind
+	  src/bin/systecash-gdb src/bin/systecash This is done in the Makefile
+	  at compile time. In the end, I am not sure why the systecash
 	  configure.in provides the --program-suffix mechanism at all,
 	  since apparently it hasn't been used in 10 years. According to
 	  info autoconf, these are supposed to be enabled by the macro
@@ -11237,7 +11237,7 @@
 	  src/import-export/aqbanking/aqbanking.glade,
 	  src/import-export/hbci/glade/hbci.glade,
 	  src/import-export/qif-import/qif.glade,
-	  src/import-export/qif-import/schemas/apps_gnucash_import_qif.schemas.in:
+	  src/import-export/qif-import/schemas/apps_systecash_import_qif.schemas.in:
 	  Bug #606626: Change wording from Druid to Assistant
 
 2010-01-11 20:50  cstim
@@ -11302,12 +11302,12 @@
 	* [r18550] po/en_GB.po: Minor updates to British English
 	  translation by Mike Evans. Copied from bug#602051.
 	* [r18549] src/gnome-search/search-string.c,
-	  src/gnome/schemas/apps_gnucash_dialog_common.schemas.in,
-	  src/gnome/schemas/apps_gnucash_dialog_print_checks.schemas.in,
-	  src/import-export/aqbanking/schemas/apps_gnucash_dialog_hbci.schemas.in,
-	  src/import-export/hbci/schemas/apps_gnucash_dialog_hbci.schemas.in,
+	  src/gnome/schemas/apps_systecash_dialog_common.schemas.in,
+	  src/gnome/schemas/apps_systecash_dialog_print_checks.schemas.in,
+	  src/import-export/aqbanking/schemas/apps_systecash_dialog_hbci.schemas.in,
+	  src/import-export/hbci/schemas/apps_systecash_dialog_hbci.schemas.in,
 	  src/import-export/qif-import/druid-qif-import.c,
-	  src/import-export/schemas/apps_gnucash_import_generic_matcher.schemas.in:
+	  src/import-export/schemas/apps_systecash_import_generic_matcher.schemas.in:
 	  Bug #602051: Replace the word "string" in GUI messages by
 	  non-developer wordings. Same for dialog -> window.
 

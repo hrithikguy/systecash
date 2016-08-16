@@ -51,7 +51,7 @@
 #include "gnc-ui-util.h"
 #include "gnc-ui.h"
 #include "gnome-utils/gnc-warnings.h"
-#include "gnucash-sheet.h"
+#include "systecash-sheet.h"
 #include "table-allgui.h"
 
 #include "dialog-utils.h"
@@ -84,7 +84,7 @@ static void gsr_update_summary_label( GtkWidget *label,
                                       gboolean reverse,
                                       gboolean euroFlag );
 
-static void gsr_redraw_all_cb (GnucashRegister *g_reg, gpointer data);
+static void gsr_redraw_all_cb (systecashRegister *g_reg, gpointer data);
 
 static void gnc_split_reg_ld_destroy( GNCLedgerDisplay *ledger );
 
@@ -114,7 +114,7 @@ void gsr_default_associate_handler_location   ( GNCSplitReg *w, gpointer ud );
 void gsr_default_execassociated_handler   ( GNCSplitReg *w, gpointer ud );
 
 static void gsr_emit_simple_signal( GNCSplitReg *gsr, const char *sigName );
-static void gsr_emit_help_changed( GnucashRegister *reg, gpointer user_data );
+static void gsr_emit_help_changed( systecashRegister *reg, gpointer user_data );
 static void gsr_emit_include_date_signal( GNCSplitReg *gsr, time64 date );
 
 void gnc_split_reg_cut_cb(GtkWidget *w, gpointer data);
@@ -128,7 +128,7 @@ void gnc_split_reg_void_trans_cb(GtkWidget *w, gpointer data);
 void gnc_split_reg_unvoid_trans_cb(GtkWidget *w, gpointer data);
 void gnc_split_reg_reverse_trans_cb(GtkWidget *w, gpointer data);
 
-void gnc_split_reg_record_cb (GnucashRegister *reg, gpointer data);
+void gnc_split_reg_record_cb (systecashRegister *reg, gpointer data);
 void gnc_split_reg_reinitialize_trans_cb(GtkWidget *w, gpointer data);
 void gnc_split_reg_delete_trans_cb(GtkWidget *w, gpointer data);
 void gnc_split_reg_duplicate_trans_cb(GtkWidget *w, gpointer data);
@@ -402,12 +402,12 @@ gsr_create_table( GNCSplitReg *gsr )
 
     /* FIXME: We'd really rather pass this down... */
     sr = gnc_ledger_display_get_split_register( gsr->ledger );
-    register_widget = gnucash_register_new( sr->table );
+    register_widget = systecash_register_new( sr->table );
     gsr->reg = GNUCASH_REGISTER( register_widget );
     gnc_table_init_gui( GTK_WIDGET(gsr->reg), state_section);
     g_free (state_section);
     gtk_box_pack_start (GTK_BOX (gsr), GTK_WIDGET(gsr->reg), TRUE, TRUE, 0);
-    gnucash_sheet_set_window (gnucash_register_get_sheet (gsr->reg), gsr->window);
+    systecash_sheet_set_window (systecash_register_get_sheet (gsr->reg), gsr->window);
     gtk_widget_show ( GTK_WIDGET(gsr->reg) );
     g_signal_connect (gsr->reg, "activate_cursor",
                       G_CALLBACK(gnc_split_reg_record_cb), gsr);
@@ -497,7 +497,7 @@ gsr_update_summary_label( GtkWidget *label,
 
 static
 void
-gsr_redraw_all_cb (GnucashRegister *g_reg, gpointer data)
+gsr_redraw_all_cb (systecashRegister *g_reg, gpointer data)
 {
     GNCSplitReg *gsr = data;
     gnc_commodity * commodity;
@@ -608,7 +608,7 @@ gnc_split_reg_ld_destroy( GNCLedgerDisplay *ledger )
 void
 gsr_default_cut_handler( GNCSplitReg *gsr, gpointer data )
 {
-    gnucash_register_cut_clipboard( gsr->reg );
+    systecash_register_cut_clipboard( gsr->reg );
 }
 
 /**
@@ -624,7 +624,7 @@ gnc_split_reg_cut_cb (GtkWidget *w, gpointer data)
 void
 gsr_default_copy_handler( GNCSplitReg *gsr, gpointer data )
 {
-    gnucash_register_copy_clipboard( gsr->reg );
+    systecash_register_copy_clipboard( gsr->reg );
 }
 
 /**
@@ -640,7 +640,7 @@ gnc_split_reg_copy_cb (GtkWidget *w, gpointer data)
 void
 gsr_default_paste_handler( GNCSplitReg *gsr, gpointer data )
 {
-    gnucash_register_paste_clipboard( gsr->reg );
+    systecash_register_paste_clipboard( gsr->reg );
 }
 
 /**
@@ -1397,7 +1397,7 @@ gnc_split_reg_jump_to_split(GNCSplitReg *gsr, Split *split)
     reg = gnc_ledger_display_get_split_register( gsr->ledger );
 
     if (gnc_split_register_get_split_virt_loc(reg, split, &vcell_loc))
-        gnucash_register_goto_virt_cell( gsr->reg, vcell_loc );
+        systecash_register_goto_virt_cell( gsr->reg, vcell_loc );
 
     gnc_ledger_display_refresh( gsr->ledger );
 }
@@ -1421,7 +1421,7 @@ gnc_split_reg_jump_to_split_amount(GNCSplitReg *gsr, Split *split)
     reg = gnc_ledger_display_get_split_register (gsr->ledger);
 
     if (gnc_split_register_get_split_amount_virt_loc (reg, split, &virt_loc))
-        gnucash_register_goto_virt_loc (gsr->reg, virt_loc);
+        systecash_register_goto_virt_loc (gsr->reg, virt_loc);
 
     gnc_ledger_display_refresh (gsr->ledger);
 }
@@ -1443,7 +1443,7 @@ gnc_split_reg_jump_to_blank (GNCSplitReg *gsr)
     }
 
     if (gnc_split_register_get_split_virt_loc (reg, blank, &vcell_loc))
-        gnucash_register_goto_virt_cell (gsr->reg, vcell_loc);
+        systecash_register_goto_virt_cell (gsr->reg, vcell_loc);
 
     gnc_ledger_display_refresh (gsr->ledger);
     LEAVE(" ");
@@ -1822,7 +1822,7 @@ static void
 gnc_split_reg_goto_next_trans_row (GNCSplitReg *gsr)
 {
     ENTER("gsr=%p", gsr);
-    gnucash_register_goto_next_matching_row( gsr->reg,
+    systecash_register_goto_next_matching_row( gsr->reg,
             gnc_split_reg_match_trans_row,
             gsr );
     LEAVE(" ");
@@ -1876,7 +1876,7 @@ gnc_split_reg_enter( GNCSplitReg *gsr, gboolean next_transaction )
     else if (next_transaction)
         gnc_split_reg_goto_next_trans_row( gsr );
     else
-        gnucash_register_goto_next_virt_row( gsr->reg );
+        systecash_register_goto_next_virt_row( gsr->reg );
     LEAVE(" ");
 }
 
@@ -1887,7 +1887,7 @@ gsr_default_enter_handler( GNCSplitReg *gsr, gpointer data )
 }
 
 void
-gnc_split_reg_record_cb (GnucashRegister *reg, gpointer data)
+gnc_split_reg_record_cb (systecashRegister *reg, gpointer data)
 {
     gsr_emit_simple_signal( (GNCSplitReg*)data, "enter_ent" );
 }
@@ -2114,7 +2114,7 @@ gnc_split_reg_get_parent( GNCLedgerDisplay *ledger )
 
 static
 void
-gsr_emit_help_changed( GnucashRegister *reg, gpointer user_data )
+gsr_emit_help_changed( systecashRegister *reg, gpointer user_data )
 {
     gsr_emit_simple_signal( (GNCSplitReg*)user_data, "help-changed" );
 }
@@ -2133,7 +2133,7 @@ gsr_emit_simple_signal( GNCSplitReg *gsr, const char *sigName )
     g_signal_emit_by_name( gsr, sigName, NULL );
 }
 
-GnucashRegister*
+systecashRegister*
 gnc_split_reg_get_register( GNCSplitReg *gsr )
 {
     if ( !gsr )
@@ -2179,5 +2179,5 @@ gnc_split_reg_get_read_only( GNCSplitReg *gsr )
 void
 gnc_split_reg_set_moved_cb( GNCSplitReg *gsr, GFunc cb, gpointer cb_data )
 {
-    gnucash_register_set_moved_cb (gsr->reg, cb, cb_data);
+    systecash_register_set_moved_cb (gsr->reg, cb, cb_data);
 }

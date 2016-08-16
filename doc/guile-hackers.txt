@@ -1,7 +1,7 @@
 -*-text-*-
 
 This file is intended to contain information for those interested in
-working on the guile bits of GnuCash.
+working on the guile bits of systecash.
 
 I've recently added some GUI functions callable from scheme.  This is
 generally pretty straightforward, and you can look in the code to see
@@ -37,7 +37,7 @@ SLIB is a a library for Scheme implementations (including guile)
 that implements a large collection of useful data structures
 and algorithms.
 
-FIXME: Starting gnucash as a guile shell. .. 
+FIXME: Starting systecash as a guile shell. .. 
 
 While the Guile documentation (in info format) explains
 Guile specifics, it doesn't have much information about Scheme,
@@ -54,12 +54,12 @@ g-wrap
 ------
 
 Note: gwrap has been replaced by swig and dropped completely in
-SVN-trunk on 2006-10-20 and for gnucash-2.2.0.
+SVN-trunk on 2006-10-20 and for systecash-2.2.0.
 
 (Old info: g-wrap is the tool used to automate the wrapping of C
 functions to make them callable from the guile code.  g-wrap is
 now maintained by Rob Browning and is available from
-ftp://ftp.gnucash.org/pub/g-wrap )
+ftp://ftp.systecash.org/pub/g-wrap )
 
 
 Garbage collection:

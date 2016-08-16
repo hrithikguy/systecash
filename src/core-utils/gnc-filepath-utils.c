@@ -110,9 +110,9 @@ check_path_return_if_valid(gchar *path)
  *  Otherwise, assume that filefrag is a well-formed relative path and
  *  try to find a file with its path relative to
  *  \li  the current working directory,
- *  \li the installed system-wide data directory (e.g., /usr/local/share/gnucash),
- *  \li the installed system configuration directory (e.g., /usr/local/etc/gnucash),
- *  \li or in the user's configuration directory (e.g., $HOME/.gnucash/data)
+ *  \li the installed system-wide data directory (e.g., /usr/local/share/systecash),
+ *  \li the installed system configuration directory (e.g., /usr/local/etc/systecash),
+ *  \li or in the user's configuration directory (e.g., $HOME/.systecash/data)
  *
  *  The paths are searched for in that order. If a matching file is
  *  found, return the absolute path to it.
@@ -152,7 +152,7 @@ gnc_resolve_file_path (const gchar * filefrag)
     if (fullpath != NULL)
         return fullpath;
 
-    /* Look in the data dir (e.g. $PREFIX/share/gnucash) */
+    /* Look in the data dir (e.g. $PREFIX/share/systecash) */
     tmp_path = gnc_path_get_pkgdatadir();
     fullpath = g_build_filename(tmp_path, filefrag, (gchar *)NULL);
     g_free(tmp_path);
@@ -160,7 +160,7 @@ gnc_resolve_file_path (const gchar * filefrag)
     if (fullpath != NULL)
         return fullpath;
 
-    /* Look in the config dir (e.g. $PREFIX/share/gnucash/accounts) */
+    /* Look in the config dir (e.g. $PREFIX/share/systecash/accounts) */
     tmp_path = gnc_path_get_accountsdir();
     fullpath = g_build_filename(tmp_path, filefrag, (gchar *)NULL);
     g_free(tmp_path);
@@ -168,7 +168,7 @@ gnc_resolve_file_path (const gchar * filefrag)
     if (fullpath != NULL)
         return fullpath;
 
-    /* Look in the users config dir (e.g. $HOME/.gnucash/data) */
+    /* Look in the users config dir (e.g. $HOME/.systecash/data) */
     fullpath = gnc_build_data_path(filefrag);
     if (g_file_test(fullpath, G_FILE_TEST_IS_REGULAR))
         return fullpath;
@@ -182,12 +182,12 @@ gnc_resolve_file_path (const gchar * filefrag)
 
 /* Searches for a file fragment paths set via GNC_DOC_PATH environment
  * variable. If this variable is not set, fall back to search in
- * - a html directory in the local user's gnucash settings directory
- *   (typically $HOME/.gnucash/html)
- * - the gnucash documentation directory
- *   (typically /usr/share/doc/gnucash)
- * - the gnucash data directory
- *   (typically /usr/share/gnucash)
+ * - a html directory in the local user's systecash settings directory
+ *   (typically $HOME/.systecash/html)
+ * - the systecash documentation directory
+ *   (typically /usr/share/doc/systecash)
+ * - the systecash data directory
+ *   (typically /usr/share/systecash)
  * It searches in this order.
  *
  * This is used by gnc_path_find_localized_file to search for
@@ -201,7 +201,7 @@ gnc_path_find_localized_html_file_internal (const gchar * file_name)
     const gchar *env_doc_path = g_getenv("GNC_DOC_PATH");
     const gchar *default_dirs[] =
         {
-            gnc_build_dotgnucash_path ("html"),
+            gnc_build_dotsystecash_path ("html"),
             gnc_path_get_pkgdocdir (),
             gnc_path_get_pkgdatadir (),
             NULL
@@ -244,15 +244,15 @@ gnc_path_find_localized_html_file_internal (const gchar * file_name)
  *  try to find a file with its path relative to
  *  \li a localized subdirectory in the html directory
  *      of the user's configuration directory
- *      (e.g. $HOME/.gnucash/html/de_DE, $HOME/.gnucash/html/en,...)
- *  \li a localized subdirectory in the gnucash documentation directory
- *      (e.g. /usr/share/doc/gnucash/C,...)
+ *      (e.g. $HOME/.systecash/html/de_DE, $HOME/.systecash/html/en,...)
+ *  \li a localized subdirectory in the systecash documentation directory
+ *      (e.g. /usr/share/doc/systecash/C,...)
  *  \li the html directory of the user's configuration directory
- *      (e.g. $HOME/.gnucash/html)
- *  \li the gnucash documentation directory
- *      (e.g. /usr/share/doc/gnucash/)
- *  \li last resort option: the gnucash data directory
- *      (e.g. /usr/share/gnucash/)
+ *      (e.g. $HOME/.systecash/html)
+ *  \li the systecash documentation directory
+ *      (e.g. /usr/share/doc/systecash/)
+ *  \li last resort option: the systecash data directory
+ *      (e.g. /usr/share/systecash/)
  *
  *  The paths are searched for in that order. If a matching file is
  *  found, return the absolute path to it.
@@ -331,7 +331,7 @@ gnc_validate_directory (const gchar *dirname, gboolean create, gchar **msg)
                     *msg = g_strdup_printf(
                             _("An error occurred while creating the directory:\n"
                               "  %s\n"
-                              "Please correct the problem and restart GnuCash.\n"
+                              "Please correct the problem and restart systecash.\n"
                               "The reported error was '%s' (errno %d).\n"),
                               dirname, g_strerror(errno) ? g_strerror(errno) : "", errno);
                     return FALSE;
@@ -364,7 +364,7 @@ gnc_validate_directory (const gchar *dirname, gboolean create, gchar **msg)
                       _("The path\n"
                         "  %s\n"
                         "exists but it is not a directory. Please delete\n"
-                        "the file and start GnuCash again.\n"),
+                        "the file and start systecash again.\n"),
                       dirname);
             return FALSE;
 
@@ -373,7 +373,7 @@ gnc_validate_directory (const gchar *dirname, gboolean create, gchar **msg)
                       _("An unknown error occurred when validating that the\n"
                         "  %s\n"
                         "directory exists and is usable. Please correct the\n"
-                        "problem and restart GnuCash. The reported error \n"
+                        "problem and restart systecash. The reported error \n"
                         "was '%s' (errno %d)."),
                       dirname, g_strerror(errno) ? g_strerror(errno) : "", errno);
             return FALSE;
@@ -386,7 +386,7 @@ gnc_validate_directory (const gchar *dirname, gboolean create, gchar **msg)
                   _("The path\n"
                     "  %s\n"
                     "exists but it is not a directory. Please delete\n"
-                    "the file and start GnuCash again.\n"),
+                    "the file and start systecash again.\n"),
                   dirname);
         return FALSE;
     }
@@ -406,27 +406,27 @@ gnc_validate_directory (const gchar *dirname, gboolean create, gchar **msg)
     return TRUE;
 }
 
-/** @fn const gchar * gnc_dotgnucash_dir ()
+/** @fn const gchar * gnc_dotsystecash_dir ()
  *  @brief Ensure that the user's configuration directory exists and is minimally populated.
  *
- *  Note that the default path is $HOME/.gnucash; This can be changed
+ *  Note that the default path is $HOME/.systecash; This can be changed
  *  by the environment variable $GNC_DOT_DIR.
  *
  *  @return An absolute path to the configuration directory
  */
 const gchar *
-gnc_dotgnucash_dir (void)
+gnc_dotsystecash_dir (void)
 {
-    static gchar *dotgnucash = NULL;
+    static gchar *dotsystecash = NULL;
     gchar *tmp_dir;
     gchar *errmsg = NULL;
 
-    if (dotgnucash)
-        return dotgnucash;
+    if (dotsystecash)
+        return dotsystecash;
 
-    dotgnucash = g_strdup(g_getenv("GNC_DOT_DIR"));
+    dotsystecash = g_strdup(g_getenv("GNC_DOT_DIR"));
 
-    if (!dotgnucash)
+    if (!dotsystecash)
     {
         const gchar *home = g_get_home_dir();
         if (!home || !gnc_validate_directory(home, FALSE, &errmsg))
@@ -437,40 +437,40 @@ gnc_dotgnucash_dir (void)
         }
         g_assert(home);
 
-        dotgnucash = g_build_filename(home, ".gnucash", (gchar *)NULL);
+        dotsystecash = g_build_filename(home, ".systecash", (gchar *)NULL);
     }
-    if (!gnc_validate_directory(dotgnucash, TRUE, &errmsg))
+    if (!gnc_validate_directory(dotsystecash, TRUE, &errmsg))
     {
         const gchar *tmp = g_get_tmp_dir();
         g_free(errmsg);
-        g_free(dotgnucash);
-        g_warning("Cannot find suitable .gnucash directory in home directory. Using tmp directory instead.");
+        g_free(dotsystecash);
+        g_warning("Cannot find suitable .systecash directory in home directory. Using tmp directory instead.");
         g_assert(tmp);
 
-        dotgnucash = g_build_filename(tmp, ".gnucash", (gchar *)NULL);
+        dotsystecash = g_build_filename(tmp, ".systecash", (gchar *)NULL);
         
-        if (!gnc_validate_directory(dotgnucash, TRUE, &errmsg))
+        if (!gnc_validate_directory(dotsystecash, TRUE, &errmsg))
             exit(1);
     }
 
     /* Since we're in code that is only executed once.... */
-    tmp_dir = g_build_filename(dotgnucash, "books", (gchar *)NULL);
+    tmp_dir = g_build_filename(dotsystecash, "books", (gchar *)NULL);
     if (!gnc_validate_directory(tmp_dir, TRUE, &errmsg))
         exit(1);
     g_free(tmp_dir);
-    tmp_dir = g_build_filename(dotgnucash, "checks", (gchar *)NULL);
+    tmp_dir = g_build_filename(dotsystecash, "checks", (gchar *)NULL);
     if (!gnc_validate_directory(tmp_dir, TRUE, &errmsg))
         exit(1);
     g_free(tmp_dir);
-    tmp_dir = g_build_filename(dotgnucash, "translog", (gchar *)NULL);
+    tmp_dir = g_build_filename(dotsystecash, "translog", (gchar *)NULL);
     if (!gnc_validate_directory(tmp_dir, TRUE, &errmsg))
         exit(1);
     g_free(tmp_dir);
 
-    return dotgnucash;
+    return dotsystecash;
 }
 
-/** @fn gchar * gnc_build_dotgnucash_path (const gchar *filename)
+/** @fn gchar * gnc_build_dotsystecash_path (const gchar *filename)
  *  @brief Make a path to filename in the user's configuration directory.
  *
  * @param filename The name of the file
@@ -479,9 +479,9 @@ gnc_dotgnucash_dir (void)
  */
 
 gchar *
-gnc_build_dotgnucash_path (const gchar *filename)
+gnc_build_dotsystecash_path (const gchar *filename)
 {
-    return g_build_filename(gnc_dotgnucash_dir(), filename, (gchar *)NULL);
+    return g_build_filename(gnc_dotsystecash_dir(), filename, (gchar *)NULL);
 }
 
 /** @fn gchar * gnc_build_book_path (const gchar *filename)
@@ -499,7 +499,7 @@ gnc_build_book_path (const gchar *filename)
     gchar* result = NULL;
 
     scrub_filename(filename_dup);
-    result = g_build_filename(gnc_dotgnucash_dir(), "books",
+    result = g_build_filename(gnc_dotsystecash_dir(), "books",
                               filename_dup, (gchar *)NULL);
     g_free(filename_dup);
     return result;
@@ -520,7 +520,7 @@ gnc_build_translog_path (const gchar *filename)
     gchar* result = NULL;
 
     scrub_filename(filename_dup);
-    result = g_build_filename(gnc_dotgnucash_dir(), "translog",
+    result = g_build_filename(gnc_dotsystecash_dir(), "translog",
                               filename_dup, (gchar *)NULL);
     g_free(filename_dup);
     return result;
@@ -541,7 +541,7 @@ gnc_build_data_path (const gchar *filename)
     gchar* result;
 
     scrub_filename(filename_dup);
-    result = g_build_filename(gnc_dotgnucash_dir(), "data", filename_dup, (gchar *)NULL);
+    result = g_build_filename(gnc_dotsystecash_dir(), "data", filename_dup, (gchar *)NULL);
     g_free(filename_dup);
     return result;
 }

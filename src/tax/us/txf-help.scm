@@ -6,7 +6,7 @@
 ;;
 ;; (n <- TurboTax      (N <- IRS
 ;;
-;; Changes in this file should also be applied on gnucash-docs/help/C/Help_txf-categories.xml
+;; Changes in this file should also be applied on systecash-docs/help/C/Help_txf-categories.xml
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -50,7 +50,7 @@
     (N265 . "Penalty on Early Withdrawal of Savings from CD's or similar instruments. This is reported on Form 1099-INT or Form 1099-OID.")
     (N266 . "The part of any monthly benefit under title II of the Social Security Act. These will be reported on Form SSA-1099.")
     (N267 . "Qualified moving expense reimbursements paid directly to you by an employer.")
-    (N521 . "The quarterly payments you made on your estimated Federal income tax (Form 1040-ES). Include any overpay from your previous year return that you applied to your estimated tax. NOTE: If a full year (Jan 1, YEAR to Dec 31, YEAR) is specified, GnuCash adjusts the date to Mar 1, YEAR to Feb 28, YEAR+1. Thus, the payment due Jan 15 is exported for the correct year.")
+    (N521 . "The quarterly payments you made on your estimated Federal income tax (Form 1040-ES). Include any overpay from your previous year return that you applied to your estimated tax. NOTE: If a full year (Jan 1, YEAR to Dec 31, YEAR) is specified, systecash adjusts the date to Mar 1, YEAR to Feb 28, YEAR+1. Thus, the payment due Jan 15 is exported for the correct year.")
     (N269 . "Fringe benefits you receive in connection with the performance of your services are included in your gross income as compensation. Examples: Accident or Health Plan, Educational Assistance, Group-Term Life Insurance, Transportation (company car).")
     (N482 . "IRA contribution for a non-working spouse.")
     (N483 . "Spouse's part of any monthly benefit under title II of the Social Security Act. These will be reported on Form SSA-1099.")

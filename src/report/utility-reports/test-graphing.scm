@@ -19,19 +19,19 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-;; This is a sample guile report generator for GnuCash.
+;; This is a sample guile report generator for systecash.
 ;; It illustrates the basic techniques used to create
-;; new reports for GnuCash.
+;; new reports for systecash.
 
-(define-module (gnucash report test-graphing))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
+(define-module (systecash report test-graphing))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
 
 (debug-enable 'debug)
 (debug-enable 'backtrace)
 
-(gnc:module-load "gnucash/report/report-system" 0)
-(gnc:module-load "gnucash/gnome-utils" 0) ;for gnc-build-url
+(gnc:module-load "systecash/report/report-system" 0)
+(gnc:module-load "systecash/gnome-utils" 0) ;for gnc-build-url
 
 (define (simple-pie-chart)
   (let ((chart (gnc:make-html-piechart)))

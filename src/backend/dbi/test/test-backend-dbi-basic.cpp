@@ -222,7 +222,7 @@ setup_business (Fixture* fixture, gconstpointer pData)
 
     emp = gncEmployeeCreate (book);
     gncEmployeeSetID (emp, "0001");
-    gncEmployeeSetUsername (emp, "gnucash");
+    gncEmployeeSetUsername (emp, "systecash");
     gncEmployeeSetLanguage (emp, "english");
     gncEmployeeSetCurrency (emp, currency);
 
@@ -537,7 +537,7 @@ test_dbi_version_control (Fixture* fixture, gconstpointer pData)
     book = qof_session_get_book (sess);
     qof_book_begin_edit (book);
     gnc_sql_set_table_version ((GncSqlBackend*)qbe,
-                               "Gnucash", GNUCASH_RESAVE_VERSION - 1);
+                               "systecash", GNUCASH_RESAVE_VERSION - 1);
     qof_book_commit_edit (book);
     qof_session_end (sess);
     qof_session_destroy (sess);
@@ -550,9 +550,9 @@ test_dbi_version_control (Fixture* fixture, gconstpointer pData)
     book = qof_session_get_book (sess);
     qof_book_begin_edit (book);
     gnc_sql_set_table_version ((GncSqlBackend*)qbe,
-                               "Gnucash", ourversion);
+                               "systecash", ourversion);
     gnc_sql_set_table_version ((GncSqlBackend*)qbe,
-                               "Gnucash-Resave", ourversion + 1);
+                               "systecash-Resave", ourversion + 1);
     qof_book_commit_edit (book);
     qof_session_end (sess);
     qof_session_destroy (sess);
@@ -567,7 +567,7 @@ cleanup:
     book = qof_session_get_book (sess);
     qof_book_begin_edit (book);
     gnc_sql_set_table_version ((GncSqlBackend*)qbe,
-                               "Gnucash-Resave", GNUCASH_RESAVE_VERSION);
+                               "systecash-Resave", GNUCASH_RESAVE_VERSION);
     qof_book_commit_edit (book);
     qof_session_end (sess);
     qof_session_destroy (sess);

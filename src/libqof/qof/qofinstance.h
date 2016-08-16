@@ -28,7 +28,7 @@
 
     @{ */
 /** @file qofinstance.h
- *  @brief Object instance holds common fields that most gnucash objects use.
+ *  @brief Object instance holds common fields that most systecash objects use.
  *
  *  @author Copyright (C) 2003,2004 Linas Vepstas <linas@linas.org>
  *  @author Copyright (c) 2007 David Hampton <hampton@employees.org>

@@ -27,7 +27,7 @@
 /** @addtogroup GuiTreeModel
  *  @{ */
 /** @file gnc-tree-view-price.h
-    @brief GtkTreeView implementation for gnucash price tree.
+    @brief GtkTreeView implementation for systecash price tree.
     @author David Hampton <hampton@employees.org>
 */
 
@@ -72,10 +72,10 @@ GType         gnc_tree_view_price_get_type              (void);
  @{ */
 
 /** Create a new price tree view.  This view may or may not show a
- *  pseudo top-level price.  The gnucash engine does not have a
+ *  pseudo top-level price.  The systecash engine does not have a
  *  single top level price (it has a list of top level prices),
  *  but this code provides one so that it can be used with all parts
- *  of the gnucash gui.
+ *  of the systecash gui.
  *
  *  @param book The book containing the prices to show.
  *

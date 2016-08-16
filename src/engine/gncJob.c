@@ -421,7 +421,7 @@ static void gncJobOnDone (QofInstance *qof) { }
 
 void gncJobCommitEdit (GncJob *job)
 {
-    /* GnuCash 2.6.3 and earlier didn't handle job kvp's... */
+    /* systecash 2.6.3 and earlier didn't handle job kvp's... */
     if (qof_instance_has_kvp (QOF_INSTANCE (job)))
         gnc_features_set_used (qof_instance_get_book (QOF_INSTANCE (job)), GNC_FEATURE_KVP_EXTRA_DATA);
 

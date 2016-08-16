@@ -52,9 +52,9 @@ libgncmod_locale_reports_us_gnc_module_path(void)
 {
     /* const char *thislocale = setlocale(LC_ALL, NULL);
     if (strncmp(thislocale, "de_DE", 5) == 0)
-      return g_strdup("gnucash/report/locale-specific/de_DE");
+      return g_strdup("systecash/report/locale-specific/de_DE");
       else */
-    return g_strdup("gnucash/report/locale-specific/us");
+    return g_strdup("systecash/report/locale-specific/us");
 }
 
 char *
@@ -85,15 +85,15 @@ libgncmod_locale_reports_us_gnc_module_init(int refcount)
 #endif /* LOCALE_SPECIFIC_TAX */
     if (is_de_DE)
     {
-        tax_module = "gnucash/tax/de_DE";
-        report_taxtxf = "(use-modules (gnucash report taxtxf-de_DE))";
-        report_locale = "(use-modules (gnucash report locale-specific de_DE))";
+        tax_module = "systecash/tax/de_DE";
+        report_taxtxf = "(use-modules (systecash report taxtxf-de_DE))";
+        report_locale = "(use-modules (systecash report locale-specific de_DE))";
     }
     else
     {
-        tax_module = "gnucash/tax/us";
-        report_taxtxf = "(use-modules (gnucash report taxtxf))";
-        report_locale = "(use-modules (gnucash report locale-specific us))";
+        tax_module = "systecash/tax/us";
+        report_taxtxf = "(use-modules (systecash report taxtxf))";
+        report_locale = "(use-modules (systecash report locale-specific us))";
     }
 
     /* The gchar* cast is only because the function declaration expects
@@ -104,7 +104,7 @@ libgncmod_locale_reports_us_gnc_module_init(int refcount)
     }
 
     /* load the report system */
-    if (!gnc_module_load("gnucash/report/report-system", 0))
+    if (!gnc_module_load("systecash/report/report-system", 0))
     {
         return FALSE;
     }

@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 
-from gnucash import Session
+from systecash import Session
 
 class BookSession( TestCase ):
     def setUp(self):

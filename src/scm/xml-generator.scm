@@ -21,7 +21,7 @@
 ;;;; by Christopher Browne
 ;;;; <cbbrowne@hex.net>, <cbbrowne@ntlug.org>
 ;;;;
-;;;; This was created for GnuCash to assist in creating
+;;;; This was created for systecash to assist in creating
 ;;;; XML output to generate spreadsheets readable by
 ;;;; Gnumeric.
 ;;;;

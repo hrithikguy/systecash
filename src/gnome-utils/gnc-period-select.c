@@ -4,12 +4,12 @@
  * Copyright (c) 2005 David Hampton <hampton@employees.org>
  * All rights reserved.
  *
- * Gnucash is free software; you can redistribute it and/or
+ * systecash is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public License
  * as published by the Free Software Foundation; either version 2 of the
  * License, or (at your option) any later version.
  *
- * Gnucash is distributed in the hope that it will be useful,
+ * systecash is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Library General Public License for more details.
@@ -600,7 +600,7 @@ gnc_period_select_class_init (GncPeriodSelectClass *klass)
 }
 
 
-/** Initialize a new instance of a gnucash accounting period selection
+/** Initialize a new instance of a systecash accounting period selection
  *  widget.  This function allocates and initializes the object
  *  private storage space.
  *

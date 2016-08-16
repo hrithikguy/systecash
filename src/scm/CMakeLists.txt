@@ -37,11 +37,11 @@ SET(scm_SCHEME_0
 
 GNC_ADD_SCHEME_TARGETS(scm-scm-0 "${scm_SCHEME_0}" "" "" "" "" "" FALSE)
 
-GNC_ADD_SCHEME_TARGETS(scm-scm-1 "printf.scm" gnucash "" "" "" "" FALSE)
+GNC_ADD_SCHEME_TARGETS(scm-scm-1 "printf.scm" systecash "" "" "" "" FALSE)
 
 GNC_ADD_SCHEME_TARGETS(scm-scm-2
   main.scm
-  gnucash
+  systecash
   "${GUILE_MODULES}"
   "${GUILE_LOAD_DIRS}"
   "${GUILE_LIBRARY_DIRS}"
@@ -52,7 +52,7 @@ GNC_ADD_SCHEME_TARGETS(scm-scm-2
 # depends on main.scm
 GNC_ADD_SCHEME_TARGETS(scm-scm-3
   price-quotes.scm
-  gnucash
+  systecash
   "${GUILE_MODULES}"
   "${GUILE_LOAD_DIRS}"
   "${GUILE_LIBRARY_DIRS}"
@@ -61,6 +61,6 @@ GNC_ADD_SCHEME_TARGETS(scm-scm-3
 
 ADD_CUSTOM_TARGET(scm-scm ALL DEPENDS scm-scm-3 scm-scm-2 scm-scm-1 scm-scm-0 scm-gnumeric)
 
-INSTALL(FILES config DESTINATION etc/gnucash)
+INSTALL(FILES config DESTINATION etc/systecash)
 
 

@@ -4,11 +4,11 @@
 
 @strong{This whole document is completely outdated. Don't read this. All
 function names and every described structure has changed
-completely. Only read this if you want to know how gnucash looked like
+completely. Only read this if you want to know how systecash looked like
 in 1999. This is completely outdated!}
 
 The Component Manager (hereafter referred to as the CM) is a framework
-for managing GUI objects in GnuCash. The CM provides several services.
+for managing GUI objects in systecash. The CM provides several services.
 
 First, components may request automatic invocation of a 'refresh'
 handler that is called when a component may need to be redrawn. This
@@ -39,7 +39,7 @@ The CM also provides the ability to search for existing components.
 @node Component Manager Introduction, Refresh Mechanism, Component Manager, Component Manager
 @section Introduction
 
-The GnuCash GUI must manage many different components (registers,
+The systecash GUI must manage many different components (registers,
 reconcile windows, reports, graphs, main window, etc.).  Functions which
 need to be performed on or with GUI components include:
 
@@ -105,7 +105,7 @@ Event mechanism (@pxref{Events}), while the GUI component is the
 Component Manager, which provide refresh functionality as well
 as other services.
 
-The diagram below illustrated the design of the GnuCash refresh
+The diagram below illustrated the design of the systecash refresh
 mechanism.
 
 @example
@@ -136,7 +136,7 @@ mechanism.
 
 The top-level component is the Engine, which emits Events to the
 Component Manager. In fact, the Engine will send events to any
-registered handler, but in GnuCash, only the CM registers with
+registered handler, but in systecash, only the CM registers with
 the engine. All other GUI components register with the CM.
 
 The CM invokes the refresh handlers of GUI components based on the

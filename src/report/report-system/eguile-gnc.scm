@@ -1,5 +1,5 @@
 ;;
-;; eguile-gnc.scm -- embedded guile preprocessor for GnuCash
+;; eguile-gnc.scm -- embedded guile preprocessor for systecash
 ;; Copyright (c) 2009 Chris Dennis <chris@starsoftanalysis.co.uk>
 ;; Based on eguile.scm by Neale Pickett <neale@woozle.org>
 ;; (see http://woozle.org/~neale/src/eguile/)
@@ -12,7 +12,7 @@
 ;;       another pass for evaluation)
 ;;   - regexps to allow any whitespace, not just 'space'
 ;;   - catch exceptions
-;;   - make it a module as part of the GnuCash directory structure
+;;   - make it a module as part of the systecash directory structure
 ;;    
 ;;
 ;; Documentation
@@ -81,7 +81,7 @@
 ;; Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
 ;; 02111-1307 USA
 
-(define-module (gnucash report eguile-gnc))
+(define-module (systecash report eguile-gnc))
 
 (use-modules (ice-9 regex))       ; for regular expressions
 (use-modules (ice-9 rdelim))      ; for read-line
@@ -89,8 +89,8 @@
   (guile-2
       (use-modules (ice-9 local-eval)))  ; for the-environment
   (else ))
-(use-modules (gnucash printf))
-(use-modules (gnucash app-utils)) ; for _
+(use-modules (systecash printf))
+(use-modules (systecash app-utils)) ; for _
 
 ;; This is needed for displaying error messages -- note that it assumes that
 ;; the output is HTML, which is a pity, because otherwise this module is

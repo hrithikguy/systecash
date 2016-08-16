@@ -3,25 +3,25 @@
 
 @strong{This whole document is completely outdated. Don't read this. All
 function names and every described structure has changed
-completely. Only read this if you want to know how gnucash looked like
+completely. Only read this if you want to know how systecash looked like
 in 1999. This is completely outdated!}
 
-This document defines the design and architecture of the GnuCash
-program, an application for tracking finances. GnuCash is composed
+This document defines the design and architecture of the systecash
+program, an application for tracking finances. systecash is composed
 of several subsystems or modules. This document describes each module,
 specifying its interface and, where appropriate, its implementation,
 as well as describing the interactions between each module.
 
 @unnumberedsec Who Should Read This Document?
 
-Anyone who plans on making a significant change or addition to GnuCash's
+Anyone who plans on making a significant change or addition to systecash's
 functionality should read this document. By adhering to the structure
 presented here, your contribution will be more likely to work correctly
 with existing and future features.
 
 @unnumberedsec Goals
 
-GnuCash is intended to be a finance and accounting program for
+systecash is intended to be a finance and accounting program for
 individuals and small businesses. As such, it should have the
 following primary features:
 
@@ -45,5 +45,5 @@ The ability to generate and print graphs of financial information.
 
 @end itemize
 
-A more comprehensive list of current and planned features for GnuCash
-is located at @uref{http://cvs.gnucash.org/linux/gnucash/projects.html}.
+A more comprehensive list of current and planned features for systecash
+is located at @uref{http://cvs.systecash.org/linux/systecash/projects.html}.

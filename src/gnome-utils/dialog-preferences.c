@@ -33,7 +33,7 @@
 
     These functions are the external API available for the user
     preference dialog. This dialog allows a user to modify
-    several user preferences in the gnucash preferences database.
+    several user preferences in the systecash preferences database.
     Any module may add a page (or partial page) of preferences
     to the dialog.  These additions are done by providing
     the name of a glade file and the content to load from that
@@ -49,8 +49,8 @@
     the widget's value changes, the preference is automatically updated.
     The same goes the other way around. This code currently knows about
     font buttons, radio buttons, check buttons, spin boxes, combo boxes,
-    gnucash currency select widgets, gnucash accounting period widgets,
-    and a gnucash date edit widget. (Combo boxes should not be used for
+    systecash currency select widgets, systecash accounting period widgets,
+    and a systecash date edit widget. (Combo boxes should not be used for
     less than five choices. Use a radio button group instead.)
 
     The argument *is* a glade file, so if your code has special
@@ -1080,9 +1080,9 @@ gnc_preferences_dialog_create(void)
     gnc_builder_add_from_file (builder, "dialog-preferences.glade", "retain_days_adj");
     gnc_builder_add_from_file (builder, "dialog-preferences.glade", "tab_width_adj");
     gnc_builder_add_from_file (builder, "dialog-preferences.glade", "date_formats");
-    gnc_builder_add_from_file (builder, "dialog-preferences.glade", "GnuCash Preferences");
+    gnc_builder_add_from_file (builder, "dialog-preferences.glade", "systecash Preferences");
 
-    dialog = GTK_WIDGET(gtk_builder_get_object (builder, "GnuCash Preferences"));
+    dialog = GTK_WIDGET(gtk_builder_get_object (builder, "systecash Preferences"));
 
 #ifndef REGISTER2_ENABLED
     /* Hide preferences that are related to register2 */

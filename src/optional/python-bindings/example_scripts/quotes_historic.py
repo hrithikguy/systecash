@@ -1,29 +1,29 @@
 #!/usr/bin/env python
 
-# quotes_historic.py -- Example Script to read historic quote data into gnucash
+# quotes_historic.py -- Example Script to read historic quote data into systecash
 #
  
 ##  @file
-#   @brief Example Script to read historic stock data into gnucash
+#   @brief Example Script to read historic stock data into systecash
 #   @author Peter Holtermann
 #   @date January 2011
 #   @ingroup python_bindings_examples
 #  
 #   Call the perl-script @code 
 #   ./get_quotes.pl INTC 
-#   @endcode first to achieve data into file INTC which can thereafter be imported to GnuCash using this script.
+#   @endcode first to achieve data into file INTC which can thereafter be imported to systecash using this script.
 # 
 #   For explanation of use have a look at the wiki:
-#   http://wiki.gnucash.org/wiki/Stocks/get_prices
+#   http://wiki.systecash.org/wiki/Stocks/get_prices
 #
 
-from gnucash import Session, Account, Split
-import gnucash
+from systecash import Session, Account, Split
+import systecash
 import datetime
 from fractions import Fraction
 from gnc_convenience import find_account
 
-FILE = "./test.gnucash"
+FILE = "./test.systecash"
 url = "xml://"+FILE
 
 # Read data from file
@@ -47,7 +47,7 @@ for i in range(1,len(data)):
     stock_date.append(datetime.datetime(year,month,day))
     stock_price.append(float(data[i].rsplit(',')[5]))
 
-# Initialize Gnucash session
+# Initialize systecash session
 session = Session(url, True, False, False)
 root = session.book.get_root_account()
 book = session.book
@@ -76,7 +76,7 @@ for i in range(1,len(pl)):
 
 for i in range(0,len(stock_date)):
   p_new = pl0.clone(book)
-  p_new = gnucash.GncPrice(instance=p_new)
+  p_new = systecash.GncPrice(instance=p_new)
   print 'Adding',i,stock_date[i],stock_price[i]
   p_new.set_time(stock_date[i])
   v = p_new.get_value()

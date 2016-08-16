@@ -1,5 +1,5 @@
 ;; test of a Scheme module called gnc-mod-bar, which should get 
-;; loaded by the Gnucash module "bar"
+;; loaded by the systecash module "bar"
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -20,7 +20,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash bar))
+(define-module (systecash bar))
 
 (export bar:scheme-hello)
 

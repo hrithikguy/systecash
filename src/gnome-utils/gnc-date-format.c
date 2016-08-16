@@ -1,6 +1,6 @@
 /********************************************************************
  * gnc-date-format.c -- Date formator widget                        *
- *                       (GnuCash)                                  *
+ *                       (systecash)                                  *
  * Copyright (C) 2003 Derek Atkins  <derek@ihtfp.com>               *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
@@ -183,7 +183,7 @@ gnc_date_format_init (GNCDateFormat *gdf)
 
     priv->sample_label = GTK_WIDGET(gtk_builder_get_object (builder, "sample_label"));
 
-    /* Set initial format to gnucash default */
+    /* Set initial format to systecash default */
     gnc_date_format_set_format(gdf, qof_date_format_get());
 
     /* pull in the dialog and table widgets and play the reconnect game */

@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-module-api.h -- public functions needed by gnucash modules   *
+ * gnc-module-api.h -- public functions needed by systecash modules   *
  * Copyright (C) 2001 Linux Developers Group, Inc.                  *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *

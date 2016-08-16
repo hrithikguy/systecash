@@ -55,7 +55,7 @@ typedef struct
 /**  Must be called with a string containing a unique identifier for the
   account.  If an account with a matching online_id is
   found, the function immediately returns with a pointer to that
-  account.  Otherwise, the user is prompted to select a GnuCash
+  account.  Otherwise, the user is prompted to select a systecash
   account or create a new one (in both cases, the unique identifier is
   written to the account, so the user won't be prompted
   again).  If the user refuses to select or create an account, NULL is
@@ -96,7 +96,7 @@ typedef struct
 
     @param auto_create
          Only active if no account with the
-    account_online_id_value could be found in gnucash, or if online-id
+    account_online_id_value could be found in systecash, or if online-id
     was NULL. In that case, if auto_create is TRUE (nonzero), the user
     will be asked to create a new account. If auto_create is FALSE
     (zero), this function will simply return NULL but will neither

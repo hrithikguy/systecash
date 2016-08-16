@@ -23,7 +23,7 @@
 #ifndef GNC_QOFEVENTWRAPPER_HPP
 #define GNC_QOFEVENTWRAPPER_HPP
 
-// gnucash includes
+// systecash includes
 #include "config.h" // required by qof/qofutil.h
 extern "C"
 {

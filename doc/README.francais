@@ -1,5 +1,5 @@
 ###########################################
-          GnuCash version  2.0.x
+          systecash version  2.0.x
 -------------------------------------------
 
 #########
@@ -15,14 +15,14 @@ Sommaire:
   - plates-formes supportées
   - Sites de téléchargement miroirs
   - Récupérer les sources avec SVN
-  - Développement de GnuCash
+  - Développement de systecash
 
 
 ##############
 Vue d'ensemble
 --------------
 
-GnuCash est un gestionnaire de finances personnelles. Une interface graphique
+systecash est un gestionnaire de finances personnelles. Une interface graphique
 d'enregistrement ressemblant au talon de votre chéquier vous permet d'entrer et
 de suivre vos comptes bancaires, actions, revenus et même vos opérations
 boursières. L'interface est conçue pour être simple et facile à utiliser, mais
@@ -32,19 +32,19 @@ l'équilibre des comptes.
 Quelques une de ces caractéristiques sont:
 
 * Une interface facile à utiliser.  Si vous savez utiliser le talon de votre
-chéquier, vous savez utiliser GnuCash. Tapez directement dans le registre,
+chéquier, vous savez utiliser systecash. Tapez directement dans le registre,
 déplacez vous entre les champs, et utilisez quick-fill (saisie rapide) pour
 compléter automatiquement la transaction. L'interface est personnalisable depuis
 l'application elle-même (pas de fichiers de config à modifier :) ).
-* Transactions récurrentes : GnuCash a la possibilité de générer automatiquement
+* Transactions récurrentes : systecash a la possibilité de générer automatiquement
 des transactions, de rappeler leur échéance, de proposer de la valider ou de la
 retarder et également de les supprimer après un certain temps.
-* Importation de fichiers OFX : GnuCash est le premier logiciel libre à
+* Importation de fichiers OFX : systecash est le premier logiciel libre à
 supporter le protocole « Open Financial Exchange » qui est de plus en plus
 utilisé par les banques. Le développement du support OFX et HBCI a permis une
 amélioration du mécanisme permettant de retrouver des transactions homologues
 et les doublons.
-* Support de l'HBCI : GnuCash est le premier logiciel libre à supporter le
+* Support de l'HBCI : systecash est le premier logiciel libre à supporter le
 protocole allemand d'opérations bancaires en ligne
 * Importation de fichiers Quicken: Importation de fichiers au format QIF de
 Quicken. Les fichiers QIF sont automatiquement fusionnés pour éliminer les
@@ -97,19 +97,19 @@ ou sockets.
 * Nouveau manuel utilisateur : une toute nouvelle aide en ligne a été écrite :
 elle se focalise sur comment faire les actions en relation avec un tutoriel et
 un guide des concepts.
-* De nouveaux menus : les menus de GnuCash ont été revus pour se conformer aux
+* De nouveaux menus : les menus de systecash ont été revus pour se conformer aux
 principes d'interface de Gnome.
 
 
 Home Page:
 
-http://gnucash.org/ (site officiel - version anglaise)
+http://systecash.org/ (site officiel - version anglaise)
 
 Binaires précompilés / exécutables:
-http://www.gnucash.org/pub/gnucash/
+http://www.systecash.org/pub/systecash/
 
 Versions de développement:
-http://www.gnucash.org/en/hacking.phtml
+http://www.systecash.org/en/hacking.phtml
 
 ###################################
 Mise à jour depuis la version 1.8.x
@@ -118,16 +118,16 @@ Mise à jour depuis la version 1.8.x
 Il y a beaucoup, beaucoup de changements depuis la série 1.8 -
 Jetez un coup d'oeil au fichier NEWS si vous voulez plus de détails.
 
-- GnuCash nécessite g-wrap version 1.3.4 ou supérieur. Consultez la section «
+- systecash nécessite g-wrap version 1.3.4 ou supérieur. Consultez la section «
 Dépendances » pour plus de détails.
 
 - Les données ne sont plus accessibles à partir de la version 1.6 une fois de
 nouvelles fonctionnalités utilisées : il n'y a pas de compatibilité
 descendante. Sauvegardez vos données!!
 
-- La documentation de GnuCash est désormais déplacée dans un package séparé
-(gnucash-docs). si vous voyez un message du type « URL non trouvée », en
-cliquant un item du menu Aide, vous devrez installer la package gnucash-docs.
+- La documentation de systecash est désormais déplacée dans un package séparé
+(systecash-docs). si vous voyez un message du type « URL non trouvée », en
+cliquant un item du menu Aide, vous devrez installer la package systecash-docs.
 
 Nous espérons que vous vous apprécierez toutes les nouvelles fonctionnalités!
 
@@ -136,7 +136,7 @@ Dépendances
 ------------
 
 Les packages suivants sont requis et doivent être installés pour faire
-fonctionner GnuCash:
+fonctionner systecash:
 
 [Consultez le fichier README.dependencies]
 
@@ -145,29 +145,29 @@ fonctionner GnuCash:
 Mise en route
 -------------
 
-Pour les détails d'invocation/de lancement de GnuCash, regardez les pages de
-man dans doc/gnucash.1.
-Vous pouvez également taper gnucash --help sur la ligne de commande.
+Pour les détails d'invocation/de lancement de systecash, regardez les pages de
+man dans doc/systecash.1.
+Vous pouvez également taper systecash --help sur la ligne de commande.
 
-Vous pouvez démarrer GnuCash en ligne de commande, avec « gnucash » ou « gnucash
-<nom du fichier> », où <nom du fichier> est un fichier de données de GnuCash.
+Vous pouvez démarrer systecash en ligne de commande, avec « systecash » ou « systecash
+<nom du fichier> », où <nom du fichier> est un fichier de données de systecash.
 
 Des exemples de comptes peuvent être trouvés dans le sous-répertoire "data".
-Les fichiers *.xac sont les comptes de GnuCash qui peuvent être ouverts avec
+Les fichiers *.xac sont les comptes de systecash qui peuvent être ouverts avec
 le menu « Fichier/Ouvrir ».
 Les fichiers *.qif sont des fichiers au format Quicken qui peuvent être ouverts
 par le menu « Fichier/Importer QIF ».
 
-GnuCash répond aux variables d'environnement suivantes :
+systecash répond aux variables d'environnement suivantes :
 
   GNC_BOOTSTRAP_SCM - l'emplacement du code scheme initial de bootstrapping.
 
-  GUILE_LOAD_PATH - Pour surpasser le chemin de GnuCash utilisé pour le
+  GUILE_LOAD_PATH - Pour surpasser le chemin de systecash utilisé pour le
   chargement de fichiers Scheme. C'est une variable de la même forme que les
   variables d'environnement PATH ou LIBRARY_PATH.
 
-  GNC_MODULE_PATH - Pour surpasser le chemin de GnuCash utilisé pour le
-  chargement de modules GnuCash. C'est une variable de la même forme que les
+  GNC_MODULE_PATH - Pour surpasser le chemin de systecash utilisé pour le
+  chargement de modules systecash. C'est une variable de la même forme que les
   variables d'environnement PATH ou LIBRARY_PATH.
 
   GNC_DEBUG - active la sortie de débogage. Cela vous permet d'activer
@@ -198,13 +198,13 @@ Compilation et installation
 
 [Pour plus de détails sur la compilation, lisez doc/README.build-system]
 
-GnuCash utilise GNU Automake pour traiter le processus de compilation, donc
+systecash utilise GNU Automake pour traiter le processus de compilation, donc
 pour plus de détails, regardez les instructions générales dans INSTALL.
 
-Ci-dessous nous détaillons les parties spécifiques de GnuCash.
+Ci-dessous nous détaillons les parties spécifiques de systecash.
 
 
-Avant de compiler GnuCash, vous devrez obtenir et installer les packages
+Avant de compiler systecash, vous devrez obtenir et installer les packages
 suivants:
 
 libtool : Disponible à ftp://ftp.gnu.org/gnu.
@@ -216,7 +216,7 @@ système de développement gnome: en-têtes (headers), librairies, etc.
 libxml:   disponible sur ftp.gnome.org
 
 g-wrap  : Les RPM's, debs, et sources sont disponibles à
-	     http://www.gnucash.org/pub/g-wrap.
+	     http://www.systecash.org/pub/g-wrap.
 	     vous devrez utilisez g-wrap 1.3.4 ou supérieur
 
 texinfo: Si vous compilez depuis svn, vous avez besoin du package GNU texinfo,
@@ -237,7 +237,7 @@ besoin pour les systèmes que nous connaissons:
       libguile9-slib
 
 
-GnuCash comprend quelques options non-standard de ./configure . Vous
+systecash comprend quelques options non-standard de ./configure . Vous
 devriez lancer « ./configure --help » pour la liste la plus à jour des options
 supportées.
 
@@ -280,7 +280,7 @@ et des packages.
 Plates-formes supportées
 ------------------------
 
-La version 2.0.x de GnuCash est réputer fonctionner sur les systèmes
+La version 2.0.x de systecash est réputer fonctionner sur les systèmes
 d'exploitation suivants:
 
 GNU/Linux            -- x86, Sparc, Alpha
@@ -297,7 +297,7 @@ IBM AIX 4.1.5         -- RS/6000   http://www-frec.bull.com/
 Unixware 7            -- Intel
 SCO OpenServer 5.0.4  -- Intel
 
-GnuCash peut probablement fonctionner avec la plupart des plateformes POSIX, si
+systecash peut probablement fonctionner avec la plupart des plateformes POSIX, si
 les librairies et les outils sont disponibles.
 
 
@@ -305,16 +305,16 @@ les librairies et les outils sont disponibles.
 Sites de téléchargement miroirs
 -------------------------------
 
-Vous pouvez aussi télécharger GnuCash à partir de:
+Vous pouvez aussi télécharger systecash à partir de:
 
-  - http://download.sourceforge.net/gnucash
+  - http://download.sourceforge.net/systecash
 
 
-Vous pouvez télécharger les packages Solaris de GnuCash à partir de:
+Vous pouvez télécharger les packages Solaris de systecash à partir de:
 
   - http://www.unixrealm.com/downloads/
 
-Vous pouvez récupérer les packages Mandriva de GnuCash sur les sites Cooker de
+Vous pouvez récupérer les packages Mandriva de systecash sur les sites Cooker de
 Mandriva ou dans les dernières versions de la distribution)
 
 
@@ -325,48 +325,48 @@ Récupérer les sources avec Subversion
 Une version en lecture seule de l'arborescence Subversion est disponible à
 cette adresse :
 
-	http://svn.gnucash.org/repo/gnucash/
+	http://svn.systecash.org/repo/systecash/
 
 Pour obtenir ce qui fut le CVS HEAD (et ce qui inclus maintenant ce qui était
-gnucash-gnome2-dev), vous devrez obtenir le svn TRUNK :
+systecash-gnome2-dev), vous devrez obtenir le svn TRUNK :
 
-	svn checkout http://svn.gnucash.org/repo/gnucash/trunk gnucash
+	svn checkout http://svn.systecash.org/repo/systecash/trunk systecash
 
-L'argument « gnucash » ci dessus peut être n'importe quel nom de répertoire sur
+L'argument « systecash » ci dessus peut être n'importe quel nom de répertoire sur
 votre disque local, et est optionnel. Si vous l'omettez, vous aurez un
 répertoire nommé « trunk » contenant les sources.
 
 Si vous voulez obtenir les derniers sources de la version 2.0.x, vous devrez
 les récupérer dans le branche 2.0, comme suit :
 
-	svn checkout http://svn.gnucash.org/repo/gnucash/branches/2.0 gnucash-2.0
+	svn checkout http://svn.systecash.org/repo/systecash/branches/2.0 systecash-2.0
 
 
 ########################
-Développement de GnuCash
+Développement de systecash
 ------------------------
-Avant de démarrer à développer sur GnuCash, vous devriez faire les choses
+Avant de démarrer à développer sur systecash, vous devriez faire les choses
 suivantes:
 
 1. lisez le fichier src/doc/coding-style.txt pour apprendre les styles
-   de codage utilisés dans le code source de GnuCash. Lisez également
-   http://wiki.gnucash.org/wiki/Development
+   de codage utilisés dans le code source de systecash. Lisez également
+   http://wiki.systecash.org/wiki/Development
 
 2. Plusieurs des répertoires sous src contiennent des fichiers appellés
-   design.txt qui expliquent beaucoup des aspects de la conception de GnuCash.
+   design.txt qui expliquent beaucoup des aspects de la conception de systecash.
    Lisez les.
 
-3. Allez sur le site web de GnuCash et survoler les archives de la liste de
-   diffusion du développement de GnuCash (gnucash-devel).
+3. Allez sur le site web de systecash et survoler les archives de la liste de
+   diffusion du développement de systecash (systecash-devel).
 
-   4. Rejoignez la liste de diffusion de développement de GnuCash
-   (gnucash-devel). Regardez le site web de GnuCash pour des détails sur la
+   4. Rejoignez la liste de diffusion de développement de systecash
+   (systecash-devel). Regardez le site web de systecash pour des détails sur la
    méthode pour y parvenir.
 
 
 Soumettre un patch
 
 Lisez SVP le fichier README sur les méthodes utilisées pour transmettre un
-patch à l'équipe de développement de GnuCash.
+patch à l'équipe de développement de systecash.
 
 Merci,

@@ -17,10 +17,10 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report report-system test test-extras))
+(define-module (systecash report report-system test test-extras))
 
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash engine test test-extras))
+(use-modules (systecash gnc-module))
+(use-modules (systecash engine test test-extras))
 
 (export pattern-streamer)
 

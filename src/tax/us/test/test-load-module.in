@@ -3,10 +3,10 @@ exec ${GUILE} -s "$0"
 !#
 
 (display "  testing US tax info module load ... ")
-(use-modules (gnucash gnc-module))
+(use-modules (systecash gnc-module))
 (gnc:module-system-init)
 
-(if (gnc:module-load "gnucash/tax/us" 0)
+(if (gnc:module-load "systecash/tax/us" 0)
     (begin 
       (display "ok\n")
       (exit 0))

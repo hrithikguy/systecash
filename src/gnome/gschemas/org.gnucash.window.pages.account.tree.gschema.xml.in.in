@@ -1,5 +1,5 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.gnucash.window.pages.account-tree.summary" path="/org/gnucash/window/pages/account-tree/summary/">
+  <schema id="org.systecash.window.pages.account-tree.summary" path="/org/systecash/window/pages/account-tree/summary/">
     <key name="grand-total" type="b">
       <default>true</default>
       <summary>Show a grand total of all accounts converted to the default report currency</summary>
@@ -13,12 +13,12 @@
     <key name="start-choice-relative" type="b">
       <default>true</default>
       <summary>Use relative profit/loss starting date</summary>
-      <description>This setting controls the type of starting date used in profit/loss calculations. If set to "absolute" then GnuCash will retrieve the starting date specified by the start-date key. If set to anything else, GnuCash will retrieve the starting date specified by the start-period key.</description>
+      <description>This setting controls the type of starting date used in profit/loss calculations. If set to "absolute" then systecash will retrieve the starting date specified by the start-date key. If set to anything else, systecash will retrieve the starting date specified by the start-period key.</description>
     </key>
     <key name="start-choice-absolute" type="b">
       <default>false</default>
       <summary>Use absolute profit/loss starting date</summary>
-      <description>This setting controls the type of starting date used in profit/loss calculations. If set to "absolute" then GnuCash will retrieve the starting date specified by the start-date key. If set to anything else, GnuCash will retrieve the starting date specified by the start-period key.</description>
+      <description>This setting controls the type of starting date used in profit/loss calculations. If set to "absolute" then systecash will retrieve the starting date specified by the start-date key. If set to anything else, systecash will retrieve the starting date specified by the start-period key.</description>
     </key>
     <key name="start-date" type="x">
       <default>0</default>
@@ -33,12 +33,12 @@
     <key name="end-choice-relative" type="b">
       <default>true</default>
       <summary>Use relative profit/loss ending date</summary>
-      <description>This setting controls the type of ending date used in profit/loss calculations. If set to "absolute" then GnuCash will retrieve the ending date specified by the end-date key. If set to anything else, GnuCash will retrieve the ending date specified by the end-period key.</description>
+      <description>This setting controls the type of ending date used in profit/loss calculations. If set to "absolute" then systecash will retrieve the ending date specified by the end-date key. If set to anything else, systecash will retrieve the ending date specified by the end-period key.</description>
     </key>
     <key name="end-choice-absolute" type="b">
       <default>false</default>
       <summary>Use absolute profit/loss ending date</summary>
-      <description>This setting controls the type of ending date used in profit/loss calculations. If set to "absolute" then GnuCash will retrieve the ending date specified by the end-date key. If set to anything else, GnuCash will retrieve the ending date specified by the end-period key.</description>
+      <description>This setting controls the type of ending date used in profit/loss calculations. If set to "absolute" then systecash will retrieve the ending date specified by the end-date key. If set to anything else, systecash will retrieve the ending date specified by the end-period key.</description>
     </key>
     <key name="end-date" type="x">
       <default>0</default>

@@ -2,10 +2,10 @@ from unittest import main
 
 from datetime import datetime
 
-from gnucash import Account, \
+from systecash import Account, \
     ACCT_TYPE_RECEIVABLE, ACCT_TYPE_INCOME, ACCT_TYPE_BANK, \
     GncNumeric
-from gnucash.gnucash_business import Vendor, Employee, Customer, Job, Invoice, Entry
+from systecash.systecash_business import Vendor, Employee, Customer, Job, Invoice, Entry
 
 from test_book import BookSession
 

@@ -20,7 +20,7 @@ Main Scheduled Transaction todo list
 ##################################################
 
 . Meta
-  . fulfill everything on http://linas.org/linux/gnucash/projects.html#alerts
+  . fulfill everything on http://linas.org/linux/systecash/projects.html#alerts
 
 . FreqSpec.c
   . xaccFreqSpecGetFreqStr [display] needs to go away [?]
@@ -177,7 +177,7 @@ X create a template register
   . Double-clicking on auto-create list should jump to transaction
     . register of first split?
   . Need some way to defer to-create SXes?
-  . need some configuration for constantly-running GnuCash users of when to
+  . need some configuration for constantly-running systecash users of when to
     pop up the 'new scheduled transactions' dialog [option, time-of-day]
   . fix first/last page issues.
   . bugs 
@@ -289,7 +289,7 @@ Random Notes
       seems a bit weird]] one.
     . A user is reminded of something which hasn't come due, but will w/in a
       configurable amount of time, and thus they pay/create it.
-    X GnuCash starts and hasn't been run in some length of time; the
+    X systecash starts and hasn't been run in some length of time; the
       transactions which have "come due" since the last run are available for
       creation.
 
@@ -453,11 +453,11 @@ Instantiation Notes
 
 <jsled> Wilddev, conrad:  Something that came out of Aaron's mail [see my reply to -devel] that I'd like your comment on:
 <jsled> How do you intend to use scheduled transactions?
-<jsled> Do you intend to use it to create things have should be in there since you last ran GnuCash?
+<jsled> Do you intend to use it to create things have should be in there since you last ran systecash?
 <jsled> Or, do you intend to use it to create future transactions [perhaps a weeks worth] before they occur?
 <jsled> Or, just primarily the former, but use the fact that the future transaction will be in the register to remind you to pay things, &c.?
 
-<conrad> Personally, I'd be looking at future transactions as a reminder thing. But then, I run gnucash every day.
+<conrad> Personally, I'd be looking at future transactions as a reminder thing. But then, I run systecash every day.
 <jsled> conrad: Do you re-invoke it every day, or leave it running?
 <conrad> I can see other people wanting case 1 though.
 <conrad> I leave it running.
@@ -470,7 +470,7 @@ Instantiation Notes
 
 Summary...
 
-conrad wants to use this to remind him to pay his bills.  He runs GnuCash
+conrad wants to use this to remind him to pay his bills.  He runs systecash
 continuously, and thus wants an option to "pop-up on day change [at time
 HH:MM]".  He's interested in seeing future transactions as well as what's
 being created ATM.

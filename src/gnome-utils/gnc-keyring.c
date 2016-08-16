@@ -43,11 +43,11 @@
 G_GNUC_UNUSED static QofLogModule log_module = GNC_MOD_GUI;
 
 #ifdef HAVE_LIBSECRET
-const SecretSchema* gnucash_get_secret_schema(void) G_GNUC_CONST;
-const SecretSchema* gnucash_get_secret_schema(void)
+const SecretSchema* systecash_get_secret_schema(void) G_GNUC_CONST;
+const SecretSchema* systecash_get_secret_schema(void)
 {
   static const SecretSchema secret_schema = {
-    "org.gnucash.password", SECRET_SCHEMA_NONE,
+    "org.systecash.password", SECRET_SCHEMA_NONE,
     {
       { "protocol", SECRET_SCHEMA_ATTRIBUTE_STRING },
       { "server", SECRET_SCHEMA_ATTRIBUTE_STRING },
@@ -60,7 +60,7 @@ const SecretSchema* gnucash_get_secret_schema(void)
   return &secret_schema;
 }
 
-#define SECRET_SCHEMA_GNUCASH gnucash_get_secret_schema()
+#define SECRET_SCHEMA_GNUCASH systecash_get_secret_schema()
 #endif
 
 void gnc_keyring_set_password (const gchar *access_method,
@@ -74,7 +74,7 @@ void gnc_keyring_set_password (const gchar *access_method,
   GError* error = NULL;
   gchar* label = NULL;
 
-  label = g_strdup_printf("GnuCash password for %s://%s@%s", access_method, user, server);
+  label = g_strdup_printf("systecash password for %s://%s@%s", access_method, user, server);
 
   if (port == 0)
     secret_password_store_sync (SECRET_SCHEMA_GNUCASH, SECRET_COLLECTION_DEFAULT,
@@ -188,14 +188,14 @@ gboolean gnc_keyring_get_password ( GtkWidget *parent,
      * referenced above. */
     secret_password_store_sync (SECRET_SCHEMA_GNUCASH, SECRET_COLLECTION_DEFAULT,
                                 "Dummy password", "dummy", NULL, &error,
-                                "protocol", "gnucash",
-                                "server", "gnucash",
-                                "user", "gnucash",
+                                "protocol", "systecash",
+                                "server", "systecash",
+                                "user", "systecash",
                                 NULL);
     secret_password_clear_sync (SECRET_SCHEMA_GNUCASH, NULL, &error,
-                                "protocol", "gnucash",
-                                "server", "gnucash",
-                                "user", "gnucash",
+                                "protocol", "systecash",
+                                "server", "systecash",
+                                "user", "systecash",
                                 NULL);
 
     /* Note: only use the port attribute if it  was set by the user. */
@@ -220,7 +220,7 @@ gboolean gnc_keyring_get_password ( GtkWidget *parent,
     }
 
     /* No password found yet. Perhaps it was written with a port equal to 0.
-     * Gnucash versions prior to 2.6.7 did this unfortunately... */
+     * systecash versions prior to 2.6.7 did this unfortunately... */
     libsecret_password = secret_password_lookup_sync (SECRET_SCHEMA_GNUCASH, NULL, &error,
         "protocol", access_method,
         "server", server,
@@ -233,12 +233,12 @@ gboolean gnc_keyring_get_password ( GtkWidget *parent,
         secret_password_free (libsecret_password);
 
         /* Ok, got an password with 0 port.
-           Store a copy in a more recent gnucash style. */
+           Store a copy in a more recent systecash style. */
         gnc_keyring_set_password(access_method, server, port, service, *user, *password);
         return TRUE;
     }
 
-    /* No password was found while querying libsecret using the gnucash schema,
+    /* No password was found while querying libsecret using the systecash schema,
        Look for a password stored via gnome-keyring instead */
     if (port == 0)
         libsecret_password = secret_password_lookup_sync (SECRET_SCHEMA_COMPAT_NETWORK, NULL, &error,

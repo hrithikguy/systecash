@@ -7,8 +7,8 @@ such as xsltproc.
 gnc2xea.xsl
 -----------
 
-Converts a regular GnuCash file into an account hierarchy, which other
-files may then use as a template. Requires an uncompressed GnuCash
+Converts a regular systecash file into an account hierarchy, which other
+files may then use as a template. Requires an uncompressed systecash
 file as input; if your file is compressed then simply pipe it through
 "gunzip" before passing it to your XSLT transformer.
 
@@ -31,9 +31,9 @@ warning message if that is the case, and you can subsequently edit the
 title and descriptions in the resulting XML file.
 
 Invocation example (assuming you are using xsltproc on a compressed
-GnuCash file):
+systecash file):
 
-gunzip -c <your gnucash file> | \
+gunzip -c <your systecash file> | \
        xsltproc --stringparam title "Spacecraft project" \
                 --stringparam short-description "Accounts useful for space exploration" \
                 --stringparam long-description "A set of accounts useful for space exploration. Implements NASA Standards FOO-1234-BAR and FOO-3456-BAZ for Earth Orbit Satellites, Earth Orbit Space Stations, Solar System Manned and Unmanned Spaceflight, and Interstellar Exploration." \
@@ -43,7 +43,7 @@ gunzip -c <your gnucash file> | \
 acctlist.xsl
 ------------
 
-A simple stylesheet that converts a GnuCash file or account hierarchy
+A simple stylesheet that converts a systecash file or account hierarchy
 template into a comma-separated list of the following format:
 
 "Number","Name","Type"
@@ -61,11 +61,11 @@ This stylesheet takes two parameters:
 
 This may be helpful if you are developing a new account hierarchy, are
 unsure of certain account types, and want to solicit someone's
-feedback without making them actually fire up GnuCash or load an
+feedback without making them actually fire up systecash or load an
 account hierarchy.
 
 Invocation example (assuming you are using xsltproc on a compressed
-GnuCash file):
+systecash file):
 
-gunzip -c <your gnucash file> | \
+gunzip -c <your systecash file> | \
        xsltproc -o /tmp/acctlist.csv acctlist.xsl -

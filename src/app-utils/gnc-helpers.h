@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-helpers.h -- gnucash app-util helper functions               *
+ * gnc-helpers.h -- systecash app-util helper functions               *
  * Copyright (C) 2000 Linas Vepstas                                 *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *

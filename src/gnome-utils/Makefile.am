@@ -213,10 +213,10 @@ libgncmod_gnome_utils_la_LIBADD = \
 
 BUILT_SOURCES = gnc-warnings.c gnc-warnings.h
 
-gnc-warnings.c: gschemas/org.gnucash.warnings.gschema.xml.in make-gnc-warnings-c.xsl
+gnc-warnings.c: gschemas/org.systecash.warnings.gschema.xml.in make-gnc-warnings-c.xsl
 	$(XSLTPROC) -o $@ $(srcdir)/make-gnc-warnings-c.xsl $<
 
-gnc-warnings.h: gschemas/org.gnucash.warnings.gschema.xml.in make-gnc-warnings-h.xsl
+gnc-warnings.h: gschemas/org.systecash.warnings.gschema.xml.in make-gnc-warnings-h.xsl
 	$(XSLTPROC) -o $@ $(srcdir)/make-gnc-warnings-h.xsl $<
 
 if HAVE_X11_XLIB_H
@@ -237,7 +237,7 @@ endif
 endif
 endif
 
-gncscmmoddir = ${GNC_SCM_INSTALL_DIR}/gnucash
+gncscmmoddir = ${GNC_SCM_INSTALL_DIR}/systecash
 gncscmmod_DATA = gnome-utils.scm
 
 gncscmdir = ${GNC_SCM_INSTALL_DIR}
@@ -259,14 +259,14 @@ SCM_FILE_LINKS = \
 endif
 
 .scm-links:
-	$(RM) -rf gnucash
-	mkdir -p  gnucash
+	$(RM) -rf systecash
+	mkdir -p  systecash
 if GNUCASH_SEPARATE_BUILDDIR
 	for X in ${SCM_FILE_LINKS} ; do \
 	  $(LN_S) -f ${srcdir}/$$X . ; \
 	done
 endif
-	( cd gnucash; for A in $(gncscmmod_DATA) ; do $(LN_S) -f ../$$A . ; done )
+	( cd systecash; for A in $(gncscmmod_DATA) ; do $(LN_S) -f ../$$A . ; done )
 if ! OS_WIN32
 # Windows knows no "ln -s" but uses "cp": must copy every time (see bug #566567).
 	touch .scm-links
@@ -291,7 +291,7 @@ GUILE_COMPILE_ENV = \
 	$(shell ${abs_top_srcdir}/src/gnc-test-env.pl --noexports ${GUILE_COMPILE_ENV}) \
 	$(GUILD) compile -o $@ $<
 
-gncscmmodcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@/gnucash
+gncscmmodcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@/systecash
 gncscmmodcache_DATA = $(gncscmmod_DATA:.scm=.go)
 
 gncscmcachedir = ${pkglibdir}/scm/ccache/@GUILE_EFFECTIVE_VERSION@
@@ -300,7 +300,7 @@ endif
 
 noinst_DATA = .scm-links
 clean-local:
-	rm -rf gnucash
+	rm -rf systecash
 
 CLEANFILES = \
 	$(BUILT_SOURCES) \

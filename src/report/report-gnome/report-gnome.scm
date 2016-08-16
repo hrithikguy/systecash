@@ -24,13 +24,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash report report-gnome))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gnome-utils))
-(use-modules (gnucash gettext))
+(define-module (systecash report report-gnome))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
+(use-modules (systecash gnome-utils))
+(use-modules (systecash gettext))
 
-(use-modules (gnucash printf))
+(use-modules (systecash printf))
 
 (cond-expand
   (guile-2
@@ -41,9 +41,9 @@
   (else ))
 (use-modules (sw_report_gnome))
 
-(gnc:module-load "gnucash/gnome-utils" 0)
-(gnc:module-load "gnucash/report/report-system" 0)
-(gnc:module-load "gnucash/report/utility-reports" 0)
+(gnc:module-load "systecash/gnome-utils" 0)
+(gnc:module-load "systecash/report/report-system" 0)
+(gnc:module-load "systecash/report/utility-reports" 0)
 
 (export gnc:report-menu-setup)
 (export gnc:add-report-template-menu-items)
@@ -133,12 +133,12 @@
   ;; push reports (new items added on top of menu)
   (gnc:add-report-template-menu-items)
 
-  ;; the Welcome to GnuCash "extravaganza" report
+  ;; the Welcome to systecash "extravaganza" report
   (gnc-add-scm-extension
    (gnc:make-menu-item 
     (N_ "Welcome Sample Report")
     "ad80271c890b11dfa79f2dcedfd72085"
-    (N_ "Welcome-to-GnuCash report screen")
+    (N_ "Welcome-to-systecash report screen")
     (list gnc:menuname-reports gnc:menuname-utility "")
     (lambda (window)
       (gnc-main-window-open-report (gnc:make-welcome-report) window))))

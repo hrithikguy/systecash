@@ -1,5 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; gnc-numeric.scm : rational number representation for gnucash
+;; gnc-numeric.scm : rational number representation for systecash
 ;; Copyright 2000 Bill Gribble <grib@gnumatic.com>
 ;; Copyright 2001 Christian Stimming <stimming@tu-harburg.de>
 ;; 

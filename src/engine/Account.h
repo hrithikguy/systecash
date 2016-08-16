@@ -256,7 +256,7 @@ void gnc_book_set_root_account(QofBook *book, Account *root);
 /** Composes a translatable error message showing which account
  *  names clash with the current account separator. Can be called
  *  after gnc_account_list_name_violations to have a consistent
- *  error message in different parts of GnuCash
+ *  error message in different parts of systecash
  *
  *  @param separator The separator character that was verified against
  *  @param invalid_account_names A GList of invalid account names.
@@ -751,7 +751,7 @@ GList * gnc_account_get_descendants (const Account *account);
  *  the gnc_account_get_descendants() function.
  *
  *  Note: Use this function where the results are intended for display
- *  to the user.  If the results are internal to GnuCash or will be
+ *  to the user.  If the results are internal to systecash or will be
  *  resorted at som later point in time you should use the
  *  gnc_account_get_descendants() function.
  *
@@ -1025,7 +1025,7 @@ void xaccAccountMoveAllSplits (Account *accfrom, Account *accto);
  * of them to a different account. <b>To do so risks a crash.</b>
  *
  * \warning The traversal occurs only over the transactions that
- * are locally cached in the local gnucash engine.  If the gnucash
+ * are locally cached in the local systecash engine.  If the systecash
  * engine is attached to a remote database, the database may contain
  * (many) transactions that are not mirrored in the local cache.
  * This routine will not cause an SQL database query to be performed;
@@ -1362,7 +1362,7 @@ int gnc_account_tree_staged_transaction_traversal(const Account *account,
  * of them to a different account. <b>To do so risks a crash.</b>
  *
  * \warning The traversal occurs only over the transactions that
- * are locally cached in the local gnucash engine.  If the gnucash
+ * are locally cached in the local systecash engine.  If the systecash
  * engine is attached to a remote database, the database may contain
  * (many) transactions that are not mirrored in the local cache.
  * This routine will not cause an SQL database query to be performed;

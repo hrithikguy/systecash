@@ -7,7 +7,7 @@
    or Entry leads to human readable results. That is handy when using @code print object @endcode
 
    I chose to put these functions/methods in a seperate file to develop them like this and maybe if
-   they prove to be useful they can be put in gnucash_core.py.
+   they prove to be useful they can be put in systecash_core.py.
 
    I am searching to find the best way to serialize these complex objects. Ideally this serialization
    would be configurable.
@@ -16,7 +16,7 @@
    free to do so.
 
    This is written as a first approach to a shell-environment using ipython to interactively manipulate
-   GnuCashs Data."""
+   systecashs Data."""
 
 #   @author Christoph Holtermann, c.holtermann@gmx.de
 #   @ingroup python_bindings_examples
@@ -30,9 +30,9 @@
 #   * It seems useful to have an object for each modification. That is because there is some Initialisation to be done.
 #
 
-import gnucash, function_class
+import systecash, function_class
 
-# Default values for encoding of strings in GnuCashs Database
+# Default values for encoding of strings in systecashs Database
 DEFAULT_ENCODING = "UTF-8"
 DEFAULT_ERROR = "ignore"
 
@@ -62,7 +62,7 @@ def ya_add_method(_class, function, method_name=None, clsmethod=False, noinstanc
     if method_name == None:
       method_name = function.__name__
 
-    setattr(gnucash.gnucash_core_c,function.__name__,function)
+    setattr(systecash.systecash_core_c,function.__name__,function)
     if clsmethod:
       mf=_class.ya_add_classmethod(function.__name__,method_name)
     elif noinstance:
@@ -207,14 +207,14 @@ def __split__unicode__(self, encoding=None, error=None):
 
     """
 
-    from gnucash import Split
+    from systecash import Split
     import time
     #self=Split(instance=self)
 
     lot=self.GetLot()
     if lot:
         if type(lot).__name__ == 'SwigPyObject':
-          lot=gnucash.GncLot(instance=lot)
+          lot=systecash.GncLot(instance=lot)
         lot_str=lot.get_title()
     else:
         lot_str='---'
@@ -248,21 +248,21 @@ def __split__unicode__(self, encoding=None, error=None):
 def __split__str__(self):
     """Returns a bytestring representation of self.__unicode__"""
 
-    from gnucash import Split
+    from systecash import Split
     #self=Split(instance=self)
 
     return unicode(self).encode('utf-8')
 
 # This could be something like an __init__. Maybe we could call it virus because it infects the Split object which
 # thereafter mutates to have better capabilities.
-infect(gnucash.Split,__split__str__,"__str__")
-infect(gnucash.Split,__split__unicode__,"__unicode__")
-gnucash.Split.register_optionflag("PRINT_TRANSACTION")
-gnucash.Split.setflag("PRINT_TRANSACTION",True)
+infect(systecash.Split,__split__str__,"__str__")
+infect(systecash.Split,__split__unicode__,"__unicode__")
+systecash.Split.register_optionflag("PRINT_TRANSACTION")
+systecash.Split.setflag("PRINT_TRANSACTION",True)
 
 def __transaction__unicode__(self):
     """__unicode__ method for Transaction class"""
-    from gnucash import Transaction
+    from systecash import Transaction
     import time
     self=Transaction(instance=self)
 
@@ -276,8 +276,8 @@ def __transaction__unicode__(self):
 
     splits_str=""
     for n,split in enumerate(self.GetSplitList()):
-        if not (type(split)==gnucash.Split):
-            split=gnucash.Split(instance=split)
+        if not (type(split)==systecash.Split):
+            split=systecash.Split(instance=split)
 
         transaction_flag = split.getflag("PRINT_TRANSACTION")
         split.setflag("PRINT_TRANSACTION",False)
@@ -290,22 +290,22 @@ def __transaction__unicode__(self):
 
 def __transaction__str__(self):
     """__str__ method for Transaction class"""
-    from gnucash import Transaction
+    from systecash import Transaction
 
     self=Transaction(instance=self)
     return unicode(self).encode('utf-8')
 
 # These lines add transaction_str as method __str__ to Transaction object
-gnucash.gnucash_core_c.__transaction__str__=__transaction__str__
-gnucash.Transaction.add_method("__transaction__str__","__str__")
+systecash.systecash_core_c.__transaction__str__=__transaction__str__
+systecash.Transaction.add_method("__transaction__str__","__str__")
 
-gnucash.gnucash_core_c.__transaction__unicode__=__transaction__unicode__
-gnucash.Transaction.add_method("__transaction__unicode__","__unicode__")
+systecash.systecash_core_c.__transaction__unicode__=__transaction__unicode__
+systecash.Transaction.add_method("__transaction__unicode__","__unicode__")
 
 def __invoice__unicode__(self):
     """__unicode__ method for Invoice"""
 
-    from gnucash.gnucash_business import Invoice
+    from systecash.systecash_business import Invoice
     self=Invoice(instance=self)
 
 
@@ -339,23 +339,23 @@ def __invoice__unicode__(self):
 def __invoice__str__(self):
     """__str__ method for invoice class"""
 
-    from gnucash.gnucash_business import Invoice
+    from systecash.systecash_business import Invoice
     self=Invoice(instance=self)
 
     return unicode(self).encode('utf-8')
 
-from gnucash.gnucash_business import Invoice
+from systecash.systecash_business import Invoice
 
-gnucash.gnucash_core_c.__invoice__str__=__invoice__str__
-gnucash.gnucash_business.Invoice.add_method("__invoice__str__","__str__")
+systecash.systecash_core_c.__invoice__str__=__invoice__str__
+systecash.systecash_business.Invoice.add_method("__invoice__str__","__str__")
 
-gnucash.gnucash_core_c.__invoice__unicode__=__invoice__unicode__
-gnucash.gnucash_business.Invoice.add_method("__invoice__unicode__","__unicode__")
+systecash.systecash_core_c.__invoice__unicode__=__invoice__unicode__
+systecash.systecash_business.Invoice.add_method("__invoice__unicode__","__unicode__")
 
 def __entry__unicode__(self):
     """__unicode__ method for Entry"""
 
-    from gnucash.gnucash_business import Entry
+    from systecash.systecash_business import Entry
     self=Entry(instance=self)
 
     # This dict and the return statement can be changed according to individual needs
@@ -378,17 +378,17 @@ def __entry__unicode__(self):
 def __entry__str__(self):
     """__str__ method for Entry class"""
 
-    from gnucash.gnucash_business import Entry
+    from systecash.systecash_business import Entry
     self=Entry(instance=self)
 
     return unicode(self).encode('utf-8')
 
-from gnucash.gnucash_business import Entry
+from systecash.systecash_business import Entry
 
-gnucash.gnucash_core_c.__entry__str__=__entry__str__
-gnucash.gnucash_business.Entry.add_method("__entry__str__","__str__")
+systecash.systecash_core_c.__entry__str__=__entry__str__
+systecash.systecash_business.Entry.add_method("__entry__str__","__str__")
 
-gnucash.gnucash_core_c.__entry__unicode__=__entry__unicode__
-gnucash.gnucash_business.Entry.add_method("__entry__unicode__","__unicode__")
+systecash.systecash_core_c.__entry__unicode__=__entry__unicode__
+systecash.systecash_business.Entry.add_method("__entry__unicode__","__unicode__")
 
 

@@ -17,17 +17,17 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report standard-reports test test-generic-net-linechart))
+(define-module (systecash report standard-reports test test-generic-net-linechart))
 
 (use-modules (ice-9 format))
 (use-modules (ice-9 streams))
 (use-modules (srfi srfi-1))
 
-(use-modules (gnucash gnc-module))
-(gnc:module-load "gnucash/report/report-system" 0)
+(use-modules (systecash gnc-module))
+(gnc:module-load "systecash/report/report-system" 0)
 
-(use-modules (gnucash report report-system test test-extras))
-(use-modules (gnucash engine test test-extras))
+(use-modules (systecash report report-system test test-extras))
+(use-modules (systecash engine test test-extras))
 
 (export run-net-asset-test)
 

@@ -679,7 +679,7 @@ void xaccTransVoid(Transaction *transaction,
                    const char *reason);
 
 /** xaccTransUnvoid restores a voided transaction to its original
- *  state.  At some point when gnucash is enhanced to support an audit
+ *  state.  At some point when systecash is enhanced to support an audit
  *  trail (i.e. write only transactions) this command should be
  *  automatically disabled when the audit trail feature is enabled.
  *

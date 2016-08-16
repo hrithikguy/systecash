@@ -28,7 +28,7 @@
 /** @addtogroup RegisterPlugin Register Page
     @{ */
 /** @file gnc-plugin-page-register.c
-    @brief  Functions providing a register page for the GnuCash UI
+    @brief  Functions providing a register page for the systecash UI
     @author Copyright (C) 2003 Jan Arne Petersen <jpetersen@uni-bonn.de>
     @author Copyright (C) 2003,2005 David Hampton <hampton@employees.org>
 */
@@ -71,7 +71,7 @@
 #include "gnc-main-window.h"
 #include "gnc-session.h"
 #include "gnome-utils/gnc-warnings.h"
-#include "gnucash-sheet.h"
+#include "systecash-sheet.h"
 #include "dialog-lot-viewer.h"
 #include "Scrub.h"
 #include "ScrubBusiness.h"
@@ -1281,7 +1281,7 @@ static const gchar *style_names[] =
 
 
 /** Save enough information about this register page that it can be
- *  recreated next time the user starts gnucash.
+ *  recreated next time the user starts systecash.
  *
  *  @param plugin_page The page to save.
  *
@@ -1411,7 +1411,7 @@ gnc_plugin_page_register_restore_edit_menu (GncPluginPage *page,
 
 
 /** Create a new register page based on the information saved during a
- *  previous instantiation of gnucash.
+ *  previous instantiation of systecash.
  *
  *  @param window The window where this page should be installed.
  *
@@ -1498,7 +1498,7 @@ gnc_plugin_page_register_update_edit_menu (GncPluginPage *page, gboolean hide)
 
     reg_page = GNC_PLUGIN_PAGE_REGISTER(page);
     priv = GNC_PLUGIN_PAGE_REGISTER_GET_PRIVATE(reg_page);
-    has_selection = gnucash_register_has_selection (priv->gsr->reg);
+    has_selection = systecash_register_has_selection (priv->gsr->reg);
 
     can_copy = has_selection;
     can_cut = is_readwrite && has_selection;
@@ -2828,7 +2828,7 @@ gnc_plugin_page_register_cmd_cut (GtkAction *action,
 
     ENTER("(action %p, page %p)", action, page);
     priv = GNC_PLUGIN_PAGE_REGISTER_GET_PRIVATE(page);
-    gnucash_register_cut_clipboard(priv->gsr->reg);
+    systecash_register_cut_clipboard(priv->gsr->reg);
     LEAVE("");
 }
 
@@ -2843,7 +2843,7 @@ gnc_plugin_page_register_cmd_copy (GtkAction *action,
 
     ENTER("(action %p, page %p)", action, page);
     priv = GNC_PLUGIN_PAGE_REGISTER_GET_PRIVATE(page);
-    gnucash_register_copy_clipboard(priv->gsr->reg);
+    systecash_register_copy_clipboard(priv->gsr->reg);
     LEAVE("");
 }
 
@@ -2858,7 +2858,7 @@ gnc_plugin_page_register_cmd_paste (GtkAction *action,
 
     ENTER("(action %p, page %p)", action, page);
     priv = GNC_PLUGIN_PAGE_REGISTER_GET_PRIVATE(page);
-    gnucash_register_paste_clipboard(priv->gsr->reg);
+    systecash_register_paste_clipboard(priv->gsr->reg);
     LEAVE("");
 }
 
@@ -3960,7 +3960,7 @@ gnc_plugin_page_register_refresh_cb (GHashTable *changes, gpointer user_data)
     else
     {
         /* forced updates */
-        gnucash_register_refresh_from_prefs(priv->gsr->reg);
+        systecash_register_refresh_from_prefs(priv->gsr->reg);
         gtk_widget_queue_draw(priv->widget);
     }
 

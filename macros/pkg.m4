@@ -1,5 +1,5 @@
 dnl This was originally from pkgconfig
-dnl modified for GnuCash to make it more quiet
+dnl modified for systecash to make it more quiet
 dnl in the face of missing config files.
 dnl also, pkg-config --errors-to-stdout does not work as advertized on FC3
 dnl so we need to redirect stderr to stdout.

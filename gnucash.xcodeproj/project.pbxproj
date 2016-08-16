@@ -450,17 +450,17 @@
 		6E8B75DB09912C9E003F7E3A /* gncmod-tax-us.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "gncmod-tax-us.c"; path = "src/tax/us/gncmod-tax-us.c"; sourceTree = "<group>"; };
 		6E8B75DC09912C9E003F7E3A /* gncmod-test-engine.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "gncmod-test-engine.c"; path = "src/engine/test-core/gncmod-test-engine.c"; sourceTree = "<group>"; };
 		6E8B75DE09912C9E003F7E3A /* gncmod-utility-reports.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "gncmod-utility-reports.c"; path = "src/report/utility-reports/gncmod-utility-reports.c"; sourceTree = "<group>"; };
-		6E8B75E409912C9E003F7E3A /* gnucash-bin.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "gnucash-bin.c"; path = "src/bin/gnucash-bin.c"; sourceTree = "<group>"; };
-		6E8B75E509912C9E003F7E3A /* gnucash-color.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "gnucash-color.c"; path = "src/register/register-gnome/gnucash-color.c"; sourceTree = "<group>"; };
-		6E8B75E609912C9E003F7E3A /* gnucash-cursor.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "gnucash-cursor.c"; path = "src/register/register-gnome/gnucash-cursor.c"; sourceTree = "<group>"; };
-		6E8B75E709912C9E003F7E3A /* gnucash-date-picker.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "gnucash-date-picker.c"; path = "src/register/register-gnome/gnucash-date-picker.c"; sourceTree = "<group>"; };
-		6E8B75E809912C9E003F7E3A /* gnucash-grid.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "gnucash-grid.c"; path = "src/register/register-gnome/gnucash-grid.c"; sourceTree = "<group>"; };
-		6E8B75E909912C9E003F7E3A /* gnucash-header.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "gnucash-header.c"; path = "src/register/register-gnome/gnucash-header.c"; sourceTree = "<group>"; };
-		6E8B75EA09912C9E003F7E3A /* gnucash-item-edit.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "gnucash-item-edit.c"; path = "src/register/register-gnome/gnucash-item-edit.c"; sourceTree = "<group>"; };
-		6E8B75EB09912C9E003F7E3A /* gnucash-item-list.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "gnucash-item-list.c"; path = "src/register/register-gnome/gnucash-item-list.c"; sourceTree = "<group>"; };
-		6E8B75EC09912C9E003F7E3A /* gnucash-scrolled-window.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "gnucash-scrolled-window.c"; path = "src/register/register-gnome/gnucash-scrolled-window.c"; sourceTree = "<group>"; };
-		6E8B75ED09912C9E003F7E3A /* gnucash-sheet.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "gnucash-sheet.c"; path = "src/register/register-gnome/gnucash-sheet.c"; sourceTree = "<group>"; };
-		6E8B75EE09912C9E003F7E3A /* gnucash-style.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "gnucash-style.c"; path = "src/register/register-gnome/gnucash-style.c"; sourceTree = "<group>"; };
+		6E8B75E409912C9E003F7E3A /* systecash-bin.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "systecash-bin.c"; path = "src/bin/systecash-bin.c"; sourceTree = "<group>"; };
+		6E8B75E509912C9E003F7E3A /* systecash-color.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "systecash-color.c"; path = "src/register/register-gnome/systecash-color.c"; sourceTree = "<group>"; };
+		6E8B75E609912C9E003F7E3A /* systecash-cursor.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "systecash-cursor.c"; path = "src/register/register-gnome/systecash-cursor.c"; sourceTree = "<group>"; };
+		6E8B75E709912C9E003F7E3A /* systecash-date-picker.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "systecash-date-picker.c"; path = "src/register/register-gnome/systecash-date-picker.c"; sourceTree = "<group>"; };
+		6E8B75E809912C9E003F7E3A /* systecash-grid.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "systecash-grid.c"; path = "src/register/register-gnome/systecash-grid.c"; sourceTree = "<group>"; };
+		6E8B75E909912C9E003F7E3A /* systecash-header.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "systecash-header.c"; path = "src/register/register-gnome/systecash-header.c"; sourceTree = "<group>"; };
+		6E8B75EA09912C9E003F7E3A /* systecash-item-edit.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "systecash-item-edit.c"; path = "src/register/register-gnome/systecash-item-edit.c"; sourceTree = "<group>"; };
+		6E8B75EB09912C9E003F7E3A /* systecash-item-list.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "systecash-item-list.c"; path = "src/register/register-gnome/systecash-item-list.c"; sourceTree = "<group>"; };
+		6E8B75EC09912C9E003F7E3A /* systecash-scrolled-window.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "systecash-scrolled-window.c"; path = "src/register/register-gnome/systecash-scrolled-window.c"; sourceTree = "<group>"; };
+		6E8B75ED09912C9E003F7E3A /* systecash-sheet.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "systecash-sheet.c"; path = "src/register/register-gnome/systecash-sheet.c"; sourceTree = "<group>"; };
+		6E8B75EE09912C9E003F7E3A /* systecash-style.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "systecash-style.c"; path = "src/register/register-gnome/systecash-style.c"; sourceTree = "<group>"; };
 		6E8B768C09912C9E003F7E3A /* gtable.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = gtable.c; path = "src/register/register-core/gtable.c"; sourceTree = "<group>"; };
 		6E8B769009912C9F003F7E3A /* guile-util.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = "guile-util.c"; path = "src/app-utils/guile-util.c"; sourceTree = "<group>"; };
 		6E8B76A009912C9F003F7E3A /* hello.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = hello.c; path = "src/experimental/cgi-bin/hello.c"; sourceTree = "<group>"; };
@@ -690,16 +690,16 @@
 		6E8B78B70991BC41003F7E3A /* gncEntryLedgerLayout.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gncEntryLedgerLayout.h; path = "src/business/business-ledger/gncEntryLedgerLayout.h"; sourceTree = "<group>"; };
 		6E8B78B80991BC41003F7E3A /* gncEntryLedgerModel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gncEntryLedgerModel.h; path = "src/business/business-ledger/gncEntryLedgerModel.h"; sourceTree = "<group>"; };
 		6E8B78B90991BC41003F7E3A /* gncEntryLedgerP.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gncEntryLedgerP.h; path = "src/business/business-ledger/gncEntryLedgerP.h"; sourceTree = "<group>"; };
-		6E8B78CA0991BC41003F7E3A /* gnucash-color.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "gnucash-color.h"; path = "src/register/register-gnome/gnucash-color.h"; sourceTree = "<group>"; };
-		6E8B78CB0991BC41003F7E3A /* gnucash-cursor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "gnucash-cursor.h"; path = "src/register/register-gnome/gnucash-cursor.h"; sourceTree = "<group>"; };
-		6E8B78CC0991BC41003F7E3A /* gnucash-date-picker.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "gnucash-date-picker.h"; path = "src/register/register-gnome/gnucash-date-picker.h"; sourceTree = "<group>"; };
-		6E8B78CD0991BC41003F7E3A /* gnucash-grid.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "gnucash-grid.h"; path = "src/register/register-gnome/gnucash-grid.h"; sourceTree = "<group>"; };
-		6E8B78CE0991BC41003F7E3A /* gnucash-header.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "gnucash-header.h"; path = "src/register/register-gnome/gnucash-header.h"; sourceTree = "<group>"; };
-		6E8B78CF0991BC41003F7E3A /* gnucash-item-edit.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "gnucash-item-edit.h"; path = "src/register/register-gnome/gnucash-item-edit.h"; sourceTree = "<group>"; };
-		6E8B78D00991BC41003F7E3A /* gnucash-item-list.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "gnucash-item-list.h"; path = "src/register/register-gnome/gnucash-item-list.h"; sourceTree = "<group>"; };
-		6E8B78D10991BC41003F7E3A /* gnucash-scrolled-window.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "gnucash-scrolled-window.h"; path = "src/register/register-gnome/gnucash-scrolled-window.h"; sourceTree = "<group>"; };
-		6E8B78D20991BC41003F7E3A /* gnucash-sheet.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "gnucash-sheet.h"; path = "src/register/register-gnome/gnucash-sheet.h"; sourceTree = "<group>"; };
-		6E8B78D30991BC41003F7E3A /* gnucash-style.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "gnucash-style.h"; path = "src/register/register-gnome/gnucash-style.h"; sourceTree = "<group>"; };
+		6E8B78CA0991BC41003F7E3A /* systecash-color.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "systecash-color.h"; path = "src/register/register-gnome/systecash-color.h"; sourceTree = "<group>"; };
+		6E8B78CB0991BC41003F7E3A /* systecash-cursor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "systecash-cursor.h"; path = "src/register/register-gnome/systecash-cursor.h"; sourceTree = "<group>"; };
+		6E8B78CC0991BC41003F7E3A /* systecash-date-picker.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "systecash-date-picker.h"; path = "src/register/register-gnome/systecash-date-picker.h"; sourceTree = "<group>"; };
+		6E8B78CD0991BC41003F7E3A /* systecash-grid.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "systecash-grid.h"; path = "src/register/register-gnome/systecash-grid.h"; sourceTree = "<group>"; };
+		6E8B78CE0991BC41003F7E3A /* systecash-header.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "systecash-header.h"; path = "src/register/register-gnome/systecash-header.h"; sourceTree = "<group>"; };
+		6E8B78CF0991BC41003F7E3A /* systecash-item-edit.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "systecash-item-edit.h"; path = "src/register/register-gnome/systecash-item-edit.h"; sourceTree = "<group>"; };
+		6E8B78D00991BC41003F7E3A /* systecash-item-list.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "systecash-item-list.h"; path = "src/register/register-gnome/systecash-item-list.h"; sourceTree = "<group>"; };
+		6E8B78D10991BC41003F7E3A /* systecash-scrolled-window.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "systecash-scrolled-window.h"; path = "src/register/register-gnome/systecash-scrolled-window.h"; sourceTree = "<group>"; };
+		6E8B78D20991BC41003F7E3A /* systecash-sheet.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "systecash-sheet.h"; path = "src/register/register-gnome/systecash-sheet.h"; sourceTree = "<group>"; };
+		6E8B78D30991BC41003F7E3A /* systecash-style.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "systecash-style.h"; path = "src/register/register-gnome/systecash-style.h"; sourceTree = "<group>"; };
 		6E8B79870991BC41003F7E3A /* gtable.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = gtable.h; path = "src/register/register-core/gtable.h"; sourceTree = "<group>"; };
 		6E8B79890991BC41003F7E3A /* guile-mappings.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "guile-mappings.h"; path = "src/guile-mappings.h"; sourceTree = "<group>"; };
 		6E8B798A0991BC41003F7E3A /* guile-util.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "guile-util.h"; path = "src/app-utils/guile-util.h"; sourceTree = "<group>"; };
@@ -780,8 +780,8 @@
 		6E8B7A2D0991BC7F003F7E3A /* app-utils.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "app-utils.scm"; path = "src/app-utils/app-utils.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A2E0991BC7F003F7E3A /* average-balance.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "average-balance.scm"; path = "src/report/standard-reports/average-balance.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A2F0991BC7F003F7E3A /* balance-sheet.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "balance-sheet.scm"; path = "src/report/standard-reports/balance-sheet.scm"; sourceTree = SOURCE_ROOT; };
-		6E8B7A310991BC7F003F7E3A /* bar.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = bar.scm; path = "src/gnc-module/test/mod-bar/gnucash/bar.scm"; sourceTree = SOURCE_ROOT; };
-		6E8B7A330991BC7F003F7E3A /* baz.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = baz.scm; path = "src/gnc-module/test/mod-baz/gnucash/baz.scm"; sourceTree = SOURCE_ROOT; };
+		6E8B7A310991BC7F003F7E3A /* bar.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = bar.scm; path = "src/gnc-module/test/mod-bar/systecash/bar.scm"; sourceTree = SOURCE_ROOT; };
+		6E8B7A330991BC7F003F7E3A /* baz.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = baz.scm; path = "src/gnc-module/test/mod-baz/systecash/baz.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A340991BC7F003F7E3A /* budget.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = budget.scm; path = "src/report/standard-reports/budget.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A360991BC7F003F7E3A /* business-gnome.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "business-gnome.scm"; path = "src/business/business-gnome/business-gnome.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A3B0991BC7F003F7E3A /* c-interface.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "c-interface.scm"; path = "src/app-utils/c-interface.scm"; sourceTree = SOURCE_ROOT; };
@@ -801,14 +801,14 @@
 		6E8B7A4E0991BC7F003F7E3A /* engine.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = engine.scm; path = src/engine/engine.scm; sourceTree = SOURCE_ROOT; };
 		6E8B7A4F0991BC7F003F7E3A /* equity-statement.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "equity-statement.scm"; path = "src/report/standard-reports/equity-statement.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A510991BC7F003F7E3A /* fin.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = fin.scm; path = src/scm/fin.scm; sourceTree = SOURCE_ROOT; };
-		6E8B7A530991BC7F003F7E3A /* foo.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = foo.scm; path = "src/gnc-module/test/mod-foo/gnucash/foo.scm"; sourceTree = SOURCE_ROOT; };
+		6E8B7A530991BC7F003F7E3A /* foo.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = foo.scm; path = "src/gnc-module/test/mod-foo/systecash/foo.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A540991BC7F003F7E3A /* general-journal.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "general-journal.scm"; path = "src/report/standard-reports/general-journal.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A550991BC7F003F7E3A /* general-ledger.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "general-ledger.scm"; path = "src/report/standard-reports/general-ledger.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A560991BC7F003F7E3A /* gnc-menu-extensions.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "gnc-menu-extensions.scm"; path = "src/gnome-utils/gnc-menu-extensions.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A570991BC7F003F7E3A /* gnc-module.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "gnc-module.scm"; path = "src/gnc-module/gnc-module.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A580991BC7F003F7E3A /* gnc-numeric.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "gnc-numeric.scm"; path = "src/engine/gnc-numeric.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A590991BC7F003F7E3A /* gnome-utils.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "gnome-utils.scm"; path = "src/gnome-utils/gnome-utils.scm"; sourceTree = SOURCE_ROOT; };
-		6E8B7A5A0991BC7F003F7E3A /* gnucash-sample.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.script.sh; name = "gnucash-sample.scm"; path = "src/experimental/gg/gnucash-sample.scm"; sourceTree = SOURCE_ROOT; };
+		6E8B7A5A0991BC7F003F7E3A /* systecash-sample.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.script.sh; name = "systecash-sample.scm"; path = "src/experimental/gg/systecash-sample.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A5B0991BC7F003F7E3A /* gnumeric-utilities.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "gnumeric-utilities.scm"; path = "src/scm/gnumeric/gnumeric-utilities.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A680991BC7F003F7E3A /* hello-world.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.script.sh; name = "hello-world.scm"; path = "src/experimental/gg/hello-world.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7A690991BC7F003F7E3A /* hello-world.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "hello-world.scm"; path = "src/report/utility-reports/hello-world.scm"; sourceTree = SOURCE_ROOT; };
@@ -863,7 +863,7 @@
 		6E8B7AC20991BC7F003F7E3A /* us.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = us.scm; path = "src/report/locale-specific/us/us.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7AC30991BC7F003F7E3A /* utility-reports.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "utility-reports.scm"; path = "src/report/utility-reports/utility-reports.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7AC40991BC7F003F7E3A /* view-column.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "view-column.scm"; path = "src/report/utility-reports/view-column.scm"; sourceTree = SOURCE_ROOT; };
-		6E8B7AC50991BC7F003F7E3A /* welcome-to-gnucash.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "welcome-to-gnucash.scm"; path = "src/report/utility-reports/welcome-to-gnucash.scm"; sourceTree = SOURCE_ROOT; };
+		6E8B7AC50991BC7F003F7E3A /* welcome-to-systecash.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "welcome-to-systecash.scm"; path = "src/report/utility-reports/welcome-to-systecash.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7AC60991BC7F003F7E3A /* xgettext.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = xgettext.scm; path = "intl-scm/xgettext.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7AC70991BC7F003F7E3A /* xml-generator.scm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = "xml-generator.scm"; path = "src/scm/xml-generator.scm"; sourceTree = SOURCE_ROOT; };
 		6E8B7AD00991BE25003F7E3A /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = Makefile.am; path = "src/import-export/Makefile.am"; sourceTree = SOURCE_ROOT; };
@@ -1189,7 +1189,7 @@
 		6EBC07B918B1DC1500A5CEB7 /* qif-parse.scm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "qif-parse.scm"; path = "src/import-export/qif-imp/qif-parse.scm"; sourceTree = "<group>"; };
 		6EBC07BA18B1DCC200A5CEB7 /* gnc-ledger-display2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "gnc-ledger-display2.c"; path = "src/register/ledger-core/gnc-ledger-display2.c"; sourceTree = "<group>"; };
 		6EBC07BB18B1DCC200A5CEB7 /* gnc-ledger-display2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gnc-ledger-display2.h"; path = "src/register/ledger-core/gnc-ledger-display2.h"; sourceTree = "<group>"; };
-		6EBC07BC18B1DCE500A5CEB7 /* gnucash-sheetP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gnucash-sheetP.h"; path = "src/register/register-gnome/gnucash-sheetP.h"; sourceTree = "<group>"; };
+		6EBC07BC18B1DCE500A5CEB7 /* systecash-sheetP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "systecash-sheetP.h"; path = "src/register/register-gnome/systecash-sheetP.h"; sourceTree = "<group>"; };
 		6EBC07BD18B1DD5B00A5CEB7 /* aging.scm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = aging.scm; path = "src/report/business-reports/aging.scm"; sourceTree = "<group>"; };
 		6EBC07BF18B1DD5B00A5CEB7 /* balsheet-eg.eguile.scm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "balsheet-eg.eguile.scm"; path = "src/report/business-reports/balsheet-eg.eguile.scm"; sourceTree = "<group>"; };
 		6EBC07C018B1DD5B00A5CEB7 /* balsheet-eg.scm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "balsheet-eg.scm"; path = "src/report/business-reports/balsheet-eg.scm"; sourceTree = "<group>"; };
@@ -1918,16 +1918,16 @@
 				6E8B75CD09912C9E003F7E3A /* gncmod-ledger-core.c */,
 				6E8B75D509912C9E003F7E3A /* gncmod-register-core.c */,
 				6E8B75D609912C9E003F7E3A /* gncmod-register-gnome.c */,
-				6E8B75E509912C9E003F7E3A /* gnucash-color.c */,
-				6E8B75E609912C9E003F7E3A /* gnucash-cursor.c */,
-				6E8B75E709912C9E003F7E3A /* gnucash-date-picker.c */,
-				6E8B75E809912C9E003F7E3A /* gnucash-grid.c */,
-				6E8B75E909912C9E003F7E3A /* gnucash-header.c */,
-				6E8B75EA09912C9E003F7E3A /* gnucash-item-edit.c */,
-				6E8B75EB09912C9E003F7E3A /* gnucash-item-list.c */,
-				6E8B75EC09912C9E003F7E3A /* gnucash-scrolled-window.c */,
-				6E8B75ED09912C9E003F7E3A /* gnucash-sheet.c */,
-				6E8B75EE09912C9E003F7E3A /* gnucash-style.c */,
+				6E8B75E509912C9E003F7E3A /* systecash-color.c */,
+				6E8B75E609912C9E003F7E3A /* systecash-cursor.c */,
+				6E8B75E709912C9E003F7E3A /* systecash-date-picker.c */,
+				6E8B75E809912C9E003F7E3A /* systecash-grid.c */,
+				6E8B75E909912C9E003F7E3A /* systecash-header.c */,
+				6E8B75EA09912C9E003F7E3A /* systecash-item-edit.c */,
+				6E8B75EB09912C9E003F7E3A /* systecash-item-list.c */,
+				6E8B75EC09912C9E003F7E3A /* systecash-scrolled-window.c */,
+				6E8B75ED09912C9E003F7E3A /* systecash-sheet.c */,
+				6E8B75EE09912C9E003F7E3A /* systecash-style.c */,
 				6E8B768C09912C9E003F7E3A /* gtable.c */,
 				6E8B76C209912C9F003F7E3A /* numcell.c */,
 				6E8B76CC09912C9F003F7E3A /* pricecell-gnome.c */,
@@ -1985,7 +1985,7 @@
 				6E8B750309912C9D003F7E3A /* fastcgi-hello.c */,
 				6E8B759D09912C9E003F7E3A /* gnc-server.c */,
 				6E8B75DB09912C9E003F7E3A /* gncmod-tax-us.c */,
-				6E8B75E409912C9E003F7E3A /* gnucash-bin.c */,
+				6E8B75E409912C9E003F7E3A /* systecash-bin.c */,
 				6E8B76A009912C9F003F7E3A /* hello.c */,
 				6E8B76A109912C9F003F7E3A /* hello2.c */,
 				6E8B76A209912C9F003F7E3A /* hello3.c */,
@@ -2108,17 +2108,17 @@
 				6E8B780F0991BC41003F7E3A /* formulacell.h */,
 				6E8B78690991BC41003F7E3A /* gnc-ledger-display.h */,
 				6EBC07BB18B1DCC200A5CEB7 /* gnc-ledger-display2.h */,
-				6E8B78CA0991BC41003F7E3A /* gnucash-color.h */,
-				6E8B78CB0991BC41003F7E3A /* gnucash-cursor.h */,
-				6E8B78CC0991BC41003F7E3A /* gnucash-date-picker.h */,
-				6E8B78CD0991BC41003F7E3A /* gnucash-grid.h */,
-				6E8B78CE0991BC41003F7E3A /* gnucash-header.h */,
-				6E8B78CF0991BC41003F7E3A /* gnucash-item-edit.h */,
-				6E8B78D00991BC41003F7E3A /* gnucash-item-list.h */,
-				6E8B78D10991BC41003F7E3A /* gnucash-scrolled-window.h */,
-				6E8B78D20991BC41003F7E3A /* gnucash-sheet.h */,
-				6EBC07BC18B1DCE500A5CEB7 /* gnucash-sheetP.h */,
-				6E8B78D30991BC41003F7E3A /* gnucash-style.h */,
+				6E8B78CA0991BC41003F7E3A /* systecash-color.h */,
+				6E8B78CB0991BC41003F7E3A /* systecash-cursor.h */,
+				6E8B78CC0991BC41003F7E3A /* systecash-date-picker.h */,
+				6E8B78CD0991BC41003F7E3A /* systecash-grid.h */,
+				6E8B78CE0991BC41003F7E3A /* systecash-header.h */,
+				6E8B78CF0991BC41003F7E3A /* systecash-item-edit.h */,
+				6E8B78D00991BC41003F7E3A /* systecash-item-list.h */,
+				6E8B78D10991BC41003F7E3A /* systecash-scrolled-window.h */,
+				6E8B78D20991BC41003F7E3A /* systecash-sheet.h */,
+				6EBC07BC18B1DCE500A5CEB7 /* systecash-sheetP.h */,
+				6E8B78D30991BC41003F7E3A /* systecash-style.h */,
 				6E8B79870991BC41003F7E3A /* gtable.h */,
 				6E8B79AD0991BC42003F7E3A /* numcell.h */,
 				6E8B79B70991BC42003F7E3A /* pricecell-gnome.h */,
@@ -2630,7 +2630,7 @@
 				6E8B7A570991BC7F003F7E3A /* gnc-module.scm */,
 				6E8B7A580991BC7F003F7E3A /* gnc-numeric.scm */,
 				6E8B7A590991BC7F003F7E3A /* gnome-utils.scm */,
-				6E8B7A5A0991BC7F003F7E3A /* gnucash-sample.scm */,
+				6E8B7A5A0991BC7F003F7E3A /* systecash-sample.scm */,
 				6E8B7A5B0991BC7F003F7E3A /* gnumeric-utilities.scm */,
 				6E8B7A680991BC7F003F7E3A /* hello-world.scm */,
 				6E8B7A690991BC7F003F7E3A /* hello-world.scm */,
@@ -2711,7 +2711,7 @@
 				6E8B7AC20991BC7F003F7E3A /* us.scm */,
 				6E8B7AC30991BC7F003F7E3A /* utility-reports.scm */,
 				6E8B7AC40991BC7F003F7E3A /* view-column.scm */,
-				6E8B7AC50991BC7F003F7E3A /* welcome-to-gnucash.scm */,
+				6E8B7AC50991BC7F003F7E3A /* welcome-to-systecash.scm */,
 				6E8B7AC60991BC7F003F7E3A /* xgettext.scm */,
 				6E8B7AC70991BC7F003F7E3A /* xml-generator.scm */,
 			);
@@ -2859,7 +2859,7 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = 6E0F8122098D48CD00D0BB5C /* Build configuration list for PBXProject "gnucash" */;
+			buildConfigurationList = 6E0F8122098D48CD00D0BB5C /* Build configuration list for PBXProject "systecash" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -2916,7 +2916,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6E0F8122098D48CD00D0BB5C /* Build configuration list for PBXProject "gnucash" */ = {
+		6E0F8122098D48CD00D0BB5C /* Build configuration list for PBXProject "systecash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E0F8123098D48CD00D0BB5C /* Debug */,

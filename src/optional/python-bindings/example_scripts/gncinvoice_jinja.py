@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 
 ##@file
-# @brief exports an invoice from gnucash using a template file, see \ref py_invoice_export
+# @brief exports an invoice from systecash using a template file, see \ref py_invoice_export
 # @ingroup python_bindings_examples
 # @author Christoph Holtermann (c.holtermann (at) gmx.de)
 # @date 2014-11
 #
 # @details
 # Input is a template file that will be filled with information from
-# gnucash Invoices. Jinja2 templating engine ist used. Templates can
+# systecash Invoices. Jinja2 templating engine ist used. Templates can
 # be Latex, Html or anything.
 #
 # Example templates for german invoices:
@@ -22,19 +22,19 @@
 # more modular as it allows to use arbitrary templates
 #
 # Doxygen docs:
-# - http://svn.gnucash.org/docs/HEAD/
+# - http://svn.systecash.org/docs/HEAD/
 # - see page \ref py_invoice_export
 #
 # Questions / Issues:
 # - How much logic in the template, how much preprocessing in this file ?
 # - Internationalization - currencies, formatting of numbers
-# - Providing data of gnucash owner
+# - Providing data of systecash owner
 
 try:
     import locale
     import sys
     import getopt
-    import gnucash
+    import systecash
     import str_methods
     import jinja2
     from gncinvoicefkt import *
@@ -116,7 +116,7 @@ def main(argv=None):
         print
         print "Usage:"
         print
-        print "Invoke with",prog_name,"gnucash_url."
+        print "Invoke with",prog_name,"systecash_url."
         print "where input is"
         print "   filename"
         print "or file://filename"
@@ -134,7 +134,7 @@ def main(argv=None):
     # Try to open the given input
     try:
         print "Opening", input_url, "."
-        session = gnucash.Session(input_url, ignore_lock=ignore_lock)
+        session = systecash.Session(input_url, ignore_lock=ignore_lock)
     except Exception as exception:
         print "Problem opening input."
         print exception

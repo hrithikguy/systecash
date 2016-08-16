@@ -58,7 +58,7 @@
 	* src/register/gnome/pricecell-gnome.c: add support for mb char
 	sets
 
-	* src/register/gnome/gnucash-sheet.c: add support for mb char sets
+	* src/register/gnome/systecash-sheet.c: add support for mb char sets
 
 	* src/register/gnome/datecell-gnome.c: add support for mb char
 	sets
@@ -137,9 +137,9 @@
 	use gnc_glist_to_scm_list.
 	(gnc_scm_to_glist_commodity_ptr): use gnc_scm_list_to_glist.
 
-	* src/guile/gnucash.c.in
-	(gnucash_main_helper): add g-wrap module dir to %load-path.
-	(gnucash_main_helper): call init_g_wrapped_gnc, not init_gnc.
+	* src/guile/systecash.c.in
+	(systecash_main_helper): add g-wrap module dir to %load-path.
+	(systecash_main_helper): call init_g_wrapped_gnc, not init_gnc.
 
 	* src/guile/gnc.gwp: update for the new g-wrap.
 
@@ -215,7 +215,7 @@
 	* src/doc/design/reports.texinfo (Reports): Reorder option
 	descriptions to match the order in the example function.
 
-	* src/doc/design/Makefile.am (gnucash_design_TEXINFOS): Add info
+	* src/doc/design/Makefile.am (systecash_design_TEXINFOS): Add info
 	files to clean list (why the hell aren't they already cleaned?)
 
 2000-11-15  James LewisMoss  <dres@debian.org>
@@ -476,7 +476,7 @@
 
 	* src/engine/FileIO.h: new file.
 
-	* make-gnucash-patch.in: ignore some more autogen files.
+	* make-systecash-patch.in: ignore some more autogen files.
 
 	* src/FileDialog.c: update to handle new Session* semantics.
 	Saving and SavingAs are not the same anymore, session-wise.  We
@@ -498,7 +498,7 @@
 	  'double' engine API remains, but the names have been changed
 	  from (for example) xaccSplitSetValue to DxaccSplitSetValue. The
 	  D means deprecated.  Will be gradually migrating the usage of
-	  doubles to gnc-numeric throughout gnucash, eventually removing
+	  doubles to gnc-numeric throughout systecash, eventually removing
 	  the Dxacc API completely.  ATM, there is no scheme support for
 	  gnc-numeric, so I just left the Scheme API alone (old function
 	  names still work, and work the same way).
@@ -508,7 +508,7 @@
 	  'gnc-commodity', which has more information about the
 	  currency/stock/commodity than its name, including what exchange
 	  it trades on and what the resolution of transactions is in
-	  fractional units.  When you read in an old gnucash file, you
+	  fractional units.  When you read in an old systecash file, you
 	  will get a 'wizard' that will ask questions about the currencies
 	  and stocks in your old file.
 
@@ -529,7 +529,7 @@
 	separator char for automatically created accounts 
 
 	* src/scm/hooks.scm: added a file-opened-hook that gets run 
-	any time a gnucash file is opened.  
+	any time a systecash file is opened.  
 
 	* src/engine/gnc-engine.{c,h}: new files for global engine
 	meta-operations.  I mainly needed it to add a global list of known
@@ -633,7 +633,7 @@
 	to use wrapped scheme getter rather than directly manipulating
 	scheme data structure.
 
-	* make-gnucash-patch.in: Exclude generated HTML.
+	* make-systecash-patch.in: Exclude generated HTML.
 
 2000-08-26  Dave Peticolas  <dave@krondo.com>
 
@@ -741,7 +741,7 @@
 
 	* src/guile/gfec.c: include string.h
 
-	* doc/gnucash.1: change filename extension in example to .gnc
+	* doc/systecash.1: change filename extension in example to .gnc
 
 	* configure.in: always report missing templates as an error.
 
@@ -783,7 +783,7 @@
 	* src/SplitLedger.c (LedgerAutoCompletion): simplify, and fix a
 	bug with split auto-completion.
 
-	* src/scm/bootstrap.scm.in: add HOME/.gnucash to scm search path.
+	* src/scm/bootstrap.scm.in: add HOME/.systecash to scm search path.
 
 2000-07-04  Dave Peticolas  <dave@krondo.com>
 
@@ -812,7 +812,7 @@
 	* src/gnome/top-level.c: configure the register fonts from
 	callbacks.
 
-	* src/register/gnome/gnucash-style.c: make the register font and
+	* src/register/gnome/systecash-style.c: make the register font and
 	hint fonts configurable outside the register.
 
 2000-06-28  Robert Graham Merkel  <rgmerk@mira.net>
@@ -828,7 +828,7 @@
 
 2000-06-27  Dave Peticolas  <dave@krondo.com>
 
-	* src/gnome/top-level.c (gnucash_ui_init): set the reconciled cell
+	* src/gnome/top-level.c (systecash_ui_init): set the reconciled cell
 	string getter to the dialog-utils function for i18ning the reconcile
 	flag value.
 
@@ -909,7 +909,7 @@
 
 	* doc/html/C/xacc-about.html: update last version info
 
-	* src/guile/gnucash.c.in: update last version info
+	* src/guile/systecash.c.in: update last version info
 
 2000-06-21  Dave Peticolas  <dave@krondo.com>
 
@@ -917,7 +917,7 @@
 	register style into two separate struct members, instead of using
 	bitmasks. This is much, much simpler.
 
-	* src/optional/swig/Makefile.am (gnucash-engine-perl5_wrap.c):
+	* src/optional/swig/Makefile.am (systecash-engine-perl5_wrap.c):
 	remove the -stat argument, it's no longer support in later swig
 	versions.
 
@@ -966,7 +966,7 @@
 
 2000-06-14  Dave Peticolas  <dave@krondo.com>
 
-	* src/register/gnome/gnucash-item-edit.c (item_edit_show_list):
+	* src/register/gnome/systecash-item-edit.c (item_edit_show_list):
 	make sure the current selected item is visible and, before doing
 	so, process all pending events to make sure the list is shown and
 	sized first.
@@ -1126,9 +1126,9 @@
 	src/engine/guid/* -> src/engine - automake wants flat lib dirs.
 	man/* -> doc/
 	lib/* deleted - nothing needed right now; see lib/README.
-	gnucash.gdb-cmds -> doc/
-	gnucash.desktop -> src/gnome/
-	gnucash deleted - see doc/README.build-system
+	systecash.gdb-cmds -> doc/
+	systecash.desktop -> src/gnome/
+	systecash deleted - see doc/README.build-system
 	etc/config -> src/guile/config
 	doc/html/logos/ -> doc/html/C/logos - this should handle intl better.
 	doc/build-system -> doc/README.build-system
@@ -1166,8 +1166,8 @@
 	and xfer to cells as 'Account', label the mirrored xfer as just
 	'Transfer'.
 
-	* src/register/gnome/gnucash-header.c
-	(gnucash_header_reconfigure): also redraw if the style changes.
+	* src/register/gnome/systecash-header.c
+	(systecash_header_reconfigure): also redraw if the style changes.
 
 2000-05-30  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
@@ -1182,7 +1182,7 @@
 	(which doesn't exist) with gnc:split-get-value for amount sorting.
 
 	* doc/guile-hackers.txt: Added pointers to g-wrap now that it's
-	not part of the main gnucash distribution.
+	not part of the main systecash distribution.
 
 2000-05-24  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
@@ -1251,7 +1251,7 @@
 
 2000-05-19  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* src/register/gnome/gnucash-style.c (gnucash_style_init): use
+	* src/register/gnome/systecash-style.c (systecash_style_init): use
 	default style's font. Unfortunately, there doesn't seem to be a
 	way to get a default italic font, so use the regular one for now.
 
@@ -1263,7 +1263,7 @@
 
 	* Makefile.in: install files and directories one at a time. If the
 	user does not have an install script, the one supplied in the
-	gnucash distribution can only handle one file at a time.
+	systecash distribution can only handle one file at a time.
 
 	* src/engine/util.c (xaccParseAmount): allow negative sign to be
 	at the front or back of the amount.
@@ -1273,8 +1273,8 @@
 	* src/gnome/window-reconcile.c: make the finish button sensitivity
 	depend on whether the reconciliation is balanced.
 
-	* src/register/gnome/gnucash-sheet.c
-	(gnucash_sheet_activate_cursor_cell): if the callback changes the
+	* src/register/gnome/systecash-sheet.c
+	(systecash_sheet_activate_cursor_cell): if the callback changes the
 	value, redraw.
 
 2000-05-17  Dave Peticolas  <peticola@cs.ucdavis.edu>
@@ -1369,7 +1369,7 @@
 
 	* configure.in: add a profiling argument.
 
-	* src/guile/gnucash.c: use putenv, not setenv. putenv is POSIX,
+	* src/guile/systecash.c: use putenv, not setenv. putenv is POSIX,
 	seems to be more common.
 
 2000-05-10  Dave Peticolas  <peticola@cs.ucdavis.edu>
@@ -1397,7 +1397,7 @@
 2000-05-08  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
 	* src/engine/GNCId.c (xaccGUIDNew): new function to generate
-	IDs for gnucash. Use this, not guid_new. Also modified other
+	IDs for systecash. Use this, not guid_new. Also modified other
 	engine files to use this function.
 
 	* src/register/pricecell.c (COLORIZE): check for being close to
@@ -1411,14 +1411,14 @@
 
 2000-05-08  Rob Browning  <rlb@cs.utexas.edu>
 
-	* make-gnucash-patch.in: change gnucash.h to gnucash.c in ignores.
+	* make-systecash-patch.in: change systecash.h to systecash.c in ignores.
 	Delete src/messages_i18n.h from ignores.
 	Remove g-wrap files from ignores.
 
-	* src/guile/gnucash.c.in: new file (now auto-generated)
+	* src/guile/systecash.c.in: new file (now auto-generated)
 	This and the following change fix a mutual dependency problem.
 
-	* src/guile/gnucash.h: new file (no longer auto-generated).
+	* src/guile/systecash.h: new file (no longer auto-generated).
 
 	* src/Makefile.in (CLEAN_SUBDIRS): add quotes.
 	(all targets): build g-wrap before guile. 
@@ -1521,7 +1521,7 @@
 
 	* lib/Makefile.in: expunge g-wrap.
 
-	* make-gnucash-patch.in: use sed @--@ handling for expansions.
+	* make-systecash-patch.in: use sed @--@ handling for expansions.
 	Be strict.
 	Add ignore for src/messages_i18n.h
 
@@ -1529,9 +1529,9 @@
 
 	* po/extract-macros.perl.in: handle vars with sed.
 
-	* rpm/Makefile.in: new file.  Handle gnucash.spec.in with sed.
+	* rpm/Makefile.in: new file.  Handle systecash.spec.in with sed.
 
-	* rpm/gnucash.spec.in: use @--@ vars.
+	* rpm/systecash.spec.in: use @--@ vars.
 
 	* src/Makefile.in: handle src/quotes in the build process.
 	Re-order src/guile to build before src/g-wrap.
@@ -1541,9 +1541,9 @@
 	* src/gnome/Makefile.in: fix compile var handling for g-wrap, etc.
 
 	* src/guile/Makefile.in: fix compile var handling for g-wrap, etc.
-	Add sed handling for gnucash.h.in.
+	Add sed handling for systecash.h.in.
 
-	* src/guile/gnucash.h.in: handle g-wrap changes.
+	* src/guile/systecash.h.in: handle g-wrap changes.
 	Handle removal of EXPANDED vars.
 	Switch to sed @--@ vars.
 
@@ -1661,7 +1661,7 @@
 	* src/gnome/dialog-transfer.c: modified to use gnc-dateedit.
 
 	* src/gnome/gnc-dateedit.c: new file. gnome date editor modified
- 	to use gnucash date printing and parsing routines. I plan on
+ 	to use systecash date printing and parsing routines. I plan on
  	extending this with additional features, too.
 
 	* src/engine/Group.c (xaccMallocAccountGroup): loop until we
@@ -1720,7 +1720,7 @@
 
 2000-04-15  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* src/register/gnome/gnucash-style.c (gnucash_style_layout_init):
+	* src/register/gnome/systecash-style.c (systecash_style_layout_init):
  	added a missing 'break' statement.
 
 2000-04-14  Dave Peticolas  <peticola@cs.ucdavis.edu>
@@ -1747,11 +1747,11 @@
  	'list-index-pred'. guile-1.3.4 defines a list-index with
 	different api and semantics.
 
-	* configure.in: make gnucash.spec configured
+	* configure.in: make systecash.spec configured
 
-	* rpm/gnucash.spec.in: new file, same as old gnucash.spec, but
+	* rpm/systecash.spec.in: new file, same as old systecash.spec, but
 	with @VERSION@ instead of a hard-coded version number. Removed
-	gnucash.spec.
+	systecash.spec.
 
 	* src/scm/prefs.scm: make the default field types be description
  	and total
@@ -1775,7 +1775,7 @@
 	configured version instead of hard-coding it.
 
 	* src/scm/bootstrap.scm.in (gnc:version): configure this guile
-	variable with the gnucash version info.
+	variable with the systecash version info.
 
 	* src/SplitLedger.c (xaccLoadXferCell): == not = Doh!!!
 
@@ -1813,7 +1813,7 @@
 
 2000-04-04  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* src/register/gnome/gnucash-style.c: update the styles
+	* src/register/gnome/systecash-style.c: update the styles
  	appropriately for the changes below.
 
 	* src/register/splitreg.c: configure the ledger style register
@@ -1849,7 +1849,7 @@
 
  	* src/quotes/gnc-prices: deleted.
 
- 	* src/guile/gnucash.h.in: use new GNC_EXPANDED_ vars.
+ 	* src/guile/systecash.h.in: use new GNC_EXPANDED_ vars.
 
  	* src/guile/i18n.h.in: use new GNC_EXPANDED_ vars.
 
@@ -1857,14 +1857,14 @@
 
  	* src/Makefile.in: minor cleanups and safety code.
 
- 	* make-gnucash-patch.in: new file.
+ 	* make-systecash-patch.in: new file.
 
- 	* make-gnucash-patch: deleted.
+ 	* make-systecash-patch: deleted.
 
  	* lib/Makefile.in: re-configure g-wrap after every distclean and
  	rebuild/install it on every build.
 
- 	* gnucash: fix the doc-path to match the new structure.  This
+ 	* systecash: fix the doc-path to match the new structure.  This
  	fixes things back the way they were, but now we need to add
  	runtime locale detection.
 
@@ -1929,7 +1929,7 @@
 	* src/register/splitreg.c: add a SEARCH_LEDGER register type. Don't
 	include the balance field in 'ledger' style registers.
 
-	* src/register/gnome/gnucash-style.c (gnucash_style_layout_init):
+	* src/register/gnome/systecash-style.c (systecash_style_layout_init):
  	new layouts for ledgers -- they don't have a balance field. We'll
  	probably need to redo them if we add a xto field. Broke out the
 	actual layout construction into separate functions.
@@ -2059,8 +2059,8 @@
 
 2000-03-14  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* src/register/gnome/gnucash-sheet.c
- 	(gnucash_register_key_press_cb): generate activate event on a
+	* src/register/gnome/systecash-sheet.c
+ 	(systecash_register_key_press_cb): generate activate event on a
  	keypad enter as well as the return key.
 
 	* Docs/C/xacc-ticker.html: updated for Yahoo Europe information.
@@ -2130,19 +2130,19 @@
  	reading the file.
 	(gncFileSave): ditto.
 
-	* src/register/gnome/gnucash-sheet.c
- 	(gnucash_sheet_update_adjustments): set the step increment.
+	* src/register/gnome/systecash-sheet.c
+ 	(systecash_sheet_update_adjustments): set the step increment.
 
 2000-03-06  Heath Martin  <martinh@pegasus.cc.ucf.edu>
 
-	* src/register/gnome/gnucash-style.c
- 	(gnucash_sheet_style_set_col_width): Adjust the overall style
+	* src/register/gnome/systecash-style.c
+ 	(systecash_sheet_style_set_col_width): Adjust the overall style
  	width, too.
 
-	* src/register/gnome/gnucash-header.c
- 	(gnucash_header_auto_resize_column): Resize the window to fit the
+	* src/register/gnome/systecash-header.c
+ 	(systecash_header_auto_resize_column): Resize the window to fit the
  	register.
-	(gnucash_header_event): ditto on a column resize.
+	(systecash_header_event): ditto on a column resize.
 
 2000-03-05  Rob Browning  <rlb@cs.utexas.edu>
 
@@ -2176,12 +2176,12 @@
 	* src/scm/extensions.scm (gnc:extensions-menu-setup): fixed minor
 	non-r5rsism (nested defines must be at the beginning of a <body>).
 
-	* make-gnucash-patch: allow the user to override the default
+	* make-systecash-patch: allow the user to override the default
 	locations with environment variables.
 
 2000-03-04  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* src/guile/gnucash.c (main): load the locale from the environment
+	* src/guile/systecash.c (main): load the locale from the environment
  	with setlocale. This is needed so that guile can find the locale.
 
 	* Docs/: reorganized the Docs directory. Then english language
@@ -2198,53 +2198,53 @@
 
 2000-03-04  Heath Martin  <martinh@pegasus.cc.ucf.edu>
 
-	* src/register/gnome/gnucash-style.c (set_dimensions_pass_one):
+	* src/register/gnome/systecash-style.c (set_dimensions_pass_one):
  	Only set the dimensions based on percentages if the dimensions
  	have not been set before.  This gets rid of some strange behavior
  	where styles change width by a few pixels when window size was
  	changed.
-	(gnucash_sheet_style_set_dimensions): Add a width argument; now we
+	(systecash_sheet_style_set_dimensions): Add a width argument; now we
  	compute dimensions to fit "width" as best as possible.  Most of
  	the time width should be the allocation width of the sheet, except
  	that when the style is first compiled, the allocation width may be
  	unavailable.
 	(style_recompute_layout_dimensions): Set dimensions->width
  	properly.
-	(gnucash_style_default_width): Nuke this function, since we can
+	(systecash_style_default_width): Nuke this function, since we can
  	now use dimensions->width.
-	(gnucash_sheet_style_compile): Use a default width to set
+	(systecash_sheet_style_compile): Use a default width to set
  	dimensions.
 
-	* src/register/gnome/gnucash-sheet.c (gnucash_sheet_set_top_row):
+	* src/register/gnome/systecash-sheet.c (systecash_sheet_set_top_row):
  	Update the canvas before the scroll.  This helps eliminate some of
  	the flashing when the register scrolls.  Still not perfect,
  	though.
 
 2000-03-03  Heath Martin  <martinh@pegasus.cc.ucf.edu>
 
-	* src/register/gnome/gnucash-sheet.c
- 	(gnucash_sheet_size_allocate): Keep track of the allocation and
+	* src/register/gnome/systecash-sheet.c
+ 	(systecash_sheet_size_allocate): Keep track of the allocation and
  	update everything only if the allocation changes.  This is needed
  	because gnome canvas widget items always do a gtk_widget_set_usize
  	(), which in turn forces a reconfigure of the parent widgets.  So
  	we were getting size_allocate events even when the size of the
  	window was not changing.
-	(gnucash_sheet_set_top_row): Scroll the sheet by setting the
+	(systecash_sheet_set_top_row): Scroll the sheet by setting the
  	adjustment values rather than calling gnome_canvas_scroll_to ().
 
-	* src/register/gnome/gnucash-header.c
- 	(gnucash_header_reconfigure): Set the sheet width from the header.
+	* src/register/gnome/systecash-header.c
+ 	(systecash_header_reconfigure): Set the sheet width from the header.
 
-	* src/register/gnome/gnucash-sheet.c
- 	(gnucash_sheet_block_set_from_table): Check to see if the style
+	* src/register/gnome/systecash-sheet.c
+ 	(systecash_sheet_block_set_from_table): Check to see if the style
  	has changed before we reallocate all the entries and colors.
-	(gnucash_sheet_block_set_entries): Don't strdup the entries from
+	(systecash_sheet_block_set_entries): Don't strdup the entries from
  	the table.
-	(gnucash_sheet_block_clear_entries): Don't free the text in the
+	(systecash_sheet_block_clear_entries): Don't free the text in the
  	entries, since now the table owns this.
-	(gnucash_sheet_set_scroll_region): New function; sets the scroll
+	(systecash_sheet_set_scroll_region): New function; sets the scroll
  	region on the register canvas.
-	(gnucash_sheet_update_adjustments): This was being done
+	(systecash_sheet_update_adjustments): This was being done
  	incorrectly.  The layout widget on which the gnome canvas is based
  	takes care of the adjustments, and we've just connected to these
  	adjustments in the smooth-scroll case.  Now that the scroll region
@@ -2273,12 +2273,12 @@
  	(gnc_reconcile_list_get_needed_height): better estimate of needed
  	height than just multiplying row height times rows.
 
-	* src/register/gnome/gnucash-item-list.c (gnc_item_list_autosize):
+	* src/register/gnome/systecash-item-list.c (gnc_item_list_autosize):
  	new function to autosize the list. For some reason, have the list
  	autosize for each new insertion wasn't working for very large
  	registers.
 
-	* src/register/gnome/gnucash-sheet.c (gnucash_sheet_new): bump up
+	* src/register/gnome/systecash-sheet.c (systecash_sheet_new): bump up
  	the scroll region for very large registers.
 
 	* src/gnome/window-main.c (gnc_main_create_toolbar): removed the
@@ -2370,24 +2370,24 @@
 
 	* src/scm/prefs.scm: ditto
 
-	* src/register/gnome/gnucash-style.c
- 	(gnucash_style_set_cell_borders):
-	(gnucash_style_set_register_borders):
-	(gnucash_style_set_borders):
-	(gnucash_sheet_set_borders): Functions to interactively set cell
+	* src/register/gnome/systecash-style.c
+ 	(systecash_style_set_cell_borders):
+	(systecash_style_set_register_borders):
+	(systecash_style_set_borders):
+	(systecash_sheet_set_borders): Functions to interactively set cell
  	borders.
 
 2000-02-26  Heath Martin  <martinh@pegasus.cc.ucf.edu>
 
-	* src/register/gnome/gnucash-style.c
- 	(gnucash_sheet_style_compile): Support for turning horizontal and
+	* src/register/gnome/systecash-style.c
+ 	(systecash_sheet_style_compile): Support for turning horizontal and
  	vertical borders on and off.
-	(gnucash_sheet_style_recompile): Ditto
+	(systecash_sheet_style_recompile): Ditto
 
-	* src/register/gnome/gnucash-grid.c (draw_cell): ditto
+	* src/register/gnome/systecash-grid.c (draw_cell): ditto
 
-	* src/register/gnome/gnucash-header.c
- 	(gnucash_header_reconfigure): Fix a bug in how the scroll region
+	* src/register/gnome/systecash-header.c
+ 	(systecash_header_reconfigure): Fix a bug in how the scroll region
  	was set.  Remove some outdated code.
 
 2000-02-27  Dave Peticolas  <peticola@cs.ucdavis.edu>
@@ -2418,7 +2418,7 @@
 
 2000-02-25  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* src/register/gnome/gnucash-sheet.c (gnucash_sheet_check_grab):
+	* src/register/gnome/systecash-sheet.c (systecash_sheet_check_grab):
  	see if we need to release the grab.
 
 	* src/register/splitreg.c (xaccInitSplitRegister): configure the
@@ -2436,7 +2436,7 @@
 	* src/register/table-gnome.c (xaccRefreshTableGUI): redo the style
  	information so that new colors (and other info) get refreshed.
 
-	* src/register/gnome/gnucash-header.c (gnucash_header_draw): use
+	* src/register/gnome/systecash-header.c (systecash_header_draw): use
  	header style color to draw header background.
 
 	* src/gnome/option-util.c: new functions to support color options.
@@ -2454,7 +2454,7 @@
 
 2000-02-22  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* src/register/gnome/gnucash-sheet.c (gnucash_sheet_delete_cb):
+	* src/register/gnome/systecash-sheet.c (systecash_sheet_delete_cb):
  	don't bother with the callback if the ending position of the
  	deleted section is <= to the starting position. This can happen.
 
@@ -2464,8 +2464,8 @@
 
 2000-02-21  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* src/register/gnome/gnucash-header.c
- 	(gnucash_header_reconfigure): scroll region width should be the
+	* src/register/gnome/systecash-header.c
+ 	(systecash_header_reconfigure): scroll region width should be the
  	style width, not the allocation width.
 
 2000-02-20  Dave Peticolas  <peticola@cs.ucdavis.edu>
@@ -2482,17 +2482,17 @@
 	* src/scm/report/hello-world.scm: added a 'crash the report'
  	option for testing the reports code.
 
-	* src/register/gnome/gnucash-header.c (gnucash_header_event):
+	* src/register/gnome/systecash-header.c (systecash_header_event):
  	modify per changes to pointer_on_resize_line. Allow the user to
  	resize by double-clicking anywhere in a column heading.
 	(pointer_on_resize_line): set the column with a pointer argument.
   	return true if on a resize line, false otherwise.
-	(gnucash_header_init): initialize normal_cursor to NULL, which
+	(systecash_header_init): initialize normal_cursor to NULL, which
 	selects the default gdk cursor.
 
 2000-02-18  Heath Martin  <martinh@pegasus.cc.ucf.edu>
 
-	* src/register/gnome/gnucash-style.c (gnucash_style_layout_init):
+	* src/register/gnome/systecash-style.c (systecash_style_layout_init):
  	Make only the description cell a FILL cell.
 
 2000-02-18  Dave Peticolas  <peticola@cs.ucdavis.edu>
@@ -2521,22 +2521,22 @@
  	describe the command to jump to the blank split. Use a new tooltip
  	too. Ditto for the popup menu and the toolbar.
 
-	* Makefile.in: reversed order of gnucash linking so gnucash.gnome
+	* Makefile.in: reversed order of systecash linking so systecash.gnome
 	gets linked last, so it overides the motif version. Also, install
-	the gnucash.desktop entry so gnucash appears in the gnome panel.
+	the systecash.desktop entry so systecash appears in the gnome panel.
 
 	* src/register/splitreg.c: right-align the xfer cells
 
-	* src/register/gnome/gnucash-item-edit.c: handle selections the
+	* src/register/gnome/systecash-item-edit.c: handle selections the
  	gtk way with the gtk_selection_ routines. Grabbed this stuff from
  	gtkeditable and gtkentry.
 
-	* src/register/gnome/gnucash-sheet.c: use the new selection handling
+	* src/register/gnome/systecash-sheet.c: use the new selection handling
 	code in the item editor to do cutting and pasting.
 
 2000-02-16  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* src/register/gnome/gnucash-item-edit.c: added code to support
+	* src/register/gnome/systecash-item-edit.c: added code to support
 	real gtk selection handling. Adapted this from the gtk editable
 	widget.
 
@@ -2651,7 +2651,7 @@
  	definition process under guile. Comment out extensions menu
 	stuff -- it's not complete.
 
-	* src/register/gnome/gnucash-sheet.c (gnucash_button_press_event):
+	* src/register/gnome/systecash-sheet.c (systecash_button_press_event):
  	after moving, get the cursor position again before setting the
  	item editor cursor position because the cursor position may have
  	changed due to auto-mode rearrangement.
@@ -2703,7 +2703,7 @@
 	to an integer indicating the minimum number of trailing zeros to
 	print.
 
-	* src/register/gnome/gnucash-item-list.c: handle mouse wheel
+	* src/register/gnome/systecash-item-list.c: handle mouse wheel
  	scrolling from the clist.
 
 2000-02-07  Dave Peticolas  <peticola@cs.ucdavis.edu>
@@ -2777,17 +2777,17 @@
 
 2000-02-06  Heath Martin  <martinh@pegasus.cc.ucf.edu>
 
-	* src/register/gnome/gnucash-header.c
- 	(gnucash_header_auto_resize_column): Support for auto sizing.
-	(gnucash_header_event): Double clicks on the resize lines will
+	* src/register/gnome/systecash-header.c
+ 	(systecash_header_auto_resize_column): Support for auto sizing.
+	(systecash_header_event): Double clicks on the resize lines will
  	auto resize the column to fit the text.
 
-	* src/register/gnome/gnucash-sheet.c (compute_optimal_width): Use
+	* src/register/gnome/systecash-sheet.c (compute_optimal_width): Use
  	the style layout to compute a good width for the sheet.
 
-	* src/register/gnome/gnucash-header.c (gnucash_header_draw): Draw
+	* src/register/gnome/systecash-header.c (systecash_header_draw): Draw
  	the big rectangle correctly.
-	(gnucash_header_reconfigure): Set the scroll region and header
+	(systecash_header_reconfigure): Set the scroll region and header
  	width based on the size of the sheet, not the current style.
 
 2000-02-05  Dave Peticolas  <peticola@cs.ucdavis.edu>
@@ -2799,8 +2799,8 @@
 	* src/register/pricecell.c: get rid of the format string, add an
  	option for printing share quantities.
 
-	* src/engine/Session.c (MakeHomeDir): just because ~/.gnucash
- 	exists doens't mean ~/.gnucash/data exists.
+	* src/engine/Session.c (MakeHomeDir): just because ~/.systecash
+ 	exists doens't mean ~/.systecash/data exists.
 
 	* src/scm/report/hello-world.scm: renamed from dummy.scm. Added
 	documentation to the source code and additional help text in the
@@ -2824,7 +2824,7 @@
 
 	* src/scm/extensions.scm: removed cruft functions
 
-	* src/register/gnome/gnucash-item-list.c (gnc_item_list_select):
+	* src/register/gnome/systecash-item-list.c (gnc_item_list_select):
  	set the focus row to the selected row.
 
 	* src/register/gnome/combocell-gnome.c (ComboMV): auto-pop the
@@ -2841,22 +2841,22 @@
 	* src/engine/Query.c: do num sorting using numerical values where
  	possible.
 
-	* src/register/gnome/gnucash-item-edit.c: added new functions for
+	* src/register/gnome/systecash-item-edit.c: added new functions for
 	cutting, copying, and pasting the clipboard. We have to do this
 	manually instead of relying in the gtk_entry, as it screws up the
 	selection handling.
 
-	* src/register/gnome/gnucash-sheet.c (gnucash_sheet_insert_cb):
+	* src/register/gnome/systecash-sheet.c (systecash_sheet_insert_cb):
  	fixed bug where new text was being copied incorrectly for
  	insertions longer than a character.
 
 2000-02-02  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* src/register/gnome/gnucash-sheet.c (compute_optimal_width):
+	* src/register/gnome/systecash-sheet.c (compute_optimal_width):
  	return optimal width if possible
 
-	* src/register/gnome/gnucash-style.c
- 	(gnucash_style_default_width): new function, compute optimal sheet
+	* src/register/gnome/systecash-style.c
+ 	(systecash_style_default_width): new function, compute optimal sheet
  	width
 
 	* src/gnome/option-util.c: interfaced with the guile option callback
@@ -2895,21 +2895,21 @@
 
 2000-01-28  Heath Martin  <martinh@pegasus.cc.ucf.edu>
 
-	* src/register/gnome/gnucash-header.c (pointer_on_resize_line): Fix a
+	* src/register/gnome/systecash-header.c (pointer_on_resize_line): Fix a
 	problem with the limits.  Now the last column is resizable.
-	(gnucash_header_event): Check for which button is pressed/released.
+	(systecash_header_event): Check for which button is pressed/released.
 
 2000-01-27  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
 	* src/register/splitreg.c (xaccInitSplitRegister): set format of
  	price cell in stock registers to 4 decimal places.
 
-	* src/register/gnome/gnucash-sheet.c (gnucash_sheet_scroll_event):
+	* src/register/gnome/systecash-sheet.c (systecash_sheet_scroll_event):
  	new function. Do mouse wheel scrolling in gnome register.
 
-	* src/register/gnome/gnucash-style.c (gnucash_style_layout_init):
+	* src/register/gnome/systecash-style.c (systecash_style_layout_init):
  	use printDate to find a date width using the current date style.
-	(gnucash_style_layout_init): use i18n'd string to set transfer
+	(systecash_style_layout_init): use i18n'd string to set transfer
 	from field width.
 
 	* Removed uses of nana and dependencies on nana.
@@ -2966,13 +2966,13 @@
 
 2000-01-25  Heath Martin  <martinh@pegasus.cc.ucf.edu>
 
-	* src/register/gnome/gnucash-grid.c (gnucash_grid_init):
+	* src/register/gnome/systecash-grid.c (systecash_grid_init):
  	Initialize the fonts here.
 
-	* src/register/gnome/gnucash-style.c
- 	(gnucash_sheet_style_compile): Use sheet->grid->normal_font for
+	* src/register/gnome/systecash-style.c
+ 	(systecash_sheet_style_compile): Use sheet->grid->normal_font for
  	all the computations.  style->fonts[][] is now only used for
- 	drawing in gnucash-grid, etc. when it's non-NULL.
+ 	drawing in systecash-grid, etc. when it's non-NULL.
 
 2000-01-24  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
@@ -2986,7 +2986,7 @@
 
 2000-01-23  Heath Martin  <martinh@pegasus.cc.ucf.edu>
 
-	* src/register/gnome/gnucash-style.c: Many functions touched.
+	* src/register/gnome/systecash-style.c: Many functions touched.
   	Fairly extensive changes to how the layouts and dimensions are
  	handled.  We now lump together cursors which should have same
  	dimensions (e.g. all the single line cursors have the same layout
@@ -2994,8 +2994,8 @@
 
 2000-01-21  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* src/register/gnome/gnucash-sheet.c
- 	(gnucash_sheet_key_press_event): oh, what a hack! The extra stuff
+	* src/register/gnome/systecash-sheet.c
+ 	(systecash_sheet_key_press_event): oh, what a hack! The extra stuff
  	is to make sure the selection is changed appropriately according
  	to the key that is pressed. Some of the logic is extracted from
  	gtkentry.c so the behavior is similar. We have to do this because
@@ -3009,7 +3009,7 @@
 	old code for motif. motif doesn't support the cursor position and
 	selection args.
 
-	* src/register/gnome/gnucash-sheet.c (gnucash_sheet_new): ok,
+	* src/register/gnome/systecash-sheet.c (systecash_sheet_new): ok,
  	*don't* put the entry in a widget. We can't have it realized
  	because it screws up the selection changes during the insert/
  	delete callbacks. We're going to have to fake the other
@@ -3020,27 +3020,27 @@
 	(xaccGetQuickFillStr): new function search for a prefix match on
 	more than one character at a time.
 
-	* src/register/gnome/gnucash-sheet.c
- 	(gnucash_button_release_event): new function to track button
+	* src/register/gnome/systecash-sheet.c
+ 	(systecash_button_release_event): new function to track button
  	release for dragging purposes.
-	(gnucash_motion_event): new function for tracking mouse movement
+	(systecash_motion_event): new function for tracking mouse movement
  	and updating the selection region.
-	(gnucash_sheet_init): initialize top_block_offset
-	(gnucash_sheet_set_top_row): adjust the new top row to show as many
+	(systecash_sheet_init): initialize top_block_offset
+	(systecash_sheet_set_top_row): adjust the new top row to show as many
 	rows as possible.
-	(gnucash_sheet_vadjustment_value_changed): compute visible range
+	(systecash_sheet_vadjustment_value_changed): compute visible range
 	after adjusting top block in smooth scrolling.
-	(gnucash_sheet_compute_visible_range): start at the top_block_offset
-	(gnucash_sheet_update_adjustments): scroll faster
+	(systecash_sheet_compute_visible_range): start at the top_block_offset
+	(systecash_sheet_update_adjustments): scroll faster
 
 2000-01-20  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* src/register/gnome/gnucash-sheet.c (gnucash_button_press_event):
+	* src/register/gnome/systecash-sheet.c (systecash_button_press_event):
  	if we're mousing in the current cell, don't bother going through
  	modify_update and all that jazz, but only if we are currently
  	editing. This makes sure the reconcile cell still gets its enters.
 
-	* src/register/gnome/gnucash-item-edit.c
+	* src/register/gnome/systecash-item-edit.c
  	(item_edit_set_cursor_pos): add option to extend selection.
 
 2000-01-20  Robert Graham Merkel  <rgmerk@mira.net>
@@ -3050,18 +3050,18 @@
 
 2000-01-20  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* src/register/gnome/gnucash-sheet.c (gnucash_sheet_new): put the
+	* src/register/gnome/systecash-sheet.c (systecash_sheet_new): put the
 	editing entry into a canvas item so it will get realized. It needs
 	to be realized for full functionality.
-	(gnucash_sheet_modify_current_cell): add new args to modify update.
-	(gnucash_sheet_insert_cb): new args for modify update
-	(gnucash_sheet_delete_cb): new args for modify update
+	(systecash_sheet_modify_current_cell): add new args to modify update.
+	(systecash_sheet_insert_cb): new args for modify update
+	(systecash_sheet_delete_cb): new args for modify update
 
-	* src/register/gnome/gnucash-item-edit.c (item_edit_destroy): only
+	* src/register/gnome/systecash-item-edit.c (item_edit_destroy): only
  	disconnect if the editor hasn't been destroyed.
 
-	* src/register/gnome/gnucash-sheet.c
- 	(gnucash_sheet_activate_cursor_cell): added new args for enter
+	* src/register/gnome/systecash-sheet.c
+ 	(systecash_sheet_activate_cursor_cell): added new args for enter
  	update. change entry widget appropriately.
 
 	* src/register/table-allgui.c (gnc_table_enter_update): added args
@@ -3070,13 +3070,13 @@
 	* src/scm/prefs.scm (gnc:save-options): truncate the options file
  	when opening.
 
-	* src/register/gnome/gnucash-item-edit.c (item_edit_draw_info):
+	* src/register/gnome/systecash-item-edit.c (item_edit_draw_info):
  	calc regions for the highlited portion of the text.
 	(item_edit_draw): draw the hightlited portion of the text.
 
 2000-01-19  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* src/guile/gnucash.c (gnucash_lowlev_app_init): use DEBUG and PERR
+	* src/guile/systecash.c (systecash_lowlev_app_init): use DEBUG and PERR
 	instead of print(stderr, ...);
 
 	* src/scm/prefs.scm: new technique for saving options. Easier
@@ -3097,7 +3097,7 @@
 
 	* src/scm/main.scm: don't abort if user config file fails
 
-	* src/scm/prefs.scm: make options save to ~/.gnucash/config.auto
+	* src/scm/prefs.scm: make options save to ~/.systecash/config.auto
 
 	* src/gnome/dialog-options.c (gnc_option_create_account_widget):
  	if not multiple selection, use browse mode so user has to select
@@ -3147,38 +3147,38 @@
 
 2000-01-15  Heath Martin  <martinh@pegasus.cc.ucf.edu>
 
-	* src/register/gnome/gnucash-style.c (struct   _CellLayoutInfo):
+	* src/register/gnome/systecash-style.c (struct   _CellLayoutInfo):
 	Add new flags for attributes the user can change interactively.
 
 
-	* src/register/gnome/gnucash-style.c (compute_cell_origins_[xy]):
+	* src/register/gnome/systecash-style.c (compute_cell_origins_[xy]):
 	Precompute these since they stay fixed until dimensions change.
 
-	* src/register/gnome/gnucash-header.c (gnucash_header_draw):
+	* src/register/gnome/systecash-header.c (systecash_header_draw):
 	Be sure rect.width is non-negative.  Also, we draw all the
 	rows in the header now.
-	(gnucash_header_set_arg): Remove the ARG_ROW argument.
+	(systecash_header_set_arg): Remove the ARG_ROW argument.
 	For ARG_CURSOR_TYPE, only reconfigure the header
 	when the type changes.  This optimizes the drawing a bit.
-	(gnucash_header_reconfigure): We're drawing all rows now, so
+	(systecash_header_reconfigure): We're drawing all rows now, so
 	use the proper height.  
-	(gnucash_header_event): Implement resizing of columns.  This is
+	(systecash_header_event): Implement resizing of columns.  This is
 	a bit rough in places, because we have to take cell alignments
 	into account.  Need to work more on the styles.
-	(gnucash_header_draw): Support dynamic resizing in the header,
+	(systecash_header_draw): Support dynamic resizing in the header,
 	to give the user feedback during the resize.
 
-	* src/register/gnome/gnucash-grid.c (gnucash_grid_draw): Optimize
+	* src/register/gnome/systecash-grid.c (systecash_grid_draw): Optimize
 	so it draws only the needed cells, not the entire row.
 
-	* src/register/gnome/gnucash-sheet.c (gnucash_sheet_init): Add a
+	* src/register/gnome/systecash-sheet.c (systecash_sheet_init): Add a
  	compile time option for smooth vertical scrolling.  Later we can
  	add user selectable scrolling if we decide it's worth it.
-	(gnucash_sheet_make_cell_visible): support smooth scrolling.
-	(gnucash_sheet_update_adjustments): ditto
-	(gnucash_sheet_vadjustment_value_changed): ditto
-	(gnucash_sheet_create): ditto
-	(gnucash_sheet_y_pixel_to_block): New function.  Convert a canvas
+	(systecash_sheet_make_cell_visible): support smooth scrolling.
+	(systecash_sheet_update_adjustments): ditto
+	(systecash_sheet_vadjustment_value_changed): ditto
+	(systecash_sheet_create): ditto
+	(systecash_sheet_y_pixel_to_block): New function.  Convert a canvas
  	y-coordinate to a virtual row.
 
 2000-01-14  Robert Graham Merkel  <rgmerk@mira.net>
@@ -3247,7 +3247,7 @@
 
 2000-01-07  Dave Peticolas  <peticola@cs.ucdavis.edu>
 
-	* make-gnucash-patch: changed aclocal.m4 to lib/g-wrap/aclocal.m4
+	* make-systecash-patch: changed aclocal.m4 to lib/g-wrap/aclocal.m4
  	in the exclude list, so people can patch the main aclocal.m4 file.
 
 2000-01-07  Jan Schrage <jan.schrage@urz.uni-heidelberg.de>
@@ -3293,7 +3293,7 @@
 
 	* Makefile.in: new targets qt.static and qt.disable
 
-	* make-gnucash-patch: exclude *.moc
+	* make-systecash-patch: exclude *.moc
 
 	* src/g-wrap/gnc.gwp (current-gnc-compile-flavor): add flavor qt.static
 

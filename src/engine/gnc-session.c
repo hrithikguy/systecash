@@ -1,5 +1,5 @@
 /*
- * gnc-session.c -- GnuCash's session handling
+ * gnc-session.c -- systecash's session handling
  *
  * Copyright (C) 2006 Chris Shoemaker <c.shoemaker@cox.net>
  *

@@ -57,14 +57,14 @@
  * ## Purpose
  * KVP is used to extend the class structure without directly reflecting the
  * extension in the database or xML schema. The backend will directly load and
- * store KVP slots without any checking, which allows older versions of GnuCash
+ * store KVP slots without any checking, which allows older versions of systecash
  * to load the database without complaint and without damaging the KVP data that
  * they don't understand.
  *
  * When a feature is entirely implemented in KVP and doesn't affect the meaning
  * of the books or other features, this isn't a problem, but when it's not true
  * then it should be registered in @ref UtilFeature so that older versions of
- * GnuCash will refuse to load the database.
+ * systecash will refuse to load the database.
  *
  * ## Policy
  * * Document every KVP slot in src/engine/kvp_doc.txt so that it is presented

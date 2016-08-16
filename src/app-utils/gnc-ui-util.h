@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-ui-util.h -- utility functions for the GnuCash UI            *
+ * gnc-ui-util.h -- utility functions for the systecash UI            *
  * Copyright (C) 2000 Dave Peticolas <dave@krondo.com>              *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
@@ -22,10 +22,10 @@
 
 /** @addtogroup GUI
     @{ */
-/** @addtogroup GuiUtility Utility functions for the GnuCash GUI
+/** @addtogroup GuiUtility Utility functions for the systecash GUI
  * @{ */
 /** @file gnc-ui-util.h
-    @brief  utility functions for the GnuCash UI
+    @brief  utility functions for the systecash UI
     @author Copyright (C) 2000 Dave Peticolas <dave@krondo.com>
 */
 
@@ -63,11 +63,11 @@ void gnc_set_default_directory (const gchar *section,
 QofBook * gnc_get_current_book (void);
 
 /* If there is no current session, there is no book and we must be dealing
- * with a new book. When gnucash is started with --nofile, there is
+ * with a new book. When systecash is started with --nofile, there is
  * initially no session (and no book), but by the time we check, one
  * could have been created (for example, if an empty account tree tab is
  * opened, a session is created which creates a new, but empty, book).
- * A session is created and a book is loaded from a backend when gnucash is
+ * A session is created and a book is loaded from a backend when systecash is
  * started with a file, but selecting 'new file' keeps a session open. So we
  * need to check as well for a book with no accounts (root with no children). */
 gboolean gnc_is_new_book (void);

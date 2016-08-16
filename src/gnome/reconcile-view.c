@@ -1,6 +1,6 @@
 /********************************************************************\
  * reconcile-view.c -- A view of accounts to be reconciled for      *
- *                     GnuCash.                                     *
+ *                     systecash.                                     *
  * Copyright (C) 1998,1999 Jeremy Collins	                    *
  * Copyright (C) 1998-2000 Linas Vepstas                            *
  * Copyright (C) 2012 Robert Fewell                                 *

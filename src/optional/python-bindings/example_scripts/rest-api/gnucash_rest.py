@@ -2,7 +2,7 @@
 
 '''
 
-gnucash_rest.py -- A Flask app which responds to REST requests
+systecash_rest.py -- A Flask app which responds to REST requests
 with JSON responses
 
 Copyright (C) 2013 Tom Lofts <dev@loftx.co.uk>
@@ -28,8 +28,8 @@ Boston, MA 02110-1301, USA gnu@gnu.org
 
 '''
 
-import gnucash
-import gnucash_simple
+import systecash
+import systecash_simple
 import json
 import atexit
 from flask import Flask, abort, request, Response
@@ -38,23 +38,23 @@ import getopt
 
 from decimal import Decimal
 
-from gnucash.gnucash_business import Vendor, Bill, Entry, GncNumeric, \
+from systecash.systecash_business import Vendor, Bill, Entry, GncNumeric, \
     Customer, Invoice, Split, Account, Transaction
 
 import datetime
 
-from gnucash import \
+from systecash import \
     QOF_QUERY_AND, \
     QOF_QUERY_OR, \
     QOF_QUERY_NAND, \
     QOF_QUERY_NOR, \
     QOF_QUERY_XOR
 
-from gnucash import \
+from systecash import \
     QOF_STRING_MATCH_NORMAL, \
     QOF_STRING_MATCH_CASEINSENSITIVE
 
-from gnucash import \
+from systecash import \
     QOF_COMPARE_LT, \
     QOF_COMPARE_LTE, \
     QOF_COMPARE_EQUAL, \
@@ -62,10 +62,10 @@ from gnucash import \
     QOF_COMPARE_GTE, \
     QOF_COMPARE_NEQ
 
-from gnucash import \
+from systecash import \
     INVOICE_TYPE
 
-from gnucash import \
+from systecash import \
     INVOICE_IS_PAID
 
 app = Flask(__name__)
@@ -767,14 +767,14 @@ def api_vendor_bills(id):
 
 def getCustomers(book):
 
-    query = gnucash.Query()
+    query = systecash.Query()
     query.search_for('gncCustomer')
     query.set_book(book)
     customers = []
 
     for result in query.run():
-        customers.append(gnucash_simple.customerToDict(
-            gnucash.gnucash_business.Customer(instance=result)))
+        customers.append(systecash_simple.customerToDict(
+            systecash.systecash_business.Customer(instance=result)))
 
     query.destroy()
 
@@ -787,18 +787,18 @@ def getCustomer(book, id):
     if customer is None:
         return None
     else:
-        return gnucash_simple.customerToDict(customer)
+        return systecash_simple.customerToDict(customer)
 
 def getVendors(book):
 
-    query = gnucash.Query()
+    query = systecash.Query()
     query.search_for('gncVendor')
     query.set_book(book)
     vendors = []
 
     for result in query.run():
-        vendors.append(gnucash_simple.vendorToDict(
-            gnucash.gnucash_business.Vendor(instance=result)))
+        vendors.append(systecash_simple.vendorToDict(
+            systecash.systecash_business.Vendor(instance=result)))
 
     query.destroy()
 
@@ -811,17 +811,17 @@ def getVendor(book, id):
     if vendor is None:
         return None
     else:
-        return gnucash_simple.vendorToDict(vendor)
+        return systecash_simple.vendorToDict(vendor)
 
 def getAccounts(book):
 
-    accounts = gnucash_simple.accountToDict(book.get_root_account())
+    accounts = systecash_simple.accountToDict(book.get_root_account())
 
     return accounts
 
 def getAccountsFlat(book):
 
-    accounts = gnucash_simple.accountToDict(book.get_root_account())
+    accounts = systecash_simple.accountToDict(book.get_root_account())
 
     flat_accounts = getSubAccounts(accounts)
 
@@ -852,15 +852,15 @@ def getSubAccounts(account):
 
 def getAccount(book, guid):
 
-    account_guid = gnucash.gnucash_core.GUID() 
-    gnucash.gnucash_core.GUIDString(guid, account_guid)
+    account_guid = systecash.systecash_core.GUID() 
+    systecash.systecash_core.GUIDString(guid, account_guid)
 
     account = account_guid.AccountLookup(book)
 
     if account is None:
         return None
 
-    account = gnucash_simple.accountToDict(account)
+    account = systecash_simple.accountToDict(account)
 
     if account is None:
         return None
@@ -870,15 +870,15 @@ def getAccount(book, guid):
 
 def getTransaction(book, guid):
 
-    transaction_guid = gnucash.gnucash_core.GUID() 
-    gnucash.gnucash_core.GUIDString(guid, transaction_guid)
+    transaction_guid = systecash.systecash_core.GUID() 
+    systecash.systecash_core.GUIDString(guid, transaction_guid)
 
     transaction = transaction_guid.TransactionLookup(book)
 
     if transaction is None:
         return None
 
-    transaction = gnucash_simple.transactionToDict(transaction, ['splits'])
+    transaction = systecash_simple.transactionToDict(transaction, ['splits'])
 
     if transaction is None:
         return None
@@ -887,7 +887,7 @@ def getTransaction(book, guid):
 
 def getTransactions(book, account_guid, date_posted_from, date_posted_to):
 
-    query = gnucash.Query()
+    query = systecash.Query()
 
     query.search_for('Trans')
     query.set_book(book)
@@ -895,8 +895,8 @@ def getTransactions(book, account_guid, date_posted_from, date_posted_to):
     transactions = []
 
     for transaction in query.run():
-        transactions.append(gnucash_simple.transactionToDict(
-            gnucash.gnucash_business.Transaction(instance=transaction)))
+        transactions.append(systecash_simple.transactionToDict(
+            systecash.systecash_business.Transaction(instance=transaction)))
 
     query.destroy()
 
@@ -904,10 +904,10 @@ def getTransactions(book, account_guid, date_posted_from, date_posted_to):
 
 def getAccountSplits(book, guid, date_posted_from, date_posted_to):
 
-    account_guid = gnucash.gnucash_core.GUID() 
-    gnucash.gnucash_core.GUIDString(guid, account_guid)
+    account_guid = systecash.systecash_core.GUID() 
+    systecash.systecash_core.GUIDString(guid, account_guid)
 
-    query = gnucash.Query()
+    query = systecash.Query()
     query.search_for('Split')
     query.set_book(book)
 
@@ -918,14 +918,14 @@ def getAccountSplits(book, guid, date_posted_from, date_posted_to):
     TRANS_DATE_POSTED = 'date-posted'
 
     if date_posted_from != None:
-        pred_data = gnucash.gnucash_core.QueryDatePredicate(
+        pred_data = systecash.systecash_core.QueryDatePredicate(
             QOF_COMPARE_GTE, QOF_DATE_MATCH_NORMAL, datetime.datetime.strptime(
                 date_posted_from, "%Y-%m-%d").date())
         param_list = [SPLIT_TRANS, TRANS_DATE_POSTED]
         query.add_term(param_list, pred_data, QOF_QUERY_AND)
 
     if date_posted_to != None:
-        pred_data = gnucash.gnucash_core.QueryDatePredicate(
+        pred_data = systecash.systecash_core.QueryDatePredicate(
             QOF_COMPARE_LTE, QOF_DATE_MATCH_NORMAL, datetime.datetime.strptime(
                 date_posted_to, "%Y-%m-%d").date())
         param_list = [SPLIT_TRANS, TRANS_DATE_POSTED]
@@ -935,15 +935,15 @@ def getAccountSplits(book, guid, date_posted_from, date_posted_to):
     QOF_PARAM_GUID = 'guid'
 
     if guid != None:
-        gnucash.gnucash_core.GUIDString(guid, account_guid)
+        systecash.systecash_core.GUIDString(guid, account_guid)
         query.add_guid_match(
             [SPLIT_ACCOUNT, QOF_PARAM_GUID], account_guid, QOF_QUERY_AND)
 
     splits = []
 
     for split in query.run():
-        splits.append(gnucash_simple.splitToDict(
-            gnucash.gnucash_business.Split(instance=split),
+        splits.append(systecash_simple.splitToDict(
+            systecash.systecash_business.Split(instance=split),
             ['account', 'transaction', 'other_split']))
 
     query.destroy()
@@ -953,7 +953,7 @@ def getAccountSplits(book, guid, date_posted_from, date_posted_to):
 def getInvoices(book, customer, is_paid, is_active, date_due_from,
     date_due_to):
 
-    query = gnucash.Query()
+    query = systecash.Query()
     query.search_for('gncInvoice')
     query.set_book(book)
 
@@ -972,32 +972,32 @@ def getInvoices(book, customer, is_paid, is_active, date_due_from,
     INVOICE_OWNER = 'owner'
 
     if customer != None:
-        customer_guid = gnucash.gnucash_core.GUID() 
-        gnucash.gnucash_core.GUIDString(customer, customer_guid)
+        customer_guid = systecash.systecash_core.GUID() 
+        systecash.systecash_core.GUIDString(customer, customer_guid)
         query.add_guid_match(
             [INVOICE_OWNER, QOF_PARAM_GUID], customer_guid, QOF_QUERY_AND)
 
     if date_due_from != None:
-        pred_data = gnucash.gnucash_core.QueryDatePredicate(
+        pred_data = systecash.systecash_core.QueryDatePredicate(
             QOF_COMPARE_GTE, 2, datetime.datetime.strptime(
                 date_due_from, "%Y-%m-%d").date())
         query.add_term(['date_due'], pred_data, QOF_QUERY_AND)
 
     if date_due_to != None:
-        pred_data = gnucash.gnucash_core.QueryDatePredicate(
+        pred_data = systecash.systecash_core.QueryDatePredicate(
             QOF_COMPARE_LTE, 2, datetime.datetime.strptime(
                 date_due_to, "%Y-%m-%d").date())
         query.add_term(['date_due'], pred_data, QOF_QUERY_AND)
 
     # return only invoices (1 = invoices)
-    pred_data = gnucash.gnucash_core.QueryInt32Predicate(QOF_COMPARE_EQUAL, 1)
+    pred_data = systecash.systecash_core.QueryInt32Predicate(QOF_COMPARE_EQUAL, 1)
     query.add_term([INVOICE_TYPE], pred_data, QOF_QUERY_AND)
 
     invoices = []
 
     for result in query.run():
-        invoices.append(gnucash_simple.invoiceToDict(
-            gnucash.gnucash_business.Invoice(instance=result)))
+        invoices.append(systecash_simple.invoiceToDict(
+            systecash.systecash_business.Invoice(instance=result)))
 
     query.destroy()
 
@@ -1006,7 +1006,7 @@ def getInvoices(book, customer, is_paid, is_active, date_due_from,
 def getBills(book, customer, is_paid, is_active, date_opened_from,
     date_opened_to):
 
-    query = gnucash.Query()
+    query = systecash.Query()
     query.search_for('gncInvoice')
     query.set_book(book)
 
@@ -1025,88 +1025,88 @@ def getBills(book, customer, is_paid, is_active, date_opened_from,
     INVOICE_OWNER = 'owner'
 
     if customer != None:
-        customer_guid = gnucash.gnucash_core.GUID() 
-        gnucash.gnucash_core.GUIDString(customer, customer_guid)
+        customer_guid = systecash.systecash_core.GUID() 
+        systecash.systecash_core.GUIDString(customer, customer_guid)
         query.add_guid_match(
             [INVOICE_OWNER, QOF_PARAM_GUID], customer_guid, QOF_QUERY_AND)
 
     if date_opened_from != None:
-        pred_data = gnucash.gnucash_core.QueryDatePredicate(
+        pred_data = systecash.systecash_core.QueryDatePredicate(
             QOF_COMPARE_GTE, 2, datetime.datetime.strptime(
                 date_opened_from, "%Y-%m-%d").date())
         query.add_term(['date_opened'], pred_data, QOF_QUERY_AND)
 
     if date_opened_to != None:
-        pred_data = gnucash.gnucash_core.QueryDatePredicate(
+        pred_data = systecash.systecash_core.QueryDatePredicate(
             QOF_COMPARE_LTE, 2, datetime.datetime.strptime(
                 date_opened_to, "%Y-%m-%d").date())
         query.add_term(['date_opened'], pred_data, QOF_QUERY_AND)
 
     # return only bills (2 = bills)
-    pred_data = gnucash.gnucash_core.QueryInt32Predicate(QOF_COMPARE_EQUAL, 2)
+    pred_data = systecash.systecash_core.QueryInt32Predicate(QOF_COMPARE_EQUAL, 2)
     query.add_term([INVOICE_TYPE], pred_data, QOF_QUERY_AND)
 
     bills = []
 
     for result in query.run():
-        bills.append(gnucash_simple.billToDict(
-            gnucash.gnucash_business.Bill(instance=result)))
+        bills.append(systecash_simple.billToDict(
+            systecash.systecash_business.Bill(instance=result)))
 
     query.destroy()
 
     return bills
 
-def getGnuCashInvoice(book ,id):
+def getsystecashInvoice(book ,id):
 
     # we don't use book.InvoicelLookupByID(id) as this is identical to
     # book.BillLookupByID(id) so can return the same object if they share IDs
 
-    query = gnucash.Query()
+    query = systecash.Query()
     query.search_for('gncInvoice')
     query.set_book(book)
 
     # return only invoices (1 = invoices)
-    pred_data = gnucash.gnucash_core.QueryInt32Predicate(QOF_COMPARE_EQUAL, 1)
+    pred_data = systecash.systecash_core.QueryInt32Predicate(QOF_COMPARE_EQUAL, 1)
     query.add_term([INVOICE_TYPE], pred_data, QOF_QUERY_AND)
 
     INVOICE_ID = 'id'
 
-    pred_data = gnucash.gnucash_core.QueryStringPredicate(
+    pred_data = systecash.systecash_core.QueryStringPredicate(
         QOF_COMPARE_EQUAL, id, QOF_STRING_MATCH_NORMAL, False)
     query.add_term([INVOICE_ID], pred_data, QOF_QUERY_AND)
 
     invoice = None
 
     for result in query.run():
-        invoice = gnucash.gnucash_business.Invoice(instance=result)
+        invoice = systecash.systecash_business.Invoice(instance=result)
 
     query.destroy()
 
     return invoice
 
-def getGnuCashBill(book ,id):
+def getsystecashBill(book ,id):
 
     # we don't use book.InvoicelLookupByID(id) as this is identical to
     # book.BillLookupByID(id) so can return the same object if they share IDs
 
-    query = gnucash.Query()
+    query = systecash.Query()
     query.search_for('gncInvoice')
     query.set_book(book)
 
     # return only bills (2 = bills)
-    pred_data = gnucash.gnucash_core.QueryInt32Predicate(QOF_COMPARE_EQUAL, 2)
+    pred_data = systecash.systecash_core.QueryInt32Predicate(QOF_COMPARE_EQUAL, 2)
     query.add_term([INVOICE_TYPE], pred_data, QOF_QUERY_AND)
 
     INVOICE_ID = 'id'
 
-    pred_data = gnucash.gnucash_core.QueryStringPredicate(
+    pred_data = systecash.systecash_core.QueryStringPredicate(
         QOF_COMPARE_EQUAL, id, QOF_STRING_MATCH_NORMAL, False)
     query.add_term([INVOICE_ID], pred_data, QOF_QUERY_AND)
 
     bill = None
 
     for result in query.run():
-        bill = gnucash.gnucash_business.Bill(instance=result)
+        bill = systecash.systecash_business.Bill(instance=result)
 
     query.destroy()
 
@@ -1114,30 +1114,30 @@ def getGnuCashBill(book ,id):
 
 def getInvoice(book, id):
 
-    return gnucash_simple.invoiceToDict(getGnuCashInvoice(book, id))
+    return systecash_simple.invoiceToDict(getsystecashInvoice(book, id))
 
 def payInvoice(book, id, posted_account_guid, transfer_account_guid,
     payment_date, memo, num, auto_pay):
 
-    invoice = getGnuCashInvoice(book, id)
+    invoice = getsystecashInvoice(book, id)
     
-    account_guid2 = gnucash.gnucash_core.GUID() 
-    gnucash.gnucash_core.GUIDString(transfer_account_guid, account_guid2)
+    account_guid2 = systecash.systecash_core.GUID() 
+    systecash.systecash_core.GUIDString(transfer_account_guid, account_guid2)
 
     xfer_acc = account_guid2.AccountLookup(session.book)
 
     invoice.ApplyPayment(None, xfer_acc, invoice.GetTotal(), GncNumeric(0),
         datetime.datetime.strptime(payment_date, '%Y-%m-%d'), memo, num)
 
-    return gnucash_simple.invoiceToDict(invoice)    
+    return systecash_simple.invoiceToDict(invoice)    
 
 def payBill(book, id, posted_account_guid, transfer_account_guid, payment_date,
     memo, num, auto_pay):
 
-    bill = getGnuCashBill(book, id)
+    bill = getsystecashBill(book, id)
 
-    account_guid = gnucash.gnucash_core.GUID() 
-    gnucash.gnucash_core.GUIDString(transfer_account_guid, account_guid)
+    account_guid = systecash.systecash_core.GUID() 
+    systecash.systecash_core.GUIDString(transfer_account_guid, account_guid)
 
     xfer_acc = account_guid.AccountLookup(session.book)
 
@@ -1146,11 +1146,11 @@ def payBill(book, id, posted_account_guid, transfer_account_guid, payment_date,
     bill.ApplyPayment(None, xfer_acc, bill.GetTotal().neg(), GncNumeric(0),
         datetime.datetime.strptime(payment_date, '%Y-%m-%d'), memo, num)
 
-    return gnucash_simple.billToDict(bill)
+    return systecash_simple.billToDict(bill)
 
 def getBill(book, id):
 
-    return gnucash_simple.billToDict(getGnuCashBill(book, id))
+    return systecash_simple.billToDict(getsystecashBill(book, id))
 
 def addVendor(book, id, currency_mnumonic, name, contact, address_line_1,
     address_line_2, address_line_3, address_line_4, phone, fax, email):
@@ -1190,7 +1190,7 @@ def addVendor(book, id, currency_mnumonic, name, contact, address_line_1,
     address.SetFax(fax)
     address.SetEmail(email)
 
-    return gnucash_simple.vendorToDict(vendor)
+    return systecash_simple.vendorToDict(vendor)
 
 def addCustomer(book, id, currency_mnumonic, name, contact, address_line_1,
     address_line_2, address_line_3, address_line_4, phone, fax, email):
@@ -1230,7 +1230,7 @@ def addCustomer(book, id, currency_mnumonic, name, contact, address_line_1,
     address.SetFax(fax)
     address.SetEmail(email)
 
-    return gnucash_simple.customerToDict(customer)
+    return systecash_simple.customerToDict(customer)
 
 def updateCustomer(book, id, name, contact, address_line_1, address_line_2,
     address_line_3, address_line_4, phone, fax, email):
@@ -1265,7 +1265,7 @@ def updateCustomer(book, id, name, contact, address_line_1, address_line_2,
     address.SetFax(fax)
     address.SetEmail(email)
 
-    return gnucash_simple.customerToDict(customer)
+    return systecash_simple.customerToDict(customer)
 
 def addInvoice(book, id, customer_id, currency_mnumonic, date_opened, notes):
 
@@ -1300,13 +1300,13 @@ def addInvoice(book, id, customer_id, currency_mnumonic, date_opened, notes):
 
     invoice.SetNotes(notes)
 
-    return gnucash_simple.invoiceToDict(invoice)
+    return systecash_simple.invoiceToDict(invoice)
 
 def updateInvoice(book, id, customer_id, currency_mnumonic, date_opened,
     notes, posted, posted_account_guid, posted_date, due_date, posted_memo,
     posted_accumulatesplits, posted_autopay):
 
-    invoice = getGnuCashInvoice(book, id)
+    invoice = getsystecashInvoice(book, id)
 
     if invoice is None:
         raise Error('NoInvoice',
@@ -1358,8 +1358,8 @@ def updateInvoice(book, id, customer_id, currency_mnumonic, date_opened,
                 'The posted account GUID must be supplied when posted=1',
                 {'field': 'posted_account_guid'})
     else:
-        guid = gnucash.gnucash_core.GUID() 
-        gnucash.gnucash_core.GUIDString(posted_account_guid, guid)
+        guid = systecash.systecash_core.GUID() 
+        systecash.systecash_core.GUIDString(posted_account_guid, guid)
 
         posted_account = guid.AccountLookup(book)
 
@@ -1378,13 +1378,13 @@ def updateInvoice(book, id, customer_id, currency_mnumonic, date_opened,
         invoice.PostToAccount(posted_account, posted_date, due_date,
             posted_memo, posted_accumulatesplits, posted_autopay)
 
-    return gnucash_simple.invoiceToDict(invoice)
+    return systecash_simple.invoiceToDict(invoice)
 
 def updateBill(book, id, vendor_id, currency_mnumonic, date_opened, notes,
     posted, posted_account_guid, posted_date, due_date, posted_memo,
     posted_accumulatesplits, posted_autopay):
 
-    bill = getGnuCashBill(book, id)
+    bill = getsystecashBill(book, id)
 
     if bill is None:
         raise Error('NoBill', 'A bill with this ID does not exist',
@@ -1436,8 +1436,8 @@ def updateBill(book, id, vendor_id, currency_mnumonic, date_opened, notes,
                 'The posted account GUID must be supplied when posted=1',
                 {'field': 'posted_account_guid'})
     else:
-        guid = gnucash.gnucash_core.GUID() 
-        gnucash.gnucash_core.GUIDString(posted_account_guid, guid)
+        guid = systecash.systecash_core.GUID() 
+        systecash.systecash_core.GUIDString(posted_account_guid, guid)
 
         posted_account = guid.AccountLookup(book)
 
@@ -1455,11 +1455,11 @@ def updateBill(book, id, vendor_id, currency_mnumonic, date_opened, notes,
         bill.PostToAccount(posted_account, posted_date, due_date, posted_memo,
             posted_accumulatesplits, posted_autopay)
 
-    return gnucash_simple.billToDict(bill)
+    return systecash_simple.billToDict(bill)
 
 def addEntry(book, invoice_id, date, description, account_guid, quantity, price):
 
-    invoice = getGnuCashInvoice(book, invoice_id)
+    invoice = getsystecashInvoice(book, invoice_id)
 
     if invoice is None:
         raise Error('NoInvoice',
@@ -1472,8 +1472,8 @@ def addEntry(book, invoice_id, date, description, account_guid, quantity, price)
             'The date opened must be provided in the form YYYY-MM-DD',
             {'field': 'date'})
 
-    guid = gnucash.gnucash_core.GUID() 
-    gnucash.gnucash_core.GUIDString(account_guid, guid)
+    guid = systecash.systecash_core.GUID() 
+    systecash.systecash_core.GUIDString(account_guid, guid)
 
     account = guid.AccountLookup(book)
 
@@ -1500,12 +1500,12 @@ def addEntry(book, invoice_id, date, description, account_guid, quantity, price)
     entry.SetQuantity(gnc_numeric_from_decimal(quantity))
     entry.SetInvPrice(gnc_numeric_from_decimal(price))
 
-    return gnucash_simple.entryToDict(entry)
+    return systecash_simple.entryToDict(entry)
 
 def addBillEntry(book, bill_id, date, description, account_guid, quantity,
     price):
 
-    bill = getGnuCashBill(book,bill_id)
+    bill = getsystecashBill(book,bill_id)
 
     if bill is None:
         raise Error('NoBill', 'No bill exists with this ID',
@@ -1518,8 +1518,8 @@ def addBillEntry(book, bill_id, date, description, account_guid, quantity,
             'The date opened must be provided in the form YYYY-MM-DD',
             {'field': 'date'})
 
-    guid = gnucash.gnucash_core.GUID() 
-    gnucash.gnucash_core.GUIDString(account_guid, guid)
+    guid = systecash.systecash_core.GUID() 
+    systecash.systecash_core.GUIDString(account_guid, guid)
 
     account = guid.AccountLookup(book)
 
@@ -1546,25 +1546,25 @@ def addBillEntry(book, bill_id, date, description, account_guid, quantity,
     entry.SetQuantity(gnc_numeric_from_decimal(quantity))
     entry.SetBillPrice(gnc_numeric_from_decimal(price))
 
-    return gnucash_simple.entryToDict(entry)
+    return systecash_simple.entryToDict(entry)
 
 def getEntry(book, entry_guid):
 
-    guid = gnucash.gnucash_core.GUID() 
-    gnucash.gnucash_core.GUIDString(entry_guid, guid)
+    guid = systecash.systecash_core.GUID() 
+    systecash.systecash_core.GUIDString(entry_guid, guid)
 
     entry = book.EntryLookup(guid)
 
     if entry is None:
         return None
     else:
-        return gnucash_simple.entryToDict(entry)
+        return systecash_simple.entryToDict(entry)
 
 def updateEntry(book, entry_guid, date, description, account_guid, quantity,
     price):
 
-    guid = gnucash.gnucash_core.GUID() 
-    gnucash.gnucash_core.GUIDString(entry_guid, guid)
+    guid = systecash.systecash_core.GUID() 
+    systecash.systecash_core.GUIDString(entry_guid, guid)
 
     entry = book.EntryLookup(guid)
 
@@ -1579,7 +1579,7 @@ def updateEntry(book, entry_guid, date, description, account_guid, quantity,
             'The date opened must be provided in the form YYYY-MM-DD',
             {'field': 'date'})
  
-    gnucash.gnucash_core.GUIDString(account_guid, guid)
+    systecash.systecash_core.GUIDString(account_guid, guid)
 
     account = guid.AccountLookup(book)
 
@@ -1596,12 +1596,12 @@ def updateEntry(book, entry_guid, date, description, account_guid, quantity,
     entry.SetInvPrice(
         gnc_numeric_from_decimal(Decimal(price).quantize(Decimal('.01'))))
 
-    return gnucash_simple.entryToDict(entry)
+    return systecash_simple.entryToDict(entry)
 
 def deleteEntry(book, entry_guid):
 
-    guid = gnucash.gnucash_core.GUID() 
-    gnucash.gnucash_core.GUIDString(entry_guid, guid)
+    guid = systecash.systecash_core.GUID() 
+    systecash.systecash_core.GUIDString(entry_guid, guid)
 
     entry = book.EntryLookup(guid)
 
@@ -1618,8 +1618,8 @@ def deleteEntry(book, entry_guid):
 
 def deleteTransaction(book, transaction_guid):
 
-    guid = gnucash.gnucash_core.GUID() 
-    gnucash.gnucash_core.GUIDString(transaction_guid, guid)
+    guid = systecash.systecash_core.GUID() 
+    systecash.systecash_core.GUIDString(transaction_guid, guid)
 
     transaction = guid.TransLookup(book)
 
@@ -1659,11 +1659,11 @@ def addBill(book, id, vendor_id, currency_mnumonic, date_opened, notes):
 
     bill.SetNotes(notes)
 
-    return gnucash_simple.billToDict(bill)
+    return systecash_simple.billToDict(bill)
 
 def addAccount(book, name, currency_mnumonic, account_guid):
 
-    from gnucash.gnucash_core_c import \
+    from systecash.systecash_core_c import \
     ACCT_TYPE_ASSET, ACCT_TYPE_RECEIVABLE, ACCT_TYPE_INCOME, \
     GNC_OWNER_CUSTOMER, ACCT_TYPE_LIABILITY
 
@@ -1706,8 +1706,8 @@ def addTransaction(book, num, description, date_posted, currency_mnumonic, split
 
 
     for split_values in splits:
-        account_guid = gnucash.gnucash_core.GUID() 
-        gnucash.gnucash_core.GUIDString(split_values['account_guid'], account_guid)
+        account_guid = systecash.systecash_core.GUID() 
+        systecash.systecash_core.GUIDString(split_values['account_guid'], account_guid)
 
         account = account_guid.AccountLookup(book)
 
@@ -1729,25 +1729,25 @@ def addTransaction(book, num, description, date_posted, currency_mnumonic, split
 
     transaction.CommitEdit()
 
-    return gnucash_simple.transactionToDict(transaction, ['splits'])
+    return systecash_simple.transactionToDict(transaction, ['splits'])
 
 def getTransaction(book, transaction_guid):
 
-    guid = gnucash.gnucash_core.GUID() 
-    gnucash.gnucash_core.GUIDString(transaction_guid, guid)
+    guid = systecash.systecash_core.GUID() 
+    systecash.systecash_core.GUIDString(transaction_guid, guid)
 
     transaction = guid.TransLookup(book)
 
     if transaction is None:
         return None
     else:
-        return gnucash_simple.transactionToDict(transaction, ['splits'])
+        return systecash_simple.transactionToDict(transaction, ['splits'])
 
 def editTransaction(book, transaction_guid, num, description, date_posted,
     currency_mnumonic, splits):
 
-    guid = gnucash.gnucash_core.GUID() 
-    gnucash.gnucash_core.GUIDString(transaction_guid, guid)
+    guid = systecash.systecash_core.GUID() 
+    systecash.systecash_core.GUIDString(transaction_guid, guid)
 
     transaction = guid.TransLookup(book)
 
@@ -1776,8 +1776,8 @@ def editTransaction(book, transaction_guid, num, description, date_posted,
 
     for split_values in splits:
 
-        split_guid = gnucash.gnucash_core.GUID() 
-        gnucash.gnucash_core.GUIDString(split_values['guid'], split_guid)
+        split_guid = systecash.systecash_core.GUID() 
+        systecash.systecash_core.GUIDString(split_values['guid'], split_guid)
 
         split = split_guid.SplitLookup(book)
 
@@ -1786,8 +1786,8 @@ def editTransaction(book, transaction_guid, num, description, date_posted,
                 'A valid guid must be supplied for this split',
                 {'field': 'guid'})
 
-        account_guid = gnucash.gnucash_core.GUID() 
-        gnucash.gnucash_core.GUIDString(
+        account_guid = systecash.systecash_core.GUID() 
+        systecash.systecash_core.GUIDString(
             split_values['account_guid'], account_guid)
 
         account = account_guid.AccountLookup(book)
@@ -1809,7 +1809,7 @@ def editTransaction(book, transaction_guid, num, description, date_posted,
 
     transaction.CommitEdit()
 
-    return gnucash_simple.transactionToDict(transaction, ['splits'])
+    return systecash_simple.transactionToDict(transaction, ['splits'])
 
 def gnc_numeric_from_decimal(decimal_value):
     sign, digits, exponent = decimal_value.as_tuple()
@@ -1882,9 +1882,9 @@ for option, value in options:
         is_new = True
 
 
-#start gnucash session base on connection string argument
+#start systecash session base on connection string argument
 if is_new:
-    session = gnucash.Session(arguments[0], is_new=True)
+    session = systecash.Session(arguments[0], is_new=True)
 
     # seem to get errors if we use the session directly, so save it and
     #destroy it so it's no longer new
@@ -1893,9 +1893,9 @@ if is_new:
     session.end()
     session.destroy()
 
-session = gnucash.Session(arguments[0], ignore_lock=True)
+session = systecash.Session(arguments[0], ignore_lock=True)
 
-# register method to close gnucash connection gracefully
+# register method to close systecash connection gracefully
 atexit.register(shutdown)
 
 app.debug = False

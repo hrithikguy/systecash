@@ -27,7 +27,7 @@
 /** @addtogroup GuiTreeModel
  * @{ */
 /** @file gnc-tree-view-account.h
-    @brief GtkTreeView implementation for gnucash account tree.
+    @brief GtkTreeView implementation for systecash account tree.
     @author Copyright (C) 2003,2005,2006 David Hampton <hampton@employees.org>
 */
 
@@ -126,10 +126,10 @@ GType gnc_tree_view_account_get_type (void);
  @{ */
 
 /** Create a new account tree view.  This view may or may not show a
- *  pseudo top-level account.  The gnucash engine does not have a
+ *  pseudo top-level account.  The systecash engine does not have a
  *  single top level account (it has a list of top level accounts),
  *  but this code provides one so that it can be used with all parts
- *  of the gnucash gui.
+ *  of the systecash gui.
  *
  *  @param root The account to use as the first level of the created tree.
  *
@@ -141,10 +141,10 @@ GtkTreeView *gnc_tree_view_account_new_with_root (Account *root,
         gboolean show_root);
 
 /** Create a new account tree view.  This view may or may not show a
- *  pseudo top-level account.  The gnucash engine does not have a
+ *  pseudo top-level account.  The systecash engine does not have a
  *  single top level account (it has a list of top level accounts),
  *  but this code provides one so that it can be used with all parts
- *  of the gnucash gui.  The first level of accounts in the created
+ *  of the systecash gui.  The first level of accounts in the created
  *  tree will be the top level of accounts in the current book.
  *
  *  @param show_root Show the pseudo top-level account in this view.
@@ -305,7 +305,7 @@ gboolean gnc_tree_view_account_filter_by_view_info(
 /** This function forces the account tree filter to be evaluated.  It
  *  may be necessary to call this function if the initial state of the
  *  view is incorrect.  This appears to only be necessary if the
- *  filter affects one of the top level accounts in gnucash.
+ *  filter affects one of the top level accounts in systecash.
  *
  *  @note This calls a function in gtk that is annotated in the
  *  sources as being slow.  You have been warned.

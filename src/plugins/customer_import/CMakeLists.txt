@@ -26,7 +26,7 @@ TARGET_LINK_LIBRARIES(gncmod-customer_import gncmod-business-gnome gncmod-gnome-
 TARGET_COMPILE_DEFINITIONS(gncmod-customer_import PRIVATE -DG_LOG_DOMAIN=\"gnc.plugin.customer_import\")
 
 INSTALL(TARGETS gncmod-customer_import
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 # No headers to install.

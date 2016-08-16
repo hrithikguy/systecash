@@ -1,5 +1,5 @@
 /********************************************************************
- * gnc-pricedb.h -- a simple price database for gnucash.            *
+ * gnc-pricedb.h -- a simple price database for systecash.            *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
  * modify it under the terms of the GNU General Public License as   *
@@ -65,7 +65,7 @@ GType gnc_pricedb_get_type(void);
 /** @file gnc-pricedb.h
     @author Copyright (C) 2001 Rob Browning
     @author Copyright (C) 2001,2003 Linas Vepstas <linas@linas.org>
-    @brief a simple price database for gnucash
+    @brief a simple price database for systecash
 */
 /** @} */
 
@@ -86,7 +86,7 @@ GType gnc_pricedb_get_type(void);
     gnc_pricedb_get_db.
 
     \warning The PriceDB does not currently use the object
-    system used elsewhere in the GnuCash Engine, i.e. it does
+    system used elsewhere in the systecash Engine, i.e. it does
     not use GUISD's, Entities and Collections.  It should.
     In particular, this means that currently prices cannot
     be queried with the same mechanism as everything else.

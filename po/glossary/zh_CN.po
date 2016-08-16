@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnucash-glossary\n"
+"Project-Id-Version: systecash-glossary\n"
 "POT-Creation-Date: 2014-10-13 00:33+0200\n"
 "PO-Revision-Date: 2010-05-05 13:47+1000\n"
 "Last-Translator: Tao Wang <dancefire@gmail.com>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# 翻译人员好，这个是不会被最终用户所见的。这是为了您，也就是翻译人员所提供的一个工具。GnuCash 是一个个人或小型企业理财的软件，是一个会计专业性比较强的软件，其中包含了很多的术语。而这里就是针对很多术语的解释。
+# 翻译人员好，这个是不会被最终用户所见的。这是为了您，也就是翻译人员所提供的一个工具。systecash 是一个个人或小型企业理财的软件，是一个会计专业性比较强的软件，其中包含了很多的术语。而这里就是针对很多术语的解释。
 # 请大家务必在翻译前先浏览此文件，否则很容易出现翻译不一致的地方。如果有必须修正的术语错误，也请先修改这个文件，然后再修改软件的 po，这样后来的翻译人员就不会犯同样的出错了。请大家在翻译术语的时候，尽量参考国内会计行业术语，以方便专业人士使用。谢谢！
 #. "English Definition (Dear translator: This file will never be visible to the user! It should only serve as a tool for you, the translator. Nothing more.)"
 msgid "Term (Dear translator: This file will never be visible to the user!)"
@@ -101,7 +101,7 @@ msgstr "科目类型：股票"
 
 # 1. (美国) 任何赚取利息的账户类型
 # 2. (英国) 任何比现金流账户或存款账户利息更高的银行账户
-#. "This account type (new in gnucash-2.4.0) is used when exchanging or trading amounts from one currency into another"
+#. "This account type (new in systecash-2.4.0) is used when exchanging or trading amounts from one currency into another"
 #, fuzzy
 msgid "account type: trading"
 msgstr "科目类型：储蓄存款"
@@ -231,8 +231,8 @@ msgstr "平衡，于"
 msgid "bank"
 msgstr "银行"
 
-# 一个关于商品或提供的服务的欠款的书面声明。在 GnuCash 中，“账单”是我们(从厂商)收到的，而“发票”是我们发出(给客户)的。
-#. "A written statement of money owed for goods or services supplied. In Gnucash, a 'bill' is a statement that we received (from a vendor), whereas an 'invoice' is one that we sent out (to a customer)."
+# 一个关于商品或提供的服务的欠款的书面声明。在 systecash 中，“账单”是我们(从厂商)收到的，而“发票”是我们发出(给客户)的。
+#. "A written statement of money owed for goods or services supplied. In systecash, a 'bill' is a statement that we received (from a vendor), whereas an 'invoice' is one that we sent out (to a customer)."
 msgid "bill"
 msgstr "账单"
 
@@ -249,8 +249,8 @@ msgstr "结算条款"
 msgid "billing terms"
 msgstr "结算条款"
 
-# 包含了 GnuCash 中所有的实体结合(科目等)的数据集。是对一个企业的财务会计工作的书面记录。
-#. "The dataset that encapsulates all the collections of entities (accounts etc.) in gnucash. The written records of the financial affairs of a business."
+# 包含了 systecash 中所有的实体结合(科目等)的数据集。是对一个企业的财务会计工作的书面记录。
+#. "The dataset that encapsulates all the collections of entities (accounts etc.) in systecash. The written records of the financial affairs of a business."
 msgid "Book"
 msgstr "账簿"
 
@@ -414,7 +414,7 @@ msgstr "描述 (账簿中的一栏)"
 msgid "discount"
 msgstr "会计科目"
 
-# 嗯，GnuCash的卖点
+# 嗯，systecash的卖点
 #. "Important Buzzword :)"
 msgid "double entry"
 msgstr "复式记账"
@@ -424,7 +424,7 @@ msgstr "复式记账"
 msgid "employee"
 msgstr "雇员"
 
-# "equity" 翻译为 "所有者权益"。这个词我找不到中文合适的意思，大家可以帮忙想一下。它的定义可以参考[http://www.investopedia.com/terms/e/equity.asp] 以及[http://en.wikipedia.org/wiki/Ownership_equity]。它不是专指投资中的净资产，它在 GnuCash 中包含了一个"期初余额"的子科目，用以记录账目开始时的各个账上的余额。我最后选择了[http://www.chinesetax.com.cn/acc/gedikuaijizixun/200508/243623.html]中所说的 "所有者权益类账户"的翻译。也许不对，如果有懂会计的，可以告知一下国内的术语是什么？
+# "equity" 翻译为 "所有者权益"。这个词我找不到中文合适的意思，大家可以帮忙想一下。它的定义可以参考[http://www.investopedia.com/terms/e/equity.asp] 以及[http://en.wikipedia.org/wiki/Ownership_equity]。它不是专指投资中的净资产，它在 systecash 中包含了一个"期初余额"的子科目，用以记录账目开始时的各个账上的余额。我最后选择了[http://www.chinesetax.com.cn/acc/gedikuaijizixun/200508/243623.html]中所说的 "所有者权益类账户"的翻译。也许不对，如果有懂会计的，可以告知一下国内的术语是什么？
 #. "1. The money value of a property after all charges on it have been paid. Equity isn't debt, it's a representation of long-term capital (So combining it with liability isn't really very meaningful, except in the balance sheet. 2. (a) The value of the shares issued by  a company. (b) Ordinary stocks and shares that carry no fixed interest."
 msgid "equity"
 msgstr "所有者权益"
@@ -476,8 +476,8 @@ msgstr "收益"
 msgid "imbalance"
 msgstr "不平衡"
 
-# 从非 GnuCash 格式中提取数据，并放到 GnuCash 的文件中去。比如，QIF 导入。
-#. "Process of extracting data from a non-Gnucash format into a Gnucash file. E.g. QIF Import."
+# 从非 systecash 格式中提取数据，并放到 systecash 的文件中去。比如，QIF 导入。
+#. "Process of extracting data from a non-systecash format into a systecash file. E.g. QIF Import."
 msgid "import"
 msgstr "导入"
 
@@ -493,15 +493,15 @@ msgstr "利息"
 
 # 一个销售的物品或提供的服务含收费价格的列表。
 # 见：账单
-# 在 GnuCash 中，“发票”是我们发出(给客户)的声明，而“账单”是我们(从厂商)收到的声明。
+# 在 systecash 中，“发票”是我们发出(给客户)的声明，而“账单”是我们(从厂商)收到的声明。
 # Post Invoice，应该翻译为“入账”。
-#. "A list of goods sold or services provided together with the prices charged; see also: a bill. In Gnucash, an 'invoice' is a statement that we sent out (to a customer), whereas a 'bill' is one that we received (from a vendor)."
+#. "A list of goods sold or services provided together with the prices charged; see also: a bill. In systecash, an 'invoice' is a statement that we sent out (to a customer), whereas a 'bill' is one that we received (from a vendor)."
 msgid "invoice"
 msgstr "发票"
 
 # 一个销售的物品或提供的服务含收费价格的列表。
 # 见：账单
-# 在 GnuCash 中，“发票”是我们发出(给客户)的声明，而“账单”是我们(从厂商)收到的声明。
+# 在 systecash 中，“发票”是我们发出(给客户)的声明，而“账单”是我们(从厂商)收到的声明。
 # Post Invoice，应该翻译为“入账”。
 #. "The customer (or vendor) to which this invoice is sent to."
 #, fuzzy
@@ -555,13 +555,13 @@ msgid "marker"
 msgstr "标记"
 
 # 散点图用于标记每一个数据点的东西
-#. "1. Some text annotation, but this meaning isn't used inside gnucash. 2. In the Customer summary report: The ratio of profit vs. sales, i.e. the profit amount divided by the sales amount, shown in percent."
+#. "1. Some text annotation, but this meaning isn't used inside systecash. 2. In the Customer summary report: The ratio of profit vs. sales, i.e. the profit amount divided by the sales amount, shown in percent."
 #, fuzzy
 msgid "markup"
 msgstr "标记"
 
-# 同时在 GnuCash 中显示多于一个窗口的形式。MDI = Multiple Document Interface (多文档界面)
-#. "The way how more than one window is displayed in GnuCash at the same time. MDI = Multiple Document Interface."
+# 同时在 systecash 中显示多于一个窗口的形式。MDI = Multiple Document Interface (多文档界面)
+#. "The way how more than one window is displayed in systecash at the same time. MDI = Multiple Document Interface."
 msgid "MDI modus"
 msgstr "MDI 方式"
 
@@ -626,8 +626,8 @@ msgstr "期初余额"
 msgid "options"
 msgstr "选项"
 
-# 当心：虽然这个词存在于 GnuCash 的代码中，但是 GnuCash 中所有的这类代码都没有激活。将来，这会用于商业会计，如：一个特别的关于制造或物资的请求，但是属于一个更大的任务。这样的请求可以来自于客户或发送给厂商。一个订单很可能会生成一个发票或账单。
-#. "Watch out: Although this word exists in gnucash program code, all that program code in gnucash is currently not activated. In the future, it will be used in business accounting as follows: A particular request to make or supply goods, but belonging to a (larger) job. Such a request can come from a customer or be sent to a vendor. An order will probably generate one invoice or bill."
+# 当心：虽然这个词存在于 systecash 的代码中，但是 systecash 中所有的这类代码都没有激活。将来，这会用于商业会计，如：一个特别的关于制造或物资的请求，但是属于一个更大的任务。这样的请求可以来自于客户或发送给厂商。一个订单很可能会生成一个发票或账单。
+#. "Watch out: Although this word exists in systecash program code, all that program code in systecash is currently not activated. In the future, it will be used in business accounting as follows: A particular request to make or supply goods, but belonging to a (larger) job. Such a request can come from a customer or be sent to a vendor. An order will probably generate one invoice or bill."
 msgid "order"
 msgstr "订单"
 
@@ -946,8 +946,8 @@ msgstr "价格(在子交易中)"
 msgid "vendor"
 msgstr "厂商"
 
-# 在 GnuCash 中，术语“凭证”和“支出凭证”是可以替换使用的。实际上，“支出凭证”有一点用词不当，在 GnuCash 中更像“支出报表”。这个意思是由雇员开支的一个支出清单，并且公司将会报销它们。
-#. "The terms 'Voucher' and 'Expense Voucher' are used interchangeably in gnucash. The 'Expense Voucher' is also a bit of a misnomer -- it's more like an 'Expense Report' in gnucash.  The phrase is meant to be a list of expenses incurred by an employee for which the company will reminburse them."
+# 在 systecash 中，术语“凭证”和“支出凭证”是可以替换使用的。实际上，“支出凭证”有一点用词不当，在 systecash 中更像“支出报表”。这个意思是由雇员开支的一个支出清单，并且公司将会报销它们。
+#. "The terms 'Voucher' and 'Expense Voucher' are used interchangeably in systecash. The 'Expense Voucher' is also a bit of a misnomer -- it's more like an 'Expense Report' in systecash.  The phrase is meant to be a list of expenses incurred by an employee for which the company will reminburse them."
 msgid "voucher"
 msgstr "凭证"
 

@@ -255,7 +255,7 @@
 
 	* src/gnome/dialog-sxsincelast.c: #include gnc-gui-query.h
 
-	* src/bin/overrides/gnucash-build-env.in: add report-gnome to
+	* src/bin/overrides/systecash-build-env.in: add report-gnome to
 	test-env.  Change envt vars to reflect new scheme:
 	GNC_CONFIG_PATH, GNC_SHARE_PATH, and GNC_DOC_PATH.
 
@@ -291,7 +291,7 @@
 	* src/report/utility-reports/test/Makefile.am: remove report-gnome
 	from dirs
 
-	* src/report/utility-reports/welcome-to-gnucash.scm: don't use gw-gnc
+	* src/report/utility-reports/welcome-to-systecash.scm: don't use gw-gnc
 
 	* src/report/utility-reports/view-column.scm: don't use gw-gnc
 
@@ -384,7 +384,7 @@
 
 	* src/scm/main.scm: handle welcome report gui here
 
-	* src/report/utility-reports/welcome-to-gnucash.scm: remove gui code
+	* src/report/utility-reports/welcome-to-systecash.scm: remove gui code
 
 	* src/report/utility-reports/view-column.scm: remove
 	options-editor code
@@ -436,7 +436,7 @@
 
 2001-12-08  Dave Peticolas  <dave@krondo.com>
 
-	* src/bin/overrides/gnucash-build-env.in: add report-gnome dir
+	* src/bin/overrides/systecash-build-env.in: add report-gnome dir
 
 	* src/backend/postgres/test/test-db.c: remove unused function
 
@@ -455,7 +455,7 @@
 	report bindings.
 
 	* src/report/report-gnome/gncmod-report-gnome.c: load g-wrapped
-	and gnucash report-gnome modules.
+	and systecash report-gnome modules.
 
 	* src/report/report-gnome/Makefile.am: add report-gnome.scm module
 
@@ -503,11 +503,11 @@
 	* src/engine/test/test-group-vs-book.c (main_helper): check for
 	failure loading the engine.
 
-	* src/bin/overrides/gnucash-build-env.in: part 1 of startup
+	* src/bin/overrides/systecash-build-env.in: part 1 of startup
 	changes -- use envt vars for more bits: GNC_CONFIG_DIR,
 	GNC_SHARE_DIR, and GNC_DOC_PATH now.
 
-	* src/bin/overrides/gnucash: use main, not bootstrap.
+	* src/bin/overrides/systecash: use main, not bootstrap.
 
 	* src/app-utils/app-utils.scm: accommodate removal of
 	utilities.scm, and use main not bootstrap.
@@ -550,7 +550,7 @@
 	* src/report/standard-reports/average-balance.scm: rename
 	bootstrap to main.
 
-	* src/report/utility-reports/welcome-to-gnucash.scm: rename
+	* src/report/utility-reports/welcome-to-systecash.scm: rename
 	bootstrap to main.
 
 	* src/report/utility-reports/utility-reports.scm: rename bootstrap
@@ -602,7 +602,7 @@
 	* src/bin/Makefile.am: handle new overrides arrangement.
 
 	* src/bin/generate-gnc-script: new script to generate all the
-	trivial top-level gnucash redirection scripts.
+	trivial top-level systecash redirection scripts.
 
 	* src/scm/tip-of-the-day.scm (gnc:read-tips): use
 	%search-load-path to find the tips, not gnc:find-in-directories
@@ -621,8 +621,8 @@
 
 	* src/bin/test/test-run-script: new file.
 
-	* src/bin/overrides/gnucash-run-script: new file -- mostly content
-	of ../gnucash-run-script.
+	* src/bin/overrides/systecash-run-script: new file -- mostly content
+	of ../systecash-run-script.
 
 	* configure.in: add adjustments for new static overrides scripts.
 
@@ -630,8 +630,8 @@
 	(.scm-links): add some more links so runs from build dir will
 	actually work.
 
-	* src/gnome/Makefile.am: accommodate the removal of gnucash.h,
-	gnucash.c.in, and the move of i18n.h.in which all resulted in the
+	* src/gnome/Makefile.am: accommodate the removal of systecash.h,
+	systecash.c.in, and the move of i18n.h.in which all resulted in the
 	removal of libgncguile.la.
 
 	* src/gnc-module/gnc-module.c
@@ -656,12 +656,12 @@
 
 	* src/bin/overrides/guile.in: moved from ../.
 
-	* src/bin/overrides/gnucash-make-guids: new file -- mostly content
-	of ../gnucash-make-guids.in.
+	* src/bin/overrides/systecash-make-guids: new file -- mostly content
+	of ../systecash-make-guids.in.
 
-	* src/bin/overrides/gnucash-env.in: moved from ../.
+	* src/bin/overrides/systecash-env.in: moved from ../.
 
-	* src/bin/overrides/gnucash-build-env.in: moved from ../.
+	* src/bin/overrides/systecash-build-env.in: moved from ../.
 
 	* src/bin/.cvsignore: update for file rearrangements.
 
@@ -675,35 +675,35 @@
 
 	* src/bin/test/.cvsignore: new file.
 
-	* src/bin/overrides/gnucash: new file.
+	* src/bin/overrides/systecash: new file.
 
 	* src/bin/overrides/Makefile.am: new file.
 
 	* src/bin/overrides/.cvsignore: new file.
 
-	* src/bin/gnucash.in: removed.
+	* src/bin/systecash.in: removed.
 
-	* src/bin/gnucash-make-guids.in: removed.
+	* src/bin/systecash-make-guids.in: removed.
 
-	* src/bin/gnucash-run-script.in: removed.
+	* src/bin/systecash-run-script.in: removed.
 
 	* src/bin/guile.in: moved to src/bin/overrides.
 
-	* src/bin/gnucash-env.in: moved to src/bin/overrides.
+	* src/bin/systecash-env.in: moved to src/bin/overrides.
 
 	* src/import-export/qif-import/Makefile.am (.scm-links): new target.
 
-	* src/gnome/gnucash.h: removed.
+	* src/gnome/systecash.h: removed.
 
-	* src/gnome/gnucash.c.in: removed.
+	* src/gnome/systecash.c.in: removed.
 
 	* src/gnome/i18n.h.in: moved to src/app-utils.
 
 	* src/import-export/qif-import/.cvsignore: add .scm-links.
 
-	* src/gnome/top-level.c: remove gnucash.h include.
+	* src/gnome/top-level.c: remove systecash.h include.
 
-	* src/gnome/gw-gnc-spec.scm: remove gnucash.h include.
+	* src/gnome/gw-gnc-spec.scm: remove systecash.h include.
 
 	* src/core-utils/.cvsignore: add .scm-links.
 
@@ -730,11 +730,11 @@
 
 	* src/bin/guile.in: trivial guile override wrapper.
 
-	* src/bin/gnucash.in: rearrange code so that the file can be
-	interactively loaded for debugging without firing up gnucash
+	* src/bin/systecash.in: rearrange code so that the file can be
+	interactively loaded for debugging without firing up systecash
 	immediately.
 
-	* src/bin/gnucash-env.in: add the script-override directory to the
+	* src/bin/systecash-env.in: add the script-override directory to the
 	front of the user's PATH.
 
 	* src/bin/Makefile.am (gncoverridedir): new var.
@@ -743,55 +743,55 @@
 
 	* src/bin/.cvsignore: add guile.
 
-	* doc/gnucash.1: remove some vestigial envt var refs.
+	* doc/systecash.1: remove some vestigial envt var refs.
 
 	* configure.in: add GNC_LIBEXECDIR.
 	(AC_OUTPUT): add src/bin/Makefile.
 
-	* src/bin/gnucash-env.in: carefully setup PATH to pick up correct
+	* src/bin/systecash-env.in: carefully setup PATH to pick up correct
 	guile.
 
 	* src/bin/: new directory.  Added so that scripts will be in a
 	subdir and can be re-made/installed without a full build.
 
-	* src/bin/gnucash-env.in: new file -- you can use this to invoke
-	programs or scripts with the proper gnucash
-	environment. i.e. "gnucash-env guile -s foo bar" or
-	"gnucash-env some-command arg1 arg2 ..."
+	* src/bin/systecash-env.in: new file -- you can use this to invoke
+	programs or scripts with the proper systecash
+	environment. i.e. "systecash-env guile -s foo bar" or
+	"systecash-env some-command arg1 arg2 ..."
 
 	* src/gnome/window-main.c (gnc_shutdown): moved here for now, but
 	should eventually be moved to app-utils (or similar) and made
 	public again.
 
-	* src/bin/gnucash.in: moved here from ../gnucash.sh.in.  Now uses
-	gnucash-env to set up environment.
+	* src/bin/systecash.in: moved here from ../systecash.sh.in.  Now uses
+	systecash-env to set up environment.
 
-	* src/gnome/gnucash.c.in: removed all code except
+	* src/gnome/systecash.c.in: removed all code except
 	gnc_setup_gettext, which should be moved to app-utils, or
 	core-utils soon.
 
-	* src/scm/main.scm: remove append-path calls - handled in gnucash-env.
+	* src/scm/main.scm: remove append-path calls - handled in systecash-env.
 	(append-path): unused -- deleted.
 	(gnc:main): handle setlocale here.
 
 	* src/.cvsignore: remove bits that moved to src/bin.
 
 	* src/Makefile.am: handle new src/bin directory, and remove all
-	the old gnucash binary bits.
+	the old systecash binary bits.
 
 	* src/gnc-main.c: deleted.
 
-	* src/gnucash-make-guids.in: moved to src/bin.
+	* src/systecash-make-guids.in: moved to src/bin.
 
-	* src/gnucash-run-script.in: moved to src/bin.
+	* src/systecash-run-script.in: moved to src/bin.
 
-	* src/gnucash.sh.in: moved to src/bin/gnucash.in.
+	* src/systecash.sh.in: moved to src/bin/systecash.in.
 
-	* src/gnome/gnucash.h: removed many dead functions.
+	* src/gnome/systecash.h: removed many dead functions.
 
-	* src/bin/gnucash-run-script.in: moved here from ..
+	* src/bin/systecash-run-script.in: moved here from ..
 
-	* src/bin/gnucash-make-guids.in: moved here from ..
+	* src/bin/systecash-make-guids.in: moved here from ..
 
 	* src/bin/Makefile.am: new file.
 
@@ -799,8 +799,8 @@
 
 2001-11-20  Rob Browning  <rlb@defaultvalue.org>
 
-	* src/gnome/gnucash.c.in
-	(gnucash_main_helper): switch to gnc_setenv.
+	* src/gnome/systecash.c.in
+	(systecash_main_helper): switch to gnc_setenv.
 
 	* src/gnome/Makefile.am (AM_CFLAGS): add core-utils.
 
@@ -872,16 +872,16 @@
 
 	* configure.in (AC_OUTPUT): add src/dialog-account.
 
-	* src/.cvsignore: add gnucash.sh.
+	* src/.cvsignore: add systecash.sh.
 
-	* src/gnucash.sh.in: new file -- this will eventually become the
-	primary gnucash program, but for now, let's make it available for
+	* src/systecash.sh.in: new file -- this will eventually become the
+	primary systecash program, but for now, let's make it available for
 	testing.
 
 	* src/Makefile.am (SUBDIRS): re-order to fix dependency problems.
-	(bin_SCRIPTS): add gnucash.sh.
-	(EXTRA_DIST): add gnucash.sh.in.
-	(gnucash.sh): new target.
+	(bin_SCRIPTS): add systecash.sh.
+	(EXTRA_DIST): add systecash.sh.in.
+	(systecash.sh): new target.
 
 	* src/gnc-module/test/test-scm-init: don't set %load-path
 	internally anymore -- depend on a proper TESTS_ENVIRONMENT.
@@ -929,7 +929,7 @@
 
 	* src/gnome-utils/Makefile.am: add window-help.
 
-	* src/gnome/gnucash.c.in: add temporary helpers for gnucash
+	* src/gnome/systecash.c.in: add temporary helpers for systecash
 	scriptification.
 
 	* src/gnome/top-level.c: remove spurious dialog-account.h include.
@@ -981,9 +981,9 @@
 
 	* src/gnome/Makefile.am: accommodate files from src/guile.
 
-	* src/gnome/gnucash.c.in: moved here from src/guile.
+	* src/gnome/systecash.c.in: moved here from src/guile.
 
-	* src/gnome/gnucash.h: moved here from src/guile.
+	* src/gnome/systecash.h: moved here from src/guile.
 
 	* src/gnome/i18n.h.in: moved here from src/guile.
 
@@ -1260,7 +1260,7 @@
 	* src/tax/us/test/Makefile.am
 	(TESTS_ENVIRONMENT): add paths.
 
-	* src/tax/us/us.scm (gnucash): added use-modules.
+	* src/tax/us/us.scm (systecash): added use-modules.
 
 	* src/scm/printing/print-check.scm: remove gnc:support and
 	gnc:depend calls.
@@ -1303,7 +1303,7 @@
 	* src/report/utility-reports/test/Makefile.am
 	(TESTS_ENVIRONMENT): add paths.
 
-	* src/report/utility-reports/welcome-to-gnucash.scm: added use-modules.
+	* src/report/utility-reports/welcome-to-systecash.scm: added use-modules.
 
 	* src/report/utility-reports/view-column.scm: added use-modules.
 
@@ -1362,12 +1362,12 @@
 
 	* src/import-export/qif-import/qif-import.scm: added use-modules.
 
-	* src/guile/gnucash.c.in
-	(GNC_BOOTSTRAP_SCM): now in gnucash module dir.
+	* src/guile/systecash.c.in
+	(GNC_BOOTSTRAP_SCM): now in systecash module dir.
 	(gnc_gw_init): remove gw_init_module_gw_gnc call.
-	(gnucash_main_helper): don't mess with startup, just run gnc:main.
+	(systecash_main_helper): don't mess with startup, just run gnc:main.
 
-	* src/guile/Makefile.am (gnucash): new symlink target.
+	* src/guile/Makefile.am (systecash): new symlink target.
 	(g-wrapped): new symlink target.
 
 	* src/gnc-module/gnc-module.c (gnc_module_system_init): add some
@@ -1440,7 +1440,7 @@
 	(libgw_engine_la_LDFLAGS): use ${G_WRAP_LINK_ARGS}.
 	(libgw_kvp_la_LDFLAGS): use ${G_WRAP_LINK_ARGS}.
 
-	* src/Makefile.am (gnucash_LDADD): link gncguile and gncgnome as
+	* src/Makefile.am (systecash_LDADD): link gncguile and gncgnome as
 	shared libs now.
 
 	* .cvsignore: add stamp-h1 (where does this come from?).
@@ -1496,7 +1496,7 @@
 
 	* src/import-export/binary-import/druid-commodity.c: use g_assert
 
-	* src/guile/gnucash.c.in (gnc_main): use g_assert
+	* src/guile/systecash.c.in (gnc_main): use g_assert
 
 	* src/gnome-utils/gnc-account-tree.c: remove asserts
 
@@ -1804,7 +1804,7 @@
 	(gnc_ui_account_get_tax_info_string): coerce to suppress warning
 	for guile 1.3.4.
 
-	* src/app-utils/app-utils.scm: must load "gnucash/engine" module.
+	* src/app-utils/app-utils.scm: must load "systecash/engine" module.
 
 	* src/app-utils/Makefile.am: support new g-wrap .scm module files.
 	(pkglib_LTLIBRARIES): move libgw-app-utils.la here.
@@ -2028,14 +2028,14 @@
 
 	* src/Makefile.am: identify new scripts as built sources
 
-	* configure.in: configure a gnucash-specific header directory
+	* configure.in: configure a systecash-specific header directory
 
-	* src/gnucash-run-script.in: new helper script for running gnucash
+	* src/systecash-run-script.in: new helper script for running systecash
 	guile scripts with the right directories set up.
 
 	* src/Makefile.am: add new files
 
-	* src/gnucash-make-guids.in: replace old gnucash-make-guid
+	* src/systecash-make-guids.in: replace old systecash-make-guid
 	with a guile script
 
 	* src/engine/gw-engine-spec.scm: wrap new function
@@ -2447,7 +2447,7 @@
 2001-08-04  Dave Peticolas  <dave@krondo.com>
 
 	* src/scm/main-window.scm: handle errors in creating
-	~/.gnucash/books
+	~/.systecash/books
 
 	* src/scm/path.scm (gnc:make-dir): new func
 
@@ -2604,7 +2604,7 @@
 
 	* doc/sgml/C/xacc-sxeditor.sgml: New file.
 
-	* doc/sgml/C/Makefile.am, gnucash.sgml: updates for new file
+	* doc/sgml/C/Makefile.am, systecash.sgml: updates for new file
 
 	* src/gnome/glade/sched-xact.glade: add help button
 
@@ -2625,7 +2625,7 @@
 	* src/register/cell-factory.[ch]: a new object for creation of
 	register cells. allows new cell types to be added dynamically.
 
-	* src/register/gnome/gnucash-style.c: fix for removal of
+	* src/register/gnome/systecash-style.c: fix for removal of
 	label from cellblock cells.
 
 	* src/register/table-allgui.[ch]: fix for changed flag and
@@ -2672,7 +2672,7 @@
 
 2001-07-20  James LewisMoss  <jimdres@mindspring.com>
 
-	* src/gnome/top-level.c (gnucash_ui_init): remove the \n's from
+	* src/gnome/top-level.c (systecash_ui_init): remove the \n's from
 	the ENTER and LEAVE calls.
 
 2001-07-19  James LewisMoss  <jimdres@mindspring.com>
@@ -2969,7 +2969,7 @@
 
 	* doc/sgml/C/xacc-about.sgml: fix version
 
-	* src/Makefile.am: link intl libs with gnucash-make-guids
+	* src/Makefile.am: link intl libs with systecash-make-guids
 
 	* src/register/QuickFill.c: same as below
 
@@ -2988,9 +2988,9 @@
 	* src/test/test-scm-query.c: new test -- check query<->scm
 	conversion
 
-	* src/guile/gnucash.h: new func api
+	* src/guile/systecash.h: new func api
 
-	* src/guile/gnucash.c.in (gnc_gw_init): new func
+	* src/guile/systecash.c.in (gnc_gw_init): new func
 
 	* src/guile/gnc-helpers.c: fix bugs
 
@@ -3125,11 +3125,11 @@
 
 	* src/.cvsignore: adjust for new program
 
-	* rpm/gnucash.spec.in: adjust for new program
+	* rpm/systecash.spec.in: adjust for new program
 
 	* src/Makefile.am: adjust for new program
 
-	* src/gnucash-make-guids.c: new program to aid in GUID creation
+	* src/systecash-make-guids.c: new program to aid in GUID creation
 
 	* src/engine/sql/putil.h: Alex Zepeda's patch converting atol->strtoll.
 
@@ -3166,7 +3166,7 @@
 	date manipulations.
 
 	* src/scm/bootstrap.scm.in: instead of the scheme command,
-	just tell the user to run gnucash once as root.
+	just tell the user to run systecash once as root.
 
 2001-07-01  Dave Peticolas  <dave@krondo.com>
 
@@ -3233,8 +3233,8 @@
 	directly -- if libxml was configured to use buffers, this won't
 	work.
 
-	* src/register/gnome/gnucash-sheet.c
-	(gnucash_sheet_key_press_event): allow shift-pgup and shift-pgdn
+	* src/register/gnome/systecash-sheet.c
+	(systecash_sheet_key_press_event): allow shift-pgup and shift-pgdn
 	to go to top & bottom of register respectively.
 
 	* src/register/gnome/datecell-gnome.c (DateDirect): allow '-'
@@ -3523,10 +3523,10 @@
 
 	* src/scm/report/register.scm: remove cruft
 
-	* src/register/gnome/gnucash-style.c (gnucash_font_load): new func
+	* src/register/gnome/systecash-style.c (systecash_font_load): new func
 	If gdk_fontset_load doesn't work, try gdk_font_load.
-	(gnucash_style_set_register_font_name): use gnucash_font_load
-	(gnucash_style_set_register_hint_font_name): use gnucash_font_load
+	(systecash_style_set_register_font_name): use systecash_font_load
+	(systecash_style_set_register_hint_font_name): use systecash_font_load
 
 	* src/FileDialog.c (gncFileSave): save the window state on a save
 	(gncFileQuerySave): don't provide cancel option when the ui can't
@@ -3609,7 +3609,7 @@
 
 	* src/gnome/dialog-transfer.c: use libglade
 
-	* rpm/gnucash.spec.in: fix bug
+	* rpm/systecash.spec.in: fix bug
 
 2001-06-13  Dave Peticolas  <dave@krondo.com>
 
@@ -3664,7 +3664,7 @@
 
 	* po/de.po: updated German translation for transfer dialog.
 
-	* doc/build-suse.txt: updated for gnucash 1.6 / SuSE 7.2
+	* doc/build-suse.txt: updated for systecash 1.6 / SuSE 7.2
 
 2001-06-12  Dave Peticolas  <dave@krondo.com>
 
@@ -3704,7 +3704,7 @@
 	* src/gnome/dialog-utils.c (gnc_glade_xml_new): new func
 	(gnc_glade_xml_new_widget): new func
 
-	* rpm/gnucash.spec.in: add glade dir
+	* rpm/systecash.spec.in: add glade dir
 
 	* configure.in: move libglade check to glade section.
 	add configured glade file dir.
@@ -3723,7 +3723,7 @@
 
 2001-06-11  Dave Peticolas  <dave@krondo.com>
 
-	* src/register/gnome/gnucash-date-picker.c
+	* src/register/gnome/systecash-date-picker.c
 	(gnc_date_picker_key_event): fix bug
 
 	* src/scm/Makefile.am: same as below
@@ -3748,8 +3748,8 @@
 
 2001-06-10  Bill Gribble  <grib@billgribble.com>
 
-	* src/scm/report/welcome-to-gnucash.scm: fix bug in "welcome to
-	gnucash" report
+	* src/scm/report/welcome-to-systecash.scm: fix bug in "welcome to
+	systecash" report
 
 	* src/gnome/dialog-column-view.c: remove printout
 
@@ -3829,13 +3829,13 @@
 	* configure.in, accounts/Makefile.am, accounts/de_DE/*: add
 	account template files for German locale.
 
-	* src/gnome/gnucash.desktop, po/de.po: updated German translation.
+	* src/gnome/systecash.desktop, po/de.po: updated German translation.
 
 2001-06-08  Dave Peticolas  <dave@krondo.com>
 
 	* src/doc/design/engine.texinfo: update docs
 
-	* src/doc/design/gnucash-design.texinfo: update docs
+	* src/doc/design/systecash-design.texinfo: update docs
 
 2001-06-08  Robert Graham Merkel  <rgmerk@mira.net>
 
@@ -3891,7 +3891,7 @@
 
 2001-06-07  Dave Peticolas  <dave@krondo.com>
 
-	* src/doc/design/gnucash-design.texinfo: update docs
+	* src/doc/design/systecash-design.texinfo: update docs
 
 	* src/doc/design/engine.texinfo: update docs
 
@@ -3914,7 +3914,7 @@
 	xacc-file-operations.sgml: more new docs.
 
 	* doc/sgml/C/xacc-quickstart.sgml, xacc-mainwin.sgml,
-	xacc-reports.sgml, gnucash.sgml: updates.
+	xacc-reports.sgml, systecash.sgml: updates.
 
 	* doc/examples/reg_doc_example.xac: add register doc
 	example file.
@@ -3943,7 +3943,7 @@
 
 	* src/doc/design/engine.texinfo: document prices and their API
 
-	* src/doc/design/gnucash-design.texinfo: update docs
+	* src/doc/design/systecash-design.texinfo: update docs
 
 	* macros/gnome.m4: Chris J (Oakton) Leach's macro patch
 
@@ -4037,7 +4037,7 @@
 	* doc/sgml/C/xacc-income-expense-barcharts.sgml: remove section
 	title.
 
-	* doc/sgml/C/xacc-gnucash-web-browser.sgml: remove section title.
+	* doc/sgml/C/xacc-systecash-web-browser.sgml: remove section title.
 
 	* doc/sgml/C/xacc-gnome-mdi.sgml: remove first section's
 	sectionness.
@@ -4126,13 +4126,13 @@
 	(priv:locale-reader): use reverse! on result rather than reverse.
 
 	* src/scm/Makefile.am (gnc_regular_scm_files): remove process.scm.
-	(gncscmmoddir): new directory for gnucash guile modules --
-	i.e. for files available via (use-modules (gnucash foo)).
-	(gncscmmod_DATA): first gnucash guile module (gnucash process).
+	(gncscmmoddir): new directory for systecash guile modules --
+	i.e. for files available via (use-modules (systecash foo)).
+	(gncscmmod_DATA): first systecash guile module (systecash process).
 
-	* src/scm/price-quotes.scm: use (gnucash process) module.
+	* src/scm/price-quotes.scm: use (systecash process) module.
 
-	* src/scm/process.scm: now a guile module (gnucash process).
+	* src/scm/process.scm: now a guile module (systecash process).
 	(gnc:cleanup-sub-process): fix several missing waitpid pid args.
 
 2001-06-04  James LewisMoss  <jimdres@mindspring.com>
@@ -4156,9 +4156,9 @@
 
 	* src/SplitLedger.c: fix spelling errors
 
-	* src/register/gnome/gnucash-item-edit.c: same as below
+	* src/register/gnome/systecash-item-edit.c: same as below
 
-	* src/register/gnome/gnucash-sheet.c: check change confirmation
+	* src/register/gnome/systecash-sheet.c: check change confirmation
 	before popping up combo list.
 
 	* src/register/table-allgui.c (gnc_table_confirm_change): new func
@@ -4221,7 +4221,7 @@
 
 2001-06-02  Dave Peticolas  <dave@krondo.com>
 
-	* src/register/gnome/gnucash-date-picker.c (gnc_date_picker_new):
+	* src/register/gnome/systecash-date-picker.c (gnc_date_picker_new):
 	fix bug
 
 	* src/SplitLedger.c: fix mem leak
@@ -4261,7 +4261,7 @@
 
 	* src/doc/design/engine.texinfo: document commodity table API
 
-	* src/doc/design/gnucash-design.texinfo: update docs
+	* src/doc/design/systecash-design.texinfo: update docs
 
 2001-05-31  Dave Peticolas  <dave@krondo.com>
 
@@ -4288,7 +4288,7 @@
 
 2001-05-31  Dave Peticolas  <dave@krondo.com>
 
-	* src/doc/design/gnucash-design.texinfo: update docs
+	* src/doc/design/systecash-design.texinfo: update docs
 
 	* src/doc/design/engine.texinfo: document commodities & their API
 
@@ -4301,7 +4301,7 @@
 
 	* doc/sgml/C/xacc-price-editor.sgml: new file.
 
-	* doc/sgml/C/gnucash.sgml: updated for new/changed file names.
+	* doc/sgml/C/systecash.sgml: updated for new/changed file names.
 
 	* doc/sgml/C/*.sgml: change xacc-ticker references to
 	xacc-price-sources, or remove them entirely.
@@ -4490,13 +4490,13 @@
 
 2001-05-24  Robert Graham Merkel  <rgmerk@mira.net>
 
-	* doc/sgml/C/gnucash.sgml: add references to new files.
+	* doc/sgml/C/systecash.sgml: add references to new files.
 
 	* doc/sgml/C/xacc-quickstart.sgml: New file, new user
 	documentation.
 
 	* doc/sgml/C/xacc-features.sgml: New file, describing
-	the features of GnuCash.
+	the features of systecash.
 
 	* doc/sgml/C/Makefile.am: update for new files.
 
@@ -4522,7 +4522,7 @@
 
 2001-05-23  Dave Peticolas  <dave@krondo.com>
 
-	* src/doc/design/gnucash-design.texinfo: update docs
+	* src/doc/design/systecash-design.texinfo: update docs
 
 	* src/doc/design/engine.texinfo: update docs
 
@@ -4552,7 +4552,7 @@
 
 	* src/guile/gnc.gwp: change new user api
 
-	* src/guile/gnucash.h: change new user api
+	* src/guile/systecash.h: change new user api
 
 	* doc/sgml/C/xacc-balancesheet.sgml: fix warning
 
@@ -4637,7 +4637,7 @@
 
 	* doc/sgml/C/xacc-net-worth-barchart.sgml: fix warnings
 
-	* doc/sgml/C/xacc-gnucash-web-browser.sgml: fix warnings
+	* doc/sgml/C/xacc-systecash-web-browser.sgml: fix warnings
 
 	* doc/sgml/C/xacc-gnome-mdi.sgml: fix warnings
 
@@ -4645,7 +4645,7 @@
 
 	* doc/sgml/C/Makefile.am: add new file to Makefile.am
 
-	* src/doc/design/gnucash-design.texinfo: update docs
+	* src/doc/design/systecash-design.texinfo: update docs
 
 	* src/doc/design/engine.texinfo: update docs
 
@@ -4655,11 +4655,11 @@
 
 2001-05-17  Robert Graham Merkel  <rgmerk@mira.net>
 
-	* doc/sgml/C/xacc-gnucash-web-browser.sgml: New file.
+	* doc/sgml/C/xacc-systecash-web-browser.sgml: New file.
 
 	* doc/sgml/C/Makefile.am: add new file.
 
-	* doc/sgml/C/gnucash.sgml, xacc-gnome-mdi.sgml,
+	* doc/sgml/C/systecash.sgml, xacc-gnome-mdi.sgml,
 	xacc-asset-liability-piecharts.sgml: more updated/new content.
 
 	* ChangeLog: fix wrong path in (my) previous changelog
@@ -4667,7 +4667,7 @@
 
 2001-05-16  Dave Peticolas  <dave@krondo.com>
 
-	* src/doc/design/gnucash-design.texinfo: update docs
+	* src/doc/design/systecash-design.texinfo: update docs
 
 	* src/doc/design/engine.texinfo: update docs
 
@@ -4684,7 +4684,7 @@
 	* src/scm/html-utilities.scm ((gnc:html-make-empty-data-warning)):
 	update message.
 
-	* doc/sgml/C/{gnucash.sgml, xacc-account-summary.sgml,
+	* doc/sgml/C/{systecash.sgml, xacc-account-summary.sgml,
 	xacc-asset-liability-barcharts.sgml, xacc-reports.sgml}: more new
 	material.
 
@@ -4893,7 +4893,7 @@
 	return a result. add menu item & functionality for account
 	hierarchy export.
 
-	* src/scm/report/welcome-to-gnucash.scm: take out the ugly :)
+	* src/scm/report/welcome-to-systecash.scm: take out the ugly :)
 
 2001-05-12  Christian Stimming  <stimming@tuhh.de>
 
@@ -4927,7 +4927,7 @@
 
 	* src/scm/report/hello-world.scm: put under utility menu
 
-	* src/scm/report/welcome-to-gnucash.scm: don't show in menu
+	* src/scm/report/welcome-to-systecash.scm: don't show in menu
 
 	* src/scm/report/iframe-url.scm: put under utility menu
 
@@ -4983,7 +4983,7 @@
 
 2001-05-12  Robert Graham Merkel  <rgmerk@mira.net>
 
-	* src/scm/main-window.scm: create .gnucash if it doesn't exist
+	* src/scm/main-window.scm: create .systecash if it doesn't exist
 	when saving a book config file.
 
 2001-05-11  Dave Peticolas  <dave@krondo.com>
@@ -5036,7 +5036,7 @@
 
 	* src/guile/gnc.gwp: update ui-open-file api.
 
-	* src/gnome/top-level.c (gnucash_ui_open_file): return TRUE/FALSE
+	* src/gnome/top-level.c (systecash_ui_open_file): return TRUE/FALSE
 	for success/failure. use gboolean instead of int for boolean
 	returns.
 
@@ -5060,7 +5060,7 @@
 	The concept is unnecessary.
 
 	* src/scm/main-window.scm: save report and account data to a new
-	file named after the book in the directory ~/.gnucash/books.
+	file named after the book in the directory ~/.systecash/books.
 
 	* src/scm/options.scm: run option-changed callbacks in the order
 	they were added.  Add gnc:options-touch to dirty the options
@@ -5232,10 +5232,10 @@
 	* src/register/gnome/combocell-gnome.c (xaccComboCellSetAutoSize):
 	new func.
 
-	* src/register/gnome/gnucash-item-list.c (gnc_item_list_autosize):
+	* src/register/gnome/systecash-item-list.c (gnc_item_list_autosize):
 	return the clist width
 
-	* src/register/gnome/gnucash-item-edit.c (item_edit_show_popup):
+	* src/register/gnome/systecash-item-edit.c (item_edit_show_popup):
 	fix bug
 
 	* src/scm/main.scm: run the book-opened hook before showing
@@ -5261,7 +5261,7 @@
 
 2001-05-04  Conrad Canterford <conrad@mail.watersprite.com.au>
 
-	* make-gnucash-patch.in: add --manifest option (allow use of a
+	* make-systecash-patch.in: add --manifest option (allow use of a
 	manifest file. Also, change --file option to allow multiple files.
 	Fix bug in previous change.
 
@@ -5273,17 +5273,17 @@
 
 	* doc/sgml/pt_PT/xacc-txf-categories.sgml: add missing </article>
 
-	* doc/sgml/pt_PT/gnucash.sgml: add missing file
+	* doc/sgml/pt_PT/systecash.sgml: add missing file
 
 	* doc/sgml/es/xacc-txf-categories.sgml: add missing </article>
 
-	* doc/sgml/es/gnucash.sgml: add missing file
+	* doc/sgml/es/systecash.sgml: add missing file
 
 	* doc/sgml/C/xacc-txf-categories.sgml: add missing </article>
 
 	* src/engine/DateUtils.c: config.h goes first
 
-	* make-gnucash-patch.in: fix bug
+	* make-systecash-patch.in: fix bug
 
 	* README.cvs: update info
 
@@ -5341,16 +5341,16 @@
 
 	* src/gnome/dialog-transfer.c: fix bugs
 
-	* src/guile/gnucash.c.in: update last stable version
+	* src/guile/systecash.c.in: update last stable version
 
 2001-05-01  Conrad Canterford <conrad@mail.watersprite.com.au>
 
-        * make-gnucash-patch.in: add --file option to allow single file
+        * make-systecash-patch.in: add --file option to allow single file
 	patches to be made.
 
 	* README.patches (new file): Moved patch instructions from README
 	file into this new file, and added detailed descriptions of all
-	the options for make-gnucash-patch.
+	the options for make-systecash-patch.
 
         * README: see above
 
@@ -5460,7 +5460,7 @@
 
 	* src/register/table-gnome.c (gnc_table_show_range): new func
 
-	* src/register/gnome/gnucash-sheet.c (gnucash_sheet_show_range):
+	* src/register/gnome/systecash-sheet.c (systecash_sheet_show_range):
 	new func
 
 2001-04-27  Christian Stimming  <stimming@tuhh.de>
@@ -5524,7 +5524,7 @@
 
 	* src/FileDialog.c (gncAddHistory): fix bug. check for NULL.
 
-	* src/guile/gnucash.c.in: include string.h
+	* src/guile/systecash.c.in: include string.h
 
 	* src/gnome/window-main.c: don't restore state for old format files
 
@@ -5741,12 +5741,12 @@
 	* src/scm/report/stylesheet-plain.scm: get rid of <center> tag
 	on <body>
 
-	* src/scm/report/welcome-to-gnucash.scm: new report and function
-	to set up welcome to gnucash report
+	* src/scm/report/welcome-to-systecash.scm: new report and function
+	to set up welcome to systecash report
 
 2001-04-19  Dave Peticolas  <dave@krondo.com>
 
-	* src/register/gnome/gnucash-item-edit.c (item_edit_draw_info): fix
+	* src/register/gnome/systecash-item-edit.c (item_edit_draw_info): fix
 	some left-right scrolling glitches
 
 	* src/gnome/dialog-tax-info.c: implement tax info api
@@ -5834,7 +5834,7 @@
 	* src/scm/bootstrap.scm.in (%load-path): add new guile-modules
 	directory so we can use-modules from there.
 
-	* src/guile/Makefile.am (CLEANFILES): add gnucash.c so it goes
+	* src/guile/Makefile.am (CLEANFILES): add systecash.c so it goes
 	away on "make clean" in addition to "make distclean".
 
 	* src/engine/gnc-pricedb.c: minor doc updates.
@@ -5889,12 +5889,12 @@
 
 2001-04-15  Dave Peticolas  <dave@krondo.com>
 
-	* src/register/gnome/gnucash-sheet.c: some more error checking
+	* src/register/gnome/systecash-sheet.c: some more error checking
 
 	* src/gnome/top-level.c: check for no children when creating default
 	window
 
-	* src/gnome/window-main.c: Kevin Finn's patch to shutdown gnucash
+	* src/gnome/window-main.c: Kevin Finn's patch to shutdown systecash
 	when the main window is deleted. Handle remove_child events to
 	prevent accessing deleted windows.
 
@@ -5939,7 +5939,7 @@
 
 2001-04-14  Dave Peticolas  <dave@krondo.com>
 
-	* src/scm/path.scm: version the .gnucash/config* files.
+	* src/scm/path.scm: version the .systecash/config* files.
 
 	* src/scm/: change several other files to use versioned config
 
@@ -5995,7 +5995,7 @@
 	* Lots and lots of changes to support Gnome MDI.  And I thought it
 	would be an easy way to get that toolbar problem fixed.  Short
 	story is lots of function prototypes changed to reflect the notion
-	that there is no longer a single top-level gnucash window or
+	that there is no longer a single top-level systecash window or
 	account tree.  41 files changed, which is too many for me to
 	itemize :)
 
@@ -6010,7 +6010,7 @@
 	per top-level window.
 
 	* src/gnome/window-main.c: this is not what it used to be at all.
-	the main gnucash ui element is now a 'GnomeMDI'.  The only menus
+	the main systecash ui element is now a 'GnomeMDI'.  The only menus
 	and toolbar items here are ones that are always visible in any
 	top-level window.
 
@@ -6031,7 +6031,7 @@
 
 2001-04-12  Dave Peticolas  <dave@krondo.com>
 
-	* src/register/gnome/gnucash-item-list.c: same as below
+	* src/register/gnome/systecash-item-list.c: same as below
 
 	* src/register/gnome/combocell-gnome.c (popup_post_show): fix for
 	making the scrollbars appear under gtk+ 1.2.9.
@@ -6332,8 +6332,8 @@
 
 2001-04-04  Dave Peticolas  <dave@krondo.com>
 
-	* src/register/gnome/gnucash-sheet.c
-	(gnucash_register_goto_next_trans_row): new func.
+	* src/register/gnome/systecash-sheet.c
+	(systecash_register_goto_next_trans_row): new func.
 
 	* src/gnome/window-register.c: make 'enter' toolbar button
 	move to next transaction
@@ -6365,7 +6365,7 @@
 
 2001-04-03  Dave Peticolas  <dave@krondo.com>
 
-	* src/register/gnome/gnucash-sheet.c: move cursor before showing
+	* src/register/gnome/systecash-sheet.c: move cursor before showing
 	popup menu
 
 	* src/gnome/window-register.c: add a Transaction->Invoice item
@@ -6537,10 +6537,10 @@
 
 	* src/scm/report/txf-export.scm: fix bug
 
-	* src/register/gnome/gnucash-sheet.c
-	(gnucash_sheet_modify_current_cell): reset item edit position
+	* src/register/gnome/systecash-sheet.c
+	(systecash_sheet_modify_current_cell): reset item edit position
 
-	* src/register/gnome/gnucash-item-edit.c (item_edit_reset_offset):
+	* src/register/gnome/systecash-item-edit.c (item_edit_reset_offset):
 	new func
 
 	* src/gnome/gnc-currency-edit.c (add_item): don't use namespace
@@ -6846,7 +6846,7 @@
 	
 2001-03-26  James LewisMoss  <jimdres@mindspring.com>
 
-	* README (NOTE): Update how make-gnucash-patch works.
+	* README (NOTE): Update how make-systecash-patch works.
 
 2001-03-26  Dave Peticolas  <dave@krondo.com>
 
@@ -6906,7 +6906,7 @@
 
 	* src/engine/kvp_doc.txt: add tax kvp keys
 
-	* doc/gnucash-gdb-cmds: remove, out of date
+	* doc/systecash-gdb-cmds: remove, out of date
 
 2001-03-23  Christian Stimming  <stimming@tuhh.de>
 
@@ -6925,10 +6925,10 @@
 
 	* src/Makefile.am: compile src/test after compile src/
 
-	* src/guile/gnucash.c.in (gnc_main): change from main
+	* src/guile/systecash.c.in (gnc_main): change from main
 	function so other executables can link with this lib
 
-	* src/gnc-main.c: new file with gnucash main
+	* src/gnc-main.c: new file with systecash main
 
 	* src/test/test-stuff.c: add api to turn on success printing
 
@@ -6983,7 +6983,7 @@
 	* gnc-html-actions.{c,h}: remove files.  Content moved into
 	gnc-network.
 
-	* prefs.scm: Add hidden preference for GnuCash Network user ID.
+	* prefs.scm: Add hidden preference for systecash Network user ID.
 
 2001-03-21  Dave Peticolas  <dave@krondo.com>
 
@@ -7170,7 +7170,7 @@
 	* src/engine/Transaction.c (xaccSplitGetCorrAccountName): i18n
 	(xaccSplitGetCorrAccountCode): i18n
 
-	* src/guile/gnucash.c.in (gnucash_lowlev_app_init): update
+	* src/guile/systecash.c.in (systecash_lowlev_app_init): update
 	last stable version
 
 	* src/scm/report.scm: more work on display
@@ -7192,11 +7192,11 @@
 
 	* src/gnome/gnc-html.c: use PWARN, not printf
 
-	* rpm/gnucash.spec.in: add finance-quote-helper as executable
+	* rpm/systecash.spec.in: add finance-quote-helper as executable
 
 2001-03-19  Derek Atkins  <warlord@MIT.EDU>
 
-	* src/engine/rpc/*: Gnucash RPC Subsystem (Backend and Server).
+	* src/engine/rpc/*: systecash RPC Subsystem (Backend and Server).
 	  Still considered experimental.  Note that the RPC protocol may
 	  change over time causing client/server incompatibilities between
 	  various versions of client and server.
@@ -7287,10 +7287,10 @@
 	* src/quotes/README: various updates.
 
 	* src/quotes/Quote_example.pl: document that we *don't* use the
-	"fetch" method in gnucash.
+	"fetch" method in systecash.
 
 	* src/quotes/gnc-prices: new file -- replaces gnc-prices.in and is
-	now just a wrapper for "gnucash --add-price-quotes".
+	now just a wrapper for "systecash --add-price-quotes".
 
 	* src/quotes/Makefile.am: accomodated renaming of
 	price-quote-helper to finance-quote-helper.  Also moved
@@ -7399,7 +7399,7 @@
 	
 2001-03-14  Dave Peticolas  <dave@krondo.com>
 
-	* rpm/gnucash.spec.in: simplify
+	* rpm/systecash.spec.in: simplify
 
 	* configure.in: add 'da' to language list
 
@@ -7632,17 +7632,17 @@
 	* add configure/acconfig option for GPG
 
 	* src/gnome/gng-gpg.c: add handlers for creation of keypair
-	(with passphrase) and for exporting public key block to GnuCash
+	(with passphrase) and for exporting public key block to systecash
 	Network server.  Fix bugs in old keypair creator.  Add passphrase
 	handling to data encrypt/decrypt.
 
 	* src/gnome/gnc-html-actions.c: rewrite privacy notice to use
-	GnuCash Network terminology.  The longer you guys wait to bitch
+	systecash Network terminology.  The longer you guys wait to bitch
 	about the name the more stuck it is.  Rewrite gnc-info/form handler
-	to submit GnuCash version and feature information.
+	to submit systecash version and feature information.
 
 	* src/gnome/gnc-html.c: respect global preferences for HTTP, SSL,
-	and GnuCash Network transactions.  Change submit handler calls to
+	and systecash Network transactions.  Change submit handler calls to
 	unpack encoded form data into a hash table and possibly re-encode
 	and re-pack if necessary.  Fix bugs in submit handler lookups.
 	Add RFC-1738 decoder to go with the encoder. 
@@ -7654,8 +7654,8 @@
 	styles in style sheets.  Remove dead code. 
 
 	* src/sc/prefs.scm: New preferences section, "Network", with
-	options to globally disable HTTP, SSL, and GnuCash Network, and to
-	assign the GnuCash Network server name.
+	options to globally disable HTTP, SSL, and systecash Network, and to
+	assign the systecash Network server name.
 
 	* src/scm/report/table-test.scm: new test report to demonstrate 
 	row and cell semantic style
@@ -7769,7 +7769,7 @@
 
 	* summary: separate the HTML and HTTP processing functions into
 	different files to facilitate reuse.  Modularize much of the
-	gnucash-specific behavior of the HTML code (<object> and form
+	systecash-specific behavior of the HTML code (<object> and form
 	submission) to use run-time-expandable bahavior tables.  Add the
 	gnc-action: mechanism for installing form submission handlers.
 
@@ -7861,7 +7861,7 @@
 
 2001-03-05  Dave Peticolas  <dave@krondo.com>
 
-	* src/register/gnome/gnucash-item-edit.{ch}: improve horizontal
+	* src/register/gnome/systecash-item-edit.{ch}: improve horizontal
 	scrolling behavior.
 
 2001-03-05  Christian Stimming  <stimming@tuhh.de>
@@ -7896,9 +7896,9 @@
 	* src/engine/gnc-associate-account.c: fix some uses of glib
 	list routines (they always return the new head of the list).
 
-	* src/pixmaps: add gnucash_long.png graphic
+	* src/pixmaps: add systecash_long.png graphic
 
-	* src/gnome/top-level.c (gnucash_ui_init): show splash screen
+	* src/gnome/top-level.c (systecash_ui_init): show splash screen
 
 	* src/gnome/gnc-splash.{ch}: splash screen functionality
 
@@ -7937,7 +7937,7 @@
 	* src/engine/sql/design.txt: update design docs
 
 	* src/engine/sql/PostgresBackend.c (pgend_session_begin): connect
-	to template1 database instead of 'gnucash'
+	to template1 database instead of 'systecash'
 
 2001-03-02  Dave Peticolas  <dave@krondo.com>
 
@@ -8012,7 +8012,7 @@
 
 2001-03-01  Dave Peticolas  <dave@krondo.com>
 
-	* src/register/gnome/gnucash-sheet.c: if input is cancelled by
+	* src/register/gnome/systecash-sheet.c: if input is cancelled by
 	user during delete, ignore the insert callback.
 
 	* src/MultiLedger.c: update for new view api
@@ -8156,7 +8156,7 @@
 	const gchar*s.
 	(account_slots_handler): Complete func.
 
-	* make-gnucash-patch.in: Test to see if makepatch exists.
+	* make-systecash-patch.in: Test to see if makepatch exists.
 
 	* src/engine/sixtp-dom-parsers.c (dom_tree_to_text): same as
 	below.  Add NULL tests for arguments.  Affected many functions in
@@ -8170,10 +8170,10 @@
 
 2001-02-27  Dave Peticolas  <dave@krondo.com>
 
-	* src/register/gnome/gnucash-scrolled-window.c: subclass of
+	* src/register/gnome/systecash-scrolled-window.c: subclass of
 	gtk_scrolled_window for use in register.
 
-	* src/register/gnome/gnucash-item-list.c: use scrolled window
+	* src/register/gnome/systecash-item-list.c: use scrolled window
 	for really long account names.
 
 	* doc/sgml/es/Makefile.am (GNUCASH_SGML_FILES): fix list of sgml
@@ -8290,7 +8290,7 @@
 	(AC_CHECK_PROG): Add a check for etags.
 	(AC_ARG_WITH): --with-perl-includes - don't die if CORE not found.
 	I install modules in a local directory and use --perl-includes to
-	enable gnucash to find Finance::Quote at runtime, but there won't
+	enable systecash to find Finance::Quote at runtime, but there won't
 	be a CORE file.
 	(AC_CHECK_LIB): popt - note required Debian -dev package. 
 
@@ -8850,7 +8850,7 @@
 
 2001-02-07  James LewisMoss  <dres@phoenixdsl.com>
 
-	* make-gnucash-patch.in: Add a file ending that is ignored.
+	* make-systecash-patch.in: Add a file ending that is ignored.
 
 	* src/doc/xml/types.dtd: Change currency-type -> commodity-type.
 	Add defs for cmd:space and cmd:id.
@@ -9017,7 +9017,7 @@
 2001-01-26  Bill Gribble  <grib@billgribble.com>
 
 	* src/gnome/gnc-gpg.{c,h}: if Linas can add useless prototype
-	code, so can I :) Gnucash now supports display of GPG-encrypted
+	code, so can I :) systecash now supports display of GPG-encrypted
 	HTML pages via another special <object> block.  
 
 	* src/gnome/gnc-html.c: Add support for GPG stuff.  Fix error 
@@ -9080,7 +9080,7 @@
 	type names and visible bindings for g-wrapped non-native types.
 	Where we had <gw:wct-void*> we now have <gw:void*>.  This naming
 	convention has been applied unilaterally, even for native types,
-	so we now have <gw:int>.  Further, types that are gnucash types
+	so we now have <gw:int>.  Further, types that are systecash types
 	appear as <gnc:Account*>, and types that are glib appear as
 	<glib:GList*>, etc.  Finally, in cases where the name of the type
 	is already prefixed with gnc, the prefix is not doubled, so we
@@ -9103,7 +9103,7 @@
 	(gnc_commodity_to_scm): new g-wrap fix.
 	(gnc_glist_commodity_ptr_to_scm): new g-wrap fix.
 
-	* src/guile/gnucash.c.in (gnucash_main_helper): new g-wrap fix.
+	* src/guile/systecash.c.in (systecash_main_helper): new g-wrap fix.
 
 	* src/guile/gnc.gwp: major rework (mostly s///) for new g-wrap.
 
@@ -9117,7 +9117,7 @@
 2001-01-12  Bill Gribble  <grib@billgribble.com>
 
 	* doc/html/C/account-tree-demo.html: add a simple demo of
-	embedding a gnucash main window widget in HTML
+	embedding a systecash main window widget in HTML
 
 	* src/gnome/dialog-options.c: add a 'pixmap' option type to
 	the GNC options 
@@ -9132,7 +9132,7 @@
 	converting string arrays to and from single HTML strings
 
 	* src/gnome/gnc-html-embedded.c: error handling in creating guppi
-	plots, and add new embedded object type for embedding a gnucash
+	plots, and add new embedded object type for embedding a systecash
 	mainwindow-account-tree in HTML (preliminary).  Add x axis 
 	label rotation as an option to the barchart.
 

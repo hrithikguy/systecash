@@ -28,7 +28,7 @@
 /** @addtogroup GuiTreeModel
     @{ */
 /** @file gnc-tree-model-commodity.h
-    @brief GtkTreeModel implementation for gnucash commodities.
+    @brief GtkTreeModel implementation for systecash commodities.
     @author Jan Arne Petersen <jpetersen@uni-bonn.de>
     @author David Hampton <hampton@employees.org>
 */
@@ -103,7 +103,7 @@ GType gnc_tree_model_commodity_get_type (void);
 /** @name Account Tree Model Constructors
  @{ */
 
-/** Create a new GtkTreeModel for manipulating gnucash commodities.
+/** Create a new GtkTreeModel for manipulating systecash commodities.
  *
  *  @param book The book that holds these commodities.
  *
@@ -148,7 +148,7 @@ gboolean gnc_tree_model_commodity_iter_is_commodity (GncTreeModelCommodity *mode
         GtkTreeIter *iter);
 
 
-/** Convert a model/iter pair to a gnucash commodity namespace.  This
+/** Convert a model/iter pair to a systecash commodity namespace.  This
  *  routine should only be called from a commodity tree view filter
  *  function.  The model and iter values will be provided as part of
  *  the call to the filter.
@@ -162,7 +162,7 @@ gboolean gnc_tree_model_commodity_iter_is_commodity (GncTreeModelCommodity *mode
 gnc_commodity_namespace *gnc_tree_model_commodity_get_namespace (GncTreeModelCommodity *model,
         GtkTreeIter *iter);
 
-/** Convert a model/iter pair to a gnucash commodity.  This routine
+/** Convert a model/iter pair to a systecash commodity.  This routine
  *  should only be called from a commodity tree view filter function.
  *  The model and iter values will be provided as part of the call to
  *  the filter.
@@ -186,7 +186,7 @@ gnc_commodity *gnc_tree_model_commodity_get_commodity (GncTreeModelCommodity *mo
  *
  *  @param model A pointer to the commodity tree model.
  *
- *  @param namespace A pointer to the gnucash commodity namespace.
+ *  @param namespace A pointer to the systecash commodity namespace.
  *
  *  @param iter A pointer to a GtkTreeIter.  This iter will be filled
  *  in to point where the namespace appears in the commodity tree.
@@ -200,7 +200,7 @@ gboolean gnc_tree_model_commodity_get_iter_from_namespace (GncTreeModelCommodity
  *
  *  @param model A pointer to the commodity tree model.
  *
- *  @param commodity A pointer to the gnucash commodity.
+ *  @param commodity A pointer to the systecash commodity.
  *
  *  @param iter A pointer to a GtkTreeIter.  This iter will be filled
  *  in to point where the commodity appears in the commodity tree.
@@ -214,7 +214,7 @@ gboolean gnc_tree_model_commodity_get_iter_from_commodity (GncTreeModelCommodity
  *
  *  @param model A pointer to the commodity tree model.
  *
- *  @param commodity A pointer to the gnucash commodity.
+ *  @param commodity A pointer to the systecash commodity.
  *
  *  @return A pointer to a GtkTreePath describing the location of this
  *  commodity.  This pointer must be freed by the caller when no

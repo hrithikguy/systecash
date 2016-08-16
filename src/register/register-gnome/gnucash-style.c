@@ -23,12 +23,12 @@
  */
 
 #include "config.h"
-#include "gnucash-color.h"
-#include "gnucash-grid.h"
-#include "gnucash-item-edit.h"
-#include "gnucash-sheet.h"
-#include "gnucash-sheetP.h"
-#include "gnucash-style.h"
+#include "systecash-color.h"
+#include "systecash-grid.h"
+#include "systecash-item-edit.h"
+#include "systecash-sheet.h"
+#include "systecash-sheetP.h"
+#include "systecash-style.h"
 #include "gnc-engine.h"		// For debugging, e.g. ENTER(), LEAVE()
 
 /** GLOBALS *********************************************************/
@@ -108,7 +108,7 @@ style_dimensions_destroy (BlockDimensions *dimensions)
 
 
 static void
-gnucash_style_dimensions_init (GnucashSheet *sheet, SheetBlockStyle *style)
+systecash_style_dimensions_init (systecashSheet *sheet, SheetBlockStyle *style)
 {
     BlockDimensions *dimensions;
 
@@ -129,7 +129,7 @@ gnucash_style_dimensions_init (GnucashSheet *sheet, SheetBlockStyle *style)
 
 
 CellDimensions *
-gnucash_style_get_cell_dimensions (SheetBlockStyle *style, int row, int col)
+systecash_style_get_cell_dimensions (SheetBlockStyle *style, int row, int col)
 {
     if (style == NULL)
         return NULL;
@@ -163,7 +163,7 @@ compute_row_width (BlockDimensions *dimensions, int row, int col1, int col2)
 
 /* This sets the initial sizes of the cells, based on the sample_text */
 static void
-set_dimensions_pass_one (GnucashSheet *sheet, CellBlock *cursor,
+set_dimensions_pass_one (systecashSheet *sheet, CellBlock *cursor,
                          BlockDimensions *dimensions)
 {
     /* GdkFont *font = GNUCASH_GRID(sheet->grid)->normal_font; */
@@ -238,7 +238,7 @@ set_dimensions_pass_one (GnucashSheet *sheet, CellBlock *cursor,
 /* Now adjust things to make everything even. This code assumes that
  * all cursors have the same number of columns!!! */
 static void
-set_dimensions_pass_two (GnucashSheet *sheet, int default_width)
+set_dimensions_pass_two (systecashSheet *sheet, int default_width)
 {
     SheetBlockStyle *style;
     BlockDimensions *dimensions;
@@ -253,7 +253,7 @@ set_dimensions_pass_two (GnucashSheet *sheet, int default_width)
     int width;
     int row, col;
 
-    style = gnucash_sheet_get_style_from_cursor (sheet, CURSOR_HEADER);
+    style = systecash_sheet_get_style_from_cursor (sheet, CURSOR_HEADER);
     dimensions = style->dimensions;
     cd_table = dimensions->cell_dimensions;
     cursor = style->cursor;
@@ -339,7 +339,7 @@ set_dimensions_pass_two (GnucashSheet *sheet, int default_width)
     for (node = cursors; node; node = node->next)
     {
         cursor = node->data;
-        style = gnucash_sheet_get_style_from_cursor
+        style = systecash_sheet_get_style_from_cursor
                 (sheet, cursor->cursor_name);
         dimensions = style->dimensions;
         cd_table = dimensions->cell_dimensions;
@@ -359,7 +359,7 @@ set_dimensions_pass_two (GnucashSheet *sheet, int default_width)
         CellDimensions *cd_span;
 
         cursor = node->data;
-        style = gnucash_sheet_get_style_from_cursor
+        style = systecash_sheet_get_style_from_cursor
                 (sheet, cursor->cursor_name);
         dimensions = style->dimensions;
         cd_table = dimensions->cell_dimensions;
@@ -410,7 +410,7 @@ set_dimensions_pass_two (GnucashSheet *sheet, int default_width)
 }
 
 gint
-gnucash_style_row_width(SheetBlockStyle *style, int row)
+systecash_style_row_width(SheetBlockStyle *style, int row)
 {
     BlockDimensions *dimensions;
 
@@ -462,7 +462,7 @@ compute_cell_origins_y (BlockDimensions *dimensions)
 
 /* Calculate the widths and offsets */
 static void
-set_dimensions_pass_three (GnucashSheet *sheet)
+set_dimensions_pass_three (systecashSheet *sheet)
 {
     GList *cursors;
     GList *node;
@@ -476,7 +476,7 @@ set_dimensions_pass_three (GnucashSheet *sheet)
         SheetBlockStyle *style;
         BlockDimensions *dimensions;
 
-        style = gnucash_sheet_get_style_from_cursor
+        style = systecash_sheet_get_style_from_cursor
                 (sheet, cursor->cursor_name);
         dimensions = style->dimensions;
 
@@ -489,7 +489,7 @@ set_dimensions_pass_three (GnucashSheet *sheet)
 }
 
 static void
-styles_recompute_layout_dimensions (GnucashSheet *sheet, int default_width)
+styles_recompute_layout_dimensions (systecashSheet *sheet, int default_width)
 {
     CellBlock *cursor;
     SheetBlockStyle *style;
@@ -503,7 +503,7 @@ styles_recompute_layout_dimensions (GnucashSheet *sheet, int default_width)
     {
         cursor = node->data;
 
-        style = gnucash_sheet_get_style_from_cursor
+        style = systecash_sheet_get_style_from_cursor
                 (sheet, cursor->cursor_name);
 
         dimensions = style->dimensions;
@@ -519,7 +519,7 @@ styles_recompute_layout_dimensions (GnucashSheet *sheet, int default_width)
 }
 
 void
-gnucash_sheet_styles_set_dimensions (GnucashSheet *sheet, int default_width)
+systecash_sheet_styles_set_dimensions (systecashSheet *sheet, int default_width)
 {
     g_return_if_fail (sheet != NULL);
     g_return_if_fail (GNUCASH_IS_SHEET (sheet));
@@ -528,7 +528,7 @@ gnucash_sheet_styles_set_dimensions (GnucashSheet *sheet, int default_width)
 }
 
 gint
-gnucash_style_col_is_resizable (SheetBlockStyle *style, int col)
+systecash_style_col_is_resizable (SheetBlockStyle *style, int col)
 {
     if (col < 0 || col >= style->ncols)
         return FALSE;
@@ -537,7 +537,7 @@ gnucash_style_col_is_resizable (SheetBlockStyle *style, int col)
 }
 
 void
-gnucash_sheet_set_col_width (GnucashSheet *sheet, int col, int width)
+systecash_sheet_set_col_width (systecashSheet *sheet, int col, int width)
 {
     CellDimensions *cd;
     SheetBlockStyle *style;
@@ -551,11 +551,11 @@ gnucash_sheet_set_col_width (GnucashSheet *sheet, int col, int width)
     if (width < 0)
         return;
 
-    style = gnucash_sheet_get_style_from_cursor (sheet, CURSOR_HEADER);
+    style = systecash_sheet_get_style_from_cursor (sheet, CURSOR_HEADER);
 
     g_return_if_fail (col < style->ncols);
 
-    cd = gnucash_style_get_cell_dimensions (style, 0, col);
+    cd = systecash_style_get_cell_dimensions (style, 0, col);
 
     /* adjust the overall width of this style */
     diff = cd->pixel_width - width;
@@ -569,13 +569,13 @@ gnucash_sheet_set_col_width (GnucashSheet *sheet, int col, int width)
 
 
 void
-gnucash_sheet_styles_recompile(GnucashSheet *sheet)
+systecash_sheet_styles_recompile(systecashSheet *sheet)
 {
 }
 
 
 void
-gnucash_sheet_get_borders (GnucashSheet *sheet, VirtualLocation virt_loc,
+systecash_sheet_get_borders (systecashSheet *sheet, VirtualLocation virt_loc,
                            PhysicalCellBorders *borders)
 {
     SheetBlockStyle *style;
@@ -599,7 +599,7 @@ gnucash_sheet_get_borders (GnucashSheet *sheet, VirtualLocation virt_loc,
     if (virt_loc.phys_col_offset == 0)
         borders->left = CELL_BORDER_LINE_NORMAL;
 
-    style = gnucash_sheet_get_style_from_cursor (sheet, CURSOR_HEADER);
+    style = systecash_sheet_get_style_from_cursor (sheet, CURSOR_HEADER);
     if (style)
         if (virt_loc.phys_col_offset == (style->ncols - 1))
             borders->right = CELL_BORDER_LINE_NORMAL;
@@ -616,7 +616,7 @@ gnucash_sheet_get_borders (GnucashSheet *sheet, VirtualLocation virt_loc,
 
 
 static SheetBlockStyle *
-gnucash_sheet_style_new (GnucashSheet *sheet, CellBlock *cursor)
+systecash_sheet_style_new (systecashSheet *sheet, CellBlock *cursor)
 {
     SheetBlockStyle *style;
 
@@ -631,7 +631,7 @@ gnucash_sheet_style_new (GnucashSheet *sheet, CellBlock *cursor)
     style->nrows = cursor->num_rows;
     style->ncols = cursor->num_cols;
 
-    gnucash_style_dimensions_init (sheet, style);
+    systecash_style_dimensions_init (sheet, style);
 
     return style;
 }
@@ -641,14 +641,14 @@ destroy_style_helper (gpointer key, gpointer value, gpointer user_data)
 {
     char *cursor_name = key;
     SheetBlockStyle *style = value;
-    GnucashSheet *sheet = user_data;
+    systecashSheet *sheet = user_data;
 
-    gnucash_sheet_style_destroy (sheet, style);
+    systecash_sheet_style_destroy (sheet, style);
     g_free (cursor_name);
 }
 
 void
-gnucash_sheet_clear_styles (GnucashSheet *sheet)
+systecash_sheet_clear_styles (systecashSheet *sheet)
 {
     g_return_if_fail (sheet != NULL);
     g_return_if_fail (GNUCASH_IS_SHEET (sheet));
@@ -658,7 +658,7 @@ gnucash_sheet_clear_styles (GnucashSheet *sheet)
 }
 
 void
-gnucash_sheet_create_styles (GnucashSheet *sheet)
+systecash_sheet_create_styles (systecashSheet *sheet)
 {
     GList *cursors;
     GList *node;
@@ -666,7 +666,7 @@ gnucash_sheet_create_styles (GnucashSheet *sheet)
     g_return_if_fail (sheet != NULL);
     g_return_if_fail (GNUCASH_IS_SHEET (sheet));
 
-    gnucash_sheet_clear_styles (sheet);
+    systecash_sheet_clear_styles (sheet);
 
     cursors = gnc_table_layout_get_cursors (sheet->table->layout);
 
@@ -676,25 +676,25 @@ gnucash_sheet_create_styles (GnucashSheet *sheet)
 
         g_hash_table_insert (sheet->cursor_styles,
                              g_strdup (cursor->cursor_name),
-                             gnucash_sheet_style_new (sheet, cursor));
+                             systecash_sheet_style_new (sheet, cursor));
     }
 }
 
 void
-gnucash_sheet_compile_styles (GnucashSheet *sheet)
+systecash_sheet_compile_styles (systecashSheet *sheet)
 {
     g_return_if_fail (sheet != NULL);
     g_return_if_fail (GNUCASH_IS_SHEET (sheet));
 
     ENTER("sheet=%p", sheet);
 
-    gnucash_sheet_styles_set_dimensions (sheet, DEFAULT_STYLE_WIDTH);
+    systecash_sheet_styles_set_dimensions (sheet, DEFAULT_STYLE_WIDTH);
 
     LEAVE(" ");
 }
 
 void
-gnucash_sheet_style_destroy (GnucashSheet *sheet, SheetBlockStyle *style)
+systecash_sheet_style_destroy (systecashSheet *sheet, SheetBlockStyle *style)
 {
     if (sheet == NULL)
         return;
@@ -715,7 +715,7 @@ gnucash_sheet_style_destroy (GnucashSheet *sheet, SheetBlockStyle *style)
 
 
 void
-gnucash_sheet_style_get_cell_pixel_rel_coords (SheetBlockStyle *style,
+systecash_sheet_style_get_cell_pixel_rel_coords (SheetBlockStyle *style,
         gint cell_row, gint cell_col,
         gint *x, gint *y,
         gint *w, gint *h)
@@ -726,7 +726,7 @@ gnucash_sheet_style_get_cell_pixel_rel_coords (SheetBlockStyle *style,
     g_return_if_fail (cell_row >= 0 && cell_row <= style->nrows);
     g_return_if_fail (cell_col >= 0 && cell_col <= style->ncols);
 
-    cd = gnucash_style_get_cell_dimensions (style, cell_row, cell_col);
+    cd = systecash_style_get_cell_dimensions (style, cell_row, cell_col);
 
     *x = cd->origin_x;
     *y = cd->origin_y;
@@ -736,14 +736,14 @@ gnucash_sheet_style_get_cell_pixel_rel_coords (SheetBlockStyle *style,
 
 
 SheetBlockStyle *
-gnucash_sheet_get_style (GnucashSheet *sheet, VirtualCellLocation vcell_loc)
+systecash_sheet_get_style (systecashSheet *sheet, VirtualCellLocation vcell_loc)
 {
     SheetBlock *block;
 
     g_return_val_if_fail (sheet != NULL, NULL);
     g_return_val_if_fail (GNUCASH_IS_SHEET(sheet), NULL);
 
-    block = gnucash_sheet_get_block (sheet, vcell_loc);
+    block = systecash_sheet_get_block (sheet, vcell_loc);
 
     if (block)
         return block->style;
@@ -753,7 +753,7 @@ gnucash_sheet_get_style (GnucashSheet *sheet, VirtualCellLocation vcell_loc)
 
 
 SheetBlockStyle *
-gnucash_sheet_get_style_from_table (GnucashSheet *sheet,
+systecash_sheet_get_style_from_table (systecashSheet *sheet,
                                     VirtualCellLocation vcell_loc)
 {
     Table *table;
@@ -770,16 +770,16 @@ gnucash_sheet_get_style_from_table (GnucashSheet *sheet,
 
     cursor = vcell->cellblock;
 
-    style = gnucash_sheet_get_style_from_cursor (sheet,
+    style = systecash_sheet_get_style_from_cursor (sheet,
             cursor->cursor_name);
     if (style)
         return style;
 
-    return gnucash_sheet_get_style_from_cursor (sheet, CURSOR_HEADER);
+    return systecash_sheet_get_style_from_cursor (sheet, CURSOR_HEADER);
 }
 
 SheetBlockStyle *
-gnucash_sheet_get_style_from_cursor (GnucashSheet *sheet,
+systecash_sheet_get_style_from_cursor (systecashSheet *sheet,
                                      const char *cursor_name)
 {
     g_return_val_if_fail (sheet != NULL, NULL);
@@ -797,7 +797,7 @@ gnucash_sheet_get_style_from_cursor (GnucashSheet *sheet,
  */
 
 void
-gnucash_style_ref (SheetBlockStyle *style)
+systecash_style_ref (SheetBlockStyle *style)
 {
     g_return_if_fail (style != NULL);
 
@@ -806,7 +806,7 @@ gnucash_style_ref (SheetBlockStyle *style)
 
 
 void
-gnucash_style_unref (SheetBlockStyle *style)
+systecash_style_unref (SheetBlockStyle *style)
 {
     g_return_if_fail (style != NULL);
 
@@ -886,7 +886,7 @@ gnc_header_widths_get_width (GNCHeaderWidths widths,
 }
 
 void
-gnucash_sheet_get_header_widths (GnucashSheet *sheet,
+systecash_sheet_get_header_widths (systecashSheet *sheet,
                                  GNCHeaderWidths widths)
 {
     SheetBlockStyle *style;
@@ -896,7 +896,7 @@ gnucash_sheet_get_header_widths (GnucashSheet *sheet,
     g_return_if_fail (sheet != NULL);
     g_return_if_fail (GNUCASH_IS_SHEET(sheet));
 
-    style = gnucash_sheet_get_style_from_cursor (sheet, CURSOR_HEADER);
+    style = systecash_sheet_get_style_from_cursor (sheet, CURSOR_HEADER);
     g_return_if_fail (style != NULL);
 
     header = style->cursor;
@@ -908,7 +908,7 @@ gnucash_sheet_get_header_widths (GnucashSheet *sheet,
             CellDimensions *cd;
             BasicCell *cell;
 
-            cd = gnucash_style_get_cell_dimensions (style,
+            cd = systecash_style_get_cell_dimensions (style,
                                                     row, col);
             if (cd == NULL)
                 continue;
@@ -924,7 +924,7 @@ gnucash_sheet_get_header_widths (GnucashSheet *sheet,
 }
 
 void
-gnucash_sheet_set_header_widths (GnucashSheet *sheet,
+systecash_sheet_set_header_widths (systecashSheet *sheet,
                                  GNCHeaderWidths widths)
 {
     SheetBlockStyle *style;
@@ -934,7 +934,7 @@ gnucash_sheet_set_header_widths (GnucashSheet *sheet,
     g_return_if_fail (sheet != NULL);
     g_return_if_fail (GNUCASH_IS_SHEET(sheet));
 
-    style = gnucash_sheet_get_style_from_cursor (sheet, CURSOR_HEADER);
+    style = systecash_sheet_get_style_from_cursor (sheet, CURSOR_HEADER);
     g_return_if_fail (style != NULL);
 
     header = style->cursor;
@@ -946,7 +946,7 @@ gnucash_sheet_set_header_widths (GnucashSheet *sheet,
             CellDimensions *cd;
             BasicCell *cell;
 
-            cd = gnucash_style_get_cell_dimensions (style,
+            cd = systecash_style_get_cell_dimensions (style,
                                                     row, col);
 
             cell = gnc_cellblock_get_cell (header, row, col);
@@ -959,7 +959,7 @@ gnucash_sheet_set_header_widths (GnucashSheet *sheet,
 }
 
 gboolean
-gnucash_style_init (void)
+systecash_style_init (void)
 {
     return TRUE;
 }

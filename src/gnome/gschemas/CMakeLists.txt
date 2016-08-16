@@ -1,14 +1,14 @@
 
 SET(gnome_GSCHEMA
-  org.gnucash.dialogs.gschema.xml
-  org.gnucash.dialogs.commodities.gschema.xml
-  org.gnucash.dialogs.checkprinting.gschema.xml
-  org.gnucash.dialogs.reconcile.gschema.xml
-  org.gnucash.dialogs.sxs.gschema.xml
-  org.gnucash.dialogs.totd.gschema.xml
-  org.gnucash.gschema.xml
-  org.gnucash.window.pages.account.tree.gschema.xml
-  org.gnucash.window.pages.gschema.xml
+  org.systecash.dialogs.gschema.xml
+  org.systecash.dialogs.commodities.gschema.xml
+  org.systecash.dialogs.checkprinting.gschema.xml
+  org.systecash.dialogs.reconcile.gschema.xml
+  org.systecash.dialogs.sxs.gschema.xml
+  org.systecash.dialogs.totd.gschema.xml
+  org.systecash.gschema.xml
+  org.systecash.window.pages.account.tree.gschema.xml
+  org.systecash.window.pages.gschema.xml
 )
 
 # If you edit one of the above files, you need to rerun cmake.

@@ -124,14 +124,14 @@ ACLOCAL="$program"
 
 (${GLIB_GETTEXTIZE} --version) < /dev/null > /dev/null 2>&1 || {
   echo
-  echo "**Error**: You must have \`glib-gettextize' installed to compile GnuCash."
+  echo "**Error**: You must have \`glib-gettextize' installed to compile systecash."
   echo "Get the development packages of the glib-2.x library from your distribution."
   DIE=1
 }
 
 (${INTLTOOLIZE} --version) < /dev/null > /dev/null 2>&1 || {
   echo
-  echo "**Error**: You must have \`intltoolize' installed to compile GnuCash."
+  echo "**Error**: You must have \`intltoolize' installed to compile systecash."
   echo "Get the package 'intltool' of your distribution."
   DIE=1
 }
@@ -141,7 +141,7 @@ ACLOCAL="$program"
   LIBTOOLIZE=glibtoolize
   (${LIBTOOLIZE} --version) < /dev/null > /dev/null 2>&1 || {
     echo
-    echo "**Error**: You must have \`libtoolize' installed to compile GnuCash."
+    echo "**Error**: You must have \`libtoolize' installed to compile systecash."
     echo "Could not find either \`libtoolize' or \'glibtoolize'."
     echo "Download the appropriate package for your distribution,"
     echo "or get the source tarball at ftp://ftp.gnu.org/pub/gnu/"
@@ -151,7 +151,7 @@ ACLOCAL="$program"
 
 (${AUTOMAKE} --version) < /dev/null > /dev/null 2>&1 || {
   echo
-  echo "**Error**: You must have \`automake' installed to compile GnuCash."
+  echo "**Error**: You must have \`automake' installed to compile systecash."
   echo "Download the appropriate package for your distribution,"
   echo "or get the source tarball at ftp://ftp.gnu.org/pub/gnu/"
   DIE=1
@@ -171,7 +171,7 @@ test -n "$NO_AUTOMAKE" || (${ACLOCAL} --version) < /dev/null > /dev/null 2>&1 ||
 
 (${AUTOCONF} --version) < /dev/null > /dev/null 2>&1 || {
   echo
-  echo "**Error**: You must have \`autoconf' installed to compile GnuCash."
+  echo "**Error**: You must have \`autoconf' installed to compile systecash."
   echo "Download the appropriate package for your distribution,"
   echo "or get the source tarball at ftp://ftp.gnu.org/pub/gnu/"
   DIE=1
@@ -198,9 +198,9 @@ echo "Creating aclocal.m4 ..."
 test -r aclocal.m4 || touch aclocal.m4
 
 echo "Running ${GLIB_GETTEXTIZE} --force --copy ...  "
-echo "GnuCash note: Please ignore the output of ${GLIB_GETTEXTIZE} below!"
+echo "systecash note: Please ignore the output of ${GLIB_GETTEXTIZE} below!"
 echo "no" | ${GLIB_GETTEXTIZE} --force --copy
-echo "GnuCash note: Please ignore the output of ${GLIB_GETTEXTIZE} above!"
+echo "systecash note: Please ignore the output of ${GLIB_GETTEXTIZE} above!"
 echo
 
 echo "Ensure aclocal.m4 is writable ..."

@@ -24,20 +24,20 @@
 # Creates a new book file (or *overwrites* an existing one) that has elements
 # in it for business use -- intended as a demonstration program.
 # Syntax:
-# gnucash-env python simple_business_create.py \
-#                       sqlite3:///home/blah/blah.gnucash
+# systecash-env python simple_business_create.py \
+#                       sqlite3:///home/blah/blah.systecash
 #
 # Specificically, this sets up a simple tree, creates a customer, job,
 # employee and vendor, creates an unposted invoice for each,
 # and posts the customer invoice with a few entries and a tax table.
 #
-# argv[1] should be the path the new or to overwrite gnucash file/database
+# argv[1] should be the path the new or to overwrite systecash file/database
 # for a file, simply pass the pathname prefixed with the requested data format
 # like:
-#   xml:///home/blah/blah.gnucash
-#   sqlite3:///home/blah/blah.gnucash
+#   xml:///home/blah/blah.systecash
+#   sqlite3:///home/blah/blah.systecash
 # Paths can also be relative, for example:
-#   xml://from-here/to/there/blah.gnucash
+#   xml://from-here/to/there/blah.systecash
 # For a database you can use these forms:
 #   mysql://user:password@host/dbname
 #   postgres://user:password@host[:port]/dbname (the port is optional)
@@ -53,11 +53,11 @@ from os.path import abspath
 from sys import argv, exit
 import datetime
 from datetime import timedelta
-from gnucash import Session, Account, GncNumeric
-from gnucash.gnucash_business import Customer, Employee, Vendor, Job, \
+from systecash import Session, Account, GncNumeric
+from systecash.systecash_business import Customer, Employee, Vendor, Job, \
     Address, Invoice, Entry, TaxTable, TaxTableEntry, GNC_AMT_TYPE_PERCENT, \
     GNC_DISC_PRETAX    
-from gnucash.gnucash_core_c import \
+from systecash.systecash_core_c import \
     ACCT_TYPE_ASSET, ACCT_TYPE_RECEIVABLE, ACCT_TYPE_INCOME, \
     GNC_OWNER_CUSTOMER, ACCT_TYPE_LIABILITY
 
@@ -65,7 +65,7 @@ if len(argv) < 2:
     print 'not enough parameters'
     print 'usage: simple_business_create.py {new_book_url}'
     print 'example:'
-    print "gnucash-env python simple_business_create.py sqlite3:///home/blah/blah.gnucash"
+    print "systecash-env python simple_business_create.py sqlite3:///home/blah/blah.systecash"
     exit()
     
 

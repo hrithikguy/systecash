@@ -32,8 +32,8 @@ Add the following just after the function of interest:
 		 (int)(end.tv_sec - start.tv_sec),
 		 (int)(end.tv_usec - start.tv_usec));
 
-You will need to recompile, and then run the 'gnucash-valgrind'
-wrapper script instead of the normal 'gnucash' script.
+You will need to recompile, and then run the 'systecash-valgrind'
+wrapper script instead of the normal 'systecash' script.
 
 NOTE: Version 3.2 of valgrind has changed the above macros to no
 longer take an argument. In order to compile with this version of

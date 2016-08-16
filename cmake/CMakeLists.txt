@@ -5,8 +5,8 @@ INSTALL(CODE "EXECUTE_PROCESS(COMMAND ${GLIB_COMPILE_SCHEMAS} ${CMAKE_INSTALL_PR
 IF (APPLE)
   INSTALL(CODE "EXECUTE_PROCESS(
                 COMMAND /usr/bin/install_name_tool -add_rpath ${CMAKE_INSTALL_PREFIX}/lib
-                                                   -add_rpath ${CMAKE_INSTALL_PREFIX}/lib/gnucash
-                                                   ${CMAKE_INSTALL_PREFIX}/bin/gnucash)")
+                                                   -add_rpath ${CMAKE_INSTALL_PREFIX}/lib/systecash
+                                                   ${CMAKE_INSTALL_PREFIX}/bin/systecash)")
 ENDIF(APPLE)
 
 

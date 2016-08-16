@@ -1,16 +1,16 @@
 gncoverridesdir = ${GNC_LIBEXECDIR}/overrides
 # When you add a file here, please modify ../test/Makefile.am's overrides.stamp
 gncoverrides_SCRIPTS = \
-  gnucash-env \
-  gnucash-make-guids
+  systecash-env \
+  systecash-make-guids
 
 EXTRA_DIST = \
-  gnucash-env.in \
-  gnucash-build-env.in \
-  gnucash-make-guids \
+  systecash-env.in \
+  systecash-build-env.in \
+  systecash-make-guids \
   guile.in 
 
-noinst_DATA = gnucash-build-env guile
+noinst_DATA = systecash-build-env guile
 
 PWD := $(shell pwd)
 
@@ -27,7 +27,7 @@ guile: guile.in ${top_builddir}/config.status Makefile
 	chmod u+x $@
 CLEANFILES = guile
 
-gnucash-env: gnucash-env.in ${top_builddir}/config.status Makefile
+systecash-env: systecash-env.in ${top_builddir}/config.status Makefile
 	rm -f $@.tmp
 	sed < $< > $@.tmp \
 	    -e 's#@-GNC_SCM_INSTALL_DIR-@#${GNC_SCM_INSTALL_DIR}#g' \
@@ -37,13 +37,13 @@ gnucash-env: gnucash-env.in ${top_builddir}/config.status Makefile
             -e 's#@-GNC_PYTHON_DIR-@#${pythondir}#g'
 	mv $@.tmp $@
 	chmod u+x $@
-CLEANFILES += gnucash-env
+CLEANFILES += systecash-env
 
-gnucash-build-env: gnucash-build-env.in ${top_builddir}/config.status Makefile
+systecash-build-env: systecash-build-env.in ${top_builddir}/config.status Makefile
 	rm -f $@.tmp
 	sed < $< > $@.tmp \
             -e 's#@-GNC_BUILDDIR-@#${abs_top_builddir}#g' \
             -e 's#@-GNC_SRCDIR-@#${abs_top_srcdir}#g'
 	mv $@.tmp $@
 	chmod u+x $@
-CLEANFILES += gnucash-build-env
+CLEANFILES += systecash-build-env

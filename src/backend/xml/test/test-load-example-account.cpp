@@ -2,7 +2,7 @@
  *            test-load-example-account.c
  *
  *  Thu Sep 29 22:52:32 2005
- *  Copyright  2005  GnuCash team
+ *  Copyright  2005  systecash team
  ****************************************************************************/
 /*
  *  This program is free software; you can redistribute it and/or modify
@@ -45,7 +45,7 @@ extern "C"
 
 #include "io-example-account.h"
 
-static const gchar* da_ending = ".gnucash-xea";
+static const gchar* da_ending = ".systecash-xea";
 
 static void
 test_load_file (const char* filename)
@@ -79,7 +79,7 @@ guile_main (void* closure, int argc, char** argv)
     }
 
     gnc_module_system_init ();
-    gnc_module_load ("gnucash/engine", 0);
+    gnc_module_load ("systecash/engine", 0);
 
     if ((ea_dir = g_dir_open (location, 0, NULL)) == NULL)
     {

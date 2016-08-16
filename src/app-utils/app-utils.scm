@@ -15,7 +15,7 @@
 ;; 51 Franklin Street, Fifth Floor    Fax:    +1-617-542-2652
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 
-(define-module (gnucash app-utils))
+(define-module (systecash app-utils))
 (cond-expand
   (guile-2
     (eval-when
@@ -24,18 +24,18 @@
   (else ))
 (use-modules (sw_app_utils))
 (use-modules (srfi srfi-1))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
 ;; Guile 2 needs to find the symbols from the c module at compile time already
 (cond-expand
   (guile-2
     (eval-when
       (compile load eval expand)
-      (gnc:module-load "gnucash/engine" 0)))
+      (gnc:module-load "systecash/engine" 0)))
   (else
-    (gnc:module-load "gnucash/engine" 0)))
+    (gnc:module-load "systecash/engine" 0)))
 
 ;; gettext.scm
 (re-export gnc:gettext)

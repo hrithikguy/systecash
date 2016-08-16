@@ -3,26 +3,26 @@ ADD_SUBDIRECTORY(test)
 # Some settings are platform dependent. Let's define them per platform.
 IF (WIN32)
   # Windows specific settings go here:
-  SET (GNUCASH_RESOURCE_FILE gnucash.rc)
+  SET (GNUCASH_RESOURCE_FILE systecash.rc)
 
 ELSE (WIN32)
   # All other platforms use these settings:
-  SET (PLATFORM_FILES gnucash-valgrind)
+  SET (PLATFORM_FILES systecash-valgrind)
 
 ENDIF (WIN32)
 
-SET (gnucash_SOURCES
-  gnucash-bin.c
+SET (systecash_SOURCES
+  systecash-bin.c
   ${GNUCASH_RESOURCE_FILE}  
 )
 
-ADD_EXECUTABLE (gnucash
-  ${gnucash_SOURCES}
+ADD_EXECUTABLE (systecash
+  ${systecash_SOURCES}
 )
 
-TARGET_COMPILE_DEFINITIONS(gnucash PRIVATE -DG_LOG_DOMAIN=\"gnc.bin\")
+TARGET_COMPILE_DEFINITIONS(systecash PRIVATE -DG_LOG_DOMAIN=\"gnc.bin\")
 
-TARGET_LINK_LIBRARIES (gnucash
+TARGET_LINK_LIBRARIES (systecash
    gncmod-ledger-core gncmod-report-gnome gnc-gnome gncmod-gnome-utils gncmod-app-utils
    gncmod-engine gnc-module gnc-core-utils gnc-qof gncmod-report-system
    ${GUILE_LDFLAGS} ${GLIB2_LDFLAGS} ${GTK2_LDFLAGS} ${GTK_MAC_LDFLAGS}
@@ -30,24 +30,24 @@ TARGET_LINK_LIBRARIES (gnucash
 
 
 IF (MAC_INTEGRATION)
-  TARGET_COMPILE_OPTIONS(gnucash PRIVATE ${OSX_EXTRA_COMPILE_FLAGS})
-  TARGET_LINK_LIBRARIES(gnucash ${OSX_EXTRA_LIBRARIES})
+  TARGET_COMPILE_OPTIONS(systecash PRIVATE ${OSX_EXTRA_COMPILE_FLAGS})
+  TARGET_LINK_LIBRARIES(systecash ${OSX_EXTRA_LIBRARIES})
 ENDIF(MAC_INTEGRATION)
 
-INSTALL(TARGETS gnucash DESTINATION bin)
+INSTALL(TARGETS systecash DESTINATION bin)
 # No headers to install.
 
-# Generate the gnucash-env script
+# Generate the systecash-env script
 SET(SCRIPT_LIST  "")
 SET(SCRIPT_OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR})
 IF (GNC_BUILD_AS_INSTALL)
   SET(SCRIPT_OUTPUT_DIR ${BINDIR_BUILD})
 ENDIF()
 
-FOREACH (script gnucash-env gnucash-make-guids)
+FOREACH (script systecash-env systecash-make-guids)
   SET (GNUCASH_ENV_SCRIPT ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/${script})
   LIST(APPEND SCRIPT_LIST ${SCRIPT_OUTPUT_DIR}/${script})
-  SET (GNC_OVERRIDES_DIR ${CMAKE_INSTALL_PREFIX}/libexec/gnucash/overrides)
+  SET (GNC_OVERRIDES_DIR ${CMAKE_INSTALL_PREFIX}/libexec/systecash/overrides)
   FILE(WRITE ${GNUCASH_ENV_SCRIPT} "#!/bin/sh\n")
   FILE(APPEND ${GNUCASH_ENV_SCRIPT} "PATH=\"${GNC_OVERRIDES_DIR}:\${PATH}\"\n")
   FILE(APPEND ${GNUCASH_ENV_SCRIPT} "export PATH\n")
@@ -61,16 +61,16 @@ FOREACH (script gnucash-env gnucash-make-guids)
 ENDFOREACH(script)
 
 SET(TOP_SRC_DIR ${CMAKE_SOURCE_DIR})
-SET(GNUCASH_BIN_INSTALL_NAME "gnucash")
+SET(GNUCASH_BIN_INSTALL_NAME "systecash")
 
 SET(VALGRIND_OUTDIR ${CMAKE_CURRENT_BINARY_DIR})
 IF (GNC_BUILD_AS_INSTALL)
   SET(VALGRIND_OUTDIR ${BINDIR_BUILD})
 ENDIF()
 
-GNC_CONFIGURE(gnucash-valgrind.in ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/gnucash-valgrind)
+GNC_CONFIGURE(systecash-valgrind.in ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/systecash-valgrind)
 
-FILE(COPY ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/gnucash-valgrind
+FILE(COPY ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/systecash-valgrind
           DESTINATION ${VALGRIND_OUTDIR}
           FILE_PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
 )
@@ -101,7 +101,7 @@ FILE(WRITE ${ENV_FILE_OUT} "${ENV_STRINGS_CONF}")
 FILE(WRITE ${BUILD_ENV_FILE_OUT} "${ENV_STRINGS_CONF}")
 
 SET(XDG_TEXT "
-# GnuCash was not installed in the default location.
+# systecash was not installed in the default location.
 # XDG_DATA_DIRS will be set so that our documentation
 # and gsettings schema are found.\n"
 )
@@ -122,12 +122,12 @@ IF (GNC_BUILD_AS_INSTALL)
   FILE(APPEND ${BUILD_ENV_FILE_OUT} "XDG_DATA_DIRS=${DATADIR_BUILD};{XDG_DATA_DIRS};" "${GNC_SYSTEM_XDG_DATA_DIRS}\n")
 
   FILE(COPY ${BUILD_ENV_FILE_OUT}
-    DESTINATION ${SYSCONFDIR_BUILD}/gnucash
+    DESTINATION ${SYSCONFDIR_BUILD}/systecash
     FILE_PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
   )
   FILE(RENAME
-    ${SYSCONFDIR_BUILD}/gnucash/environment.build
-    ${SYSCONFDIR_BUILD}/gnucash/environment
+    ${SYSCONFDIR_BUILD}/systecash/environment.build
+    ${SYSCONFDIR_BUILD}/systecash/environment
   )
 ENDIF()
 
@@ -139,8 +139,8 @@ FILE(COPY ${ENV_FILE_OUT}
 
 
 
-INSTALL(FILES ${SCRIPT_LIST} ${VALGRIND_OUTDIR}/gnucash-valgrind DESTINATION bin)
-INSTALL(FILES ${ENVIRONMENT_FILE_DIR}/environment DESTINATION etc/gnucash)
+INSTALL(FILES ${SCRIPT_LIST} ${VALGRIND_OUTDIR}/systecash-valgrind DESTINATION bin)
+INSTALL(FILES ${ENVIRONMENT_FILE_DIR}/environment DESTINATION etc/systecash)
 
 IF (WIN32)
   # Write out a command script for windows
@@ -150,7 +150,7 @@ IF (WIN32)
 
   SET(CMD_LINES "")
   SET(BUILD_CMD_LINES "")
-  FOREACH(dir bin lib lib/gnucash)
+  FOREACH(dir bin lib lib/systecash)
     FILE(TO_NATIVE_PATH ${CMAKE_INSTALL_PREFIX}/${dir} INSTALL_PATH_ITEM)
     FILE(TO_NATIVE_PATH ${CMAKE_BINARY_DIR}/${dir} BUILD_PATH_ITEM)
     LIST(APPEND CMD_LINES "set PATH=${INSTALL_PATH_ITEM}\;%PATH%\n")
@@ -167,20 +167,20 @@ IF (WIN32)
     LIST(APPEND CMD_LINES "set PATH=${PATH_ITEM}\;%PATH%\n")
   ENDFOREACH(dir)
 
-  SET(CMD_FILE ${CMAKE_CURRENT_BINARY_DIR}/gnucash-launcher.cmd)
+  SET(CMD_FILE ${CMAKE_CURRENT_BINARY_DIR}/systecash-launcher.cmd)
   FILE(WRITE ${CMD_FILE} "@echo off\nsetlocal\n\n")
   FOREACH(line ${CMD_LINES})
     FILE(APPEND ${CMD_FILE} "${line}")
   ENDFOREACH(line)
-  FILE(APPEND ${CMD_FILE} "\nstart gnucash %*\n")
+  FILE(APPEND ${CMD_FILE} "\nstart systecash %*\n")
 
   IF (GNC_BUILD_AS_INSTALL)
-    SET(BUILD_CMD_FILE ${CMAKE_BINARY_DIR}/bin/gnucash-launcher.cmd)
+    SET(BUILD_CMD_FILE ${CMAKE_BINARY_DIR}/bin/systecash-launcher.cmd)
     FILE(WRITE ${BUILD_CMD_FILE} "@echo off\nsetlocal\n\n")
     FOREACH(line ${CMD_LINES})
       FILE(APPEND ${BUILD_CMD_FILE} "${line}")
     ENDFOREACH(line)
-    FILE(APPEND ${BUILD_CMD_FILE} "\nstart gnucash %*\n")
+    FILE(APPEND ${BUILD_CMD_FILE} "\nstart systecash %*\n")
   ENDIF()
 
   INSTALL(PROGRAMS ${CMD_FILE} DESTINATION bin)

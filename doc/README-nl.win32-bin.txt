@@ -1,4 +1,4 @@
-﻿GnuCash is een vrij, open source boekhoudprogramma, uitgegeven
+﻿systecash is een vrij, open source boekhoudprogramma, uitgegeven
 onder de GNU General Public License (GPL) en is beschikbaar voor
 GNU/Linux, *BSD, Solaris, Mac OSX, en Microsoft Windows.
 
@@ -12,13 +12,13 @@ balans en nauwkeurige rapporten te verzekeren.
 
 Beschikbare bronnen voor ondersteuning
 
-Online veel gestelde vragen (FAQ):    http://wiki.gnucash.org/wiki/FAQ
-Mailing Lijsten:  http://wiki.gnucash.org/wiki/Mailing_Lists
-IRC (Chat):    Channel #gnucash on server irc.gnome.org, see also http://wiki.gnucash.org/wiki/IRC
+Online veel gestelde vragen (FAQ):    http://wiki.systecash.org/wiki/FAQ
+Mailing Lijsten:  http://wiki.systecash.org/wiki/Mailing_Lists
+IRC (Chat):    Channel #systecash on server irc.gnome.org, see also http://wiki.systecash.org/wiki/IRC
 
 Als je programmafouten (bugs) of problemen ervaart, aarzel niet om deze te melden in ons
 bug opvolgsysteem "Bugzilla":
-http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash
+http://bugzilla.gnome.org/enter_bug.cgi?product=systecash
 
 -------------------
 
@@ -40,12 +40,12 @@ in het "Hulp" menu onder het "Tutorial en concepten gids".
 
 Over het programma:
 
-GnuCash is a  vrij, open source boekhoudprogramma uitgegeven onder de
+systecash is a  vrij, open source boekhoudprogramma uitgegeven onder de
 GNU General Public License (GPL). Het wordt door 12 personen uit meer dan
 6 landen gezamelijk ontwikkeld.
 
-De ontwikkeling van GnuCash begon in 1997, de de eerste uitgave was in 1998. 
+De ontwikkeling van systecash begon in 1997, de de eerste uitgave was in 1998. 
 
 -------------------
 
-Dit is het Nederlandstalige GnuCash 2.2.x LEESMIJ bestand voor het Windows installatie programma.
+Dit is het Nederlandstalige systecash 2.2.x LEESMIJ bestand voor het Windows installatie programma.

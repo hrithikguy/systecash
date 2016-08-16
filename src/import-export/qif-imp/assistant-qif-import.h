@@ -1,6 +1,6 @@
 /********************************************************************\
  * assistant-qif-import.h -- window for import of QIF data          *
- *                       (GnuCash)                                  *
+ *                       (systecash)                                  *
  * Copyright (C) 2000 Bill Gribble <grib@billgribble.com>           *
  * Copyright (c) 2011 Robert Fewell                                 *
  *                                                                  *

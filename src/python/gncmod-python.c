@@ -1,6 +1,6 @@
 /*********************************************************************
  * gncmod-python.c
- * Python in GnuCash?! Sweet.
+ * Python in systecash?! Sweet.
  *
  * Copyright (c) 2011 Andy Clayton
  *********************************************************************/
@@ -48,7 +48,7 @@ int libgncmod_python_gnc_module_age      = 0;
 char *
 libgncmod_python_gnc_module_path(void)
 {
-    return g_strdup("gnucash/python");
+    return g_strdup("systecash/python");
 }
 
 char *

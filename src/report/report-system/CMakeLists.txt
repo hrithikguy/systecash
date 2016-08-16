@@ -28,11 +28,11 @@ TARGET_INCLUDE_DIRECTORIES (gncmod-report-system
 
 
 INSTALL(TARGETS gncmod-report-system
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 
-INSTALL(FILES ${report_system_HEADERS} DESTINATION include/gnucash)
+INSTALL(FILES ${report_system_HEADERS} DESTINATION include/systecash)
 
 # Scheme
 
@@ -78,7 +78,7 @@ SET(GUILE_DEPENDS      gncmod-html gncmod-gnome-utils gncmod-report-system scm-a
 
 GNC_ADD_SCHEME_TARGETS(scm-report-system
   "${report_system_SCHEME}"
-  "gnucash/report"
+  "systecash/report"
   "${GUILE_MODULES}"
   "${GUILE_LOAD_DIRS}"
   "${GUILE_LIBRARY_DIRS}"
@@ -88,7 +88,7 @@ GNC_ADD_SCHEME_TARGETS(scm-report-system
 
 GNC_ADD_SCHEME_TARGETS(scm-report-system-2
   "${report_system_SCHEME_2}"
-  "gnucash/report/report-system"
+  "systecash/report/report-system"
   "${GUILE_MODULES}"
   "${GUILE_LOAD_DIRS}"
   "${GUILE_LIBRARY_DIRS}"

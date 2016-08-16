@@ -1,5 +1,5 @@
-# gnucash_business.py -- High level python wrapper classes for the business
-#                        parts of GnuCash
+# systecash_business.py -- High level python wrapper classes for the business
+#                        parts of systecash
 #
 # Copyright (C) 2008,2010 ParIT Worker Co-operative <paritinfo@parit.ca>
 # This program is free software; you can redistribute it and/or
@@ -21,23 +21,23 @@
 # @author Mark Jenkins, ParIT Worker Co-operative <mark@parit.ca>
 # @author Jeff Green,   ParIT Worker Co-operative <jeff@parit.ca>
 ##  @file
-#   @brief High level python wrapper classes for the business parts of GnuCash
+#   @brief High level python wrapper classes for the business parts of systecash
 #   @author Mark Jenkins, ParIT Worker Co-operative <mark@parit.ca>
 #   @author Jeff Green,   ParIT Worker Co-operative <jeff@parit.ca>
 #   @ingroup python_bindings
 
-import gnucash_core_c
+import systecash_core_c
 
 from function_class import \
      ClassFromFunctions, extract_attributes_with_prefix, \
      default_arguments_decorator, method_function_returns_instance, \
      methods_return_instance, methods_return_instance_lists
 
-from gnucash_core import \
-     GnuCashCoreClass, GncNumeric, GncCommodity, Transaction, \
+from systecash_core import \
+     systecashCoreClass, GncNumeric, GncCommodity, Transaction, \
      Split, Book, GncLot, Account, GUID
 
-from gnucash_core_c import GNC_OWNER_CUSTOMER, GNC_OWNER_JOB, \
+from systecash_core_c import GNC_OWNER_CUSTOMER, GNC_OWNER_JOB, \
     GNC_OWNER_EMPLOYEE, GNC_OWNER_VENDOR, \
     GNC_PAYMENT_CASH, GNC_PAYMENT_CARD, \
     GNC_DISC_PRETAX, GNC_DISC_SAMETIME, GNC_DISC_POSTTAX, \
@@ -46,16 +46,16 @@ from gnucash_core_c import GNC_OWNER_CUSTOMER, GNC_OWNER_JOB, \
 
 import datetime
 
-class GnuCashBusinessEntity(GnuCashCoreClass):
+class systecashBusinessEntity(systecashCoreClass):
     def __init__(self, book=None, id=None, currency=None, name=None,
                  instance=None):
         if instance == None:
             if book==None or id==None or currency==None:
                 raise Exception(
-                    "you must call GnuCashBusinessEntity.__init__ "
+                    "you must call systecashBusinessEntity.__init__ "
                     "with either a book, id, and currency, or an existing "
                     "low level swig proxy in the argument instance")
-            GnuCashCoreClass.__init__(self, book)
+            systecashCoreClass.__init__(self, book)
             self.BeginEdit()
             self.SetID(id)
             self.SetCurrency(currency)
@@ -63,15 +63,15 @@ class GnuCashBusinessEntity(GnuCashCoreClass):
                 self.SetName(name)
             self.CommitEdit()
         else:
-            GnuCashCoreClass.__init__(self, instance=instance)
+            systecashCoreClass.__init__(self, instance=instance)
 
-class Customer(GnuCashBusinessEntity): pass
+class Customer(systecashBusinessEntity): pass
                          
-class Employee(GnuCashBusinessEntity): pass
+class Employee(systecashBusinessEntity): pass
 
-class Vendor(GnuCashBusinessEntity): pass
+class Vendor(systecashBusinessEntity): pass
 
-class Job(GnuCashBusinessEntity):
+class Job(systecashBusinessEntity):
     # override the superclass contructor, as Job doesn't require
     # a currency but it does require an owner
     def __init__(self, book=None, id=None, owner=None, name=None,
@@ -82,19 +82,19 @@ class Job(GnuCashBusinessEntity):
                     "you must call Job.__init__ "
                     "with either a book, id, and owner or an existing "
                     "low level swig proxy in the argument instance")
-            GnuCashCoreClass.__init__(self, book)
+            systecashCoreClass.__init__(self, book)
             self.SetID(id)
             self.SetOwner(owner)
             if name != None:
                 self.SetName(name)
         else:
-            GnuCashCoreClass.__init__(self, instance=instance)    
+            systecashCoreClass.__init__(self, instance=instance)    
 
-class Address(GnuCashCoreClass): pass
+class Address(systecashCoreClass): pass
     
-class BillTerm(GnuCashCoreClass): pass
+class BillTerm(systecashCoreClass): pass
 
-class TaxTable(GnuCashCoreClass):
+class TaxTable(systecashCoreClass):
     def __init__(self, book=None, name=None, first_entry=None, instance=None):
         if instance == None:
             if book==None or name==None or first_entry==None:
@@ -102,13 +102,13 @@ class TaxTable(GnuCashCoreClass):
                     "you must call TaxTable.__init__  with either a "
                     "book, name, and first_entry, or an existing "
                     "low level swig proxy in the argument instance")
-            GnuCashCoreClass.__init__(self, book)
+            systecashCoreClass.__init__(self, book)
             self.SetName(name)
             self.AddEntry(first_entry)
         else:
-            GnuCashCoreClass.__init__(self, instance=instance)
+            systecashCoreClass.__init__(self, instance=instance)
 
-class TaxTableEntry(GnuCashCoreClass):
+class TaxTableEntry(systecashCoreClass):
     def __init__(self, account=None, percent=True, amount=None, instance=None):
         """TaxTableEntry constructor
         
@@ -129,7 +129,7 @@ class TaxTableEntry(GnuCashCoreClass):
                     "you must call TaxTableEntry.__init__  with either a "
                     "account or an existing "
                     "low level swig proxy in the argument instance")
-            GnuCashCoreClass.__init__(self)
+            systecashCoreClass.__init__(self)
             self.SetAccount(account)
             if percent:
                 self.SetType(GNC_AMT_TYPE_PERCENT)
@@ -138,9 +138,9 @@ class TaxTableEntry(GnuCashCoreClass):
             if amount != None:
                 self.SetAmount(amount)
         else:
-            GnuCashCoreClass.__init__(self, instance=instance)        
+            systecashCoreClass.__init__(self, instance=instance)        
 
-class Invoice(GnuCashCoreClass):
+class Invoice(systecashCoreClass):
     def __init__(self, book=None, id=None, currency=None, owner=None,
                  date_opened=None, instance=None):
         """Invoice Contstructor
@@ -158,7 +158,7 @@ class Invoice(GnuCashCoreClass):
                     "you must call Invoice.__init__ "
                     "with either a book, id, currency and owner, or an existing"
                     "low level swig proxy in the argument instance")
-            GnuCashCoreClass.__init__(self, book)
+            systecashCoreClass.__init__(self, book)
             self.BeginEdit()
             self.SetID(id)
             self.SetCurrency(currency)
@@ -168,7 +168,7 @@ class Invoice(GnuCashCoreClass):
             self.SetDateOpened(date_opened)
             self.CommitEdit()
         else:
-            GnuCashCoreClass.__init__(self, instance=instance)
+            systecashCoreClass.__init__(self, instance=instance)
 
 class Bill(Invoice):
     pass
@@ -188,7 +188,7 @@ def decorate_to_return_instance_instead_of_owner(dec_function):
             return None
     return new_get_owner_function
 
-class Entry(GnuCashCoreClass):
+class Entry(systecashCoreClass):
     def __init__(self, book=None, invoice=None, date=None, instance=None):
         """Invoice Entry constructor
         
@@ -209,7 +209,7 @@ class Entry(GnuCashCoreClass):
                     "you must call Entry.__init__  with either a "
                     "book or an existing "
                     "low level swig proxy in the argument instance")
-            GnuCashCoreClass.__init__(self, book)
+            systecashCoreClass.__init__(self, book)
 
             if date == None:
                 date = datetime.date.today()
@@ -217,7 +217,7 @@ class Entry(GnuCashCoreClass):
             if invoice != None:
                 invoice.AddEntry(self)
         else:
-            GnuCashCoreClass.__init__(self, instance=instance)    
+            systecashCoreClass.__init__(self, instance=instance)    
 
     def test_type(self, invoice):
         if invoice.GetTypeString() == "Invoice" and self.GetInvoice() == None:
@@ -226,7 +226,7 @@ class Entry(GnuCashCoreClass):
             raise Exception("Entry type error. Check that Entry type matches Bill.")
 
 # Owner
-GnuCashBusinessEntity.add_methods_with_prefix('gncOwner')
+systecashBusinessEntity.add_methods_with_prefix('gncOwner')
 
 owner_dict = {
                     'GetGUID' : GUID,
@@ -236,13 +236,13 @@ owner_dict = {
                     'GetJob' : Job,
                     'GetAddr' : Address,
                     'GetCurrency' : GncCommodity,
-                    'GetEndOwner': GnuCashBusinessEntity,
+                    'GetEndOwner': systecashBusinessEntity,
                     'GetBalanceInCurrency': GncNumeric,
               }
-methods_return_instance(GnuCashBusinessEntity, owner_dict)
+methods_return_instance(systecashBusinessEntity, owner_dict)
 
 methods_return_instance_lists(
-    GnuCashBusinessEntity, {
+    systecashBusinessEntity, {
         'GetCommoditiesList': GncCommodity
     })
 

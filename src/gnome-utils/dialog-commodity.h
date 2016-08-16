@@ -1,6 +1,6 @@
 /********************************************************************
  * dialog-commodity.h -- "select" and "new" commodity windows       *
- *                       (GnuCash)                                  *
+ *                       (systecash)                                  *
  * Copyright (C) 2000 Bill Gribble <grib@billgribble.com>           *
  * Copyright (c) 2006 David Hampton <hampton@employees.org>         *
  *                                                                  *

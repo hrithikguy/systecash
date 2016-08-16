@@ -112,7 +112,7 @@ static GtkActionEntry gnc_plugin_actions [] =
     },
     {
         "FileOpenAction", GTK_STOCK_OPEN, N_("_Open..."), "<control>o",
-        N_("Open an existing GnuCash file"),
+        N_("Open an existing systecash file"),
         G_CALLBACK (gnc_main_window_cmd_file_open)
     },
     {
@@ -133,7 +133,7 @@ static GtkActionEntry gnc_plugin_actions [] =
     {
         "FileExportAccountsAction", GTK_STOCK_CONVERT,
         N_("Export _Accounts"), NULL,
-        N_("Export the account hierarchy to a new GnuCash datafile"),
+        N_("Export the account hierarchy to a new systecash datafile"),
         G_CALLBACK (gnc_main_window_cmd_file_export_accounts)
     },
 

@@ -22,7 +22,7 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(use-modules (gnucash printf))
+(use-modules (systecash printf))
 
 ;; returns a list with n #f (empty cell) values 
 (define (gnc:html-make-empty-cell) #f)

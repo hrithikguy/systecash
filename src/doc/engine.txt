@@ -11,7 +11,7 @@ to the API documentation.
 
 API: \ref KVP
 
-Suppose you have a neat idea for a new feature for the GnuCash engine.
+Suppose you have a neat idea for a new feature for the systecash engine.
 Should you create a C structure (a "first class object") and all
 of the required machinery for it (e.g. an SQL backend), or should you
 just put all of the data in a suitable KVP (Key Value Pair) frame

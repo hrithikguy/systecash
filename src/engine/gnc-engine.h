@@ -1,5 +1,5 @@
 /********************************************************************
- * gnc-engine.h  -- top-level include file for Gnucash Engine       *
+ * gnc-engine.h  -- top-level include file for systecash Engine       *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
  * modify it under the terms of the GNU General Public License as   *
@@ -19,14 +19,14 @@
  * Boston, MA  02110-1301,  USA       gnu@gnu.org                   *
  *                                                                  *
  ********************************************************************/
-/** @addtogroup Engine GnuCash Engine: Core, Non-GUI Accounting Functions
-    The GnuCash Engine provides a set of objects and classes that
-    encapsulate typical financial accounting concepts.  The GnuCash
+/** @addtogroup Engine systecash Engine: Core, Non-GUI Accounting Functions
+    The systecash Engine provides a set of objects and classes that
+    encapsulate typical financial accounting concepts.  The systecash
     GUI is expected to manipulate these objects through the provided
     engine API.
     @{ */
 /** @file gnc-engine.h
-    @brief All type declarations for the whole Gnucash engine
+    @brief All type declarations for the whole systecash engine
     @author Copyright (C) 1997 Robin D. Clark
     @author Copyright (C) 2000 Bill Gribble <grib@billgribble.com>
     @author Copyright (C) 2000 Dave Peticolas <peticola@cs.ucdavis.edu>
@@ -69,12 +69,12 @@
 
 /** @brief IDENTIFIERS
  *  GncGUID Identifiers can be used to reference Accounts, Transactions,
- *  Splits and other objects. These Gnucash types are referred to as Gnucash
+ *  Splits and other objects. These systecash types are referred to as systecash
  *  entities. GncGUID Identifiers are globally-unique and permanent, i.e., once
  *  an entity has been assigned an identifier, it retains that same
  *  identifier for its lifetime.
  *  -
- *  Identifiers are 'typed' with strings. The ids used in gnucash are
+ *  Identifiers are 'typed' with strings. The ids used in systecash are
  *  defined below. An id with type GNC_ID_NONE does not refer to any
  *  entity, although that may change as new ids are created. An id with
  *  type GNC_ID_NULL does not refer to any entity, and will never refer
@@ -124,14 +124,14 @@
 */
 
 
-/** @brief Account in Gnucash.
+/** @brief Account in systecash.
  * This is the typename for an account. The actual structure is
  * defined in the private header AccountP.h, but no one outside the
  * engine should include that file. Instead, access that data only
  * through the functions in Account.h .*/
 typedef struct account_s             Account;
 
-/** @brief Split in Gnucash.
+/** @brief Split in systecash.
  * A "split" is more commonly referred to as a "entry" in a
  * "transaction". Each split belongs to one Account and one
  * Transaction. The split is one out of several parts a Transaction is
@@ -143,7 +143,7 @@ typedef struct account_s             Account;
  * the functions in Transaction.h .*/
 typedef struct split_s               Split;
 
-/** @brief Transaction in Gnucash.
+/** @brief Transaction in systecash.
  * A Transaction is a piece of business done; the transfer of money
  * from one account to one or more other accounts. Each Transaction is
  * divided into one or more Splits (usually two).
@@ -227,7 +227,7 @@ void gnc_engine_init(int argc, char ** argv);
 /** This is the statically linked-in version of gnc_engine_init. It is
  * identically to that function except that it doesn't load the
  * loadable shared module, which means this function will not load the
- * "(gnucash engine)" scheme module.
+ * "(systecash engine)" scheme module.
  */
 void gnc_engine_init_static(int argc, char ** argv);
 

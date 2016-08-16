@@ -52,8 +52,8 @@ TARGET_COMPILE_DEFINITIONS (gncmod-register-core PRIVATE -DG_LOG_DOMAIN=\"gnc.re
 TARGET_INCLUDE_DIRECTORIES(gncmod-register-core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 INSTALL(TARGETS gncmod-register-core
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 
-INSTALL(FILES ${register_core_HEADERS} DESTINATION include/gnucash)
+INSTALL(FILES ${register_core_HEADERS} DESTINATION include/systecash)

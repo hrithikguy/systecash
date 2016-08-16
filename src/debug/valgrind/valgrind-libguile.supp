@@ -1,12 +1,12 @@
 
-# FILE: valgrind-gnucash.supp
+# FILE: valgrind-systecash.supp
 #
 # FUNCTION: This file is a valgrind 'suppression' file, used to 
 #     get valgrind to not report certain errors that we aren't 
 #     interested in.
 #
 #     valgrind is a memory allocation debugging tool.  See the
-#     file ./HACKING for instructions on how to run gnucash with
+#     file ./HACKING for instructions on how to run systecash with
 #     valgrind
 #
 # HISTORY: created aug 2003 linas vepstas

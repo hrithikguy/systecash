@@ -1,6 +1,6 @@
 /*
  * gnc-plugin-page.h -- A page, which can be added to the
- *	GnuCash main window.
+ *	systecash main window.
  *
  * Copyright (C) 2003 Jan Arne Petersen <jpetersen@uni-bonn.de>
  * Copyright (C) 2003,2005 David Hampton <hampton@employees.org>
@@ -28,7 +28,7 @@
 /** @addtogroup ContentPluginBase Common object and functions
     @{ */
 /** @file gnc-plugin-page.h
-    @brief Functions for adding plugins to a GnuCash window.
+    @brief Functions for adding plugins to a systecash window.
     @author Copyright (C) 2003 Jan Arne Petersen
     @author Copyright (C) 2003,2005 David Hampton <hampton@employees.org>
 */
@@ -62,16 +62,16 @@ typedef struct GncPluginPage
     GtkWidget *window;		/**< The window that contains the
 					 *   display widget for this plugin.
 					 *   This field is private to the
-					 *   gnucash window management
+					 *   systecash window management
 					 *   code.  */
     GtkWidget *notebook_page;	/**< The display widget for this
 					 *   plugin.  This field is private to
-					 *   the gnucash window management
+					 *   the systecash window management
 					 *   code.  */
     GtkWidget *summarybar;		/**< The summary bar widget (if any)
 					 *   that is associated with this
 					 *   plugin.  This field is private to
-					 *   the gnucash window management
+					 *   the systecash window management
 					 *   code.  */
 } GncPluginPage;
 
@@ -113,7 +113,7 @@ typedef struct
     void (* destroy_widget) (GncPluginPage *plugin_page);
 
     /** Save enough information about this page so that it can be
-     *  recreated next time the user starts gnucash.
+     *  recreated next time the user starts systecash.
      *
      *  @param page The page to save.
      *
@@ -126,7 +126,7 @@ typedef struct
                         const gchar *group);
 
     /** Create a new page based on the information saved during a
-     *  previous instantiation of gnucash.  This function may or
+     *  previous instantiation of systecash.  This function may or
      *  may not install the new page in the window as it sees fit.
      *  Generally the function will install the page int the
      *  window in order to manipulate the menu items that are
@@ -229,7 +229,7 @@ void gnc_plugin_page_show_summarybar (GncPluginPage *page, gboolean visible);
 /** Call the plugin specific function that will save the state of a
  *  content page to a disk.  That function must save enough
  *  information about the page that it can be recreated next time the
- *  user starts gnucash.
+ *  user starts systecash.
  *
  *  @param page The page to save.
  *

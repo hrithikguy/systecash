@@ -271,7 +271,7 @@ gnc_saved_reports_write_internal (const gchar *file, const gchar *contents, gboo
 gboolean gnc_saved_reports_backup (void)
 {
     gboolean success = FALSE;
-    gchar *saved_rpts_path     = gnc_build_dotgnucash_path (SAVED_REPORTS_FILE);
+    gchar *saved_rpts_path     = gnc_build_dotsystecash_path (SAVED_REPORTS_FILE);
     gchar *saved_rpts_bkp_path = g_strconcat (saved_rpts_path, "-backup", NULL);
     gchar *contents = NULL;
     GError *save_error = NULL;
@@ -302,7 +302,7 @@ gboolean
 gnc_saved_reports_write_to_file (const gchar* report_def, gboolean overwrite)
 {
     gboolean success = FALSE;
-    gchar *saved_rpts_path     = gnc_build_dotgnucash_path (SAVED_REPORTS_FILE);
+    gchar *saved_rpts_path     = gnc_build_dotsystecash_path (SAVED_REPORTS_FILE);
 
     if (report_def)
     {

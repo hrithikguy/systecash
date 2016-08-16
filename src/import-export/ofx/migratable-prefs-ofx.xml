@@ -1,5 +1,5 @@
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.import.ofx</gschemaid>
+    <gschemaid>org.systecash.dialogs.import.ofx</gschemaid>
     <gconfpath>dialogs-import-ofx.xml</gconfpath>
     
     <pref>

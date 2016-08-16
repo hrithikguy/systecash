@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnucash-date-picker.c -- A popup date picker using gtk_calendar  *
+ * systecash-date-picker.c -- A popup date picker using gtk_calendar  *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
  * modify it under the terms of the GNU General Public License as   *
@@ -27,7 +27,7 @@
 #include "config.h"
 #include <libgnomecanvas/libgnomecanvas.h>
 #include <gdk/gdkkeysyms.h>
-#include "gnucash-date-picker.h"
+#include "systecash-date-picker.h"
 
 
 /* Item list signals */

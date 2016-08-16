@@ -23,7 +23,7 @@
 #ifndef GNC_NUMERIC_HPP
 #define GNC_NUMERIC_HPP
 
-// gnucash includes
+// systecash includes
 #include "config.h"
 extern "C"
 {
@@ -96,10 +96,10 @@ ResultListType from_glist(GList* glist)
     return result;
 }
 
-/** Wrapper around a gnucash ::GNCPrintAmountInfo structure with C++
+/** Wrapper around a systecash ::GNCPrintAmountInfo structure with C++
  * methods for easier setter and getter access.
  *
- * Since this class is a derived class of the original gnucash struct,
+ * Since this class is a derived class of the original systecash struct,
  * it keeps the data by-value and its member variables will always
  * exist as long as this object exists.
  */
@@ -139,10 +139,10 @@ public:
 };
 
 
-/** Wrapper around a gnucash ::gnc_numeric structure with C++ methods
+/** Wrapper around a systecash ::gnc_numeric structure with C++ methods
  * for easier setter and getter access.
  *
- * Since this class is a derived class of the original gnucash struct,
+ * Since this class is a derived class of the original systecash struct,
  * it keeps the data by-value and its member variables will always
  * exist as long as this object exists.
  */

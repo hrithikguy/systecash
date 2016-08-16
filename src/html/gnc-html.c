@@ -1,5 +1,5 @@
 /********************************************************************
- * gnc-html.c -- display HTML with some special gnucash tags.       *
+ * gnc-html.c -- display HTML with some special systecash tags.       *
  *                                                                  *
  * Copyright (C) 2000 Bill Gribble <grib@billgribble.com>           *
  * Copyright (C) 2001 Linas Vepstas <linas@linas.org>               *

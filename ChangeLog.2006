@@ -19,7 +19,7 @@
 	* [r15283] branches/2.0, branches/2.0/ChangeLog,
 	  branches/2.0/src/engine/kvp-scm.c: guile 1.8's SCM_EXACTP()
 	  throws an error when passed a non-number. So make sure we test
-	  SCM_NUMBERP() before SCM_EXACTP() This causes gnucash to crash
+	  SCM_NUMBERP() before SCM_EXACTP() This causes systecash to crash
 	  on e.g. FC6 from the File Properties Menu. Approved by jsled
 	  Merge from r15252
 	* [r15282] branches/2.0, branches/2.0/ChangeLog,
@@ -69,7 +69,7 @@
 
 	* [r15275] trunk/packaging/win32/custom.sh,
 	  trunk/packaging/win32/install.sh: Configure from a relative path
-	  on Windows, because gnucash-build-env will not work with
+	  on Windows, because systecash-build-env will not work with
 	  top_srcdir begin absolute.
 
 2006-12-28 20:26  andi5
@@ -163,11 +163,11 @@
 	* [r15263] branches/reshuffle-modules,
 	  branches/reshuffle-modules/configure.in,
 	  branches/reshuffle-modules/doc/README.dependencies,
-	  branches/reshuffle-modules/packaging/gnucash.spec.in,
+	  branches/reshuffle-modules/packaging/systecash.spec.in,
 	  branches/reshuffle-modules/src/backend/postgres/test/Makefile.am,
-	  branches/reshuffle-modules/src/bin/gnucash-valgrind.in,
-	  branches/reshuffle-modules/src/bin/gnucash.in,
-	  branches/reshuffle-modules/src/bin/overrides/gnucash-env.in,
+	  branches/reshuffle-modules/src/bin/systecash-valgrind.in,
+	  branches/reshuffle-modules/src/bin/systecash.in,
+	  branches/reshuffle-modules/src/bin/overrides/systecash-env.in,
 	  branches/reshuffle-modules/src/business/business-core/test/Makefile.am,
 	  branches/reshuffle-modules/src/engine/test-core/Makefile.am,
 	  branches/reshuffle-modules/src/engine/test/Makefile.am,
@@ -175,7 +175,7 @@
 	  branches/reshuffle-modules/src/gnc-module/test/Makefile.am,
 	  branches/reshuffle-modules/src/gnc-module/test/test-dynload.c,
 	  branches/reshuffle-modules/src/import-export/qif-io-core/test/Makefile.am,
-	  branches/reshuffle-modules/src/valgrind-gnucash.supp: Remove
+	  branches/reshuffle-modules/src/valgrind-systecash.supp: Remove
 	  remaining ltdl stuff, i.e. -lltdl, LTDL_LIBRARY_PATH, the
 	  configure check. Make test-dynload.c use GModule too.
 
@@ -270,7 +270,7 @@
 	  branches/remove-group2/packaging/win32/custom.sh,
 	  branches/remove-group2/packaging/win32/dist.sh,
 	  branches/remove-group2/packaging/win32/functions,
-	  branches/remove-group2/packaging/win32/gnucash.iss.in,
+	  branches/remove-group2/packaging/win32/systecash.iss.in,
 	  branches/remove-group2/packaging/win32/goffice-0.3.2-patch.diff,
 	  branches/remove-group2/packaging/win32/install.sh,
 	  branches/remove-group2/src/app-utils/Makefile.am,
@@ -288,7 +288,7 @@
 	  branches/remove-group2/src/backend/file/test/test-xml-transaction.c,
 	  branches/remove-group2/src/base-typemaps.i,
 	  branches/remove-group2/src/bin/Makefile.am,
-	  branches/remove-group2/src/bin/gnucash-bin.c,
+	  branches/remove-group2/src/bin/systecash-bin.c,
 	  branches/remove-group2/src/business/business-core/Makefile.am,
 	  branches/remove-group2/src/business/business-core/file/gnc-invoice-xml-v2.c,
 	  branches/remove-group2/src/business/business-core/file/gnc-order-xml-v2.c,
@@ -360,7 +360,7 @@
 	  branches/remove-group2/src/import-export/qif-import/qif-parse.scm,
 	  branches/remove-group2/src/import-export/qif-import/qif-to-gnc.scm,
 	  branches/remove-group2/src/pixmaps/Makefile.am,
-	  branches/remove-group2/src/pixmaps/gnucash-icon.ico,
+	  branches/remove-group2/src/pixmaps/systecash-icon.ico,
 	  branches/remove-group2/src/report/report-gnome/Makefile.am,
 	  branches/remove-group2/src/report/report-gnome/gnc-plugin-page-report.c,
 	  branches/remove-group2/src/report/report-system/Makefile.am,
@@ -381,14 +381,14 @@
 	* [r15252] trunk, trunk/src/engine/kvp-scm.c: guile 1.8's
 	  SCM_EXACTP() throws an error when passed a non-number. So make
 	  sure we test SCM_NUMBERP() before SCM_EXACTP() This causes
-	  gnucash to crash on e.g. FC6 from the File Properties Menu. BP
+	  systecash to crash on e.g. FC6 from the File Properties Menu. BP
 
 2006-12-23 18:50  andi5
 
 	* [r15251] trunk/packaging/win32/dist.sh,
-	  trunk/packaging/win32/gnucash.iss.in: Use `cp -a' in dist.sh.
+	  trunk/packaging/win32/systecash.iss.in: Use `cp -a' in dist.sh.
 	  Let inno create guile.bat (which sets GUILE_LOAD_PATH) and
-	  slibcat, because the user running GnuCash later on may not have
+	  slibcat, because the user running systecash later on may not have
 	  the rights to do that.
 
 2006-12-23 12:36  andi5
@@ -418,7 +418,7 @@
 
 	* [r15246] trunk/packaging/win32/custom.sh,
 	  trunk/packaging/win32/dist.sh,
-	  trunk/packaging/win32/gnucash.iss.in,
+	  trunk/packaging/win32/systecash.iss.in,
 	  trunk/packaging/win32/install.sh: Various install.sh
 	  improvements: * Use $GNUCASH_DIR\\{repos,build,inst,dist} as
 	  directories for the source, build, installation and packaging *
@@ -474,7 +474,7 @@
 2006-12-21 01:07  andi5
 
 	* [r15239] trunk/packaging/win32/dist.sh: Do not distribute
-	  share\guile\1.6\slibcat and let slib recreate it once GnuCash is
+	  share\guile\1.6\slibcat and let slib recreate it once systecash is
 	  started for the first time.
 
 2006-12-21 00:05  bock
@@ -491,7 +491,7 @@
 
 2006-12-20 15:26  cstim
 
-	* [r15236] trunk/src/bin/gnucash-bin.c: Remove windows-specific
+	* [r15236] trunk/src/bin/systecash-bin.c: Remove windows-specific
 	  ignoring of engine_is_initialized check.
 
 2006-12-19 16:37  cstim
@@ -523,7 +523,7 @@
 	  branches/reshuffle-modules/configure.in,
 	  branches/reshuffle-modules/src/app-utils/test/Makefile.am,
 	  branches/reshuffle-modules/src/backend/file/test/Makefile.am,
-	  branches/reshuffle-modules/src/bin/overrides/gnucash-build-env.in,
+	  branches/reshuffle-modules/src/bin/overrides/systecash-build-env.in,
 	  branches/reshuffle-modules/src/bin/test/Makefile.am,
 	  branches/reshuffle-modules/src/business/business-core/test/Makefile.am,
 	  branches/reshuffle-modules/src/engine/test/Makefile.am,
@@ -623,15 +623,15 @@
 
 2006-12-18 15:59  cstim
 
-	* [r15226] trunk/packaging/win32/gnucash.iss.in,
+	* [r15226] trunk/packaging/win32/systecash.iss.in,
 	  trunk/src/pixmaps/Makefile.am: Install the .ico icon file into
-	  $datadir/gnucash/pixmaps instead of $datadir/pixmaps.
+	  $datadir/systecash/pixmaps instead of $datadir/pixmaps.
 
 2006-12-18 15:35  cstim
 
-	* [r15225] trunk/packaging/win32/gnucash.iss.in,
+	* [r15225] trunk/packaging/win32/systecash.iss.in,
 	  trunk/src/pixmaps/Makefile.am,
-	  trunk/src/pixmaps/gnucash-icon.ico: Add gnucash icon in Windows
+	  trunk/src/pixmaps/systecash-icon.ico: Add systecash icon in Windows
 	  .ico format for windows icon
 
 2006-12-18 02:53  andi5
@@ -649,7 +649,7 @@
 
 2006-12-16 17:50  warlord
 
-	* [r15222] trunk, trunk/src/bin/gnucash-bin.c: Update for 2.0.3
+	* [r15222] trunk, trunk/src/bin/systecash-bin.c: Update for 2.0.3
 	  release
 
 2006-12-16 02:50  andi5
@@ -668,18 +668,18 @@
 2006-12-15 18:39  cstim
 
 	* [r15219] trunk/packaging/win32/dist.sh,
-	  trunk/packaging/win32/gnucash.iss.in: Fix missing files of
+	  trunk/packaging/win32/systecash.iss.in: Fix missing files of
 	  dist.sh. Improve iss script.
 
 2006-12-15 18:18  cstim
 
-	* [r15218] trunk/packaging/win32/gnucash.iss.in: Fix typo
+	* [r15218] trunk/packaging/win32/systecash.iss.in: Fix typo
 
 2006-12-15 18:04  cstim
 
 	* [r15217] trunk/packaging/win32/custom.sh,
 	  trunk/packaging/win32/dist.sh,
-	  trunk/packaging/win32/gnucash.iss.in: Improve Inno Setup
+	  trunk/packaging/win32/systecash.iss.in: Improve Inno Setup
 	  Compiler script; should probably be able to package the outcome
 	  of dist.sh into one setup file.
 
@@ -698,10 +698,10 @@
 	* [r15214] trunk/packaging/win32/dist.sh,
 	  trunk/packaging/win32/functions,
 	  trunk/packaging/win32/install.sh: Add dist.sh, a script that
-	  extracts all necessary files needed to run GnuCash on Windows
+	  extracts all necessary files needed to run systecash on Windows
 	  and puts them into $DIST_DIR. The plan is to call the Inno Setup
-	  Compiler from it and create gnucash-$ver-setup.exe with one
-	  command. A complete GnuCash build on MinGW is needed to run it.
+	  Compiler from it and create systecash-$ver-setup.exe with one
+	  command. A complete systecash build on MinGW is needed to run it.
 	  Factor out common functions.
 
 2006-12-14 22:32  andi5
@@ -784,7 +784,7 @@
 
 2006-12-10 23:36  wilddev
 
-	* [r15200] tags/2.0.3: Tagging the 2.0.3 release of GnuCash
+	* [r15200] tags/2.0.3: Tagging the 2.0.3 release of systecash
 
 2006-12-10 23:35  wilddev
 
@@ -811,8 +811,8 @@
 
 2006-12-09 03:39  plongstaff
 
-	* [r15194] branches/gda-dev/src/bin/gnucash-gdb.in: Add
-	  gnucash-gdb.in to create gnucash-gdb
+	* [r15194] branches/gda-dev/src/bin/systecash-gdb.in: Add
+	  systecash-gdb.in to create systecash-gdb
 
 2006-12-09 00:45  plongstaff
 
@@ -1221,7 +1221,7 @@
 	  branches/gda-dev/src/backend/gda/gnc-transaction-gda.c,
 	  branches/gda-dev/src/bin/Makefile.am: 1) Replace column size
 	  magic numbers by #defines 2) Use some common code 3)
-	  Save/restore budgets (except recurrence) 4) Add gnucash-gdb to
+	  Save/restore budgets (except recurrence) 4) Add systecash-gdb to
 	  bin
 
 2006-11-26 04:07  plongstaff
@@ -1528,7 +1528,7 @@
 
 	* [r15104] branches/2.0/ChangeLog,
 	  branches/2.0/src/gnome-utils/gnc-gnome-utils.c: Inform the user
-	  about 'gnucash-docs' package when Help is selected with no
+	  about 'systecash-docs' package when Help is selected with no
 	  content. Fixes #347102. merged from trunk r15081 and r15082.
 	  approved by cstim.
 
@@ -1627,7 +1627,7 @@
 	  branches/gda-dev/src/backend/gda/ddl/business.ddl,
 	  branches/gda-dev/src/backend/gda/ddl/commodities.ddl,
 	  branches/gda-dev/src/backend/gda/ddl/freq_specs.ddl,
-	  branches/gda-dev/src/backend/gda/ddl/gnucash.ddl,
+	  branches/gda-dev/src/backend/gda/ddl/systecash.ddl,
 	  branches/gda-dev/src/backend/gda/ddl/lots.ddl,
 	  branches/gda-dev/src/backend/gda/ddl/prices.ddl,
 	  branches/gda-dev/src/backend/gda/ddl/sched_transactions.ddl,
@@ -1715,7 +1715,7 @@
 2006-11-03 19:50  andi5
 
 	* [r15081] trunk/src/gnome-utils/gnc-gnome-utils.c: Inform the
-	  user about 'gnucash-docs' package when Help is selected with no
+	  user about 'systecash-docs' package when Help is selected with no
 	  content. Fixes #347102.
 
 2006-11-03 19:49  andi5
@@ -1762,7 +1762,7 @@
 2006-11-01 00:01  hampton
 
 	* [r15066] branches/remove-group2/ChangeLog,
-	  branches/remove-group2/gnucash.m4,
+	  branches/remove-group2/systecash.m4,
 	  branches/remove-group2/lib/libqof/backend/file/qof-backend-qsf.h,
 	  branches/remove-group2/lib/libqof/qof/qofinstance-p.h,
 	  branches/remove-group2/lib/libqof/qof/qofinstance.h,
@@ -2128,7 +2128,7 @@
 
 2006-10-18 19:45  andi5
 
-	* [r15040] trunk/packaging/win32/install.sh: Make gnucash.bat work.
+	* [r15040] trunk/packaging/win32/install.sh: Make systecash.bat work.
 
 2006-10-18 18:15  andi5
 
@@ -2179,7 +2179,7 @@
 
 2006-10-17 20:41  hampton
 
-	* [r15032] trunk/src/bin/gnucash-bin.c: Fix uninitialzed variable
+	* [r15032] trunk/src/bin/systecash-bin.c: Fix uninitialzed variable
 	  error message.
 
 2006-10-17 08:35  cstim
@@ -2195,17 +2195,17 @@
 
 2006-10-17 03:04  warlord
 
-	* [r15029] branches/2.0, branches/2.0/src/bin/gnucash-bin.c:
+	* [r15029] branches/2.0, branches/2.0/src/bin/systecash-bin.c:
 	  Actually get it to work properly. Test first, silly!
 
 2006-10-17 02:32  warlord
 
-	* [r15028] branches/2.0, branches/2.0/src/bin/gnucash-bin.c: use
+	* [r15028] branches/2.0, branches/2.0/src/bin/systecash-bin.c: use
 	  PACKAGE_VERSION for last stable release on the release branch.
 
 2006-10-17 02:31  warlord
 
-	* [r15027] trunk, trunk/src/bin/gnucash-bin.c: r13496@cliodev:
+	* [r15027] trunk, trunk/src/bin/systecash-bin.c: r13496@cliodev:
 	  warlord | 2006-10-16 22:29:43 -0400 Update for 2.0.2 release.
 
 2006-10-16 03:35  chris
@@ -2276,11 +2276,11 @@
 	  trunk/src/app-utils/test/test-load-module,
 	  trunk/src/backend/file/test/Makefile.am,
 	  trunk/src/backend/postgres/test/Makefile.am,
-	  trunk/src/bin/Makefile.am, trunk/src/bin/gnucash-bin.c,
-	  trunk/src/bin/gnucash-valgrind.in, trunk/src/bin/gnucash.in,
+	  trunk/src/bin/Makefile.am, trunk/src/bin/systecash-bin.c,
+	  trunk/src/bin/systecash-valgrind.in, trunk/src/bin/systecash.in,
 	  trunk/src/bin/overrides/Makefile.am,
-	  trunk/src/bin/overrides/gnucash-build-env.in,
-	  trunk/src/bin/overrides/gnucash-env.in,
+	  trunk/src/bin/overrides/systecash-build-env.in,
+	  trunk/src/bin/overrides/systecash-env.in,
 	  trunk/src/business/business-core,
 	  trunk/src/business/business-core/Makefile.am,
 	  trunk/src/business/business-core/business-core.i,
@@ -2494,7 +2494,7 @@
 	  trunk/src/report/utility-reports/test-graphing.scm,
 	  trunk/src/report/utility-reports/test/Makefile.am,
 	  trunk/src/report/utility-reports/view-column.scm,
-	  trunk/src/report/utility-reports/welcome-to-gnucash.scm,
+	  trunk/src/report/utility-reports/welcome-to-systecash.scm,
 	  trunk/src/scm/command-line.scm, trunk/src/scm/main-window.scm,
 	  trunk/src/scm/main.scm, trunk/src/scm/price-quotes.scm,
 	  trunk/src/scm/printing/print-check.scm,
@@ -2540,7 +2540,7 @@
 	  branches/swig-redo/lib/libqof/qof/qofutil.h,
 	  branches/swig-redo/macros/binreloc.m4,
 	  branches/swig-redo/macros/legacy_macros.m4,
-	  branches/swig-redo/packaging/gnucash.spec.in,
+	  branches/swig-redo/packaging/systecash.spec.in,
 	  branches/swig-redo/packaging/win32,
 	  branches/swig-redo/po/POTFILES.skip,
 	  branches/swig-redo/src/app-utils/Makefile.am,
@@ -2564,8 +2564,8 @@
 	  branches/swig-redo/src/backend/postgres/test/test-load-backend.c,
 	  branches/swig-redo/src/backend/postgres/test/test-period.c,
 	  branches/swig-redo/src/bin/Makefile.am,
-	  branches/swig-redo/src/bin/gnucash-bin.c,
-	  branches/swig-redo/src/bin/gnucash.in,
+	  branches/swig-redo/src/bin/systecash-bin.c,
+	  branches/swig-redo/src/bin/systecash.in,
 	  branches/swig-redo/src/bin/i18n.h.in,
 	  branches/swig-redo/src/bin/overrides/Makefile.am,
 	  branches/swig-redo/src/bin/test/Makefile.am,
@@ -2666,10 +2666,10 @@
 	  branches/swig-redo/src/gnome/glade/price.glade,
 	  branches/swig-redo/src/gnome/glade/stocks.glade,
 	  branches/swig-redo/src/gnome/gnc-plugin-page-account-tree.c,
-	  branches/swig-redo/src/gnome/gnucash.desktop.in,
-	  branches/swig-redo/src/gnome/gnucash.desktop.in.in,
+	  branches/swig-redo/src/gnome/systecash.desktop.in,
+	  branches/swig-redo/src/gnome/systecash.desktop.in.in,
 	  branches/swig-redo/src/gnome/schemas/Makefile.am,
-	  branches/swig-redo/src/gnome/schemas/apps_gnucash_warnings.schemas.in,
+	  branches/swig-redo/src/gnome/schemas/apps_systecash_warnings.schemas.in,
 	  branches/swig-redo/src/gnome/top-level.c,
 	  branches/swig-redo/src/gnome/window-reconcile.c,
 	  branches/swig-redo/src/import-export/Makefile.am,
@@ -2832,11 +2832,11 @@
 
 	* [r15010] branches/swig-redo, branches/swig-redo/Makefile.am,
 	  branches/swig-redo/src/bin/Makefile.am,
-	  branches/swig-redo/src/bin/gnucash-valgrind.in,
-	  branches/swig-redo/src/bin/gnucash.in,
+	  branches/swig-redo/src/bin/systecash-valgrind.in,
+	  branches/swig-redo/src/bin/systecash.in,
 	  branches/swig-redo/src/bin/overrides/Makefile.am,
-	  branches/swig-redo/src/bin/overrides/gnucash-build-env.in,
-	  branches/swig-redo/src/bin/overrides/gnucash-env.in,
+	  branches/swig-redo/src/bin/overrides/systecash-build-env.in,
+	  branches/swig-redo/src/bin/overrides/systecash-env.in,
 	  branches/swig-redo/src/engine/Makefile.am,
 	  branches/swig-redo/src/gnome/Makefile.am,
 	  branches/swig-redo/src/import-export/Makefile.am,
@@ -2945,7 +2945,7 @@
 	  branches/swig-redo/src/app-utils/gnc-component-manager.h,
 	  branches/swig-redo/src/app-utils/gnc-ui-util.c,
 	  branches/swig-redo/src/app-utils/test/Makefile.am: Remove the
-	  guile portions of gnucash's component manager.
+	  guile portions of systecash's component manager.
 
 2006-10-10 23:59  chris
 
@@ -3125,7 +3125,7 @@
 2006-10-10 00:14  chris
 
 	* [r14985] branches/swig-redo/src/app-utils/prefs.scm,
-	  branches/swig-redo/src/bin/gnucash-bin.c,
+	  branches/swig-redo/src/bin/systecash-bin.c,
 	  branches/swig-redo/src/core-utils/Makefile.am,
 	  branches/swig-redo/src/core-utils/core-utils.i,
 	  branches/swig-redo/src/core-utils/core-utils.scm,
@@ -3508,7 +3508,7 @@
 	  s/gnc:numeric-collector/zymurgy/g s/gnc:numeric-/gnc-numeric-/g
 	  s/zymurgy/gnc:numeric-collector/g
 	  s/gnc:timepair-canonical-day-time/timespecCanonicalDayTime/g
-	  s/gnc:build-dotgnucash-path/gnc-build-dotgnucash-path/g
+	  s/gnc:build-dotsystecash-path/gnc-build-dotsystecash-path/g
 	  s/gnc:\*report-hook\*/HOOK-REPORT/g
 	  s/gnc:\*save-options-hook\*/HOOK-SAVE-OPTIONS/g
 	  s/gnc:hook-add-dangler/gnc-hook-add-scm-dangler/g
@@ -3674,7 +3674,7 @@
 
 2006-10-10 00:02  chris
 
-	* [r14970] branches/swig-redo/src/bin/gnucash-bin.c,
+	* [r14970] branches/swig-redo/src/bin/systecash-bin.c,
 	  branches/swig-redo/src/engine/engine-utilities.scm,
 	  branches/swig-redo/src/scm/price-quotes.scm: Move all of the
 	  Session handling for the price-quotes loading from guile to C.
@@ -3685,11 +3685,11 @@
 
 	* [r14969] branches/swig-redo/src/app-utils/gfec.c,
 	  branches/swig-redo/src/app-utils/gfec.h,
-	  branches/swig-redo/src/bin/gnucash-bin.c,
+	  branches/swig-redo/src/bin/systecash-bin.c,
 	  branches/swig-redo/src/gnome/top-level.c,
 	  branches/swig-redo/src/scm/main-window.scm: Move the code that
 	  loads old-style state files from guile into C. Move some file
-	  evaluation code from gnucash-bin.c into gfec.c. (This is only
+	  evaluation code from systecash-bin.c into gfec.c. (This is only
 	  related to swigification insofar as it removes the need to wrap
 	  some Session code.)
 
@@ -3812,7 +3812,7 @@
 	  s/gnc:set-busy-cursor/gnc-set-busy-cursor/g
 	  s/gnc:unset-busy-cursor/gnc-unset-busy-cursor/g
 	  s/gnc:window-show-progress/gnc-window-show-progress/g
-	  s/gnc:ui-is-running?/gnucash-ui-is-running/g
+	  s/gnc:ui-is-running?/systecash-ui-is-running/g
 	  s/gnc:url-type-customer/URL-TYPE-CUSTOMER/g
 	  s/gnc:url-type-file/URL-TYPE-FILE/g
 	  s/gnc:url-type-jump/URL-TYPE-JUMP/g
@@ -3873,7 +3873,7 @@
 	  branches/swig-redo/src/report/report-system/report-system.scm,
 	  branches/swig-redo/src/report/report-system/report.scm,
 	  branches/swig-redo/src/report/utility-reports/view-column.scm,
-	  branches/swig-redo/src/report/utility-reports/welcome-to-gnucash.scm:
+	  branches/swig-redo/src/report/utility-reports/welcome-to-systecash.scm:
 	  Convert the report-system module form gwrap to swig. All at
 	  once: Add the interface definiton. Convert the runtime code from
 	  gwrap to swig. Rename wrapped function calls to their
@@ -3911,7 +3911,7 @@
 	  gnc-progress-dialog-set-value gnc-progress-dialog-update
 	  gnc-progress-dialog-destroy Also, we have to load the swig
 	  module directly from guile in one case, because our gnome module
-	  isn't actually a gnucash module. Go figure.
+	  isn't actually a systecash module. Go figure.
 
 2006-10-09 23:53  chris
 
@@ -4160,7 +4160,7 @@
 	  Extends r14675. Remove a superfluous leading slash and doubly
 	  defined gconf key macros. BP
 	* [r14944] trunk, trunk/src/gnome-utils/gnc-main-window.c,
-	  trunk/src/gnome/schemas/apps_gnucash_warnings.schemas.in: Remove
+	  trunk/src/gnome/schemas/apps_systecash_warnings.schemas.in: Remove
 	  "closing last window" confirmation dialog and corresponding
 	  warning (reverting r14580). Fixes #355392.
 
@@ -4171,7 +4171,7 @@
 
 2006-10-08 16:55  wilddev
 
-	* [r14936] tags/2.0.2: Tagging the 2.0.2 release of GnuCash
+	* [r14936] tags/2.0.2: Tagging the 2.0.2 release of systecash
 	* [r14935] branches/2.0/ChangeLog, branches/2.0/NEWS,
 	  branches/2.0/configure.in: update to release 2.0.2
 
@@ -4281,7 +4281,7 @@
 	  branches/2.0/src/report/stylesheets/test/Makefile.am,
 	  branches/2.0/src/report/utility-reports/test/Makefile.am: Add
 	  library dir for test runtime where necessary, as discussed on
-	  gnucash-devel. Merges from trunk: 11831, 14770, 14771, 14921.
+	  systecash-devel. Merges from trunk: 11831, 14770, 14771, 14921.
 
 2006-10-02 14:02  cstim
 
@@ -4296,7 +4296,7 @@
 	  trunk/src/report/stylesheets/test/Makefile.am,
 	  trunk/src/report/utility-reports/test/Makefile.am: Add library
 	  dir for test runtime where necessary, as discussed on
-	  gnucash-devel
+	  systecash-devel
 
 2006-10-02 13:12  cstim
 
@@ -4622,7 +4622,7 @@
 2006-09-22 20:26  warlord
 
 	* [r14882] branches/2.0, branches/2.0/ChangeLog, branches/2.0/src,
-	  branches/2.0/src/bin/gnucash-bin.c: Adjust the "development
+	  branches/2.0/src/bin/systecash-bin.c: Adjust the "development
 	  version" message for the 2.0.1 release. (approved by cstim)
 	  Merge of r14587.
 
@@ -4649,18 +4649,18 @@
 
 2006-09-20 08:42  cstim
 
-	* [r14876] branches/2.0, branches/2.0/packaging/gnucash.spec.in:
+	* [r14876] branches/2.0, branches/2.0/packaging/systecash.spec.in:
 	  Add pixmaps to RPM. Fixes #355695. Back-ported from r14839.
 
 2006-09-20 08:41  cstim
 
-	* [r14875] branches/2.0, branches/2.0/packaging/gnucash.spec.in:
+	* [r14875] branches/2.0, branches/2.0/packaging/systecash.spec.in:
 	  We don't have a mime-info. Fixes #355676. Back-ported from
 	  r14838.
 
 2006-09-20 08:40  cstim
 
-	* [r14874] branches/2.0, branches/2.0/packaging/gnucash.spec.in:
+	* [r14874] branches/2.0, branches/2.0/packaging/systecash.spec.in:
 	  RPM Build Requires libtool-ltdl-devel. Fixes #355656.
 	  Back-ported from r14837.
 
@@ -4700,7 +4700,7 @@
 
 	* [r14870] trunk/packaging/win32/install.sh: Properly detect
 	  installed or uninstalled expat. Propose packaging command for
-	  cross-compiled gnucash.
+	  cross-compiled systecash.
 
 2006-09-19 09:03  cstim
 
@@ -4710,7 +4710,7 @@
 2006-09-19 08:59  cstim
 
 	* [r14868] trunk/src/engine/gnc-engine.c: Revert r14862 here
-	  because the initialization from gnucash-bin.c is also sufficient
+	  because the initialization from systecash-bin.c is also sufficient
 	  for win32.
 
 2006-09-19 03:15  hampton
@@ -4749,12 +4749,12 @@
 2006-09-18 20:43  cstim
 
 	* [r14862] trunk/ChangeLog, trunk/Makefile.am, trunk/configure.in,
-	  trunk/macros/binreloc.m4, trunk/src/bin/gnucash-bin.c,
+	  trunk/macros/binreloc.m4, trunk/src/bin/systecash-bin.c,
 	  trunk/src/engine/Makefile.am, trunk/src/engine/binreloc.c,
 	  trunk/src/engine/binreloc.h, trunk/src/engine/gnc-engine.c,
 	  trunk/src/engine/gnc-path.c, trunk/src/engine/gncla-dir.h.in:
 	  Implement automatic relocation of previously compiled-in paths.
-	  With the exception of the env variables in src/bin/gnucash we're
+	  With the exception of the env variables in src/bin/systecash we're
 	  fully relocatable now.
 
 2006-09-18 19:57  cstim
@@ -4779,7 +4779,7 @@
 	* [r14858] trunk/packaging/win32/README,
 	  trunk/packaging/win32/custom.sh,
 	  trunk/packaging/win32/install.sh: Fully explain a cross-compile
-	  build of gnucash/mingw32 on Linux.
+	  build of systecash/mingw32 on Linux.
 
 2006-09-18 15:45  cstim
 
@@ -4841,7 +4841,7 @@
 
 	* [r14851] trunk/packaging/win32/custom.sh,
 	  trunk/packaging/win32/install.sh: Further prepare
-	  cross-compiling mingw32/gnucash
+	  cross-compiling mingw32/systecash
 
 2006-09-15 19:29  cstim
 
@@ -4883,7 +4883,7 @@
 	  another location and avoid the need for the environment variable
 	  SCHEME_LIBRARY_PATH or another implementation of
 	  library-vicinity in guile.init. You must have unset this env var
-	  now. Add g-wrap modules directory to gnucash.bat. GnuCash runs
+	  now. Add g-wrap modules directory to systecash.bat. systecash runs
 	  equally "well" in- and outside MSYS now for me.
 
 2006-09-13 18:35  andi5
@@ -4902,7 +4902,7 @@
 
 2006-09-13 14:22  cstim
 
-	* [r14841] trunk/ChangeLog, trunk/src/bin/gnucash-bin.c,
+	* [r14841] trunk/ChangeLog, trunk/src/bin/systecash-bin.c,
 	  trunk/src/import-export/hbci/gnc-plugin-hbci-ui.xml,
 	  trunk/src/import-export/hbci/gnc-plugin-hbci.c,
 	  trunk/src/import-export/mt940/gnc-plugin-mt940-ui.xml,
@@ -4914,17 +4914,17 @@
 
 2006-09-13 05:17  warlord
 
-	* [r14839] trunk, trunk/packaging/gnucash.spec.in: Add pixmaps to
+	* [r14839] trunk, trunk/packaging/systecash.spec.in: Add pixmaps to
 	  RPM. Fixes #355695. BP
 
 2006-09-13 00:12  warlord
 
-	* [r14838] trunk, trunk/packaging/gnucash.spec.in: We don't have a
+	* [r14838] trunk, trunk/packaging/systecash.spec.in: We don't have a
 	  mime-info. Fixes #355676. BP
 
 2006-09-12 22:36  warlord
 
-	* [r14837] trunk, trunk/packaging/gnucash.spec.in: RPM Build
+	* [r14837] trunk, trunk/packaging/systecash.spec.in: RPM Build
 	  Requires libtool-ltdl-devel. Fixes #355656. BP
 
 2006-09-12 17:26  cstim
@@ -4934,7 +4934,7 @@
 
 2006-09-12 13:41  cstim
 
-	* [r14835] trunk/src/bin/Makefile.am, trunk/src/bin/gnucash-bin.c,
+	* [r14835] trunk/src/bin/Makefile.am, trunk/src/bin/systecash-bin.c,
 	  trunk/src/engine/Makefile.am, trunk/src/engine/gnc-engine.c,
 	  trunk/src/engine/gnc-path.c, trunk/src/engine/gnc-path.h,
 	  trunk/src/engine/gncla-dir.h.in,
@@ -4950,9 +4950,9 @@
 	* [r14834] trunk/packaging/win32/install.sh: install.sh: Install
 	  gconf schema files to
 	  ${GNUCASH_PREFIX}/etc/gconf/gconf.xml.defaults. I suppose this
-	  is what most distributions do as post-install step. If GnuCash
+	  is what most distributions do as post-install step. If systecash
 	  and Gnome are not installed to the same prefix (standard), the
-	  gconf druid will pop up once GnuCash is started. GnuCash will
+	  gconf druid will pop up once systecash is started. systecash will
 	  automagically add the correct lines to ~/.gconf.path, shut down
 	  gconfd and load the default values, if you choose the default
 	  selections. The others seem unadvisable to me for windows, so
@@ -4961,7 +4961,7 @@
 2006-09-12 07:16  andi5
 
 	* [r14833] trunk/packaging/win32/install.sh: Build Guile and
-	  GnuCash by `make LDFLAGS="$SOME_FLAGS -no-undefined"' and avoid
+	  systecash by `make LDFLAGS="$SOME_FLAGS -no-undefined"' and avoid
 	  patching Makefiles and rerunning config.status. Tested on 1
 	  system so far.
 
@@ -4975,7 +4975,7 @@
 	* [r14831] trunk/packaging/win32/goffice-0.3.0-patch.diff,
 	  trunk/packaging/win32/install.sh: install.sh fixes: * Rename
 	  input dll in libz.dll.a from bin/zlib1.dll to zlib1.dll * Add
-	  AUTOTOOLS_DIR\\bin to PATH of gnucash.bat because
+	  AUTOTOOLS_DIR\\bin to PATH of systecash.bat because
 	  libgncmodule-0.dll depends on libltdl-3.dll * correct
 	  goffice/Makefile.am to put libgoffice_{init,shutdown} into
 	  interface library
@@ -4990,7 +4990,7 @@
 	* [r14829] trunk/packaging/win32/install.sh: install.sh fixes: *
 	  indent needs libintl-2.dll (copy intl.dll) * add freetype2
 	  pkg-config file * add GNOME_{CPP,LD}FLAGS for
-	  inst_{libgsf,goffice,gnucash}
+	  inst_{libgsf,goffice,systecash}
 
 2006-09-08 15:51  cstim
 
@@ -5022,12 +5022,12 @@
 
 2006-09-08 11:02  cstim
 
-	* [r14823] trunk/src/bin/gnucash-bin.c: Add includes that had been
+	* [r14823] trunk/src/bin/systecash-bin.c: Add includes that had been
 	  included by the obsolete i18n.h header
 
 2006-09-07 21:02  cstim
 
-	* [r14822] trunk/src/bin/gnucash-bin.c,
+	* [r14822] trunk/src/bin/systecash-bin.c,
 	  trunk/src/engine/gnc-engine.c, trunk/src/engine/gnc-path.c,
 	  trunk/src/gnome-utils/Makefile.am,
 	  trunk/src/gnome-utils/dialog-utils.c,
@@ -5067,7 +5067,7 @@
 
 2006-09-07 15:52  cstim
 
-	* [r14817] trunk/packaging/win32/gnucash.iss.in: Further improve
+	* [r14817] trunk/packaging/win32/systecash.iss.in: Further improve
 	  setup file creation script
 
 2006-09-07 15:49  cstim
@@ -5078,7 +5078,7 @@
 2006-09-07 12:49  cstim
 
 	* [r14815] trunk/packaging/win32/install.sh: Fix automated path
-	  setup of gnucash script. Should now probably work.
+	  setup of systecash script. Should now probably work.
 
 2006-09-07 11:55  cstim
 
@@ -5112,13 +5112,13 @@
 2006-09-06 15:01  cstim
 
 	* [r14809] trunk/configure.in, trunk/packaging/win32,
-	  trunk/packaging/win32/gnucash.iss.in: Add first draft script for
+	  trunk/packaging/win32/systecash.iss.in: Add first draft script for
 	  creating a setup.exe installer package on win32.
 
 2006-09-06 12:23  cstim
 
 	* [r14808] trunk/packaging/win32/install.sh: Further improve
-	  script-based gnucash building. Added popt include and ldflags
+	  script-based systecash building. Added popt include and ldflags
 	  because ./configure would fail without them.
 
 2006-09-06 12:15  cstim
@@ -5146,19 +5146,19 @@
 	  trunk/src/business/business-reports/Makefile.am,
 	  trunk/src/business/business-utils/Makefile.am,
 	  trunk/src/business/dialog-tax-table/Makefile.am: Last round of
-	  Makefile and symlink cleanup. Gnucash should build fine without
+	  Makefile and symlink cleanup. systecash should build fine without
 	  symlinks now.
 
 2006-09-06 09:26  cstim
 
-	* [r14803] trunk/src/bin/gnucash-bin.c: For windows, ignore
+	* [r14803] trunk/src/bin/systecash-bin.c: For windows, ignore
 	  gnc_engine_is_initialized check for now because it doesn't work
 	  correctly.
 
 2006-09-06 09:19  cstim
 
 	* [r14802] trunk/packaging/win32/install.sh: Include all of my
-	  known prerequisites to successfully compile gnucash: Fix g-wrap;
+	  known prerequisites to successfully compile systecash: Fix g-wrap;
 	  Use -no-undefined properly; Speed up build by excluding tests
 	  and don't relink; Try to set up paths in script correctly; Speed
 	  up runtime module loading by excluding dependency_libs.
@@ -5251,7 +5251,7 @@
 	  download of ~8MB only used by intltool, providing a working
 	  XML::Parser module, but by far the easiest solution when trying
 	  to avoid recreating configure scripts with [no-xml]. If it is
-	  accepted, these adjustments for libgsf, goffice and gnucash can
+	  accepted, these adjustments for libgsf, goffice and systecash can
 	  be removed.
 
 2006-09-03 21:08  andi5
@@ -5294,7 +5294,7 @@
 	  trunk/packaging/win32/install.sh: Add OpenSSL install function
 	  as libgnomeui needs libssl32.dll. Add environment variable
 	  LIBGLADE_MODULE_PATH. glade_require("gnome"); works now, Glade-2
-	  does not load gnome widgets, GnuCash is untested.
+	  does not load gnome widgets, systecash is untested.
 
 2006-09-02 19:19  cstim
 
@@ -5340,7 +5340,7 @@
 
 2006-09-01 15:45  cstim
 
-	* [r14778] trunk/src/bin/Makefile.am, trunk/src/bin/gnucash.in:
+	* [r14778] trunk/src/bin/Makefile.am, trunk/src/bin/systecash.in:
 	  Use the PATH_SEPARATOR variable from ./configure during path
 	  creation in script. Necessary for windows ; searchpath separator
 
@@ -5396,14 +5396,14 @@
 2006-08-29 20:23  cstim
 
 	* [r14768] trunk/packaging/win32/install.sh: For configuring
-	  gnucash, add --enable-schemas-install=no. See wiki.
+	  systecash, add --enable-schemas-install=no. See wiki.
 
 2006-08-29 08:18  cstim
 
 	* [r14767] trunk/src/import-export/qif-import/Makefile.am,
 	  trunk/src/import-export/qif-io-core/Makefile.am: Next round of
 	  Makefile symlink cleanup. Scheme files are now symlinked or
-	  copied into subdirectories gnucash/.
+	  copied into subdirectories systecash/.
 	* [r14766] trunk/src/import-export/Makefile.am: Remove unused
 	  scm-links section
 
@@ -5420,7 +5420,7 @@
 	  trunk/src/report/stylesheets/Makefile.am,
 	  trunk/src/report/utility-reports/Makefile.am: Next round of
 	  Makefile symlink cleanup. Scheme files are now symlinked or
-	  copied into subdirectories gnucash/ and g-wrapped/. Also,
+	  copied into subdirectories systecash/ and g-wrapped/. Also,
 	  parallel builds should work fine now.
 
 2006-08-29 07:48  cstim
@@ -5455,7 +5455,7 @@
 
 	* [r14759] branches/2.0, branches/2.0/ChangeLog: Update so that
 	  bug-buddy 2.16 will still allow you to file bugs against
-	  gnucash. Merge from r14695.
+	  systecash. Merge from r14695.
 	* [r14758] branches/2.0, branches/2.0/ChangeLog: Add missing call
 	  to xaccAccountBeginEdit. Merge from r14694.
 	* [r14757] branches/2.0, branches/2.0/ChangeLog,
@@ -5528,7 +5528,7 @@
 	  trunk/src/register/register-core/Makefile.am,
 	  trunk/src/scm/Makefile.am, trunk/src/tax/us/Makefile.am: Next
 	  round of Makefile symlink cleanup. Scheme files are now
-	  symlinked or copied into subdirectories gnucash/ and g-wrapped/.
+	  symlinked or copied into subdirectories systecash/ and g-wrapped/.
 	  Also, parallel builds should work fine now.
 
 2006-08-28 14:51  cstim
@@ -5537,7 +5537,7 @@
 	  trunk/src/core-utils/Makefile.am, trunk/src/engine/Makefile.am,
 	  trunk/src/gnc-module/Makefile.am: First round of Makefile
 	  symlink cleanup. Scheme files are now symlinked or copied into
-	  subdirectories gnucash/ and g-wrapped/. This will work on a
+	  subdirectories systecash/ and g-wrapped/. This will work on a
 	  platform without symlinks just fine.
 
 2006-08-28 12:34  cstim
@@ -5637,7 +5637,7 @@
 2006-08-26 19:03  cstim
 
 	* [r14729] trunk/packaging/win32/install.sh: Revert libgoffice
-	  pkgconfig filename change. Add CFLAGS at gnucash configure.
+	  pkgconfig filename change. Add CFLAGS at systecash configure.
 
 2006-08-26 08:53  cstim
 
@@ -5807,7 +5807,7 @@
 2006-08-22 00:38  hampton
 
 	* [r14703] branches/remove-group/ChangeLog,
-	  branches/remove-group/gnucash.m4,
+	  branches/remove-group/systecash.m4,
 	  branches/remove-group/lib/libqof/backend/file/qof-backend-qsf.h,
 	  branches/remove-group/lib/libqof/qof/qofinstance-p.h,
 	  branches/remove-group/lib/libqof/qof/qofinstance.h,
@@ -6026,10 +6026,10 @@
 2006-08-20 08:25  cstim
 
 	* [r14697] branches/2.0/ChangeLog, branches/2.0/configure.in,
-	  branches/2.0/src/gnome/gnucash.desktop.in,
-	  branches/2.0/src/gnome/gnucash.desktop.in.in: Update so that
+	  branches/2.0/src/gnome/systecash.desktop.in,
+	  branches/2.0/src/gnome/systecash.desktop.in.in: Update so that
 	  bug-buddy 2.16 will still allow you to file bugs against
-	  gnucash. Back-ported from trunk, r14695
+	  systecash. Back-ported from trunk, r14695
 
 2006-08-20 08:24  cstim
 
@@ -6040,9 +6040,9 @@
 2006-08-20 03:32  hampton
 
 	* [r14695] trunk/ChangeLog, trunk/configure.in,
-	  trunk/src/gnome/gnucash.desktop.in,
-	  trunk/src/gnome/gnucash.desktop.in.in: Update so that bug-buddy
-	  2.16 will still allow you to file bugs against gnucash. BP
+	  trunk/src/gnome/systecash.desktop.in,
+	  trunk/src/gnome/systecash.desktop.in.in: Update so that bug-buddy
+	  2.16 will still allow you to file bugs against systecash. BP
 
 2006-08-19 05:07  hampton
 
@@ -6561,13 +6561,13 @@
 2006-08-09 09:42  cstim
 
 	* [r14623]
-	  branches/2.0/src/gnome/schemas/apps_gnucash_dialog_scheduled_transctions.schemas.in:
+	  branches/2.0/src/gnome/schemas/apps_systecash_dialog_scheduled_transctions.schemas.in:
 	  Fix typo. Merges r14622 from trunk.
 
 2006-08-09 09:41  cstim
 
 	* [r14622]
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_scheduled_transctions.schemas.in:
+	  trunk/src/gnome/schemas/apps_systecash_dialog_scheduled_transctions.schemas.in:
 	  Fix typo
 
 2006-08-09 03:31  chris
@@ -6696,7 +6696,7 @@
 	  Fix string with yet another month-year-day vs. month-day-year
 	  confusion. Back-ported from trunk, r14602.
 	* [r14605]
-	  branches/2.0/src/gnome/schemas/apps_gnucash_dialog_scheduled_transctions.schemas.in:
+	  branches/2.0/src/gnome/schemas/apps_systecash_dialog_scheduled_transctions.schemas.in:
 	  Fix wording of gconf key descriptions according to discussion in
 	  wiki. Back-ported from trunk, r14600.
 
@@ -6726,7 +6726,7 @@
 2006-08-07 13:05  cstim
 
 	* [r14600]
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_scheduled_transctions.schemas.in:
+	  trunk/src/gnome/schemas/apps_systecash_dialog_scheduled_transctions.schemas.in:
 	  Fix wording of gconf key descriptions according to discussion in
 	  wiki. BP
 
@@ -6786,7 +6786,7 @@
 	  branches/2.0/src/gnome-utils/gnc-file.c,
 	  branches/2.0/src/gnome/gnc-plugin-page-account-tree.c,
 	  branches/2.0/src/gnome/gnc-plugin-page-register.c,
-	  branches/2.0/src/gnome/schemas/apps_gnucash_general.schemas.in,
+	  branches/2.0/src/gnome/schemas/apps_systecash_general.schemas.in,
 	  branches/2.0/src/import-export/import-provider-format.glade:
 	  String fixes that have been delayed due to the string freeze.
 	  Merges 14493 from trunk.
@@ -6838,7 +6838,7 @@
 	  trunk/src/import-export/import-match-picker.c,
 	  trunk/src/import-export/qif-import/dialog-account-picker.c,
 	  trunk/src/import-export/qif-import/druid-qif-import.c,
-	  trunk/src/register/register-gnome/gnucash-item-list.c,
+	  trunk/src/register/register-gnome/systecash-item-list.c,
 	  trunk/src/report/report-gnome/dialog-column-view.c,
 	  trunk/src/report/report-gnome/dialog-style-sheet.c: Unref all
 	  new stores.
@@ -6859,7 +6859,7 @@
 
 	* [r14589] trunk/ChangeLog,
 	  trunk/src/gnome-utils/dialog-reset-warnings.c,
-	  trunk/src/gnome/schemas/apps_gnucash_warnings.schemas.in: Add
+	  trunk/src/gnome/schemas/apps_systecash_warnings.schemas.in: Add
 	  tooltips to the checkboxes in the Reset Warnings dialog showing
 	  the long descriptions. Remove all linebreaks in these strings to
 	  make them look better.
@@ -6933,7 +6933,7 @@
 	  trunk/src/import-export/qif-import/dialog-account-picker.c,
 	  trunk/src/import-export/qif-import/druid-qif-import.c,
 	  trunk/src/import-export/qif-import/qif.glade,
-	  trunk/src/register/register-gnome/gnucash-color.c,
+	  trunk/src/register/register-gnome/systecash-color.c,
 	  trunk/src/report/report-gnome/dialog-column-view.c,
 	  trunk/src/report/report-gnome/dialog-style-sheet.c,
 	  trunk/src/report/report-gnome/report.glade: Remove the majority
@@ -6942,13 +6942,13 @@
 
 2006-07-31 13:22  warlord
 
-	* [r14587] trunk, trunk/ChangeLog, trunk/src/bin/gnucash-bin.c:
+	* [r14587] trunk, trunk/ChangeLog, trunk/src/bin/systecash-bin.c:
 	  Adjust the "development version" message for the 2.0.1 release.
 	  BP
 
 2006-07-30 23:30  wilddev
 
-	* [r14585] tags/2.0.1: Tagging the 2.0.1 release of GnuCash
+	* [r14585] tags/2.0.1: Tagging the 2.0.1 release of systecash
 
 2006-07-30 21:54  wilddev
 
@@ -6974,7 +6974,7 @@
 
 	* [r14581] branches/deprecated-cleanup,
 	  branches/deprecated-cleanup/ChangeLog,
-	  branches/deprecated-cleanup/accounts/de_DE/acctchrt_skr03.gnucash-xea,
+	  branches/deprecated-cleanup/accounts/de_DE/acctchrt_skr03.systecash-xea,
 	  branches/deprecated-cleanup/autogen.sh,
 	  branches/deprecated-cleanup/configure.in,
 	  branches/deprecated-cleanup/doc/tip_of_the_day.list.in,
@@ -7023,8 +7023,8 @@
 	  branches/deprecated-cleanup/src/gnome/gnc-plugin-page-account-tree.c,
 	  branches/deprecated-cleanup/src/gnome/gnc-plugin-page-register.c,
 	  branches/deprecated-cleanup/src/gnome/schemas/Makefile.am,
-	  branches/deprecated-cleanup/src/gnome/schemas/apps_gnucash_general.schemas.in,
-	  branches/deprecated-cleanup/src/gnome/schemas/apps_gnucash_warnings.schemas.in,
+	  branches/deprecated-cleanup/src/gnome/schemas/apps_systecash_general.schemas.in,
+	  branches/deprecated-cleanup/src/gnome/schemas/apps_systecash_warnings.schemas.in,
 	  branches/deprecated-cleanup/src/import-export/hbci/druid-hbci-initial.c,
 	  branches/deprecated-cleanup/src/import-export/hbci/glade/hbci.glade,
 	  branches/deprecated-cleanup/src/import-export/import-provider-format.glade,
@@ -7046,16 +7046,16 @@
 
 	* [r14580] trunk/ChangeLog,
 	  trunk/src/gnome-utils/gnc-main-window.c,
-	  trunk/src/gnome/schemas/apps_gnucash_warnings.schemas.in: Add
+	  trunk/src/gnome/schemas/apps_systecash_warnings.schemas.in: Add
 	  warning close_last_window and show it when user tries to close
-	  the last GnuCash window. Fixes #338865.
+	  the last systecash window. Fixes #338865.
 
 2006-07-30 01:18  andi5
 
 	* [r14579] trunk/ChangeLog,
 	  trunk/src/gnome-utils/glade/preferences.glade,
 	  trunk/src/gnome-utils/gnc-gnome-utils.c,
-	  trunk/src/gnome/schemas/apps_gnucash_general.schemas.in: Add new
+	  trunk/src/gnome/schemas/apps_systecash_general.schemas.in: Add new
 	  setting general/show_splash_screen to
 	  preferences_dialog->General and only show the splash screen if
 	  it is TRUE. Fixes 339876.
@@ -7074,7 +7074,7 @@
 	* [r14577] trunk/ChangeLog,
 	  trunk/src/gnome-utils/glade/preferences.glade,
 	  trunk/src/gnome-utils/gnc-main-window.c,
-	  trunk/src/gnome/schemas/apps_gnucash_general.schemas.in: Add
+	  trunk/src/gnome/schemas/apps_systecash_general.schemas.in: Add
 	  preference general/tab_position to choose the edge of the
 	  notebook the tabs will be showed (top, bottom, left or right).
 	  Add it to preferences_dialog->Windows. Move "Show close button
@@ -7088,7 +7088,7 @@
 2006-07-28 08:05  cstim
 
 	* [r14575] trunk/accounts/de_DE/Makefile.am: Enabled
-	  acctchrt_skr03.gnucash-xea again for distribution and
+	  acctchrt_skr03.systecash-xea again for distribution and
 	  installation because the author thinks it is verified enough by
 	  now. Reverted 14549.
 
@@ -7096,13 +7096,13 @@
 
 	* [r14574] branches/2.0/ChangeLog,
 	  branches/2.0/accounts/de_DE/Makefile.am: Updated
-	  acctchrt_skr03.gnucash-xea by Oliver Vollmer. Enabled it again
+	  acctchrt_skr03.systecash-xea by Oliver Vollmer. Enabled it again
 	  for distribution and installation because the author thinks it
 	  is verified enough by now. Reverted 14548.
 
 2006-07-28 07:59  cstim
 
-	* [r14573] branches/2.0/accounts/de_DE/acctchrt_skr03.gnucash-xea:
+	* [r14573] branches/2.0/accounts/de_DE/acctchrt_skr03.systecash-xea:
 	  Update German SKR03 account template by Oliver Vollmer. Merge
 	  14568.
 
@@ -7149,7 +7149,7 @@
 
 2006-07-27 14:36  cstim
 
-	* [r14568] trunk/accounts/de_DE/acctchrt_skr03.gnucash-xea: Update
+	* [r14568] trunk/accounts/de_DE/acctchrt_skr03.systecash-xea: Update
 	  German SKR03 account template by Oliver Vollmer
 
 2006-07-26 03:28  jsled
@@ -7302,7 +7302,7 @@
 2006-07-21 14:05  cstim
 
 	* [r14549] trunk/accounts/de_DE/Makefile.am: Removed
-	  acctchrt_skr03.gnucash-xea from distribution and installation by
+	  acctchrt_skr03.systecash-xea from distribution and installation by
 	  request of its author who doubts the fiscal correctness of this
 	  account chart for small businesses.
 
@@ -7310,7 +7310,7 @@
 
 	* [r14548] branches/2.0/ChangeLog,
 	  branches/2.0/accounts/de_DE/Makefile.am: Removed
-	  acctchrt_skr03.gnucash-xea from distribution and installation by
+	  acctchrt_skr03.systecash-xea from distribution and installation by
 	  request of its author who doubts the fiscal correctness of this
 	  account chart for small businesses.
 
@@ -7349,7 +7349,7 @@
 2006-07-18 15:41  cstim
 
 	* [r14542] trunk/ChangeLog, trunk/src/gnc-module/gnc-module.c: On
-	  windows, deactivate gnucash's extra de-quoting of path names
+	  windows, deactivate systecash's extra de-quoting of path names
 	  that is done on the GNC_MODULE_PATH env variable.
 
 2006-07-18 13:49  cstim
@@ -7379,7 +7379,7 @@
 	  branches/register-rewrite/NEWS,
 	  branches/register-rewrite/README,
 	  branches/register-rewrite/accounts/de_DE/Makefile.am,
-	  branches/register-rewrite/accounts/de_DE/acctchrt_skr03.gnucash-xea,
+	  branches/register-rewrite/accounts/de_DE/acctchrt_skr03.systecash-xea,
 	  branches/register-rewrite/autogen.sh,
 	  branches/register-rewrite/configure.in,
 	  branches/register-rewrite/doc/README.OFX,
@@ -7403,7 +7403,7 @@
 	  branches/register-rewrite/lib/glib26/Makefile.am,
 	  branches/register-rewrite/lib/libqof/backend/file/qsf-backend.c,
 	  branches/register-rewrite/lib/libqof/qof/gnc-numeric.c,
-	  branches/register-rewrite/packaging/gnucash-1.9.x.ebuild,
+	  branches/register-rewrite/packaging/systecash-1.9.x.ebuild,
 	  branches/register-rewrite/po/POTFILES.skip,
 	  branches/register-rewrite/po/ca.po,
 	  branches/register-rewrite/po/cs.po,
@@ -7447,7 +7447,7 @@
 	  branches/register-rewrite/src/backend/postgres/test/test-db.c,
 	  branches/register-rewrite/src/backend/postgres/test/test-load-backend.c,
 	  branches/register-rewrite/src/backend/postgres/test/test-period.c,
-	  branches/register-rewrite/src/bin/gnucash-bin.c,
+	  branches/register-rewrite/src/bin/systecash-bin.c,
 	  branches/register-rewrite/src/business/business-core/file/Makefile.am,
 	  branches/register-rewrite/src/business/business-core/gncAddress.c,
 	  branches/register-rewrite/src/business/business-core/gncAddress.h,
@@ -7511,12 +7511,12 @@
 	  branches/register-rewrite/src/gnome/glade/lots.glade,
 	  branches/register-rewrite/src/gnome/gnc-plugin-page-account-tree.c,
 	  branches/register-rewrite/src/gnome/gnc-plugin-page-register.c,
-	  branches/register-rewrite/src/gnome/gnucash.desktop.in,
-	  branches/register-rewrite/src/gnome/gnucash.keys.in,
-	  branches/register-rewrite/src/gnome/gnucash.mime,
+	  branches/register-rewrite/src/gnome/systecash.desktop.in,
+	  branches/register-rewrite/src/gnome/systecash.keys.in,
+	  branches/register-rewrite/src/gnome/systecash.mime,
 	  branches/register-rewrite/src/gnome/lot-viewer.c,
 	  branches/register-rewrite/src/gnome/schemas/Makefile.am,
-	  branches/register-rewrite/src/gnome/schemas/apps_gnucash_general.schemas.in,
+	  branches/register-rewrite/src/gnome/schemas/apps_systecash_general.schemas.in,
 	  branches/register-rewrite/src/gnome/ui/gnc-plugin-page-account-tree-ui.xml,
 	  branches/register-rewrite/src/gnome/ui/gnc-plugin-page-register-ui.xml,
 	  branches/register-rewrite/src/gnome/window-reconcile.c,
@@ -7532,8 +7532,8 @@
 	  branches/register-rewrite/src/import-export/qif-import/qif-parse.scm,
 	  branches/register-rewrite/src/pixmaps/Makefile.am,
 	  branches/register-rewrite/src/pixmaps/appicon.png,
-	  branches/register-rewrite/src/pixmaps/gnucash-icon.png,
-	  branches/register-rewrite/src/pixmaps/gnucash_splash.png,
+	  branches/register-rewrite/src/pixmaps/systecash-icon.png,
+	  branches/register-rewrite/src/pixmaps/systecash_splash.png,
 	  branches/register-rewrite/src/quotes/gnc-fq-check.in,
 	  branches/register-rewrite/src/quotes/gnc-fq-dump,
 	  branches/register-rewrite/src/quotes/gnc-fq-helper.in,
@@ -7544,11 +7544,11 @@
 	  branches/register-rewrite/src/register/ledger-core/split-register.c,
 	  branches/register-rewrite/src/register/ledger-core/split-register.h,
 	  branches/register-rewrite/src/register/register-gnome/combocell-gnome.c,
-	  branches/register-rewrite/src/register/register-gnome/gnucash-header.c,
-	  branches/register-rewrite/src/register/register-gnome/gnucash-item-edit.c,
-	  branches/register-rewrite/src/register/register-gnome/gnucash-item-list.c,
-	  branches/register-rewrite/src/register/register-gnome/gnucash-item-list.h,
-	  branches/register-rewrite/src/register/register-gnome/gnucash-sheet.c,
+	  branches/register-rewrite/src/register/register-gnome/systecash-header.c,
+	  branches/register-rewrite/src/register/register-gnome/systecash-item-edit.c,
+	  branches/register-rewrite/src/register/register-gnome/systecash-item-list.c,
+	  branches/register-rewrite/src/register/register-gnome/systecash-item-list.h,
+	  branches/register-rewrite/src/register/register-gnome/systecash-sheet.c,
 	  branches/register-rewrite/src/report/report-gnome/Makefile.am,
 	  branches/register-rewrite/src/report/report-gnome/gnc-plugin-page-report.c,
 	  branches/register-rewrite/src/report/report-system/html-text.scm,
@@ -7807,7 +7807,7 @@
 
 	* [r14508] branches/2.0, branches/2.0/ChangeLog,
 	  branches/2.0/src/gnome/schemas/Makefile.am: Distribute
-	  apps_gnucash_scheduled_transctions.schemas.in (#340641). Merge
+	  apps_systecash_scheduled_transctions.schemas.in (#340641). Merge
 	  from r14499
 
 2006-07-15 15:04  warlord
@@ -7862,7 +7862,7 @@
 2006-07-14 21:29  andi5
 
 	* [r14499] trunk/ChangeLog, trunk/src/gnome/schemas/Makefile.am:
-	  Add apps_gnucash_scheduled_transctions.schemas.in to
+	  Add apps_systecash_scheduled_transctions.schemas.in to
 	  Makefile.am. Fixes #340641. BP
 
 2006-07-14 16:45  andi5
@@ -7915,7 +7915,7 @@
 	  trunk/src/gnome-utils/gnc-file.c,
 	  trunk/src/gnome/gnc-plugin-page-account-tree.c,
 	  trunk/src/gnome/gnc-plugin-page-register.c,
-	  trunk/src/gnome/schemas/apps_gnucash_general.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_general.schemas.in,
 	  trunk/src/import-export/import-provider-format.glade,
 	  trunk/src/report/report-system/report.scm: String fixes that
 	  have been delayed due to the string freeze.
@@ -7992,11 +7992,11 @@
 
 2006-07-10 00:40  wilddev
 
-	* [r14478] tags/2.0.0: Tagging the 2.0.0 release of GnuCash
+	* [r14478] tags/2.0.0: Tagging the 2.0.0 release of systecash
 
 2006-07-10 00:34  wilddev
 
-	* [r14477] branches/2.0: Creating the 2.0 branch of GnuCash
+	* [r14477] branches/2.0: Creating the 2.0 branch of systecash
 
 2006-07-10 00:31  wilddev
 
@@ -8034,7 +8034,7 @@
 
 	* [r14467] trunk/po/es.po: Updated Spanish translation by Eneko
 	  Lacunza, bug#343229. Translation merged with most recent
-	  gnucash.pot.
+	  systecash.pot.
 
 2006-07-05 16:04  warlord
 
@@ -8067,7 +8067,7 @@
 2006-07-04 00:48  hampton
 
 	* [r14461]
-	  branches/deprecated-cleanup/accounts/de_DE/acctchrt_skr03.gnucash-xea,
+	  branches/deprecated-cleanup/accounts/de_DE/acctchrt_skr03.systecash-xea,
 	  branches/deprecated-cleanup/src/doc/valgrind.txt: Pull trunk new
 	  files 14347:14459 into branch.
 
@@ -8095,7 +8095,7 @@
 	  branches/deprecated-cleanup/doc/examples/swipe.qif,
 	  branches/deprecated-cleanup/doc/examples/web.qif,
 	  branches/deprecated-cleanup/glade-fixup,
-	  branches/deprecated-cleanup/packaging/gnucash-1.9.x.ebuild,
+	  branches/deprecated-cleanup/packaging/systecash-1.9.x.ebuild,
 	  branches/deprecated-cleanup/po/ca.po,
 	  branches/deprecated-cleanup/po/cs.po,
 	  branches/deprecated-cleanup/po/da.po,
@@ -8151,15 +8151,15 @@
 	  branches/deprecated-cleanup/src/import-export/qif-import/qif-file.scm,
 	  branches/deprecated-cleanup/src/import-export/qif-import/qif-parse.scm,
 	  branches/deprecated-cleanup/src/pixmaps/appicon.png,
-	  branches/deprecated-cleanup/src/pixmaps/gnucash-icon.png,
-	  branches/deprecated-cleanup/src/pixmaps/gnucash_splash.png,
+	  branches/deprecated-cleanup/src/pixmaps/systecash-icon.png,
+	  branches/deprecated-cleanup/src/pixmaps/systecash_splash.png,
 	  branches/deprecated-cleanup/src/quotes/gnc-fq-check.in,
 	  branches/deprecated-cleanup/src/quotes/gnc-fq-dump,
 	  branches/deprecated-cleanup/src/quotes/gnc-fq-helper.in,
 	  branches/deprecated-cleanup/src/quotes/gnc-fq-update.in,
-	  branches/deprecated-cleanup/src/register/register-gnome/gnucash-header.c,
-	  branches/deprecated-cleanup/src/register/register-gnome/gnucash-item-edit.c,
-	  branches/deprecated-cleanup/src/register/register-gnome/gnucash-sheet.c,
+	  branches/deprecated-cleanup/src/register/register-gnome/systecash-header.c,
+	  branches/deprecated-cleanup/src/register/register-gnome/systecash-item-edit.c,
+	  branches/deprecated-cleanup/src/register/register-gnome/systecash-sheet.c,
 	  branches/deprecated-cleanup/src/report/standard-reports/advanced-portfolio.scm,
 	  branches/deprecated-cleanup/src/report/standard-reports/portfolio.scm,
 	  branches/deprecated-cleanup/util: Pull trunk changes 14347:14459
@@ -8183,7 +8183,7 @@
 
 2006-06-28 04:21  hampton
 
-	* [r14456] trunk/ChangeLog, trunk/packaging/gnucash-1.9.x.ebuild,
+	* [r14456] trunk/ChangeLog, trunk/packaging/systecash-1.9.x.ebuild,
 	  trunk/src/quotes/gnc-fq-check.in, trunk/src/quotes/gnc-fq-dump,
 	  trunk/src/quotes/gnc-fq-helper.in,
 	  trunk/src/quotes/gnc-fq-update.in: Recent version of
@@ -8216,7 +8216,7 @@
 2006-06-26 20:12  hampton
 
 	* [r14442] trunk/ChangeLog, trunk/src/pixmaps/appicon.png,
-	  trunk/src/pixmaps/gnucash-icon.png: Add new application icon.
+	  trunk/src/pixmaps/systecash-icon.png: Add new application icon.
 
 2006-06-25 23:47  chris
 
@@ -8247,7 +8247,7 @@
 
 2006-06-25 14:58  jsled
 
-	* [r14434] trunk/ChangeLog, trunk/src/pixmaps/gnucash_splash.png:
+	* [r14434] trunk/ChangeLog, trunk/src/pixmaps/systecash_splash.png:
 	  Reduced-size splash image.
 
 2006-06-25 09:38  cstim
@@ -8371,7 +8371,7 @@
 
 2006-06-19 00:34  wilddev
 
-	* [r14387] tags/1.9.8: Tagging the 1.9.8 release of GnuCash
+	* [r14387] tags/1.9.8: Tagging the 1.9.8 release of systecash
 
 2006-06-19 00:33  wilddev
 
@@ -8382,7 +8382,7 @@
 
 	* [r14384] trunk/AUTHORS, trunk/ChangeLog,
 	  trunk/accounts/de_DE/Makefile.am,
-	  trunk/accounts/de_DE/acctchrt_skr03.gnucash-xea: Add new SKR03
+	  trunk/accounts/de_DE/acctchrt_skr03.systecash-xea: Add new SKR03
 	  account template (in addition to the existing SKR04) by Oliver
 	  Vollmer
 
@@ -8422,7 +8422,7 @@
 2006-06-17 03:37  hampton
 
 	* [r14378] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-item-edit.c: Correctly
+	  trunk/src/register/register-gnome/systecash-item-edit.c: Correctly
 	  indicate the focus state of the register. Fixes #342055.
 
 2006-06-17 01:00  chris
@@ -8449,13 +8449,13 @@
 2006-06-16 23:28  hampton
 
 	* [r14374] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-header.c: Remove five
+	  trunk/src/register/register-gnome/systecash-header.c: Remove five
 	  year old workaround for a resizing bug. Fixes #344764. Also
 	  explicitly initialize a couple of variables.
 
 2006-06-16 23:14  chris
 
-	* [r14373] trunk/src/register/register-gnome/gnucash-sheet.c:
+	* [r14373] trunk/src/register/register-gnome/systecash-sheet.c:
 	  Restore non-editing state when cancelled editing is complete.
 	  Fixes Bug #344870, which was a regression caused by r11892.
 
@@ -8547,7 +8547,7 @@
 2006-06-14 00:04  hampton
 
 	* [r14359] trunk/ChangeLog, trunk/src/quotes/gnc-fq-helper.in:
-	  Tell gnucash that a currency quote failed instead of just
+	  Tell systecash that a currency quote failed instead of just
 	  abandoning the request. Fixes #344546.
 
 2006-06-13 03:17  hampton
@@ -8641,10 +8641,10 @@
 	  branches/deprecated-cleanup/README.dependencies,
 	  branches/deprecated-cleanup/accounts/Makefile.am,
 	  branches/deprecated-cleanup/accounts/de_AT,
-	  branches/deprecated-cleanup/accounts/de_DE/acctchrt_skr04.gnucash-xea,
-	  branches/deprecated-cleanup/accounts/el_GR/acctchrt_brokerage.gnucash-xea,
-	  branches/deprecated-cleanup/accounts/el_GR/acctchrt_carloan.gnucash-xea,
-	  branches/deprecated-cleanup/accounts/el_GR/acctchrt_common.gnucash-xea,
+	  branches/deprecated-cleanup/accounts/de_DE/acctchrt_skr04.systecash-xea,
+	  branches/deprecated-cleanup/accounts/el_GR/acctchrt_brokerage.systecash-xea,
+	  branches/deprecated-cleanup/accounts/el_GR/acctchrt_carloan.systecash-xea,
+	  branches/deprecated-cleanup/accounts/el_GR/acctchrt_common.systecash-xea,
 	  branches/deprecated-cleanup/autogen.sh,
 	  branches/deprecated-cleanup/configure.in,
 	  branches/deprecated-cleanup/doc/README.HBCI,
@@ -8683,8 +8683,8 @@
 	  branches/deprecated-cleanup/lib/libqof/qof/qofutil.c,
 	  branches/deprecated-cleanup/lib/libqof/qof/qofutil.h,
 	  branches/deprecated-cleanup/macros/legacy_macros.m4,
-	  branches/deprecated-cleanup/packaging/gnucash-1.9.x.ebuild,
-	  branches/deprecated-cleanup/packaging/gnucash.spec.in,
+	  branches/deprecated-cleanup/packaging/systecash-1.9.x.ebuild,
+	  branches/deprecated-cleanup/packaging/systecash.spec.in,
 	  branches/deprecated-cleanup/po/POTFILES.skip,
 	  branches/deprecated-cleanup/po/de.po,
 	  branches/deprecated-cleanup/po/el.po,
@@ -8731,7 +8731,7 @@
 	  branches/deprecated-cleanup/src/backend/postgres/txn.c,
 	  branches/deprecated-cleanup/src/backend/postgres/txnmass.c,
 	  branches/deprecated-cleanup/src/backend/postgres/upgrade.c,
-	  branches/deprecated-cleanup/src/bin/gnucash-bin.c,
+	  branches/deprecated-cleanup/src/bin/systecash-bin.c,
 	  branches/deprecated-cleanup/src/business/business-core/file/Makefile.am,
 	  branches/deprecated-cleanup/src/business/business-core/gncAddress.c,
 	  branches/deprecated-cleanup/src/business/business-gnome/Makefile.am,
@@ -8822,9 +8822,9 @@
 	  branches/deprecated-cleanup/src/gnome/gnc-plugin-page-budget.c,
 	  branches/deprecated-cleanup/src/gnome/gnc-plugin-page-register.c,
 	  branches/deprecated-cleanup/src/gnome/gnc-split-reg.c,
-	  branches/deprecated-cleanup/src/gnome/gnucash.desktop.in,
-	  branches/deprecated-cleanup/src/gnome/gnucash.keys.in,
-	  branches/deprecated-cleanup/src/gnome/gnucash.mime,
+	  branches/deprecated-cleanup/src/gnome/systecash.desktop.in,
+	  branches/deprecated-cleanup/src/gnome/systecash.keys.in,
+	  branches/deprecated-cleanup/src/gnome/systecash.mime,
 	  branches/deprecated-cleanup/src/gnome/lot-viewer.c,
 	  branches/deprecated-cleanup/src/gnome/ui/gnc-plugin-basic-commands-ui.xml,
 	  branches/deprecated-cleanup/src/gnome/window-reconcile.c,
@@ -8851,17 +8851,17 @@
 	  branches/deprecated-cleanup/src/import-export/qif-io-core/qif-parse.scm,
 	  branches/deprecated-cleanup/src/import-export/test/Makefile.am,
 	  branches/deprecated-cleanup/src/pixmaps/Makefile.am,
-	  branches/deprecated-cleanup/src/pixmaps/gnucash_splash.png,
+	  branches/deprecated-cleanup/src/pixmaps/systecash_splash.png,
 	  branches/deprecated-cleanup/src/register/ledger-core/split-register-load.c,
 	  branches/deprecated-cleanup/src/register/ledger-core/split-register-util.c,
 	  branches/deprecated-cleanup/src/register/ledger-core/split-register.c,
 	  branches/deprecated-cleanup/src/register/register-gnome/combocell-gnome.c,
 	  branches/deprecated-cleanup/src/register/register-gnome/formulacell-gnome.c,
-	  branches/deprecated-cleanup/src/register/register-gnome/gnucash-grid.c,
-	  branches/deprecated-cleanup/src/register/register-gnome/gnucash-item-edit.c,
-	  branches/deprecated-cleanup/src/register/register-gnome/gnucash-item-list.c,
-	  branches/deprecated-cleanup/src/register/register-gnome/gnucash-item-list.h,
-	  branches/deprecated-cleanup/src/register/register-gnome/gnucash-sheet.c,
+	  branches/deprecated-cleanup/src/register/register-gnome/systecash-grid.c,
+	  branches/deprecated-cleanup/src/register/register-gnome/systecash-item-edit.c,
+	  branches/deprecated-cleanup/src/register/register-gnome/systecash-item-list.c,
+	  branches/deprecated-cleanup/src/register/register-gnome/systecash-item-list.h,
+	  branches/deprecated-cleanup/src/register/register-gnome/systecash-sheet.c,
 	  branches/deprecated-cleanup/src/register/register-gnome/pricecell-gnome.c,
 	  branches/deprecated-cleanup/src/register/register-gnome/pricecell-gnome.h,
 	  branches/deprecated-cleanup/src/report/report-gnome/Makefile.am,
@@ -8875,7 +8875,7 @@
 	  branches/deprecated-cleanup/src/report/standard-reports/portfolio.scm,
 	  branches/deprecated-cleanup/src/report/standard-reports/price-scatter.scm,
 	  branches/deprecated-cleanup/src/report/standard-reports/transaction.scm,
-	  branches/deprecated-cleanup/src/report/utility-reports/welcome-to-gnucash.scm,
+	  branches/deprecated-cleanup/src/report/utility-reports/welcome-to-systecash.scm,
 	  branches/deprecated-cleanup/src/scm/Makefile.am,
 	  branches/deprecated-cleanup/src/scm/command-line.scm,
 	  branches/deprecated-cleanup/src/scm/doc.scm,
@@ -8920,7 +8920,7 @@
 
 2006-06-06 20:13  jsled
 
-	* [r14343] trunk/packaging/gnucash-1.9.x.ebuild: adjust desktop
+	* [r14343] trunk/packaging/systecash-1.9.x.ebuild: adjust desktop
 	  entry rule for icon, categories.
 
 2006-06-06 04:37  hampton
@@ -8940,12 +8940,12 @@
 
 2006-06-06 03:53  wilddev
 
-	* [r14339] trunk/ChangeLog, trunk/packaging/gnucash-1.9.x.ebuild:
-	  update ebuild to use gnucash-docs-1.9.0
+	* [r14339] trunk/ChangeLog, trunk/packaging/systecash-1.9.x.ebuild:
+	  update ebuild to use systecash-docs-1.9.0
 
 2006-06-06 03:04  wilddev
 
-	* [r14337] tags/1.9.7: Tagging the 1.9.7 release of GnuCash
+	* [r14337] tags/1.9.7: Tagging the 1.9.7 release of systecash
 
 2006-06-06 03:03  wilddev
 
@@ -9076,7 +9076,7 @@
 2006-06-04 21:43  jsled
 
 	* [r14322] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-item-edit.c: Use
+	  trunk/src/register/register-gnome/systecash-item-edit.c: Use
 	  UTF8_STRING for copy/pastes, as it's at least 4 whole characters
 	  better than just "STRING".
 
@@ -9085,14 +9085,14 @@
 	* [r14321] trunk/ChangeLog,
 	  trunk/src/gnome-utils/gnc-plugin-file-history.c: If the g2 file
 	  history list is empty, then copy the file history list over from
-	  Gnucash 1.x gnome settings file. #342724.
+	  systecash 1.x gnome settings file. #342724.
 
 2006-06-04 18:27  jsled
 
 	* [r14320] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-item-edit.c:
+	  trunk/src/register/register-gnome/systecash-item-edit.c:
 	  Bug#333299: Handle selections more correctly in a utf8 world,
-	  within GnuCash at least.
+	  within systecash at least.
 
 2006-06-04 15:01  jsled
 
@@ -9132,15 +9132,15 @@
 
 	* [r14309] trunk/ChangeLog,
 	  trunk/src/register/register-gnome/combocell-gnome.c,
-	  trunk/src/register/register-gnome/gnucash-item-list.c,
-	  trunk/src/register/register-gnome/gnucash-item-list.h: Only use
+	  trunk/src/register/register-gnome/systecash-item-list.c,
+	  trunk/src/register/register-gnome/systecash-item-list.h: Only use
 	  the amount of space required to show all the entries in the
 	  popup, not all the available space. Fixes #343242.
 
 2006-06-03 19:58  hampton
 
 	* [r14308] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-sheet.c: The register
+	  trunk/src/register/register-gnome/systecash-sheet.c: The register
 	  code shouldn't process any keystrokes that have a "modifier"
 	  (e.g. Alt, Meta, etc.) key pressed. This allows
 	  Alt-Ctl-Pgup/Down in a register to change the notebook page,
@@ -9167,7 +9167,7 @@
 	* [r14301] trunk/configure.in, trunk/po/POTFILES.skip,
 	  trunk/src/backend/file/Makefile.am,
 	  trunk/src/backend/file/gnc-backend-file.c,
-	  trunk/src/bin/gnucash-bin.c,
+	  trunk/src/bin/systecash-bin.c,
 	  trunk/src/import-export/Makefile.am: Disable support for the old
 	  binary file format.
 
@@ -9182,7 +9182,7 @@
 2006-06-03 08:27  andi5
 
 	* [r14299] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-sheet.c: Add GDK_Menu
+	  trunk/src/register/register-gnome/systecash-sheet.c: Add GDK_Menu
 	  as shortcut for showing register popups. Fixes 343244.
 
 2006-06-02 21:43  hampton
@@ -9318,7 +9318,7 @@
 
 2006-05-31 00:56  chris
 
-	* [r14276] trunk/src/gnome/gnucash.desktop.in,
+	* [r14276] trunk/src/gnome/systecash.desktop.in,
 	  trunk/src/pixmaps/Makefile.am: GNOME integration, part 2. Bug
 	  #342936. Use the same icon for the window manager as for the
 	  desktop.
@@ -9374,8 +9374,8 @@
 2006-05-29 22:07  chris
 
 	* [r14251] trunk/src/gnome/Makefile.am,
-	  trunk/src/gnome/gnucash.desktop.in,
-	  trunk/src/gnome/gnucash.keys.in, trunk/src/gnome/gnucash.mime,
+	  trunk/src/gnome/systecash.desktop.in,
+	  trunk/src/gnome/systecash.keys.in, trunk/src/gnome/systecash.mime,
 	  trunk/src/pixmaps/Makefile.am: Improve GNOME desktop
 	  integration. Bug #342936 Patch supplied by Stanislav Brabec
 	  <sbrabec@suse.cz>.
@@ -9479,7 +9479,7 @@
 	  branches/register-rewrite/Makefile.am,
 	  branches/register-rewrite/lib/libqof/backend/file/Makefile.am,
 	  branches/register-rewrite/lib/libqof/qof/qofsession.c,
-	  branches/register-rewrite/packaging/gnucash-1.9.x.ebuild,
+	  branches/register-rewrite/packaging/systecash-1.9.x.ebuild,
 	  branches/register-rewrite/po/en_GB.po,
 	  branches/register-rewrite/po/es.po,
 	  branches/register-rewrite/po/fr.po,
@@ -9490,14 +9490,14 @@
 	  branches/register-rewrite/src/backend/file/sixtp.c,
 	  branches/register-rewrite/src/backend/file/sixtp.h,
 	  branches/register-rewrite/src/backend/postgres/Makefile.am,
-	  branches/register-rewrite/src/bin/gnucash-bin.c,
+	  branches/register-rewrite/src/bin/systecash-bin.c,
 	  branches/register-rewrite/src/business/business-reports/aging.scm,
 	  branches/register-rewrite/src/engine/gnc-engine.c,
 	  branches/register-rewrite/src/gnome-utils/druid-gnc-xml-import.c,
 	  branches/register-rewrite/src/gnome-utils/gnc-tree-view.c,
 	  branches/register-rewrite/src/import-export/hbci/druid-hbci-initial.c,
 	  branches/register-rewrite/src/import-export/hbci/gnc-hbci-utils.c,
-	  branches/register-rewrite/src/pixmaps/gnucash_splash.png: Bump
+	  branches/register-rewrite/src/pixmaps/systecash_splash.png: Bump
 	  the branch root up to r14237 from trunk.
 
 2006-05-29 19:24  chris
@@ -9508,7 +9508,7 @@
 
 2006-05-29 16:38  jsled
 
-	* [r14236] trunk/ChangeLog, trunk/packaging/gnucash-1.9.x.ebuild:
+	* [r14236] trunk/ChangeLog, trunk/packaging/systecash-1.9.x.ebuild:
 	  Remove support for being a dual-nature -release and -svn ebuild.
 	  Misc cleanups.
 
@@ -9526,16 +9526,16 @@
 
 2006-05-29 04:52  chris
 
-	* [r14232] trunk/src/bin/gnucash-bin.c,
+	* [r14232] trunk/src/bin/systecash-bin.c,
 	  trunk/src/engine/gnc-engine.c: Move the error-handling of
 	  failure to initialize the engine from gnc-engine.c to
-	  gnucash-bin.c. This allows tests that call gnc_engine_init() but
+	  systecash-bin.c. This allows tests that call gnc_engine_init() but
 	  fail to find a backend to still pass.
 
 2006-05-28 21:24  hampton
 
 	* [r14229] trunk/AUTHORS, trunk/ChangeLog,
-	  trunk/src/pixmaps/gnucash_splash.png: New splash screen from
+	  trunk/src/pixmaps/systecash_splash.png: New splash screen from
 	  Joshua Facemyer / Impressus Art <faceman@impressusart.com>.
 
 2006-05-28 21:22  hampton
@@ -9592,7 +9592,7 @@
 
 2006-05-27 15:09  jsled
 
-	* [r14211] trunk/ChangeLog, trunk/packaging/gnucash-1.9.x.ebuild:
+	* [r14211] trunk/ChangeLog, trunk/packaging/systecash-1.9.x.ebuild:
 	  Add docs extraction, un-slot, un-/opt-ize.
 
 2006-05-27 14:19  chris
@@ -9627,7 +9627,7 @@
 2006-05-26 19:45  warlord
 
 	* [r14206] trunk/ChangeLog, trunk/src/engine/gnc-engine.c:
-	  force-exit gnucash if a required library can't be loaded.
+	  force-exit systecash if a required library can't be loaded.
 
 2006-05-26 15:41  warlord
 
@@ -9667,7 +9667,7 @@
 	* [r14199] trunk/src/engine/gnc-engine.c: Load the file backend
 	  _after_ the qsf backend, so that it gets tried _before_ the qsf
 	  backend, because the qsf backend prints some noisy error
-	  messages while figuring out that the gnucash file isn't a qsf
+	  messages while figuring out that the systecash file isn't a qsf
 	  file.
 
 2006-05-26 00:10  chris
@@ -9859,7 +9859,7 @@
 2006-05-24 01:44  jsled
 
 	* [r14162] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-sheet.c: Bug#342182:
+	  trunk/src/register/register-gnome/systecash-sheet.c: Bug#342182:
 	  change gtk-workaround check to be more specific in face of
 	  evidence.
 
@@ -9894,9 +9894,9 @@
 
 2006-05-23 14:07  cstim
 
-	* [r14156] trunk/accounts/el_GR/acctchrt_brokerage.gnucash-xea,
-	  trunk/accounts/el_GR/acctchrt_carloan.gnucash-xea,
-	  trunk/accounts/el_GR/acctchrt_common.gnucash-xea: Updated Greek
+	* [r14156] trunk/accounts/el_GR/acctchrt_brokerage.systecash-xea,
+	  trunk/accounts/el_GR/acctchrt_carloan.systecash-xea,
+	  trunk/accounts/el_GR/acctchrt_common.systecash-xea: Updated Greek
 	  account templates by Nikos Charonitakis
 
 2006-05-23 11:20  cstim
@@ -10010,13 +10010,13 @@
 
 	* [r14139]
 	  branches/deprecated-cleanup/src/gnome/dialog-tax-info.c,
-	  branches/deprecated-cleanup/src/register/register-gnome/gnucash-color.c:
+	  branches/deprecated-cleanup/src/register/register-gnome/systecash-color.c:
 	  Simple cleanups.
 
 2006-05-20 03:41  hampton
 
 	* [r14138] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-grid.c: Make the blue
+	  trunk/src/register/register-gnome/systecash-grid.c: Make the blue
 	  past/future dividing line thicker so that it is obvious. Fixes
 	  #342051.
 
@@ -10053,7 +10053,7 @@
 	  trunk/src/engine/policy.c: This patch fixes almost all of the
 	  test-period errors. It still sometimes gets an error because it
 	  generates an amount that can't be represented with the
-	  denominator it has chosen, but there's not much gnucash can do
+	  denominator it has chosen, but there's not much systecash can do
 	  about that. From #342153.
 
 2006-05-17 21:54  andi5
@@ -10066,10 +10066,10 @@
 2006-05-16 23:22  warlord
 
 	* [r14084] trunk/ChangeLog, trunk/lib/libgsf-1.12.3/Makefile.am,
-	  trunk/packaging/gnucash.spec.in: Get the RPM SPEC to build
+	  trunk/packaging/systecash.spec.in: Get the RPM SPEC to build
 	  properly (should built from future tarballs) *
 	  lib/libgsl/Makefile.am: don't distribute the gsl specfiles *
-	  packaging/gnucash.spec.in: fix for change of location of files.
+	  packaging/systecash.spec.in: fix for change of location of files.
 
 2006-05-16 16:18  warlord
 
@@ -10126,7 +10126,7 @@
 
 2006-05-15 02:04  wilddev
 
-	* [r14072] tags/1.9.6: Tagging the 1.9.6 release of GnuCash
+	* [r14072] tags/1.9.6: Tagging the 1.9.6 release of systecash
 	* [r14071] trunk/ChangeLog, trunk/NEWS, trunk/configure.in: update
 	  to release 1.9.6
 
@@ -10137,7 +10137,7 @@
 2006-05-14 23:34  jsled
 
 	* [r14069] trunk/Makefile.am: only pickup files from src/ and
-	  lib/, not ./gnucash-1.9.x/[...] (or another other irrelevant
+	  lib/, not ./systecash-1.9.x/[...] (or another other irrelevant
 	  copies) as well.
 
 2006-05-14 23:29  jsled
@@ -10147,7 +10147,7 @@
 
 2006-05-14 23:26  jsled
 
-	* [r14067] trunk/ChangeLog, trunk/packaging/gnucash-1.9.x.ebuild:
+	* [r14067] trunk/ChangeLog, trunk/packaging/systecash-1.9.x.ebuild:
 	  Updated ebuild.
 
 2006-05-14 23:24  jsled
@@ -10267,8 +10267,8 @@
 2006-05-12 10:50  cstim
 
 	* [r14029] trunk/src/gnome-utils/glade/totd.glade,
-	  trunk/src/report/utility-reports/welcome-to-gnucash.scm: Fix
-	  strings that mentioned gnucash-1.8
+	  trunk/src/report/utility-reports/welcome-to-systecash.scm: Fix
+	  strings that mentioned systecash-1.8
 
 2006-05-12 08:41  cstim
 
@@ -10387,7 +10387,7 @@
 2006-05-10 14:54  cstim
 
 	* [r13990] trunk/accounts/de_AT,
-	  trunk/accounts/de_AT/acctchrt_business.gnucash-xea: Add
+	  trunk/accounts/de_AT/acctchrt_business.systecash-xea: Add
 	  svnignores.
 
 2006-05-10 13:11  warlord
@@ -10401,20 +10401,20 @@
 	* [r13988] trunk/AUTHORS, trunk/ChangeLog,
 	  trunk/accounts/Makefile.am, trunk/accounts/de_AT,
 	  trunk/accounts/de_AT/Makefile.am,
-	  trunk/accounts/de_AT/acctchrt_auto.gnucash-xea,
-	  trunk/accounts/de_AT/acctchrt_autoloan.gnucash-xea,
-	  trunk/accounts/de_AT/acctchrt_brokerage.gnucash-xea,
-	  trunk/accounts/de_AT/acctchrt_business.gnucash-xea,
-	  trunk/accounts/de_AT/acctchrt_common.gnucash-xea,
-	  trunk/accounts/de_AT/acctchrt_houseown.gnucash-xea,
-	  trunk/accounts/de_AT/acctchrt_investment.gnucash-xea,
-	  trunk/accounts/de_AT/acctchrt_kids.gnucash-xea,
+	  trunk/accounts/de_AT/acctchrt_auto.systecash-xea,
+	  trunk/accounts/de_AT/acctchrt_autoloan.systecash-xea,
+	  trunk/accounts/de_AT/acctchrt_brokerage.systecash-xea,
+	  trunk/accounts/de_AT/acctchrt_business.systecash-xea,
+	  trunk/accounts/de_AT/acctchrt_common.systecash-xea,
+	  trunk/accounts/de_AT/acctchrt_houseown.systecash-xea,
+	  trunk/accounts/de_AT/acctchrt_investment.systecash-xea,
+	  trunk/accounts/de_AT/acctchrt_kids.systecash-xea,
 	  trunk/configure.in: Added new Austrian German account templates
 	  by Roman Bertle
 
 2006-05-10 12:47  cstim
 
-	* [r13987] trunk/accounts/de_DE/acctchrt_skr04.gnucash-xea: Fix
+	* [r13987] trunk/accounts/de_DE/acctchrt_skr04.systecash-xea: Fix
 	  erroneous guid types in account template
 
 2006-05-10 12:32  cstim
@@ -10579,7 +10579,7 @@
 
 	* [r13933] trunk/ChangeLog,
 	  trunk/src/gnome-utils/dialog-transfer.c,
-	  trunk/src/register/register-gnome/gnucash-header.c: Trivial
+	  trunk/src/register/register-gnome/systecash-header.c: Trivial
 	  replacements for deprecated functions.
 
 2006-05-06 21:11  hampton
@@ -10866,8 +10866,8 @@
 2006-04-29 22:42  andi5
 
 	* [r13882] trunk/ChangeLog, trunk/configure.in,
-	  trunk/src/register/register-gnome/gnucash-item-edit.c,
-	  trunk/src/register/register-gnome/gnucash-item-edit.h: Remove
+	  trunk/src/register/register-gnome/systecash-item-edit.c,
+	  trunk/src/register/register-gnome/systecash-item-edit.h: Remove
 	  all XIM code, as it has been commented out unconditionally
 	  already for a while. Send focus in/out events to register
 	  GtkEntry. Address #337020.
@@ -10909,14 +10909,14 @@
 
 2006-04-29 07:25  hampton
 
-	* [r13876] trunk/ChangeLog, trunk/src/bin/gnucash-bin.c: Load the
+	* [r13876] trunk/ChangeLog, trunk/src/bin/systecash-bin.c: Load the
 	  user config earlier in startup. Fixes the missing custom report
 	  problem #338668.
 
 2006-04-29 06:53  hampton
 
 	* [r13875] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-sheet.c: Lower the
+	  trunk/src/register/register-gnome/systecash-sheet.c: Lower the
 	  minimum required width of the register. This does affect the
 	  size constraint imposed by the register summary bar.
 
@@ -11023,7 +11023,7 @@
 
 2006-04-26 09:11  cstim
 
-	* [r13861] trunk/ChangeLog, trunk/doc/gnucash.1.in: Properly quote
+	* [r13861] trunk/ChangeLog, trunk/doc/systecash.1.in: Properly quote
 	  marks. Bug #339731.
 
 2006-04-26 04:49  hampton
@@ -11298,8 +11298,8 @@
 
 	* [r13822] trunk/ChangeLog,
 	  trunk/src/report/report-gnome/report-gnome.scm,
-	  trunk/src/report/utility-reports/welcome-to-gnucash.scm: Make
-	  the "Welcome to GnuCash" report menu item build the entire
+	  trunk/src/report/utility-reports/welcome-to-systecash.scm: Make
+	  the "Welcome to systecash" report menu item build the entire
 	  report, instead of just the first sub-report.
 
 2006-04-21 19:21  hampton
@@ -11383,29 +11383,29 @@
 	* [r13809] trunk/ChangeLog,
 	  trunk/src/gnome-utils/gnc-main-window.c: Don't call shutdown
 	  directly from the delete_event handler, but use a periodic idle
-	  function that checks to insure that gnucash isn't saving the
+	  function that checks to insure that systecash isn't saving the
 	  data file before calling shutdown. Fixes 338952.
 
 2006-04-19 19:35  cstim
 
 	* [r13808] trunk/ChangeLog, trunk/accounts/Makefile.am,
 	  trunk/accounts/fr_CH, trunk/accounts/fr_CH/Makefile.am,
-	  trunk/accounts/fr_CH/acctchrt_brokerage.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_business.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_carloan.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_cdmoneymkt.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_childcare.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_common.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_currency.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_eduloan.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_fixedassets.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_homeloan.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_homeown.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_otherloan.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_renter.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_retiremt.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_spouseinc.gnucash-xea,
-	  trunk/accounts/fr_CH/acctchrt_spouseretire.gnucash-xea,
+	  trunk/accounts/fr_CH/acctchrt_brokerage.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_business.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_carloan.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_cdmoneymkt.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_childcare.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_common.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_currency.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_eduloan.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_fixedassets.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_homeloan.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_homeown.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_otherloan.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_renter.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_retiremt.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_spouseinc.systecash-xea,
+	  trunk/accounts/fr_CH/acctchrt_spouseretire.systecash-xea,
 	  trunk/configure.in: New French Swiss account templates by
 	  Jonathan Ernst
 
@@ -11414,8 +11414,8 @@
 	* [r13803] trunk/ChangeLog, trunk/src/gnome/top-level.c,
 	  trunk/src/report/report-gnome/window-report.c,
 	  trunk/src/report/report-gnome/window-report.h: Parse the old
-	  ~/.gnome/GnuCash MDI document file to see which 1.8 reports
-	  should be opened the first time gnucash2 starts.
+	  ~/.gnome/systecash MDI document file to see which 1.8 reports
+	  should be opened the first time systecash2 starts.
 
 2006-04-18 19:28  cstim
 
@@ -11466,7 +11466,7 @@
 
 2006-04-16 23:33  wilddev
 
-	* [r13795] tags/1.9.5: Tagging the 1.9.5 release of GnuCash
+	* [r13795] tags/1.9.5: Tagging the 1.9.5 release of systecash
 
 2006-04-16 23:32  wilddev
 
@@ -11747,7 +11747,7 @@
 	  trunk/src/engine/Account.c, trunk/src/engine/Transaction.c,
 	  trunk/src/engine/gnc-commodity.c, trunk/src/engine/gnc-engine.c,
 	  trunk/src/engine/gnc-pricedb.c, trunk/src/engine/kvp-scm.c,
-	  trunk/src/gnome-utils/QuickFill.c: Get gnucash to build properly
+	  trunk/src/gnome-utils/QuickFill.c: Get systecash to build properly
 	  with the new QOF changes (0.6.4+) *
 	  src/backend/file/sixtp-utils.c: use QOF_SCANF_LLD to read 64-bit
 	  numbers. * src/gnome-utils/QuickFill.c: *
@@ -11804,7 +11804,7 @@
 2006-04-10 20:48  cstim
 
 	* [r13760]
-	  trunk/src/gnome/schemas/apps_gnucash_window_pages_account_tree.schemas.in:
+	  trunk/src/gnome/schemas/apps_systecash_window_pages_account_tree.schemas.in:
 	  Fix spelling error
 
 2006-04-08 23:52  hampton
@@ -11813,7 +11813,7 @@
 	  trunk/src/gnome-utils/account-quickfill.c: Eliminate some
 	  unnecessary work by comparing the account name in the quickfill
 	  with the actual account name, and only rebuilding the quickfill
-	  if they differ. This improves GnuCash's response somewhat, but
+	  if they differ. This improves systecash's response somewhat, but
 	  still needs more improvement.
 
 2006-04-08 22:50  codehelp
@@ -11955,7 +11955,7 @@
 
 2006-04-06 03:04  wilddev
 
-	* [r13740] tags/1.9.4: Tagging the 1.9.4 release of GnuCash
+	* [r13740] tags/1.9.4: Tagging the 1.9.4 release of systecash
 
 2006-04-06 03:02  wilddev
 
@@ -12076,7 +12076,7 @@
 
 2006-04-01 05:28  hampton
 
-	* [r13722] trunk/src/bin/gnucash-bin.c: Remove debug message.
+	* [r13722] trunk/src/bin/systecash-bin.c: Remove debug message.
 
 2006-03-31 21:08  jsled
 
@@ -12137,13 +12137,13 @@
 	* [r13713] trunk/ChangeLog, trunk/src/backend/file/io-gncxml-v2.c,
 	  trunk/src/gnome-utils/gnc-main-window.c,
 	  trunk/src/gnome-utils/gnc-window.c: Work around the fact that a
-	  validating XML parser barfs on gnucash's use of an attribute in
+	  validating XML parser barfs on systecash's use of an attribute in
 	  an undefined namespace.
 
 2006-03-30 15:14  jsled
 
 	* [r13712] trunk/ChangeLog,
-	  trunk/accounts/C/acctchrt_checkbook.gnucash-xea: Bug#334777:
+	  trunk/accounts/C/acctchrt_checkbook.systecash-xea: Bug#334777:
 	  Non-placeholder leaf Expense account in 'Simple Checkbook'
 	  example account tree.
 
@@ -12206,7 +12206,7 @@
 2006-03-27 20:33  cstim
 
 	* [r13703] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-sheet.h: Stick with
+	  trunk/src/register/register-gnome/systecash-sheet.h: Stick with
 	  vertical padding of 2 as discussed in bug#334920.
 
 2006-03-26 00:21  hampton
@@ -12257,16 +12257,16 @@
 2006-03-24 14:52  hampton
 
 	* [r13695]
-	  trunk/src/business/business-gnome/schemas/apps_gnucash_dialog_business_common.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_general.schemas.in,
-	  trunk/src/import-export/schemas/apps_gnucash_import_generic_matcher.schemas.in:
-	  Regularize capitalization of the word 'GnuCash' where its user
+	  trunk/src/business/business-gnome/schemas/apps_systecash_dialog_business_common.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_general.schemas.in,
+	  trunk/src/import-export/schemas/apps_systecash_import_generic_matcher.schemas.in:
+	  Regularize capitalization of the word 'systecash' where its user
 	  visible.
 
 2006-03-24 02:01  chris
 
 	* [r13694] trunk/src/report/report-gnome/window-report.c: When
-	  opening GnuCash for the first time since 1.8.x, allow the user
+	  opening systecash for the first time since 1.8.x, allow the user
 	  to choose which reports (if any) to open. If the user cancels
 	  the dialog, no reports are opened, otherwise, for each report,
 	  they are asked whether or not they want to open it. However, if
@@ -12285,10 +12285,10 @@
 2006-03-24 00:09  andi5
 
 	* [r13692] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-grid.c,
-	  trunk/src/register/register-gnome/gnucash-item-edit.c,
-	  trunk/src/register/register-gnome/gnucash-sheet.h,
-	  trunk/src/register/register-gnome/gnucash-style.c: Add vertical
+	  trunk/src/register/register-gnome/systecash-grid.c,
+	  trunk/src/register/register-gnome/systecash-item-edit.c,
+	  trunk/src/register/register-gnome/systecash-sheet.h,
+	  trunk/src/register/register-gnome/systecash-style.c: Add vertical
 	  padding in register cells and align text, editable text and the
 	  text cursor vertically. This makes the cells taller and centers
 	  the text. Add one pixel to the horizontal padding.
@@ -12301,7 +12301,7 @@
 	  trunk/src/business/business-core/businessmod-core.c,
 	  trunk/src/business/business-core/file/gncmod-business-backend-file.c,
 	  trunk/src/business/business-gnome/businessmod-gnome.c,
-	  trunk/src/business/business-gnome/schemas/apps_gnucash_dialog_business_common.schemas.in,
+	  trunk/src/business/business-gnome/schemas/apps_systecash_dialog_business_common.schemas.in,
 	  trunk/src/business/business-utils/gncmod-business-utils.c,
 	  trunk/src/business/dialog-tax-table/gncmod-dialog-tax-table.c,
 	  trunk/src/doc/doxygen_main_page.c,
@@ -12319,8 +12319,8 @@
 	  trunk/src/gnome-utils/gnc-main-window.c,
 	  trunk/src/gnome-utils/gnc-splash.c,
 	  trunk/src/gnome/dialog-fincalc.c,
-	  trunk/src/gnome/schemas/apps_gnucash_general.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_window_pages_account_tree.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_general.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_window_pages_account_tree.schemas.in,
 	  trunk/src/import-export/generic-import.glade,
 	  trunk/src/import-export/hbci/glade/hbci.glade,
 	  trunk/src/import-export/log-replay/gnc-plugin-log-replay.c,
@@ -12328,7 +12328,7 @@
 	  trunk/src/report/report-gnome/gnc-plugin-page-report.c,
 	  trunk/src/report/report-gnome/gncmod-report-gnome.c,
 	  trunk/src/report/report-system/gncmod-report-system.c:
-	  Regularize capitalization of the word 'GnuCash'.
+	  Regularize capitalization of the word 'systecash'.
 
 2006-03-23 20:42  warlord
 
@@ -12360,21 +12360,21 @@
 2006-03-23 00:42  hampton
 
 	* [r13685] trunk/ChangeLog,
-	  trunk/accounts/C/acctchrt_common.gnucash-xea,
-	  trunk/accounts/da/acctchrt_common.gnucash-xea,
-	  trunk/accounts/de_CH/acctchrt_common.gnucash-xea,
-	  trunk/accounts/de_DE/acctchrt_common.gnucash-xea,
-	  trunk/accounts/el_GR/acctchrt_common.gnucash-xea,
-	  trunk/accounts/es_ES/acctchrt_common.gnucash-xea,
-	  trunk/accounts/fr_FR/acctchrt_common.gnucash-xea,
-	  trunk/accounts/hu_HU/acctchrt_common.gnucash-xea,
-	  trunk/accounts/it/acctchrt_common.gnucash-xea,
-	  trunk/accounts/ja_JP.EUC/acctchrt_common.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_common.gnucash-xea,
-	  trunk/accounts/pt_BR/acctchrt_common.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_common.gnucash-xea,
-	  trunk/accounts/sk/acctchrt_common.gnucash-xea,
-	  trunk/accounts/tr_TR/acctchrt_common.gnucash-xea: Mark all
+	  trunk/accounts/C/acctchrt_common.systecash-xea,
+	  trunk/accounts/da/acctchrt_common.systecash-xea,
+	  trunk/accounts/de_CH/acctchrt_common.systecash-xea,
+	  trunk/accounts/de_DE/acctchrt_common.systecash-xea,
+	  trunk/accounts/el_GR/acctchrt_common.systecash-xea,
+	  trunk/accounts/es_ES/acctchrt_common.systecash-xea,
+	  trunk/accounts/fr_FR/acctchrt_common.systecash-xea,
+	  trunk/accounts/hu_HU/acctchrt_common.systecash-xea,
+	  trunk/accounts/it/acctchrt_common.systecash-xea,
+	  trunk/accounts/ja_JP.EUC/acctchrt_common.systecash-xea,
+	  trunk/accounts/nb/acctchrt_common.systecash-xea,
+	  trunk/accounts/pt_BR/acctchrt_common.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_common.systecash-xea,
+	  trunk/accounts/sk/acctchrt_common.systecash-xea,
+	  trunk/accounts/tr_TR/acctchrt_common.systecash-xea: Mark all
 	  common account sets to be initially selected when creating a new
 	  file.
 	* [r13684] trunk/src/gnome/dialog-new-user.c,
@@ -12444,7 +12444,7 @@
 
 2006-03-20 02:08  wilddev
 
-	* [r13674] tags/1.9.3: Tagging the 1.9.3 release of GnuCash
+	* [r13674] tags/1.9.3: Tagging the 1.9.3 release of systecash
 
 2006-03-20 02:07  wilddev
 
@@ -12941,8 +12941,8 @@
 	  trunk/src/register/ledger-core/split-register-control.c,
 	  trunk/src/register/ledger-core/split-register.c,
 	  trunk/src/register/ledger-core/split-register.h,
-	  trunk/src/register/register-gnome/gnucash-sheet.c,
-	  trunk/src/register/register-gnome/gnucash-sheet.h: Replace the
+	  trunk/src/register/register-gnome/systecash-sheet.c,
+	  trunk/src/register/register-gnome/systecash-sheet.h: Replace the
 	  changes in r13361 with a better method for determining when a
 	  change in the register needs to be reflected in the available
 	  user actions. Now updates the Void and Unvoid actions which
@@ -12952,8 +12952,8 @@
 
 	* [r13609] trunk/ChangeLog,
 	  trunk/src/register/register-gnome/combocell-gnome.c,
-	  trunk/src/register/register-gnome/gnucash-item-list.c,
-	  trunk/src/register/register-gnome/gnucash-item-list.h: Finish
+	  trunk/src/register/register-gnome/systecash-item-list.c,
+	  trunk/src/register/register-gnome/systecash-item-list.h: Finish
 	  removing the redundant list of valid strings maintained by the
 	  combocell and use the list in the item_edit widget. Fixes the
 	  problem where account cell contents disappear when focusing
@@ -13114,7 +13114,7 @@
 2006-03-10 11:04  cstim
 
 	* [r13583] trunk/ChangeLog, trunk/configure.in,
-	  trunk/src/gnome-utils/dialog-utils.c: Gnucash replaced
+	  trunk/src/gnome-utils/dialog-utils.c: systecash replaced
 	  dlopen/dlsym by the g_module functions, so don't error out if
 	  they are unavailable; dlsym is needed only optionally for BSD
 	  linkers. Also removes quotation error in AC_MSG_ERROR macro.
@@ -13234,8 +13234,8 @@
 	  trunk/src/optional/xsl/Makefile.am,
 	  trunk/src/optional/xsl/README,
 	  trunk/src/optional/xsl/date-time.xsl,
-	  trunk/src/optional/xsl/gnucash-gnccustomer-vcard2.xsl,
-	  trunk/src/optional/xsl/gnucash-std.xsl,
+	  trunk/src/optional/xsl/systecash-gnccustomer-vcard2.xsl,
+	  trunk/src/optional/xsl/systecash-std.xsl,
 	  trunk/src/optional/xsl/string.xsl,
 	  trunk/src/optional/xsl/vcard-gnccustomer.pl: Optional XSL
 	  stylesheets and support - prototypes
@@ -13344,7 +13344,7 @@
 2006-03-09 09:39  cstim
 
 	* [r13551] trunk/Makefile.am: Add creation rules for
-	  po/gnucash.pot so that it can always be created for make dist.
+	  po/systecash.pot so that it can always be created for make dist.
 
 2006-03-09 06:08  hampton
 
@@ -13493,7 +13493,7 @@
 	  trunk/src/backend/postgres/test/test-period.c,
 	  trunk/src/backend/postgres/txn.c,
 	  trunk/src/backend/postgres/txnmass.c,
-	  trunk/src/bin/gnucash-bin.c, trunk/src/engine/Transaction.c,
+	  trunk/src/bin/systecash-bin.c, trunk/src/engine/Transaction.c,
 	  trunk/src/engine/gnc-engine.c,
 	  trunk/src/engine/test/test-period.c,
 	  trunk/src/gnome-utils/account-quickfill.c,
@@ -13616,13 +13616,13 @@
 	  trunk/src/register/ledger-core/split-register.h,
 	  trunk/src/register/register-core/combocell.h,
 	  trunk/src/register/register-gnome/combocell-gnome.c,
-	  trunk/src/register/register-gnome/gnucash-item-edit.c,
-	  trunk/src/register/register-gnome/gnucash-item-edit.h,
-	  trunk/src/register/register-gnome/gnucash-item-list.c,
-	  trunk/src/register/register-gnome/gnucash-item-list.h: The
+	  trunk/src/register/register-gnome/systecash-item-edit.c,
+	  trunk/src/register/register-gnome/systecash-item-edit.h,
+	  trunk/src/register/register-gnome/systecash-item-list.c,
+	  trunk/src/register/register-gnome/systecash-item-list.h: The
 	  account quickfill has multiple components to it, only one of
 	  which was shared. Build and use a shared list store used by the
-	  gnucash_item_edit widget (which is updated by signals sent when
+	  systecash_item_edit widget (which is updated by signals sent when
 	  accounts are added/deleted/modified.) With this in place, its
 	  not necessary to rebuild two account quickfills for each open
 	  register window when a gnc_gui_resume_refresh is called which
@@ -13704,7 +13704,7 @@
 
 2006-03-07 20:50  cstim
 
-	* [r13520] trunk/ChangeLog, trunk/Makefile.am: Add po/gnucash.pot
+	* [r13520] trunk/ChangeLog, trunk/Makefile.am: Add po/systecash.pot
 	  to EXTRA_DIST because the translation template is needed in the
 	  tarball for translators.
 
@@ -13771,7 +13771,7 @@
 	* [r13510] trunk/src/register/ledger-core/split-register-load.c,
 	  trunk/src/register/register-core/table-allgui.c,
 	  trunk/src/register/register-core/table-allgui.h,
-	  trunk/src/register/register-gnome/gnucash-item-edit.c: Minor
+	  trunk/src/register/register-gnome/systecash-item-edit.c: Minor
 	  code factoring, line-wraps, control-flow simplifications, etc.
 	  centered around split-register-load.c.
 
@@ -13796,7 +13796,7 @@
 
 2006-03-07 00:39  jsled
 
-	* [r13506] trunk/ChangeLog, trunk/packaging/gnucash-1.9.x.ebuild:
+	* [r13506] trunk/ChangeLog, trunk/packaging/systecash-1.9.x.ebuild:
 	  Mods for ebuild to be used as an SVN ebuild.
 
 2006-03-07 00:27  chris
@@ -13836,7 +13836,7 @@
 
 2006-03-06 01:45  wilddev
 
-	* [r13500] tags/1.9.2: Tagging the 1.9.2 release of GnuCash
+	* [r13500] tags/1.9.2: Tagging the 1.9.2 release of systecash
 
 2006-03-06 01:44  wilddev
 
@@ -13855,7 +13855,7 @@
 	* [r13497] trunk/ChangeLog, trunk/src/engine/Split.c,
 	  trunk/src/engine/Transaction.c: Use utf8 collation routines when
 	  sorting splits in a register. Also, only sort on the date of
-	  transactions (not date and time) since gnucash doesn't allow
+	  transactions (not date and time) since systecash doesn't allow
 	  times to be input. Fixes #127809.
 
 2006-03-05 20:24  warlord
@@ -13887,7 +13887,7 @@
 
 2006-03-05 18:50  jsled
 
-	* [r13491] trunk/ChangeLog, trunk/packaging/gnucash-1.9.x.ebuild:
+	* [r13491] trunk/ChangeLog, trunk/packaging/systecash-1.9.x.ebuild:
 	  Add checks for libgsf and goffice being built_with_use gnome.
 	  Add code to shutdown any user-level gconfd's running. Add note
 	  about broken make_desktop_entry. Expand range of README installs.
@@ -14050,7 +14050,7 @@
 	  trunk/src/engine/Account.c,
 	  trunk/src/gnome-utils/dialog-preferences.c,
 	  trunk/src/gnome-utils/glade/preferences.glade,
-	  trunk/src/gnome/schemas/apps_gnucash_general.schemas.in: Update
+	  trunk/src/gnome/schemas/apps_systecash_general.schemas.in: Update
 	  the preferences dialog to allow any unicode character as the
 	  separator.
 
@@ -14251,9 +14251,9 @@
 2006-03-02 20:55  cstim
 
 	* [r13437] trunk/ChangeLog,
-	  trunk/accounts/el_GR/acctchrt_brokerage.gnucash-xea,
-	  trunk/accounts/el_GR/acctchrt_carloan.gnucash-xea,
-	  trunk/accounts/el_GR/acctchrt_common.gnucash-xea: Greek account
+	  trunk/accounts/el_GR/acctchrt_brokerage.systecash-xea,
+	  trunk/accounts/el_GR/acctchrt_carloan.systecash-xea,
+	  trunk/accounts/el_GR/acctchrt_common.systecash-xea: Greek account
 	  templates converted to UTF-8, by Nikos Charonitakis
 	  <nikosx@gmail.com>.
 
@@ -14353,7 +14353,7 @@
 
 2006-02-28 23:13  jsled
 
-	* [r13427] trunk/ChangeLog, trunk/src/bin/gnucash-bin.c: Terminate
+	* [r13427] trunk/ChangeLog, trunk/src/bin/systecash-bin.c: Terminate
 	  GOptionEntry array, preventing warnings and/or errors parsing
 	  command-line options.
 
@@ -14524,9 +14524,9 @@
 
 2006-02-26 21:08  hampton
 
-	* [r13405] trunk/gentoo/gnucash-1.9.x.ebuild,
+	* [r13405] trunk/gentoo/systecash-1.9.x.ebuild,
 	  trunk/packaging/README, trunk/packaging/README.RPM,
-	  trunk/packaging/gnucash-1.9.x.ebuild: Move a couple of ditro
+	  trunk/packaging/systecash-1.9.x.ebuild: Move a couple of ditro
 	  specific files.
 
 2006-02-26 21:05  hampton
@@ -14665,10 +14665,10 @@
 	  trunk/src/gnome-utils/gnc-main-window.c,
 	  trunk/src/gnome-utils/gnc-plugin-page.h,
 	  trunk/src/gnome/gnc-plugin-page-register.c,
-	  trunk/src/register/register-gnome/gnucash-item-edit.c,
-	  trunk/src/register/register-gnome/gnucash-item-edit.h,
-	  trunk/src/register/register-gnome/gnucash-sheet.c,
-	  trunk/src/register/register-gnome/gnucash-sheet.h: Provide the
+	  trunk/src/register/register-gnome/systecash-item-edit.c,
+	  trunk/src/register/register-gnome/systecash-item-edit.h,
+	  trunk/src/register/register-gnome/systecash-sheet.c,
+	  trunk/src/register/register-gnome/systecash-sheet.h: Provide the
 	  right edit menu sensitivity for the register page.
 
 2006-02-24 22:58  hampton
@@ -14755,7 +14755,7 @@
 2006-02-24 02:57  jsled
 
 	* [r13374] trunk/ChangeLog, trunk/gentoo,
-	  trunk/gentoo/gnucash-1.9.x.ebuild: Add ebuild for gnucash
+	  trunk/gentoo/systecash-1.9.x.ebuild: Add ebuild for systecash
 	  1.9/2.0 series.
 
 2006-02-24 02:54  jsled
@@ -14776,7 +14776,7 @@
 2006-02-23 22:25  hampton
 
 	* [r13370] trunk/doc/Makefile.am: Add the example
-	  gtkrc-2.0.gnucash file to the tarball.
+	  gtkrc-2.0.systecash file to the tarball.
 
 2006-02-23 20:11  chris
 
@@ -14859,7 +14859,7 @@
 
 2006-02-22 03:30  chris
 
-	* [r13358] trunk/src/bin/gnucash-bin.c,
+	* [r13358] trunk/src/bin/systecash-bin.c,
 	  trunk/src/gnome-utils/gnc-file.c: No need to run the BOOK_OPENED
 	  hook twice when open a book. And no need to run it at all when
 	  we fail to open a book. Also, require HAVE_GTK26 before using
@@ -14893,7 +14893,7 @@
 	  trunk/src/gnome-utils/gnc-main-window.c,
 	  trunk/src/gnome-utils/gnc-tree-view-account.c: Remove uses of
 	  deprecated qof_session_get_current_session() and
-	  qof_session_set_current_session(). GnuCash now manages its own
+	  qof_session_set_current_session(). systecash now manages its own
 	  current session. New function: gnc_current_session_exist() to
 	  test whether there is a current session.
 
@@ -14980,13 +14980,13 @@
 2006-02-21 05:14  hampton
 
 	* [r13340] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-date-picker.c: Andreas
+	  trunk/src/register/register-gnome/systecash-date-picker.c: Andreas
 	  Köhler's patch to prevent a crash in the register date picker
 	  widget when using gtk 2.8.
 
 2006-02-21 03:44  hampton
 
-	* [r13339] trunk/ChangeLog, trunk/src/bin/gnucash-bin.c,
+	* [r13339] trunk/ChangeLog, trunk/src/bin/systecash-bin.c,
 	  trunk/src/gnome-utils/dialog-commodity.c,
 	  trunk/src/gnome-utils/glade/commodity.glade,
 	  trunk/src/gnome/dialog-price-edit-db.c: Disable quote related
@@ -15018,7 +15018,7 @@
 2006-02-20 22:02  hampton
 
 	* [r13334] trunk/ChangeLog, trunk/rpm/README,
-	  trunk/rpm/gnucash.spec.in: Update spec file from RH8 to FC4.
+	  trunk/rpm/systecash.spec.in: Update spec file from RH8 to FC4.
 
 2006-02-20 22:00  hampton
 
@@ -15070,7 +15070,7 @@
 
 	* [r13328] trunk/src/gtk-compat.h,
 	  trunk/src/import-export/hbci/dialog-hbcitrans.c,
-	  trunk/src/register/register-gnome/gnucash-item-list.c: Factor
+	  trunk/src/register/register-gnome/systecash-item-list.c: Factor
 	  out a compat definition of
 	  GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID into gtk-compat.h.
 
@@ -15127,7 +15127,7 @@
 2006-02-20 16:02  hampton
 
 	* [r13319] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-sheet.c: If the number
+	  trunk/src/register/register-gnome/systecash-sheet.c: If the number
 	  of "visible to the user" lines in the register has shrunk, force
 	  the parent widget to redraw. This fixes #328787.
 
@@ -15140,7 +15140,7 @@
 
 2006-02-20 03:19  wilddev
 
-	* [r13315] tags/1.9.1: Tagging the 1.9.1 release of GnuCash
+	* [r13315] tags/1.9.1: Tagging the 1.9.1 release of systecash
 
 2006-02-20 03:16  wilddev
 
@@ -15337,9 +15337,9 @@
 2006-02-18 05:18  hampton
 
 	* [r13288] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-item-edit.c,
-	  trunk/src/register/register-gnome/gnucash-item-edit.h,
-	  trunk/src/register/register-gnome/gnucash-sheet.c: Remove all
+	  trunk/src/register/register-gnome/systecash-item-edit.c,
+	  trunk/src/register/register-gnome/systecash-item-edit.h,
+	  trunk/src/register/register-gnome/systecash-sheet.c: Remove all
 	  explicit claiming of the selection in these files. The GtkEntry
 	  they use already performs claims, and the additional just mess
 	  things up. Fixes #330153.
@@ -15356,7 +15356,7 @@
 	  trunk/src/gnome-utils/gnc-tree-model-commodity.c,
 	  trunk/src/gnome-utils/gnc-tree-model-price.c,
 	  trunk/src/gnome-utils/gnc-tree-view-account.c,
-	  trunk/src/register/register-gnome/gnucash-item-list.c,
+	  trunk/src/register/register-gnome/systecash-item-list.c,
 	  trunk/src/report/report-gnome/dialog-style-sheet.c: Prepare for
 	  gtk change that will issue warnings if the return value of the
 	  gtk_tree_model iter functions are not used.
@@ -15569,23 +15569,23 @@
 2006-02-14 21:03  cstim
 
 	* [r13262] trunk/ChangeLog,
-	  trunk/src/business/business-gnome/schemas/apps_gnucash_dialog_business_common.schemas.in,
-	  trunk/src/gnome-utils/schemas/apps_gnucash_history.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_commodities.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_common.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_prices.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_print_checks.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_reconcile.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_totd.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_general.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_warnings.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_window_pages_account_tree.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_window_pages_register.schemas.in,
-	  trunk/src/import-export/hbci/schemas/apps_gnucash_dialog_hbci.schemas.in,
-	  trunk/src/import-export/schemas/apps_gnucash_import_generic_matcher.schemas.in:
+	  trunk/src/business/business-gnome/schemas/apps_systecash_dialog_business_common.schemas.in,
+	  trunk/src/gnome-utils/schemas/apps_systecash_history.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_commodities.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_common.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_prices.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_print_checks.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_reconcile.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_totd.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_general.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_warnings.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_window_pages_account_tree.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_window_pages_register.schemas.in,
+	  trunk/src/import-export/hbci/schemas/apps_systecash_dialog_hbci.schemas.in,
+	  trunk/src/import-export/schemas/apps_systecash_import_generic_matcher.schemas.in:
 	  Make the gconf key wordings consistent across all of our schemas
 	  files, as discussed and prepared on
-	  http://wiki.gnucash.org/wiki/GConf_Wording .
+	  http://wiki.systecash.org/wiki/GConf_Wording .
 
 2006-02-14 19:58  cstim
 
@@ -15683,8 +15683,8 @@
 2006-02-12 22:19  warlord
 
 	* [r13246] trunk/ChangeLog, trunk/src/gnome/Makefile.am,
-	  trunk/src/gnome/gnucash.desktop.in: Christian Neumair's desktop
-	  patch (#145545) * src/gnome/gnucash.desktop.in *
+	  trunk/src/gnome/systecash.desktop.in: Christian Neumair's desktop
+	  patch (#145545) * src/gnome/systecash.desktop.in *
 	  src/gnome/Makefile.am Make the desktop more HIG-compliant.
 
 2006-02-12 22:09  warlord
@@ -16006,13 +16006,13 @@
 
 2006-02-10 05:44  hampton
 
-	* [r13192] trunk/ChangeLog, trunk/src/bin/gnucash-bin.c: Pass argc
+	* [r13192] trunk/ChangeLog, trunk/src/bin/systecash-bin.c: Pass argc
 	  by reference instead of value so g_option_parse_context can
 	  update it.
 
 2006-02-10 04:17  hampton
 
-	* [r13191] trunk/ChangeLog, trunk/src/bin/gnucash-bin.c: Don't
+	* [r13191] trunk/ChangeLog, trunk/src/bin/systecash-bin.c: Don't
 	  initialize the display at option parsing time. This way
 	  --add-price-quotes can run from a cron job.
 
@@ -16065,11 +16065,11 @@
 
 2006-02-09 05:56  warlord
 
-	* [r13169] tags/gnucash-1-9-0: removing broken 1.9.0 release tag
+	* [r13169] tags/systecash-1-9-0: removing broken 1.9.0 release tag
 
 2006-02-09 05:41  wilddev
 
-	* [r13168] tags/1-9-0: Tagging the 1.9.0 release of GnuCash
+	* [r13168] tags/1-9-0: Tagging the 1.9.0 release of systecash
 
 2006-02-09 05:23  chris
 
@@ -16120,7 +16120,7 @@
 
 2006-02-09 04:27  wilddev
 
-	* [r13159] tags/gnucash-1-9-0: Tagging the 1.9.0 release of GnuCash
+	* [r13159] tags/systecash-1-9-0: Tagging the 1.9.0 release of systecash
 
 2006-02-09 04:17  chris
 
@@ -16244,7 +16244,7 @@
 
 2006-02-07 19:52  chris
 
-	* [r13140] trunk/src/bin/gnucash-bin.c: Recompute argc after argv
+	* [r13140] trunk/src/bin/systecash-bin.c: Recompute argc after argv
 	  may have changed.
 
 2006-02-07 04:47  hampton
@@ -16259,7 +16259,7 @@
 
 2006-02-07 03:59  hampton
 
-	* [r13138] trunk/ChangeLog, trunk/src/bin/gnucash-bin.c: Fix some
+	* [r13138] trunk/ChangeLog, trunk/src/bin/systecash-bin.c: Fix some
 	  issues when invoking from a non-utf8, non latin1 locale. Use
 	  g_print to print to the console. Convert from popt to g_options
 	  for glib >= 2.6.
@@ -16267,8 +16267,8 @@
 2006-02-07 01:56  hampton
 
 	* [r13137] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-grid.c,
-	  trunk/src/register/register-gnome/gnucash-item-edit.c: Scott
+	  trunk/src/register/register-gnome/systecash-grid.c,
+	  trunk/src/register/register-gnome/systecash-item-edit.c: Scott
 	  Oonk' patch to fix a couple of problems with right justified
 	  cells in the register.
 
@@ -16354,7 +16354,7 @@
 
 2006-02-05 20:59  codehelp
 
-	* [r13125] trunk/configure.in: Allowing gnucash to build on a
+	* [r13125] trunk/configure.in: Allowing systecash to build on a
 	  vanilla FC3 install
 
 2006-02-05 20:38  warlord
@@ -16453,7 +16453,7 @@
 
 	* [r13108] trunk/ChangeLog,
 	  trunk/src/gnome-utils/gnc-tree-view-account.c,
-	  trunk/src/register/ledger-core/split-register.c: Get gnucash to
+	  trunk/src/register/ledger-core/split-register.c: Get systecash to
 	  compile with gcc4.1.
 
 2006-02-05 01:41  warlord
@@ -16465,13 +16465,13 @@
 
 2006-02-05 00:16  jsled
 
-	* [r13106] trunk/src/doc/xml/gnucash-v2.rnc: fix gnc:numeric
+	* [r13106] trunk/src/doc/xml/systecash-v2.rnc: fix gnc:numeric
 	  lexical range.
 
 2006-02-04 23:56  jsled
 
 	* [r13105] trunk/ChangeLog, trunk/src/backend/file/io-gncxml-v2.c,
-	  trunk/src/doc/xml/gnucash-v2.rnc: Emit all used namespaces; add
+	  trunk/src/doc/xml/systecash-v2.rnc: Emit all used namespaces; add
 	  XML datafile schema.
 
 2006-02-04 22:44  hampton
@@ -16687,8 +16687,8 @@
 
 2006-02-02 18:47  chris
 
-	* [r13079] trunk/Makefile.am, trunk/make-gnucash-potfiles.in:
-	  Allow make-gnucash-potfiles to run from directories other than
+	* [r13079] trunk/Makefile.am, trunk/make-systecash-potfiles.in:
+	  Allow make-systecash-potfiles to run from directories other than
 	  srcdir. Better documentation of exactly what m-g-potfiles
 	  excludes, and a general clean-up of the script.
 
@@ -16790,7 +16790,7 @@
 
 2006-02-01 20:32  chris
 
-	* [r13066] trunk/make-gnucash-potfiles.in: When generating
+	* [r13066] trunk/make-systecash-potfiles.in: When generating
 	  POTFILES.in, don't include files we don't want to translate.
 
 2006-02-01 20:30  chris
@@ -17016,11 +17016,11 @@
 
 	* [r13035] trunk/ChangeLog, trunk/src/gnome/dialog-sxsincelast.c,
 	  trunk/src/report/report-gnome/report-gnome.scm,
-	  trunk/src/report/utility-reports/welcome-to-gnucash.scm: SX
+	  trunk/src/report/utility-reports/welcome-to-systecash.scm: SX
 	  Since-Last-Run now reports transaction-creation errors to the
 	  user, degrades (somewhat) gracefully; report cleanup. 2006-01-29
 	  Joshua Sled <jsled@asynchronous.org> *
-	  src/report/utility-reports/welcome-to-gnucash.scm: register menu
+	  src/report/utility-reports/welcome-to-systecash.scm: register menu
 	  item for self. * src/report/report-gnome/report-gnome.scm
 	  (gnc:report-menu-setup): Remove report menu-item creation. *
 	  src/gnome/dialog-sxsincelast.c (create_each_transaction_helper):
@@ -17053,7 +17053,7 @@
 2006-01-29 17:49  codehelp
 
 	* [r13027] trunk/lib/libqof/qof/qoflog.c,
-	  trunk/src/bin/gnucash-bin.c, trunk/src/engine/gnc-engine.c,
+	  trunk/src/bin/systecash-bin.c, trunk/src/engine/gnc-engine.c,
 	  trunk/src/engine/gnc-engine.h: reverting r12999 and implementing
 	  a set of default log modules
 
@@ -17102,7 +17102,7 @@
 	  trunk/src/gnome/dialog-commodities.c,
 	  trunk/src/gnome/dialog-price-edit-db.c,
 	  trunk/src/gnome/gnc-split-reg.c,
-	  trunk/src/gnome/schemas/apps_gnucash_warnings.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_warnings.schemas.in,
 	  trunk/src/import-export/hbci/dialog-pass.c,
 	  trunk/src/register/ledger-core/split-register-control.c,
 	  trunk/src/register/ledger-core/split-register-model.c,
@@ -17161,7 +17161,7 @@
 2006-01-28 23:22  hampton
 
 	* [r13013] trunk/ChangeLog, trunk/src/gnome-utils/print-session.h:
-	  Add an include so gnucash compiles on gnome2.13 again.
+	  Add an include so systecash compiles on gnome2.13 again.
 
 2006-01-28 22:42  jsled
 
@@ -17237,7 +17237,7 @@
 
 2006-01-28 18:57  cstim
 
-	* [r13004] trunk/src/bin/gnucash-bin.c: I18n string cleanup; add
+	* [r13004] trunk/src/bin/systecash-bin.c: I18n string cleanup; add
 	  explanations for translators
 
 2006-01-28 18:57  jsled
@@ -17246,7 +17246,7 @@
 	  trunk/lib/goffice-0.0.4/goffice/Makefile.am,
 	  trunk/lib/libgsf-1.12.3/gsf-gnome/Makefile.am,
 	  trunk/lib/libgsf-1.12.3/gsf/Makefile.am: Change libgsf/goffice
-	  libraries and paths to be gnucash-specific.
+	  libraries and paths to be systecash-specific.
 
 2006-01-28 18:45  jsled
 
@@ -17275,7 +17275,7 @@
 2006-01-28 17:17  chris
 
 	* [r12999] trunk/lib/libqof/qof/qoflog.c: Re-enable logging for
-	  GnuCash modules that haven't explicitly set their own levels.
+	  systecash modules that haven't explicitly set their own levels.
 
 2006-01-28 12:30  cstim
 
@@ -17305,8 +17305,8 @@
 
 2006-01-28 02:23  chris
 
-	* [r12994] trunk/gnucash.m4: Remove traces of old
-	  gnucash-run-script from gnucash.m4.
+	* [r12994] trunk/systecash.m4: Remove traces of old
+	  systecash-run-script from systecash.m4.
 
 2006-01-27 23:03  chris
 
@@ -17408,7 +17408,7 @@
 	  trunk/src/report/report-system/report-system.scm,
 	  trunk/src/report/report-system/report.scm,
 	  trunk/src/report/utility-reports/view-column.scm,
-	  trunk/src/report/utility-reports/welcome-to-gnucash.scm,
+	  trunk/src/report/utility-reports/welcome-to-systecash.scm,
 	  trunk/src/scm/main-window.scm, trunk/src/scm/main.scm: Move the
 	  global report hash-table from guile to C. Move the
 	  book-open/close hooks from guile to C. There are several places
@@ -17446,16 +17446,16 @@
 
 	* [r12980] trunk/src/bin/Makefile.am,
 	  trunk/src/bin/overrides/Makefile.am,
-	  trunk/src/bin/overrides/gnucash-run-script,
+	  trunk/src/bin/overrides/systecash-run-script,
 	  trunk/src/bin/test/Makefile.am,
 	  trunk/src/bin/test/test-run-script, trunk/src/scm/main.scm:
-	  Remove the obsolete gnucash-run-script and its test. Also, the
-	  (gnucash main) module no longer depends on (gnucash
+	  Remove the obsolete systecash-run-script and its test. Also, the
+	  (systecash main) module no longer depends on (systecash
 	  price-quotes).
 
 2006-01-26 03:07  chris
 
-	* [r12979] trunk/src/bin/gnucash-bin.c,
+	* [r12979] trunk/src/bin/systecash-bin.c,
 	  trunk/src/gnome-utils/Makefile.am,
 	  trunk/src/gnome-utils/dialog-totd.c,
 	  trunk/src/gnome-utils/dialog-totd.h,
@@ -17468,14 +17468,14 @@
 
 2006-01-25 04:54  chris
 
-	* [r12978] trunk/src/bin/gnucash-bin.c, trunk/src/scm/main.scm,
+	* [r12978] trunk/src/bin/systecash-bin.c, trunk/src/scm/main.scm,
 	  trunk/src/scm/price-quotes.scm: Install price quote sources
 	  without calling main.scm. This makes the startup sequence a
 	  little clearer.
 
 2006-01-25 04:32  chris
 
-	* [r12977] trunk/src/bin/gnucash-bin.c,
+	* [r12977] trunk/src/bin/systecash-bin.c,
 	  trunk/src/report/report-gnome/report-gnome.scm,
 	  trunk/src/scm/command-line.scm, trunk/src/scm/doc.scm,
 	  trunk/src/scm/main.scm: Re-enable report menu setup. The report
@@ -17499,7 +17499,7 @@
 
 2006-01-25 01:36  chris
 
-	* [r12975] trunk/src/bin/gnucash-bin.c,
+	* [r12975] trunk/src/bin/systecash-bin.c,
 	  trunk/src/business/business-gnome/business-gnome.scm,
 	  trunk/src/gnome-utils/gnc-gnome-utils.c,
 	  trunk/src/gnome-utils/gnc-gnome-utils.h,
@@ -17518,7 +17518,7 @@
 
 2006-01-25 01:21  chris
 
-	* [r12974] trunk/src/bin/gnucash-bin.c,
+	* [r12974] trunk/src/bin/systecash-bin.c,
 	  trunk/src/core-utils/gnc-main.c,
 	  trunk/src/core-utils/gnc-main.h,
 	  trunk/src/gnome-utils/gnc-main-window.c: Process --debug
@@ -17555,8 +17555,8 @@
 2006-01-23 21:26  cstim
 
 	* [r12968]
-	  trunk/src/business/business-gnome/schemas/apps_gnucash_dialog_business_common.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_print_checks.schemas.in:
+	  trunk/src/business/business-gnome/schemas/apps_systecash_dialog_business_common.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_print_checks.schemas.in:
 	  fix typos in strings
 
 2006-01-23 21:25  chris
@@ -17576,7 +17576,7 @@
 
 2006-01-23 19:29  chris
 
-	* [r12964] trunk/src/bin/Makefile.am, trunk/src/bin/gnucash-bin.c:
+	* [r12964] trunk/src/bin/Makefile.am, trunk/src/bin/systecash-bin.c:
 	  Avoid GUI initialization durring --add-price-quotes, fixes
 	  #327670 BTW, it turns out that we don't need to call gtk_init().
 	  It's called during the LIBGNOMEUI_MODULE initializtion from
@@ -17605,7 +17605,7 @@
 
 2006-01-23 17:38  chris
 
-	* [r12956] trunk/src/bin/gnucash-bin.c,
+	* [r12956] trunk/src/bin/systecash-bin.c,
 	  trunk/src/gnome/Makefile.am, trunk/src/gnome/gw-gnc-spec.scm,
 	  trunk/src/gnome/top-level.c, trunk/src/gnome/top-level.h,
 	  trunk/src/scm/Makefile.am, trunk/src/scm/build-config.scm.in,
@@ -17618,7 +17618,7 @@
 	  simpilification of main.scm. Initialize the gui and enter the
 	  gtk event-loop from C. Even though there's some more clean-up to
 	  do, this patch does mark a certain milestone: A developer
-	  seeking to understand and/or modify GnuCash's startup process
+	  seeking to understand and/or modify systecash's startup process
 	  can now essentially ignore the guile portion. Most parts of our
 	  startup now look pretty typical for a gnome-2 app. The parts
 	  that remain firmly in guile are initialization of the report
@@ -17673,7 +17673,7 @@
 	  trunk/src/import-export/hbci/dialog-hbcitrans.h,
 	  trunk/src/import-export/hbci/gnc-hbci-transfer.c,
 	  trunk/src/register/register-gnome/combocell-gnome.c,
-	  trunk/src/register/register-gnome/gnucash-item-list.c:
+	  trunk/src/register/register-gnome/systecash-item-list.c:
 	  Add/update copyright on files modified since the start of the
 	  year.
 
@@ -17702,8 +17702,8 @@
 	  trunk/src/gnome/dialog-print-check.h,
 	  trunk/src/gnome/glade/print.glade,
 	  trunk/src/gnome/schemas/Makefile.am,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_common.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_print_checks.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_common.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_print_checks.schemas.in,
 	  trunk/src/scm/printing/print-check.scm: Overhaul the print check
 	  dialog. Make HIG changes, and make the dialog remember its state
 	  across invocations (including all the custom values). Fix a
@@ -17716,25 +17716,25 @@
 
 2006-01-23 03:43  chris
 
-	* [r12947] trunk/src/bin/gnucash-bin.c,
+	* [r12947] trunk/src/bin/systecash-bin.c,
 	  trunk/src/scm/command-line.scm, trunk/src/scm/main.scm: Remove
 	  --devel option, which aparently doesn't do anything. Also remove
 	  now unused guile portion of --add-price-quote option.
 
 2006-01-23 03:26  chris
 
-	* [r12946] trunk/src/bin/gnucash-bin.c, trunk/src/scm/main.scm,
+	* [r12946] trunk/src/bin/systecash-bin.c, trunk/src/scm/main.scm,
 	  trunk/src/scm/price-quotes.scm: Process the --add-price-quotes
 	  command-line option from C. This is done by booting guile with a
 	  custom inner_main. Much of the work is still handled by
 	  price-quotes.scm, which is now a true stand-alone guile module
-	  without the circular dependency on the (gnucash main) module.
+	  without the circular dependency on the (systecash main) module.
 	  One caveat: Since the initialization of guile-side debugging
 	  variables is in main.scm, and since main.scm is no longer
 	  executed when running --add-price-quotes, the guile code that
 	  runs during --add-price-quote isn't affected by the --debug
 	  option. A work-around is to use the GNC_DEBUG environment
-	  variable: $ GNC_DEBUG=yes gnucash --add-price-quote myfile In
+	  variable: $ GNC_DEBUG=yes systecash --add-price-quote myfile In
 	  the longer term, we'll either move the debugging aids to a
 	  common place where it can be used by both main.scm and
 	  price-quotes.scm, or we'll get the debugging state from the
@@ -17750,7 +17750,7 @@
 
 2006-01-23 00:47  chris
 
-	* [r12944] trunk/src/bin/gnucash-bin.c: Process gnome command-line
+	* [r12944] trunk/src/bin/systecash-bin.c: Process gnome command-line
 	  arguments after our own, so we can provide our own AUTOHELP.
 
 2006-01-23 00:46  chris
@@ -17762,7 +17762,7 @@
 
 2006-01-22 23:12  chris
 
-	* [r12942] trunk/src/bin/gnucash-bin.c,
+	* [r12942] trunk/src/bin/systecash-bin.c,
 	  trunk/src/gnome-utils/gnc-gnome-utils.c,
 	  trunk/src/gnome-utils/gnc-gnome-utils.h,
 	  trunk/src/gnome-utils/gw-gnome-utils-spec.scm,
@@ -17846,8 +17846,8 @@
 
 2006-01-21 19:57  warlord
 
-	* [r12925] trunk/ChangeLog, trunk/src/bin/gnucash-bin.c: *
-	  src/bin/gnucash-bin.c: update splash screen while loading
+	* [r12925] trunk/ChangeLog, trunk/src/bin/systecash-bin.c: *
+	  src/bin/systecash-bin.c: update splash screen while loading
 	  modules. Granted, this has no effect because the splash screen
 	  isn't /UP/ when we're loading the modules. But still, once we
 	  initialize the gnome application earlier this will let us update
@@ -17916,7 +17916,7 @@
 2006-01-21 14:54  cstim
 
 	* [r12919]
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_prices.schemas.in:
+	  trunk/src/gnome/schemas/apps_systecash_dialog_prices.schemas.in:
 	  I18n cleanup; unify meaningless additional strings
 
 2006-01-21 14:50  cstim
@@ -17927,7 +17927,7 @@
 2006-01-21 14:49  cstim
 
 	* [r12917]
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_commodities.schemas.in:
+	  trunk/src/gnome/schemas/apps_systecash_dialog_commodities.schemas.in:
 	  I18n cleanup; unify meaningless additional strings
 
 2006-01-21 14:38  cstim
@@ -17948,15 +17948,15 @@
 2006-01-21 04:45  hampton
 
 	* [r12914] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-item-list.c: Glib 2.9
+	  trunk/src/register/register-gnome/systecash-item-list.c: Glib 2.9
 	  requires GdkEvents to be marked as BOXED instead of POINTER.
 	  Fixes #326056.
 
 2006-01-21 04:12  warlord
 
-	* [r12913] trunk/ChangeLog, trunk/src/bin/gnucash-bin.c,
+	* [r12913] trunk/ChangeLog, trunk/src/bin/systecash-bin.c,
 	  trunk/src/scm/Makefile.am: Continue to load config.auto even if
-	  we find config.user. * src/bin/gnucash-bin.c: Load config.auto
+	  we find config.user. * src/bin/systecash-bin.c: Load config.auto
 	  AND config.user files. Load the .user file first, and then load
 	  the .auto. * src/scm/Makefile.am: paths.scm was removed.
 
@@ -17972,7 +17972,7 @@
 
 2006-01-21 03:50  chris
 
-	* [r12911] trunk/src/bin/Makefile.am, trunk/src/bin/gnucash-bin.c,
+	* [r12911] trunk/src/bin/Makefile.am, trunk/src/bin/systecash-bin.c,
 	  trunk/src/core-utils/Makefile.am,
 	  trunk/src/core-utils/gnc-main.c,
 	  trunk/src/core-utils/gnc-main.h, trunk/src/engine/Makefile.am,
@@ -17989,7 +17989,7 @@
 
 2006-01-20 05:19  chris
 
-	* [r12909] trunk/src/bin/Makefile.am, trunk/src/bin/gnucash-bin.c,
+	* [r12909] trunk/src/bin/Makefile.am, trunk/src/bin/systecash-bin.c,
 	  trunk/src/scm/command-line.scm, trunk/src/scm/main.scm,
 	  trunk/src/scm/path.scm: Move the loading of user and system
 	  config files from guile to C. Remove the "load config" command
@@ -18035,9 +18035,9 @@
 
 2006-01-19 18:43  chris
 
-	* [r12902] trunk/src/bin/gnucash-bin.c,
+	* [r12902] trunk/src/bin/systecash-bin.c,
 	  trunk/src/gnome/top-level.h: Remove "reverse_balance" fucntions
-	  from top-level.h. Add another #include for gnucash-bin.c
+	  from top-level.h. Add another #include for systecash-bin.c
 
 2006-01-19 18:02  chris
 
@@ -18051,7 +18051,7 @@
 2006-01-19 17:58  chris
 
 	* [r12899] trunk/src/app-utils/gncmod-app-utils.c,
-	  trunk/src/bin/gnucash-bin.c: Add hooks just once in app_utils
+	  trunk/src/bin/systecash-bin.c: Add hooks just once in app_utils
 	  module init. Also don't try to load imaginary module.
 
 2006-01-19 17:15  warlord
@@ -18085,8 +18085,8 @@
 
 2006-01-19 05:54  chris
 
-	* [r12882] trunk/src/bin/Makefile.am, trunk/src/bin/gnucash-bin.c,
-	  trunk/src/scm/main.scm: Exit gnucash from C, not guile.
+	* [r12882] trunk/src/bin/Makefile.am, trunk/src/bin/systecash-bin.c,
+	  trunk/src/scm/main.scm: Exit systecash from C, not guile.
 
 2006-01-19 05:18  chris
 
@@ -18096,10 +18096,10 @@
 
 2006-01-19 04:54  warlord
 
-	* [r12880] trunk/ChangeLog, trunk/src/bin/gnucash-bin.c,
+	* [r12880] trunk/ChangeLog, trunk/src/bin/systecash-bin.c,
 	  trunk/src/gnome-utils/Makefile.am,
 	  trunk/src/gnome-utils/gnc-splash.c: Print SVN version
-	  information more often. * src/bin/gnucash-bin.c: *
+	  information more often. * src/bin/systecash-bin.c: *
 	  src/gnome-utils/gnc-splash.c: Always print the SVN version and
 	  build date. Make "development version" based on GNUCASH_SVN *
 	  src/gnome-utils/Makefile.am: Define GNUCASH_SVN whenever the
@@ -18107,7 +18107,7 @@
 
 2006-01-19 04:29  chris
 
-	* [r12879] trunk/src/bin/Makefile.am, trunk/src/bin/gnucash-bin.c,
+	* [r12879] trunk/src/bin/Makefile.am, trunk/src/bin/systecash-bin.c,
 	  trunk/src/scm/command-line.scm, trunk/src/scm/main.scm: Move
 	  "unstable development version" message from guile to C. Remove
 	  crufty guile command-line options.
@@ -18143,7 +18143,7 @@
 
 2006-01-19 02:34  chris
 
-	* [r12874] trunk/src/bin/gnucash-bin.c, trunk/src/scm/main.scm:
+	* [r12874] trunk/src/bin/systecash-bin.c, trunk/src/scm/main.scm:
 	  dlopen() modules from C, instead of from guile
 
 2006-01-19 02:00  chris
@@ -18174,51 +18174,51 @@
 
 2006-01-19 01:26  chris
 
-	* [r12868] trunk/src/bin/gnucash-bin.c: Use popt to automatically
+	* [r12868] trunk/src/bin/systecash-bin.c: Use popt to automatically
 	  generate pretty --usage and --help.
 
 2006-01-19 00:41  hampton
 
 	* [r12864]
-	  trunk/src/business/business-gnome/schemas/apps_gnucash_dialog_business_common.schemas.in:
+	  trunk/src/business/business-gnome/schemas/apps_systecash_dialog_business_common.schemas.in:
 	  Fix a string.
 
 2006-01-19 00:40  hampton
 
-	* [r12863] trunk/ChangeLog, trunk/make-gnucash-potfiles.in,
+	* [r12863] trunk/ChangeLog, trunk/make-systecash-potfiles.in,
 	  trunk/src/business/business-gnome/schemas/Makefile.am,
-	  trunk/src/business/business-gnome/schemas/apps_gnucash_dialog_business_common.schemas,
-	  trunk/src/business/business-gnome/schemas/apps_gnucash_dialog_business_common.schemas.in,
+	  trunk/src/business/business-gnome/schemas/apps_systecash_dialog_business_common.schemas,
+	  trunk/src/business/business-gnome/schemas/apps_systecash_dialog_business_common.schemas.in,
 	  trunk/src/gnome-utils/schemas/Makefile.am,
-	  trunk/src/gnome-utils/schemas/apps_gnucash_history.schemas,
-	  trunk/src/gnome-utils/schemas/apps_gnucash_history.schemas.in,
+	  trunk/src/gnome-utils/schemas/apps_systecash_history.schemas,
+	  trunk/src/gnome-utils/schemas/apps_systecash_history.schemas.in,
 	  trunk/src/gnome/schemas/Makefile.am,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_commodities.schemas,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_commodities.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_common.schemas,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_common.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_prices.schemas,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_prices.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_reconcile.schemas,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_reconcile.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_scheduled_transctions.schemas,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_scheduled_transctions.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_totd.schemas,
-	  trunk/src/gnome/schemas/apps_gnucash_dialog_totd.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_general.schemas,
-	  trunk/src/gnome/schemas/apps_gnucash_general.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_warnings.schemas,
-	  trunk/src/gnome/schemas/apps_gnucash_warnings.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_window_pages_account_tree.schemas,
-	  trunk/src/gnome/schemas/apps_gnucash_window_pages_account_tree.schemas.in,
-	  trunk/src/gnome/schemas/apps_gnucash_window_pages_register.schemas,
-	  trunk/src/gnome/schemas/apps_gnucash_window_pages_register.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_commodities.schemas,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_commodities.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_common.schemas,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_common.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_prices.schemas,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_prices.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_reconcile.schemas,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_reconcile.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_scheduled_transctions.schemas,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_scheduled_transctions.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_totd.schemas,
+	  trunk/src/gnome/schemas/apps_systecash_dialog_totd.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_general.schemas,
+	  trunk/src/gnome/schemas/apps_systecash_general.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_warnings.schemas,
+	  trunk/src/gnome/schemas/apps_systecash_warnings.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_window_pages_account_tree.schemas,
+	  trunk/src/gnome/schemas/apps_systecash_window_pages_account_tree.schemas.in,
+	  trunk/src/gnome/schemas/apps_systecash_window_pages_register.schemas,
+	  trunk/src/gnome/schemas/apps_systecash_window_pages_register.schemas.in,
 	  trunk/src/import-export/hbci/schemas/Makefile.am,
-	  trunk/src/import-export/hbci/schemas/apps_gnucash_dialog_hbci.schemas,
-	  trunk/src/import-export/hbci/schemas/apps_gnucash_dialog_hbci.schemas.in,
+	  trunk/src/import-export/hbci/schemas/apps_systecash_dialog_hbci.schemas,
+	  trunk/src/import-export/hbci/schemas/apps_systecash_dialog_hbci.schemas.in,
 	  trunk/src/import-export/schemas/Makefile.am,
-	  trunk/src/import-export/schemas/apps_gnucash_import_generic_matcher.schemas,
-	  trunk/src/import-export/schemas/apps_gnucash_import_generic_matcher.schemas.in:
+	  trunk/src/import-export/schemas/apps_systecash_import_generic_matcher.schemas,
+	  trunk/src/import-export/schemas/apps_systecash_import_generic_matcher.schemas.in:
 	  Rework schema infrastructure so that all schema strings will
 	  appear for translation, and the translations will be
 	  incorporated back into the schema files. Fixed bugs #327507 and
@@ -18239,9 +18239,9 @@
 
 2006-01-18 15:57  warlord
 
-	* [r12840] trunk/src/bin/gnucash-bin.c: Get gnucash-bin to
+	* [r12840] trunk/src/bin/systecash-bin.c: Get systecash-bin to
 	  compile... - Need to #include "config.h" first. - Need to make
-	  gnucash_command_line static.
+	  systecash_command_line static.
 
 2006-01-18 15:49  warlord
 
@@ -18254,7 +18254,7 @@
 
 2006-01-18 03:46  chris
 
-	* [r12838] trunk/src/bin/Makefile.am, trunk/src/bin/gnucash-bin.c:
+	* [r12838] trunk/src/bin/Makefile.am, trunk/src/bin/systecash-bin.c:
 	  Catch --version argument before booting Guile. Also show svn
 	  revision info if binary was built from svn.
 
@@ -18287,8 +18287,8 @@
 
 2006-01-17 02:26  chris
 
-	* [r12816] trunk/src/bin/gnucash-bin.c, trunk/src/scm/main.scm:
-	  Pull the C inner_main into the environment of the guile (gnucash
+	* [r12816] trunk/src/bin/systecash-bin.c, trunk/src/scm/main.scm:
+	  Pull the C inner_main into the environment of the guile (systecash
 	  main) module. Strangely, symbols that are resolved during a
 	  dlopen() *before* calling scm_set_current_module() are not
 	  resolvable from guile code that is inside a module. In order for
@@ -18302,7 +18302,7 @@
 2006-01-17 01:42  chris
 
 	* [r12815] trunk/src/bin/overrides/Makefile.am: Don't distribute
-	  non-existant 'gnucash'
+	  non-existant 'systecash'
 
 2006-01-16 20:30  jsled
 
@@ -18310,7 +18310,7 @@
 	  trunk/lib/libgsf-1.12.3/thumbnailer: Remove unused 'thumbnailer'
 	  directory.
 	* [r12373] trunk/ChangeLog,
-	  trunk/src/register/register-gnome/gnucash-sheet.c: Compatibility
+	  trunk/src/register/register-gnome/systecash-sheet.c: Compatibility
 	  with gtk 2.8, as well, for selection of the auto-completed
 	  region.
 
@@ -18363,12 +18363,12 @@
 	* [r12364] trunk/src/bin/test/Makefile.am,
 	  trunk/src/bin/test/fake-guile,
 	  trunk/src/bin/test/test-guile-env-override: Remove obsolete test
-	  for starting GnuCash with a different guile.
+	  for starting systecash with a different guile.
 
 2006-01-16 03:23  chris
 
 	* [r12363] trunk/src/bin/test/test-version: Fix
-	  src/bin/test/test-version for new gnucash executable.
+	  src/bin/test/test-version for new systecash executable.
 
 2006-01-16 02:43  chris
 
@@ -18461,23 +18461,23 @@
 2006-01-15 23:05  jsled
 
 	* [r12358] trunk/GNOME2_STATUS,
-	  trunk/accounts/C/acctchrt_brokerage.gnucash-xea,
-	  trunk/accounts/C/acctchrt_business.gnucash-xea,
-	  trunk/accounts/C/acctchrt_carloan.gnucash-xea,
-	  trunk/accounts/C/acctchrt_cdmoneymkt.gnucash-xea,
-	  trunk/accounts/C/acctchrt_checkbook.gnucash-xea,
-	  trunk/accounts/C/acctchrt_childcare.gnucash-xea,
-	  trunk/accounts/C/acctchrt_common.gnucash-xea,
-	  trunk/accounts/C/acctchrt_eduloan.gnucash-xea,
-	  trunk/accounts/C/acctchrt_fixedassets.gnucash-xea,
-	  trunk/accounts/C/acctchrt_full.gnucash-xea,
-	  trunk/accounts/C/acctchrt_homeloan.gnucash-xea,
-	  trunk/accounts/C/acctchrt_homeown.gnucash-xea,
-	  trunk/accounts/C/acctchrt_otherloan.gnucash-xea,
-	  trunk/accounts/C/acctchrt_renter.gnucash-xea,
-	  trunk/accounts/C/acctchrt_retiremt.gnucash-xea,
-	  trunk/accounts/C/acctchrt_spouseinc.gnucash-xea,
-	  trunk/accounts/C/acctchrt_spouseretire.gnucash-xea: Add
+	  trunk/accounts/C/acctchrt_brokerage.systecash-xea,
+	  trunk/accounts/C/acctchrt_business.systecash-xea,
+	  trunk/accounts/C/acctchrt_carloan.systecash-xea,
+	  trunk/accounts/C/acctchrt_cdmoneymkt.systecash-xea,
+	  trunk/accounts/C/acctchrt_checkbook.systecash-xea,
+	  trunk/accounts/C/acctchrt_childcare.systecash-xea,
+	  trunk/accounts/C/acctchrt_common.systecash-xea,
+	  trunk/accounts/C/acctchrt_eduloan.systecash-xea,
+	  trunk/accounts/C/acctchrt_fixedassets.systecash-xea,
+	  trunk/accounts/C/acctchrt_full.systecash-xea,
+	  trunk/accounts/C/acctchrt_homeloan.systecash-xea,
+	  trunk/accounts/C/acctchrt_homeown.systecash-xea,
+	  trunk/accounts/C/acctchrt_otherloan.systecash-xea,
+	  trunk/accounts/C/acctchrt_renter.systecash-xea,
+	  trunk/accounts/C/acctchrt_retiremt.systecash-xea,
+	  trunk/accounts/C/acctchrt_spouseinc.systecash-xea,
+	  trunk/accounts/C/acctchrt_spouseretire.systecash-xea: Add
 	  placeholder flags for relevant accounts.
 
 2006-01-15 23:04  jsled
@@ -18509,23 +18509,23 @@
 
 2006-01-14 11:27  cstim
 
-	* [r12353] trunk/accounts/nb/acctchrt_brokerage.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_business.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_carloan.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_cdmoneymkt.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_checkbook.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_childcare.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_common.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_eduloan.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_fixedassets.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_full.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_homeloan.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_homeown.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_otherloan.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_renter.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_retiremt.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_spouseinc.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_spouseretire.gnucash-xea: Updated
+	* [r12353] trunk/accounts/nb/acctchrt_brokerage.systecash-xea,
+	  trunk/accounts/nb/acctchrt_business.systecash-xea,
+	  trunk/accounts/nb/acctchrt_carloan.systecash-xea,
+	  trunk/accounts/nb/acctchrt_cdmoneymkt.systecash-xea,
+	  trunk/accounts/nb/acctchrt_checkbook.systecash-xea,
+	  trunk/accounts/nb/acctchrt_childcare.systecash-xea,
+	  trunk/accounts/nb/acctchrt_common.systecash-xea,
+	  trunk/accounts/nb/acctchrt_eduloan.systecash-xea,
+	  trunk/accounts/nb/acctchrt_fixedassets.systecash-xea,
+	  trunk/accounts/nb/acctchrt_full.systecash-xea,
+	  trunk/accounts/nb/acctchrt_homeloan.systecash-xea,
+	  trunk/accounts/nb/acctchrt_homeown.systecash-xea,
+	  trunk/accounts/nb/acctchrt_otherloan.systecash-xea,
+	  trunk/accounts/nb/acctchrt_renter.systecash-xea,
+	  trunk/accounts/nb/acctchrt_retiremt.systecash-xea,
+	  trunk/accounts/nb/acctchrt_spouseinc.systecash-xea,
+	  trunk/accounts/nb/acctchrt_spouseretire.systecash-xea: Updated
 	  Norwegian account templates by Tor Harald Thorland
 
 2006-01-14 11:25  cstim
@@ -18593,10 +18593,10 @@
 2006-01-13 21:57  warlord
 
 	* [r12345] trunk/ChangeLog, trunk/src/bin/overrides/Makefile.am,
-	  trunk/src/bin/overrides/gnucash,
-	  trunk/src/bin/overrides/gnucash-valgrind: Remove old gnucash and
-	  gnucash-valgrind override scripts. * src/bin/overrides/gnucash *
-	  src/bin/overrides/gnucash-valgrind *
+	  trunk/src/bin/overrides/systecash,
+	  trunk/src/bin/overrides/systecash-valgrind: Remove old systecash and
+	  systecash-valgrind override scripts. * src/bin/overrides/systecash *
+	  src/bin/overrides/systecash-valgrind *
 	  src/bin/overrides/Makefile.am: remove unnecessary override files
 	  that are no longer useful.
 
@@ -18611,7 +18611,7 @@
 
 2006-01-13 21:19  cstim
 
-	* [r12343] trunk/src/bin/gnucash-bin.c: Add comment about why
+	* [r12343] trunk/src/bin/systecash-bin.c: Add comment about why
 	  there is no setlocale in main.
 
 2006-01-13 19:15  codehelp
@@ -18627,9 +18627,9 @@
 2006-01-13 17:41  warlord
 
 	* [r12340] trunk/ChangeLog,
-	  trunk/src/bin/overrides/gnucash-build-env.in: Get GnuCash to run
+	  trunk/src/bin/overrides/systecash-build-env.in: Get systecash to run
 	  out of the build tree again. At least, --version works now. *
-	  src/bin/overrides/gnucash-build-env.in: Change core-utils to a
+	  src/bin/overrides/systecash-build-env.in: Change core-utils to a
 	  gnc-module-dir so it loads both the .scm and the .so properly.
 
 2006-01-13 05:13  chris
@@ -18658,7 +18658,7 @@
 	  trunk/src/app-utils/gnc-gettext-util.h,
 	  trunk/src/app-utils/gw-app-utils-spec.scm,
 	  trunk/src/app-utils/i18n.h.in, trunk/src/bin/Makefile.am,
-	  trunk/src/bin/gnucash-bin.c, trunk/src/bin/i18n.h.in,
+	  trunk/src/bin/systecash-bin.c, trunk/src/bin/i18n.h.in,
 	  trunk/src/scm/main.scm: Move gnu-module init and gettext init
 	  from scm to C. Move i18n.h.in from src/app-utils to src/bin,
 	  where it is used. Remove unneeded gettext init code in
@@ -18686,7 +18686,7 @@
 
 2006-01-12 23:34  jsled
 
-	* [r12333] trunk/GNOME2_STATUS: Add notes from -devel, #gnucash
+	* [r12333] trunk/GNOME2_STATUS: Add notes from -devel, #systecash
 
 2006-01-12 22:47  warlord
 
@@ -18726,7 +18726,7 @@
 2006-01-11 23:07  codehelp
 
 	* [r12327] branches/cashutil/ChangeLog,
-	  branches/cashutil/src/bin/gnucash2.c,
+	  branches/cashutil/src/bin/systecash2.c,
 	  branches/cashutil/src/gnc-module/gnc-module.c,
 	  branches/cashutil/src/gnome-utils: silencing g_messages in
 	  favour of logfile
@@ -18735,7 +18735,7 @@
 
 	* [r12326]
 	  branches/cashutil/src/backend/file/gncmod-backend-file.c,
-	  branches/cashutil/src/bin/gnucash2.c,
+	  branches/cashutil/src/bin/systecash2.c,
 	  branches/cashutil/src/business/business-core/file/gncmod-business-backend-file.c,
 	  branches/cashutil/src/engine/gncmod-engine.c,
 	  branches/cashutil/src/import-export/qif-io-core/gncmod-qifiocore.c:
@@ -18749,7 +18749,7 @@
 	  branches/cashutil/src/Makefile.am,
 	  branches/cashutil/src/app-utils/Makefile.am,
 	  branches/cashutil/src/app-utils/gncmod-app-utils.c,
-	  branches/cashutil/src/bin/gnucash2.c,
+	  branches/cashutil/src/bin/systecash2.c,
 	  branches/cashutil/src/engine/Makefile.am,
 	  branches/cashutil/src/engine/test/Makefile.am,
 	  branches/cashutil/src/gnc-module/Makefile.am,
@@ -18812,7 +18812,7 @@
 
 	* [r12317] trunk/ChangeLog, trunk/src/gnome-utils/gnc-html.c,
 	  trunk/src/gnome/top-level.c,
-	  trunk/src/network-utils/Makefile.am: The gnucash gpg networking
+	  trunk/src/network-utils/Makefile.am: The systecash gpg networking
 	  code isn't called from anywhere. No need to compile it as part
 	  of the build.
 
@@ -18834,10 +18834,10 @@
 	  trunk/src/gnome-utils/dialog-utils.c,
 	  trunk/src/gnome-utils/gnc-dense-cal.c,
 	  trunk/src/gnome-utils/gnc-main-window.c,
-	  trunk/src/register/register-gnome/gnucash-cursor.c,
-	  trunk/src/register/register-gnome/gnucash-grid.c,
-	  trunk/src/register/register-gnome/gnucash-header.c,
-	  trunk/src/register/register-gnome/gnucash-item-edit.c: Replace
+	  trunk/src/register/register-gnome/systecash-cursor.c,
+	  trunk/src/register/register-gnome/systecash-grid.c,
+	  trunk/src/register/register-gnome/systecash-header.c,
+	  trunk/src/register/register-gnome/systecash-item-edit.c: Replace
 	  deprecated functions with their current equivalent.
 
 2006-01-11 02:19  chris
@@ -18847,9 +18847,9 @@
 
 2006-01-10 22:10  warlord
 
-	* [r12312] trunk/ChangeLog, trunk/make-gnucash-potfiles.in: ignore
+	* [r12312] trunk/ChangeLog, trunk/make-systecash-potfiles.in: ignore
 	  dangling symlinks when building po/POTFILES.in *
-	  make-gnucash-potfiles.in: ignore dangling symlinks when building
+	  make-systecash-potfiles.in: ignore dangling symlinks when building
 	  po/POTFILES.in
 
 2006-01-10 21:42  chris
@@ -18861,23 +18861,23 @@
 
 	* [r12310] trunk/ChangeLog, trunk/accounts/Makefile.am,
 	  trunk/accounts/nb, trunk/accounts/nb/Makefile.am,
-	  trunk/accounts/nb/acctchrt_brokerage.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_business.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_carloan.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_cdmoneymkt.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_checkbook.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_childcare.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_common.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_eduloan.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_fixedassets.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_full.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_homeloan.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_homeown.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_otherloan.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_renter.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_retiremt.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_spouseinc.gnucash-xea,
-	  trunk/accounts/nb/acctchrt_spouseretire.gnucash-xea,
+	  trunk/accounts/nb/acctchrt_brokerage.systecash-xea,
+	  trunk/accounts/nb/acctchrt_business.systecash-xea,
+	  trunk/accounts/nb/acctchrt_carloan.systecash-xea,
+	  trunk/accounts/nb/acctchrt_cdmoneymkt.systecash-xea,
+	  trunk/accounts/nb/acctchrt_checkbook.systecash-xea,
+	  trunk/accounts/nb/acctchrt_childcare.systecash-xea,
+	  trunk/accounts/nb/acctchrt_common.systecash-xea,
+	  trunk/accounts/nb/acctchrt_eduloan.systecash-xea,
+	  trunk/accounts/nb/acctchrt_fixedassets.systecash-xea,
+	  trunk/accounts/nb/acctchrt_full.systecash-xea,
+	  trunk/accounts/nb/acctchrt_homeloan.systecash-xea,
+	  trunk/accounts/nb/acctchrt_homeown.systecash-xea,
+	  trunk/accounts/nb/acctchrt_otherloan.systecash-xea,
+	  trunk/accounts/nb/acctchrt_renter.systecash-xea,
+	  trunk/accounts/nb/acctchrt_retiremt.systecash-xea,
+	  trunk/accounts/nb/acctchrt_spouseinc.systecash-xea,
+	  trunk/accounts/nb/acctchrt_spouseretire.systecash-xea,
 	  trunk/configure.in: Add account templates for Norwegian (Bokmal)
 	  language; by Tor Harald Thorland <linux@strigen.com>; not fully
 	  functional so far.
@@ -18912,7 +18912,7 @@
 2006-01-08 22:34  hampton
 
 	* [r12304] trunk/src/import-export/hbci/dialog-hbcitrans.c,
-	  trunk/src/register/register-gnome/gnucash-item-list.c: The
+	  trunk/src/register/register-gnome/systecash-item-list.c: The
 	  GTK2.4 headers are missing a named constant.
 
 2006-01-08 22:31  hampton
@@ -18938,7 +18938,7 @@
 2006-01-08 17:51  codehelp
 
 	* [r12299] trunk/configure.in,
-	  trunk/lib/libqof/backend/file/pilot-qsf-GnuCashInvoice.xml,
+	  trunk/lib/libqof/backend/file/pilot-qsf-systecashInvoice.xml,
 	  trunk/lib/libqof/backend/file/qof-backend-qsf.h,
 	  trunk/lib/libqof/backend/file/qsf-backend.c,
 	  trunk/lib/libqof/backend/file/qsf-xml-map.c,
@@ -19075,7 +19075,7 @@
 2006-01-07 15:48  cstim
 
 	* [r12287] trunk/src/bin/Makefile.am,
-	  trunk/src/bin/gnucash-valgrind.in: Improve valgrind script
+	  trunk/src/bin/systecash-valgrind.in: Improve valgrind script
 
 2006-01-07 15:47  cstim
 
@@ -19112,8 +19112,8 @@
 2006-01-07 06:18  hampton
 
 	* [r12281] trunk/ChangeLog, trunk/src/bin,
-	  trunk/src/bin/Makefile.am, trunk/src/bin/gnucash-valgrind.in:
-	  Add a script to invoke the new gnucash.bin executable via
+	  trunk/src/bin/Makefile.am, trunk/src/bin/systecash-valgrind.in:
+	  Add a script to invoke the new systecash.bin executable via
 	  valgrind.
 
 2006-01-07 06:00  hampton
@@ -19184,42 +19184,42 @@
 
 2006-01-05 15:54  jsled
 
-	* [r12270] trunk/accounts/de_DE/acctchrt_auto.gnucash-xea,
-	  trunk/accounts/de_DE/acctchrt_autoloan.gnucash-xea,
-	  trunk/accounts/de_DE/acctchrt_brokerage.gnucash-xea,
-	  trunk/accounts/de_DE/acctchrt_common.gnucash-xea,
-	  trunk/accounts/de_DE/acctchrt_houseown.gnucash-xea,
-	  trunk/accounts/de_DE/acctchrt_investment.gnucash-xea,
-	  trunk/accounts/de_DE/acctchrt_kids.gnucash-xea,
-	  trunk/accounts/de_DE/acctchrt_otherasset.gnucash-xea,
-	  trunk/accounts/de_DE/acctchrt_otherloan.gnucash-xea,
-	  trunk/accounts/de_DE/acctchrt_skr04.gnucash-xea,
-	  trunk/accounts/de_DE/acctchrt_studium.gnucash-xea,
+	* [r12270] trunk/accounts/de_DE/acctchrt_auto.systecash-xea,
+	  trunk/accounts/de_DE/acctchrt_autoloan.systecash-xea,
+	  trunk/accounts/de_DE/acctchrt_brokerage.systecash-xea,
+	  trunk/accounts/de_DE/acctchrt_common.systecash-xea,
+	  trunk/accounts/de_DE/acctchrt_houseown.systecash-xea,
+	  trunk/accounts/de_DE/acctchrt_investment.systecash-xea,
+	  trunk/accounts/de_DE/acctchrt_kids.systecash-xea,
+	  trunk/accounts/de_DE/acctchrt_otherasset.systecash-xea,
+	  trunk/accounts/de_DE/acctchrt_otherloan.systecash-xea,
+	  trunk/accounts/de_DE/acctchrt_skr04.systecash-xea,
+	  trunk/accounts/de_DE/acctchrt_studium.systecash-xea,
 	  trunk/accounts/fr_FR/Makefile.am,
-	  trunk/accounts/fr_FR/acctchrt_business.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_brokerage.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_carloan.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_cdmoneymkt.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_childcare.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_common.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_eduloan.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_fixedassets.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_homeloan.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_homeown.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_otherloan.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_renter.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_retiremt.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_spouseinc.gnucash-xea,
-	  trunk/accounts/pt_PT/acctchrt_spouseretire.gnucash-xea,
-	  trunk/accounts/tr_TR/acctchrt_TEKDUZ.gnucash-xea: Andreas
+	  trunk/accounts/fr_FR/acctchrt_business.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_brokerage.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_carloan.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_cdmoneymkt.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_childcare.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_common.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_eduloan.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_fixedassets.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_homeloan.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_homeown.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_otherloan.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_renter.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_retiremt.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_spouseinc.systecash-xea,
+	  trunk/accounts/pt_PT/acctchrt_spouseretire.systecash-xea,
+	  trunk/accounts/tr_TR/acctchrt_TEKDUZ.systecash-xea: Andreas
 	  Kohler's cleanups, Bug#321405.
 
 2006-01-05 15:50  jsled
 
 	* [r12269] trunk/accounts/C/Makefile.am,
 	  trunk/accounts/de_DE/Makefile.am,
-	  trunk/accounts/de_DE/acctchrt_full.gnucash-xea: Restore
-	  de_DE/acctchrt_full.gnucash-xea, makefile rules re:acctchrt_full
+	  trunk/accounts/de_DE/acctchrt_full.systecash-xea: Restore
+	  de_DE/acctchrt_full.systecash-xea, makefile rules re:acctchrt_full
 	  files.
 
 2006-01-05 06:36  hampton
@@ -19241,7 +19241,7 @@
 
 2006-01-05 06:32  hampton
 
-	* [r12265] trunk/src/register/register-gnome/gnucash-item-list.c:
+	* [r12265] trunk/src/register/register-gnome/systecash-item-list.c:
 	  Remove debugging statement.
 
 2006-01-05 05:18  hampton
@@ -19250,32 +19250,32 @@
 	  trunk/src/register/ledger-core/split-register-load.c,
 	  trunk/src/register/register-core/combocell.h,
 	  trunk/src/register/register-gnome/combocell-gnome.c,
-	  trunk/src/register/register-gnome/gnucash-item-list.c,
-	  trunk/src/register/register-gnome/gnucash-item-list.h: Load the
+	  trunk/src/register/register-gnome/systecash-item-list.c,
+	  trunk/src/register/register-gnome/systecash-item-list.h: Load the
 	  entire data set into the combocell before enabling sorting.
 	  Saves a tremendous amount of time.
 
 2006-01-05 03:44  jsled
 
 	* [r12263] trunk/accounts/C/Makefile.am,
-	  trunk/accounts/C/acctlist_brokerage.gnucash-xea,
-	  trunk/accounts/C/acctlist_carloan.gnucash-xea,
-	  trunk/accounts/C/acctlist_cdmoneymkt.gnucash-xea,
-	  trunk/accounts/C/acctlist_childcare.gnucash-xea,
-	  trunk/accounts/C/acctlist_common.gnucash-xea,
-	  trunk/accounts/C/acctlist_eduloan.gnucash-xea,
-	  trunk/accounts/C/acctlist_fixedassets.gnucash-xea,
-	  trunk/accounts/C/acctlist_full.gnucash-xea,
-	  trunk/accounts/C/acctlist_homeloan.gnucash-xea,
-	  trunk/accounts/C/acctlist_homeown.gnucash-xea,
-	  trunk/accounts/C/acctlist_otherloan.gnucash-xea,
-	  trunk/accounts/C/acctlist_renter.gnucash-xea,
-	  trunk/accounts/C/acctlist_retiremt.gnucash-xea,
-	  trunk/accounts/C/acctlist_spouseinc.gnucash-xea,
-	  trunk/accounts/C/acctlist_spouseretire.gnucash-xea,
+	  trunk/accounts/C/acctlist_brokerage.systecash-xea,
+	  trunk/accounts/C/acctlist_carloan.systecash-xea,
+	  trunk/accounts/C/acctlist_cdmoneymkt.systecash-xea,
+	  trunk/accounts/C/acctlist_childcare.systecash-xea,
+	  trunk/accounts/C/acctlist_common.systecash-xea,
+	  trunk/accounts/C/acctlist_eduloan.systecash-xea,
+	  trunk/accounts/C/acctlist_fixedassets.systecash-xea,
+	  trunk/accounts/C/acctlist_full.systecash-xea,
+	  trunk/accounts/C/acctlist_homeloan.systecash-xea,
+	  trunk/accounts/C/acctlist_homeown.systecash-xea,
+	  trunk/accounts/C/acctlist_otherloan.systecash-xea,
+	  trunk/accounts/C/acctlist_renter.systecash-xea,
+	  trunk/accounts/C/acctlist_retiremt.systecash-xea,
+	  trunk/accounts/C/acctlist_spouseinc.systecash-xea,
+	  trunk/accounts/C/acctlist_spouseretire.systecash-xea,
 	  trunk/accounts/de_DE/Makefile.am,
-	  trunk/accounts/de_DE/acctchrt_full.gnucash-xea,
-	  trunk/accounts/de_DE/acctlist_full.gnucash: Remove dead acctlist
+	  trunk/accounts/de_DE/acctchrt_full.systecash-xea,
+	  trunk/accounts/de_DE/acctlist_full.systecash: Remove dead acctlist
 	  files.
 
 2006-01-05 03:11  hampton
@@ -19292,8 +19292,8 @@
 
 2006-01-05 01:38  hampton
 
-	* [r12260] trunk/src/bin/gnucash.in: Don't keep the shell around
-	  when starting gnucash.
+	* [r12260] trunk/src/bin/systecash.in: Don't keep the shell around
+	  when starting systecash.
 
 2006-01-04 21:56  cstim
 
@@ -19340,14 +19340,14 @@
 	* [r12253] trunk/ChangeLog, trunk/src/gnome/dialog-totd.c,
 	  trunk/src/gnome/glade/totd.glade, trunk/src/gnome/top-level.c:
 	  Revert the previous change and make the totd always float above
-	  all other GnuCash windows.
+	  all other systecash windows.
 
 2006-01-03 23:49  chris
 
-	* [r12252] trunk/src/bin/Makefile.am, trunk/src/bin/gnucash-bin.c,
-	  trunk/src/bin/gnucash.in: Invert the program entry point.
-	  'gnucash' is now a shell script that calls the executable
-	  'gnucash-bin' which uses libguile to load guile modules.
+	* [r12252] trunk/src/bin/Makefile.am, trunk/src/bin/systecash-bin.c,
+	  trunk/src/bin/systecash.in: Invert the program entry point.
+	  'systecash' is now a shell script that calls the executable
+	  'systecash-bin' which uses libguile to load guile modules.
 
 2006-01-03 22:22  codehelp
 
@@ -19373,7 +19373,7 @@
 2006-01-03 18:04  codehelp
 
 	* [r12246] trunk/Makefile.am: rebuild POTFILES.in when remaking
-	  gnucash.pot
+	  systecash.pot
 
 2006-01-03 18:02  chris
 
@@ -19397,175 +19397,175 @@
 	  branches/cashutil/Makefile.am, branches/cashutil/README,
 	  branches/cashutil/README.dependencies,
 	  branches/cashutil/README.svn,
-	  branches/cashutil/accounts/C/acctchrt_brokerage.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_business.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_carloan.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_cdmoneymkt.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_checkbook.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_childcare.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_common.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_eduloan.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_fixedassets.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_full.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_homeloan.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_homeown.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_otherloan.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_renter.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_retiremt.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_spouseinc.gnucash-xea,
-	  branches/cashutil/accounts/C/acctchrt_spouseretire.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_brokerage.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_carloan.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_cdmoneymkt.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_childcare.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_common.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_eduloan.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_fixedassets.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_full.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_homeloan.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_homeown.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_otherloan.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_renter.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_retiremt.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_spouseinc.gnucash-xea,
-	  branches/cashutil/accounts/C/acctlist_spouseretire.gnucash-xea,
-	  branches/cashutil/accounts/da/acctchrt_car.gnucash-xea,
-	  branches/cashutil/accounts/da/acctchrt_common.gnucash-xea,
-	  branches/cashutil/accounts/da/acctchrt_homeloan.gnucash-xea,
-	  branches/cashutil/accounts/da/acctchrt_homeown.gnucash-xea,
-	  branches/cashutil/accounts/de_CH/acctchrt_brokerage.gnucash-xea,
-	  branches/cashutil/accounts/de_CH/acctchrt_chkmu.gnucash-xea,
-	  branches/cashutil/accounts/de_CH/acctchrt_common.gnucash-xea,
-	  branches/cashutil/accounts/de_CH/acctchrt_kids.gnucash-xea,
-	  branches/cashutil/accounts/de_CH/acctchrt_otherasset.gnucash-xea,
-	  branches/cashutil/accounts/de_CH/acctchrt_otherloan.gnucash-xea,
-	  branches/cashutil/accounts/de_DE/acctchrt_auto.gnucash-xea,
-	  branches/cashutil/accounts/de_DE/acctchrt_autoloan.gnucash-xea,
-	  branches/cashutil/accounts/de_DE/acctchrt_brokerage.gnucash-xea,
-	  branches/cashutil/accounts/de_DE/acctchrt_common.gnucash-xea,
-	  branches/cashutil/accounts/de_DE/acctchrt_full.gnucash-xea,
-	  branches/cashutil/accounts/de_DE/acctchrt_houseown.gnucash-xea,
-	  branches/cashutil/accounts/de_DE/acctchrt_investment.gnucash-xea,
-	  branches/cashutil/accounts/de_DE/acctchrt_kids.gnucash-xea,
-	  branches/cashutil/accounts/de_DE/acctchrt_otherasset.gnucash-xea,
-	  branches/cashutil/accounts/de_DE/acctchrt_otherloan.gnucash-xea,
-	  branches/cashutil/accounts/de_DE/acctchrt_skr04.gnucash-xea,
-	  branches/cashutil/accounts/de_DE/acctchrt_studium.gnucash-xea,
-	  branches/cashutil/accounts/el_GR/acctchrt_brokerage.gnucash-xea,
-	  branches/cashutil/accounts/el_GR/acctchrt_carloan.gnucash-xea,
-	  branches/cashutil/accounts/el_GR/acctchrt_common.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_brokerage.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_carloan.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_cdmoneymkt.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_childcare.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_common.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_currency.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_eduloan.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_fixedassets.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_homeloan.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_homeown.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_otherloan.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_renter.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_retiremt.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_spouseinc.gnucash-xea,
-	  branches/cashutil/accounts/es_ES/acctchrt_spouseretire.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_brokerage.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_carloan.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_cdmoneymkt.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_childcare.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_common.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_currency.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_eduloan.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_fixedassets.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_homeloan.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_homeown.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_otherloan.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_renter.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_retiremt.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_spouseinc.gnucash-xea,
-	  branches/cashutil/accounts/fr_FR/acctchrt_spouseretire.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_brokerage.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_business.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_carloan.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_cdmoneymkt.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_checkbook.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_childcare.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_common.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_eduloan.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_fixedassets.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_homeloan.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_homeown.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_otherloan.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_renter.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_retiremt.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_spouseinc.gnucash-xea,
-	  branches/cashutil/accounts/hu_HU/acctchrt_spouseretire.gnucash-xea,
-	  branches/cashutil/accounts/it/acctchrt_brokerage.gnucash-xea,
-	  branches/cashutil/accounts/it/acctchrt_carloan.gnucash-xea,
-	  branches/cashutil/accounts/it/acctchrt_checkbook.gnucash-xea,
-	  branches/cashutil/accounts/it/acctchrt_childcare.gnucash-xea,
-	  branches/cashutil/accounts/it/acctchrt_common.gnucash-xea,
-	  branches/cashutil/accounts/it/acctchrt_fixedassets.gnucash-xea,
-	  branches/cashutil/accounts/it/acctchrt_homeloan.gnucash-xea,
-	  branches/cashutil/accounts/it/acctchrt_homeown.gnucash-xea,
-	  branches/cashutil/accounts/it/acctchrt_otherloan.gnucash-xea,
-	  branches/cashutil/accounts/it/acctchrt_renter.gnucash-xea,
-	  branches/cashutil/accounts/it/acctchrt_retiremt.gnucash-xea,
-	  branches/cashutil/accounts/it/acctchrt_spouseinc.gnucash-xea,
-	  branches/cashutil/accounts/it/acctchrt_spouseretire.gnucash-xea,
-	  branches/cashutil/accounts/ja_JP.EUC/acctchrt_common.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_brokerage.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_carloan.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_cdmoneymkt.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_childcare.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_common.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_currency.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_eduloan.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_fixedassets.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_homeloan.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_homeown.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_otherloan.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_renter.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_retiremt.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_spouseinc.gnucash-xea,
-	  branches/cashutil/accounts/pt_BR/acctchrt_spouseretire.gnucash-xea,
-	  branches/cashutil/accounts/pt_PT/acctchrt_brokerage.gnucash-xea,
-	  branches/cashutil/accounts/pt_PT/acctchrt_carloan.gnucash-xea,
-	  branches/cashutil/accounts/pt_PT/acctchrt_cdmoneymkt.gnucash-xea,
-	  branches/cashutil/accounts/pt_PT/acctchrt_childcare.gnucash-xea,
-	  branches/cashutil/accounts/pt_PT/acctchrt_common.gnucash-xea,
-	  branches/cashutil/accounts/pt_PT/acctchrt_eduloan.gnucash-xea,
-	  branches/cashutil/accounts/pt_PT/acctchrt_fixedassets.gnucash-xea,
-	  branches/cashutil/accounts/pt_PT/acctchrt_homeloan.gnucash-xea,
-	  branches/cashutil/accounts/pt_PT/acctchrt_homeown.gnucash-xea,
-	  branches/cashutil/accounts/pt_PT/acctchrt_otherloan.gnucash-xea,
-	  branches/cashutil/accounts/pt_PT/acctchrt_renter.gnucash-xea,
-	  branches/cashutil/accounts/pt_PT/acctchrt_retiremt.gnucash-xea,
-	  branches/cashutil/accounts/pt_PT/acctchrt_spouseinc.gnucash-xea,
-	  branches/cashutil/accounts/pt_PT/acctchrt_spouseretire.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_brokerage.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_carloan.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_cdmoneymkt.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_childcare.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_common.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_currency.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_eduloan.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_fixedassets.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_homeloan.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_homeown.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_otherloan.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_renter.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_retiremt.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_spouseinc.gnucash-xea,
-	  branches/cashutil/accounts/sk/acctchrt_spouseretire.gnucash-xea,
-	  branches/cashutil/accounts/tr_TR/acctchrt_TEKDUZ.gnucash-xea,
-	  branches/cashutil/accounts/tr_TR/acctchrt_brokerage.gnucash-xea,
-	  branches/cashutil/accounts/tr_TR/acctchrt_carloan.gnucash-xea,
-	  branches/cashutil/accounts/tr_TR/acctchrt_cdmoneymkt.gnucash-xea,
-	  branches/cashutil/accounts/tr_TR/acctchrt_checkbook.gnucash-xea,
-	  branches/cashutil/accounts/tr_TR/acctchrt_common.gnucash-xea,
-	  branches/cashutil/accounts/tr_TR/acctchrt_fixedassets.gnucash-xea,
-	  branches/cashutil/accounts/tr_TR/acctchrt_homeloan.gnucash-xea,
+	  branches/cashutil/accounts/C/acctchrt_brokerage.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_business.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_carloan.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_cdmoneymkt.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_checkbook.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_childcare.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_common.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_eduloan.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_fixedassets.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_full.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_homeloan.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_homeown.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_otherloan.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_renter.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_retiremt.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_spouseinc.systecash-xea,
+	  branches/cashutil/accounts/C/acctchrt_spouseretire.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_brokerage.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_carloan.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_cdmoneymkt.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_childcare.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_common.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_eduloan.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_fixedassets.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_full.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_homeloan.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_homeown.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_otherloan.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_renter.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_retiremt.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_spouseinc.systecash-xea,
+	  branches/cashutil/accounts/C/acctlist_spouseretire.systecash-xea,
+	  branches/cashutil/accounts/da/acctchrt_car.systecash-xea,
+	  branches/cashutil/accounts/da/acctchrt_common.systecash-xea,
+	  branches/cashutil/accounts/da/acctchrt_homeloan.systecash-xea,
+	  branches/cashutil/accounts/da/acctchrt_homeown.systecash-xea,
+	  branches/cashutil/accounts/de_CH/acctchrt_brokerage.systecash-xea,
+	  branches/cashutil/accounts/de_CH/acctchrt_chkmu.systecash-xea,
+	  branches/cashutil/accounts/de_CH/acctchrt_common.systecash-xea,
+	  branches/cashutil/accounts/de_CH/acctchrt_kids.systecash-xea,
+	  branches/cashutil/accounts/de_CH/acctchrt_otherasset.systecash-xea,
+	  branches/cashutil/accounts/de_CH/acctchrt_otherloan.systecash-xea,
+	  branches/cashutil/accounts/de_DE/acctchrt_auto.systecash-xea,
+	  branches/cashutil/accounts/de_DE/acctchrt_autoloan.systecash-xea,
+	  branches/cashutil/accounts/de_DE/acctchrt_brokerage.systecash-xea,
+	  branches/cashutil/accounts/de_DE/acctchrt_common.systecash-xea,
+	  branches/cashutil/accounts/de_DE/acctchrt_full.systecash-xea,
+	  branches/cashutil/accounts/de_DE/acctchrt_houseown.systecash-xea,
+	  branches/cashutil/accounts/de_DE/acctchrt_investment.systecash-xea,
+	  branches/cashutil/accounts/de_DE/acctchrt_kids.systecash-xea,
+	  branches/cashutil/accounts/de_DE/acctchrt_otherasset.systecash-xea,
+	  branches/cashutil/accounts/de_DE/acctchrt_otherloan.systecash-xea,
+	  branches/cashutil/accounts/de_DE/acctchrt_skr04.systecash-xea,
+	  branches/cashutil/accounts/de_DE/acctchrt_studium.systecash-xea,
+	  branches/cashutil/accounts/el_GR/acctchrt_brokerage.systecash-xea,
+	  branches/cashutil/accounts/el_GR/acctchrt_carloan.systecash-xea,
+	  branches/cashutil/accounts/el_GR/acctchrt_common.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_brokerage.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_carloan.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_cdmoneymkt.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_childcare.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_common.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_currency.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_eduloan.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_fixedassets.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_homeloan.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_homeown.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_otherloan.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_renter.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_retiremt.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_spouseinc.systecash-xea,
+	  branches/cashutil/accounts/es_ES/acctchrt_spouseretire.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_brokerage.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_carloan.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_cdmoneymkt.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_childcare.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_common.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_currency.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_eduloan.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_fixedassets.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_homeloan.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_homeown.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_otherloan.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_renter.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_retiremt.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_spouseinc.systecash-xea,
+	  branches/cashutil/accounts/fr_FR/acctchrt_spouseretire.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_brokerage.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_business.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_carloan.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_cdmoneymkt.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_checkbook.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_childcare.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_common.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_eduloan.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_fixedassets.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_homeloan.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_homeown.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_otherloan.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_renter.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_retiremt.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_spouseinc.systecash-xea,
+	  branches/cashutil/accounts/hu_HU/acctchrt_spouseretire.systecash-xea,
+	  branches/cashutil/accounts/it/acctchrt_brokerage.systecash-xea,
+	  branches/cashutil/accounts/it/acctchrt_carloan.systecash-xea,
+	  branches/cashutil/accounts/it/acctchrt_checkbook.systecash-xea,
+	  branches/cashutil/accounts/it/acctchrt_childcare.systecash-xea,
+	  branches/cashutil/accounts/it/acctchrt_common.systecash-xea,
+	  branches/cashutil/accounts/it/acctchrt_fixedassets.systecash-xea,
+	  branches/cashutil/accounts/it/acctchrt_homeloan.systecash-xea,
+	  branches/cashutil/accounts/it/acctchrt_homeown.systecash-xea,
+	  branches/cashutil/accounts/it/acctchrt_otherloan.systecash-xea,
+	  branches/cashutil/accounts/it/acctchrt_renter.systecash-xea,
+	  branches/cashutil/accounts/it/acctchrt_retiremt.systecash-xea,
+	  branches/cashutil/accounts/it/acctchrt_spouseinc.systecash-xea,
+	  branches/cashutil/accounts/it/acctchrt_spouseretire.systecash-xea,
+	  branches/cashutil/accounts/ja_JP.EUC/acctchrt_common.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_brokerage.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_carloan.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_cdmoneymkt.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_childcare.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_common.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_currency.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_eduloan.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_fixedassets.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_homeloan.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_homeown.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_otherloan.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_renter.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_retiremt.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_spouseinc.systecash-xea,
+	  branches/cashutil/accounts/pt_BR/acctchrt_spouseretire.systecash-xea,
+	  branches/cashutil/accounts/pt_PT/acctchrt_brokerage.systecash-xea,
+	  branches/cashutil/accounts/pt_PT/acctchrt_carloan.systecash-xea,
+	  branches/cashutil/accounts/pt_PT/acctchrt_cdmoneymkt.systecash-xea,
+	  branches/cashutil/accounts/pt_PT/acctchrt_childcare.systecash-xea,
+	  branches/cashutil/accounts/pt_PT/acctchrt_common.systecash-xea,
+	  branches/cashutil/accounts/pt_PT/acctchrt_eduloan.systecash-xea,
+	  branches/cashutil/accounts/pt_PT/acctchrt_fixedassets.systecash-xea,
+	  branches/cashutil/accounts/pt_PT/acctchrt_homeloan.systecash-xea,
+	  branches/cashutil/accounts/pt_PT/acctchrt_homeown.systecash-xea,
+	  branches/cashutil/accounts/pt_PT/acctchrt_otherloan.systecash-xea,
+	  branches/cashutil/accounts/pt_PT/acctchrt_renter.systecash-xea,
+	  branches/cashutil/accounts/pt_PT/acctchrt_retiremt.systecash-xea,
+	  branches/cashutil/accounts/pt_PT/acctchrt_spouseinc.systecash-xea,
+	  branches/cashutil/accounts/pt_PT/acctchrt_spouseretire.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_brokerage.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_carloan.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_cdmoneymkt.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_childcare.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_common.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_currency.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_eduloan.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_fixedassets.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_homeloan.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_homeown.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_otherloan.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_renter.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_retiremt.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_spouseinc.systecash-xea,
+	  branches/cashutil/accounts/sk/acctchrt_spouseretire.systecash-xea,
+	  branches/cashutil/accounts/tr_TR/acctchrt_TEKDUZ.systecash-xea,
+	  branches/cashutil/accounts/tr_TR/acctchrt_brokerage.systecash-xea,
+	  branches/cashutil/accounts/tr_TR/acctchrt_carloan.systecash-xea,
+	  branches/cashutil/accounts/tr_TR/acctchrt_cdmoneymkt.systecash-xea,
+	  branches/cashutil/accounts/tr_TR/acctchrt_checkbook.systecash-xea,
+	  branches/cashutil/accounts/tr_TR/acctchrt_common.systecash-xea,
+	  branches/cashutil/accounts/tr_TR/acctchrt_fixedassets.systecash-xea,
+	  branches/cashutil/accounts/tr_TR/acctchrt_homeloan.systecash-xea,
 	  branches/cashutil/cashutil/src/cashutil.c,
 	  branches/cashutil/cashutil/src/qof-main.c,
 	  branches/cashutil/cashutil/src/qof-main.h,
@@ -19634,7 +19634,7 @@
 	  branches/cashutil/ltmain.sh,
 	  branches/cashutil/macros/autogen.sh,
 	  branches/cashutil/macros/svn2cl.xsl,
-	  branches/cashutil/make-gnucash-potfiles.in,
+	  branches/cashutil/make-systecash-potfiles.in,
 	  branches/cashutil/po/POTFILES.in, branches/cashutil/po/ca.po,
 	  branches/cashutil/po/cs.po, branches/cashutil/po/da.po,
 	  branches/cashutil/po/de.po, branches/cashutil/po/el.po,
@@ -19666,7 +19666,7 @@
 	  branches/cashutil/po/sv.po, branches/cashutil/po/ta.po,
 	  branches/cashutil/po/tr.po, branches/cashutil/po/uk.po,
 	  branches/cashutil/po/zh_CN.po, branches/cashutil/po/zh_TW.po,
-	  branches/cashutil/rpm/gnucash.spec.in, branches/cashutil/src,
+	  branches/cashutil/rpm/systecash.spec.in, branches/cashutil/src,
 	  branches/cashutil/src/Makefile.am,
 	  branches/cashutil/src/README.modules,
 	  branches/cashutil/src/app-utils,
@@ -20147,13 +20147,13 @@
 	  branches/cashutil/src/gnc-module/test/misc-mods,
 	  branches/cashutil/src/gnc-module/test/mod-bar,
 	  branches/cashutil/src/gnc-module/test/mod-bar/Makefile.am,
-	  branches/cashutil/src/gnc-module/test/mod-bar/gnucash,
+	  branches/cashutil/src/gnc-module/test/mod-bar/systecash,
 	  branches/cashutil/src/gnc-module/test/mod-baz,
 	  branches/cashutil/src/gnc-module/test/mod-baz/Makefile.am,
-	  branches/cashutil/src/gnc-module/test/mod-baz/gnucash,
+	  branches/cashutil/src/gnc-module/test/mod-baz/systecash,
 	  branches/cashutil/src/gnc-module/test/mod-foo,
 	  branches/cashutil/src/gnc-module/test/mod-foo/Makefile.am,
-	  branches/cashutil/src/gnc-module/test/mod-foo/gnucash,
+	  branches/cashutil/src/gnc-module/test/mod-foo/systecash,
 	  branches/cashutil/src/gnome, branches/cashutil/src/gnome-search,
 	  branches/cashutil/src/gnome-search/dialog-search.c,
 	  branches/cashutil/src/gnome-search/dialog-search.h,
@@ -20388,7 +20388,7 @@
 	  branches/cashutil/src/gnome/reconcile-list.c,
 	  branches/cashutil/src/gnome/reconcile-list.h,
 	  branches/cashutil/src/gnome/schemas,
-	  branches/cashutil/src/gnome/schemas/apps_gnucash_dialog_scheduled_transctions.schemas,
+	  branches/cashutil/src/gnome/schemas/apps_systecash_dialog_scheduled_transctions.schemas,
 	  branches/cashutil/src/gnome/top-level.c,
 	  branches/cashutil/src/gnome/top-level.h,
 	  branches/cashutil/src/gnome/ui,
@@ -20447,7 +20447,7 @@
 	  branches/cashutil/src/import-export/hbci/hbci-interaction.h,
 	  branches/cashutil/src/import-export/hbci/hbci-interactionP.h,
 	  branches/cashutil/src/import-export/hbci/schemas,
-	  branches/cashutil/src/import-export/hbci/schemas/apps_gnucash_dialog_hbci.schemas,
+	  branches/cashutil/src/import-export/hbci/schemas/apps_systecash_dialog_hbci.schemas,
 	  branches/cashutil/src/import-export/hbci/test,
 	  branches/cashutil/src/import-export/import-account-matcher.c,
 	  branches/cashutil/src/import-export/import-account-matcher.h,
@@ -20521,7 +20521,7 @@
 	  branches/cashutil/src/import-export/qif/test/test-files,
 	  branches/cashutil/src/import-export/qif/test/test-qif.c,
 	  branches/cashutil/src/import-export/schemas,
-	  branches/cashutil/src/import-export/schemas/apps_gnucash_import_generic_matcher.schemas,
+	  branches/cashutil/src/import-export/schemas/apps_systecash_import_generic_matcher.schemas,
 	  branches/cashutil/src/import-export/test,
 	  branches/cashutil/src/import-export/test/Makefile.am,
 	  branches/cashutil/src/import-export/test/test-import-parse.c,
@@ -20597,26 +20597,26 @@
 	  branches/cashutil/src/register/register-gnome/datecell-gnome.c,
 	  branches/cashutil/src/register/register-gnome/formulacell-gnome.c,
 	  branches/cashutil/src/register/register-gnome/formulacell-gnome.h,
-	  branches/cashutil/src/register/register-gnome/gnucash-color.c,
-	  branches/cashutil/src/register/register-gnome/gnucash-color.h,
-	  branches/cashutil/src/register/register-gnome/gnucash-cursor.c,
-	  branches/cashutil/src/register/register-gnome/gnucash-cursor.h,
-	  branches/cashutil/src/register/register-gnome/gnucash-date-picker.c,
-	  branches/cashutil/src/register/register-gnome/gnucash-date-picker.h,
-	  branches/cashutil/src/register/register-gnome/gnucash-grid.c,
-	  branches/cashutil/src/register/register-gnome/gnucash-grid.h,
-	  branches/cashutil/src/register/register-gnome/gnucash-header.c,
-	  branches/cashutil/src/register/register-gnome/gnucash-header.h,
-	  branches/cashutil/src/register/register-gnome/gnucash-item-edit.c,
-	  branches/cashutil/src/register/register-gnome/gnucash-item-edit.h,
-	  branches/cashutil/src/register/register-gnome/gnucash-item-list.c,
-	  branches/cashutil/src/register/register-gnome/gnucash-item-list.h,
-	  branches/cashutil/src/register/register-gnome/gnucash-scrolled-window.c,
-	  branches/cashutil/src/register/register-gnome/gnucash-scrolled-window.h,
-	  branches/cashutil/src/register/register-gnome/gnucash-sheet.c,
-	  branches/cashutil/src/register/register-gnome/gnucash-sheet.h,
-	  branches/cashutil/src/register/register-gnome/gnucash-style.c,
-	  branches/cashutil/src/register/register-gnome/gnucash-style.h,
+	  branches/cashutil/src/register/register-gnome/systecash-color.c,
+	  branches/cashutil/src/register/register-gnome/systecash-color.h,
+	  branches/cashutil/src/register/register-gnome/systecash-cursor.c,
+	  branches/cashutil/src/register/register-gnome/systecash-cursor.h,
+	  branches/cashutil/src/register/register-gnome/systecash-date-picker.c,
+	  branches/cashutil/src/register/register-gnome/systecash-date-picker.h,
+	  branches/cashutil/src/register/register-gnome/systecash-grid.c,
+	  branches/cashutil/src/register/register-gnome/systecash-grid.h,
+	  branches/cashutil/src/register/register-gnome/systecash-header.c,
+	  branches/cashutil/src/register/register-gnome/systecash-header.h,
+	  branches/cashutil/src/register/register-gnome/systecash-item-edit.c,
+	  branches/cashutil/src/register/register-gnome/systecash-item-edit.h,
+	  branches/cashutil/src/register/register-gnome/systecash-item-list.c,
+	  branches/cashutil/src/register/register-gnome/systecash-item-list.h,
+	  branches/cashutil/src/register/register-gnome/systecash-scrolled-window.c,
+	  branches/cashutil/src/register/register-gnome/systecash-scrolled-window.h,
+	  branches/cashutil/src/register/register-gnome/systecash-sheet.c,
+	  branches/cashutil/src/register/register-gnome/systecash-sheet.h,
+	  branches/cashutil/src/register/register-gnome/systecash-style.c,
+	  branches/cashutil/src/register/register-gnome/systecash-style.h,
 	  branches/cashutil/src/register/register-gnome/pricecell-gnome.c,
 	  branches/cashutil/src/register/register-gnome/pricecell-gnome.h,
 	  branches/cashutil/src/register/register-gnome/quickfillcell-gnome.c,
@@ -20697,7 +20697,7 @@
 	  branches/cashutil/src/report/utility-reports/test,
 	  branches/cashutil/src/report/utility-reports/test/Makefile.am,
 	  branches/cashutil/src/report/utility-reports/view-column.scm,
-	  branches/cashutil/src/report/utility-reports/welcome-to-gnucash.scm,
+	  branches/cashutil/src/report/utility-reports/welcome-to-systecash.scm,
 	  branches/cashutil/src/scm,
 	  branches/cashutil/src/scm/command-line.scm,
 	  branches/cashutil/src/scm/doc.scm,
@@ -20719,11 +20719,11 @@
 
 	* [r12242] branches/cashutil/src/bin,
 	  branches/cashutil/src/bin/Makefile.am,
-	  branches/cashutil/src/bin/gnucash2.c,
+	  branches/cashutil/src/bin/systecash2.c,
 	  branches/cashutil/src/bin/overrides,
 	  branches/cashutil/src/bin/qof-main.c,
 	  branches/cashutil/src/bin/qof-main.h,
-	  branches/cashutil/src/bin/test: gnucash2 - test C start-up
+	  branches/cashutil/src/bin/test: systecash2 - test C start-up
 	  routine
 
 2006-01-03 04:02  hampton
@@ -20732,7 +20732,7 @@
 	  trunk/src/gnome/glade/totd.glade: Use the component manager to
 	  ensure there is only one totd dialog at a time. Don't mark the
 	  dialog as transient (or type GTK_WINDOW_DIALOG) so that window
-	  managers won't make it float above all other GnuCash windows.
+	  managers won't make it float above all other systecash windows.
 
 2006-01-03 02:44  hampton
 

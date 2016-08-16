@@ -4,7 +4,7 @@
 
 @strong{This whole document is completely outdated. Don't read this. All
 function names and every described structure has changed
-completely. Only read this if you want to know how gnucash looked like
+completely. Only read this if you want to know how systecash looked like
 in 1999. This is completely outdated!}
 
 The reporting infrastructure is designed facilitate the creation
@@ -26,7 +26,7 @@ Currency conversions.
 Creation of graphs such as pie and bar charts.
 
 @item
-Creation of hyperlinks to other reports and to other GnuCash
+Creation of hyperlinks to other reports and to other systecash
 objects such as registers.
 
 @end itemize

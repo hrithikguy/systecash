@@ -25,8 +25,8 @@
  * @addtogroup Gnome
  * @{
  */
-/** @file gnucash-header.h
- * @brief Public declarations for GnucashHeader class
+/** @file systecash-header.h
+ * @brief Public declarations for systecashHeader class
  */
 #define GNC_TYPE_HEADER     (gnc_header_get_type ())
 #define GNC_HEADER(o)       (G_TYPE_CHECK_INSTANCE_CAST((o), GNC_TYPE_HEADER, GncHeader))
@@ -39,7 +39,7 @@ typedef struct
 {
     GnomeCanvasItem canvas_item;
 
-    GnucashSheet *sheet;
+    systecashSheet *sheet;
     SheetBlockStyle *style;
 
     char *cursor_name;
@@ -68,7 +68,7 @@ typedef struct
 } GncHeaderClass;
 
 
-GtkWidget *gnc_header_new (GnucashSheet *sheet);
+GtkWidget *gnc_header_new (systecashSheet *sheet);
 void gnc_header_reconfigure (GncHeader *header);
 void gnc_header_request_redraw (GncHeader *header);
 

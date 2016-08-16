@@ -29,7 +29,7 @@
     @brief Functions to save and retrieve passwords.
     @author Copyright (C) 2010 Geert Janssens <janssens-geert@telenet.be>
 
-    GnuCash needs passwords for some of the services it uses, like
+    systecash needs passwords for some of the services it uses, like
     connecting to a remote database, or bank. For security these passwords
     shouldn't be stored unless in an encrypted password store. This is
     implemented for example in Gnome's keyring or Mac OS X' keychain.

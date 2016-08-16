@@ -27,16 +27,16 @@ TARGET_COMPILE_DEFINITIONS(gncmod-ofx PRIVATE -DG_LOG_DOMAIN=\"gnc.import.ofx\")
 TARGET_INCLUDE_DIRECTORIES(gncmod-ofx PRIVATE ${LIBOFX_INCLUDE_DIRS})
 
 INSTALL(TARGETS gncmod-ofx
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 
 SET(ofx_UI gnc-plugin-ofx-ui.xml)
 
-INSTALL(FILES ${ofx_UI} DESTINATION share/gnucash/ui)
+INSTALL(FILES ${ofx_UI} DESTINATION share/systecash/ui)
 
 
 IF (GNC_BUILD_AS_INSTALL)
   FILE(COPY ${ofx_UI}
-    DESTINATION ${DATADIR_BUILD}/gnucash/ui)
+    DESTINATION ${DATADIR_BUILD}/systecash/ui)
 ENDIF()

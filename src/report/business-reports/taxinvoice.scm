@@ -18,29 +18,29 @@
 ;; 02111-1307 USA
 
 ; If you want to adapt this report privately:
-; - copy the report to your .gnucash directory
+; - copy the report to your .systecash directory
 ; - specify a different module name below (eg mytaxinvoice)
-; - refer to it from .gnucash/config.user
-; (see http://wiki.gnucash.org/wiki/Custom_Reports )
-(define-module (gnucash report taxinvoice))
+; - refer to it from .systecash/config.user
+; (see http://wiki.systecash.org/wiki/Custom_Reports )
+(define-module (systecash report taxinvoice))
 
 (cond-expand
   (guile-2
       (use-modules (ice-9 local-eval)))  ; for the-environment
   (else ))
-(use-modules (gnucash main))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
-(gnc:module-load "gnucash/report/report-system" 0)
-(gnc:module-load "gnucash/html" 0)
-(gnc:module-load "gnucash/engine" 0)
+(use-modules (systecash main))
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
+(gnc:module-load "systecash/report/report-system" 0)
+(gnc:module-load "systecash/html" 0)
+(gnc:module-load "systecash/engine" 0)
 
-(use-modules (gnucash report standard-reports))
-(use-modules (gnucash report business-reports))
+(use-modules (systecash report standard-reports))
+(use-modules (systecash report business-reports))
 
-(use-modules (gnucash report eguile-utilities))
-(use-modules (gnucash report eguile-html-utilities))
-(use-modules (gnucash report eguile-gnc))
+(use-modules (systecash report eguile-utilities))
+(use-modules (systecash report eguile-html-utilities))
+(use-modules (systecash report eguile-gnc))
 
 (use-modules (srfi srfi-13)) ; for extra string functions
 
@@ -149,7 +149,7 @@
     (gnc:register-option report-options new-option))
 
   (add-option
-    (gnc:make-invoice-option ; defined in gnucash/scm/business-options.scm
+    (gnc:make-invoice-option ; defined in systecash/scm/business-options.scm
       gnc:pagename-general gnc:optname-invoice-number 
       "a" "" (lambda () '()) 
       #f))        ;customers-only)) ;-- see above
@@ -170,10 +170,10 @@
 
   ;; Display options
   (add-option (gnc:make-string-option displaypage optname-template-file "a" 
-    (N_ "The file name of the eguile template part of this report. This file should either be in your .gnucash directory, or else in its proper place within the GnuCash installation directories.")
+    (N_ "The file name of the eguile template part of this report. This file should either be in your .systecash directory, or else in its proper place within the systecash installation directories.")
     "taxinvoice.eguile.scm"))
   (add-option (gnc:make-string-option displaypage optname-css-file "b" 
-    (N_ "The file name of the CSS stylesheet to use with this report. This file should either be in your .gnucash directory, or else in its proper place within the GnuCash installation directories.") 
+    (N_ "The file name of the CSS stylesheet to use with this report. This file should either be in your .systecash directory, or else in its proper place within the systecash installation directories.") 
     "taxinvoice.css"))
   (add-option (gnc:make-font-option 
                 displaypage optname-heading-font "c" 

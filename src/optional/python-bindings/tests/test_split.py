@@ -1,6 +1,6 @@
 from unittest import main
 
-from gnucash import Book, Account, Split, Transaction
+from systecash import Book, Account, Split, Transaction
 from unittest_support import *
 
 from test_book import BookSession

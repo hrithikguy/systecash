@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-xml.h -- api for gnucash xml i/o                             *
+ * gnc-xml.h -- api for systecash xml i/o                             *
  *                                                                  *
  * Copyright (C) 2001 James LewisMoss <dres@debian.org>             *
  *                                                                  *

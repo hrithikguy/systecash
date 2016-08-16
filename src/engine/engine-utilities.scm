@@ -20,9 +20,9 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 
 ;; Copyright 2000 Rob Browning <rlb@cs.utexas.edu>
-(use-modules (gnucash gnc-module))
+(use-modules (systecash gnc-module))
 
-(gnc:module-begin-syntax (gnc:module-load "gnucash/engine" 0))
+(gnc:module-begin-syntax (gnc:module-load "systecash/engine" 0))
 
 (use-modules (srfi srfi-1)
              (srfi srfi-13))

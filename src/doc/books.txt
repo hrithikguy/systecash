@@ -7,9 +7,9 @@ API: \ref Book\n
 		   Linas Vepstas <linas@linas.org> December 2001
                  Last Updated August 2003
 
-A top, unimplemented request for GnuCash is the ability to 'close 
+A top, unimplemented request for systecash is the ability to 'close 
 the books', that is, to add support for 'accounting periods'.
-Partial support for books has been added to the GnuCash engine; 
+Partial support for books has been added to the systecash engine; 
 and a GUI is partially finished.  This file reviews the 
 implementation design choices and the current design status.
 
@@ -205,7 +205,7 @@ But now we have enough info to propose the final solution:
 \subsection periodsplana Plan A:
 
 The kvp markup of plan C coupled to the multi-file solution of plan F.
-In initial startup of GnuCash, only the 'current' book is loaded.  
+In initial startup of systecash, only the 'current' book is loaded.  
 If user asks for a report that requires data from old books, then
 we have to pause to load one or more of the older books.   
 
@@ -347,9 +347,9 @@ way to load several files at once.
    books?  When the XML file backend is used, different books need to be 
    stored as different files (in order to avoid the performance 
    penalty of a large file load).  Currently, what's implemented is\n
-   book-1dc750aa3e6fd045c13ac8afb1a9ac03-my-gnucash-file.xac.gml\n
+   book-1dc750aa3e6fd045c13ac8afb1a9ac03-my-systecash-file.xac.gml\n
    where the number is the GUID of the closed book (needed to be able to
-   quickly find the book/file) and 'my-gnucash-file.xac' is the name of
+   quickly find the book/file) and 'my-systecash-file.xac' is the name of
    the original file whose books were closed.\n
    Need to change the name to include the word "archive".
 
@@ -364,7 +364,7 @@ way to load several files at once.
 - Change GUI to allow user to specify a default equity account
    for dealing with opening balances.  Should be done with kvp markup. 
 
-- Fix crash when exiting gnucash after closing books. 
+- Fix crash when exiting systecash after closing books. 
 
 - The filename of the old, closed books should probably be saved 
    in the KVP tree of the current open book.  This need be done only

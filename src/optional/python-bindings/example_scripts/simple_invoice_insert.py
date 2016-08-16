@@ -21,7 +21,7 @@
 #
 # @author Mark Jenkins, ParIT Worker Co-operative <mark@parit.ca>
 
-# Opens a GnuCash book file and adds an invoice to it for a particular
+# Opens a systecash book file and adds an invoice to it for a particular
 # customer (by ID) with a specific ID and value 
 # Optionally also adds a payment for the invoice as well
 #
@@ -30,11 +30,11 @@
 # this to become an invoice importer for your own books
 #
 # Syntax:
-# gnucash-env python simple_invoice_insert.py \
-#          /home/blah/blah.gnucash
+# systecash-env python simple_invoice_insert.py \
+#          /home/blah/blah.systecash
 #          dda2ec8e3e63c7715097f852851d6b22 1001 'The Goods' 201.43
 #
-# argv[1] should be the path to an existing gnucash file/database
+# argv[1] should be the path to an existing systecash file/database
 # for a file, simply pass the pathname, for a database you can use
 # these forms:
 # mysql://user:password@host/dbname
@@ -46,9 +46,9 @@
 #   @author Mark Jenkins, ParIT Worker Co-operative <mark@parit.ca>
 #   @ingroup python_bindings_examples
 
-from gnucash import Session, GUID, GncNumeric
-from gnucash.gnucash_business import Customer, Invoice, Entry
-from gnucash.gnucash_core_c import string_to_guid
+from systecash import Session, GUID, GncNumeric
+from systecash.systecash_business import Customer, Invoice, Entry
+from systecash.systecash_core_c import string_to_guid
 from os.path import abspath
 from sys import argv
 from decimal import Decimal

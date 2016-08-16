@@ -87,7 +87,7 @@
  *    at load time; for SQL-based backends, it is acceptable for the
  *    backend to return no data.
  *
- *    Thus, for example, the GnuCash postgres backend returned
+ *    Thus, for example, the systecash postgres backend returned
  *    the account tree, all currencies, and the pricedb, as these
  *    were needed at startup.  It did not have to return any
  *    transactions whatsoever, as these were obtained at a later stage

@@ -1,6 +1,6 @@
 /********************************************************************\
  * gnc-tree-view.h -- new GtkTreeView with extra features used by   *
- *                    all the tree views in gnucash                 *
+ *                    all the tree views in systecash                 *
  * Copyright (C) 2003 David Hampton <hampton@employees.org>         *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
@@ -25,7 +25,7 @@
 /** @addtogroup GUI
     @{ */
 /** @file gnc-tree-view.h
-    @brief common utilities for manipulating a GtkTreeView within gnucash
+    @brief common utilities for manipulating a GtkTreeView within systecash
     @author David Hampton <hampton@employees.org>
 */
 

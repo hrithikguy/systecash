@@ -66,7 +66,7 @@
  * @return A pointer to a GKeyFile that holds the state information
  *         for the given session. If no state file was found an
  *         empty state is returned (not NULL!). This pointer should
- *         never be freed, except when gnucash is exiting !
+ *         never be freed, except when systecash is exiting !
  */
 GKeyFile *gnc_state_load (const QofSession *session);
 
@@ -81,7 +81,7 @@ void      gnc_state_save (const QofSession *session);
  * @return A pointer to a GKeyFile that holds the current state
  *         information. If there is no current state, an
  *         empty state is returned (not NULL!). This pointer should
- *         never be freed, except when gnucash is exiting !
+ *         never be freed, except when systecash is exiting !
  */
 GKeyFile *gnc_state_get_current (void);
 
@@ -90,12 +90,12 @@ GKeyFile *gnc_state_get_current (void);
  *
  *  This function is meant to be called when an object is deleted
  *  for which state is kept. For example, when an account is
- *  deleted from GnuCash, all state sections that refer to it
+ *  deleted from systecash, all state sections that refer to it
  *  should get removed. In that case you can call this function
  *  with the account's guid as parameter.
  *
  *  @param partial_name a string to match in the section names
- *                      for most objects in GnuCash that maintain
+ *                      for most objects in systecash that maintain
  *                      state, this will be the object's guid
  *
  * @return The number of successfully dropped sections.

@@ -45,14 +45,14 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report standard-reports equity-statement))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(define-module (systecash report standard-reports equity-statement))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(use-modules (gnucash printf))
+(use-modules (systecash printf))
 
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
 (define reportname (N_ "Equity Statement"))
 
@@ -308,7 +308,7 @@
                (neg-start-equity-balance #f)
                (neg-end-equity-balance #f)
 	       
-	       ;; these variables wont be used until gnucash gets
+	       ;; these variables wont be used until systecash gets
 	       ;; conta account types
                (start-capital-balance #f)
                (end-capital-balance #f)
@@ -520,7 +520,7 @@
 	  ;; 
 	  ;; calculate investments & draws...
 	  ;; 
-	  ;; since, as this time, GnuCash does not have any
+	  ;; since, as this time, systecash does not have any
 	  ;; contra-account types, i'm gonna have to fudge this a
 	  ;; bit...  i'll do a transaction query and classify the
 	  ;; splits by debit/credit.

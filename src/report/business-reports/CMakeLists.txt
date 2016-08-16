@@ -24,7 +24,7 @@ SET(business_reports_DATA
   balsheet-eg.eguile.scm
 )
 
-SET(GUILE_OUTPUT_DIR   gnucash/report)
+SET(GUILE_OUTPUT_DIR   systecash/report)
 SET(GUILE_MODULES      src/app-utils src/engine src/html src/gnome-utils
                          src/report/report-system src/report/standard-reports)
 SET(GUILE_LOAD_DIRS    src/app-utils src/core-utils src/engine src/gnc-module src/gnome-utils src/scm
@@ -43,4 +43,4 @@ GNC_ADD_SCHEME_TARGETS(scm-business-reports
   TRUE
 )
 
-INSTALL(FILES ${business_reports_DATA} DESTINATION ${SCHEME_INSTALLED_SOURCE_DIR}/gnucash/report)
+INSTALL(FILES ${business_reports_DATA} DESTINATION ${SCHEME_INSTALLED_SOURCE_DIR}/systecash/report)

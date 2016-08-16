@@ -12,7 +12,7 @@
 	  src/app-utils/guile-util.c, src/app-utils/option-util.c,
 	  src/app-utils/test/test-print-queries.c,
 	  src/app-utils/test/test-scm-query-string.c, src/base-typemaps.i,
-	  src/bin/gnucash-bin.c,
+	  src/bin/systecash-bin.c,
 	  src/business/business-core/business-core.i,
 	  src/business/business-core/gncBusGuile.c,
 	  src/business/business-gnome/dialog-invoice.c,
@@ -222,7 +222,7 @@
 	  they existed. This re-indentation was done using astyle-1.23
 	  using the following options: astyle --indent=spaces=4
 	  --brackets=break --pad-oper Discussed at
-	  http://lists.gnucash.org/pipermail/gnucash-devel/2009-August/026121.html
+	  http://lists.systecash.org/pipermail/systecash-devel/2009-August/026121.html
 
 2009-12-29 06:13  mta
 
@@ -273,12 +273,12 @@
 
 2009-12-18 12:39  gjanssens
 
-	* [r18526] src/gnome-utils/gnc-main-window.c: Bug #479581 gnucash
+	* [r18526] src/gnome-utils/gnc-main-window.c: Bug #479581 systecash
 	  --nofile hasn't application name in window title When no file is
-	  selected, the title now becomes "Unsaved Book - GnuCash". The
+	  selected, the title now becomes "Unsaved Book - systecash". The
 	  first part is following Gnome HIG guidelines, the latter part is
-	  a preference of several GnuCash developers. Furthermore, the "-
-	  GnuCash" suffix will always be appended, not only when no file
+	  a preference of several systecash developers. Furthermore, the "-
+	  systecash" suffix will always be appended, not only when no file
 	  is open.
 
 2009-12-17 08:04  mta
@@ -360,7 +360,7 @@
 
 2009-12-17 07:17  mta
 
-	* [r18511] configure.in, src/bin/gnucash-bin.c: Increase the size
+	* [r18511] configure.in, src/bin/systecash-bin.c: Increase the size
 	  of the Guile stack to avoid stack overflow errors.
 
 2009-12-17 07:15  mta
@@ -395,7 +395,7 @@
 
 2009-12-16 00:17  plongstaff
 
-	* [r18504] src/bin/gnucash-valgrind.in: Need to export the
+	* [r18504] src/bin/systecash-valgrind.in: Need to export the
 	  variables for glib to see them
 
 2009-12-15 21:27  cstim
@@ -427,13 +427,13 @@
 	  Database frame, as relevant to the chosen data format * Set a
 	  minimum width. Without it the dialog comes up too narrow. * Some
 	  minor layout changes (spacing, justification,...) to harmonize
-	  with other GnuCash dialogs.
+	  with other systecash dialogs.
 
 2009-12-14 05:52  mta
 
 	* [r18498] src/report/standard-reports/Makefile.am: Symlink the
 	  reports to the build directory to make it easier to use them
-	  when running in place after a build without installing GnuCash.
+	  when running in place after a build without installing systecash.
 
 2009-12-14 05:50  mta
 
@@ -453,7 +453,7 @@
 2009-12-13 21:16  cstim
 
 	* [r18495] packaging/win32/dist.sh,
-	  packaging/win32/gnucash.iss.in: Fix #586122 (follow-up to
+	  packaging/win32/systecash.iss.in: Fix #586122 (follow-up to
 	  r18488) by using aqbanking/version.h from its installation path.
 	  Also look up the gwenhywfar so-name accordingly.
 
@@ -473,7 +473,7 @@
 
 2009-12-13 19:19  plongstaff
 
-	* [r18493] src/bin/gnucash-valgrind.in: Add flags to help with
+	* [r18493] src/bin/systecash-valgrind.in: Add flags to help with
 	  valgrind on glib
 
 2009-12-13 19:18  plongstaff
@@ -503,7 +503,7 @@
 2009-12-11 19:57  gjanssens
 
 	* [r18488] packaging/win32/dist.sh,
-	  packaging/win32/gnucash.iss.in: Bug 586122 - The AqBanking
+	  packaging/win32/systecash.iss.in: Bug 586122 - The AqBanking
 	  Wizard can't be loaded: plugins\20 folder to be renamed into
 	  plugins\16 The patch evaluates and configures the proper paths
 	  at build time, retrieving the required info directly from the
@@ -586,7 +586,7 @@
 	  src/tax/us/txf.scm: Bug #603186: Fix crash with txf.scm on win32
 	  Patch by J. Alex Aycinena: In further testing I discovered that
 	  I omitted some codes in txf-de_DE.scm and txf.scm that need to
-	  be there. Without them gnucash crashes under certain
+	  be there. Without them systecash crashes under certain
 	  circumstances.
 
 2009-12-04 20:26  cstim
@@ -694,7 +694,7 @@
 
 	* [r18441] src/backend/dbi/gnc-backend-dbi.c: Set debug level for
 	  gnc.backend.dbi automatically to DEBUG. This will ensure that
-	  all SQL statements are logged into the gnucash.trace file. This
+	  all SQL statements are logged into the systecash.trace file. This
 	  can provide vital information in case of problems.
 
 2009-11-24 00:07  plongstaff
@@ -702,7 +702,7 @@
 	* [r18440] src/engine/gnc-filepath-utils.c: Fix bug 602603 - State
 	  file cannot be saved with MySQL because of colon in filename
 	  When creating file names for the "books" or "data" directory
-	  under ".gnucash", convert '/' and ':' to '_'. This may mean
+	  under ".systecash", convert '/' and ':' to '_'. This may mean
 	  state is lost for cases with a full url including type (since
 	  the previous conversion was '/' to ','), but this will only
 	  happen once.
@@ -761,7 +761,7 @@
 2009-11-21 04:32  plongstaff
 
 	* [r18431] src/backend/sql/gnc-transaction-sql.c: Fix bug 591098 -
-	  when starting Gnucash, "Present" and all other collumns exept
+	  when starting systecash, "Present" and all other collumns exept
 	  TOTAL are zero until you open the account Fix bug 598618 - does
 	  not calculate account balances correctly Both of these are
 	  happening because not all transactions are being loaded at
@@ -771,13 +771,13 @@
 	  because then the splits associated with an invoice transaction
 	  are being loaded, the balance cannot be updated properly. This
 	  change reverts back to loading all transactions on startup. Once
-	  gnucash is a proper database app, we can change back to loading
+	  systecash is a proper database app, we can change back to loading
 	  transactions only when needed.
 
 2009-11-20 21:12  cstim
 
 	* [r18430] src/libqof/qof/qofbook.c: Temporary workaround for
-	  crash at startup after r18429. Before this change, gnucash
+	  crash at startup after r18429. Before this change, systecash
 	  crashes on start-up with Backtrace: In unknown file: ?: 0*
 	  gnc:*book-label* <unnamed port>: In expression gnc:*book-label*:
 	  <unnamed port>: Unbound variable: gnc:*book-label*
@@ -816,7 +816,7 @@
 	  Implement currency trading accounts optionally, to be enabled
 	  per-book. Patch by Mike Alexander: This patch implements trading
 	  accounts somewhat as described in Peter Selinger's document at
-	  <http://www.mathstat.dal.ca/~selinger/accounting/gnucash.html>.
+	  <http://www.mathstat.dal.ca/~selinger/accounting/systecash.html>.
 	  Although he describes it as a multiple currency problem, it
 	  really applies to any transactions involving multiple
 	  commodities (for example buying or selling a stock) Hence I've
@@ -826,7 +826,7 @@
 	  must be balanced both in value (in the transaction currency) and
 	  in each commodity or currency used in any split in the
 	  transaction. If a transaction only contains splits in the
-	  transaction currency then this is the same rule as Gnucash has
+	  transaction currency then this is the same rule as systecash has
 	  always enforced. In this patch, the option to use trading
 	  accounts has been moved from Edit->Preferences to
 	  File->Properties and is now associated with the active book
@@ -918,9 +918,9 @@
 	  stock transactions, but to me is mostly useless for those
 	  keeping track of personal finances. This feature has been
 	  requested on occasion, such as at
-	  https://lists.gnucash.org/pipermail/gnucash-devel/2003-August/010279.html
+	  https://lists.systecash.org/pipermail/systecash-devel/2003-August/010279.html
 	  and https://bugzilla.gnome.org/show_bug.cgi?id=92274 and
-	  http://lists.gnucash.org/pipermail/gnucash-user/2009-October/031839.html
+	  http://lists.systecash.org/pipermail/systecash-user/2009-October/031839.html
 	  "Transaction date" refers to such as the date the purchase was
 	  rung up in the store cash register, payment mailed or possibly
 	  received by the recipient, payment received by you, date you
@@ -928,8 +928,8 @@
 	  expense was scheduled. Your intent to expend the money is
 	  definitely determined. "Bank posting date" is when the bank has
 	  finally debited or credited your account. "Date entered" in
-	  Gnucash would be identical to "transaction date", if you always
-	  without fail entered the transaction into Gnucash on the same
+	  systecash would be identical to "transaction date", if you always
+	  without fail entered the transaction into systecash on the same
 	  date as the purchase, bank deposit, etc. Bug #92274 describes it
 	  better. That mentions 3 dates, date mailed, date gas company
 	  posts the payment, and date the bank debits the payment. I track
@@ -962,7 +962,7 @@
 	  view Patch by Matt Lavin: Here is a patch that implements drag
 	  and drop reparenting in the accounts page. The function works
 	  for me, and I can't think of anything more that needs to be
-	  done, but I'm new to the Gnucash codebase so a thorough review
+	  done, but I'm new to the systecash codebase so a thorough review
 	  would be great.
 
 2009-11-20 02:10  plongstaff
@@ -1042,7 +1042,7 @@
 2009-11-16 01:05  plongstaff
 
 	* [r18414] src/report/standard-reports/standard-reports.scm: Fix
-	  bug 598213 - Selecting "Account Report" causes gnucash to crash
+	  bug 598213 - Selecting "Account Report" causes systecash to crash
 	  After resolving a report module, add it to the list of used
 	  modules.
 
@@ -1130,7 +1130,7 @@
 
 2009-11-09 23:35  plongstaff
 
-	* [r18408] src/html/gnc-html-webkit.c: Bug 600947 - Gnucash-2.3.7
+	* [r18408] src/html/gnc-html-webkit.c: Bug 600947 - systecash-2.3.7
 	  crashes when doing reports with webkit-1.1.15 Handle the
 	  "navigation requested" callback correctly. It was being called
 	  with the uri "base-uri" when a page was being loaded. This
@@ -1217,23 +1217,23 @@
 
 	* [r18398] accounts/Makefile.am, accounts/pl,
 	  accounts/pl/Makefile.am,
-	  accounts/pl/acctchrt_brokerage.gnucash-xea,
-	  accounts/pl/acctchrt_business.gnucash-xea,
-	  accounts/pl/acctchrt_carloan.gnucash-xea,
-	  accounts/pl/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/pl/acctchrt_checkbook.gnucash-xea,
-	  accounts/pl/acctchrt_childcare.gnucash-xea,
-	  accounts/pl/acctchrt_common.gnucash-xea,
-	  accounts/pl/acctchrt_eduloan.gnucash-xea,
-	  accounts/pl/acctchrt_fixedassets.gnucash-xea,
-	  accounts/pl/acctchrt_full.gnucash-xea,
-	  accounts/pl/acctchrt_homeloan.gnucash-xea,
-	  accounts/pl/acctchrt_homeown.gnucash-xea,
-	  accounts/pl/acctchrt_otherloan.gnucash-xea,
-	  accounts/pl/acctchrt_renter.gnucash-xea,
-	  accounts/pl/acctchrt_retiremt.gnucash-xea,
-	  accounts/pl/acctchrt_spouseinc.gnucash-xea,
-	  accounts/pl/acctchrt_spouseretire.gnucash-xea, configure.in: Add
+	  accounts/pl/acctchrt_brokerage.systecash-xea,
+	  accounts/pl/acctchrt_business.systecash-xea,
+	  accounts/pl/acctchrt_carloan.systecash-xea,
+	  accounts/pl/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/pl/acctchrt_checkbook.systecash-xea,
+	  accounts/pl/acctchrt_childcare.systecash-xea,
+	  accounts/pl/acctchrt_common.systecash-xea,
+	  accounts/pl/acctchrt_eduloan.systecash-xea,
+	  accounts/pl/acctchrt_fixedassets.systecash-xea,
+	  accounts/pl/acctchrt_full.systecash-xea,
+	  accounts/pl/acctchrt_homeloan.systecash-xea,
+	  accounts/pl/acctchrt_homeown.systecash-xea,
+	  accounts/pl/acctchrt_otherloan.systecash-xea,
+	  accounts/pl/acctchrt_renter.systecash-xea,
+	  accounts/pl/acctchrt_retiremt.systecash-xea,
+	  accounts/pl/acctchrt_spouseinc.systecash-xea,
+	  accounts/pl/acctchrt_spouseretire.systecash-xea, configure.in: Add
 	  polish account templates, contributed by Jacek Baszkiewicz
 	  <jbaszkiewicz@o2.pl>.
 
@@ -1288,8 +1288,8 @@
 	  tremendously with my efforts.
 	* [r18390] src/register/register-core/combocell.h,
 	  src/register/register-gnome/combocell-gnome.c,
-	  src/register/register-gnome/gnucash-item-list.c,
-	  src/register/register-gnome/gnucash-item-list.h: Make one
+	  src/register/register-gnome/systecash-item-list.c,
+	  src/register/register-gnome/systecash-item-list.h: Make one
 	  register function more const correct to avoid compiler warnings
 	  when passing const strings.
 
@@ -1313,7 +1313,7 @@
 
 	* [r18384] macros/gnome-guile-checks.m4,
 	  src/app-utils/gnc-exp-parser.c,
-	  src/optional/python-bindings/gnucash_core.i: Fix 598491: Remove
+	  src/optional/python-bindings/systecash_core.i: Fix 598491: Remove
 	  use of guile's deprecated GH interface
 
 2009-10-16 20:15  cstim
@@ -1346,7 +1346,7 @@
 2009-10-08 21:04  cstim
 
 	* [r18377] src/gnome-utils/glade/preferences.glade,
-	  src/gnome/schemas/apps_gnucash_general.schemas.in,
+	  src/gnome/schemas/apps_systecash_general.schemas.in,
 	  src/register/ledger-core/split-register-control.c: Add new
 	  option in register "Tab order includes Transfer field". Patch by
 	  Colin Law: Patch that provides a new option in the Register
@@ -1354,7 +1354,7 @@
 	  the description for a memorised transaction in Basic Ledger
 	  view, that the cursor skips to the value field (as at present)
 	  or just tabs to the Transfer field. The option defaults to
-	  include the Transfer field so gnucash operation is unaffected
+	  include the Transfer field so systecash operation is unaffected
 	  unless user modifies the option. Signed-off-by: Christian
 	  Stimming <stimming@tuhh.de>
 
@@ -1364,7 +1364,7 @@
 	  broken data file backward compatibility where SX recurrence
 	  would disappear. In r17725 and r17751, I introduced the extra
 	  XML child element <recurrence:weekend_adj>, but this means a
-	  gnucash-2.2.x cannot read the SX recurrence of a >=2.3.x file
+	  systecash-2.2.x cannot read the SX recurrence of a >=2.3.x file
 	  anymore, which is bad. In order to improve this broken backward
 	  compatibility for at least the common case, we don't write out
 	  this XML element as long as it is only "none".
@@ -1378,7 +1378,7 @@
 	* [r18370] packaging/win32/defaults.sh: Retrieve new packaged
 	  pgsql binary which has msvcr71.dll included. Also, win32
 	  packaged webkit is retrieved from sourceforge.net, not
-	  gnucash.org.
+	  systecash.org.
 
 2009-10-04 20:25  cstim
 
@@ -1389,7 +1389,7 @@
 	  the main window.
 	* [r18368] packaging/win32/defaults.sh: Partly revert r18363,
 	  "Minor windows version updates: Newer gmp, newer slib." The
-	  newest build doesn't even start the gnucash main window (only
+	  newest build doesn't even start the systecash main window (only
 	  the splash screen). Hence, we revert the changed slib version
 	  because this might affect that behaviour.
 
@@ -1412,7 +1412,7 @@
 	  Follow-up to r18354: Patch for balance column displayed in
 	  template register Patch by Tim M: The attached patch is an
 	  improvement to the original patch which supplies the correct
-	  number of columns to gnucash for the general_ledger register
+	  number of columns to systecash for the general_ledger register
 	  view if the register is a template. Signed-off-by: Christian
 	  Stimming <stimming@tuhh.de>
 
@@ -1536,7 +1536,7 @@
 
 2009-09-25 23:36  plongstaff
 
-	* [r18348] src/register/register-gnome/gnucash-item-edit.c:
+	* [r18348] src/register/register-gnome/systecash-item-edit.c:
 	  Enhancement bug 589787 - Multi-line up/down scroll for register
 	  transaction Notes field text Patch by James Raehl
 
@@ -1702,7 +1702,7 @@
 	  transaction Action pulldown lists are currently oriented to
 	  stock transactions. Expense Action options, for example, are Buy
 	  and Sell. The enclosed patch adds a small number of items for
-	  those using Gnucash for personal checking accounts. Also, ATM is
+	  those using systecash for personal checking accounts. Also, ATM is
 	  split into ATM Deposit and ATM Draw (withdrawal). This patch
 	  adds actions to the register transaction Action pulldown lists
 	  Patch by James Raehl.
@@ -1789,13 +1789,13 @@
 
 2009-09-16 00:24  plongstaff
 
-	* [r18318] src/bin/gnucash-setup-env-osx.in: Add GNC_DBD_DIR
+	* [r18318] src/bin/systecash-setup-env-osx.in: Add GNC_DBD_DIR
 	  definition for libdbi on mac
 
 2009-09-14 23:58  plongstaff
 
 	* [r18317] src/gnome-utils/glade/preferences.glade,
-	  src/gnome/schemas/apps_gnucash_dialog_reconcile.schemas.in,
+	  src/gnome/schemas/apps_systecash_dialog_reconcile.schemas.in,
 	  src/gnome/window-reconcile.c: Fix bug 590386 - Always use today
 	  for reconciliation statement date Patch by Simon Arlott
 
@@ -1812,7 +1812,7 @@
 
 2009-09-14 23:38  plongstaff
 
-	* [r18314] src/bin/gnucash-bin.c,
+	* [r18314] src/bin/systecash-bin.c,
 	  src/business/business-gnome/dialog-date-close.c,
 	  src/business/business-gnome/dialog-invoice.c,
 	  src/business/business-gnome/dialog-order.c,
@@ -1854,7 +1854,7 @@
 
 2009-09-11 23:18  plongstaff
 
-	* [r18311] src/html/gnc-html-graph-gog.c: Fix bug 594048 - gnucash
+	* [r18311] src/html/gnc-html-graph-gog.c: Fix bug 594048 - systecash
 	  will not compile with most recent goffice versions Patch by Jean
 	  Brefort
 
@@ -2023,14 +2023,14 @@
 	* [r18291] AUTHORS,
 	  src/optional/python-bindings/example_scripts/simple_session.py,
 	  src/optional/python-bindings/example_scripts/simple_test.py,
-	  src/optional/python-bindings/gnucash_core.i,
-	  src/optional/python-bindings/gnucash_core.py: Python bindings
+	  src/optional/python-bindings/systecash_core.i,
+	  src/optional/python-bindings/systecash_core.py: Python bindings
 	  patches by Mark Jenkins. python_GetNthChild_remove.patch remove
 	  the redundant GetNthChild code, gnc_account_nth_child supported
 	  python_more_GUID.patch Improve support for GUID
 	  python_better_commodity.patch * Removed custom __init__ from
 	  GncCommodity, not only is it wrong but the one from
-	  GnuCashCoreClass is just fine. * Supported the get_table method
+	  systecashCoreClass is just fine. * Supported the get_table method
 	  For Book * Removed support for direct instantiation of
 	  GncCommodityTable. (via gnc_commodity_table_new() ). Only
 	  methods and not the constructor function are added to the class
@@ -2038,7 +2038,7 @@
 	  instance via Book.get_table() and have no need to use
 	  gnc_commodity_table_new(), which the apis advise is for internal
 	  use only. python_GncLot.patch * included gnc-lot.h in
-	  gnucash_core.i again * Made GncLot class use superclass
+	  systecash_core.i again * Made GncLot class use superclass
 	  __init__, it doesn't need its own.
 	  python_more_documentation.patch Documentation strings for many
 	  classes, which can be viewed in source and with python's help()
@@ -2046,7 +2046,7 @@
 	  module, not the business module specific backend
 	  python_example_scripts.py example scripts improved, new one
 	  added. This new script originally came from this post:
-	  http://lists.gnucash.org/pipermail/gnucash-devel/2008-July/023618.html
+	  http://lists.systecash.org/pipermail/systecash-devel/2008-July/023618.html
 	  python_authors_update.patch added Legal Aid Manitoba to credit
 	  line for Mark Jenkins
 
@@ -2166,9 +2166,9 @@
 
 2009-08-18 16:49  plongstaff
 
-	* [r18263] packaging/win32/gnucash.iss.in,
-	  packaging/win32/install.sh, src/bin/gnucash-setup-env-osx.in,
-	  src/bin/gnucash-setup-env.in: Fix win32 report directory startup
+	* [r18263] packaging/win32/systecash.iss.in,
+	  packaging/win32/install.sh, src/bin/systecash-setup-env-osx.in,
+	  src/bin/systecash-setup-env.in: Fix win32 report directory startup
 	  problem on win32. In order to help keep the various places
 	  run-time environment is created in sync, add a comment to each
 	  place suggesting that environment changes should be reflected in
@@ -2176,7 +2176,7 @@
 
 2009-08-18 00:11  plongstaff
 
-	* [r18260] packaging/win32/install.sh: Fix win32 gnucash.cmd
+	* [r18260] packaging/win32/install.sh: Fix win32 systecash.cmd
 	  creation to handle ability for reports to be dropped into the
 	  installed report\standard-reports folder.
 
@@ -2209,8 +2209,8 @@
 
 2009-08-16 00:50  plongstaff
 
-	* [r18253] src/bin/Makefile.am, src/bin/gnucash-setup-env-osx.in,
-	  src/bin/gnucash-setup-env.in,
+	* [r18253] src/bin/Makefile.am, src/bin/systecash-setup-env-osx.in,
+	  src/bin/systecash-setup-env.in,
 	  src/report/standard-reports/Makefile.am,
 	  src/report/standard-reports/account-piecharts.scm,
 	  src/report/standard-reports/account-summary.scm,
@@ -2238,7 +2238,7 @@
 	  src/report/standard-reports/trial-balance.scm: Reports are now
 	  automatically picked up at startup time. Each file in the
 	  directory
-	  share/gnucash/guile-modules/gnucash/report/standard-reports is
+	  share/systecash/guile-modules/systecash/report/standard-reports is
 	  assumed to be an SCM file which defines a module which generates
 	  a report. The business reports have not yet been converted. A
 	  new element 'standard-reports' needs to be added to the module
@@ -2452,11 +2452,11 @@
 	  src/backend/xml/gnc-schedxaction-xml-v2.c,
 	  src/html/gnc-html-graph-gog-webkit.c,
 	  src/libqof/backend/file/qsf-xml-map.c,
-	  src/register/register-gnome/gnucash-item-edit.c: Fix more signed
+	  src/register/register-gnome/systecash-item-edit.c: Fix more signed
 	  vs. unsigned char pointer type conflicts. This patch contains
 	  those cases where a cast was unavoidable. Patch by J. Alex
 	  Aycinena. Detailed explanation follows: 1 -
-	  src/register/register-gnome/gnucash-item-edit.c The variable
+	  src/register/register-gnome/systecash-item-edit.c The variable
 	  'sel' is set with 'gtk_selection_data_get_text' which returns a
 	  'guchar *'; 'sel' is then used by functions
 	  'gtk_editable_insert_text' and 'strlen' which require 'gchar *',
@@ -2502,22 +2502,22 @@
 
 	* [r18219] accounts/Makefile.am, accounts/ko,
 	  accounts/ko/Makefile.am,
-	  accounts/ko/acctchrt_brokerage.gnucash-xea,
-	  accounts/ko/acctchrt_business.gnucash-xea,
-	  accounts/ko/acctchrt_carloan.gnucash-xea,
-	  accounts/ko/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/ko/acctchrt_checkbook.gnucash-xea,
-	  accounts/ko/acctchrt_childcare.gnucash-xea,
-	  accounts/ko/acctchrt_common.gnucash-xea,
-	  accounts/ko/acctchrt_eduloan.gnucash-xea,
-	  accounts/ko/acctchrt_fixedassets.gnucash-xea,
-	  accounts/ko/acctchrt_homeloan.gnucash-xea,
-	  accounts/ko/acctchrt_homeown.gnucash-xea,
-	  accounts/ko/acctchrt_otherloan.gnucash-xea,
-	  accounts/ko/acctchrt_renter.gnucash-xea,
-	  accounts/ko/acctchrt_retiremt.gnucash-xea,
-	  accounts/ko/acctchrt_spouseinc.gnucash-xea,
-	  accounts/ko/acctchrt_spouseretire.gnucash-xea, configure.in: Add
+	  accounts/ko/acctchrt_brokerage.systecash-xea,
+	  accounts/ko/acctchrt_business.systecash-xea,
+	  accounts/ko/acctchrt_carloan.systecash-xea,
+	  accounts/ko/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/ko/acctchrt_checkbook.systecash-xea,
+	  accounts/ko/acctchrt_childcare.systecash-xea,
+	  accounts/ko/acctchrt_common.systecash-xea,
+	  accounts/ko/acctchrt_eduloan.systecash-xea,
+	  accounts/ko/acctchrt_fixedassets.systecash-xea,
+	  accounts/ko/acctchrt_homeloan.systecash-xea,
+	  accounts/ko/acctchrt_homeown.systecash-xea,
+	  accounts/ko/acctchrt_otherloan.systecash-xea,
+	  accounts/ko/acctchrt_renter.systecash-xea,
+	  accounts/ko/acctchrt_retiremt.systecash-xea,
+	  accounts/ko/acctchrt_spouseinc.systecash-xea,
+	  accounts/ko/acctchrt_spouseretire.systecash-xea, configure.in: Add
 	  Korean translation of account charts by Jin-Hwan Jeong.
 
 2009-07-19 20:16  plongstaff
@@ -2575,7 +2575,7 @@
 2009-07-14 22:26  plongstaff
 
 	* [r18210]
-	  src/import-export/schemas/apps_gnucash_import_generic_matcher.schemas.in:
+	  src/import-export/schemas/apps_systecash_import_generic_matcher.schemas.in:
 	  Fix bug 587436 – Make Bayesian Matching ON by default
 
 2009-07-14 21:33  plongstaff
@@ -2584,14 +2584,14 @@
 	  PgSql: Pop-up dialog for overwriting db contents even with blank
 	  database When you ask for the tables in a postgres db, postgres
 	  returns 7 tables which are in the information schema. These
-	  tables need to be filtered out when gnucash checks whether the
+	  tables need to be filtered out when systecash checks whether the
 	  db is empty or not.
 
 2009-07-13 20:40  cedayiv
 
 	* [r18208] src/gnome-utils/Makefile.am,
 	  src/gnome-utils/gnc-main-window.c: Patch by John Ralls.
-	  Integrates the gnucash menus into the MacOSX menubar.
+	  Integrates the systecash menus into the MacOSX menubar.
 
 2009-07-13 20:39  cedayiv
 
@@ -2601,9 +2601,9 @@
 
 2009-07-13 20:38  cedayiv
 
-	* [r18206] src/bin/Makefile.am, src/bin/gnucash-setup-env-osx.in:
+	* [r18206] src/bin/Makefile.am, src/bin/systecash-setup-env-osx.in:
 	  Patch by John Ralls. Provides (and installs when appropriate) a
-	  special gnucash-setup-env for OSX.
+	  special systecash-setup-env for OSX.
 
 2009-07-13 20:34  cedayiv
 
@@ -2721,7 +2721,7 @@
 
 2009-07-07 02:38  plongstaff
 
-	* [r18183] src/bin/Makefile.am: Add gnucash-setup-env to list of
+	* [r18183] src/bin/Makefile.am: Add systecash-setup-env to list of
 	  files to be cleaned
 
 2009-07-07 02:37  plongstaff
@@ -2757,7 +2757,7 @@
 	* [r18178] src/gnome-utils/dialog-file-access.c: When opening a
 	  file, "sqlite3" and "xml" dropdown list items are replaced by
 	  "file", since the user shouldn't care what type of file it is.
-	  Gnucash will figure it out.
+	  systecash will figure it out.
 
 2009-07-05 22:16  cedayiv
 
@@ -2910,7 +2910,7 @@
 2009-06-22 21:29  plongstaff
 
 	* [r18153] packaging/win32/install.sh: Patch by Daniel Harding -
-	  update install.sh to handle new gnucash-setup-env script
+	  update install.sh to handle new systecash-setup-env script
 
 2009-06-22 11:51  plongstaff
 
@@ -2932,9 +2932,9 @@
 
 2009-06-21 17:41  plongstaff
 
-	* [r18149] src/bin, src/bin/Makefile.am, src/bin/gnucash-gdb.in,
-	  src/bin/gnucash-setup-env.in, src/bin/gnucash-valgrind.in,
-	  src/bin/gnucash.in: Separate environment variable setup into
+	* [r18149] src/bin, src/bin/Makefile.am, src/bin/systecash-gdb.in,
+	  src/bin/systecash-setup-env.in, src/bin/systecash-valgrind.in,
+	  src/bin/systecash.in: Separate environment variable setup into
 	  common file
 
 2009-06-21 17:32  plongstaff
@@ -2964,10 +2964,10 @@
 
 2009-06-21 13:02  plongstaff
 
-	* [r18143] packaging/win32/install.sh, src/bin/gnucash-gdb.in,
-	  src/bin/gnucash-valgrind.in: Fix bug 586296 – Generated
-	  gnucash-dbg and gnucash-valgrind scripts are inconsistent with
-	  the gnucash script - patch by Daniel Harding.
+	* [r18143] packaging/win32/install.sh, src/bin/systecash-gdb.in,
+	  src/bin/systecash-valgrind.in: Fix bug 586296 – Generated
+	  systecash-dbg and systecash-valgrind scripts are inconsistent with
+	  the systecash script - patch by Daniel Harding.
 
 2009-06-21 00:12  plongstaff
 
@@ -2978,7 +2978,7 @@
 2009-06-20 23:44  plongstaff
 
 	* [r18141] packaging/win32/install.sh: Fix bug 585785 – setlocal
-	  command is not included in gnucash.bat generated by Windows
+	  command is not included in systecash.bat generated by Windows
 	  build Patch by Daniel Harding
 
 2009-06-20 23:39  plongstaff
@@ -3007,7 +3007,7 @@
 	* [r18137] src/engine/binreloc.c: Fix bug #586295 - Patch supplied
 	  by Daniel Harding. Use the executable module to determine the
 	  installation directory rather than the registry contents. Allows
-	  a locally built gnucash to use its own libraries, not the
+	  a locally built systecash to use its own libraries, not the
 	  libraries in any installed version.
 
 2009-06-19 16:50  plongstaff
@@ -3336,7 +3336,7 @@
 
 	* [r18073] NEWS, accounts/cs,
 	  packaging/win32/libgda-3.1.2-patch.diff,
-	  packaging/win32/libgda-3.1.2-patch2.diff, src/bin/gnucash-bin.c:
+	  packaging/win32/libgda-3.1.2-patch2.diff, src/bin/systecash-bin.c:
 	  1) Update svn:ignore for accounts/cs to ignore Makefile and
 	  Makefile.in 2) Remove obsolete patches (libgda) 3) Merge NEWS
 	  from 2.2.X and add 2.3.0 NEWS 4) Update stable version number
@@ -3349,7 +3349,7 @@
 
 	* [r18070] packaging/win32/defaults.sh, packaging/win32/dist.sh,
 	  packaging/win32/install.sh: 1) Add commands to build win32
-	  version of gnucash using webkit. 2) Correct URLs for aqbanking
+	  version of systecash using webkit. 2) Correct URLs for aqbanking
 
 2009-05-10 20:45  cstim
 
@@ -3373,7 +3373,7 @@
 2009-05-01 23:38  plongstaff
 
 	* [r18066] src/html/gnc-html-graph-gog-gtkhtml.c,
-	  src/html/gnc-html-graph-gog.c: Fix bug 578212 – gnucash needs to
+	  src/html/gnc-html-graph-gog.c: Fix bug 578212 – systecash needs to
 	  be patch to build against goffice >= 0.7.5 applied patch by Jean
 	  Brefort
 
@@ -3421,21 +3421,21 @@
 
 	* [r18058] accounts/Makefile.am, accounts/cs,
 	  accounts/cs/Makefile.am,
-	  accounts/cs/acctchrt_brokerage.gnucash-xea,
-	  accounts/cs/acctchrt_carloan.gnucash-xea,
-	  accounts/cs/acctchrt_cdmoneymkt.gnucash-xea,
-	  accounts/cs/acctchrt_childcare.gnucash-xea,
-	  accounts/cs/acctchrt_common.gnucash-xea,
-	  accounts/cs/acctchrt_currency.gnucash-xea,
-	  accounts/cs/acctchrt_eduloan.gnucash-xea,
-	  accounts/cs/acctchrt_fixedassets.gnucash-xea,
-	  accounts/cs/acctchrt_homeloan.gnucash-xea,
-	  accounts/cs/acctchrt_homeown.gnucash-xea,
-	  accounts/cs/acctchrt_otherloan.gnucash-xea,
-	  accounts/cs/acctchrt_renter.gnucash-xea,
-	  accounts/cs/acctchrt_retiremt.gnucash-xea,
-	  accounts/cs/acctchrt_spouseinc.gnucash-xea,
-	  accounts/cs/acctchrt_spouseretire.gnucash-xea, configure.in: Add
+	  accounts/cs/acctchrt_brokerage.systecash-xea,
+	  accounts/cs/acctchrt_carloan.systecash-xea,
+	  accounts/cs/acctchrt_cdmoneymkt.systecash-xea,
+	  accounts/cs/acctchrt_childcare.systecash-xea,
+	  accounts/cs/acctchrt_common.systecash-xea,
+	  accounts/cs/acctchrt_currency.systecash-xea,
+	  accounts/cs/acctchrt_eduloan.systecash-xea,
+	  accounts/cs/acctchrt_fixedassets.systecash-xea,
+	  accounts/cs/acctchrt_homeloan.systecash-xea,
+	  accounts/cs/acctchrt_homeown.systecash-xea,
+	  accounts/cs/acctchrt_otherloan.systecash-xea,
+	  accounts/cs/acctchrt_renter.systecash-xea,
+	  accounts/cs/acctchrt_retiremt.systecash-xea,
+	  accounts/cs/acctchrt_spouseinc.systecash-xea,
+	  accounts/cs/acctchrt_spouseretire.systecash-xea, configure.in: Add
 	  Czech account templates by Michael Mráka.
 
 2009-04-26 01:08  plongstaff
@@ -3515,7 +3515,7 @@
 
 2009-04-12 17:14  plongstaff
 
-	* [r18045] configure.in, make-gnucash-potfiles.in, po/POTFILES.in,
+	* [r18045] configure.in, make-systecash-potfiles.in, po/POTFILES.in,
 	  po/POTFILES.skip, src/backend/Makefile.am,
 	  src/backend/dbi/Makefile.am, src/backend/xml/Makefile.am,
 	  src/backend/xml/gnc-backend-file.c,
@@ -3737,20 +3737,20 @@
 
 2009-04-06 17:00  cedayiv
 
-	* [r18024] src/register/register-gnome/gnucash-sheet.c: Register:
+	* [r18024] src/register/register-gnome/systecash-sheet.c: Register:
 	  Force scroll to the current row if the row height may have
 	  changed and pushed the current row out of sight.
 
 2009-04-06 16:27  cedayiv
 
-	* [r18023] src/register/register-gnome/gnucash-sheet.c: Bug
+	* [r18023] src/register/register-gnome/systecash-sheet.c: Bug
 	  #432021: Register: Recompute block offsets if the cell heights
 	  may have changed.
 
 2009-04-06 16:21  cedayiv
 
-	* [r18022] src/register/register-gnome/gnucash-sheet.c,
-	  src/register/register-gnome/gnucash-style.c,
+	* [r18022] src/register/register-gnome/systecash-sheet.c,
+	  src/register/register-gnome/systecash-style.c,
 	  src/register/register-gnome/table-gnome.c: Register: Add some
 	  gnome-related debugging messages.
 
@@ -3848,7 +3848,7 @@
 	  here the user can either run or delete an existing saved report.
 	  * allows deletion of existing saved reports * allows immediate
 	  access to new saved reports from this session (no need to
-	  restart gnucash to get access to new saved reports!) * keeps a
+	  restart systecash to get access to new saved reports!) * keeps a
 	  single rolling backup of saved reports in case of errors
 
 2009-03-25 00:52  cedayiv
@@ -3908,7 +3908,7 @@
 
 2009-03-13 15:07  warlord
 
-	* [r17990] make-gnucash-potfiles.in: Ignore the python-bindings
+	* [r17990] make-systecash-potfiles.in: Ignore the python-bindings
 	  when building translations.
 
 2009-03-10 17:41  plongstaff
@@ -3955,7 +3955,7 @@
 
 2009-03-09 18:23  cedayiv
 
-	* [r17984] src/register/register-gnome/gnucash-sheet.c: Bug
+	* [r17984] src/register/register-gnome/systecash-sheet.c: Bug
 	  #523982: Fix the Enter key in double-line mode. The register had
 	  wrongly assumed one physical row per virtual row.
 
@@ -4224,8 +4224,8 @@
 
 	* [r17965] src/import-export/ofx/gnc-ofx-import.c: Bug #572107:
 	  Use fallback string for OFX account types when matching to
-	  GnuCash accounts. Without the fallback, NULL is printf'ed which
-	  crashes GnuCash on Windows. BP
+	  systecash accounts. Without the fallback, NULL is printf'ed which
+	  crashes systecash on Windows. BP
 
 2009-02-25 19:10  cedayiv
 
@@ -4236,7 +4236,7 @@
 	  split was being destroyed while the transaction was left
 	  pending, and more. These problems left the register in an
 	  inconsistent state that was being noticed in g_assert() calls in
-	  several spots. GnuCash would then crash.
+	  several spots. systecash would then crash.
 
 2009-02-25 18:20  cedayiv
 
@@ -4280,7 +4280,7 @@
 
 2009-02-20 23:08  andrewsw
 
-	* [r17942] src/bin/gnucash-bin.c,
+	* [r17942] src/bin/systecash-bin.c,
 	  src/report/report-system/report.scm: Implement a new
 	  saved-reports-2.4 file to allow translation of existing saved
 	  reports into report-guid enabled versions. Take note: this
@@ -4398,7 +4398,7 @@
 
 2009-02-15 17:23  andi5
 
-	* [r17921] packaging/win32/gnucash.iss.in,
+	* [r17921] packaging/win32/systecash.iss.in,
 	  packaging/win32/install.sh: Bug #571220: [Win32] Unset
 	  SCHEME_LIBRARY_PATH environment variable.
 	* [r17920] src/register/ledger-core/split-register-util.c: Bug
@@ -4440,8 +4440,8 @@
 
 	* [r17900] src/import-export/csv/gnc-csv-import.c: Bug #571161:
 	  Fix r17036 and free every column type only once. BP
-	* [r17899] accounts/fr_CH/acctchrt_business.gnucash-xea,
-	  accounts/fr_FR/acctchrt_business.gnucash-xea: Add missing
+	* [r17899] accounts/fr_CH/acctchrt_business.systecash-xea,
+	  accounts/fr_FR/acctchrt_business.systecash-xea: Add missing
 	  encoding information to the french business account template
 	  files. BP
 
@@ -4528,12 +4528,12 @@
 
 2009-02-10 08:17  rolf
 
-	* [r17887] accounts/de_DE/acctchrt_skr04.gnucash-xea: SKR04: sed
+	* [r17887] accounts/de_DE/acctchrt_skr04.systecash-xea: SKR04: sed
 	  s/Kap.\ Ges/Kap.Ges/ so that it is the same everywhere
 
 2009-02-10 08:10  rolf
 
-	* [r17886] accounts/de_DE/acctchrt_skr04.gnucash-xea: SKR04:
+	* [r17886] accounts/de_DE/acctchrt_skr04.systecash-xea: SKR04:
 	  replace some double with single spaces
 
 2009-02-09 00:18  andi5
@@ -4544,8 +4544,8 @@
 
 2009-02-08 14:56  andi5
 
-	* [r17884] packaging/win32/gnucash.iss.in: [Win32] Bug #542382:
-	  Assign .gnucash file name extension to GnuCash. BP
+	* [r17884] packaging/win32/systecash.iss.in: [Win32] Bug #542382:
+	  Assign .systecash file name extension to systecash. BP
 
 2009-02-08 14:06  andi5
 
@@ -4562,7 +4562,7 @@
 2009-02-08 13:02  andi5
 
 	* [r17881] packaging/win32/Makefile.am, packaging/win32/README,
-	  packaging/win32/dist.sh, packaging/win32/gnucash.iss.in,
+	  packaging/win32/dist.sh, packaging/win32/systecash.iss.in,
 	  packaging/win32/install-fq-mods.bat,
 	  packaging/win32/install-fq-mods.cmd, packaging/win32/install.sh:
 	  [Win32] Rename *.bat to *.cmd. BP
@@ -4611,7 +4611,7 @@
 	  This affects bullet point characters in src/optional/xsl/README,
 	  and Benoit Grégoire's name in source files (and hence the
 	  Doxygen output). E.g. it should fix
-	  <http://svn.gnucash.org/docs/HEAD/reference.html> which claims
+	  <http://svn.systecash.org/docs/HEAD/reference.html> which claims
 	  to be UTF8, but encodes Benoit's name in latin-1. Patch by Alan
 	  Jenkins.
 	* [r17876] src/engine/Account.h, src/engine/Split.h,
@@ -4622,7 +4622,7 @@
 
 	* [r17868] src/backend/file/io-gncxml-v2.c: Bug #569735: Don't
 	  create a new nested template root account when a file is opened
-	  Whenever an XML file is opened, Gnucash creates a new template
+	  Whenever an XML file is opened, systecash creates a new template
 	  root account and makes the old one a child of it. My main
 	  accounts file had them nested over 540 deep before I got annoyed
 	  enough to fix this. The problem is that sxtg_book_begin creates
@@ -4644,7 +4644,7 @@
 	* [r17867] src/engine/SX-book.c: Bug #569734: Give the template
 	  root account a name The template root account created as part of
 	  the scheduled transaction infrastructure should have a name.
-	  Various parts of the Gnucash engine get upset if an account
+	  Various parts of the systecash engine get upset if an account
 	  doesn't have a name. Perhaps this name should be localized, but
 	  the name of the main root account is not localized. Patch by
 	  Mike Alexander. BP
@@ -4658,7 +4658,7 @@
 	  Patch by Mike Alexander. BP
 	* [r17865] src/backend/file/gnc-recurrence-xml-v2.c: Bug #569628:
 	  Fix failed assertion 'str' when saving Whenever I saved my
-	  Gnucash file I would get a number of errors like CRIT
+	  systecash file I would get a number of errors like CRIT
 	  <gnc.backend.xml> text_to_dom_tree: assertion `str' failed I
 	  tracked this down to the fact that the weekend adjust field in
 	  recurrences read from the file was not initialized properly if a
@@ -4715,7 +4715,7 @@
 2009-01-28 21:05  cstim
 
 	* [r17852] accounts/de_DE/Makefile.am,
-	  accounts/de_DE/acctchrt_skr49.gnucash-xea: Bug #568653: Add
+	  accounts/de_DE/acctchrt_skr49.systecash-xea: Bug #568653: Add
 	  German account template SKR49 for non-profit organizations By
 	  Michael Braun and Frank H. Ellenberger. BP
 
@@ -4903,7 +4903,7 @@
 	  Report names are passed through the _() macro before they are
 	  stored to the tree list. Patch by C. Ernst. BP
 	* [r17818] src/gnc-module/gnc-module.c: Bug #564209: Improved
-	  debuggability for module loading gnucash-2.2.7 doesn't (IMHO)
+	  debuggability for module loading systecash-2.2.7 doesn't (IMHO)
 	  log enough (any?) information about failures to load optional
 	  modules. It was a bit of work to debug a recent problem
 	  (#564033) and I ended up tweaking gnc_module_load_common() a bit
@@ -4977,7 +4977,7 @@
 
 	* [r17810] packaging/win32/install.sh: [Win32] Minor cleanup. *
 	  Relinking is really fast now, no need for a hack anymore * Move
-	  the fix of the gnucash script into make_install() * GnuCash does
+	  the fix of the systecash script into make_install() * systecash does
 	  not install into lib/locale/ anymore * Remove invalid
 	  LIBXML2_DIR from PATH BP
 
@@ -5040,13 +5040,13 @@
 2009-01-05 10:40  andi5
 
 	* [r17800] doc/Makefile.am, doc/README-it.win32-bin.txt,
-	  packaging/win32/gnucash.iss.in: Add Italian translation of Win32
+	  packaging/win32/systecash.iss.in: Add Italian translation of Win32
 	  installer by Cristian Marchi.
 
 2009-01-05 10:18  andi5
 
-	* [r17798] packaging/win32/gnucash.iss.in: Sort translations in
-	  gnucash.iss.in by language code. BP
+	* [r17798] packaging/win32/systecash.iss.in: Sort translations in
+	  systecash.iss.in by language code. BP
 
 2009-01-05 09:51  andi5
 

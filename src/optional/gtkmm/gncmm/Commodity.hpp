@@ -23,7 +23,7 @@
 #ifndef GNC_COMMODITY_HPP
 #define GNC_COMMODITY_HPP
 
-// gnucash includes
+// systecash includes
 #include "config.h"
 extern "C"
 {
@@ -43,7 +43,7 @@ class Commodity_Class;
 namespace gnc
 {
 
-/** Wrapper around a gnucash \ref gnc_commodity object */
+/** Wrapper around a systecash \ref gnc_commodity object */
 class Commodity : public GncInstance
 {
 #ifndef DOXYGEN_SHOULD_SKIP_THIS

@@ -33,9 +33,9 @@
  *    a fragmentary filename as input, and resolve it into a fully
  *    qualified path in the file system, i.e. a path that begins with
  *    a leading slash.  First, the current working directory is
- *    searched for the file.  Next, the directory $HOME/.gnucash/data,
+ *    searched for the file.  Next, the directory $HOME/.systecash/data,
  *    and finally, a list of other (configurable) paths.  If the file
- *    is not found, then the path $HOME/.gnucash/data is used.  If
+ *    is not found, then the path $HOME/.systecash/data is used.  If
  *    $HOME is not defined, then the current working directory is
  *    used.
  */
@@ -56,13 +56,13 @@ gchar *gnc_resolve_file_path (const gchar *filefrag);
  *  try to find a file with its path relative to
  *  \li a localized subdirectory in the html directory
  *      of the user's configuration directory
- *      (e.g. $HOME/.gnucash/html/de_DE, $HOME/.gnucash/html/en,...)
- *  \li a localized subdirectory in the gnucash documentation directory
- *      (e.g. /usr/share/doc/gnucash/C,...)
+ *      (e.g. $HOME/.systecash/html/de_DE, $HOME/.systecash/html/en,...)
+ *  \li a localized subdirectory in the systecash documentation directory
+ *      (e.g. /usr/share/doc/systecash/C,...)
  *  \li the html directory of the user's configuration directory
- *      (e.g. $HOME/.gnucash/html)
- *  \li the gnucash documentation directory
- *      (e.g. /usr/share/doc/gnucash/)
+ *      (e.g. $HOME/.systecash/html)
+ *  \li the systecash documentation directory
+ *      (e.g. /usr/share/doc/systecash/)
  *
  *  The paths are searched for in that order. If a matching file is
  *  found, return the absolute path to it.
@@ -75,8 +75,8 @@ gchar *gnc_resolve_file_path (const gchar *filefrag);
  */
 gchar *gnc_path_find_localized_html_file (const gchar *file_name);
 
-const gchar *gnc_dotgnucash_dir (void);
-gchar *gnc_build_dotgnucash_path (const gchar *filename);
+const gchar *gnc_dotsystecash_dir (void);
+gchar *gnc_build_dotsystecash_path (const gchar *filename);
 gchar *gnc_build_book_path (const gchar *filename);
 gchar *gnc_build_translog_path (const gchar *filename);
 gchar *gnc_build_data_path (const gchar *filename);

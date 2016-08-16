@@ -21,7 +21,7 @@
  * FILE: gnc-file.h
  *
  * FUNCTION:
- * A set of file-handling utilities for GnuCash applications.
+ * A set of file-handling utilities for systecash applications.
  * These utilities will "do the right thing" when used in the "File..."
  * pulldown menu, for the "New", "Open", "Save", "SaveAs", etc. menu entries.
  * In particular, they will verify that old files don't get clobbered,

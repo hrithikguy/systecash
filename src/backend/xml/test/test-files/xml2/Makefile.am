@@ -23,4 +23,4 @@ check:
 	done;
 
 clean-local:
-	rm -f *.gnucash
+	rm -f *.systecash

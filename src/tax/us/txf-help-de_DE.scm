@@ -6,13 +6,13 @@
 ;; format. Christian Stimming modified this heavily so that it might become useful for
 ;; the German Umsatzsteuer-Voranmeldung. 
 ;;
-;; Diese Datei wurde im Dezember 2010 für GnuCash Vers. 2.4.0 vollständig überarbeitet und alle Einträge
+;; Diese Datei wurde im Dezember 2010 für systecash Vers. 2.4.0 vollständig überarbeitet und alle Einträge
 ;; gemäß der "Umsatzsteuer-Voranmeldung 2011" umfassend berichtigt und komplettiert von FJSW - Franz Stoll
 ;;
 ;;
 ;; This file holds the explanations to the categories from txf-de_DE.scm.
 ;;
-;; Changes in this file should also be applied on gnucash-docs/help/de/Help_txf-categories.xml
+;; Changes in this file should also be applied on systecash-docs/help/de/Help_txf-categories.xml
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as

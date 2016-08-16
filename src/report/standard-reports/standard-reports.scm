@@ -24,10 +24,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash report standard-reports))
+(define-module (systecash report standard-reports))
 (use-modules (srfi srfi-13))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash core-utils))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash core-utils))
 
 (export gnc:register-report-create)
 (export gnc:register-report-hook)
@@ -150,11 +150,11 @@
     (lambda (x)
 	    (module-use!
 		    (current-module)
-			(resolve-interface (append '(gnucash report standard-reports) (list x)))))
+			(resolve-interface (append '(systecash report standard-reports) (list x)))))
 	(get-report-list))
 
-(use-modules (gnucash gnc-module))
-(gnc:module-load "gnucash/engine" 0)
+(use-modules (systecash gnc-module))
+(gnc:module-load "systecash/engine" 0)
 
 (define (gnc:register-report-create account split query journal? ledger-type?
 				    double? title debit-string credit-string)

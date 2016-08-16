@@ -3,7 +3,7 @@
  * @addtogroup budget Budgets
  * @{
  * @file gnc-budget-view.c
- * @brief File to define budget views for gnucash (the actual display of the budget, along with some calculations and event handlers).
+ * @brief File to define budget views for systecash (the actual display of the budget, along with some calculations and event handlers).
  * @author Phil Longstaff Copyright (C) 2013 phil.longstaff@yahoo.ca
  *
  * This program is free software; you can redistribute it and/or    *
@@ -423,7 +423,7 @@ gbv_create_widget(GncBudgetView *view)
 
 /***********************************************************************
  *  Save enough information about this view that it can                *
- *  be recreated next time the user starts gnucash.                    *
+ *  be recreated next time the user starts systecash.                    *
  *                                                                     *
  *  @param view The view to save.                                      *
  *                                                                     *
@@ -455,7 +455,7 @@ gnc_budget_view_save(GncBudgetView *view, GKeyFile *key_file, const gchar *group
 
 /***********************************************************************
  *  Create a new plugin page based on the information saved
- *  during a previous instantiation of gnucash.
+ *  during a previous instantiation of systecash.
  *
  *  @param view The budget view to be restored
  *

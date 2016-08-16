@@ -147,10 +147,10 @@ gchar* get_check_splits_amount (PrintCheckDialog *pcd);
 gchar* get_check_splits_memo (PrintCheckDialog *pcd);
 gchar* get_check_splits_account (PrintCheckDialog *pcd);
 
-/* This enum defines the types of items that gnucash knows how to
- * print on checks.  Most refer to specific fields from a gnucash
+/* This enum defines the types of items that systecash knows how to
+ * print on checks.  Most refer to specific fields from a systecash
  * transaction and split, but some are generic items unrelated to
- * gnucash.
+ * systecash.
  */
 #define ENUM_CHECK_ITEM_TYPE(_) \
         _(NONE,) \
@@ -268,7 +268,7 @@ typedef struct _check_format
 /* This data structure is used to manage the print check dialog, and
  * the overall check printing process.  It contains pointers to many
  * of the widgets in the dialog, pointers to the check descriptions
- * that have been read, and also contains the data from the gnucash
+ * that have been read, and also contains the data from the systecash
  * transaction/split that is to be printed.
  */
 struct _print_check_dialog
@@ -799,7 +799,7 @@ pcd_save_custom_data(PrintCheckDialog *pcd, const gchar *title)
                               pcd->splits_account_x, pcd->splits_account_y);
 
     filename = g_strconcat(title, CHECK_NAME_EXTENSION, NULL);
-    pathname = g_build_filename(gnc_dotgnucash_dir(), CHECK_FMT_DIR,
+    pathname = g_build_filename(gnc_dotsystecash_dir(), CHECK_FMT_DIR,
                                 filename, NULL);
 
     if (gnc_key_file_save_to_file(pathname, key_file, &error))
@@ -1541,7 +1541,7 @@ read_one_check_directory(PrintCheckDialog *pcd, GtkListStore *store,
 
 
 /* Read all check formats.  This function first looks in the system directory
- * for check files, and then looks in the user's .gnucash directory for any
+ * for check files, and then looks in the user's .systecash directory for any
  * custom check files.
  */
 static void
@@ -1553,12 +1553,12 @@ read_formats(PrintCheckDialog *pcd, GtkListStore *store)
     dirname = g_build_filename(pkgdatadir, CHECK_FMT_DIR, (char *)NULL);
     /* Translators: This is a directory name. It may be presented to
      * the user to indicate that some data file was defined by the
-     * gnucash application. */
+     * systecash application. */
     read_one_check_directory(pcd, store, _("application"), dirname);
     g_free(dirname);
     g_free(pkgdatadir);
 
-    dirname = gnc_build_dotgnucash_path(CHECK_FMT_DIR);
+    dirname = gnc_build_dotsystecash_path(CHECK_FMT_DIR);
     /* Translators: This is a directory name. It may be presented to
      * the user to indicate that some data file was defined by a
      * user herself. */
@@ -1877,7 +1877,7 @@ draw_text(GtkPrintContext *context, const gchar *text, check_item_t *data,
 
 
 /* Find and load the specified image.  If the specified filename isn't an
- * absolute path name, this code will also look in the gnucash system check
+ * absolute path name, this code will also look in the systecash system check
  * format directory, and then in the user's private check format
  * directory.
  *
@@ -1899,7 +1899,7 @@ read_image (const gchar *filename)
     if (!g_file_test(tmp_name, G_FILE_TEST_EXISTS))
     {
         g_free(tmp_name);
-        dirname = gnc_build_dotgnucash_path(CHECK_FMT_DIR);
+        dirname = gnc_build_dotsystecash_path(CHECK_FMT_DIR);
         tmp_name = g_build_filename(dirname, filename, (char *)NULL);
         g_free(dirname);
     }
@@ -2002,7 +2002,7 @@ draw_picture(GtkPrintContext *context, check_item_t *data)
  * date.
  *
  * Note: This code only prints a date if the user has explicitly requested it
- * via a preference setting.  This is because gnucash has no way of
+ * via a preference setting.  This is because systecash has no way of
  * knowing if the user's checks already have a date format printed on them.
  */
 static void
@@ -2513,7 +2513,7 @@ gnc_ui_print_check_dialog_ok_cb(PrintCheckDialog *pcd)
 
     print = gtk_print_operation_new();
 
-    gnc_print_operation_init(print, "GnuCash-Checks");
+    gnc_print_operation_init(print, "systecash-Checks");
     gtk_print_operation_set_unit(print, GTK_UNIT_POINTS);
     gtk_print_operation_set_use_full_page(print, TRUE);
     g_signal_connect(print, "begin_print", G_CALLBACK(begin_print), pcd);

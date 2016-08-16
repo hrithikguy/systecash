@@ -21,30 +21,30 @@
 #ifndef GNUCASH_CURSOR_H
 #define GNUCASH_CURSOR_H
 
-#include "gnucash-grid.h"
-#include "gnucash-sheet.h"
+#include "systecash-grid.h"
+#include "systecash-sheet.h"
 #include <libgnomecanvas/libgnomecanvas.h>
 
 /** @ingroup Register
  * @addtogroup Gnome
  * @{
  */
-/** @file gnucash-cursor.h
- * @brief Public declarations for GnucashCursor class
+/** @file systecash-cursor.h
+ * @brief Public declarations for systecashCursor class
  */
-#define GNUCASH_TYPE_CURSOR     (gnucash_cursor_get_type ())
-#define GNUCASH_CURSOR(obj)     (G_TYPE_CHECK_INSTANCE_CAST ((obj), GNUCASH_TYPE_CURSOR, GnucashCursor))
-#define GNUCASH_CURSOR_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), GNUCASH_TYPE_CURSOR, GnucashCursorClass))
+#define GNUCASH_TYPE_CURSOR     (systecash_cursor_get_type ())
+#define GNUCASH_CURSOR(obj)     (G_TYPE_CHECK_INSTANCE_CAST ((obj), GNUCASH_TYPE_CURSOR, systecashCursor))
+#define GNUCASH_CURSOR_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), GNUCASH_TYPE_CURSOR, systecashCursorClass))
 #define GNUCASH_IS_CURSOR(obj)  (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GNUCASH_TYPE_CURSOR))
 
-#define GNUCASH_TYPE_ITEM_CURSOR     (gnucash_item_cursor_get_type ())
-#define GNUCASH_ITEM_CURSOR(obj)     (G_TYPE_CHECK_INSTANCE_CAST ((obj), GNUCASH_TYPE_ITEM_CURSOR, GnucashItemCursor))
-#define GNUCASH_ITEM_CURSOR_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), GNUCASH_TYPE_ITEM_CURSOR, GnucashItemCursorClass))
+#define GNUCASH_TYPE_ITEM_CURSOR     (systecash_item_cursor_get_type ())
+#define GNUCASH_ITEM_CURSOR(obj)     (G_TYPE_CHECK_INSTANCE_CAST ((obj), GNUCASH_TYPE_ITEM_CURSOR, systecashItemCursor))
+#define GNUCASH_ITEM_CURSOR_CLASS(k) (G_TYPE_CHECK_CLASS_CAST ((k), GNUCASH_TYPE_ITEM_CURSOR, systecashItemCursorClass))
 #define GNUCASH_IS_ITEM_CURSOR(o)    (G_TYPE_CHECK_INSTANCE_TYPE ((o), GNUCASH_TYPE_ITEM_CURSOR))
 
 
-GType    gnucash_item_cursor_get_type (void);
-GType    gnucash_cursor_get_type (void);
+GType    systecash_item_cursor_get_type (void);
+GType    systecash_cursor_get_type (void);
 
 
 enum
@@ -66,7 +66,7 @@ typedef struct
 
     /* precomputed pixel coords for the item cursor*/
     gint x, y, w, h;
-} GnucashItemCursor;
+} systecashItemCursor;
 
 
 typedef struct
@@ -75,39 +75,39 @@ typedef struct
 
     GnomeCanvasItem *cursor[GNUCASH_CURSOR_NUM];
 
-    GnucashSheet *sheet;
-    GnucashGrid *grid;
+    systecashSheet *sheet;
+    systecashGrid *grid;
 
     /* precomputed pixel coords for the block cursor*/
     gint x, y, w, h;
 
     GdkGC *gc;
     SheetBlockStyle *style;
-} GnucashCursor;
+} systecashCursor;
 
 
 typedef struct
 {
     GnomeCanvasItemClass parent_class;
-} GnucashItemCursorClass;
+} systecashItemCursorClass;
 
 
 typedef struct
 {
     GnomeCanvasGroupClass parent_class;
-} GnucashCursorClass;
+} systecashCursorClass;
 
 
-GnomeCanvasItem *gnucash_cursor_new (GnomeCanvasGroup *parent);
+GnomeCanvasItem *systecash_cursor_new (GnomeCanvasGroup *parent);
 
-void gnucash_cursor_get_virt (GnucashCursor *cursor,
+void systecash_cursor_get_virt (systecashCursor *cursor,
                               VirtualLocation *virt_loc);
 
-void gnucash_cursor_set (GnucashCursor *cursor, VirtualLocation virt_loc);
+void systecash_cursor_set (systecashCursor *cursor, VirtualLocation virt_loc);
 
-void gnucash_cursor_set_style (GnucashCursor  *cursor, SheetBlockStyle *style);
+void systecash_cursor_set_style (systecashCursor  *cursor, SheetBlockStyle *style);
 
-void gnucash_cursor_configure (GnucashCursor *cursor);
+void systecash_cursor_configure (systecashCursor *cursor);
 
 /** @} */
 #endif /* GNUCASH_CURSOR_H */

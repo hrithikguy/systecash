@@ -113,8 +113,8 @@ sub report {
   $timezone = defined($$qh{$itemname, "timezone"})
     ? $$qh{$itemname, "timezone"} :  "";
 
-  # Dump gnucash recognized fields
-  printf "Finance::Quote fields Gnucash uses:\n";
+  # Dump systecash recognized fields
+  printf "Finance::Quote fields systecash uses:\n";
   printf "    symbol: %-20s <=== required\n",	  $symbol;
   printf "      date: %-20s <=== required\n",  	  $date;
   printf "  currency: %-20s <=== required\n", 	  $currency;
@@ -125,7 +125,7 @@ sub report {
 
   # Report failure
   if ($gccanuse == 0) {
-    printf "\n** This stock quote cannot be used by gnucash!!\n\n";
+    printf "\n** This stock quote cannot be used by systecash!!\n\n";
   }
 
   # Dump all fields if requested
@@ -209,6 +209,6 @@ gnc-fq-dump	- Print out data from the F::Q module
 This program obtains information from Finance::Quote about any
 specified stock, and then dumps it to the screen in annotated form.
 This will allow someone to see what is returned, and whether it
-provides all the information needed by Gnucash.
+provides all the information needed by systecash.
 
 =cut

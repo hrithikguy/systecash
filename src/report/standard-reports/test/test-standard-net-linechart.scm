@@ -18,9 +18,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (debug-set! stack 50000)
-;(use-modules (gnucash report new-reports reports-2))
+;(use-modules (systecash report new-reports reports-2))
 
-(use-modules (gnucash gnc-module))
+(use-modules (systecash gnc-module))
 
 ;; Guile 2 needs to load external modules at compile time
 ;; otherwise the N_ syntax-rule won't be found at compile time
@@ -33,14 +33,14 @@
    (else
     (define begin-for-syntax begin)))
 
-(begin-for-syntax (gnc:module-load "gnucash/report/report-system" 0))
-(use-modules (gnucash engine))
+(begin-for-syntax (gnc:module-load "systecash/report/report-system" 0))
+(use-modules (systecash engine))
 (use-modules (sw_engine))
 
-(use-modules (gnucash report report-system test test-extras))
+(use-modules (systecash report report-system test test-extras))
 
-(use-modules (gnucash report standard-reports test test-generic-net-linechart))
-(use-modules (gnucash report standard-reports net-linechart))
+(use-modules (systecash report standard-reports test test-generic-net-linechart))
+(use-modules (systecash report standard-reports net-linechart))
 
 ;; Explicitly set locale to make the report output predictable
 (setlocale LC_ALL "C")

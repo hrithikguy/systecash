@@ -4,7 +4,7 @@
       단순 수표책
     </gnc-act:title>
     <gnc-act:short-description>
-     GnuCash를 이용하기 위한 최소 계정.
+     systecash를 이용하기 위한 최소 계정.
     </gnc-act:short-description>
     <gnc-act:long-description>
      수표책의 균형 수지를 원한다면 이것을 사용. 나중에 더 자세히 소득 및 지출을 추가할 수 있습니다.

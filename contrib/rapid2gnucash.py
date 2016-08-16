@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 '''
-#       rapid2gnucash.py
+#       rapid2systecash.py
 #
 #       Copyright 2010 Mike Evans <mikee@millstreamcomputing.co.uk>
 #
@@ -19,11 +19,11 @@
 #       Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #       MA 02110-1301, USA.
 
-Convert a CSV file exported from Rapid Electronics (UK) to a form importable by GnuCash
+Convert a CSV file exported from Rapid Electronics (UK) to a form importable by systecash
 Line format is:
 line number,product code,quantity,availability,product description,unit price,discounts,line total,delivery,sub total,vat,grand total
 
-Useage: rapid2gnucash.py  DOWNLOADED_BASKET.csv "ORDER_NUMBER" <"Expense account">  >  output.csv
+Useage: rapid2systecash.py  DOWNLOADED_BASKET.csv "ORDER_NUMBER" <"Expense account">  >  output.csv
 
 We need to remove first line and totals
 
@@ -40,13 +40,13 @@ try:
 	INFILE=sys.argv[1]
 except:
 	print "No input files specified."
-	print "Usage: rapid2gnucash.py  DOWNLOADED_BASKET.csv \"ORDER_NUMBER\""
+	print "Usage: rapid2systecash.py  DOWNLOADED_BASKET.csv \"ORDER_NUMBER\""
 	quit(1)
 try:
 	INV_ID=sys.argv[2]
 except:
 	print "No order number  specified."
-	print "Useage: rapid2gnucash.py  DOWNLOADED_BASKET.csv \"ORDER_NUMBER\""
+	print "Useage: rapid2systecash.py  DOWNLOADED_BASKET.csv \"ORDER_NUMBER\""
 	quit(1)
 try:
 	ACCOUNT=sys.argv[3]
@@ -68,7 +68,7 @@ for row in Reader:
 		vat = row[10].replace("GBP", "")
 		outline=(INV_ID + ",," + VENDOR_ID + ",,,," + "DELIVERY" + ",ea," +
 			"Expenses:Postage and Delivery" + "," + "1" + "," + delivery + ",,,,no,,,,,,,,")
-		print outline # pipe to file for GnuCash import
+		print outline # pipe to file for systecash import
 		outline=(INV_ID + ",," + VENDOR_ID + ",,,," + "VAT" + ",tax," +
 			"Expenses:VAT" + "," + "1" + "," + vat + ",,,,no,,,,,,,,")
-		print outline # pipe to file for GnuCash import
+		print outline # pipe to file for systecash import

@@ -63,39 +63,39 @@ int libgncmod_business_gnome_gnc_module_age      = 0;
 char *
 libgncmod_business_gnome_gnc_module_path(void)
 {
-    return g_strdup("gnucash/business-gnome");
+    return g_strdup("systecash/business-gnome");
 }
 
 char *
 libgncmod_business_gnome_gnc_module_description(void)
 {
-    return g_strdup("The GnuCash business module GNOME UI");
+    return g_strdup("The systecash business module GNOME UI");
 }
 
 int
 libgncmod_business_gnome_gnc_module_init(int refcount)
 {
     /* load app-utils: we depend on it -- and it depends on the engine */
-    if (!gnc_module_load ("gnucash/app-utils", 0))
+    if (!gnc_module_load ("systecash/app-utils", 0))
     {
         return FALSE;
     }
     /* We also depend on gnome-utils and gnome-search modules */
-    if (!gnc_module_load ("gnucash/gnome-utils", 0))
+    if (!gnc_module_load ("systecash/gnome-utils", 0))
     {
         return FALSE;
     }
-    if (!gnc_module_load ("gnucash/gnome-search", 0))
+    if (!gnc_module_load ("systecash/gnome-search", 0))
     {
         return FALSE;
     }
-    if (!gnc_module_load ("gnucash/report/report-gnome", 0))
+    if (!gnc_module_load ("systecash/report/report-gnome", 0))
     {
         return FALSE;
     }
 
-    scm_c_eval_string("(use-modules (gnucash business-gnome))");
-    scm_c_eval_string("(use-modules (gnucash report business-reports))");
+    scm_c_eval_string("(use-modules (systecash business-gnome))");
+    scm_c_eval_string("(use-modules (systecash report business-reports))");
 
     if (refcount == 0)
     {

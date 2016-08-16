@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnucash-color.c -- color handling for table cells                *
+ * systecash-color.c -- color handling for table cells                *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
  * modify it under the terms of the GNU General Public License as   *
@@ -40,7 +40,7 @@
 
 #include <gtk/gtk.h>
 #include <gdk/gdk.h>
-#include "gnucash-color.h"
+#include "systecash-color.h"
 
 static int color_inited;
 
@@ -70,13 +70,13 @@ color_equal (gconstpointer v, gconstpointer w)
 
 
 gulong
-gnucash_color_alloc (gushort red, gushort green, gushort blue)
+systecash_color_alloc (gushort red, gushort green, gushort blue)
 {
     GdkColormap *colormap = gtk_widget_get_default_colormap ();
     GdkColor *c;
 
     if (!color_inited)
-        gnucash_color_init ();
+        systecash_color_init ();
 
     c = g_new0 (GdkColor, 1);
     c->red = red;
@@ -90,7 +90,7 @@ gnucash_color_alloc (gushort red, gushort green, gushort blue)
 
 
 void
-gnucash_color_alloc_gdk (GdkColor *c)
+systecash_color_alloc_gdk (GdkColor *c)
 {
     GdkColormap *colormap = gtk_widget_get_default_colormap ();
 
@@ -102,7 +102,7 @@ gnucash_color_alloc_gdk (GdkColor *c)
 
 
 void
-gnucash_color_alloc_name (const char *name, GdkColor *c)
+systecash_color_alloc_name (const char *name, GdkColor *c)
 {
     GdkColormap *colormap = gtk_widget_get_default_colormap ();
 
@@ -121,7 +121,7 @@ gnucash_color_alloc_name (const char *name, GdkColor *c)
  *  the colors.  Caller must not touch the returned color.
  */
 GdkColor *
-gnucash_color_argb_to_gdk (guint32 argb)
+systecash_color_argb_to_gdk (guint32 argb)
 {
     GdkColor *color;
     const guint32 key = argb;
@@ -141,7 +141,7 @@ gnucash_color_argb_to_gdk (guint32 argb)
     color->green = argb & 0xff00;
     color->blue = (argb & 0xff) << 8;
 
-    gnucash_color_alloc_gdk(color);
+    systecash_color_alloc_gdk(color);
 
     g_hash_table_insert (color_hash_table, newkey, color);
 
@@ -150,17 +150,17 @@ gnucash_color_argb_to_gdk (guint32 argb)
 
 
 void
-gnucash_color_init (void)
+systecash_color_init (void)
 {
     /* Allocate the default colors */
-    gnucash_color_alloc_name ("white",  &gn_white);
-    gnucash_color_alloc_name ("black",  &gn_black);
+    systecash_color_alloc_name ("white",  &gn_white);
+    systecash_color_alloc_name ("black",  &gn_black);
 
-    gnucash_color_alloc_name ("gray60", &gn_light_gray);
-    gnucash_color_alloc_name ("gray40", &gn_dark_gray);
-    gnucash_color_alloc_name ("blue",   &gn_blue);
-    gnucash_color_alloc_name ("red",    &gn_red);
-    gnucash_color_alloc_name ("yellow", &gn_yellow);
+    systecash_color_alloc_name ("gray60", &gn_light_gray);
+    systecash_color_alloc_name ("gray40", &gn_dark_gray);
+    systecash_color_alloc_name ("blue",   &gn_blue);
+    systecash_color_alloc_name ("red",    &gn_red);
+    systecash_color_alloc_name ("yellow", &gn_yellow);
 
     if (!color_hash_table)
         color_hash_table = g_hash_table_new (color_hash, color_equal);

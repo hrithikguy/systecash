@@ -4,7 +4,7 @@
       Chéquier
     </gnc-act:title>
     <gnc-act:short-description>
-   Ensemble de comptes incontournables pour utiliser GnuCash.
+   Ensemble de comptes incontournables pour utiliser systecash.
     </gnc-act:short-description>
     <gnc-act:long-description>
 	    Sélectionnez ce groupe de comptes si vous ne voulez suivre que le solde de votre compte en banque.  Si le besoin s'en fait sentir plus tard, vous pourrez commencer un suivi plus serré de vos revenus et dépenses en ajoutant de nouveaux groupes de comptes.

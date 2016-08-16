@@ -1,5 +1,5 @@
 /********************************************************************
- * io-gncxml-r.c -- read XML-format gnucash data file               *
+ * io-gncxml-r.c -- read XML-format systecash data file               *
  * Copyright (C) 2000 Gnumatic, Inc.                                *
  *                                                                  *
  * Initial code by Rob L. Browning 4Q 2000                          *

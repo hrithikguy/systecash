@@ -4,7 +4,7 @@
 
 @strong{This whole document is completely outdated. Don't read this. All
 function names and every described structure has changed
-completely. Only read this if you want to know how gnucash looked like
+completely. Only read this if you want to know how systecash looked like
 in 1999. This is completely outdated!}
 
 The register is an infrastructure for building a modular matrix of cells
@@ -15,7 +15,7 @@ efficient. It is intended to be used for building financial apps and
 spread-sheets.
 
 The register object should not have any 'knowledge' of the accounting
-model of GnuCash or of the workings of the main application. The
+model of systecash or of the workings of the main application. The
 register should not be specific to a particular GUI (such as Gnome/GTK).
 It should be possible to use the register in a stand-alone fashion.
 
@@ -151,7 +151,7 @@ ten specific layouts: bank, credit-card, stock, general journal, etc.
 The split register implementation is divided into two components. The
 first component (src/register/splitreg.[ch]) defines the basic structure
 and implementation of a split register, but does not specifically use or
-depend on the other GnuCash modules, including the Engine. Of course,
+depend on the other systecash modules, including the Engine. Of course,
 this implementation was created with the engine financial structures in
 mind.
 

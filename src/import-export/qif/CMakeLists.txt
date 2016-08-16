@@ -30,7 +30,7 @@ TARGET_LINK_LIBRARIES(gncmod-qif gncmod-generic-import gncmod-engine gnc-qof ${G
 TARGET_COMPILE_DEFINITIONS(gncmod-qif PRIVATE -DG_LOG_DOMAIN=\"gnc.import.qif\")
 
 INSTALL(TARGETS gncmod-qif
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 # No headers to install.

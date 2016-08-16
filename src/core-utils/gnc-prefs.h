@@ -28,7 +28,7 @@
 /** @addtogroup Preferences Preferences
 
     The API in this file is used to read and store preferences used
-    by gnucash. This api is a generic one. To actually store and
+    by systecash. This api is a generic one. To actually store and
     load preferences, a preferences backend should be configured.
     Currently only one backend is defined: the preferences backend.
 

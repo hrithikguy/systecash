@@ -36,8 +36,8 @@ TARGET_INCLUDE_DIRECTORIES (gncmod-html
 )
 
 INSTALL(TARGETS gncmod-html
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 
-INSTALL(FILES ${html_HEADERS} DESTINATION include/gnucash)
+INSTALL(FILES ${html_HEADERS} DESTINATION include/systecash)

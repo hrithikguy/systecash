@@ -1,4 +1,4 @@
-/** \page budgetplan Some Thoughts about GnuCash Budgeting
+/** \page budgetplan Some Thoughts about systecash Budgeting
 
 API: \ref Budget
 
@@ -9,13 +9,13 @@ Bob Drzyzgula
 \section budgetabstract Abstract
 
 At this point, this document contains my personal thoughts about possible
-design criteria for a budgeting engine in GnuCash. These should not
+design criteria for a budgeting engine in systecash. These should not
 at this writing be taken as concensus opinion, and may in places be
-at odds with conventions inside GnuCash code (and with general accounting
+at odds with conventions inside systecash code (and with general accounting
 principals... I am in no way an accountant), and thus may not be practical.
 However, I believe that they provide a self-consistant view of how
 one might do this, and I hope that this document will serve to continue
-the discussion that began on the GnuCash/Xacc mailing list.
+the discussion that began on the systecash/Xacc mailing list.
 
 \section bugettoc tableofcontents
 

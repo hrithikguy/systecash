@@ -26,7 +26,7 @@
 /** @addtogroup GKeyFile GKeyfile Utilities
 
     This file provides routines that help make it easier to use the
-    GKeyFile functions from within Gnucash.
+    GKeyFile functions from within systecash.
 
     @{ */
 /** @file gnc-gkeyfile-utils.c

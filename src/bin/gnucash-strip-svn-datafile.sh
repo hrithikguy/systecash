@@ -1,8 +1,8 @@
 #!/bin/sh
 
-# This script strips data elements from a gnucash data file that have
-# been introduced in the trunk version of gnucash, but are not
-# backwards-compatible to older versions of gnucash.
+# This script strips data elements from a systecash data file that have
+# been introduced in the trunk version of systecash, but are not
+# backwards-compatible to older versions of systecash.
 
 ORIGFILE=$1
 ORIGTMPFILE="${ORIGFILE}.gunzip"

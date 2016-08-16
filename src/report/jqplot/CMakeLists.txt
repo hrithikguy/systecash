@@ -30,4 +30,4 @@ SET(gncjqplot_DATA
   plugins/jqplot.trendline.js
 )
 
-INSTALL(FILES ${gncjqplot_DATA} DESTINATION share/gnucash/jqplot)
+INSTALL(FILES ${gncjqplot_DATA} DESTINATION share/systecash/jqplot)

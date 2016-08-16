@@ -1123,7 +1123,7 @@ gnc_tree_model_account_iter_parent (GtkTreeModel *tree_model,
 /************************************************************/
 
 /*
- * Convert a model/iter pair to a gnucash account.  This routine should
+ * Convert a model/iter pair to a systecash account.  This routine should
  * only be called from an account tree view filter function.
  */
 Account *

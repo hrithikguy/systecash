@@ -444,7 +444,7 @@ void gnc_sql_add_colname_to_list (const GncSqlColumnTableEntry* table_row,
  * @param op Operation type
  * @param table_name SQL table name
  * @param obj_name QOF object type name
- * @param pObject Gnucash object
+ * @param pObject systecash object
  * @param table DB table description
  * @return TRUE if successful, FALSE if not
  */
@@ -498,7 +498,7 @@ GncSqlStatement* gnc_sql_create_statement_from_sql (GncSqlBackend* be,
                                                     const gchar* sql);
 
 /**
- * Loads a Gnucash object from the database.
+ * Loads a systecash object from the database.
  *
  * @param be SQL backend struct
  * @param row DB result row

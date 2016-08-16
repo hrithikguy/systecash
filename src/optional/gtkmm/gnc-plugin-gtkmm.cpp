@@ -61,7 +61,7 @@ static GtkActionEntry gnc_plugin_actions [] =
         // FIXME: I've intentionally remove the i18n markers so that
         // translators don't have to deal with these example strings!
         "GtkmmSomethingAction", NULL, "Do _Something in C++/gtkmm...", NULL,
-        "This demonstrates how to integrate C++/gtkmm in a plugin of gnucash",
+        "This demonstrates how to integrate C++/gtkmm in a plugin of systecash",
         G_CALLBACK (gnc_plugin_gtkmm_cmd_something)
     },
 };

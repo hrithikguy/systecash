@@ -26,22 +26,22 @@ TARGET_LINK_LIBRARIES(gncmod-csv-export gncmod-register-gnome gncmod-register-co
 TARGET_COMPILE_DEFINITIONS(gncmod-csv-export PRIVATE -DG_LOG_DOMAIN=\"gnc.export.csv\")
 
 INSTALL(TARGETS gncmod-csv-export
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 # No headers to install.
 
 SET(csv_export_GLADE assistant-csv-export.glade)
 
-INSTALL(FILES ${csv_export_GLADE} DESTINATION share/gnucash/gtkbuilder)
+INSTALL(FILES ${csv_export_GLADE} DESTINATION share/systecash/gtkbuilder)
 
 SET(csv_export_UI gnc-plugin-csv-export-ui.xml)
 
-INSTALL(FILES ${csv_export_UI} DESTINATION share/gnucash/ui)
+INSTALL(FILES ${csv_export_UI} DESTINATION share/systecash/ui)
 
 IF (GNC_BUILD_AS_INSTALL)
   FILE(COPY ${csv_export_UI}
-    DESTINATION ${DATADIR_BUILD}/gnucash/ui)
+    DESTINATION ${DATADIR_BUILD}/systecash/ui)
   FILE(COPY ${csv_export_GLADE}
-    DESTINATION ${DATADIR_BUILD}/gnucash/gtkbuilder)
+    DESTINATION ${DATADIR_BUILD}/systecash/gtkbuilder)
 ENDIF()

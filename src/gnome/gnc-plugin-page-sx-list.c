@@ -503,7 +503,7 @@ gnc_plugin_page_sx_list_destroy_widget (GncPluginPage *plugin_page)
 
 
 /** Save enough information about this page that it can be recreated next time
- * the user starts gnucash.
+ * the user starts systecash.
  * @param plugin_page The page to save.
  * @param key_file A pointer to the GKeyFile data structure where the
  * page information should be written.
@@ -534,7 +534,7 @@ gnc_plugin_page_sx_list_save_page (GncPluginPage *plugin_page,
 
 /**
  * Create a new sx list page based on the information saved during a previous
- * instantiation of gnucash.
+ * instantiation of systecash.
  *  @param window The window where this page should be installed.
  *  @param key_file A pointer to the GKeyFile data structure where the
  *  page information should be read.

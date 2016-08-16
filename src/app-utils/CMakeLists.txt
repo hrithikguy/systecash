@@ -103,25 +103,25 @@ TARGET_COMPILE_DEFINITIONS (gncmod-app-utils PRIVATE -DG_LOG_DOMAIN=\"gnc.app-ut
 
 
 INSTALL(TARGETS gncmod-app-utils
-     LIBRARY DESTINATION lib/gnucash
-     ARCHIVE DESTINATION lib/gnucash
+     LIBRARY DESTINATION lib/systecash
+     ARCHIVE DESTINATION lib/systecash
      RUNTIME DESTINATION bin
 )
-INSTALL(FILES ${app_utils_HEADERS} DESTINATION include/gnucash)
+INSTALL(FILES ${app_utils_HEADERS} DESTINATION include/systecash)
 
 FILE(READ ${CMAKE_SOURCE_DIR}/src/import-export/ofx/migratable-prefs-ofx.xml MIGRATABLE_PREFS_OFX)
 FILE(READ ${CMAKE_SOURCE_DIR}/src/import-export/aqb/migratable-prefs-aqbanking.xml MIGRATABLE_PREFS_AQBANKING)
 
 SET(MIGRATABLE_PREFS_XML ${CMAKE_CURRENT_BINARY_DIR}/migratable-prefs.xml)
 IF (GNC_BUILD_AS_INSTALL)
-  SET(MIGRATABLE_PREFS_XML ${DATADIR_BUILD}/gnucash/migratable-prefs.xml)
-  FILE(COPY make-prefs-migration-script.xsl DESTINATION ${DATADIR_BUILD}/gnucash)
+  SET(MIGRATABLE_PREFS_XML ${DATADIR_BUILD}/systecash/migratable-prefs.xml)
+  FILE(COPY make-prefs-migration-script.xsl DESTINATION ${DATADIR_BUILD}/systecash)
 ENDIF()
 
 CONFIGURE_FILE(migratable-prefs.xml.in ${MIGRATABLE_PREFS_XML})
 
-INSTALL(FILES ${MIGRATABLE_PREFS_XML} DESTINATION share/gnucash)
-INSTALL(FILES make-prefs-migration-script.xsl DESTINATION share/gnucash)
+INSTALL(FILES ${MIGRATABLE_PREFS_XML} DESTINATION share/systecash)
+INSTALL(FILES make-prefs-migration-script.xsl DESTINATION share/systecash)
 
 # And now handle scheme files
 
@@ -152,7 +152,7 @@ SET(GUILE_DEPENDS      gncmod-app-utils scm-core-utils scm-engine scm-scm)
 
 GNC_ADD_SCHEME_TARGETS(scm-gettext
   gettext.scm
-  gnucash
+  systecash
   src/app-utils
   ""
   ""
@@ -172,7 +172,7 @@ GNC_ADD_SCHEME_TARGETS(scm-app-utils-1
 
 GNC_ADD_SCHEME_TARGETS(scm-app-utils-2
   "${app_utils_SCHEME_2}"
-  "gnucash"
+  "systecash"
   "${GUILE_MODULES}"
   "${GUILE_LOAD_DIRS}"
   "${GUILE_LIBRARY_DIRS}"

@@ -25,19 +25,19 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report standard-reports budget))
+(define-module (systecash report standard-reports budget))
 
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(use-modules (gnucash printf))
-(use-modules (gnucash engine))
+(use-modules (systecash printf))
+(use-modules (systecash engine))
 
 (use-modules (srfi srfi-1))
 
-(gnc:module-load "gnucash/report/report-system" 0)
-(gnc:module-load "gnucash/gnome-utils" 0) ;for gnc-build-url
+(gnc:module-load "systecash/report/report-system" 0)
+(gnc:module-load "systecash/gnome-utils" 0) ;for gnc-build-url
 
 (define reportname (N_ "Budget Report"))
 

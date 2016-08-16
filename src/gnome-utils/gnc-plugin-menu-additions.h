@@ -29,7 +29,7 @@
     @author Copyright (C) 2005 David Hampton <hampton@employees.org>
 
     The GncPluginMenuAdditions code handles menu/toolbar actions that
-    come from the Scheme side of Gnucash.  It is responsible for
+    come from the Scheme side of systecash.  It is responsible for
     adding these actions to any new window that is opened.  This code
     does not use the base object code to automatically handle these
     functions, but performs them manually.

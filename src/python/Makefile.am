@@ -35,22 +35,22 @@ PY_FILE_LINKS = ${gncpymod_DATA}
 endif
 
 .py-links:
-	$(RM) -rf gnucash
-	mkdir -p  gnucash
-	mkdir -p  gnucash/python
+	$(RM) -rf systecash
+	mkdir -p  systecash
+	mkdir -p  systecash/python
 if GNUCASH_SEPARATE_BUILDDIR
 	for X in ${PY_FILE_LINKS} ; do \
 	  $(LN_S) -f ${srcdir}/$$X . ; \
 	done
 endif
-	( cd gnucash/python; for A in $(gncpymod_DATA) ; do $(LN_S) -f ../../$$A . ; done )
+	( cd systecash/python; for A in $(gncpymod_DATA) ; do $(LN_S) -f ../../$$A . ; done )
 if ! OS_WIN32
 # Windows knows no "ln -s" but uses "cp": must copy every time (see bug #566567).
 	touch .py-links
 endif
 
 clean-local:
-	$(RM) -rf gnucash
+	$(RM) -rf systecash
 
 noinst_DATA = .py-links
 

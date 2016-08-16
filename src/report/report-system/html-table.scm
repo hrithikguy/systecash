@@ -33,7 +33,7 @@
 ;; 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(use-modules (gnucash printf))
+(use-modules (systecash printf))
 
 (define <html-table>
   (make-record-type "<html-table>"
@@ -611,7 +611,7 @@
 ;;  [ CAS: how is that different from gnc:html-table-get-row ? ]
 
 ;;       (gnc:html-table-append-table-horizontal table add-table)
-;; (An old merge-table used to exist inside balance-sheet.scm/GnuCash 1.8.9.)
+;; (An old merge-table used to exist inside balance-sheet.scm/systecash 1.8.9.)
 ;; Feel free to contribute! :-)
 ;; 
 

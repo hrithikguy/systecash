@@ -32,7 +32,7 @@
  *
  *  The APIs in this file are designed to provide additional
  *  functionality to GObjects, or to make it easier to use the Gobject
- *  system from within Gnucash.
+ *  system from within systecash.
  */
 
 #ifndef GNC_GOBJECT_UTILS_H
@@ -55,7 +55,7 @@
  *  search for a specific object wouldn't help because the information
  *  being inspected is private to the object.)
  *
- *  Any object added to this database during the execution of gnucash
+ *  Any object added to this database during the execution of systecash
  *  should be deleted from it before completion of the program.  WHen
  *  the program shuts down, a list of all objects still in the
  *  database will be dumped out to the logfile.  This should help
@@ -65,7 +65,7 @@
  */
 
 
-/** Tell gnucash to remember this object in the database.
+/** Tell systecash to remember this object in the database.
  *
  *  @param object The object to be tracked.  This can be a fully or
  *  partially instantiated object.
@@ -81,7 +81,7 @@
  */
 void gnc_gobject_tracking_remember (GObject *object, GObjectClass *klass);
 
-/** Tell gnucash to drop this object from the database.
+/** Tell systecash to drop this object from the database.
  *
  *  @param object The object to be dropped.
  */
@@ -100,7 +100,7 @@ const GList *gnc_gobject_tracking_get_list (const gchar *name);
 
 
 /** Dump the entire object tracking database via the g_log() family of
- *  functions.  This function is only called when gnucash exits, and
+ *  functions.  This function is only called when systecash exits, and
  *  at that point all of the objects should have been removed from the
  *  database and freed.  Any object remaining is the result of a
  *  memory/object leakage.

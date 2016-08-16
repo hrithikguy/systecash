@@ -1,10 +1,10 @@
-A Python based REST framework for the Gnucash accounting application
+A Python based REST framework for the systecash accounting application
 
 **Please note this is a very early work in progress and should not be run
 against live or production data.**
 
 This project is designed to allow other applications to easily interact with
-data from Gnucash via a RESTful API.
+data from systecash via a RESTful API.
 
 The API is built on the existing Python bindings and uses Flask to serve
 responses in JSON.
@@ -23,7 +23,7 @@ POST request to /transactions - creates a new transaction (currently with only
 two splits)
 
 POST variables:
-currency  - required - a gnucash currency code e.g. GBP
+currency  - required - a systecash currency code e.g. GBP
 description - required - a description for the transaction
 num - optional - a transaction number
 date_posted - required - a date formatted as YYYY-MM-DD
@@ -55,7 +55,7 @@ id - optional - if no id is specified the next available sequential id will be
 used
 vendor_id - required - the id of the vendor of this bill (can be obtained from
 /vendors)
-currency - required - a gnucash currency code
+currency - required - a systecash currency code
 date_opened - required - a date formatted as YYYY-MM-DD
 notes - optional - notes for this bill
 
@@ -65,7 +65,7 @@ POST request to /bills/<id> - edits (and optionally posts) a bill
 POST variables:
 vendor_id - required - the id of the vendor of this bill (can be obtained from
 /vendors)
-currency - required - a gnucash currency code
+currency - required - a systecash currency code
 date_opened - a date formatted as YYYY-MM-DD
 notes - optional -  notes for this invoice
 posted - optional - set to 1 if marking the invoice as posted (0 or empty
@@ -107,7 +107,7 @@ id - optional - if no id is specified the next available sequential id will be
 used
 customer_id - required - the id of the customer of this invoice (can be
 obtained from /customers)
-currency - required - a gnucash currency code
+currency - required - a systecash currency code
 date_opened - a date formatted as YYYY-MM-DD
 notes - optional -  notes for this invoice
 
@@ -117,7 +117,7 @@ POST request to /invoices/<id> - edits (and optionally posts) an invoice
 POST variables:
 customer_id - required - the id of the customer of this bill (can be obtained
 from /customers)
-currency - required - a gnucash currency code
+currency - required - a systecash currency code
 date_opened - a date formatted as YYYY-MM-DD
 notes - optional -  notes for this invoice
 posted - optional - set to 1 if marking the invoice as posted (0 or empty
@@ -148,7 +148,7 @@ POST request to /customers - creates a new customer
 POST variables:
 id - optional - if no id is specified the next available sequential id will be
 used
-currency - required - a gnucash currency code
+currency - required - a systecash currency code
 name - required - the customer's name
 contact - optional - a contact for this customer
 address_line_1 - required - the first line of the customer's address
@@ -171,7 +171,7 @@ POST request to /vendors - creates a new vendor
 POST variables:
 id - optional - if no id is specified the next available sequential id will be
 used
-currency - required - a gnucash currency code
+currency - required - a systecash currency code
 name - required - the vendor's name
 contact - optional - a contact for this vendor
 address_line_1 - required - the first line of the vendor's address
@@ -188,15 +188,15 @@ GET request to /vendors/<id>/bills - returns all bills for a single vendor
 Usage
 -----
 
-**As this is work in progress you'll need a knowledge of building Gnucash from
+**As this is work in progress you'll need a knowledge of building systecash from
 source and experience with python.**
 
 Full details to be provided at a later date, but in short you'll need a copy of
-Gnucash built with Python bindings and the Flask module installed.
+systecash built with Python bindings and the Flask module installed.
 
-Rrun `python ./gnucash_rest <connection string>` to start the server on
+Rrun `python ./systecash_rest <connection string>` to start the server on
 <http://localhost:5000> e.g
-`python ./gnucash_rest mysql://user:password@127.0.0.1/gnucash_test`
+`python ./systecash_rest mysql://user:password@127.0.0.1/systecash_test`
 
 Navigate to <http://localhost:5000/invoices> and you should get your invoices
 in JSON format.
@@ -204,15 +204,15 @@ in JSON format.
 Files
 -----
 
-`gnucash_rest.py` - The Flask app which responds to REST requests with JSON
+`systecash_rest.py` - The Flask app which responds to REST requests with JSON
 responses
 
-`gnucash_simple.py` - A helper file to convert Gnucash objects into
+`systecash_simple.py` - A helper file to convert systecash objects into
 dictionaries for easier conversion to JSON.
 
 Future
 ------
 
-I'm using the API already to integrate Gnucash invoices with other systems, so
+I'm using the API already to integrate systecash invoices with other systems, so
 I'll be adding features as and when I need them. The format of the API is
 likely to change as development continues.

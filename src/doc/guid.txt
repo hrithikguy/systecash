@@ -6,10 +6,10 @@ API: \ref GUID
 
 \section guidsummary Summary
 
-GUID's are meant to uniquely identify a GnuCash object. However,
-when that object is backed up (by copying a gnucash data file),
+GUID's are meant to uniquely identify a systecash object. However,
+when that object is backed up (by copying a systecash data file),
 the identified object is no longer unique.  Book closing is a
-formalized means of saving older data.  If a GnuCash data set
+formalized means of saving older data.  If a systecash data set
 is large, and SQL is the storage backend, then making copies
 of old data can be very wasteful of storage space.  However,
 book closing, by definition, must retain a copy of the data 
@@ -20,17 +20,17 @@ that come up when handling GUID's on book closing.
 
 \section guidintro Introduction
 
-GUID's are meant to be a way of identifying a given GnuCash entity.
+GUID's are meant to be a way of identifying a given systecash entity.
 Accounts, transactions, splits, prices and lots all have GUID's.
 GUID's can be used as a reference: by knowing a GUID, the matching
 entity can be found.  Because GUID's are 128 bits long, one could 
-have a billion different GnuCash users in a million different solar
+have a billion different systecash users in a million different solar
 systems without worrying about accidentally assigning the same 
 GUID to two different objects.  So, given a GUID, one should be able
 to come up with the object uniquely identified by it, right?
 
 One practical problem is that backup copies of files containing
-GnuCash data will have the same GUID's as the 'live data'.  Because
+systecash data will have the same GUID's as the 'live data'.  Because
 the user may have modified the object, if one looked at the backup 
 copy, one would find more-or-less the same object, but it might
 have different values (for the amount, the value, teh date, the 

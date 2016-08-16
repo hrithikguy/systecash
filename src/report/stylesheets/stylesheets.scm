@@ -24,11 +24,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-(define-module (gnucash report stylesheets))
+(define-module (systecash report stylesheets))
 
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash report stylesheet-plain))
-(use-modules (gnucash report stylesheet-fancy))
-(use-modules (gnucash report stylesheet-footer))
-(use-modules (gnucash report stylesheet-easy))
-(use-modules (gnucash report stylesheet-head-or-tail))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash report stylesheet-plain))
+(use-modules (systecash report stylesheet-fancy))
+(use-modules (systecash report stylesheet-footer))
+(use-modules (systecash report stylesheet-easy))
+(use-modules (systecash report stylesheet-head-or-tail))

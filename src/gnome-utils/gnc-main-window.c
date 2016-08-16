@@ -1,6 +1,6 @@
 /*
  * gnc-main-window.c -- GtkWindow which represents the
- *	GnuCash main window.
+ *	systecash main window.
  *
  * Copyright (C) 2003 Jan Arne Petersen <jpetersen@uni-bonn.de>
  * Copyright (C) 2003,2005,2006 David Hampton <hampton@employees.org>
@@ -318,7 +318,7 @@ static GtkActionEntry gnc_menu_actions [] =
     },
     {
         "EditPreferencesAction", GTK_STOCK_PREFERENCES, N_("Pr_eferences"), NULL,
-        N_("Edit the global preferences of GnuCash"),
+        N_("Edit the global preferences of systecash"),
         G_CALLBACK (gnc_main_window_cmd_edit_preferences)
     },
 
@@ -356,12 +356,12 @@ static GtkActionEntry gnc_menu_actions [] =
 
     {
         "WindowNewAction", NULL, N_("_New Window"), NULL,
-        N_("Open a new top-level GnuCash window."),
+        N_("Open a new top-level systecash window."),
         G_CALLBACK (gnc_main_window_cmd_window_new)
     },
     {
         "WindowMovePageAction", NULL, N_("New Window with _Page"), NULL,
-        N_("Move the current page to a new top-level GnuCash window."),
+        N_("Move the current page to a new top-level systecash window."),
         G_CALLBACK (gnc_main_window_cmd_window_move_page)
     },
 
@@ -369,17 +369,17 @@ static GtkActionEntry gnc_menu_actions [] =
 
     {
         "HelpTutorialAction", GTK_STOCK_HELP, N_("Tutorial and Concepts _Guide"), NULL,
-        N_("Open the GnuCash Tutorial"),
+        N_("Open the systecash Tutorial"),
         G_CALLBACK (gnc_main_window_cmd_help_tutorial)
     },
     {
         "HelpContentsAction", GTK_STOCK_HELP, N_("_Contents"), "F1",
-        N_("Open the GnuCash Help"),
+        N_("Open the systecash Help"),
         G_CALLBACK (gnc_main_window_cmd_help_contents)
     },
     {
         "HelpAboutAction", GTK_STOCK_ABOUT, N_("_About"), NULL,
-        N_("About GnuCash"),
+        N_("About systecash"),
         G_CALLBACK (gnc_main_window_cmd_help_about)
     },
 };
@@ -1512,12 +1512,12 @@ gnc_main_window_generate_title (GncMainWindow *window)
     {
         /* The Gnome HIG 2.0 recommends the application name not be used. (p16)
          * but several developers prefer to use it anyway. */
-        title = g_strdup_printf("%s%s%s - %s - GnuCash", dirty, filename, readonly,
+        title = g_strdup_printf("%s%s%s - %s - systecash", dirty, filename, readonly,
                                 gnc_plugin_page_get_page_name(page));
     }
     else
     {
-        title = g_strdup_printf("%s%s%s - GnuCash", dirty, filename, readonly);
+        title = g_strdup_printf("%s%s%s - systecash", dirty, filename, readonly);
     }
     /* Update the menus based upon whether this is an "immutable" page. */
     immutable = page &&
@@ -2432,7 +2432,7 @@ gnc_main_window_get_type (void)
 }
 
 
-/** Initialize the class for a new gnucash main window.  This will set
+/** Initialize the class for a new systecash main window.  This will set
  *  up any function pointers that override functions in the parent
  *  class, and also initialize the signals that this class of widget
  *  can generate.
@@ -2514,7 +2514,7 @@ gnc_main_window_class_init (GncMainWindowClass *klass)
 }
 
 
-/** Initialize a new instance of a gnucash main window.  This function
+/** Initialize a new instance of a systecash main window.  This function
  *  initializes the object private storage space.  It also adds the
  *  new object to a list (for memory tracking purposes).
  *
@@ -3851,7 +3851,7 @@ gnc_main_window_switch_page (GtkNotebook *notebook,
 
 /** This function is invoked when a GtkNotebook tab gets reordered by
  *  drag and drop. It adjusts the list installed_pages to reflect the new
- *  ordering so that GnuCash saves and restores the tabs correctly.
+ *  ordering so that systecash saves and restores the tabs correctly.
  *
  *  @internal
  */
@@ -4301,7 +4301,7 @@ gnc_main_window_cmd_help_contents (GtkAction *action, GncMainWindow *window)
 /** This is a helper function to find a data file and suck it into
  *  memory.
  *
- *  @param partial The name of the file relative to the gnucash
+ *  @param partial The name of the file relative to the systecash
  *  specific shared data directory.
  *
  *  @return The text of the file or NULL. The caller is responsible
@@ -4331,7 +4331,7 @@ get_file (const gchar *partial)
 /** This is a helper function to find a data file, suck it into
  *  memory, and split it into an array of strings.
  *
- *  @param partial The name of the file relative to the gnucash
+ *  @param partial The name of the file relative to the systecash
  *  specific shared data directory.
  *
  *  @return The text of the file as an array of strings, or NULL. The
@@ -4363,7 +4363,7 @@ url_signal_cb (GtkAboutDialog *dialog, gchar *uri, gpointer data)
     return TRUE;
 }
 
-/** Create and display the "about" dialog for gnucash.
+/** Create and display the "about" dialog for systecash.
  *
  *  @param action The GtkAction for the "about" menu item.
  *
@@ -4378,14 +4378,14 @@ gnc_main_window_cmd_help_about (GtkAction *action, GncMainWindow *window)
 
     if (priv->about_dialog == NULL)
     {
-	const gchar *fixed_message = _("The GnuCash personal finance manager. "
+	const gchar *fixed_message = _("The systecash personal finance manager. "
                                    "The GNU way to manage your money!");
 	const gchar *copyright = _("© 1997-2016 Contributors");
 	gchar **authors = get_file_strsplit("AUTHORS");
 	gchar **documenters = get_file_strsplit("DOCUMENTERS");
 	gchar *license = get_file("LICENSE");
 	gchar *message;
-	GdkPixbuf *logo = gnc_gnome_get_gdkpixbuf ("gnucash-icon-48x48.png");
+	GdkPixbuf *logo = gnc_gnome_get_gdkpixbuf ("systecash-icon-48x48.png");
 
 #ifdef GNUCASH_SCM
     /* Development version */
@@ -4412,14 +4412,14 @@ gnc_main_window_cmd_help_about (GtkAction *action, GncMainWindow *window)
 		      "copyright", copyright,
 		      "license", license,
 		      "logo", logo,
-		      "name", "GnuCash",
+		      "name", "systecash",
      /* Translators: the following string will be shown in Help->About->Credits
       * Enter your name or that of your team and an email contact for feedback.
       * The string can have multiple rows, so you can also add a list of
       * contributors. */
 		      "translator-credits", _("translator_credits"),
 		      "version", VERSION,
-		      "website", "http://www.gnucash.org",
+		      "website", "http://www.systecash.org",
 		      NULL);
 
 	g_free(message);
@@ -4638,7 +4638,7 @@ do_popup_menu(GncPluginPage *page, GdkEventButton *event)
 }
 
 
-/** Callback function invoked when the user requests that Gnucash
+/** Callback function invoked when the user requests that systecash
  *  popup the contextual menu via the keyboard context-menu request
  *  key combination (Shift-F10 by default).
  *
@@ -4663,7 +4663,7 @@ gnc_main_window_popup_menu_cb (GtkWidget *widget,
 
 
 /*  Callback function invoked when the user clicks in the content of
- *  any Gnucash window.  If this was a "right-click" then Gnucash will
+ *  any systecash window.  If this was a "right-click" then systecash will
  *  popup the contextual menu.
  */
 gboolean
@@ -4698,7 +4698,7 @@ dgettext_swapped (const gchar *msgid,
 }
 
 /*
- * This is copied into GnuCash from Gtk in order to fix problems when
+ * This is copied into systecash from Gtk in order to fix problems when
  * empty msgids were passed through gettext().
  *
  * See http://bugzilla.gnome.org/show_bug.cgi?id=326200 . If that bug

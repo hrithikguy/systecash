@@ -1,6 +1,6 @@
 /********************************************************************\
  * dialog-account.c -- window for creating and editing accounts for *
- *                     GnuCash                                      *
+ *                     systecash                                      *
  * Copyright (C) 2000 Dave Peticolas <dave@krondo.com>              *
  * Copyright (C) 2003,2005,2006 David Hampton <hampton@employees.org> *
  *                                                                  *

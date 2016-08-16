@@ -2,7 +2,7 @@
  *            test-group-vs-book.c
  *
  *  Tue Sep 27 19:32:31 2005
- *  Copyright  2005  Gnucash team
+ *  Copyright  2005  systecash team
  ****************************************************************************/
 /*
  *  This program is free software; you can redistribute it and/or modify

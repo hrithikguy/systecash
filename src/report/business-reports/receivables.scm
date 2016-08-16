@@ -23,17 +23,17 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report receivables))
+(define-module (systecash report receivables))
 
-(use-modules (gnucash main))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash main))
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
-(use-modules (gnucash report aging))
-(use-modules (gnucash report standard-reports))
-(use-modules (gnucash report business-reports))
+(use-modules (systecash report aging))
+(use-modules (systecash report standard-reports))
+(use-modules (systecash report business-reports))
 
 (define acc-page gnc:pagename-general)
 (define this-acc (N_ "Receivables Account"))

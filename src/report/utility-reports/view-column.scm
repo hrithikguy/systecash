@@ -26,10 +26,10 @@
 ;; edited in a special window.  Every view gets a stylesheet so we
 ;; don't have to worry about that here.
 
-(define-module (gnucash report view-column))
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(define-module (systecash report view-column))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 (cond-expand
   (guile-2
     (eval-when
@@ -38,10 +38,10 @@
   (else ))
 (use-modules (sw_report_system))
 
-(use-modules (gnucash printf))
+(use-modules (systecash printf))
 
-(gnc:module-load "gnucash/report/report-system" 0)
-(gnc:module-load "gnucash/html" 0) ;for gnc-build-url
+(gnc:module-load "systecash/report/report-system" 0)
+(gnc:module-load "systecash/html" 0) ;for gnc-build-url
 
 (define (make-options)
   (let* ((options (gnc:new-options))

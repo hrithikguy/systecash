@@ -1,5 +1,5 @@
 /********************************************************************\
- * dialog-new-user.c -- new user dialog for GnuCash                 *
+ * dialog-new-user.c -- new user dialog for systecash                 *
  * Copyright (C) 2001 Dave Peticolas <dave@krondo.com>              *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *

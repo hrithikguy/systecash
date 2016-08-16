@@ -41,7 +41,7 @@ guile_main(void *closure, int argc, char ** argv)
 
     gnc_module_system_init();
 
-    foo = gnc_module_load("gnucash/foo", 0);
+    foo = gnc_module_load("systecash/foo", 0);
 
     if (!foo)
     {

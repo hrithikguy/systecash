@@ -5,7 +5,7 @@
               ; i.e. to avoid "Bad define placement" error
 
 ;; taxinvoice.eguile.scm  0.03
-;; GnuCash report template called from taxinvoice.scm 0.02
+;; systecash report template called from taxinvoice.scm 0.02
 ;; (c) 2009 Chris Dennis chris@starsoftanalysis.co.uk
 ;;  ©  2012 Dmitry Smirnov <onlyjob@member.fsf.org>
 ;;

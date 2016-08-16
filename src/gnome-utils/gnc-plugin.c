@@ -27,7 +27,7 @@
 /** @addtogroup MenuPluginBase Common object and functions
     @{ */
 /** @file gnc-plugin.c
-    @brief Functions for adding plugins to a Gnucash window.
+    @brief Functions for adding plugins to a systecash window.
     @author Copyright (C) 2003 Jan Arne Petersen <jpetersen@uni-bonn.de>
     @author Copyright (C) 2003,2005 David Hampton <hampton@employees.org>
 */
@@ -96,7 +96,7 @@ gnc_plugin_get_type (void)
 }
 
 
-/** Initialize the class for the new gnucash plugin object.  This will
+/** Initialize the class for the new systecash plugin object.  This will
  *  set up any function pointers that override functions in the parent
  *  class, and also installs the proprieties that are unique to this
  *  class.
@@ -115,7 +115,7 @@ gnc_plugin_class_init (GncPluginClass *klass)
 }
 
 
-/** Initialize a new instance of a gnucash menu-only plugin.  This
+/** Initialize a new instance of a systecash menu-only plugin.  This
  *  function adds the object to the tracking system.
  *
  *  @param plugin_page The new object instance created by the object
@@ -131,7 +131,7 @@ gnc_plugin_init (GncPlugin *plugin_page, GncPluginClass *klass)
 }
 
 
-/** Finalize the gnucash plugin object.  This function is called from
+/** Finalize the systecash plugin object.  This function is called from
  *  the G_Object level to complete the destruction of the object.  It
  *  should release any memory not previously released by the destroy
  *  function (i.e. the private data structure), then chain up to the

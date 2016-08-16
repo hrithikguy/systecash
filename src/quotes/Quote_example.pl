@@ -5,10 +5,10 @@
 # gets prices for some stocks, for some mutual funds
 #
 # Note that this example uses the meta-level "fetch" command.  We do
-# NOT used that in Gnucash because it's behavior is unpredictable If
+# NOT used that in systecash because it's behavior is unpredictable If
 # the given method/exchange doesn't work, it'll fall back to other
 # methods, and I've seen no guarantee that all exchanges treat all
-# symbols the same.  So in Gnucash, we use the backend methods
+# symbols the same.  So in systecash, we use the backend methods
 # directly, i.e. $quoter->fidelity_direct("IBM", "LNUX");, etc.  The
 # documentation page for each Finance::Quote sub-module describes how
 # to call it directly without fallbacks.

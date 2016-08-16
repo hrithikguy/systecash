@@ -2,7 +2,7 @@
  *            test-file-stuff.c
  *
  *  Thu Sep 29 22:50:50 2005
- *  Copyright  2005  GnuCash team
+ *  Copyright  2005  systecash team
  ****************************************************************************/
 /*
  *  This program is free software; you can redistribute it and/or modify

@@ -4,7 +4,7 @@ SUBDIRS = . doc lib src packaging po accounts checks
 GNC_CTAGS_FILE = @GNC_CTAGS_FILE@
 GNC_ETAGS_FILE = @GNC_ETAGS_FILE@
 
-noinst_DATA = make-gnucash-potfiles
+noinst_DATA = make-systecash-potfiles
 
 noinst_PROGRAMS    = gnc-guile
 gnc_guile_SOURCES = util/guile.c
@@ -53,7 +53,7 @@ dist_doc_DATA = \
 
 EXTRA_DIST = \
   $(SWIG_DIST_FAIL) \
-  make-gnucash-potfiles.in \
+  make-systecash-potfiles.in \
   macros/as-scrub-include.m4 \
   macros/binreloc.m4 \
   macros/compiler-flags.m4 \
@@ -61,7 +61,7 @@ EXTRA_DIST = \
   macros/ax_python_devel.m4 \
   macros/ax_swig_python.m4 \
   macros/legacy_macros.m4 \
-  po/gnucash.pot \
+  po/systecash.pot \
   po/POTFILES.in \
   po/POTFILES.skip \
   po/POTFILES.ignore \
@@ -100,7 +100,7 @@ EXTRA_DIST = \
 ## brackets here, instead of the usual @...@.  This prevents autoconf
 ## from substituting the values directly into the left-hand sides of
 ## the sed substitutions.
-make-gnucash-potfiles: make-gnucash-potfiles.in Makefile
+make-systecash-potfiles: make-systecash-potfiles.in Makefile
 	rm -f $@.tmp
 	sed < $< > $@.tmp \
             -e 's:@-SRCDIR-@:${srcdir}:g' \
@@ -111,7 +111,7 @@ make-gnucash-potfiles: make-gnucash-potfiles.in Makefile
 DISTCLEANFILES = \
   intltool-extract intltool-update intltool-merge\
   cscope.files cscope.out etags.files \
-  make-gnucash-potfiles po/.intltool-merge-cache
+  make-systecash-potfiles po/.intltool-merge-cache
 
 cscope.files:
 	find src lib -name '*.[ch]' > cscope.files
@@ -194,20 +194,20 @@ pot: Makefile po/POTFILES.in
 	${MAKE} -C po $(PACKAGE).pot
 
 
-$(srcdir)/po/POTFILES.in: make-gnucash-potfiles .potfiles
-	if test -w $(srcdir)/po/POTFILES.in ; then ./make-gnucash-potfiles > $(srcdir)/po/POTFILES.in ; fi
+$(srcdir)/po/POTFILES.in: make-systecash-potfiles .potfiles
+	if test -w $(srcdir)/po/POTFILES.in ; then ./make-systecash-potfiles > $(srcdir)/po/POTFILES.in ; fi
 
-# Creation rules so that po/gnucash.pot can always be created for
+# Creation rules so that po/systecash.pot can always be created for
 # make dist.
-po/gnucash.pot: po/POTFILES.in
-	${MAKE} -C po gnucash.pot
+po/systecash.pot: po/POTFILES.in
+	${MAKE} -C po systecash.pot
 
 .potfiles:
 
 SVN = svn
 
 if BUILDING_FROM_VCS
-# This rule will generate a ChangeLog of gnucash/trunk commits, plus
+# This rule will generate a ChangeLog of systecash/trunk commits, plus
 # all additional branches that are added in
 # ./macros/svn2cl.xsl. (FIXME: Is the dependency on NEWS really a good
 # idea? Before a release, NEWS will get updated because of the version
@@ -215,8 +215,8 @@ if BUILDING_FROM_VCS
 ChangeLog: NEWS
 	cd $(abs_srcdir) ; \
 	if test x$(VCS_TYPE) = xsvn ; then \
-	  $(SVN) log -v --xml -r HEAD:'{2015-01-01}' http://svn.gnucash.org/repo/gnucash | \
-	    $(XSLTPROC) --stringparam strip-prefix "gnucash/trunk" \
+	  $(SVN) log -v --xml -r HEAD:'{2015-01-01}' http://svn.systecash.org/repo/systecash | \
+	    $(XSLTPROC) --stringparam strip-prefix "systecash/trunk" \
 	    --stringparam include-rev "yes" $(abs_srcdir)/macros/svn2cl.xsl - > $(abs_builddir)/$@ ; \
 	else \
 	  if test x$(VCS_TYPE) = xgit ; then \
@@ -237,5 +237,5 @@ indent:
 # --pad=oper with astyle 1.22 as it will reformat e.g. "return +1;" in
 # a very ugly way.
 #	$(ASTYLE) --indent=spaces=4 --brackets=break --pad-oper -pad-header --suffix=none `find ${srcdir}/src -name '*.[hc]'`
-	@echo "### GnuCash development hint: The above command might have re-indented much more files than what you intended. Please commit only those which you really want to have changed, and revert the changes in the others so that other devevelopers do not have unnecessary merge conflicts. Thanks! ###"
+	@echo "### systecash development hint: The above command might have re-indented much more files than what you intended. Please commit only those which you really want to have changed, and revert the changes in the others so that other devevelopers do not have unnecessary merge conflicts. Thanks! ###"
 

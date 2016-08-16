@@ -26,7 +26,7 @@
  @{
 */
 /** @file gnc-budget.h
- * @brief GnuCash Budgets
+ * @brief systecash Budgets
  *
  *   Design decisions:
  *

@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-datetime.cpp -- Date and Time classes for GnuCash            *
+ * gnc-datetime.cpp -- Date and Time classes for systecash            *
  *                                                                  *
  * Copyright 2015 John Ralls <jralls@ceridwen.us>                   *
  *                                                                  *

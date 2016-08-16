@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnucash-item-list.h -- A scrollable list box                     *
+ * systecash-item-list.h -- A scrollable list box                     *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
  * modify it under the terms of the GNU General Public License as   *
@@ -28,7 +28,7 @@
  * @addtogroup Gnome
  * @{
  */
-/** @file gnucash-item-list.h
+/** @file systecash-item-list.h
  * @brief Public Declarations for GncItemList class
  */
 #define GNC_TYPE_ITEM_LIST     (gnc_item_list_get_type ())

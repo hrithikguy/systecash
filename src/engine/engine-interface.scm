@@ -1,4 +1,4 @@
-;; engine-interface.scm -- support for working with the GnuCash
+;; engine-interface.scm -- support for working with the systecash
 ;;                         engine data structures
 ;; Copyright (C) 2000 Dave Peticolas <dave@krondo.com>
 ;;                                                                  

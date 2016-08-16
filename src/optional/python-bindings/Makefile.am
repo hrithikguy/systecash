@@ -1,20 +1,20 @@
 SUBDIRS = . tests
 
-SWIG_FILES = gnucash_core.i timespec.i
+SWIG_FILES = systecash_core.i timespec.i
 
 pkgpyexec_DATA = \
   __init__.py \
   function_class.py \
-  gnucash_core.py \
-  gnucash_core_c.py \
-  gnucash_business.py
+  systecash_core.py \
+  systecash_core_c.py \
+  systecash_business.py
 
-pkgpyexec_LTLIBRARIES = _gnucash_core_c.la
+pkgpyexec_LTLIBRARIES = _systecash_core_c.la
 
-_gnucash_core_c_la_SOURCES = \
-  gnucash_core.c
+_systecash_core_c_la_SOURCES = \
+  systecash_core.c
 
-_gnucash_core_c_la_CPPFLAGS = \
+_systecash_core_c_la_CPPFLAGS = \
   $(PYTHON_CPPFLAGS) \
   $(GLIB_CFLAGS) \
   -I${top_srcdir}/src/libqof/qof \
@@ -30,16 +30,16 @@ _gnucash_core_c_la_CPPFLAGS = \
 # Suppress all warnings for now, but we really only need to -Wno-implicit
 AM_CFLAGS = -w
 
-_gnucash_core_c_la_LDFLAGS = -avoid-version -module
+_systecash_core_c_la_LDFLAGS = -avoid-version -module
 
-_gnucash_core_c_la_LIBADD = \
+_systecash_core_c_la_LIBADD = \
   ${GLIB_LIBS} \
   ${top_builddir}/src/libqof/qof/libgnc-qof.la \
   ${top_builddir}/src/gnc-module/libgnc-module.la \
   ${top_builddir}/src/engine/libgncmod-engine.la \
   ${top_builddir}/src/app-utils/libgncmod-app-utils.la
 if BUILDING_FROM_VCS
-_gnucash_core_c_includes= \
+_systecash_core_c_includes= \
 	${top_builddir}/config.h \
 	${top_srcdir}/src/libqof/qof/qofsession.h \
 	${top_srcdir}/src/libqof/qof/qofbook.h \
@@ -71,13 +71,13 @@ _gnucash_core_c_includes= \
 	${top_srcdir}/src/app-utils/gnc-prefs-utils.h
 
 
-gnucash_core.c: $(SWIG_FILES) ${top_srcdir}/src/base-typemaps.i ${top_srcdir}/src/engine/engine-common.i $(_gnucash_core_c_includes)
+systecash_core.c: $(SWIG_FILES) ${top_srcdir}/src/base-typemaps.i ${top_srcdir}/src/engine/engine-common.i $(_systecash_core_c_includes)
 	$(SWIG) -python -Wall -Werror \
 	-I$(top_srcdir)/src -I$(top_srcdir)/src/engine \
 	-I$(top_srcdir)/src/app-utils -I${top_srcdir}/src/libqof/qof \
 	-o $@ $<
 
-gnucash_core_c.py: gnucash_core.c $(SWIG_FILES)
+systecash_core_c.py: systecash_core.c $(SWIG_FILES)
 endif
 
 EXTRA_DIST = \
@@ -95,30 +95,30 @@ EXTRA_DIST = \
   example_scripts/account_analysis.py \
   example_scripts/new_book_with_opening_balances.py \
   example_scripts/test_imbalance_transaction.py \
-  example_scripts/rest-api/gnucash_rest.py \
-  example_scripts/rest-api/gnucash_simple.py \
+  example_scripts/rest-api/systecash_rest.py \
+  example_scripts/rest-api/systecash_simple.py \
   example_scripts/rest-api/README
 
-MAINTAINERCLEANFILES = gnucash_core.c
+MAINTAINERCLEANFILES = systecash_core.c
 
 
 check_PROGRAMS = sqlite3test
 sqlite3test_SOURCES = sqlite3test.c
-sqlite3test_LDADD = ${_gnucash_core_c_la_LIBADD}
-sqlite3test_CPPFLAGS = ${_gnucash_core_c_la_CPPFLAGS}
+sqlite3test_LDADD = ${_systecash_core_c_la_LIBADD}
+sqlite3test_CPPFLAGS = ${_systecash_core_c_la_CPPFLAGS}
 
 PYTHON_LINK_FILES = \
   $(pkgpyexec_DATA)
 
 .py-links:$(PYTHON_LINK_FILES)
-	$(RM) -rf gnucash
-	mkdir -p gnucash
+	$(RM) -rf systecash
+	mkdir -p systecash
 if GNUCASH_SEPARATE_BUILDDIR
-	for X in $(filter-out gnucash_core_c.py,${PYTHON_LINK_FILES}) ; do \
+	for X in $(filter-out systecash_core_c.py,${PYTHON_LINK_FILES}) ; do \
 	  $(LN_S) -f ${srcdir}/$$X . ; \
 	done
 endif
-	( cd gnucash; for file in $(PYTHON_LINK_FILES) ; do \
+	( cd systecash; for file in $(PYTHON_LINK_FILES) ; do \
 	  $(LN_S) -f ../$$file .; \
 	  done )
 
@@ -129,10 +129,10 @@ endif
 
 noinst_DATA = .py-links
 
-CLEANFILES = $(BUILT_SOURCES) .py-links gnucash_core.c.py
+CLEANFILES = $(BUILT_SOURCES) .py-links systecash_core.c.py
 
 clean-local:
-	rm -rf gnucash
+	rm -rf systecash
 
 uninstall-local:
 	rm -rf ${pkgpyexecdir}

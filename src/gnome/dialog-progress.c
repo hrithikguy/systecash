@@ -1,5 +1,5 @@
 /********************************************************************\
- * dialog-progress.c -- GnuCash progress dialog                     *
+ * dialog-progress.c -- systecash progress dialog                     *
  * Copyright (C) 2000 Dave Peticolas                                *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *

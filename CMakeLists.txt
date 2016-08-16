@@ -1,4 +1,4 @@
-# CMakeLists.txt for the cutecash sub-project of gnucash
+# CMakeLists.txt for the cutecash sub-project of systecash
 
 # This is very EXPERIMENTAL! We will see how far this project will
 # get.
@@ -9,11 +9,11 @@ ELSE()
   CMAKE_MINIMUM_REQUIRED (VERSION 3.0)
 ENDIF()
 
-PROJECT (Gnucash)
+PROJECT (systecash)
 
 ENABLE_TESTING()
 
-# Version number of gnucash
+# Version number of systecash
 SET (GNUCASH_MAJOR_VERSION 2)
 SET (GNUCASH_MINOR_VERSION 6)
 SET (GNUCASH_MICRO_VERSION 99)
@@ -21,10 +21,10 @@ SET (GNUCASH_NANO_VERSION 0)
 SET (VERSION "${GNUCASH_MAJOR_VERSION}.${GNUCASH_MINOR_VERSION}.${GNUCASH_MICRO_VERSION}")
 SET (GNUCASH_LATEST_STABLE_SERIES 2.6)
 
-SET (PACKAGE gnucash)
-SET (PACKAGE_NAME GnuCash)
+SET (PACKAGE systecash)
+SET (PACKAGE_NAME systecash)
 SET (PACKAGE_VERSION 2.6.99)
-SET (PACKAGE_BUGREPORT gnucash-devel@gnucash.org)
+SET (PACKAGE_BUGREPORT systecash-devel@systecash.org)
 SET (PACKAGE_TARNAME ${PACKAGE})
 SET (PACKAGE_STRING "${PACKAGE_NAME} ${PACKAGE_VERSION}")
 SET (PACKAGE_URL "")
@@ -34,7 +34,7 @@ SET (PACKAGE_URL "")
 
 SET (GNUCASH_RESAVE_VERSION "19920")
 
-SET(GETTEXT_PACKAGE "gnucash")
+SET(GETTEXT_PACKAGE "systecash")
 
 # Extra cmake macros
 SET (CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/src/cmake_modules;${CMAKE_MODULE_PATH}")
@@ -53,7 +53,7 @@ INCLUDE (GncAddTest)
 
 OPTION (WITH_SQL "Build this project with SQL (libdbi) support" ON)
 OPTION (WITH_AQBANKING "Build this project with aqbanking (online banking) support" ON )
-OPTION (WITH_GNUCASH "Build all of GnuCash, not just cutecash" ON)
+OPTION (WITH_GNUCASH "Build all of systecash, not just cutecash" ON)
 OPTION (WITH_CUTECASH "Also build cutecash" OFF)
 OPTION (WITH_OFX "compile with ofx support (needs LibOFX)" ON)
 OPTION (ENABLE_BINRELOC "compile with binary relocation support" ON)
@@ -78,7 +78,7 @@ SET(GNC_HELPDIR ${DATADIR} CACHE STRING "where to store help files")
 SET(DATADIRNAME share)
 SET(GNC_SYSTEM_XDG_DATA_DIRS /usr/local/share /usr/share)
 SET(GNC_DBD_DIR ${CMAKE_PREFIX_PATH}/lib/dbd CACHE PATH "specify location of libdbi drivers")
-SET(PKGLIBDIR ${CMAKE_INSTALL_PREFIX}/lib/gnucash)
+SET(PKGLIBDIR ${CMAKE_INSTALL_PREFIX}/lib/systecash)
 SET(TEST_MYSQL_URL "" CACHE STRING "MySQL database URL for testing")
 SET(TEST_PGSQL_URL "" CACHE STRING "PgSQL database URL for testing")
 SET(HTMLHELP_DIR ${CMAKE_PREFIX_PATH}/hh CACHE PATH "Specify location of Win32 HTMLHELP library")
@@ -102,9 +102,9 @@ ENDIF()
 
 IF (WIN32)
   # Help Windows find the various dependencies. We assume here that the standard advice for building
-  # GnuCash has been followed and that these dependencies live underneath something like C:/GCDEV, which
+  # systecash has been followed and that these dependencies live underneath something like C:/GCDEV, which
   # should be provided as CMAKE_PREFIX_PATH on the CMake command line:
-  #      cmake -D CMAKE_PREFIX_PATH=c/gcdev -G "MSYS Makefiles" path/to/gnucash/sources
+  #      cmake -D CMAKE_PREFIX_PATH=c/gcdev -G "MSYS Makefiles" path/to/systecash/sources
   #
 
   SET(CMAKE_FRAMEWORK_PATH_TMP ${CMAKE_PREFIX_PATH})
@@ -393,24 +393,24 @@ IF (APPLE AND WITH_GNUCASH)
 ENDIF (APPLE AND WITH_GNUCASH)
 
 IF (UNIX AND NOT APPLE)
-  SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib:${CMAKE_INSTALL_PREFIX}/lib/gnucash")
+  SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib:${CMAKE_INSTALL_PREFIX}/lib/systecash")
 ENDIF()
 
 SET(BUILD_SHARED_LIBS ON)
 
 IF (GNC_BUILD_AS_INSTALL)
-  # Most libraries are installed to lib/gnucash, so set that as the default.
+  # Most libraries are installed to lib/systecash, so set that as the default.
   # For the handful that are installed to lib, we override the properies below
   # (after the targets have been read in).
 
 
-  SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY         ${CMAKE_BINARY_DIR}/lib/gnucash)
+  SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY         ${CMAKE_BINARY_DIR}/lib/systecash)
   IF (XCODE_VERSION)
     # FIXME: These settings break the ability to manipulate different configurations (Debug,
     # FIXME: Release, etc.) in Xcode. We'll need to change the module loading C code if
     # we want to support multi config.
-    SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG   ${CMAKE_BINARY_DIR}/lib/gnucash)
-    SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/lib/gnucash)
+    SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG   ${CMAKE_BINARY_DIR}/lib/systecash)
+    SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/lib/systecash)
   ENDIF()
   # For binarines
   SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY         ${CMAKE_BINARY_DIR}/bin)
@@ -431,7 +431,7 @@ ENDIF()
 # There are targets that need to build before tests will run
 ADD_CUSTOM_TARGET(check
   COMMAND ${CMAKE_CTEST_COMMAND}
-  DEPENDS gnucash scm-app-utils scm-gnome-utils scm-report-gnome
+  DEPENDS systecash scm-app-utils scm-gnome-utils scm-report-gnome
      scm-engine scm-gnc-module scm-test-engine scm-report-system-3
      scm-test-core scm-test-report-system scm-standard-reports-2
      scm-test-standard-reports foo gncmodfoo baz gncmodbaz
@@ -476,7 +476,7 @@ IF (GNC_BUILD_AS_INSTALL)
 ENDIF()
 # Install DOC files from top level directory
 
-SET(gnucash_DOCS
+SET(systecash_DOCS
     AUTHORS
     ChangeLog
     ChangeLog.1999
@@ -502,7 +502,7 @@ SET(gnucash_DOCS
     README.dependencies
 )
 
-INSTALL(FILES ${gnucash_DOCS} DESTINATION share/doc/gnucash)
+INSTALL(FILES ${systecash_DOCS} DESTINATION share/doc/systecash)
 
 #Link LICENSE to COPYING so that people expecting to find it,
 #will. COPYING is normally linked by autogen.sh to the latest
@@ -515,7 +515,7 @@ ENDIF()
 INSTALL(CODE
 " EXECUTE_PROCESS(
       COMMAND ${CMAKE_COMMAND} -E ${_CMD} LICENSE COPYING
-      WORKING_DIRECTORY ${CMAKE_INSTALL_PREFIX}/share/doc/gnucash
+      WORKING_DIRECTORY ${CMAKE_INSTALL_PREFIX}/share/doc/systecash
   )"
 )
 

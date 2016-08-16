@@ -4,7 +4,7 @@
       一个简单的账本
 	</gnc-act:title>
     <gnc-act:short-description>
-     使用 GnuCash 的最基本的科目。
+     使用 systecash 的最基本的科目。
     </gnc-act:short-description>
     <gnc-act:long-description>
 	 如果您只是想平衡您的账本那么请使用这套科目。以后如果需要，您可以更加详细的跟踪收入和支出。

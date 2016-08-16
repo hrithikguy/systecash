@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-frequency.h -- GnuCash widget for frequency editing.         *
+ * gnc-frequency.h -- systecash widget for frequency editing.         *
  * Copyright (C) 2001,2002 Joshua Sled <jsled@asynchronous.org>     *
  * Copyright (C) 2003 Linas Vepstas <linas@linas.org>               *
  *                                                                  *

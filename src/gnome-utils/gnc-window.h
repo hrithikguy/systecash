@@ -1,5 +1,5 @@
 /*
- * gnc-window.h -- structure which represents a GnuCash window.
+ * gnc-window.h -- structure which represents a systecash window.
  *
  * Copyright (C) 2003 Jan Arne Petersen <jpetersen@uni-bonn.de>
  * Copyright (C) 2003 David Hampton <hampton@employees.org>
@@ -31,7 +31,7 @@
     @author Copyright (C) 2003 Jan Arne Petersen
     @author Copyright (C) 2003 David Hampton <hampton@employees.org>
 
-    GnuCash has two types of "windows" that can show Plugin Pages.
+    systecash has two types of "windows" that can show Plugin Pages.
     The first is called a "Main Window" and is implemented on top of a
     GtkWindow.  The second is called an "Embedded Window" and is
     implemented on top of a GtkVBox.  The functions in this file will

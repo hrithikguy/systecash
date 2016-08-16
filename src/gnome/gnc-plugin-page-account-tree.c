@@ -700,7 +700,7 @@ static void gnc_plugin_page_account_tree_selected (GObject *object, gpointer use
 }
 
 /** Save enough information about this account tree page that it can
- *  be recreated next time the user starts gnucash.
+ *  be recreated next time the user starts systecash.
  *
  *  @param plugin_page The page to save.
  *
@@ -734,7 +734,7 @@ gnc_plugin_page_account_tree_save_page (GncPluginPage *plugin_page,
 
 
 /** Create a new account tree page based on the information saved
- *  during a previous instantiation of gnucash.
+ *  during a previous instantiation of systecash.
  *
  *  @param window The window where this page should be installed.
  *

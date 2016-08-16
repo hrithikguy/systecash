@@ -23,7 +23,7 @@
 #ifndef GNC_SPLIT_HPP
 #define GNC_SPLIT_HPP
 
-// gnucash includes
+// systecash includes
 #include "config.h"
 extern "C"
 {
@@ -53,7 +53,7 @@ class TmpTransaction;
 
 typedef std::vector< ::Split*> SplitQList;
 
-/** Wrapper around a gnucash ::Split pointer with C++ methods for
+/** Wrapper around a systecash ::Split pointer with C++ methods for
  * easier setter and getter access.
  */
 class Split : public GncInstance

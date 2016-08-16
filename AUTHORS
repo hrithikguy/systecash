@@ -1,9 +1,9 @@
-GETTING HELP: If you need help with GnuCash, please do not contact any of the
-Authors directly. Instead, first look at http://wiki.gnucash.org/wiki/FAQ to
+GETTING HELP: If you need help with systecash, please do not contact any of the
+Authors directly. Instead, first look at http://wiki.systecash.org/wiki/FAQ to
 see if your question is common and is answered there. If that doesn't help,
 there are mailing lists in English, Dutch, French, German, Italian, and
 Portuguese and an English IRC channel. More information can be found at
-http://wiki.gnucash.org/wiki/Mailing_Lists and http://wiki.gnucash.org/wiki/IRC.
+http://wiki.systecash.org/wiki/Mailing_Lists and http://wiki.systecash.org/wiki/IRC.
 
 Main Developers:
 ----------------
@@ -26,11 +26,11 @@ Linas Vepstas <linas@linas.org> liked what he saw: the GUI was slick,
    register window code completely redesigned and made mostly 
    Motif-(and GUI-)independent.
 
-Jeremy Collins <jcollins@gnucash.org> publicized the GnoMoney project 
-   widely and broadly, and then changed its name to GnuCash.  (Actually, 
+Jeremy Collins <jcollins@systecash.org> publicized the GnoMoney project 
+   widely and broadly, and then changed its name to systecash.  (Actually, 
    he put the selection of the name up to popular vote. We all learned
    that democracy is not a good way to pick names.) Jeremy registered 
-   the domain name, and created and maintained the gnucash.org web site 
+   the domain name, and created and maintained the systecash.org web site 
    for years, and got the initial GTK/gnome code working.
 
 Rob Browning <rlb@cs.utexas.edu> abused everyone for not using perl,
@@ -40,7 +40,7 @@ Rob Browning <rlb@cs.utexas.edu> abused everyone for not using perl,
    file-format to XML. He then concentrated on scheme performance and
    has been the g-wrap guile wrapper maintainer.
 
-Dave Peticolas <dave@krondo.com> worked on most parts of Gnucash, especially
+Dave Peticolas <dave@krondo.com> worked on most parts of systecash, especially
    the register and GUI.
 
 Bill Gribble <grib@billgribble.com> is not shy, or softly spoken. So don't 
@@ -66,7 +66,7 @@ Joshua Sled <jsled@asynchronous.org> works on scheduled transactions, and
    bug-triage, &c.).
 
 Derek Atkins <derek@ihtfp.com> wrote the business-accounting package
-   for Gnucash. This includes the Customer/Vendor database, Job tracking,
+   for systecash. This includes the Customer/Vendor database, Job tracking,
    Order entry, Invoicing, Accounts Payable, Accounts Receivable, and
    related technologies.  In the process he re-wrote the Query engine,
    modularized the Book object storage, and modularized the backend
@@ -76,22 +76,22 @@ David Hampton <hampton@employees.org> is an all-around hacker. He
    implemented a large porting of the gtk2 conversion.  He generally
    works on cleaning up the GUI and on fleshing out support for
    stocks. David has picked up Dave Peticolas's previous tendency to
-   hack obsessively on GnuCash. (Something in the name?)
+   hack obsessively on systecash. (Something in the name?)
 
-Chris Lyttle <chris@wilddev.net> Administers the GnuCash bug list.
+Chris Lyttle <chris@wilddev.net> Administers the systecash bug list.
    Improved the help and integrated and finished a concepts and
    tutorial written by Carol Champagne. Looks after
-   releasing new GnuCash versions and updating the website.
+   releasing new systecash versions and updating the website.
 
 Benoit Grégoire <bock@step.polymtl.ca> coded a long awaited OFX module
-   for GnuCash and wrote the external libOFX library that it uses.
+   for systecash and wrote the external libOFX library that it uses.
 
 Neil Williams <linux@codehelp.co.uk> finished conversion from GncBook
    to QofBook and worked on the separation of QoF into a standalone
    library. He also contributed lots of Doxygen fixes and updates.
 
 Chris Shoemaker <c.shoemaker@cox.net> implemented budgeting support
-   for GnuCash. He replaced g-wrap by SWIG as GnuCash's guile wrapper
+   for systecash. He replaced g-wrap by SWIG as systecash's guile wrapper
    generator and is also an all around hacker.
 
 Andreas Köhler <andi5.py@gmx.net> is hunting down lots of bugs,
@@ -203,7 +203,7 @@ Bryan Larsen <blarsen@ada-works.com> guile budget report
 Chris J (Oakton) Leach <LeachCJ@az1.bp.com> autoconf patch
 Nicholas Lee <nj.lee@plumtree.co.nz> scheme bug fix
 Graham Leggett <minfrin@sharp.fm> for fixing a hang
-Rolf Leggewie <foss@rolf.leggewie.biz> SKR04 and gnucash for german business
+Rolf Leggewie <foss@rolf.leggewie.biz> SKR04 and systecash for german business
 Georg Lehner <Jorge.Lehner@gmx.net> Nicaraguan Spanish translation
 Ted Lemon <mellon@andare.fugue.com> for NetBSD port
 Yannick Le Ny <y-le-ny@ifrance.com> French translations
@@ -220,7 +220,7 @@ Lionel Elie Mamane <lionel@mamane.lu> Patches for gcc2.95 macro compatibility
 Kjartan Maraas <kmaraas@gnome.org> Norwegian translations
 Heath Martin <martinh@pegasus.cc.ucf.edu> gnome patches, major register work, x86_64 support
 Matt Martin <mgmartin@abacusnet.net> guile error handling code
-Yves-Eric Martin <yem_lists.gnucash.org@filter.yve.net> work on financial year end work
+Yves-Eric Martin <yem_lists.systecash.org@filter.yve.net> work on financial year end work
 Tadas Masiulionis <tadzikaz@gmail.com> Lithuanian Translation
 Juan Manuel García Molina <juanmagm@mail.com> messages Spanish translation
 David Montenegro <sunrise2000@comcast.net> all sorts of Scheme reports

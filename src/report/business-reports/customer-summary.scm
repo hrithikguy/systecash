@@ -26,17 +26,17 @@
 ;; not only print a summary for one single owner (here: only
 ;; customers), but instead a table showing all customers.
 
-(define-module (gnucash report customer-summary))
+(define-module (systecash report customer-summary))
 
 (use-modules (srfi srfi-1))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash printf))
-(use-modules (gnucash main))                ; for gnc:debug
-(use-modules (gnucash gettext))
+(use-modules (systecash gnc-module))
+(use-modules (systecash printf))
+(use-modules (systecash main))                ; for gnc:debug
+(use-modules (systecash gettext))
 
-(gnc:module-load "gnucash/report/report-system" 0)
-(use-modules (gnucash report standard-reports))
-(use-modules (gnucash report business-reports))
+(gnc:module-load "systecash/report/report-system" 0)
+(use-modules (systecash report standard-reports))
+(use-modules (systecash report business-reports))
 
 ;; Option names
 (define optname-from-date (N_ "From"))

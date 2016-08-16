@@ -1,4 +1,4 @@
-;; gnucash
+;; systecash
 ;; Copyright (C) 2009 Andy Wingo <wingo at pobox dot com>
 
 ;; This program is free software; you can redistribute it and/or    
@@ -24,7 +24,7 @@
 ;;
 ;;; Code:
 
-(define-module (gnucash printf)
+(define-module (systecash printf)
   #:export (printf fprintf sprintf))
 
 ;; Stub slib support, so we don't depend on slib proper.

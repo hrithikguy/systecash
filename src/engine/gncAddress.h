@@ -26,7 +26,7 @@
 An address belongs to another object, determined by the ::GncOwner.
 It is the owner that assigns a name and identifier to the address.
 In effect, an address is just a building - to make it useful to
-GnuCash, it needs to be tied to a person. After all, you cannot
+systecash, it needs to be tied to a person. After all, you cannot
 invoice a building, you invoice a person working / living in the
 building.
 

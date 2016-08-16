@@ -213,7 +213,7 @@
 	 start-percent delta-percent)
   (let ((currency-accounts 
 	 ;;(filter gnc:account-has-shares?  
-	 ;; -- use all accounts, not only share accounts, since gnucash-1.7
+	 ;; -- use all accounts, not only share accounts, since systecash-1.7
 	 (gnc-account-get-descendants-sorted (gnc-get-current-root-account)))
 	(work-to-do (length commodity-list))
 	(work-done 0))
@@ -314,7 +314,7 @@
 	 start-percent delta-percent)
   (let ((currency-accounts 
 	 ;;(filter gnc:account-has-shares? 
-	 ;; -- use all accounts, not only share accounts, since gnucash-1.7
+	 ;; -- use all accounts, not only share accounts, since systecash-1.7
 	 (gnc-account-get-descendants-sorted (gnc-get-current-root-account)))
 	(work-to-do (length commodity-list))
 	(work-done 0))
@@ -533,7 +533,7 @@
 (define (gnc:get-exchange-totals report-commodity end-date)
   (let ((curr-accounts 
 	 ;;(filter gnc:account-has-shares? ))
-	 ;; -- use all accounts, not only share accounts, since gnucash-1.7
+	 ;; -- use all accounts, not only share accounts, since systecash-1.7
 	 (gnc-account-get-descendants-sorted (gnc-get-current-root-account)))
 	;; sumlist: a multilevel alist. Each element has a commodity
 	;; as key, and another alist as a value. The value-alist's
@@ -624,7 +624,7 @@
 (define (gnc:get-exchange-cost-totals report-commodity end-date)
   (let ((curr-accounts 
 	 ;;(filter gnc:account-has-shares? ))
-	 ;; -- use all accounts, not only share accounts, since gnucash-1.7
+	 ;; -- use all accounts, not only share accounts, since systecash-1.7
 	 (gnc-account-get-descendants-sorted (gnc-get-current-root-account)))
 	;; sumlist: a multilevel alist. Each element has a commodity
 	;; as key, and another alist as a value. The value-alist's

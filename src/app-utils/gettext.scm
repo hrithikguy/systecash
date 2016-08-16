@@ -15,7 +15,7 @@
 ;; 51 Franklin Street, Fifth Floor    Fax:    +1-617-542-2652
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 
-(define-module (gnucash gettext))
+(define-module (systecash gettext))
 
 ;; Load a few different modules depending on the version of guile
 (cond-expand

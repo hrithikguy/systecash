@@ -22,16 +22,16 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 
 
-(define-module (gnucash report invoice))
+(define-module (systecash report invoice))
 
 (use-modules (srfi srfi-1))
-(use-modules (gnucash printf))
-(use-modules (gnucash gnc-module))
-(use-modules (gnucash gettext))
+(use-modules (systecash printf))
+(use-modules (systecash gnc-module))
+(use-modules (systecash gettext))
 
-(gnc:module-load "gnucash/report/report-system" 0)
-(use-modules (gnucash report standard-reports))
-(use-modules (gnucash report business-reports))
+(gnc:module-load "systecash/report/report-system" 0)
+(use-modules (systecash report standard-reports))
+(use-modules (systecash report business-reports))
 
 (define-macro (addto! alist element)
   `(set! ,alist (cons ,element ,alist)))

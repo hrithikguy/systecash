@@ -1,5 +1,5 @@
 /*
- * gnc-plugin-manager.h -- Manage gnucash plugins.
+ * gnc-plugin-manager.h -- Manage systecash plugins.
  *
  * Copyright (C) 2003 Jan Arne Petersen
  * Author: Jan Arne Petersen <jpetersen@uni-bonn.de>
@@ -27,18 +27,18 @@
 /** @addtogroup PluginManager Plugin Management Functions
     @{ */
 /** @file gnc-plugin-manager.h
-    @brief  Plugin management functions for the GnuCash UI
+    @brief  Plugin management functions for the systecash UI
     @author Copyright (C) 2003 Jan Arne Petersen <jpetersen@uni-bonn.de>
 
     The plugin manager maintains a list of all non-content plugins
-    that have been instantiated by various parts of Gnucash.  The
+    that have been instantiated by various parts of systecash.  The
     manager will provide this list upon request, it will also look up
     individual plugins on request.  The main client of this manager is
-    the main gnucash window code.  All plugins registered here will
-    automatically be installed in each top level gnucash window that
+    the main systecash window code.  All plugins registered here will
+    automatically be installed in each top level systecash window that
     is created.
 
-    This code installs a hook to be called when the gnucash user
+    This code installs a hook to be called when the systecash user
     interface shuts down, and at that time it will unref any plugins
     that are still in its plugin list.
 
@@ -82,7 +82,7 @@ typedef struct
     (GncPluginManager *plugin_manager, GncPlugin *plugin);
 } GncPluginManagerClass;
 
-/** Retrieve the GType value for the gnucash plugin manager.
+/** Retrieve the GType value for the systecash plugin manager.
  *
  *  @return The GType that corresponds to an object of this type.
  */
@@ -131,7 +131,7 @@ void gnc_plugin_manager_remove_plugin (GncPluginManager *manager,
 
 
 /** Get a list of all plugins being held by the plugin manager.  This
- *  function is used by the main gnucash window code to get the list
+ *  function is used by the main systecash window code to get the list
  *  of plugins that need to be added to a new top level window.
  *
  *  @param manager A pointer to the plugin manager.  Retrieve this by

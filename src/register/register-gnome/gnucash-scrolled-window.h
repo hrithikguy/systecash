@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnucash-scrolled-window.h -- gnucash specific scrolled window    *
+ * systecash-scrolled-window.h -- systecash specific scrolled window    *
  * Copyright (C) 2001 Gnumatic, Inc.                                *
  * Author: Dave Peticolas <dave@krondo.com>                         *
  *                                                                  *
@@ -30,7 +30,7 @@
  * @{
  * @brief Gtk+-2 widgets for displaying SplitRegister components.
  */
-/** @file gnucash-scrolled-window.h
+/** @file systecash-scrolled-window.h
  * @brief Public declarations for GncScrolledWindow class
  */
 G_BEGIN_DECLS

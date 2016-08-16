@@ -62,7 +62,7 @@
 #include "gnc-prefs.h"
 #include "gnc-ui.h"
 #include "gnc-ui-util.h"
-#include "gnucash-sheet.h"
+#include "systecash-sheet.h"
 
 #include "gnc-split-reg.h"
 

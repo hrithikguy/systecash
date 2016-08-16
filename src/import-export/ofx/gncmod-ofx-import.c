@@ -49,7 +49,7 @@ int libgncmod_ofx_gnc_module_age      = 0;
 char *
 libgncmod_ofx_gnc_module_path(void)
 {
-    return g_strdup("gnucash/import-export/ofx");
+    return g_strdup("systecash/import-export/ofx");
 }
 
 char *
@@ -61,19 +61,19 @@ libgncmod_ofx_gnc_module_description(void)
 int
 libgncmod_ofx_gnc_module_init(int refcount)
 {
-    if (!gnc_module_load("gnucash/engine", 0))
+    if (!gnc_module_load("systecash/engine", 0))
     {
         return FALSE;
     }
-    if (!gnc_module_load("gnucash/app-utils", 0))
+    if (!gnc_module_load("systecash/app-utils", 0))
     {
         return FALSE;
     }
-    if (!gnc_module_load("gnucash/gnome-utils", 0))
+    if (!gnc_module_load("systecash/gnome-utils", 0))
     {
         return FALSE;
     }
-    if (!gnc_module_load("gnucash/import-export", 0))
+    if (!gnc_module_load("systecash/import-export", 0))
     {
         return FALSE;
     }

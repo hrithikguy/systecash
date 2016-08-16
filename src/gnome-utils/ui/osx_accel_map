@@ -1,4 +1,4 @@
-; gnucash GtkAccelMap rc-file         -*- scheme -*-
+; systecash GtkAccelMap rc-file         -*- scheme -*-
 ; this file is an automated accelerator map dump
 ;
 ; (gtk_accel_path "<Actions>/MenuAdditions/BudgetReportAction" "")

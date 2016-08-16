@@ -1,5 +1,5 @@
 ## @file 
-# @brief Documentation file for GnuCashs python bindings, input file for doxygen.
+# @brief Documentation file for systecashs python bindings, input file for doxygen.
 #
 # This file holds the more explanatory parts of the doxygen-source-documentation.
 # You will find the contents at @ref python_bindings_page.
@@ -36,17 +36,17 @@
 #
 #   @section possibilities What are the Python bindings good for ?
 #
-#   The python bindings supply the ability to access a wide range of the core functions of GnuCash. You
+#   The python bindings supply the ability to access a wide range of the core functions of systecash. You
 #   can read and write Transactions, Commodities, Lots, access the business stuff... You gain the ability
 #   to manipulate your financial data with a flexible scripting language.
 #
-#   Not everything GnuCash can is possible to access though. The bindings focus on basic accounting functions.
+#   Not everything systecash can is possible to access though. The bindings focus on basic accounting functions.
 #   Have a look at the examples to get an impression.
 #
 #   @section python_bindings_section Principles
-#   The python-bindings are generated using SWIG from parts of the source-files of GnuCash.
+#   The python-bindings are generated using SWIG from parts of the source-files of systecash.
 #
-#   @note Python-scripts should not be executed while GnuCash runs. GnuCash is designed as
+#   @note Python-scripts should not be executed while systecash runs. systecash is designed as
 #   a single user application with only one program accessing the data at one time. You can force your 
 #   access but that may corrupt data. Maybe one day that may change but for the moment there is no active development on that.
 #
@@ -55,15 +55,15 @@
 #   SWIG extracts informations from the c-sources and provides access to the structures
 #   to python. It's work is controlled by interface files :
 # 
-#   @li gnucash_core.i
+#   @li systecash_core.i
 #   @li timespec.i
 #   @li glib.i 
 #   @li @link base-typemaps.i src/base-typemaps.i @endlink This file is shared with Guile.
 #
 #   it outputs:
 #
-#   @li gnucash_core.c
-#   @li gnucash_core_c.py
+#   @li systecash_core.c
+#   @li systecash_core_c.py
 #
 #   If you have generated your own local doxygen documentation (by "make doc") after having compiled the python-bindings, doxygen
 #   will include SWIGs output-files.
@@ -74,19 +74,19 @@
 #
 #   For some parts there is a second layer of a nice pythonic interface. It is declared
 #   in 
-#   @li gnucash_core.py and 
-#   @li gnucash_business.py.
+#   @li systecash_core.py and 
+#   @li systecash_business.py.
 #   @li function_class.py contains helper functions for that.
 #
 #   @section howto How to use the Python bindings
 #   @subsection highlevel High level python wrapper classes
 #   If you
 # 
-#   @code >> import gnucash @endcode
+#   @code >> import systecash @endcode
 #
 #   You can access the structures of the high level api. For Example you get a Session object by
 #
-#   @code >> session=gnucash.Session() @endcode
+#   @code >> session=systecash.Session() @endcode
 #
 #   Here you will find easy to use things. But sometimes - and at the current level rather sooner than
 #   later - you may be forced to search for solutions at the :
@@ -95,23 +95,23 @@
 #
 #   If you
 #
-#   @code >> import gnucash @endcode
+#   @code >> import systecash @endcode
 #
-#   The c-style-api can be accessed via gnucash.gnucash_core_c. You can have a look at all the possibilities
-#   at gnucash_core_c.py.
+#   The c-style-api can be accessed via systecash.systecash_core_c. You can have a look at all the possibilities
+#   at systecash_core_c.py.
 #
 #   You will find a lot of pointers here which you can just ignore if input and output of the function have the
 #   same type.
 #
-#   For example you could start a session by gnucash.gnucash_core_c.qof_session_begin(). But if you just try
+#   For example you could start a session by systecash.systecash_core_c.qof_session_begin(). But if you just try
 #
-#   @code session=gnucash.gnucash_core_c.qof_session_begin() @endcode
+#   @code session=systecash.systecash_core_c.qof_session_begin() @endcode
 #
 #   you will get an error message and realize the lack of convenience for you have to add the correct function parameters.
 #
 #   Not all of the available structures will work. SWIG just takes everything from the sources that it is fed with and translates it. Not everything
 #   is a working translation, because not everything has been worked through. At this point you are getting closer to the developers who you can 
-#   contact at the mailing-list gnucash-devel@gnucash.org. There may be a workaround. Maybe the problem can only be fixed by changing SWIGs input 
+#   contact at the mailing-list systecash-devel@systecash.org. There may be a workaround. Maybe the problem can only be fixed by changing SWIGs input 
 #   files to correctly translate the c-source. Feel free to post a question at the developers list. It may awaken the interest of someone who creates
 #   some more beautiful python-interfaces.
 #
@@ -123,10 +123,10 @@
 #
 #   @section pydoc (Further) documentation
 #
-#   @li The documentation you just read uses doxygen. It collects documentation in GnuCash's sources. Besides that there is
+#   @li The documentation you just read uses doxygen. It collects documentation in systecash's sources. Besides that there is
 #   @li the classic python-documentation using help() and docstrings. Have a look at both.
-#   @li There is a page in the GnuCash wiki at http://wiki.gnucash.org/wiki/Python
-#   @li You may also have a look into the archives of gnucash-devel@gnucash.org. 
+#   @li There is a page in the systecash wiki at http://wiki.systecash.org/wiki/Python
+#   @li You may also have a look into the archives of systecash-devel@systecash.org. 
 #   @li On Bugzilla there is also some interesting talk regarding the development process. 
 #   @li Then you can use the abilities of svn to see the history of the code by @code svn log @endcode done in the directory of the python-bindings.
 #

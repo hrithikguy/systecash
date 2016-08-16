@@ -26,8 +26,8 @@ TARGET_LINK_LIBRARIES(gncmod-qif-import gncmod-app-utils gncmod-gnome-utils gnc-
 TARGET_COMPILE_DEFINITIONS(gncmod-qif-import PRIVATE -DG_LOG_DOMAIN=\"gnc.import.qif.import\")
 
 INSTALL(TARGETS gncmod-qif-import
-  LIBRARY DESTINATION lib/gnucash
-  ARCHIVE DESTINATION lib/gnucash
+  LIBRARY DESTINATION lib/systecash
+  ARCHIVE DESTINATION lib/systecash
   RUNTIME DESTINATION bin)
 # No headers to install.
 
@@ -57,7 +57,7 @@ SET(GUILE_DEPENDS      gncmod-qif-import scm-core-utils scm-gnc-module scm-scm)
 
 GNC_ADD_SCHEME_TARGETS(scm-qif-import-2
   "${qif_import_SCHEME_2}"
-  "gnucash/import-export"
+  "systecash/import-export"
   "${GUILE_MODULES}"
   "${GUILE_LOAD_DIRS}"
   "${GUILE_LIBRARY_DIRS}"
@@ -77,15 +77,15 @@ GNC_ADD_SCHEME_TARGETS(scm-qif-import
 
 SET(qif_import_GLADE assistant-qif-import.glade dialog-account-picker.glade)
 
-INSTALL(FILES ${qif_import_GLADE} DESTINATION share/gnucash/gtkbuilder)
+INSTALL(FILES ${qif_import_GLADE} DESTINATION share/systecash/gtkbuilder)
 
 SET(qif_import_UI gnc-plugin-qif-import-ui.xml)
 
-INSTALL(FILES ${qif_import_UI} DESTINATION share/gnucash/ui)
+INSTALL(FILES ${qif_import_UI} DESTINATION share/systecash/ui)
 
 IF (GNC_BUILD_AS_INSTALL)
   FILE(COPY ${qif_import_UI}
-    DESTINATION ${DATADIR_BUILD}/gnucash/ui)
+    DESTINATION ${DATADIR_BUILD}/systecash/ui)
   FILE(COPY ${qif_import_GLADE}
-    DESTINATION ${DATADIR_BUILD}/gnucash/gtkbuilder)
+    DESTINATION ${DATADIR_BUILD}/systecash/gtkbuilder)
 ENDIF()

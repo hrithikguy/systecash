@@ -1,4 +1,4 @@
-# Aug 2012: A RELAX NG Compact schema for gnucash "v2" XML files.
+# Aug 2012: A RELAX NG Compact schema for systecash "v2" XML files.
 # Copyright (C) 2006 Joshua Sled <jsled@asynchronous.org>
 # Copyright (C) 2012 Baptiste Carvello <devel@baptiste-carvello.net>
 
@@ -7,51 +7,51 @@
 # published by the Free Software Foundation; either version 2 of
 # the License, or (at your option) version 3.
 
-# This schema is non-normative; files emitted by gnucash <= 2.0 (and perhaps
+# This schema is non-normative; files emitted by systecash <= 2.0 (and perhaps
 # later) that do not validate against it likely represent a problem with the
-# schema, not the file. The schema was last updated for gnucash trunk, rev 22330.
+# schema, not the file. The schema was last updated for systecash trunk, rev 22330.
 
 # http://relaxng.org/compact-tutorial-20030326.html
 
 # from write_v2_header in src/backend/xml/io-gncxml-v2.c
 
-namespace gnc = "http://www.gnucash.org/XML/gnc"
-namespace act = "http://www.gnucash.org/XML/act"
-namespace book = "http://www.gnucash.org/XML/book"
-namespace cd = "http://www.gnucash.org/XML/cd"
-namespace cmdty = "http://www.gnucash.org/XML/cmdty"
-namespace price = "http://www.gnucash.org/XML/price"
-namespace slot = "http://www.gnucash.org/XML/slot"
-namespace split = "http://www.gnucash.org/XML/split"
-namespace sx = "http://www.gnucash.org/XML/sx"
-namespace trn = "http://www.gnucash.org/XML/trn"
-namespace ts = "http://www.gnucash.org/XML/ts"
-namespace fs = "http://www.gnucash.org/XML/fs"
-namespace bgt = "http://www.gnucash.org/XML/bgt"
-namespace recurrence = "http://www.gnucash.org/XML/recurrence"
-namespace lot = "http://www.gnucash.org/XML/lot"
+namespace gnc = "http://www.systecash.org/XML/gnc"
+namespace act = "http://www.systecash.org/XML/act"
+namespace book = "http://www.systecash.org/XML/book"
+namespace cd = "http://www.systecash.org/XML/cd"
+namespace cmdty = "http://www.systecash.org/XML/cmdty"
+namespace price = "http://www.systecash.org/XML/price"
+namespace slot = "http://www.systecash.org/XML/slot"
+namespace split = "http://www.systecash.org/XML/split"
+namespace sx = "http://www.systecash.org/XML/sx"
+namespace trn = "http://www.systecash.org/XML/trn"
+namespace ts = "http://www.systecash.org/XML/ts"
+namespace fs = "http://www.systecash.org/XML/fs"
+namespace bgt = "http://www.systecash.org/XML/bgt"
+namespace recurrence = "http://www.systecash.org/XML/recurrence"
+namespace lot = "http://www.systecash.org/XML/lot"
 
 # plugins, in order (address, owner, bill-term, customer, employee, entry, invoice,
 # job, order, tax-table, vendor)
 
-namespace addr = "http://www.gnucash.org/XML/addr"
-namespace owner = "http://www.gnucash.org/XML/owner"
-namespace billterm = "http://www.gnucash.org/XML/billterm"
-namespace bt-days = "http://www.gnucash.org/XML/bt-days"
-namespace bt-prox = "http://www.gnucash.org/XML/bt-prox"
-namespace cust = "http://www.gnucash.org/XML/cust"
-namespace employee = "http://www.gnucash.org/XML/employee"
-namespace entry = "http://www.gnucash.org/XML/entry"
-namespace invoice = "http://www.gnucash.org/XML/invoice"
-namespace job = "http://www.gnucash.org/XML/job"
-namespace order = "http://www.gnucash.org/XML/order"
-namespace taxtable = "http://www.gnucash.org/XML/taxtable"
-namespace tte = "http://www.gnucash.org/XML/tte"
-namespace vendor = "http://www.gnucash.org/XML/vendor"
+namespace addr = "http://www.systecash.org/XML/addr"
+namespace owner = "http://www.systecash.org/XML/owner"
+namespace billterm = "http://www.systecash.org/XML/billterm"
+namespace bt-days = "http://www.systecash.org/XML/bt-days"
+namespace bt-prox = "http://www.systecash.org/XML/bt-prox"
+namespace cust = "http://www.systecash.org/XML/cust"
+namespace employee = "http://www.systecash.org/XML/employee"
+namespace entry = "http://www.systecash.org/XML/entry"
+namespace invoice = "http://www.systecash.org/XML/invoice"
+namespace job = "http://www.systecash.org/XML/job"
+namespace order = "http://www.systecash.org/XML/order"
+namespace taxtable = "http://www.systecash.org/XML/taxtable"
+namespace tte = "http://www.systecash.org/XML/tte"
+namespace vendor = "http://www.systecash.org/XML/vendor"
 
-start = GnuCashXml
+start = systecashXml
 
-GnuCashXml = element gnc-v2 {
+systecashXml = element gnc-v2 {
 
 # from gnc_book_write_to_xml_filehandle_v2 in src/backend/xml/io-gncxml-v2.c
 

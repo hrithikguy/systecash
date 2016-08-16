@@ -107,7 +107,7 @@ TARGET_LINK_LIBRARIES(gncmod-backend-xml gnc-backend-xml-utils gncmod-engine
 
 TARGET_COMPILE_DEFINITIONS (gncmod-backend-xml PRIVATE -DG_LOG_DOMAIN=\"gnc.backend.xml\" -DU_SHOW_CPLUSPLUS_API=0)
 
-SET(LIB_DIR lib/gnucash)
+SET(LIB_DIR lib/systecash)
 IF (WIN32)
   SET(LIB_DIR bin)
 ENDIF(WIN32)

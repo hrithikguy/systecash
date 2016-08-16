@@ -1,7 +1,7 @@
 #
-# This is an example GTK RC file that can be used with Gnucash.
-# Simply copy this file to ~/.gtkrc-2.0.gnucash and then restart
-# gnucash.  Yes the colors are hideous, but then this is a (bad)
+# This is an example GTK RC file that can be used with systecash.
+# Simply copy this file to ~/.gtkrc-2.0.systecash and then restart
+# systecash.  Yes the colors are hideous, but then this is a (bad)
 # example that you should customize to your liking.
 #
 # On an FC3 system, the RC files (if they exist) are loaded for in
@@ -10,7 +10,7 @@
 #       /usr/share/gtkrc-2.0
 #       /etc/gtk-2.0/gtkrc
 #       ~/.gtkrc-2.0
-#  **   ~/.gtkrc-2.0.gnucash   **
+#  **   ~/.gtkrc-2.0.systecash   **
 #       ~/.gnome2/gtkrc-2.0
 #       ~/.themes/Bluecurve/gtk-2.0/gtkrc
 #       /usr/share/themes/Bluecurve/gtk-2.0/gtkrc
@@ -132,7 +132,7 @@ style "gnc-register"
 {
   font_name    = "Sans 10"
 }
-widget "*.GnucashSheet" style "gnc-register"
+widget "*.systecashSheet" style "gnc-register"
 
 
 #

@@ -1,5 +1,5 @@
 /********************************************************************
- * gnc-html-webkit.c -- gnucash report renderer using webkit        *
+ * gnc-html-webkit.c -- systecash report renderer using webkit        *
  *                                                                  *
  * Copyright (C) 2000 Bill Gribble <grib@billgribble.com>           *
  * Copyright (C) 2001 Linas Vepstas <linas@linas.org>               *

@@ -1,5 +1,5 @@
 /********************************************************************\
- * gncBillTerm.c -- the Gnucash Billing Terms interface             *
+ * gncBillTerm.c -- the systecash Billing Terms interface             *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
  * modify it under the terms of the GNU General Public License as   *

@@ -1,5 +1,5 @@
   <prefsgroup>
-    <gschemaid>org.gnucash.dialogs.import.hbci</gschemaid>
+    <gschemaid>org.systecash.dialogs.import.hbci</gschemaid>
     <gconfpath>dialogs-import-hbci.xml</gconfpath>
     
     <pref>

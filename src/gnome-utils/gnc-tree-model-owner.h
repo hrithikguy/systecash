@@ -24,10 +24,10 @@
 
 /** @addtogroup GUI
     @{ */
-/** @addtogroup GuiTreeModel GnuCash Tree Model
+/** @addtogroup GuiTreeModel systecash Tree Model
     @{ */
 /** @file gnc-tree-model-owner.h
-    @brief GtkTreeModel implementation for gnucash owner tree.
+    @brief GtkTreeModel implementation for systecash owner tree.
     @author Geert Janssens <geert@kobaltwit.be>
 */
 
@@ -107,7 +107,7 @@ GType gnc_tree_model_owner_get_type (void);
 /** @name Owner Tree Model Constructors
  @{ */
 
-/** Create a new GtkTreeModel for manipulating gnucash owners.
+/** Create a new GtkTreeModel for manipulating systecash owners.
  *
  *  @param root The owner group to put at the top level of the tree
  *  hierarchy. */
@@ -118,7 +118,7 @@ GtkTreeModel *gnc_tree_model_owner_new (GncOwnerType owner_type);
 /** @name Owner Tree Model Get/Set Functions
   @{ */
 
-/** Convert a model/iter pair to a gnucash owner.  This routine should
+/** Convert a model/iter pair to a systecash owner.  This routine should
  *  only be called from an owner tree view filter function.  The
  *  model and iter values will be provided as part of the call to the
  *  filter.

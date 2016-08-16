@@ -53,7 +53,7 @@ extern "C"
 #define QOF_MOD_BACKEND "qof.backend"
 
 /** \brief The errors that can be reported to the GUI & other front-end users
- *  \warning (GnuCash) If you modify QofBackendError, please update
+ *  \warning (systecash) If you modify QofBackendError, please update
  *   src/engine/gw-engine-spec.scm
 */
 typedef enum
@@ -101,7 +101,7 @@ typedef enum
     ERR_FILEIO_NO_ENCODING,    /**< file does not specify encoding */
     ERR_FILEIO_FILE_EACCES,    /**< No read access permission for the given file */
     ERR_FILEIO_RESERVED_WRITE, /**< User attempt to write to a directory reserved
-                                    for internal use by GnuCash */
+                                    for internal use by systecash */
     ERR_FILEIO_FILE_UPGRADE,   /**< file will be upgraded and not be able to be
                                     read by prior versions - warn users*/
 

@@ -17,7 +17,7 @@ GNC_ADD_SCHEME_TEST(test-report-utilities test-report-utilities.scm)
 
 GNC_ADD_SCHEME_TARGETS(scm-test-report-system
   test-extras.scm
-  gnucash/report/report-system/test
+  systecash/report/report-system/test
   ""
   ""
   ""

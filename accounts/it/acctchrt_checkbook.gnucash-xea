@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 
-     Italian translation for GnuCash
+     Italian translation for systecash
      Copyright (C) 1998-2003 Free Software Foundation, Inc.
      Lorenzo Cappelletti <lorenzo.cappelletti@email.com>, 2003.
   -->
@@ -9,7 +9,7 @@
       Semplice libro conti
     </gnc-act:title>
     <gnc-act:short-description>
-     L'insieme minimale di conti per usare GnuCash.
+     L'insieme minimale di conti per usare systecash.
     </gnc-act:short-description>
     <gnc-act:long-description>
      Utile per tenere il saldo delle proprie entrate e uscite. Successivamente, se ce ne sarà bisogno, sarà possibile incominciare a tenerne traccia in modo più dettagliato.

@@ -48,7 +48,7 @@
 
 2015-12-24 Mechtilde 
 
-	* some German translation and adapt to actual file gnucash.pot
+	* some German translation and adapt to actual file systecash.pot
 
 2015-12-23 Mechtilde 
 
@@ -124,11 +124,11 @@
 
 2015-12-12 Mechtilde 
 
-	* update de.po via gnucash.pot after building myself
+	* update de.po via systecash.pot after building myself
 
 2015-12-12 Mechtilde 
 
-	* update de.po via gnucash.pot after building myself
+	* update de.po via systecash.pot after building myself
 
 2015-12-12 Mechtilde 
 
@@ -572,7 +572,7 @@
 
 2015-09-26 John Ralls 
 
-	* Release Gnucash-2.6.8 (tag: 2.6.8)
+	* Release systecash-2.6.8 (tag: 2.6.8)
 
 2015-09-26 John Ralls 
 
@@ -668,7 +668,7 @@
 
 2015-09-19 John Ralls 
 
-	* Update all message catalogs with the 2.6.7 gnucash.pot and fix all warnings.
+	* Update all message catalogs with the 2.6.7 systecash.pot and fix all warnings.
 
 2015-09-17 John Ralls 
 
@@ -828,7 +828,7 @@
 
 2015-09-12 John Ralls 
 
-	* Bug 754617 - Gnucash should use PKG_PROG_PKG_CONFIG
+	* Bug 754617 - systecash should use PKG_PROG_PKG_CONFIG
 
 2015-09-09 Geert Janssens 
 
@@ -956,7 +956,7 @@
 
 2015-07-07 John Ralls 
 
-	* Bug 749077 - wrongfully invalidating any account save location/path starting with ".gnucash"
+	* Bug 749077 - wrongfully invalidating any account save location/path starting with ".systecash"
 
 2015-07-07 John Ralls 
 
@@ -1008,7 +1008,7 @@
 
 2015-05-31 Geert Janssens 
 
-	* Bug 746163 - Custom register colors (table rows) not recognized from .gtkrc-2.0.gnucash file
+	* Bug 746163 - Custom register colors (table rows) not recognized from .gtkrc-2.0.systecash file
 
 2015-05-29 Joe Hansen 
 
@@ -1020,11 +1020,11 @@
 
 2015-05-08 Geert Janssens 
 
-	* Bug 746873 - Gnucash asks sql passwords before wallet password
+	* Bug 746873 - systecash asks sql passwords before wallet password
 
 2015-04-28 Geert Janssens 
 
-	* Bug 746873 - Gnucash asks sql passwords before wallet password
+	* Bug 746873 - systecash asks sql passwords before wallet password
 
 2015-04-28 John Ralls 
 
@@ -1064,7 +1064,7 @@
 
 2015-04-10 Frank H. Ellenberger 
 
-	* Note in txf-help*.scm that changes should be applied to gnucash-docs/help/*/Help_txf-categories.xml
+	* Note in txf-help*.scm that changes should be applied to systecash-docs/help/*/Help_txf-categories.xml
 
 2015-04-08 Alex Aycinena 
 
@@ -1080,7 +1080,7 @@
 
 2015-04-03 Geert Janssens 
 
-	* Enable travis continuous integration tests on the gnucash repository
+	* Enable travis continuous integration tests on the systecash repository
 
 2015-04-02 Mark Haanen 
 
@@ -1194,7 +1194,7 @@
 
 	* Update Danish translation from the translation project
 
-2015-03-04 gnucash-dev 
+2015-03-04 systecash-dev 
 
 	* To fix build error: ISO C90 forbids mixed declarations and code
 
@@ -1314,7 +1314,7 @@
 
 	* Bug 731889 - guile 2 exports different autoconf macros than what is expected
 
-2015-01-20 gnucash-dev 
+2015-01-20 systecash-dev 
 
 	* Update US Income Tax data to reflect minor changes for 2014
 

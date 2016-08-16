@@ -1,6 +1,6 @@
 #include <windows.h>
 
-APPLICATION_ICON ICON DISCARDABLE "gnucash-icon.ico"
+APPLICATION_ICON ICON DISCARDABLE "systecash-icon.ico"
 
 VS_VERSION VERSIONINFO
  FILEVERSION     @GNUCASH_MAJOR_VERSION@,@GNUCASH_MINOR_VERSION@,@GNUCASH_MICRO_VERSION@,0
@@ -15,13 +15,13 @@ BEGIN
   BEGIN
     BLOCK "040904E4"
     BEGIN
-      VALUE "CompanyName", "GnuCash Development Team"
-      VALUE "FileDescription", "GnuCash Program File"
+      VALUE "CompanyName", "systecash Development Team"
+      VALUE "FileDescription", "systecash Program File"
       VALUE "FileVersion", "@VERSION@"
-      VALUE "InternalName", "gnucash"
-      VALUE "LegalCopyright", "©2011 GnuCash Development Team, Licence: GPL v2.0 or later"
-      VALUE "OriginalFilename", "gnucash.exe"
-      VALUE "ProductName", "GnuCash Free Finance Manager"
+      VALUE "InternalName", "systecash"
+      VALUE "LegalCopyright", "©2011 systecash Development Team, Licence: GPL v2.0 or later"
+      VALUE "OriginalFilename", "systecash.exe"
+      VALUE "ProductName", "systecash Free Finance Manager"
       VALUE "ProductVersion", "@VERSION@"
     END
   END

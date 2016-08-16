@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-helpers.c -- gnucash app-util helper functions               *
+ * gnc-helpers.c -- systecash app-util helper functions               *
  * Copyright (C) 2000 Linas Vepstas                                 *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
@@ -102,7 +102,7 @@ gnc_scm2printinfo(SCM info_scm)
  * the data from a pointers to a gnc-commodity (the older method).
  * This is *not* a reversible conversion as it drops data.
  *
- * When this routine was written, gnucash retrieved all quotes into
+ * When this routine was written, systecash retrieved all quotes into
  * the user's default currency.  (Did earlier version do any
  * different?)  This routine inserts that default currency into the
  * returned structure as another optimization.

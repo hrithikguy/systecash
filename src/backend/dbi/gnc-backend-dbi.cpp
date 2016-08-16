@@ -1599,13 +1599,13 @@ gnc_dbi_destroy_backend (QofBackend* be)
 /* ================================================================= */
 
 /* GNUCASH_RESAVE_VERSION indicates the earliest database version
- * compatible with this version of Gnucash; the stored value is the
- * earliest version of Gnucash conpatible with the database. If the
- * GNUCASH_RESAVE_VERSION for this Gnucash is newer than the Gnucash
+ * compatible with this version of systecash; the stored value is the
+ * earliest version of systecash conpatible with the database. If the
+ * GNUCASH_RESAVE_VERSION for this systecash is newer than the systecash
  * version which created the database, a resave is offered. If the
- * version of this Gnucash is older than the saved resave version,
+ * version of this systecash is older than the saved resave version,
  * then the database will be loaded read-only. A resave will update
- * both values to match this version of Gnucash.
+ * both values to match this version of systecash.
  */
 static void
 gnc_dbi_load (QofBackend* qbe,  QofBook* book, QofBackendLoadType loadType)
@@ -1632,7 +1632,7 @@ gnc_dbi_load (QofBackend* qbe,  QofBook* book, QofBackendLoadType loadType)
     gnc_sql_load (&be->sql_be, book, loadType);
 
     if (GNUCASH_RESAVE_VERSION > gnc_sql_get_table_version (&be->sql_be,
-                                                            "Gnucash"))
+                                                            "systecash"))
     {
         /* The database was loaded with an older database schema or
          * data semantics. In order to ensure consistency, the whole
@@ -1640,7 +1640,7 @@ gnc_dbi_load (QofBackend* qbe,  QofBook* book, QofBackendLoadType loadType)
         qof_backend_set_error (qbe, ERR_SQL_DB_TOO_OLD);
     }
     else if (GNUCASH_RESAVE_VERSION < gnc_sql_get_table_version (&be->sql_be,
-                                                                 "Gnucash-Resave"))
+                                                                 "systecash-Resave"))
     {
         /* Worse, the database was created with a newer version. We
          * can't safely write to this database, so the user will have
@@ -2099,7 +2099,7 @@ gnc_module_init_backend_dbi (void)
 
     if (have_sqlite3_driver)
     {
-        const char* name = "GnuCash Libdbi (SQLITE3) Backend";
+        const char* name = "systecash Libdbi (SQLITE3) Backend";
         auto prov = QofBackendProvider_ptr(new QofSQLITEBackendProvider{name, FILE_URI_TYPE});
         qof_backend_register_provider(std::move(prov));
         prov = QofBackendProvider_ptr(new QofSQLITEBackendProvider{name, SQLITE3_URI_TYPE});
@@ -2108,20 +2108,20 @@ gnc_module_init_backend_dbi (void)
 
     if (have_mysql_driver)
     {
-        const char *name = "GnuCash Libdbi (MYSQL) Backend";
+        const char *name = "systecash Libdbi (MYSQL) Backend";
         auto prov = QofBackendProvider_ptr(new QofMYSQLBackendProvider{name, "mysql"});
         qof_backend_register_provider(std::move(prov));
     }
 
     if (have_pgsql_driver)
     {
-        const char* name = "GnuCash Libdbi (POSTGRESQL) Backend";
+        const char* name = "systecash Libdbi (POSTGRESQL) Backend";
         auto prov = QofBackendProvider_ptr(new QofPGSQLBackendProvider{name, "postgres"});
         qof_backend_register_provider(std::move(prov));
     }
 
     /* If needed, set log level to DEBUG so that SQl statements will be put into
-       the gnucash.trace file. */
+       the systecash.trace file. */
     /*    qof_log_set_level( log_module, QOF_LOG_DEBUG ); */
 }
 

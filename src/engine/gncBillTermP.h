@@ -1,5 +1,5 @@
 /********************************************************************\
- * gncBillTermP.h -- the Gnucash Billing Term private interface     *
+ * gncBillTermP.h -- the systecash Billing Term private interface     *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
  * modify it under the terms of the GNU General Public License as   *

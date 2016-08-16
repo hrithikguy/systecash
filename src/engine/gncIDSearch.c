@@ -16,7 +16,7 @@
 *      MA 02110-1301, USA.
 *
 * Developed (aka copied?) from code written by Sebastian Held <sebastian.held@gmx.de>
-* as part of his GnuCash invoice importer module
+* as part of his systecash invoice importer module
 * Mike Evans <mikee@saxicola.co.uk>
 *
 **********************************************************************/

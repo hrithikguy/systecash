@@ -97,13 +97,13 @@
 
 2004-12-15  Joshua Sled  <jsled@asynchronous.org>
 
-	* src/register/register-gnome/gnucash-item-edit.c
+	* src/register/register-gnome/systecash-item-edit.c
 	(create_popup_toggle): realize popup-arrow widget so it gets
 	displayed; correct tyop in "field" name.
 
 2004-12-15  Joshua Sled  <jsled@asynchronous.org>
 
-	* src/register/register-gnome/gnucash-item-edit.c
+	* src/register/register-gnome/systecash-item-edit.c
 	(gnc_item_edit_set_cursor_pos): Re-add
 	text-selection-via-mouse-drag support [still buggy in multiple
 	ways; see GNOME2_STATUS for updates].
@@ -233,7 +233,7 @@
 	* src/gnome-utils/dialog-transfer.c:
 	* src/gnome-utils/gnc-query-list.c:
 	  Vitaly Lipatov's C-construct patch --
-	  During compiling CVS version of gnucash (tag gnucash-gnome2-dev)
+	  During compiling CVS version of systecash (tag systecash-gnome2-dev)
 	  I have found some mistakes makes error with GCC compiler.
 
 	* lib/egg/Makefile.am: don't define *_DISABLE_DEPRECATED when
@@ -292,7 +292,7 @@
 
 	* src/gnome-utils/gnc-tree-model-account.c: Fix memory leaks.
 
-	* src/register/register-gnome/gnucash-sheet.c: Fix popup menu.
+	* src/register/register-gnome/systecash-sheet.c: Fix popup menu.
 
 2004-05-02  David Hampton  <hampton@employees.org>
 
@@ -364,19 +364,19 @@
 
 2004-03-05  Tomas Cernaj  <tcernaj@gmx.de>
 
-	* src/register/register-gnome/gnucash-grid.c:
+	* src/register/register-gnome/systecash-grid.c:
 	  Fix bug in the grid's update method: Called
 	  gnome_canvas_item_request_update() while updating.
 
 2004-03-04  Tomas Cernaj  <tcernaj@gmx.de>
 
-	* src/register/register-gnome/gnucash-cursor.c:
-	* src/register/register-gnome/gnucash-cursor.h:
-	* src/register/register-gnome/gnucash-grid.c:
-	* src/register/register-gnome/gnucash-grid.h:
-	* src/register/register-gnome/gnucash-header.h:
-	* src/register/register-gnome/gnucash-sheet.c:
-	* src/register/register-gnome/gnucash-sheet.h:
+	* src/register/register-gnome/systecash-cursor.c:
+	* src/register/register-gnome/systecash-cursor.h:
+	* src/register/register-gnome/systecash-grid.c:
+	* src/register/register-gnome/systecash-grid.h:
+	* src/register/register-gnome/systecash-header.h:
+	* src/register/register-gnome/systecash-sheet.c:
+	* src/register/register-gnome/systecash-sheet.h:
 	  Convert to new GType-/GObject-System.
 
 2004-02-09  Derek Atkins  <derek@ihtfp.com>
@@ -808,7 +808,7 @@
                -A transaction amount mismatch past the threshold is now punished by -5 instead of -1
                -Date mismatch is now worth -5 isntead of -10
                -Check number mismatch is now punished -2, but only if both numbers are NOT empty.
-       	* src/import-export/ofx/gnc-ofx-import.c: Update for new LibOfx, this among other things, gives gnucash Microsoft OFC support.
+       	* src/import-export/ofx/gnc-ofx-import.c: Update for new LibOfx, this among other things, gives systecash Microsoft OFC support.
        	* src/import-export/ofx/test/test-link.cL Update for new LibOfx.
        	* configure.in:  Partly update for new libofx.  It will crash if the right version isn't available, but there is no explicit version support (if someone wants to code it, you can use the output of "ofxdump --version".
 	* src/gnome-utils/gnc-query-list.c:  Fix gcc3.4 compile problem
@@ -895,7 +895,7 @@
 
 2004-08-11  Derek Atkins  <derek@ihtfp.com>
 
-	* src/gnome/gnucash.desktop.in: make the desktop HIG compliant.
+	* src/gnome/systecash.desktop.in: make the desktop HIG compliant.
 	  Fixes #145545
 
 2004-07-20  Derek Atkins <derek@ihtfp.com>
@@ -1014,7 +1014,7 @@
 
 	* src/report/report-system/report.scm, report-system.scm: Add
 	function for saving one particular report to the
-	~/.gnucash/saved-reports-1.8 file. Add extra menu only for
+	~/.systecash/saved-reports-1.8 file. Add extra menu only for
 	customized reports.
 
 	* src/scm/main-window.scm, src/scm/main.scm: Remove the previous
@@ -1042,8 +1042,8 @@
 
 2004-06-24  Derek Atkins  <derek@ihtfp.com>
 
-	* Makefile.am: be sure to rebuild make-gnucash-patch and
-	  make-gnucash-potfiles when the Makefile changes (which means the
+	* Makefile.am: be sure to rebuild make-systecash-patch and
+	  make-systecash-potfiles when the Makefile changes (which means the
 	  PERL paths might have changed).
 	* src/scm/paths.scm: change the default config file to 1.9, so we
 	  don't screw up users of 1.8.
@@ -1076,7 +1076,7 @@
 	* src/scm/main-window.scm, src/scm/main.scm: Added example Menu
 	item "File -> Save all reports" that will call the new report
 	saving function for all reports. Reports are appended to
-	~/.gnucash/saved-reports-1.8 . This would need more work so that
+	~/.systecash/saved-reports-1.8 . This would need more work so that
 	not all reports are saved but only the currently selected one --
 	any volunteer may feel free to add that.
 
@@ -1128,7 +1128,7 @@
 
 2004-05-15  Derek Atkins  <derek@ihtfp.com>
 
-	* Luigi Ballabio's automake patch to gnucash.m4
+	* Luigi Ballabio's automake patch to systecash.m4
 
 2004-05-08  Christian Stimming  <stimming@tuhh.de>
 
@@ -1145,7 +1145,7 @@
 2004-05-05  Derek Atkins  <derek@ihtfp.com>
 
 	* src/engine/iso-currencies-to-c: don't automatically try to
-	  (require 'format), so gnucash will build on an slib-3 system.
+	  (require 'format), so systecash will build on an slib-3 system.
 
 2004-05-02  David Hampton  <hampton@employees.org>
 
@@ -1229,7 +1229,7 @@
 	* src/report/utility-reports/iframe-url.scm:
 	  don't need to require format; main.scm handles it, and
 	  the default "format" (simple-format) is sufficient to
-	  handle everything we need.  This allows gnucash to work
+	  handle everything we need.  This allows systecash to work
 	  with slib3.
 
 2004-03-14  Joshua Sled  <jsled@asynchronous.org>
@@ -1266,8 +1266,8 @@
 
 	* HACKING: Added instructions about running under valgrind.
 
-	* lib/gnucash_valgrind.supp: Added a large set of valgrind
-	suppressions for both guile and gnucash.
+	* lib/systecash_valgrind.supp: Added a large set of valgrind
+	suppressions for both guile and systecash.
 
 	* src/register/ledger-core/gnc-ledger-display.c
 	(gnc_ledger_display_template_gl): Change the reg_type to
@@ -1385,7 +1385,7 @@
 
 2004-01-20  Derek Atkins  <derek@ihtfp.com>
 
-	* src/bin/overrides/gnucash-build-env.in: add import-export, ofx,
+	* src/bin/overrides/systecash-build-env.in: add import-export, ofx,
 	  and hbci which should allow running with ofx and hbci in the
 	  build tree.
 
@@ -1498,7 +1498,7 @@
 2004-01-02  Derek Atkins  <derek@ihtfp.com>
 
 	* README.patches:
-	* make-gnucash-patch.in:
+	* make-systecash-patch.in:
 	  Patch by Geoff Kassel to work on OpenBSD (allow user to set diffcmd)
 	Fixes #122646
 

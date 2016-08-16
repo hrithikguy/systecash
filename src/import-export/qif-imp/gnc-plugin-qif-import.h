@@ -1,6 +1,6 @@
 /********************************************************************\
  * gnc-plugin-qif-import.c -- window for importing QIF files        *
- *                        (GnuCash)                                 *
+ *                        (systecash)                                 *
  * Copyright (C) 2003 Jan Arne Petersen <jpetersen@uni-bonn.de>     *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *

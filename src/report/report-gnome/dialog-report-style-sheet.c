@@ -1,6 +1,6 @@
 /********************************************************************
  * dialog-report-style-sheet.c -- window for configuring HTML style *
- *                         sheets in GnuCash                        *
+ *                         sheets in systecash                        *
  * Copyright (C) 2000 Bill Gribble <grib@billgribble.com>           *
  * Copyright (c) 2006 David Hampton <hampton@employees.org>         *
  *                                                                  *

@@ -20,9 +20,9 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(use-modules (gnucash main))
-(use-modules (gnucash printf))
-(use-modules (gnucash gettext))
+(use-modules (systecash main))
+(use-modules (systecash printf))
+(use-modules (systecash gettext))
 (cond-expand
   (guile-2
     (eval-when
@@ -33,8 +33,8 @@
 
 ;; Terminology in this file:
 ;; report-template: a report definition of some form. This can be a report
-;;      included in gnucash by default, or a new report definition added by
-;;      the user in the .gnucash directory or a custom report
+;;      included in systecash by default, or a new report definition added by
+;;      the user in the .systecash directory or a custom report
 ;; custom report: like a report-template, but saved with a different set
 ;;      of default options. A better name would probably be "preconfigured
 ;;      report" or something similar. These templates are managed by the
@@ -43,8 +43,8 @@
 ;;      specific instance of a template, loaded and configured by the user
 ;;      while the program is running.
 ;; saved report: a report that was still open at the time a book is closed.
-;;      GnuCash dumps the current settings and template id for such a report
-;;      in a meta file in .gnucash/books. When the book is reopened, the template
+;;      systecash dumps the current settings and template id for such a report
+;;      in a meta file in .systecash/books. When the book is reopened, the template
 ;;      id and settings are used to restore the report to the state it was
 ;;      in before the book was closed.
 ;;
@@ -174,7 +174,7 @@
 	  (if (not gnc:old-style-report-warned)
 	      (begin
 		(set! gnc:old-style-report-warned #t)
-		(gnc-error-dialog '() (string-append (_ "The GnuCash report system has been upgraded. Your old saved reports have been transferred into a new format. If you experience trouble with saved reports, please contact the GnuCash development team.")))))
+		(gnc-error-dialog '() (string-append (_ "The systecash report system has been upgraded. Your old saved reports have been transferred into a new format. If you experience trouble with saved reports, please contact the systecash development team.")))))
 	  (hash-set! *gnc:_report-templates_*
 		     (gnc:report-template-report-guid report-rec) report-rec)
 	  (gnc:warn "gnc:define-report: old-style report. setting guid for " (gnc:report-template-name report-rec) " to " (gnc:report-template-report-guid report-rec)))
@@ -538,7 +538,7 @@
    (gnc:generate-restore-forms (gnc:report-options report) "options")
    ;; 2.6->2.4 compatibility code prefix
    ;; Temporary check to make the new report saving code more or less backwards
-   ;; compatible with older gnucash versions. This can be removed again in 2.8.
+   ;; compatible with older systecash versions. This can be removed again in 2.8.
    "(if (defined? 'gnc:restore-report-by-guid-with-custom-template)\n"
    ;; end of 2.6->2.4 compatibility code prefix.
    (format 
@@ -846,7 +846,7 @@
 (define gnc:old-style-restore-warned #f)
 
 ;; Legacy: this function is needed only to restore
-;; a saved report when loading a book last saved in GnuCash 2.2
+;; a saved report when loading a book last saved in systecash 2.2
 (define (gnc:restore-report id template-name options)
   (if options
       (let ((r ((record-constructor <report>)

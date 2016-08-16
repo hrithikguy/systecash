@@ -27,7 +27,7 @@
 /** @addtogroup ContentPluginBase Common object and functions
     @{ */
 /** @file gnc-plugin-page.c
-    @brief Functions for adding plugins to a GnuCash window.
+    @brief Functions for adding plugins to a systecash window.
     @author Copyright (C) 2003 Jan Arne Petersen
     @author Copyright (C) 2003,2005 David Hampton <hampton@employees.org>
 */
@@ -211,7 +211,7 @@ gnc_plugin_page_show_summarybar (GncPluginPage *page,
 /*  Call the plugin specific function that will save the state of a
  *  content page to a disk.  That function must save enough
  *  information about the page that it can be recreated next time the
- *  user starts gnucash. */
+ *  user starts systecash. */
 void
 gnc_plugin_page_save_page (GncPluginPage *page,
                            GKeyFile *key_file,
@@ -522,7 +522,7 @@ gnc_plugin_page_class_init (GncPluginPageClass *klass)
 }
 
 
-/** Initialize a new instance of a gnucash content plugin.  This
+/** Initialize a new instance of a systecash content plugin.  This
  *  function initializes the object private storage space, and adds
  *  the object to the tracking system.
  *
@@ -547,7 +547,7 @@ gnc_plugin_page_init (GncPluginPage *page, GncPluginPageClass *klass)
 }
 
 
-/** Finalize the gnucash plugin object.  This function is called from
+/** Finalize the systecash plugin object.  This function is called from
  *  the G_Object level to complete the destruction of the object.  It
  *  should release any memory not previously released by the destroy
  *  function (i.e. the private data structure), then chain up to the

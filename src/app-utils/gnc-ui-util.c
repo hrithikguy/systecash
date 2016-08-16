@@ -1,5 +1,5 @@
 /********************************************************************\
- * gnc-ui-util.c -- utility functions for the GnuCash UI            *
+ * gnc-ui-util.c -- utility functions for the systecash UI            *
  * Copyright (C) 2000 Dave Peticolas <dave@krondo.com>              *
  *                                                                  *
  * This program is free software; you can redistribute it and/or    *
@@ -201,11 +201,11 @@ gnc_get_current_book (void)
 }
 
 /* If there is no current session, there is no book and we must be dealing
- * with a new book. When gnucash is started with --nofile, there is
+ * with a new book. When systecash is started with --nofile, there is
  * initially no session (and no book), but by the time we check, one
  * could have been created (for example, if an empty account tree tab is
  * opened, a session is created which creates a new, but empty, book).
- * A session is created and a book is loaded from a backend when gnucash is
+ * A session is created and a book is loaded from a backend when systecash is
  * started with a file, but selecting 'new file' keeps a session open. So we
  * need to check as well for a book with no accounts (root with no children). */
 gboolean
@@ -256,7 +256,7 @@ gnc_book_option_num_field_source_change_cb (gboolean num_action)
     if (num_action)
     {
     /* Set a feature flag in the book for use of the split action field as number.
-     * This will prevent older GnuCash versions that don't support this feature
+     * This will prevent older systecash versions that don't support this feature
      * from opening this file. */
         gnc_features_set_used (gnc_get_current_book(),
                                                 GNC_FEATURE_NUM_FIELD_SOURCE);
@@ -275,7 +275,7 @@ gnc_book_option_book_currency_selected_cb (gboolean use_book_currency)
     if (use_book_currency)
     {
     /* Set a feature flag in the book for use of book currency. This will
-     * prevent older GnuCash versions that don't support this feature from
+     * prevent older systecash versions that don't support this feature from
      * opening this file. */
         gnc_features_set_used (gnc_get_current_book(),
                                 GNC_FEATURE_BOOK_CURRENCY);
@@ -448,8 +448,8 @@ gnc_ui_account_get_tax_info_string (const Account *account)
              * the account tab if the Tax Info column is displayed,
              * i.e. if the user wants to record the tax form number
              * and location on that tax form which corresponds to this
-             * gnucash account. For the US Income Tax support in
-             * gnucash, each tax code that can be assigned to an
+             * systecash account. For the US Income Tax support in
+             * systecash, each tax code that can be assigned to an
              * account generally corresponds to a specific line number
              * on a paper form and each form has a unique
              * identification (e.g., Form 1040, Schedule A). */
@@ -493,8 +493,8 @@ gnc_ui_account_get_tax_info_string (const Account *account)
             gboolean is_de_DE = FALSE;
 #endif /* LOCALE_SPECIFIC_TAX */
             tax_module = is_de_DE ?
-                         "gnucash/tax/de_DE" :
-                         "gnucash/tax/us";
+                         "systecash/tax/de_DE" :
+                         "systecash/tax/us";
 
             module = gnc_module_load ((char *)tax_module, 0);
 
@@ -687,8 +687,8 @@ gnc_ui_account_get_tax_info_sub_acct_string (const Account *account)
          * the account tab if the Tax Info column is displayed,
          * i.e. if the user wants to record the tax form number
          * and location on that tax form which corresponds to this
-         * gnucash account. For the US Income Tax support in
-         * gnucash, each tax code that can be assigned to an
+         * systecash account. For the US Income Tax support in
+         * systecash, each tax code that can be assigned to an
          * account generally corresponds to a specific line number
          * on a paper form and each form has a unique
          * identification (e.g., Form 1040, Schedule A). */
@@ -1741,7 +1741,7 @@ static gchar *big_numbers[] =
     /* Translators: This is the word for the number 10^9, one thousand
        millions. WATCH OUT: In British English and many other languages
        this word is used for 10^12 which is one million millions! In
-       contrast to this, here in GnuCash this is used in the American
+       contrast to this, here in systecash this is used in the American
        English meaning of 10^9.  */
     "Billion",
     /* Translators: This is the word for the number 10^12, one million

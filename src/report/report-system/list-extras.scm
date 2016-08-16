@@ -17,7 +17,7 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report report-system list-extras))
+(define-module (systecash report report-system list-extras))
 (use-modules (srfi srfi-1))
 
 (export list-min-max)

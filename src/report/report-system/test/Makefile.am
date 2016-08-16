@@ -82,16 +82,16 @@ testit:
 
 
 .scm-links:
-	$(RM) -rf gnucash
-	mkdir -p  gnucash/report/report-system/test
-	( cd gnucash/report/report-system/test; for A in $(SCM_TEST_HELPERS) ; do $(LN_S) -f $(abs_srcdir)/$$A . ; done )
+	$(RM) -rf systecash
+	mkdir -p  systecash/report/report-system/test
+	( cd systecash/report/report-system/test; for A in $(SCM_TEST_HELPERS) ; do $(LN_S) -f $(abs_srcdir)/$$A . ; done )
 if ! OS_WIN32
 # Windows knows no "ln -s" but uses "cp": must copy every time (see bug #566567).
 	touch .scm-links
 endif
 
 clean-local:
-	$(RM) -rf gnucash
+	$(RM) -rf systecash
 	$(RM) *.log
 
 noinst_DATA = .scm-links

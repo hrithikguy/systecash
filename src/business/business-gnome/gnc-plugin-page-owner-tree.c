@@ -689,7 +689,7 @@ gnc_plugin_page_owner_tree_destroy_widget (GncPluginPage *plugin_page)
 #define OWNER_TYPE_LABEL     "OwnerType"
 
 /** Save enough information about this owner tree page that it can
- *  be recreated next time the user starts gnucash.
+ *  be recreated next time the user starts systecash.
  *
  *  @param plugin_page The page to save.
  *
@@ -726,7 +726,7 @@ gnc_plugin_page_owner_tree_save_page (GncPluginPage *plugin_page,
 
 
 /** Create a new owner tree page based on the information saved
- *  during a previous instantiation of gnucash.
+ *  during a previous instantiation of systecash.
  *
  *  @param window The window where this page should be installed.
  *

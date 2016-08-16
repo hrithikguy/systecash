@@ -1,5 +1,5 @@
 /********************************************************************\
- * sixtp-parsers.h -- api for gnucash sixtp parsers                 *
+ * sixtp-parsers.h -- api for systecash sixtp parsers                 *
  *                                                                  *
  * Copyright (C) 2001 James LewisMoss <dres@debian.org>             *
  *                                                                  *

@@ -31,7 +31,7 @@
   Must be called with a string containing a unique identifier for the
   commodity.  If an commodity with a matching cusip is found, the
   function immediately returns with a pointer to that commodity.
-  Otherwise, the user may be prompted to select a GnuCash commodity or
+  Otherwise, the user may be prompted to select a systecash commodity or
   create a new one (in both cases, the cusip is written to the
   commodity's cusip field, overwriting anything that was there before.
 

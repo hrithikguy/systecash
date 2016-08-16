@@ -1,12 +1,12 @@
 
 IF (GNC_BUILD_AS_INSTALL)
   FILE(COPY .
-          DESTINATION ${DATADIR_BUILD}/gnucash/ui
+          DESTINATION ${DATADIR_BUILD}/systecash/ui
           PATTERN Makefile.* EXCLUDE
           PATTERN CMakeLists.txt EXCLUDE)
 ENDIF()
 
 INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-    DESTINATION share/gnucash
+    DESTINATION share/systecash
     PATTERN Makefile.* EXCLUDE
     PATTERN CMakeLists.txt EXCLUDE)

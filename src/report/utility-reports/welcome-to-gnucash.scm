@@ -1,5 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; welcome-to-gnucash.scm : introductory report for new users
+;; welcome-to-systecash.scm : introductory report for new users
 ;; Copyright 2001 Bill Gribble <grib@gnumatic.com>
 ;;
 ;; This program is free software; you can redistribute it and/or    
@@ -20,13 +20,13 @@
 ;; Boston, MA  02110-1301,  USA       gnu@gnu.org
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define-module (gnucash report welcome-to-gnucash))
+(define-module (systecash report welcome-to-systecash))
 (export gnc:make-welcome-report)
 
-(use-modules (gnucash main)) ;; FIXME: delete after we finish modularizing.
-(use-modules (gnucash core-utils)) ; for gnc:version
-(use-modules (gnucash gettext))
-(use-modules (gnucash gnc-module))
+(use-modules (systecash main)) ;; FIXME: delete after we finish modularizing.
+(use-modules (systecash core-utils)) ; for gnc:version
+(use-modules (systecash gettext))
+(use-modules (systecash gnc-module))
 (cond-expand
   (guile-2
     (eval-when
@@ -35,7 +35,7 @@
   (else ))
 (use-modules (sw_report_system))
 
-(gnc:module-load "gnucash/report/report-system" 0)
+(gnc:module-load "systecash/report/report-system" 0)
 
 (define multicolumn-guid "d8ba4a2e89e8479ca9f6eccdeb164588")
 (define welcome-guid "65135608f2014c6ca8412793a8cdf169")
@@ -58,7 +58,7 @@
        (gnc:lookup-option options section name) value))
 
     (set! options (gnc:report-options (gnc-report-find view)))
-    (set-option! "General" "Report name" (_ "Welcome to GnuCash"))
+    (set-option! "General" "Report name" (_ "Welcome to systecash"))
     (set-option! "General" "Number of columns" 2)
 
     ;; mark the reports as needing to be saved 
@@ -94,13 +94,13 @@
     (gnc:html-document-add-object! 
      doc
      (gnc:make-html-text 
-      (gnc:html-markup-h2 (format (_ "Welcome to GnuCash ~a !") gnc:version))
+      (gnc:html-markup-h2 (format (_ "Welcome to systecash ~a !") gnc:version))
       (gnc:html-markup-p (format
-       (_ "GnuCash ~a has lots of nice features. Here are a few.") gnc:version))))
+       (_ "systecash ~a has lots of nice features. Here are a few.") gnc:version))))
     doc))
 
 (gnc:define-report 
- 'name (N_ "Welcome to GnuCash")
+ 'name (N_ "Welcome to systecash")
  'version 1
  'report-guid "65135608f2014c6ca8412793a8cdf169"
  'in-menu? #f

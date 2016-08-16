@@ -1,4 +1,4 @@
-# traditional Chinese translation for gnucash.
+# traditional Chinese translation for systecash.
 # Copyright (C) 2003 Free Software Foundation, Inc.
 # Chao-Hsiung Liao <pesder.liao@msa.hinet.net>, 2003.
 # Kuang-che Wu <kcwu@csie.org>, 2007, 2011-2013.
@@ -6,7 +6,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnucash-2.4.3\n"
+"Project-Id-Version: systecash-2.4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-05 10:40-0700\n"
 "PO-Revision-Date: 2012-05-13 16:21+0800\n"
@@ -620,8 +620,8 @@ msgstr "數值的錯誤"
 #. * the account tab if the Tax Info column is displayed,
 #. * i.e. if the user wants to record the tax form number
 #. * and location on that tax form which corresponds to this
-#. * gnucash account. For the US Income Tax support in
-#. * gnucash, each tax code that can be assigned to an
+#. * systecash account. For the US Income Tax support in
+#. * systecash, each tax code that can be assigned to an
 #. * account generally corresponds to a specific line number
 #. * on a paper form and each form has a unique
 #. * identification (e.g., Form 1040, Schedule A).
@@ -1013,95 +1013,95 @@ msgstr "折扣"
 msgid "Bill"
 msgstr "帳單"
 
-#: ../src/bin/gnucash-bin.c:96
-msgid "Show GnuCash version"
-msgstr "顯示 GnuCash 版本"
+#: ../src/bin/systecash-bin.c:96
+msgid "Show systecash version"
+msgstr "顯示 systecash 版本"
 
-#: ../src/bin/gnucash-bin.c:101
+#: ../src/bin/systecash-bin.c:101
 msgid "Enable debugging mode: increasing logging to provide deep detail."
 msgstr "打開除錯模式：記錄更多以提供深入的細節。"
 
-#: ../src/bin/gnucash-bin.c:106
+#: ../src/bin/systecash-bin.c:106
 msgid "Enable extra/development/debugging features."
 msgstr "打開額外的/開發用的/除錯用的功能。"
 
-#: ../src/bin/gnucash-bin.c:111
+#: ../src/bin/systecash-bin.c:111
 msgid "Log level overrides, of the form \"log.ger.path={debug,info,warn,crit,error}\""
 msgstr ""
 
-#: ../src/bin/gnucash-bin.c:117
-msgid "File to log into; defaults to \"/tmp/gnucash.trace\"; can be \"stderr\" or \"stdout\"."
+#: ../src/bin/systecash-bin.c:117
+msgid "File to log into; defaults to \"/tmp/systecash.trace\"; can be \"stderr\" or \"stdout\"."
 msgstr ""
 
-#: ../src/bin/gnucash-bin.c:123
+#: ../src/bin/systecash-bin.c:123
 msgid "Do not load the last file opened"
 msgstr "不載入最後一次開啟的檔案"
 
-#: ../src/bin/gnucash-bin.c:127
+#: ../src/bin/systecash-bin.c:127
 msgid "Set the prefix for gsettings schemas for gsettings queries. This can be useful to have a different settings tree while debugging."
 msgstr ""
 
 #. Translators: Argument description for autohelp; see
 #. http://developer.gnome.org/doc/API/2.0/glib/glib-Commandline-option-parser.html
-#: ../src/bin/gnucash-bin.c:130
+#: ../src/bin/systecash-bin.c:130
 msgid "GSETTINGSPREFIX"
 msgstr ""
 
-#: ../src/bin/gnucash-bin.c:134
-msgid "Add price quotes to given GnuCash datafile"
-msgstr "增加報價至指定的 GnuCash 檔案"
+#: ../src/bin/systecash-bin.c:134
+msgid "Add price quotes to given systecash datafile"
+msgstr "增加報價至指定的 systecash 檔案"
 
 #. Translators: Argument description for autohelp; see
 #. http://developer.gnome.org/doc/API/2.0/glib/glib-Commandline-option-parser.html
-#: ../src/bin/gnucash-bin.c:137
+#: ../src/bin/systecash-bin.c:137
 msgid "FILE"
 msgstr "FILE"
 
-#: ../src/bin/gnucash-bin.c:141
+#: ../src/bin/systecash-bin.c:141
 msgid "Regular expression determining which namespace commodities will be retrieved"
 msgstr ""
 
 #. Translators: Argument description for autohelp; see
 #. http://developer.gnome.org/doc/API/2.0/glib/glib-Commandline-option-parser.html
-#: ../src/bin/gnucash-bin.c:144
+#: ../src/bin/systecash-bin.c:144
 msgid "REGEXP"
 msgstr "REGEXP"
 
-#: ../src/bin/gnucash-bin.c:147
+#: ../src/bin/systecash-bin.c:147
 msgid "[datafile]"
 msgstr ""
 
-#: ../src/bin/gnucash-bin.c:157
+#: ../src/bin/systecash-bin.c:157
 msgid "This is a development version. It may or may not work."
 msgstr "這是開發中版本。它可能會運作不正常。"
 
-#: ../src/bin/gnucash-bin.c:158
-msgid "Report bugs and other problems to gnucash-devel@gnucash.org"
-msgstr "請將程式錯誤或其他的問題回報到 gnucash-devel@gnucash.org"
+#: ../src/bin/systecash-bin.c:158
+msgid "Report bugs and other problems to systecash-devel@systecash.org"
+msgstr "請將程式錯誤或其他的問題回報到 systecash-devel@systecash.org"
 
-#: ../src/bin/gnucash-bin.c:159
+#: ../src/bin/systecash-bin.c:159
 msgid "You can also lookup and file bug reports at http://bugzilla.gnome.org"
 msgstr "您也可以在 http://bugzilla.gnome.org 查詢和回報錯誤"
 
-#: ../src/bin/gnucash-bin.c:160
-msgid "To find the last stable version, please refer to http://www.gnucash.org"
+#: ../src/bin/systecash-bin.c:160
+msgid "To find the last stable version, please refer to http://www.systecash.org"
 msgstr ""
 
-#: ../src/bin/gnucash-bin.c:379
-msgid "- GnuCash personal and small business finance management"
+#: ../src/bin/systecash-bin.c:379
+msgid "- systecash personal and small business finance management"
 msgstr ""
 
-#: ../src/bin/gnucash-bin.c:385 ../src/bin/gnucash-bin.c:764
+#: ../src/bin/systecash-bin.c:385 ../src/bin/systecash-bin.c:764
 #, c-format
 msgid ""
 "%s\n"
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
 
-#: ../src/bin/gnucash-bin.c:398
+#: ../src/bin/systecash-bin.c:398
 #, c-format
-msgid "GnuCash %s development version"
-msgstr "GnuCash %s 開發版"
+msgid "systecash %s development version"
+msgstr "systecash %s 開發版"
 
 #. Translators: 1st %s is a fixed message, which is translated independently;
 #. 2nd %s is the scm type (svn/svk/git/bzr);
@@ -1112,7 +1112,7 @@ msgstr "GnuCash %s 開發版"
 #. 2nd %s is the scm type (svn/svk/git/bzr);
 #. 3rd %s is the scm revision number;
 #. 4th %s is the build date
-#: ../src/bin/gnucash-bin.c:404 ../src/gnome-utils/gnc-main-window.c:4393
+#: ../src/bin/systecash-bin.c:404 ../src/gnome-utils/gnc-main-window.c:4393
 #, c-format
 msgid ""
 "%s\n"
@@ -1121,15 +1121,15 @@ msgstr ""
 "%s\n"
 "本份程式是從 %s rev %s 版本編譯製作, 日期 %s。"
 
-#: ../src/bin/gnucash-bin.c:410
+#: ../src/bin/systecash-bin.c:410
 #, c-format
-msgid "GnuCash %s"
-msgstr "GnuCash %s"
+msgid "systecash %s"
+msgstr "systecash %s"
 
 #. Translators: 1st %s is a fixed message, which is translated independently;
 #. 2nd %s is the scm (svn/svk/git/bzr) revision number;
 #. 3rd %s is the build date
-#: ../src/bin/gnucash-bin.c:415 ../src/gnome-utils/gnc-main-window.c:4400
+#: ../src/bin/systecash-bin.c:415 ../src/gnome-utils/gnc-main-window.c:4400
 #, c-format
 msgid ""
 "%s\n"
@@ -1138,20 +1138,20 @@ msgstr ""
 "%s\n"
 "本份程式是從 rev %s 版本編譯製作, 日期 %s。"
 
-#: ../src/bin/gnucash-bin.c:516
+#: ../src/bin/systecash-bin.c:516
 msgid "No quotes retrieved. Finance::Quote isn't installed properly.\n"
 msgstr "未取得任何報價。Finance::Quote 並未正確地安裝。\n"
 
 #. Install Price Quote Sources
-#: ../src/bin/gnucash-bin.c:599
+#: ../src/bin/systecash-bin.c:599
 msgid "Checking Finance::Quote..."
 msgstr "檢查 Finance::Quote..."
 
-#: ../src/bin/gnucash-bin.c:607
+#: ../src/bin/systecash-bin.c:607
 msgid "Loading data..."
 msgstr "載入資料..."
 
-#: ../src/bin/gnucash-bin.c:765
+#: ../src/bin/systecash-bin.c:765
 msgid ""
 "Error: could not initialize graphical user interface and option add-price-quotes was not set.\n"
 "       Perhaps you need to set the $DISPLAY environment variable ?"
@@ -1712,7 +1712,7 @@ msgid "View/Edit Bill"
 msgstr "檢視/編輯帳單"
 
 #. Translators: The terms 'Voucher' and 'Expense Voucher' are used
-#. interchangeably in gnucash and mean the same thing.
+#. interchangeably in systecash and mean the same thing.
 #: ../src/business/business-gnome/dialog-invoice.c:2950
 msgid "View/Edit Voucher"
 msgstr "檢視/編輯憑證"
@@ -2793,119 +2793,119 @@ msgstr "此科目尚未結算。您確定要結束？"
 
 #. * @}
 #. * @}
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:1
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:41
-#: ../src/gnome/gschemas/org.gnucash.dialogs.commodities.gschema.xml.in.in.h:2
-#: ../src/gnome/gschemas/org.gnucash.dialogs.gschema.xml.in.in.h:1
-#: ../src/gnome/gschemas/org.gnucash.dialogs.reconcile.gschema.xml.in.in.h:9
-#: ../src/gnome/gschemas/org.gnucash.dialogs.sxs.gschema.xml.in.in.h:1
-#: ../src/gnome/gschemas/org.gnucash.dialogs.totd.gschema.xml.in.in.h:2
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:1
-#: ../src/import-export/csv-exp/gschemas/org.gnucash.dialogs.export.csv.gschema.xml.in.in.h:1
-#: ../src/import-export/csv-imp/gschemas/org.gnucash.dialogs.import.csv.gschema.xml.in.in.h:1
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:17
-#: ../src/import-export/qif-imp/gschemas/org.gnucash.dialogs.import.qif.gschema.xml.in.in.h:4
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:1
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:41
+#: ../src/gnome/gschemas/org.systecash.dialogs.commodities.gschema.xml.in.in.h:2
+#: ../src/gnome/gschemas/org.systecash.dialogs.gschema.xml.in.in.h:1
+#: ../src/gnome/gschemas/org.systecash.dialogs.reconcile.gschema.xml.in.in.h:9
+#: ../src/gnome/gschemas/org.systecash.dialogs.sxs.gschema.xml.in.in.h:1
+#: ../src/gnome/gschemas/org.systecash.dialogs.totd.gschema.xml.in.in.h:2
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:1
+#: ../src/import-export/csv-exp/gschemas/org.systecash.dialogs.export.csv.gschema.xml.in.in.h:1
+#: ../src/import-export/csv-imp/gschemas/org.systecash.dialogs.import.csv.gschema.xml.in.in.h:1
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:17
+#: ../src/import-export/qif-imp/gschemas/org.systecash.dialogs.import.qif.gschema.xml.in.in.h:4
 #, fuzzy
 msgid "Last window position and size"
 msgstr "視窗位置及大小"
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:2
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:42
-#: ../src/gnome/gschemas/org.gnucash.dialogs.commodities.gschema.xml.in.in.h:3
-#: ../src/gnome/gschemas/org.gnucash.dialogs.gschema.xml.in.in.h:2
-#: ../src/gnome/gschemas/org.gnucash.dialogs.reconcile.gschema.xml.in.in.h:10
-#: ../src/gnome/gschemas/org.gnucash.dialogs.sxs.gschema.xml.in.in.h:2
-#: ../src/gnome/gschemas/org.gnucash.dialogs.totd.gschema.xml.in.in.h:3
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:2
-#: ../src/import-export/csv-exp/gschemas/org.gnucash.dialogs.export.csv.gschema.xml.in.in.h:2
-#: ../src/import-export/csv-imp/gschemas/org.gnucash.dialogs.import.csv.gschema.xml.in.in.h:2
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:18
-#: ../src/import-export/qif-imp/gschemas/org.gnucash.dialogs.import.qif.gschema.xml.in.in.h:5
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:2
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:42
+#: ../src/gnome/gschemas/org.systecash.dialogs.commodities.gschema.xml.in.in.h:3
+#: ../src/gnome/gschemas/org.systecash.dialogs.gschema.xml.in.in.h:2
+#: ../src/gnome/gschemas/org.systecash.dialogs.reconcile.gschema.xml.in.in.h:10
+#: ../src/gnome/gschemas/org.systecash.dialogs.sxs.gschema.xml.in.in.h:2
+#: ../src/gnome/gschemas/org.systecash.dialogs.totd.gschema.xml.in.in.h:3
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:2
+#: ../src/import-export/csv-exp/gschemas/org.systecash.dialogs.export.csv.gschema.xml.in.in.h:2
+#: ../src/import-export/csv-imp/gschemas/org.systecash.dialogs.import.csv.gschema.xml.in.in.h:2
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:18
+#: ../src/import-export/qif-imp/gschemas/org.systecash.dialogs.import.qif.gschema.xml.in.in.h:5
 msgid "This setting describes the size and position of the window when it was last closed. The numbers are the X and Y coordinates of the top left corner of the window followed by the width and height of the window."
 msgstr ""
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:3
-#: ../src/gnome/gschemas/org.gnucash.dialogs.gschema.xml.in.in.h:4
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:3
+#: ../src/gnome/gschemas/org.systecash.dialogs.gschema.xml.in.in.h:4
 msgid "Search only in active items"
 msgstr "只搜尋作用中的資料"
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:4
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:4
 msgid "If active, only the 'active' items in the current class will be searched. Otherwise all items in the current class will be searched."
 msgstr ""
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:5
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:5
 #, fuzzy
 msgid "Is tax included in this type of business entry?"
 msgstr "稅金是否已經包含在這個項目的價格中？"
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:6
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:6
 msgid "If set to active then tax is included by default in entries of this type. This setting is inherited by new customers and vendors."
 msgstr ""
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:7
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:7
 msgid "Auto pay when posting."
 msgstr ""
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:8
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:8
 #: ../src/business/business-gnome/gtkbuilder/business-prefs.glade.h:27
 msgid "At post time, automatically attempt to pay customer documents with outstanding pre-payments and counter documents. The pre-payments and documents obviously have to be against the same customer. Counter documents are documents with opposite sign. For example for an invoice, customer credit notes and negative invoices are considered counter documents."
 msgstr ""
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:9
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:9
 #, fuzzy
 msgid "Enable extra toolbar buttons for business"
 msgstr "工具列按鈕的文字標示"
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:10
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:10
 #: ../src/business/business-gnome/gtkbuilder/business-prefs.glade.h:22
 msgid "If active, extra toolbar buttons for common business functions are shown as well. Otherwise they are not shown."
 msgstr ""
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:11
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:11
 #: ../src/business/business-gnome/gtkbuilder/business-prefs.glade.h:23
 msgid "The invoice report to be used for printing."
 msgstr ""
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:12
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:12
 msgid "The name of the report to be used for invoice printing."
 msgstr ""
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:13
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:13
 msgid "Open new invoice in new window"
 msgstr "在新視窗中開啟發票"
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:14
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:14
 msgid "If active, each new invoice will be opened in a new window. Otherwise a new invoice will be opened as a tab in the main window."
 msgstr ""
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:15
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:15
 #, fuzzy
 msgid "Accumulate multiple splits into one"
 msgstr "股票分割"
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:16
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:16
 msgid "If this field is active then multiple entries in an invoice that transfer to the same account will be accumulated into a single split. This field can be overridden per invoice in the Posting dialog."
 msgstr ""
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:17
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:17
 #: ../src/business/business-gnome/gtkbuilder/business-prefs.glade.h:30
 msgid "At post time, automatically attempt to pay vendor documents with outstanding pre-payments and counter documents. The pre-payments and documents obviously have to be against the same vendor. Counter documents are documents with opposite sign. For example for a bill, vendor credit notes and negative bills are considered counter documents."
 msgstr ""
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:18
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:18
 msgid "Show bills due reminder at startup"
 msgstr "在程式啟動時提醒將到期的帳單"
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:19
-msgid "If active, at startup GnuCash will check to see whether any bills will become due soon. If so, it will present the user with a reminder dialog. The definition of \"soon\" is controlled by the \"Days in Advance\" setting. Otherwise GnuCash does not check for due bills."
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:19
+msgid "If active, at startup systecash will check to see whether any bills will become due soon. If so, it will present the user with a reminder dialog. The definition of \"soon\" is controlled by the \"Days in Advance\" setting. Otherwise systecash does not check for due bills."
 msgstr ""
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:20
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:20
 msgid "Show bills due within this many days"
 msgstr "顯示幾日內將到期的帳單"
 
-#: ../src/business/business-gnome/gschemas/org.gnucash.dialogs.business.gschema.xml.in.in.h:21
-msgid "This field defines the number of days in advance that GnuCash will check for due bills. Its value is only used if the \"Notify when due\" setting is active."
+#: ../src/business/business-gnome/gschemas/org.systecash.dialogs.business.gschema.xml.in.in.h:21
+msgid "This field defines the number of days in advance that systecash will check for due bills. Its value is only used if the \"Notify when due\" setting is active."
 msgstr ""
 
 #: ../src/business/business-gnome/gtkbuilder/business-prefs.glade.h:1
@@ -3647,9 +3647,9 @@ msgstr "調整"
 msgid ""
 "The amount to pay for this invoice.\n"
 "\n"
-"If you have selected an invoice, GnuCash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.\n"
+"If you have selected an invoice, systecash will propose the amount still due for it. You can change this amount to create a partial payment or an over-payment.\n"
 "\n"
-"In case of an over-payment or if no invoice was selected, GnuCash will automatically assign the remaining amount to the first unpaid invoice for this company."
+"In case of an over-payment or if no invoice was selected, systecash will automatically assign the remaining amount to the first unpaid invoice for this company."
 msgstr ""
 
 #: ../src/business/business-gnome/gtkbuilder/dialog-payment.glade.h:16
@@ -4142,15 +4142,15 @@ msgstr "您要如何支付此項目的款項？"
 
 #: ../src/core-utils/gnc-features.c:116
 #, fuzzy
-msgid "This Dataset contains features not supported by this version of GnuCash. You must use a newer version of GnuCash in order to support the following features:"
-msgstr "此檔案/URL 似乎來自較新版的 GnuCash。您必須升級您的 GnuCash 版本以便處理這個資料。"
+msgid "This Dataset contains features not supported by this version of systecash. You must use a newer version of systecash in order to support the following features:"
+msgstr "此檔案/URL 似乎來自較新版的 systecash。您必須升級您的 systecash 版本以便處理這個資料。"
 
 #: ../src/core-utils/gnc-filepath-utils.c:327
 #, c-format
 msgid ""
 "An error occurred while creating the directory:\n"
 "  %s\n"
-"Please correct the problem and restart GnuCash.\n"
+"Please correct the problem and restart systecash.\n"
 "The reported error was '%s' (errno %d).\n"
 msgstr ""
 
@@ -4182,11 +4182,11 @@ msgid ""
 "The path\n"
 "  %s\n"
 "exists but it is not a directory. Please delete\n"
-"the file and start GnuCash again.\n"
+"the file and start systecash again.\n"
 msgstr ""
 "此路徑\n"
 "  %s\n"
-"存在但不是目錄。請刪除該檔案，再重新執行 GnuCash。\n"
+"存在但不是目錄。請刪除該檔案，再重新執行 systecash。\n"
 
 #: ../src/core-utils/gnc-filepath-utils.c:368
 #, c-format
@@ -4194,7 +4194,7 @@ msgid ""
 "An unknown error occurred when validating that the\n"
 "  %s\n"
 "directory exists and is usable. Please correct the\n"
-"problem and restart GnuCash. The reported error \n"
+"problem and restart systecash. The reported error \n"
 "was '%s' (errno %d)."
 msgstr ""
 
@@ -4719,8 +4719,8 @@ msgid "This program can only calculate one value at a time. You must enter value
 msgstr ""
 
 #: ../src/gnome/dialog-fincalc.c:314
-msgid "GnuCash cannot determine the value in one of the fields. You must enter a valid expression."
-msgstr "GnuCash 無法求出其中一個欄位的值，你得輸入有效的運算式。"
+msgid "systecash cannot determine the value in one of the fields. You must enter a valid expression."
+msgstr "systecash 無法求出其中一個欄位的值，你得輸入有效的運算式。"
 
 #: ../src/gnome/dialog-fincalc.c:353
 msgid "The interest rate cannot be zero."
@@ -4926,7 +4926,7 @@ msgstr ""
 
 #. Translators: This is a directory name. It may be presented to
 #. * the user to indicate that some data file was defined by the
-#. * gnucash application.
+#. * systecash application.
 #: ../src/gnome/dialog-print-check2.c:1558
 #: ../src/gnome/dialog-print-check.c:1558
 msgid "application"
@@ -5215,8 +5215,8 @@ msgid "_Open..."
 msgstr "開啟舊檔(_O)..."
 
 #: ../src/gnome/gnc-plugin-basic-commands.c:113
-msgid "Open an existing GnuCash file"
-msgstr "開啟已存在的 GnuCash 檔案"
+msgid "Open an existing systecash file"
+msgstr "開啟已存在的 systecash 檔案"
 
 #: ../src/gnome/gnc-plugin-basic-commands.c:117
 msgid "_Save"
@@ -5247,8 +5247,8 @@ msgid "Export _Accounts"
 msgstr "匯出科目(_A)"
 
 #: ../src/gnome/gnc-plugin-basic-commands.c:134
-msgid "Export the account hierarchy to a new GnuCash datafile"
-msgstr "匯出科目體系至新的 GnuCash 資料檔"
+msgid "Export the account hierarchy to a new systecash datafile"
+msgstr "匯出科目體系至新的 systecash 資料檔"
 
 #: ../src/gnome/gnc-plugin-basic-commands.c:141
 #: ../src/gnome/gnc-plugin-page-register2.c:246
@@ -6044,7 +6044,7 @@ msgstr "雙行(_D)"
 
 #: ../src/gnome/gnc-plugin-page-register2.c:404
 #: ../src/gnome/gnc-plugin-page-register.c:413
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:89
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:89
 msgid "Show two lines of information for each transaction"
 msgstr "每個交易顯示兩行資訊"
 
@@ -6563,919 +6563,919 @@ msgstr "刪除目前的交易？"
 msgid "You would be deleting a transaction with reconciled splits! This is not a good idea as it will cause your reconciled balance to be off."
 msgstr "您想要刪除的交易包含已對帳的分割！這並不是一個好主意，因為那會使您已對帳的結餘不平衡。"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:1
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:1
 msgid "GUID of predefined check format to use"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:2
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:2
 msgid "This value specifies the predefined check format to use. The number is the guid of a known check format."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:3
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:3
 msgid "Which check position to print"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:4
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:4
 msgid "On preprinted checks containing multiple checks per page, this setting specifies which check position to print. The possible values are 0, 1 and 2, corresponding to the top, middle and bottom checks on the page."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:5
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:5
 msgid "Number of checks to print on the first page."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:6
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:6
 msgid "Date format to use"
 msgstr "使用的日期格式"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:7
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:7
 msgid "This is the numerical identifier of the predefined date format to use."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:8
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:8
 msgid "Custom date format"
 msgstr "自訂日期格式"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:9
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:9
 msgid "If the date format is set to indicate a custom date format, this value is used as an argument to strftime to produce the date to be printed. It may be any valid strftime string; for more information about this format, read the manual page of strftime by \"man 3 strftime\"."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:10
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:10
 msgid "Units in which the custom coordinates are expressed"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:11
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:11
 msgid "Units in which the custom coordinates are expressed (inches, mm, ...)."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:12
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:12
 msgid "Position of payee name"
 msgstr "收款人名字的位置"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:13
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:13
 msgid "This value contains the X,Y coordinates for the start of the payee line on the check."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:14
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:14
 msgid "Position of date line"
 msgstr "日期的位置"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:15
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:15
 msgid "This value contains the X,Y coordinates for the start of the date line on the check. Coordinates are from the lower left corner of the specified check position."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:16
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:16
 msgid "Position of check amount in words"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:17
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:17
 msgid "This value contains the X,Y coordinates for the start of the written amount line on the check. Coordinates are from the lower left corner of the specified check position."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:18
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:18
 #, fuzzy
 msgid "Position of check amount in numbers"
 msgstr "以支票/交易號碼排序"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:19
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:19
 msgid "This value contains the X,Y coordinates for the start of the numerical amount line on the check. Coordinates are from the lower left corner of the specified check position."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:20
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:20
 #, fuzzy
 msgid "Position of payee address"
 msgstr "收款人名字的位置"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:21
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:21
 msgid "This value contains the X,Y coordinates for the start of the payee address line on the check. Coordinates are from the lower left corner of the specified check position."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:22
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:22
 #, fuzzy
 msgid "Position of notes line"
 msgstr "日期的位置"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:23
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:23
 msgid "This value contains the X,Y coordinates for the start of the notes line on the check. Coordinates are from the lower left corner of the specified check position."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:24
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:24
 msgid "Position of memo line"
 msgstr "備注的位置"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:25
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:25
 msgid "This value contains the X,Y coordinates for the start of the memo line on the check. Coordinates are from the lower left corner of the specified check position."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:26
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:26
 msgid "Offset for complete check"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:27
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:27
 msgid "This value contains the X,Y offset for the complete check. Coordinates are from the lower left corner of the specified check position."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:28
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:28
 #, fuzzy
 msgid "Rotation angle"
 msgstr "旋轉(_R)"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:29
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:29
 #, fuzzy
 msgid "Number of degrees to rotate the check."
 msgstr "號碼"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:30
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:30
 #, fuzzy
 msgid "Position of split's amount in numbers"
 msgstr "以支票/交易號碼排序"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:31
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:31
 msgid "This value contains the X,Y coordinates for the start of the split's amount line on the check. Coordinates are from the lower left corner of the specified check position."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:32
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:32
 #, fuzzy
 msgid "Position of split's memo line"
 msgstr "備注的位置"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:33
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:33
 msgid "This value contains the X,Y coordinates for the start of the split's memo line on the check. Coordinates are from the lower left corner of the specified check position."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:34
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:34
 #, fuzzy
 msgid "Position of split's account line"
 msgstr "日期的位置"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:35
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:35
 msgid "This value contains the X,Y coordinates for the start of the split's account line on the check. Coordinates are from the lower left corner of the specified check position."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:36
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:36
 msgid "Print the date format below the date."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:37
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:37
 msgid "Each time the date is printed, print the date format immediately below in 8 point type using the characters Y, M, and D."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:38
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:38
 msgid "The default check printing font"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:39
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:39
 msgid "The default font to use when printing checks. This value will be overridden by any font specified in a check description file."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.checkprinting.gschema.xml.in.in.h:40
+#: ../src/gnome/gschemas/org.systecash.dialogs.checkprinting.gschema.xml.in.in.h:40
 msgid "Print '***' before and after text."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.commodities.gschema.xml.in.in.h:1
+#: ../src/gnome/gschemas/org.systecash.dialogs.commodities.gschema.xml.in.in.h:1
 msgid "Show currencies in this dialog"
 msgstr "在這個對話盒中顯示貨幣"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.gschema.xml.in.in.h:3
+#: ../src/gnome/gschemas/org.systecash.dialogs.gschema.xml.in.in.h:3
 #, fuzzy
 msgid "Position of the horizontal pane divider."
 msgstr "以支票/交易號碼排序"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.gschema.xml.in.in.h:5
+#: ../src/gnome/gschemas/org.systecash.dialogs.gschema.xml.in.in.h:5
 msgid "This setting indicates whether to search in all items in the current class, or only in 'active' items in the current class."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.gschema.xml.in.in.h:6
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:17
-#: ../src/import-export/csv-exp/gschemas/org.gnucash.dialogs.export.csv.gschema.xml.in.in.h:3
-#: ../src/import-export/csv-imp/gschemas/org.gnucash.dialogs.import.csv.gschema.xml.in.in.h:3
-#: ../src/import-export/ofx/gschemas/org.gnucash.dialogs.import.ofx.gschema.xml.in.in.h:1
-#: ../src/import-export/qif-imp/gschemas/org.gnucash.dialogs.import.qif.gschema.xml.in.in.h:6
+#: ../src/gnome/gschemas/org.systecash.dialogs.gschema.xml.in.in.h:6
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:17
+#: ../src/import-export/csv-exp/gschemas/org.systecash.dialogs.export.csv.gschema.xml.in.in.h:3
+#: ../src/import-export/csv-imp/gschemas/org.systecash.dialogs.import.csv.gschema.xml.in.in.h:3
+#: ../src/import-export/ofx/gschemas/org.systecash.dialogs.import.ofx.gschema.xml.in.in.h:1
+#: ../src/import-export/qif-imp/gschemas/org.systecash.dialogs.import.qif.gschema.xml.in.in.h:6
 msgid "Last pathname used"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.gschema.xml.in.in.h:7
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:18
-#: ../src/import-export/csv-exp/gschemas/org.gnucash.dialogs.export.csv.gschema.xml.in.in.h:4
-#: ../src/import-export/csv-imp/gschemas/org.gnucash.dialogs.import.csv.gschema.xml.in.in.h:4
-#: ../src/import-export/ofx/gschemas/org.gnucash.dialogs.import.ofx.gschema.xml.in.in.h:2
-#: ../src/import-export/qif-imp/gschemas/org.gnucash.dialogs.import.qif.gschema.xml.in.in.h:7
+#: ../src/gnome/gschemas/org.systecash.dialogs.gschema.xml.in.in.h:7
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:18
+#: ../src/import-export/csv-exp/gschemas/org.systecash.dialogs.export.csv.gschema.xml.in.in.h:4
+#: ../src/import-export/csv-imp/gschemas/org.systecash.dialogs.import.csv.gschema.xml.in.in.h:4
+#: ../src/import-export/ofx/gschemas/org.systecash.dialogs.import.ofx.gschema.xml.in.in.h:2
+#: ../src/import-export/qif-imp/gschemas/org.systecash.dialogs.import.qif.gschema.xml.in.in.h:7
 msgid "This field contains the last pathname used by this window. It will be used as the initial filename/pathname the next time this window is opened."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.gschema.xml.in.in.h:8
+#: ../src/gnome/gschemas/org.systecash.dialogs.gschema.xml.in.in.h:8
 #, fuzzy
 msgid "Position of the vertical pane divider."
 msgstr "以支票/交易號碼排序"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.gschema.xml.in.in.h:9
+#: ../src/gnome/gschemas/org.systecash.dialogs.gschema.xml.in.in.h:9
 msgid "Show the new user window"
 msgstr "顯示新使用者視窗"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.gschema.xml.in.in.h:10
+#: ../src/gnome/gschemas/org.systecash.dialogs.gschema.xml.in.in.h:10
 msgid "If active, the new user window will be shown. Otherwise it will not be shown."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.gschema.xml.in.in.h:11
+#: ../src/gnome/gschemas/org.systecash.dialogs.gschema.xml.in.in.h:11
 msgid "New hierarchy window on \"New File\""
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.gschema.xml.in.in.h:12
+#: ../src/gnome/gschemas/org.systecash.dialogs.gschema.xml.in.in.h:12
 msgid "If active, the \"New Hierarchy\" window will be shown whenever the \"New File\" menu item is chosen. Otherwise it will not be shown."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.gschema.xml.in.in.h:13
+#: ../src/gnome/gschemas/org.systecash.dialogs.gschema.xml.in.in.h:13
 #, fuzzy
 msgid "Default to 'new search' if fewer than this number of items is returned"
 msgstr "預設如果傳回的項目少於這個數字時進行「重新搜尋」。"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.reconcile.gschema.xml.in.in.h:1
+#: ../src/gnome/gschemas/org.systecash.dialogs.reconcile.gschema.xml.in.in.h:1
 msgid "Pre-select cleared transactions"
 msgstr "預選已結清的交易"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.reconcile.gschema.xml.in.in.h:2
+#: ../src/gnome/gschemas/org.systecash.dialogs.reconcile.gschema.xml.in.in.h:2
 msgid "If active, all transactions marked as cleared in the register will appear already selected in the reconcile dialog. Otherwise no transactions will be initially selected."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.reconcile.gschema.xml.in.in.h:3
+#: ../src/gnome/gschemas/org.systecash.dialogs.reconcile.gschema.xml.in.in.h:3
 msgid "Prompt for interest charges"
 msgstr "輸入利息費用"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.reconcile.gschema.xml.in.in.h:4
+#: ../src/gnome/gschemas/org.systecash.dialogs.reconcile.gschema.xml.in.in.h:4
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:118
 msgid "Prior to reconciling an account which charges or pays interest, prompt the user to enter a transaction for the interest charge or payment. Currently only enabled for Bank, Credit, Mutual, Asset, Receivable, Payable, and Liability accounts."
 msgstr "在對帳會有利息支出或收入的科目之前，提示使用者輸入利息支出或收入的交易。目前只能用在銀行、信用卡、共同基金、資產、應收、應付與債務科目。"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.reconcile.gschema.xml.in.in.h:5
+#: ../src/gnome/gschemas/org.systecash.dialogs.reconcile.gschema.xml.in.in.h:5
 msgid "Prompt for credit card payment"
 msgstr "提示信用卡付款"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.reconcile.gschema.xml.in.in.h:6
+#: ../src/gnome/gschemas/org.systecash.dialogs.reconcile.gschema.xml.in.in.h:6
 msgid "If active, after reconciling a credit card account, prompt the user to enter a credit card payment. Otherwise do not prompt the user for this."
 msgstr "若勾選，在信用卡科目對帳後，提醒使用者輸入繳款記錄。否則不會提醒使用者。"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.reconcile.gschema.xml.in.in.h:7
+#: ../src/gnome/gschemas/org.systecash.dialogs.reconcile.gschema.xml.in.in.h:7
 msgid "Always reconcile to today"
 msgstr "總是對帳到今天"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.reconcile.gschema.xml.in.in.h:8
+#: ../src/gnome/gschemas/org.systecash.dialogs.reconcile.gschema.xml.in.in.h:8
 msgid "If active, always open the reconcile dialog using today's date for the statement date, regardless of previous reconciliations."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.sxs.gschema.xml.in.in.h:3
+#: ../src/gnome/gschemas/org.systecash.dialogs.sxs.gschema.xml.in.in.h:3
 msgid "Run \"since last run\" dialog when a file is opened."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.sxs.gschema.xml.in.in.h:4
+#: ../src/gnome/gschemas/org.systecash.dialogs.sxs.gschema.xml.in.in.h:4
 #, fuzzy
-msgid "This setting controls whether the scheduled transactions \"since last run\" processing is run automatically when a data file is opened. This includes the initial opening of the data file when GnuCash starts. If this setting is active, run the \"since last run\" process, otherwise it is not run."
-msgstr "此選項控制是否在資料檔被打開時，自動顯示排程交易的「自上次運行對話框」。這包括 GnuCash 啟動時自動開啟的資料檔。如果此選項被勾選則會顯示對話框，否則不會顯示。"
+msgid "This setting controls whether the scheduled transactions \"since last run\" processing is run automatically when a data file is opened. This includes the initial opening of the data file when systecash starts. If this setting is active, run the \"since last run\" process, otherwise it is not run."
+msgstr "此選項控制是否在資料檔被打開時，自動顯示排程交易的「自上次運行對話框」。這包括 systecash 啟動時自動開啟的資料檔。如果此選項被勾選則會顯示對話框，否則不會顯示。"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.sxs.gschema.xml.in.in.h:5
+#: ../src/gnome/gschemas/org.systecash.dialogs.sxs.gschema.xml.in.in.h:5
 msgid "Show \"since last run\" notification dialog when a file is opened."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.sxs.gschema.xml.in.in.h:6
+#: ../src/gnome/gschemas/org.systecash.dialogs.sxs.gschema.xml.in.in.h:6
 #, fuzzy
-msgid "This setting controls whether the scheduled transactions notification-only \"since last run\" dialog is shown when a data file is opened (if \"since last run\" processing is enabled on file open). This includes the initial opening of the data file when GnuCash starts. If this setting is active, show the dialog, otherwise it is not shown."
-msgstr "此選項控制是否在資料檔被打開時，自動顯示排程交易的「自上次運行對話框」。這包括 GnuCash 啟動時自動開啟的資料檔。如果此選項被勾選則會顯示對話框，否則不會顯示。"
+msgid "This setting controls whether the scheduled transactions notification-only \"since last run\" dialog is shown when a data file is opened (if \"since last run\" processing is enabled on file open). This includes the initial opening of the data file when systecash starts. If this setting is active, show the dialog, otherwise it is not shown."
+msgstr "此選項控制是否在資料檔被打開時，自動顯示排程交易的「自上次運行對話框」。這包括 systecash 啟動時自動開啟的資料檔。如果此選項被勾選則會顯示對話框，否則不會顯示。"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.sxs.gschema.xml.in.in.h:7
+#: ../src/gnome/gschemas/org.systecash.dialogs.sxs.gschema.xml.in.in.h:7
 msgid "Set the \"auto create\" flag by default"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.sxs.gschema.xml.in.in.h:8
+#: ../src/gnome/gschemas/org.systecash.dialogs.sxs.gschema.xml.in.in.h:8
 msgid "If active, any newly created scheduled transaction will have its 'auto create' flag set active by default. The user can change this flag during transaction creation, or at any later time by editing the scheduled transaction."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.sxs.gschema.xml.in.in.h:9
+#: ../src/gnome/gschemas/org.systecash.dialogs.sxs.gschema.xml.in.in.h:9
 msgid "How many days in advance to notify the user."
 msgstr "在多少天前提醒使用者。"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.sxs.gschema.xml.in.in.h:10
+#: ../src/gnome/gschemas/org.systecash.dialogs.sxs.gschema.xml.in.in.h:10
 msgid "Set the \"notify\" flag by default"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.sxs.gschema.xml.in.in.h:11
+#: ../src/gnome/gschemas/org.systecash.dialogs.sxs.gschema.xml.in.in.h:11
 msgid "If active, any newly created scheduled transaction will have its 'notify' flag set by default. The user can change this flag during transaction creation, or at any later time by editing the scheduled transaction. This setting only has meaning if the create-auto setting is active."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.sxs.gschema.xml.in.in.h:12
+#: ../src/gnome/gschemas/org.systecash.dialogs.sxs.gschema.xml.in.in.h:12
 msgid "How many days in advance to remind the user."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.totd.gschema.xml.in.in.h:1
+#: ../src/gnome/gschemas/org.systecash.dialogs.totd.gschema.xml.in.in.h:1
 msgid "The next tip to show."
 msgstr "下一個要顯示的秘訣。"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.totd.gschema.xml.in.in.h:4
-msgid "Show \"Tip Of The Day\" at GnuCash start"
-msgstr "在 GnuCash 開始時顯示「每日一訣」"
+#: ../src/gnome/gschemas/org.systecash.dialogs.totd.gschema.xml.in.in.h:4
+msgid "Show \"Tip Of The Day\" at systecash start"
+msgstr "在 systecash 開始時顯示「每日一訣」"
 
-#: ../src/gnome/gschemas/org.gnucash.dialogs.totd.gschema.xml.in.in.h:5
-msgid "Enables the \"Tip Of The Day\" when GnuCash starts up. If active, the dialog will be shown. Otherwise it will not be shown."
-msgstr "開啟 GnuCash 啟動時的「每日一訣」功能。如果勾選，將顯示對話框。否則將不會顯示對話框。"
+#: ../src/gnome/gschemas/org.systecash.dialogs.totd.gschema.xml.in.in.h:5
+msgid "Enables the \"Tip Of The Day\" when systecash starts up. If active, the dialog will be shown. Otherwise it will not be shown."
+msgstr "開啟 systecash 啟動時的「每日一訣」功能。如果勾選，將顯示對話框。否則將不會顯示對話框。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:1
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:1
 msgid "Save window sizes and locations"
 msgstr "儲存視窗大小與位置"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:2
-msgid "If active, the size and location of each dialog window will be saved when it is closed. The sizes and locations of content windows will be remembered when you quit GnuCash. Otherwise the sizes will not be saved."
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:2
+msgid "If active, the size and location of each dialog window will be saved when it is closed. The sizes and locations of content windows will be remembered when you quit systecash. Otherwise the sizes will not be saved."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:3
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:3
 #, fuzzy
 msgid "Character to use as separator between account names"
 msgstr "用於分隔完全合格科目名稱的字元"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:4
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:4
 msgid "This setting determines the character that will be used between components of an account name. Possible values are any single non-alphanumeric unicode character, or any of the following strings: \"colon\" \"slash\", \"backslash\", \"dash\" and \"period\"."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:5
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:5
 msgid "Compress the data file"
 msgstr "壓縮資料檔案"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:6
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:6
 msgid "Enables file compression when writing the data file."
 msgstr "啟用寫入資料檔時的壓縮功能。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:7
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:7
 msgid "Show auto-save explanation"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:8
-msgid "If active, GnuCash shows an explanation of the auto-save feature the first time that feature is started. Otherwise no extra explanation is shown."
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:8
+msgid "If active, systecash shows an explanation of the auto-save feature the first time that feature is started. Otherwise no extra explanation is shown."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:9
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:9
 msgid "Auto-save time interval"
 msgstr "自動存檔的時間間隔"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:10
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:10
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:85
 msgid "The number of minutes until saving of the data file to harddisk will be started automatically. If zero, no saving will be started automatically."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:11
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:11
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:95
 msgid "Enable timeout on \"Save changes on closing\" question"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:12
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:12
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:96
 msgid "If enabled, the \"Save changes on closing\" question will only wait a limited number of seconds for an answer. If the user didn't answer within that time, the changes will be saved automatically and the question window closed."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:13
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:13
 msgid "Time to wait for answer"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:14
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:14
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:98
 msgid "The number of seconds to wait before the question window will be closed and the changes saved automatically."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:15
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:15
 msgid "Display negative amounts in red"
 msgstr "負數以紅色顯示"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:16
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:16
 msgid "Automatically insert a decimal point"
 msgstr "自動小數點"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:17
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:17
 #, fuzzy
-msgid "If active, GnuCash will automatically insert a decimal point into values that are entered without one. Otherwise GnuCash will not modify entered numbers."
+msgid "If active, systecash will automatically insert a decimal point into values that are entered without one. Otherwise systecash will not modify entered numbers."
 msgstr "自動為不足 1 的數值插入小數點。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:18
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:18
 msgid "Number of automatic decimal places"
 msgstr "自動小數位數"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:19
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:19
 msgid "This field specifies the number of automatic decimal places that will be filled in."
 msgstr "這欄位指定自動小數功能所填入的位數多寡。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:20
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:20
 msgid "Tool to migrate preferences from old backend (CGonf) to new one (GSettings) has run successfully."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:21
-msgid "GnuCash switched to another backend to store user preferences between 2.4 and 2.6. To smooth the transition, most preferences will be migrated the first time a 2.6 version of GnuCash is run. This migration should only run once. This preference keeps track whether or not this migration tool has run successfully."
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:21
+msgid "systecash switched to another backend to store user preferences between 2.4 and 2.6. To smooth the transition, most preferences will be migrated the first time a 2.6 version of systecash is run. This migration should only run once. This preference keeps track whether or not this migration tool has run successfully."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:22
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:22
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:90
 #, fuzzy
 msgid "Do not create log/backup files."
 msgstr "無法建立起始結餘。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:23
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:23
 msgid "This setting specifies what to do with old log/backups files. \"forever\" means keep all old files. \"never\" means no old log/backup files are kept. Each time you save, older versions of the file are removed. \"days\" means keep old files for a number of days. How many days is defined in key 'retain-days'"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:24
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:24
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:92
 #, fuzzy
 msgid "Delete old log/backup files after this many days (0 = never)."
 msgstr "經過這個日數之後刪除舊的記錄/備份檔案（0 = 永不）"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:25
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:25
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:94
 msgid "Do not delete log/backup files."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:26
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:26
 msgid "Delete old log/backup files after this many days (0 = never)"
 msgstr "經過這個日數之後刪除舊的記錄/備份檔案（0 = 永不）"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:27
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:27
 msgid "This setting specifies the number of days after which old log/backup files will be deleted (0 = never)."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:28
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:28
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:23
 msgid "Don't sign reverse any accounts."
 msgstr "不要改變任何科目的正負號。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:29
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:29
 msgid "This setting allows certain accounts to have their balances reversed in sign from positive to negative, or vice versa. The setting \"income-expense\" is for users who like to see negative expenses and positive income. The setting of \"credit\" is for users who want to see balances reflect the debit/credit status of the account. The setting \"none\" doesn't reverse the sign on any balances."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:30
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:30
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:25
 msgid "Sign reverse balances on the following: Credit Card, Payable, Liability, Equity, and Income."
 msgstr "改變以下科目結餘的正負號：信用卡、應付、債務、資產淨值與收入科目。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:31
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:31
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:27
 msgid "Sign reverse balances on income and expense accounts."
 msgstr "改變收入與支出科目結餘的正負號。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:32
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:32
 #, fuzzy
 msgid "Use account colors in the account hierarchy"
 msgstr "找不到檔案 %s。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:33
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:33
 msgid "If active the account hierarchy will colorize the account using the account's custom color if set. This can serve as a visual aid to quickly identify accounts."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:34
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:34
 msgid "Use account colors in the tabs of open account registers"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:35
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:35
 msgid "If active the account register tabs will be colored using the account's custom color if set. This can serve as a visual aid to quickly identify accounts."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:36
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:36
 msgid "Use formal account labels"
 msgstr "使用較正式的會計名詞標籤"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:37
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:37
 msgid "If active, formal accounting labels \"Credit\" and \"Debit\" will be used when designating fields on screen. Otherwise, informal labels such as Increase/Decrease, \"Funds In\"/\"Funds Out\", etc. will be used."
 msgstr "選擇此項時，畫面上的標籤使用較正式的會計用詞「借」跟「貸」。否則使用「增加」/「減少」，「資金收入」/「資金支出」等較口語化的用詞。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:38
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:38
 msgid "Show close buttons on notebook tabs"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:39
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:39
 msgid "If active, a \"close\" button will be displayed on any notebook tab that may be closed. Otherwise, no such button will be shown on the tab. Regardless of this setting, pages can always be closed via the \"close\" menu item or the \"close\" button on toolbar."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:40
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:40
 msgid "Width of notebook tabs"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:41
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:41
 msgid "This key specifies the maximum width of notebook tabs. If the text in the tab is longer than this value (the test is approximate) then the tab label will have the middle cut and replaced with an ellipsis."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:42
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:42
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:32
 #, fuzzy
 msgid "Use the system locale currency for all newly created accounts."
 msgstr "請選擇用於新科目的貨幣。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:43
-msgid "This setting controls the source of the default currency for new accounts. If set to \"locale\" then GnuCash will retrieve the default currency from the user's locale setting. If set to \"other\", GnuCash will use the setting specified by the currency-other key."
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:43
+msgid "This setting controls the source of the default currency for new accounts. If set to \"locale\" then systecash will retrieve the default currency from the user's locale setting. If set to \"other\", systecash will use the setting specified by the currency-other key."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:44
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:44
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:34
 msgid "Use the specified currency for all newly created accounts."
 msgstr "新開的科目使用此貨幣。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:45
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:45
 msgid "Default currency for new accounts"
 msgstr "用於新科目的預設貨幣"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:46
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:46
 msgid "This setting specifies the default currency used for new accounts if the currency-choice setting is set to \"other\". This field must contain the three letter ISO 4217 code for a currency (e.g. USD, GBP, RUB)."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:47
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:47
 msgid "Use 24 hour time format"
 msgstr "使用 24 小時制時間格式"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:48
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:48
 msgid "If active, use a 24 hour time format. Otherwise use a 12 hour time format."
 msgstr "使用 24 小時制(代替 12 小時制)時間。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:49
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:49
 msgid "Date format choice"
 msgstr "選擇日期格式"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:50
-msgid "This setting chooses the way dates are displayed in GnuCash. Possible values for this setting are \"locale\" to use the system locale setting, \"ce\" for Continental Europe style dates, \"iso\" for ISO 8601 standard dates , \"uk\" for United Kingdom style dates, and \"us\" for United States style dates."
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:50
+msgid "This setting chooses the way dates are displayed in systecash. Possible values for this setting are \"locale\" to use the system locale setting, \"ce\" for Continental Europe style dates, \"iso\" for ISO 8601 standard dates , \"uk\" for United Kingdom style dates, and \"us\" for United States style dates."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:51
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:51
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:51
 msgid "In the current calendar year"
 msgstr "用今年"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:52
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:52
 msgid "When a date is entered without year it can be completed so that it will be within the current calendar year or close to the current date based on a sliding window starting a set number of months backwards in time."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:53
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:53
 #, fuzzy
 msgid "In a sliding 12-month window starting a configurable number of months before the current month"
 msgstr "用 12 個月的區間，自本月往前多久開始計算:"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:54
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:54
 #, fuzzy
 msgid "Maximum number of months to go back."
 msgstr "圖表中條的最大數量"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:55
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:55
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:55
 msgid "Dates will be completed so that they are close to the current date. Enter the maximum number of months to go backwards in time when completing dates."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:56
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:56
 msgid "Show splash screen"
 msgstr "顯示軟體啟動資訊畫面"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:57
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:57
 msgid "If active, a splash screen will be shown at startup. Otherwise no splash screen will be shown."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:58
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:58
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:176
 msgid "Display the notebook tabs at the top of the window."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:59
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:59
 msgid "This setting determines the edge at which the tabs for switching pages in notebooks are drawn. Possible values are \"top\", \"left\", \"bottom\" and \"right\". It defaults to \"top\"."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:60
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:60
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:178
 #, fuzzy
 msgid "Display the notebook tabs at the bottom of the window."
 msgstr "移至此發票底端的空白項目處"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:61
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:61
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:180
 msgid "Display the notebook tabs at the left of the window."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:62
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:62
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:182
 msgid "Display the notebook tabs at the right of the window."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:63
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:63
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:185
 msgid "Display the summary bar at the top of the page."
 msgstr "於頁籤最上方顯示摘要列。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:64
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:64
 msgid "This setting determines the edge at which the summary bar for various pages is drawn. Possible values are \"top\" and \"bottom\". It defaults to \"bottom\"."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:65
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:65
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:187
 msgid "Display the summary bar at the bottom of the page."
 msgstr "於頁籤最下方顯示摘要列。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:66
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:66
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:173
 msgid "Closing a tab moves to the most recently visited tab."
 msgstr "關閉頁籤時移動到最近使用的頁籤。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:67
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:67
 msgid "If active, closing a tab moves to the most recently visited tab. Otherwise closing a tab moves one tab to the left."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:68
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:68
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:62
 msgid "Set book option on new files to use split \"action\" field for \"Num\" field on registers/reports"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:69
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:69
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:63
 msgid "If selected, the default book option for new files is set so that the 'Num' cell on registers shows/updates the split 'action' field and the transaction 'num' field is shown on the second line in double line mode (and is not visible in single line mode). Otherwise, the default book option for new files is set so that the 'Num' cell on registers shows/updates the transaction 'num' field."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:70
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:70
 msgid "Color the register as specified by the system theme"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:71
-msgid "If active, the register will be colored as specified by the system theme. This can be overridden to provide custom colors by editing the gtkrc file in the users home directory. Otherwise the standard register colors will be used that GnuCash has always used."
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:71
+msgid "If active, the register will be colored as specified by the system theme. This can be overridden to provide custom colors by editing the gtkrc file in the users home directory. Otherwise the standard register colors will be used that systecash has always used."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:72
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:72
 msgid "\"Enter\" key moves to bottom of register"
 msgstr "按「Enter」鍵移至登記簿底端的空白交易處"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:73
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:73
 msgid "If active, pressing the enter key will move to the bottom of the register. Otherwise pressing the enter key will move to the next transaction line."
 msgstr "選擇此項時，在使用者按下「Enter」後會移至底部的空白交易。否則，則會往下移一列。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:74
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:74
 msgid "Automatically raise the list of accounts or actions during input"
 msgstr "在輸入時自動跳出科目列表或動作列表"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:75
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:75
 msgid "Move to Transfer field when memorised transaction auto filled"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:76
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:76
 msgid "If active then after a memorised transaction is automatically filled in the cursor will move to the Transfer field. If not active then it skips to the value field."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:77
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:77
 #, fuzzy
 msgid "Create a new window for each new register"
 msgstr "為每個報表或科目樹建立新的頂端層級視窗"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:78
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:78
 msgid "If active, each new register will be opened in a new window. Otherwise each new register will be opened as a tab in the main window."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:79
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:79
 #, fuzzy
 msgid "Color all lines of a transaction the same"
 msgstr "交易清單"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:80
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:80
 msgid "If active all lines that make up a single transaction will use the same color for their background. Otherwise the background colors are alternated on each line."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:81
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:81
 #, fuzzy
 msgid "Show horizontal borders in a register"
 msgstr "預設上，顯示細格的水平邊線。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:82
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:82
 msgid "Show horizontal borders between rows in a register. If active the border between cells will be indicated with a heavy line. Otherwise the border between cells will not be marked."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:83
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:83
 msgid "Show vertical borders in a register"
 msgstr "顯示細格的垂直邊線"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:84
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:84
 msgid "Show vertical borders between columns in a register. If active the border between cells will be indicated with a heavy line. Otherwise the border between cells will not be marked."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:85
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:85
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:138
 msgid "Show all transactions on one line. (Two in double line mode.)"
 msgstr "以一行顯示全部交易(在雙行模式則用兩行)。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:86
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:86
 msgid "This field specifies the default view style when opening a new register window. Possible values are \"ledger\", \"auto-ledger\" and \"journal\". The \"ledger\" setting says to show each transaction on one or two lines. The \"auto-ledger\" setting does the same, but also expands only the current transaction to show all splits. The \"journal\" setting shows all transactions in expanded form."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:87
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:87
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:140
 msgid "Automatically expand the current transaction to show all splits. All other transactions are shown on one line. (Two in double line mode.)"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:88
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:88
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:142
 msgid "All transactions are expanded to show all splits."
 msgstr "展開顯示全部分割交易。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:90
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:90
 msgid "Show two lines of information for each transaction in a register. This is the default setting for when a register is first opened. The setting can be changed at any time via the \"View-&gt;Double Line\" menu item."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:91
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:91
 #, fuzzy
 msgid "Only display leaf account names."
 msgstr "顯示科目名稱？"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:92
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:92
 msgid "Show only the names of the leaf accounts in the register and in the account selection popup. The default behaviour is to display the full name, including the path in the account tree. Activating this option implies that you use unique leaf names."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:93
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:93
 #, fuzzy
 msgid "Show the entered and reconcile dates"
 msgstr "顯示使用的匯率"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:94
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:94
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:154
 msgid "Show the date when the transaction was entered below the posted date and reconciled date on split row."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:95
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:95
 msgid "Show entered and reconciled dates on selection"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:96
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:96
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:160
 #, fuzzy
 msgid "Show the entered date and reconciled date on transaction selection."
 msgstr "選擇比對既存的交易"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:97
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:97
 #, fuzzy
 msgid "Show the calendar buttons"
 msgstr "顯示名稱欄位"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:98
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:98
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:156
 msgid "Show the calendar buttons Cancel, Today and Select."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:99
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:99
 #, fuzzy
 msgid "Move the selection to the blank split on expand"
 msgstr "複製選定的交易"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:100
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:100
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:158
 msgid "This will move the selection to the blank split when the transaction is expanded."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:101
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:101
 #, fuzzy
 msgid "Number of transactions to show in a register."
 msgstr "交易數量(_T):"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:102
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:102
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:144
 msgid "Show this many transactions in a register. A value of zero means show all transactions."
 msgstr "在登記簿中顯示多少交易，0 表示顯示所有交易。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:103
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:103
 #, fuzzy
 msgid "Number of characters for auto complete."
 msgstr "號碼"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:104
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:104
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:152
 msgid "This sets the number of characters before auto complete starts for description, notes and memo fields."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:105
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:105
 #, fuzzy
 msgid "Create a new window for each new report"
 msgstr "為每個報表或科目樹建立新的頂端層級視窗"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:106
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:106
 msgid "If active, each new report will be opened in its own window. Otherwise new reports will be opened as tabs in the main window."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:107
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:107
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:163
 msgid "Use the system locale currency for all newly created reports."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:108
-msgid "This setting controls the default currency used for reports. If set to \"locale\" then GnuCash will retrieve the default currency from the user's locale setting. If set to \"other\", GnuCash will use the setting specified by the currency-other key."
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:108
+msgid "This setting controls the default currency used for reports. If set to \"locale\" then systecash will retrieve the default currency from the user's locale setting. If set to \"other\", systecash will use the setting specified by the currency-other key."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:109
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:109
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:162
 msgid "Use the specified currency for all newly created reports."
 msgstr "新產生的報表使用此貨幣。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:110
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:110
 msgid "Default currency for new reports"
 msgstr "用於新報表的預設貨幣"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:111
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:111
 msgid "PDF export file name format"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:113
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:113
 #, no-c-format
 msgid "This setting chooses the file name for PDF export. This is a sprintf(3) string with three arguments: \"%1$s\" is the report name such as \"Invoice\". \"%2$s\" is the number of the report, which for an invoice report is the invoice number. \"%3$s\" is the date of the report, formatted according to the filename-date-format setting. (Note: Any characters that are not allowed in filenames, such as '/', will be replaced with underscores '_' in the resulting file name.)"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:114
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:114
 #, fuzzy
 msgid "PDF export file name date format choice"
 msgstr "選擇日期格式"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:115
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:115
 msgid "This setting chooses the way dates are used in the filename of PDF export. Possible values for this setting are \"locale\" to use the system locale setting, \"ce\" for Continental Europe style dates, \"iso\" for ISO 8601 standard dates , \"uk\" for United Kingdom style dates, and \"us\" for United States style dates."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:116
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:116
 msgid "Allow file incompatibility with older versions."
 msgstr "允許與舊版本文件不相容。"
 
-#: ../src/gnome/gschemas/org.gnucash.gschema.xml.in.in.h:117
-msgid "If active, gnucash will be allowed to intentionally break file compatibility with older versions, so that a data file saved in this version cannot be read by an older version again. Otherwise gnucash will write data files only in formats that can be read by older versions as well."
+#: ../src/gnome/gschemas/org.systecash.gschema.xml.in.in.h:117
+msgid "If active, systecash will be allowed to intentionally break file compatibility with older versions, so that a data file saved in this version cannot be read by an older version again. Otherwise systecash will write data files only in formats that can be read by older versions as well."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:1
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:1
 msgid "Show a grand total of all accounts converted to the default report currency"
 msgstr "顯示所有科目的總和，都會換算成預設報表貨幣"
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:2
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:2
 msgid "Show non currency commodities"
 msgstr "顯示非貨幣商品"
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:3
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:3
 msgid "If active, non currency commodities (stocks) will be shown. Otherwise they will be hidden."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:4
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:4
 #, fuzzy
 msgid "Use relative profit/loss starting date"
 msgstr "使用是最接近交易的日期"
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:5
-msgid "This setting controls the type of starting date used in profit/loss calculations. If set to \"absolute\" then GnuCash will retrieve the starting date specified by the start-date key. If set to anything else, GnuCash will retrieve the starting date specified by the start-period key."
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:5
+msgid "This setting controls the type of starting date used in profit/loss calculations. If set to \"absolute\" then systecash will retrieve the starting date specified by the start-date key. If set to anything else, systecash will retrieve the starting date specified by the start-period key."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:6
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:6
 #, fuzzy
 msgid "Use absolute profit/loss starting date"
 msgstr "使用是最接近交易的日期"
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:7
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:7
 msgid "Starting date (in seconds from Jan 1, 1970)"
 msgstr "開始日期(從 1970 年 1 月 1 日起算的秒數)"
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:8
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:8
 msgid "This setting controls the starting date set in profit/loss calculations if the start-choice setting is set to \"absolute\". This field should contain a date as represented in seconds from January 1st, 1970."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:9
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:9
 msgid "Starting time period identifier"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:10
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:10
 msgid "This setting controls the starting date set in profit/loss calculations if the start-choice setting is set to anything other than \"absolute\". This field should contain a value between 0 and 8."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:11
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:11
 msgid "Use relative profit/loss ending date"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:12
-msgid "This setting controls the type of ending date used in profit/loss calculations. If set to \"absolute\" then GnuCash will retrieve the ending date specified by the end-date key. If set to anything else, GnuCash will retrieve the ending date specified by the end-period key."
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:12
+msgid "This setting controls the type of ending date used in profit/loss calculations. If set to \"absolute\" then systecash will retrieve the ending date specified by the end-date key. If set to anything else, systecash will retrieve the ending date specified by the end-period key."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:13
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:13
 msgid "Use absolute profit/loss ending date"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:14
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:14
 msgid "Ending date (in seconds from Jan 1, 1970)"
 msgstr "結束日期(從 1970 年 1 月 1 日起算的秒數)"
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:15
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:15
 msgid "This setting controls the ending date set in profit/loss calculations if the end-choice setting is set to \"absolute\". This field should contain a date as represented in seconds from January 1st, 1970."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:16
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:16
 msgid "Ending time period identifier"
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.account.tree.gschema.xml.in.in.h:17
+#: ../src/gnome/gschemas/org.systecash.window.pages.account.tree.gschema.xml.in.in.h:17
 msgid "This setting controls the ending date set in profit/loss calculations if the end-choice setting is set to anything other than \"absolute\". This field should contain a value between 0 and 8."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.gschema.xml.in.in.h:1
+#: ../src/gnome/gschemas/org.systecash.window.pages.gschema.xml.in.in.h:1
 #, fuzzy
 msgid "Display this column"
 msgstr "是否顯示科目？"
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.gschema.xml.in.in.h:2
+#: ../src/gnome/gschemas/org.systecash.window.pages.gschema.xml.in.in.h:2
 msgid "This setting controls whether the given column will be visible in the view. TRUE means visible, FALSE means hidden."
 msgstr ""
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.gschema.xml.in.in.h:3
+#: ../src/gnome/gschemas/org.systecash.window.pages.gschema.xml.in.in.h:3
 #, fuzzy
 msgid "Width of this column"
 msgstr "擴大這個欄位(_W)"
 
-#: ../src/gnome/gschemas/org.gnucash.window.pages.gschema.xml.in.in.h:4
+#: ../src/gnome/gschemas/org.systecash.window.pages.gschema.xml.in.in.h:4
 msgid "This setting stores the width of the given column in pixels."
 msgstr ""
 
@@ -7538,11 +7538,11 @@ msgstr "摘要列(_M)"
 #: ../src/gnome/gtkbuilder/assistant-hierarchy.glade.h:1
 #, fuzzy
 msgid ""
-"This assistant will help you create a set of GnuCash accounts for your assets (such as investments, checking or savings accounts), liabilities (such as loans) and different kinds of income and expenses you might have.\n"
+"This assistant will help you create a set of systecash accounts for your assets (such as investments, checking or savings accounts), liabilities (such as loans) and different kinds of income and expenses you might have.\n"
 "\n"
 "Click 'Cancel'  if you do not wish to create any new accounts now."
 msgstr ""
-"這個精靈會幫助您建立一組 GnuCash 科目，包括您的資產(像是投資、支票或儲蓄帳號)、債務(像是貸款)與您可能會有的各種不同的收入和支出。\n"
+"這個精靈會幫助您建立一組 systecash 科目，包括您的資產(像是投資、支票或儲蓄帳號)、債務(像是貸款)與您可能會有的各種不同的收入和支出。\n"
 "\n"
 "如果您現在不希望建立任何新科目，點選「取消」。"
 
@@ -7565,8 +7565,8 @@ msgstr "選擇貨幣"
 #, fuzzy
 msgid ""
 "\n"
-"Select categories that correspond to the ways that you will use GnuCash. Each category you select will cause several accounts to be created. Select the categories that are relevant to you. You can always create additional accounts by hand later."
-msgstr "選擇符合您使用 GnuCash 的方式的分類。您選擇的每個分類會建立一些科目。選擇適合您的分類。您隨時可以在稍後手動建立額外的科目。"
+"Select categories that correspond to the ways that you will use systecash. Each category you select will cause several accounts to be created. Select the categories that are relevant to you. You can always create additional accounts by hand later."
+msgstr "選擇符合您使用 systecash 的方式的分類。您選擇的每個分類會建立一些科目。選擇適合您的分類。您隨時可以在稍後手動建立額外的科目。"
 
 #: ../src/gnome/gtkbuilder/assistant-hierarchy.glade.h:10
 msgid "<b>Categories</b>"
@@ -7636,11 +7636,11 @@ msgstr "結束科目設定"
 #: ../src/gnome/gtkbuilder/assistant-loan.glade.h:1
 #, fuzzy
 msgid ""
-"This is a step-by-step method for creating a loan repayment within GnuCash. In this assistant, you can input the details of your loan and its repayment along with the details of its payback. Using that information, the appropriate Scheduled Transactions will be created.\n"
+"This is a step-by-step method for creating a loan repayment within systecash. In this assistant, you can input the details of your loan and its repayment along with the details of its payback. Using that information, the appropriate Scheduled Transactions will be created.\n"
 "\n"
 "If you make a mistake or want to make changes later, you can edit the created Scheduled Transactions directly."
 msgstr ""
-"這是 GnuCash 中逐步建立貸款償還設定的方法。在這個精靈中，您可以輸入您的貸款與其償還的參數，以及投資回收率的詳細情形。使用這些資訊， GnuCash 會建立適當的排程交易。\n"
+"這是 systecash 中逐步建立貸款償還設定的方法。在這個精靈中，您可以輸入您的貸款與其償還的參數，以及投資回收率的詳細情形。使用這些資訊， systecash 會建立適當的排程交易。\n"
 "\n"
 "如果您輸入錯誤或稍後想做修改，您可以直接編輯建立好的排程交易。"
 
@@ -8242,15 +8242,15 @@ msgid "<span weight=\"bold\" size=\"larger\">Display Welcome Dialog Again?</span
 msgstr "<span weight=\"bold\" size=\"larger\">再次顯示歡迎對話框？</span>"
 
 #: ../src/gnome/gtkbuilder/dialog-new-user.glade.h:2
-msgid "If you press the <i>Yes</i> button, the <i>Welcome to GnuCash</i> dialog will be displayed again next time you start GnuCash. If you press the <i>No</i> button, it will not be displayed again."
-msgstr "如果按 <i>是</i> 按鈕，下次啟動 GnuCash 時， <i>歡迎使用 GnuCash!</i> 對話框將再次顯示。如按 <i>否</i> 按鈕，該對話框將不會再次顯示。"
+msgid "If you press the <i>Yes</i> button, the <i>Welcome to systecash</i> dialog will be displayed again next time you start systecash. If you press the <i>No</i> button, it will not be displayed again."
+msgstr "如果按 <i>是</i> 按鈕，下次啟動 systecash 時， <i>歡迎使用 systecash!</i> 對話框將再次顯示。如按 <i>否</i> 按鈕，該對話框將不會再次顯示。"
 
 #: ../src/gnome/gtkbuilder/dialog-new-user.glade.h:3
-msgid "<span size=\"larger\" weight=\"bold\">Welcome to GnuCash!</span>"
-msgstr "<span size=\"larger\" weight=\"bold\">歡迎使用 GnuCash!</span>"
+msgid "<span size=\"larger\" weight=\"bold\">Welcome to systecash!</span>"
+msgstr "<span size=\"larger\" weight=\"bold\">歡迎使用 systecash!</span>"
 
 #: ../src/gnome/gtkbuilder/dialog-new-user.glade.h:4
-msgid "There are some predefined actions available that most new users prefer to get started with GnuCash. Select one of these actions from below and click the <i>OK</i> button or press the <i>Cancel</i> button if you don't want to perform any of them."
+msgid "There are some predefined actions available that most new users prefer to get started with systecash. Select one of these actions from below and click the <i>OK</i> button or press the <i>Cancel</i> button if you don't want to perform any of them."
 msgstr ""
 
 #: ../src/gnome/gtkbuilder/dialog-new-user.glade.h:5
@@ -8840,7 +8840,7 @@ msgstr "估計預算值"
 
 #: ../src/gnome/gtkbuilder/gnc-plugin-page-budget.glade.h:7
 #, fuzzy
-msgid "GnuCash will estimate budget values for the selected accounts from past transactions."
+msgid "systecash will estimate budget values for the selected accounts from past transactions."
 msgstr "顯示已選資料的表格。"
 
 #: ../src/gnome/gtkbuilder/gnc-plugin-page-budget.glade.h:9
@@ -9448,9 +9448,9 @@ msgstr "沒有這個價格： %s"
 #: ../src/gnome-utils/assistant-xml-encoding.c:159
 msgid ""
 "\n"
-"The file you are trying to load is from an older version of GnuCash. The file format in the older versions was missing the detailed specification of the character encoding being used. This means the text in your data file could be read in multiple ambiguous ways. This ambiguity cannot be resolved automatically, but the new GnuCash 2.0.0 file format will include all necessary specifications so that you do not have to go through this step again.\n"
+"The file you are trying to load is from an older version of systecash. The file format in the older versions was missing the detailed specification of the character encoding being used. This means the text in your data file could be read in multiple ambiguous ways. This ambiguity cannot be resolved automatically, but the new systecash 2.0.0 file format will include all necessary specifications so that you do not have to go through this step again.\n"
 "\n"
-"GnuCash will try to guess the correct character encoding for your data file. On the next page GnuCash will show the resulting texts when using this guess. You have to check whether the words look as expected. Either everything looks fine and you can simply press 'Forward'. Or the words contain unexpected characters, in which case you should select different character encodings to see different results. You may have to edit the list of character encodings by clicking on the respective button.\n"
+"systecash will try to guess the correct character encoding for your data file. On the next page systecash will show the resulting texts when using this guess. You have to check whether the words look as expected. Either everything looks fine and you can simply press 'Forward'. Or the words contain unexpected characters, in which case you should select different character encodings to see different results. You may have to edit the list of character encodings by clicking on the respective button.\n"
 "\n"
 "Press 'Forward' now to select the correct character encoding for your data file.\n"
 msgstr ""
@@ -10013,13 +10013,13 @@ msgstr "自動存檔？"
 #: ../src/gnome-utils/gnc-autosave.c:101
 #, c-format
 msgid ""
-"Your data file needs to be saved to your hard disk to save your changes. GnuCash has a feature to save the file automatically every %d minute, just as if you had pressed the \"Save\" button each time. \n"
+"Your data file needs to be saved to your hard disk to save your changes. systecash has a feature to save the file automatically every %d minute, just as if you had pressed the \"Save\" button each time. \n"
 "\n"
 "You can change the time interval or turn off this feature under Edit -> Preferences -> General -> Auto-save time interval. \n"
 "\n"
 "Should your file be saved automatically?"
 msgid_plural ""
-"Your data file needs to be saved to your hard disk to save your changes. GnuCash has a feature to save the file automatically every %d minutes, just as if you had pressed the \"Save\" button each time. \n"
+"Your data file needs to be saved to your hard disk to save your changes. systecash has a feature to save the file automatically every %d minutes, just as if you had pressed the \"Save\" button each time. \n"
 "\n"
 "You can change the time interval or turn off this feature under Edit -> Preferences -> General -> Auto-save time interval. \n"
 "\n"
@@ -10135,8 +10135,8 @@ msgstr ""
 
 #: ../src/gnome-utils/gnc-file.c:223
 #, c-format
-msgid "The URL %s is not supported by this version of GnuCash."
-msgstr "這個版本的 GnuCash 不支援此 URL %s。"
+msgid "The URL %s is not supported by this version of systecash."
+msgstr "這個版本的 systecash 不支援此 URL %s。"
 
 #: ../src/gnome-utils/gnc-file.c:228
 #, c-format
@@ -10154,8 +10154,8 @@ msgid "Can't connect to %s. Connection was lost, unable to send data."
 msgstr "不能連線到 %s。連線中斷，無法傳送資料。"
 
 #: ../src/gnome-utils/gnc-file.c:245
-msgid "This file/URL appears to be from a newer version of GnuCash. You must upgrade your version of GnuCash to work with this data."
-msgstr "此檔案/URL 似乎來自較新版的 GnuCash。您必須升級您的 GnuCash 版本以便處理這個資料。"
+msgid "This file/URL appears to be from a newer version of systecash. You must upgrade your version of systecash to work with this data."
+msgstr "此檔案/URL 似乎來自較新版的 systecash。您必須升級您的 systecash 版本以便處理這個資料。"
 
 #: ../src/gnome-utils/gnc-file.c:252
 #, c-format
@@ -10164,33 +10164,33 @@ msgstr "資料庫 %s 似乎不存在。您要建立它嗎？"
 
 #: ../src/gnome-utils/gnc-file.c:266
 #, c-format
-msgid "GnuCash could not obtain the lock for %s. That database may be in use by another user, in which case you should not open the database. Do you want to proceed with opening the database?"
-msgstr "GnuCash 無法鎖定 %s。可能有其他使用者在使用此資料庫，在此情形下您不應該開啟它。您是否要繼續開啟此資料庫？"
+msgid "systecash could not obtain the lock for %s. That database may be in use by another user, in which case you should not open the database. Do you want to proceed with opening the database?"
+msgstr "systecash 無法鎖定 %s。可能有其他使用者在使用此資料庫，在此情形下您不應該開啟它。您是否要繼續開啟此資料庫？"
 
 #: ../src/gnome-utils/gnc-file.c:274
 #, c-format
-msgid "GnuCash could not obtain the lock for %s. That database may be in use by another user, in which case you should not import the database. Do you want to proceed with importing the database?"
-msgstr "GnuCash 無法鎖定 %s。可能有其他使用者在使用此資料庫，在此情形下您不應該匯入它。您是否要繼續匯入此資料庫？"
+msgid "systecash could not obtain the lock for %s. That database may be in use by another user, in which case you should not import the database. Do you want to proceed with importing the database?"
+msgstr "systecash 無法鎖定 %s。可能有其他使用者在使用此資料庫，在此情形下您不應該匯入它。您是否要繼續匯入此資料庫？"
 
 #: ../src/gnome-utils/gnc-file.c:282
 #, c-format
-msgid "GnuCash could not obtain the lock for %s. That database may be in use by another user, in which case you should not save the database. Do you want to proceed with saving the database?"
-msgstr "GnuCash 無法鎖定 %s。可能有其他使用者在使用此資料庫，在此情形下您不應該儲存它。您是否要繼續儲存此資料庫？"
+msgid "systecash could not obtain the lock for %s. That database may be in use by another user, in which case you should not save the database. Do you want to proceed with saving the database?"
+msgstr "systecash 無法鎖定 %s。可能有其他使用者在使用此資料庫，在此情形下您不應該儲存它。您是否要繼續儲存此資料庫？"
 
 #: ../src/gnome-utils/gnc-file.c:290
 #, c-format
-msgid "GnuCash could not obtain the lock for %s. That database may be in use by another user, in which case you should not export the database. Do you want to proceed with exporting the database?"
-msgstr "GnuCash 無法鎖定 %s。可能有其他使用者在使用此資料庫，在此情形下您不應該匯出它。您是否要繼續匯出此資料庫？"
+msgid "systecash could not obtain the lock for %s. That database may be in use by another user, in which case you should not export the database. Do you want to proceed with exporting the database?"
+msgstr "systecash 無法鎖定 %s。可能有其他使用者在使用此資料庫，在此情形下您不應該匯出它。您是否要繼續匯出此資料庫？"
 
 #: ../src/gnome-utils/gnc-file.c:315
 #, c-format
-msgid "GnuCash could not write to %s. That database may be on a read-only file system, or you may not have write permission for the directory."
-msgstr "GnuCash 無法寫入 %s。可能是資料庫放在唯讀的檔案系統，或是你沒有該目錄的寫入權限。"
+msgid "systecash could not write to %s. That database may be on a read-only file system, or you may not have write permission for the directory."
+msgstr "systecash 無法寫入 %s。可能是資料庫放在唯讀的檔案系統，或是你沒有該目錄的寫入權限。"
 
 #: ../src/gnome-utils/gnc-file.c:322
 #, c-format
-msgid "The file/URL %s does not contain GnuCash data or the data is corrupt."
-msgstr "檔案/URL %s 並未包含 GnuCash 資料或資料已損壞。"
+msgid "The file/URL %s does not contain systecash data or the data is corrupt."
+msgstr "檔案/URL %s 並未包含 systecash 資料或資料已損壞。"
 
 #: ../src/gnome-utils/gnc-file.c:328
 #, c-format
@@ -10229,8 +10229,8 @@ msgid "The file %s could not be found."
 msgstr "找不到檔案 %s。"
 
 #: ../src/gnome-utils/gnc-file.c:375
-msgid "This file is from an older version of GnuCash. Do you want to continue?"
-msgstr "這個檔案來自較舊版本的 GnuCash。您是否要繼續？"
+msgid "This file is from an older version of systecash. Do you want to continue?"
+msgstr "這個檔案來自較舊版本的 systecash。您是否要繼續？"
 
 #: ../src/gnome-utils/gnc-file.c:384
 #, c-format
@@ -10253,7 +10253,7 @@ msgid "No read permission to read from file %s."
 msgstr "您沒有權限讀取檔案 %s。"
 
 #. Translators: the first %s is a path in the filesystem,
-#. * the second %s is PACKAGE_NAME, which by default is "GnuCash"
+#. * the second %s is PACKAGE_NAME, which by default is "systecash"
 #.
 #: ../src/gnome-utils/gnc-file.c:409
 #, c-format
@@ -10266,28 +10266,28 @@ msgid ""
 msgstr ""
 
 #: ../src/gnome-utils/gnc-file.c:416
-msgid "This database is from an older version of GnuCash. Select OK to upgrade it to the current version, Cancel to mark it read-only."
-msgstr "這個資料庫來自較舊版本的 GnuCash。按確定將資料庫升級至新的版本，按取消將資料庫標記為唯讀。"
+msgid "This database is from an older version of systecash. Select OK to upgrade it to the current version, Cancel to mark it read-only."
+msgstr "這個資料庫來自較舊版本的 systecash。按確定將資料庫升級至新的版本，按取消將資料庫標記為唯讀。"
 
 #: ../src/gnome-utils/gnc-file.c:425
 #, fuzzy
-msgid "This database is from a newer version of GnuCash. This version can read it, but cannot safely save to it. It will be marked read-only until you do File>Save As, but data may be lost in writing to the old version."
-msgstr "這個資料庫來自較新版本的 GnuCash。現在這個版本能夠讀取，但無法安全的寫入。資料庫將被標記為唯讀，直到您執行 檔案>另存新檔。"
+msgid "This database is from a newer version of systecash. This version can read it, but cannot safely save to it. It will be marked read-only until you do File>Save As, but data may be lost in writing to the old version."
+msgstr "這個資料庫來自較新版本的 systecash。現在這個版本能夠讀取，但無法安全的寫入。資料庫將被標記為唯讀，直到您執行 檔案>另存新檔。"
 
 #: ../src/gnome-utils/gnc-file.c:434
 msgid "The SQL database is in use by other users, and the upgrade cannot be performed until they logoff. If there are currently no other users, consult the  documentation to learn how to clear out dangling login sessions."
 msgstr "其他使用者正在使用此 SQL 資料庫，在他們登出前不能進行升級的動作。如果目前沒有其他的使用者，請參閱文件學習如何清除掛在站上的登入工作階段。"
 
 #: ../src/gnome-utils/gnc-file.c:444
-msgid "The library \"libdbi\" installed on your system doesn't correctly store large numbers. This means GnuCash cannot use SQL databases correctly. Gnucash will not open or save to SQL databases until this is fixed by installing a different version of \"libdbi\". Please see https://bugzilla.gnome.org/show_bug.cgi?id=611936 for more information."
+msgid "The library \"libdbi\" installed on your system doesn't correctly store large numbers. This means systecash cannot use SQL databases correctly. systecash will not open or save to SQL databases until this is fixed by installing a different version of \"libdbi\". Please see https://bugzilla.gnome.org/show_bug.cgi?id=611936 for more information."
 msgstr ""
 
 #: ../src/gnome-utils/gnc-file.c:456
-msgid "GnuCash could not complete a critical test for the presence of a bug in the \"libdbi\" library. This may be caused by a permissions misconfiguration of your SQL database. Please see https://bugzilla.gnome.org/show_bug.cgi?id=645216 for more information."
+msgid "systecash could not complete a critical test for the presence of a bug in the \"libdbi\" library. This may be caused by a permissions misconfiguration of your SQL database. Please see https://bugzilla.gnome.org/show_bug.cgi?id=645216 for more information."
 msgstr ""
 
 #: ../src/gnome-utils/gnc-file.c:466
-msgid "This file is from an older version of GnuCash and will be upgraded when saved by this version. You will not be able to read the saved file from the older version of Gnucash (it will report an \"error parsing the file\"). If you wish to preserve the old version, exit without saving."
+msgid "This file is from an older version of systecash and will be upgraded when saved by this version. You will not be able to read the saved file from the older version of systecash (it will report an \"error parsing the file\"). If you wish to preserve the old version, exit without saving."
 msgstr ""
 
 #: ../src/gnome-utils/gnc-file.c:477
@@ -10312,7 +10312,7 @@ msgstr "不存檔，繼續操作(_W)"
 
 #: ../src/gnome-utils/gnc-file.c:747
 #, c-format
-msgid "GnuCash could not obtain the lock for %s."
+msgid "systecash could not obtain the lock for %s."
 msgstr ""
 
 #: ../src/gnome-utils/gnc-file.c:749
@@ -10377,28 +10377,28 @@ msgid "View..."
 msgstr "檢視..."
 
 #: ../src/gnome-utils/gnc-gnome-utils.c:236
-msgid "GnuCash could not find the files for the help documentation. This is likely because the 'gnucash-docs' package is not installed"
+msgid "systecash could not find the files for the help documentation. This is likely because the 'systecash-docs' package is not installed"
 msgstr ""
 
 #: ../src/gnome-utils/gnc-gnome-utils.c:329
 #: ../src/gnome-utils/gnc-gnome-utils.c:391
-msgid "GnuCash could not find the files for the help documentation. This is likely because the 'gnucash-docs' package is not installed."
+msgid "systecash could not find the files for the help documentation. This is likely because the 'systecash-docs' package is not installed."
 msgstr ""
 
 #: ../src/gnome-utils/gnc-gnome-utils.c:360
-msgid "GnuCash could not find the files for the help documentation."
+msgid "systecash could not find the files for the help documentation."
 msgstr ""
 
 #: ../src/gnome-utils/gnc-gnome-utils.c:415
-msgid "GnuCash could not find the associated file."
+msgid "systecash could not find the associated file."
 msgstr ""
 
 #: ../src/gnome-utils/gnc-gnome-utils.c:452
-msgid "GnuCash could not find the associated file"
+msgid "systecash could not find the associated file"
 msgstr ""
 
 #: ../src/gnome-utils/gnc-gnome-utils.c:478
-msgid "GnuCash could not open the associated URI:"
+msgid "systecash could not open the associated URI:"
 msgstr ""
 
 #: ../src/gnome-utils/gnc-icons.c:39
@@ -10510,8 +10510,8 @@ msgid "Pr_eferences"
 msgstr "偏好設定(_E)"
 
 #: ../src/gnome-utils/gnc-main-window.c:321
-msgid "Edit the global preferences of GnuCash"
-msgstr "編輯 GnuCash 的全域偏好設定"
+msgid "Edit the global preferences of systecash"
+msgstr "編輯 systecash 的全域偏好設定"
 
 #: ../src/gnome-utils/gnc-main-window.c:329
 msgid "Select sorting criteria for this page view"
@@ -10548,40 +10548,40 @@ msgid "_New Window"
 msgstr "開新視窗(_N)"
 
 #: ../src/gnome-utils/gnc-main-window.c:359
-msgid "Open a new top-level GnuCash window."
-msgstr "開啟新的 GnuCash 視窗。"
+msgid "Open a new top-level systecash window."
+msgstr "開啟新的 systecash 視窗。"
 
 #: ../src/gnome-utils/gnc-main-window.c:363
 msgid "New Window with _Page"
 msgstr "將本頁開啟於新視窗中(_P)"
 
 #: ../src/gnome-utils/gnc-main-window.c:364
-msgid "Move the current page to a new top-level GnuCash window."
-msgstr "將本頁移到新開的 GnuCash 視窗。"
+msgid "Move the current page to a new top-level systecash window."
+msgstr "將本頁移到新開的 systecash 視窗。"
 
 #: ../src/gnome-utils/gnc-main-window.c:371
 msgid "Tutorial and Concepts _Guide"
 msgstr "教學與觀念指南(_G)"
 
 #: ../src/gnome-utils/gnc-main-window.c:372
-msgid "Open the GnuCash Tutorial"
-msgstr "開啟 GnuCash 教學手冊"
+msgid "Open the systecash Tutorial"
+msgstr "開啟 systecash 教學手冊"
 
 #: ../src/gnome-utils/gnc-main-window.c:376
 msgid "_Contents"
 msgstr "內容(_C)"
 
 #: ../src/gnome-utils/gnc-main-window.c:377
-msgid "Open the GnuCash Help"
-msgstr "開啟 GnuCash 說明"
+msgid "Open the systecash Help"
+msgstr "開啟 systecash 說明"
 
 #: ../src/gnome-utils/gnc-main-window.c:381
 msgid "_About"
 msgstr "關於(_A)"
 
 #: ../src/gnome-utils/gnc-main-window.c:382
-msgid "About GnuCash"
-msgstr "關於 GnuCash"
+msgid "About systecash"
+msgstr "關於 systecash"
 
 #: ../src/gnome-utils/gnc-main-window.c:394
 msgid "_Toolbar"
@@ -10709,8 +10709,8 @@ msgid "Book Options"
 msgstr "帳本選項"
 
 #: ../src/gnome-utils/gnc-main-window.c:4378
-msgid "The GnuCash personal finance manager. The GNU way to manage your money!"
-msgstr "GnuCash 個人財務管理員。管理您金錢的 GNU 解決方案！"
+msgid "The systecash personal finance manager. The GNU way to manage your money!"
+msgstr "systecash 個人財務管理員。管理您金錢的 GNU 解決方案！"
 
 #: ../src/gnome-utils/gnc-main-window.c:4380
 msgid "© 1997-2015 Contributors"
@@ -10755,23 +10755,23 @@ msgid "End of previous accounting period"
 msgstr "前一會計週期結束時間"
 
 #. Development version
-#. Translators: 1st %s is the GnuCash version (eg 2.4.11);
+#. Translators: 1st %s is the systecash version (eg 2.4.11);
 #. 2nd %s is the scm type (svn/svk/git/bzr);
 #. 3rd %s is the scm revision number;
 #. 4th %s is the build date
 #: ../src/gnome-utils/gnc-splash.c:95
 #, fuzzy, c-format
-msgid "Version: GnuCash-%s %s (rev %s built %s)"
-msgstr "版本： GnuCash-%s svn (r%s built %s)"
+msgid "Version: systecash-%s %s (rev %s built %s)"
+msgstr "版本： systecash-%s svn (r%s built %s)"
 
 #. Dist Tarball
-#. Translators: 1st %s is the GnuCash version (eg 2.4.11);
+#. Translators: 1st %s is the systecash version (eg 2.4.11);
 #. 2nd %s is the scm (svn/svk/git/bzr) revision number;
 #. 3rd %s is the build date
 #: ../src/gnome-utils/gnc-splash.c:103
 #, fuzzy, c-format
-msgid "Version: GnuCash-%s (rev %s built %s)"
-msgstr "版本： GnuCash-%s (r%s built %s)"
+msgid "Version: systecash-%s (rev %s built %s)"
+msgstr "版本： systecash-%s (r%s built %s)"
 
 #: ../src/gnome-utils/gnc-splash.c:120
 msgid "Loading..."
@@ -10817,8 +10817,8 @@ msgstr "手動結算(_M)"
 #: ../src/gnome-utils/gnc-tree-control-split-reg.c:289
 #: ../src/register/ledger-core/split-register-control.c:139
 #, fuzzy
-msgid "Let GnuCash _add an adjusting split"
-msgstr "讓 GnuCash 新增調整分割"
+msgid "Let systecash _add an adjusting split"
+msgstr "讓 systecash 新增調整分割"
 
 #: ../src/gnome-utils/gnc-tree-control-split-reg.c:294
 #: ../src/register/ledger-core/split-register-control.c:144
@@ -11613,177 +11613,177 @@ msgstr "上次發生"
 msgid "Next Occur"
 msgstr "下次發生"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.history.gschema.xml.in.in.h:1
+#: ../src/gnome-utils/gschemas/org.systecash.history.gschema.xml.in.in.h:1
 msgid "Number of files in history"
 msgstr "歷史列表中的檔案數"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.history.gschema.xml.in.in.h:2
+#: ../src/gnome-utils/gschemas/org.systecash.history.gschema.xml.in.in.h:2
 msgid "This setting contains the number of files to keep in the Recently Opened Files menu. This value may be set to zero to disable the file history. This number has a maximum value of 10."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.history.gschema.xml.in.in.h:3
+#: ../src/gnome-utils/gschemas/org.systecash.history.gschema.xml.in.in.h:3
 msgid "Most recently opened file"
 msgstr "最近開啟的檔案"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.history.gschema.xml.in.in.h:4
+#: ../src/gnome-utils/gschemas/org.systecash.history.gschema.xml.in.in.h:4
 msgid "This field contains the full path of the most recently opened file."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.history.gschema.xml.in.in.h:5
+#: ../src/gnome-utils/gschemas/org.systecash.history.gschema.xml.in.in.h:5
 msgid "Next most recently opened file"
 msgstr "第二近開啟的檔案"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.history.gschema.xml.in.in.h:6
+#: ../src/gnome-utils/gschemas/org.systecash.history.gschema.xml.in.in.h:6
 msgid "This field contains the full path of the next most recently opened file."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:1
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:1
 #, fuzzy
 msgid "Print checks from multiple accounts"
 msgstr "符合所有科目"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:2
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:2
 msgid "This dialog is presented if you try to print checks from multiple accounts at the same time."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:3
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:3
 #, fuzzy
 msgid "Commit changes to a invoice entry"
 msgstr "如何處理空的交易"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:4
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:4
 msgid "This dialog is presented when you attempt to move out of a modified invoice entry. The changed data must be either saved or discarded."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:5
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:5
 #, fuzzy
 msgid "Duplicating a changed invoice entry"
 msgstr "相同的交易"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:6
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:6
 msgid "This dialog is presented when you attempt to duplicate a modified invoice entry. The changed data must be saved or the duplication canceled."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:7
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:7
 msgid "Delete a commodity"
 msgstr "刪除一個商品"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:8
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:8
 msgid "This dialog is presented before allowing you to delete a commodity."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:9
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:9
 #, fuzzy
 msgid "Delete a commodity with price quotes"
 msgstr "刪除商品與價格"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:10
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:10
 msgid "This dialog is presented before allowing you to delete a commodity that has price quotes attached. Deleting the commodity will delete the quotes as well."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:11
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:11
 #, fuzzy
 msgid "Delete multiple price quotes"
 msgstr "刪除所有分割"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:12
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:12
 msgid "This dialog is presented before allowing you to delete multiple price quotes at one time."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:13
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:13
 #, fuzzy
 msgid "Edit account payable/accounts receivable register"
 msgstr "科目應收"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:14
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:14
 msgid "This dialog is presented before allowing you to edit an accounts payable/accounts receivable account. These account types are reserved for the business features and should rarely be manipulated manually."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:15
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:15
 #, fuzzy
 msgid "Read only register"
 msgstr "準備好建立"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:16
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:16
 msgid "This dialog is presented when a read-only register is opened."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:17
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:17
 msgid "Change contents of reconciled split"
 msgstr "更改已對帳分割的內容"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:18
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:18
 msgid "This dialog is presented before allowing you to change the contents of a reconciled split. Allowing these changes can make it hard to perform future reconciliations."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:19
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:19
 msgid "Mark transaction split as unreconciled"
 msgstr "將交易分割標記為未對帳"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:20
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:20
 msgid "This dialog is presented before allowing you to mark a transaction split as unreconciled. Doing so will throw off the reconciled value of the register and can make it hard to perform future reconciliations."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:21
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:21
 msgid "Remove a split from a transaction"
 msgstr "刪除交易中的一個分割"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:22
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:22
 msgid "This dialog is presented before allowing you to remove a split from a transaction."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:23
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:23
 msgid "Remove a reconciled split from a transaction"
 msgstr "刪除交易中一個已對帳的分割"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:24
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:24
 msgid "This dialog is presented before allowing you to remove a reconciled split from a transaction. Doing so will throw off the reconciled value of the register and can make it hard to perform future reconciliations."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:25
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:25
 msgid "Remove all the splits from a transaction"
 msgstr "刪除交易中的全部分割"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:26
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:26
 msgid "This dialog is presented before allowing you to remove all splits from a transaction."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:27
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:27
 msgid "This dialog is presented before allowing you to remove all splits (including some reconciled splits) from a transaction. Doing so will throw off the reconciled value of the register and can make it hard to perform future reconciliations."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:28
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:28
 msgid "Delete a transaction"
 msgstr "刪除交易"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:29
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:29
 msgid "This dialog is presented before allowing you to delete a transaction."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:30
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:30
 #, fuzzy
 msgid "Delete a transaction with reconciled splits"
 msgstr "不能將已結清或對帳的分割標為無效。"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:31
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:31
 msgid "This dialog is presented before allowing you to delete a transaction that contains reconciled splits. Doing so will throw off the reconciled value of the register and can make it hard to perform future reconciliations."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:32
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:32
 #, fuzzy
 msgid "Duplicating a changed transaction"
 msgstr "相同的交易"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:33
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:33
 msgid "This dialog is presented when you attempt to duplicate a modified transaction. The changed data must be saved or the duplication canceled."
 msgstr ""
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:34
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:34
 #, fuzzy
 msgid "Commit changes to a transaction"
 msgstr "如何處理空的交易"
 
-#: ../src/gnome-utils/gschemas/org.gnucash.warnings.gschema.xml.in.in.h:35
+#: ../src/gnome-utils/gschemas/org.systecash.warnings.gschema.xml.in.in.h:35
 msgid "This dialog is presented when you attempt to move out of a modified transaction. The changed data must be either saved or discarded."
 msgstr ""
 
@@ -11831,7 +11831,7 @@ msgid "finish placeholder"
 msgstr "Placeholder"
 
 #: ../src/gnome-utils/gtkbuilder/assistant-xml-encoding.glade.h:11
-msgid "Finish GnuCash Datafile Import"
+msgid "Finish systecash Datafile Import"
 msgstr ""
 
 #: ../src/gnome-utils/gtkbuilder/dialog-account.glade.h:1
@@ -12201,8 +12201,8 @@ msgid "_Unknown:"
 msgstr "未知(_U)："
 
 #: ../src/gnome-utils/gtkbuilder/dialog-commodity.glade.h:22
-msgid "These are quote sources that were recently added to F::Q. GnuCash does not know if these sources retrieve information from a single site or from multiple sites on the internet."
-msgstr "這是新加入 F::Q 的報價源，GnuCash 不知道它們是從單一還是多個網站截取報價。"
+msgid "These are quote sources that were recently added to F::Q. systecash does not know if these sources retrieve information from a single site or from multiple sites on the internet."
+msgstr "這是新加入 F::Q 的報價源，systecash 不知道它們是從單一還是多個網站截取報價。"
 
 #: ../src/gnome-utils/gtkbuilder/dialog-commodity.glade.h:23
 msgid "Time_zone:"
@@ -12255,12 +12255,12 @@ msgid "Explanation"
 msgstr "說明"
 
 #: ../src/gnome-utils/gtkbuilder/dialog-options.glade.h:1
-msgid "GnuCash Options"
-msgstr "GnuCash 選項"
+msgid "systecash Options"
+msgstr "systecash 選項"
 
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:1
-msgid "GnuCash Preferences"
-msgstr "GnuCash 偏好設定"
+msgid "systecash Preferences"
+msgstr "systecash 偏好設定"
 
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:2
 msgid "<b>Summarybar Content</b>"
@@ -12480,8 +12480,8 @@ msgstr "顯示「每日一訣」對話盒(_T)"
 
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:65
 #, fuzzy
-msgid "Display hints for using GnuCash at startup."
-msgstr "啟動時顯示關於使用 GnuCash 的建議"
+msgid "Display hints for using systecash at startup."
+msgstr "啟動時顯示關於使用 systecash 的建議"
 
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:66
 msgid "How many days to keep old log/backup files."
@@ -12566,7 +12566,7 @@ msgid "Show auto-save confirmation _question"
 msgstr "顯示確認自動存檔的詢問(_Q)"
 
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:88
-msgid "If active, GnuCash shows a confirmation question each time the auto-save feature is started. Otherwise no extra explanation is shown."
+msgid "If active, systecash shows a confirmation question each time the auto-save feature is started. Otherwise no extra explanation is shown."
 msgstr ""
 
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:97
@@ -12691,11 +12691,11 @@ msgid "Alternate the primary and secondary colors by transaction instead of by a
 msgstr "以每一筆交易為單位交替使用主要與次要顏色，而不是每一列。"
 
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:129
-msgid "Don't _use GnuCash built-in colors"
+msgid "Don't _use systecash built-in colors"
 msgstr ""
 
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:130
-msgid "GnuCash uses a yellow/green theme by default for register windows. Check this if you want to use the system color theme instead."
+msgid "systecash uses a yellow/green theme by default for register windows. Check this if you want to use the system color theme instead."
 msgstr ""
 
 #: ../src/gnome-utils/gtkbuilder/dialog-preferences.glade.h:131
@@ -12995,8 +12995,8 @@ msgstr ""
 "百分比 %"
 
 #: ../src/gnome-utils/gtkbuilder/dialog-totd.glade.h:1
-msgid "GnuCash Tip Of The Day"
-msgstr "GnuCash 每日一訣"
+msgid "systecash Tip Of The Day"
+msgstr "systecash 每日一訣"
 
 #: ../src/gnome-utils/gtkbuilder/dialog-totd.glade.h:2
 msgid "<b>Tip of the Day:</b>"
@@ -13738,8 +13738,8 @@ msgid "Unreconcile the selected transactions"
 msgstr "刪除選定的交易"
 
 #: ../src/gnome/window-reconcile2.c:2227 ../src/gnome/window-reconcile.c:2227
-msgid "Open the GnuCash help window"
-msgstr "開啟 GnuCash 說明視窗"
+msgid "Open the systecash help window"
+msgstr "開啟 systecash 說明視窗"
 
 #: ../src/html/gnc-html-webkit.c:80
 msgid "Not found"
@@ -13783,7 +13783,7 @@ msgstr ""
 msgid ""
 "The external program \"AqBanking Setup Wizard\" failed to run successfully because the additional software \"Qt\" was not found. Please install the \"Qt/Windows Open Source Edition\" from Trolltech by downloading it from www.trolltech.com\n"
 "\n"
-"If you have installed Qt already, you will have to adapt the PATH variable of your system appropriately. Contact the GnuCash developers if you need further assistance on how to install Qt correctly.\n"
+"If you have installed Qt already, you will have to adapt the PATH variable of your system appropriately. Contact the systecash developers if you need further assistance on how to install Qt correctly.\n"
 "\n"
 "Online Banking cannot be setup without Qt. Press \"Close\" now, then \"Cancel\" to cancel the Online Banking setup."
 msgstr ""
@@ -13804,8 +13804,8 @@ msgid "Online Banking Account Name"
 msgstr "其他帳號名稱"
 
 #: ../src/import-export/aqb/assistant-ab-initial.c:879
-msgid "GnuCash Account Name"
-msgstr "GnuCash 科目名稱"
+msgid "systecash Account Name"
+msgstr "systecash 科目名稱"
 
 #: ../src/import-export/aqb/assistant-ab-initial.c:885
 #: ../src/import-export/qif-imp/assistant-qif-import.c:545
@@ -13870,23 +13870,23 @@ msgid "Start Online Banking Wizard"
 msgstr "開始網路銀行精靈"
 
 #: ../src/import-export/aqb/assistant-ab-initial.glade.h:22
-msgid "Double Click on the line of an Online Banking account name if you want to match it to a GnuCash account. Click \"Forward\" when all desired accounts are matching."
+msgid "Double Click on the line of an Online Banking account name if you want to match it to a systecash account. Click \"Forward\" when all desired accounts are matching."
 msgstr ""
 
 #: ../src/import-export/aqb/assistant-ab-initial.glade.h:23
 #, fuzzy
-msgid "Match Online accounts with GnuCash accounts"
-msgstr "以 GnuCash 科目比對網路銀行帳號"
+msgid "Match Online accounts with systecash accounts"
+msgstr "以 systecash 科目比對網路銀行帳號"
 
 #: ../src/import-export/aqb/assistant-ab-initial.glade.h:24
 msgid ""
-"The setup for matching Online Banking accounts to GnuCash accounts is now finished. You can now invoke Online Banking actions on those accounts.\n"
+"The setup for matching Online Banking accounts to systecash accounts is now finished. You can now invoke Online Banking actions on those accounts.\n"
 "\n"
 "If you want to add another bank, user, or account, you can start this assistant again anytime.\n"
 "\n"
 "Press \"Apply\" now."
 msgstr ""
-"現在所有用來比對 GnuCash 科目的 HBCI 帳號的設定已經完成。您現在可以在那些科目上調用 HBCI 動作。\n"
+"現在所有用來比對 systecash 科目的 HBCI 帳號的設定已經完成。您現在可以在那些科目上調用 HBCI 動作。\n"
 "\n"
 "如果您想要增加別的 HBCI 銀行、使用者或帳號，您隨時可以再次啟動這個精靈。\n"
 "\n"
@@ -14212,7 +14212,7 @@ msgstr ""
 
 #: ../src/import-export/aqb/dialog-ab-trans.c:610
 #, c-format
-msgid "Your local bank account does not yet have the SEPA account information stored. We are sorry, but in this development version one additional step is necessary which has not yet been implemented directly in gnucash. Please execute the command line program \"aqhbci-tool\" for your account, as follows: aqhbci-tool4 getaccsepa -b %s -a %s"
+msgid "Your local bank account does not yet have the SEPA account information stored. We are sorry, but in this development version one additional step is necessary which has not yet been implemented directly in systecash. Please execute the command line program \"aqhbci-tool\" for your account, as follows: aqhbci-tool4 getaccsepa -b %s -a %s"
 msgstr ""
 
 #: ../src/import-export/aqb/dialog-ab-trans.c:625
@@ -14345,7 +14345,7 @@ msgid ""
 msgstr ""
 
 #: ../src/import-export/aqb/gnc-ab-utils.c:781
-msgid "No Online Banking account found for this gnucash account. These transactions will not be executed by Online Banking."
+msgid "No Online Banking account found for this systecash account. These transactions will not be executed by Online Banking."
 msgstr ""
 
 #: ../src/import-export/aqb/gnc-ab-utils.c:858
@@ -14418,7 +14418,7 @@ msgstr "...\n"
 #: ../src/import-export/aqb/gnc-file-aqb-import.c:318
 #, c-format
 msgid ""
-"An error occurred while executing jobs: %d of %d failed. Please check the log window or gnucash.trace for the exact error message.\n"
+"An error occurred while executing jobs: %d of %d failed. Please check the log window or systecash.trace for the exact error message.\n"
 "\n"
 "%s"
 msgstr ""
@@ -14537,31 +14537,31 @@ msgid "Import _MT940"
 msgstr "匯入 _MT940"
 
 #: ../src/import-export/aqb/gnc-plugin-aqbanking.c:141
-msgid "Import a MT940 file into GnuCash"
-msgstr "匯入 MT940 檔案到 GnuCash"
+msgid "Import a MT940 file into systecash"
+msgstr "匯入 MT940 檔案到 systecash"
 
 #: ../src/import-export/aqb/gnc-plugin-aqbanking.c:145
 msgid "Import MT94_2"
 msgstr "匯入 MT94_2"
 
 #: ../src/import-export/aqb/gnc-plugin-aqbanking.c:146
-msgid "Import a MT942 file into GnuCash"
-msgstr "匯入 MT942 檔案到 GnuCash"
+msgid "Import a MT942 file into systecash"
+msgstr "匯入 MT942 檔案到 systecash"
 
 #: ../src/import-export/aqb/gnc-plugin-aqbanking.c:150
 msgid "Import _DTAUS"
 msgstr "匯入 _DTAUS"
 
 #: ../src/import-export/aqb/gnc-plugin-aqbanking.c:151
-msgid "Import a DTAUS file into GnuCash"
-msgstr "匯入 DTAUS 檔到 GnuCash"
+msgid "Import a DTAUS file into systecash"
+msgstr "匯入 DTAUS 檔到 systecash"
 
 #: ../src/import-export/aqb/gnc-plugin-aqbanking.c:163
 msgid "Import DTAUS and _send..."
 msgstr "匯入 DTAUS 檔並傳送(_S)..."
 
 #: ../src/import-export/aqb/gnc-plugin-aqbanking.c:164
-msgid "Import a DTAUS file into GnuCash and send the transfers online through Online Banking"
+msgid "Import a DTAUS file into systecash and send the transfers online through Online Banking"
 msgstr ""
 
 #: ../src/import-export/aqb/gnc-plugin-aqbanking.c:174
@@ -14574,59 +14574,59 @@ msgstr "顯示新使用者對話盒"
 msgid "Show the online banking log window."
 msgstr "在圖例中顯示全部結餘？"
 
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:3
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:3
 msgid "Close window when finished"
 msgstr "完成後關閉視窗"
 
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:4
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:4
 msgid "If active, the window will be closed automatically when you finish the HBCI/AqBanking import process. Otherwise it will stay open."
 msgstr ""
 
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:5
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:5
 msgid "Remember the PIN in memory"
 msgstr "在工作階段期間於記憶體中記住 PIN 碼"
 
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:6
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:6
 msgid "If active, the PIN for HBCI/AqBanking actions will be remembered in memory during a session. Otherwise it will have to be entered again each time during a session when it is needed."
 msgstr ""
 
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:7
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:7
 msgid "Verbose HBCI debug messages"
 msgstr "HBCI 詳細除錯訊息"
 
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:8
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:8
 msgid "Enables verbose debug messages for HBCI/AqBanking Online Banking."
 msgstr "啟動 HBCI/AqBanking 網路銀行的詳細除錯訊息。"
 
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:9
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:9
 msgid "DTAUS import data format"
 msgstr "DTAUS 匯入資料格式"
 
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:10
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:10
 msgid "This setting specifies the data format when importing DTAUS files. The AqBanking library offers various import formats (called \"profiles\") of which you can choose one here."
 msgstr ""
 
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:11
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:11
 msgid "CSV import data format"
 msgstr "CSV 匯入資料格式"
 
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:12
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:12
 msgid "This setting specifies the data format when importing CSV files. The AqBanking library offers various import formats (called \"profiles\") of which you can choose one here."
 msgstr ""
 
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:13
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:13
 msgid "SWIFT MT940 import data format"
 msgstr ""
 
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:14
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:14
 msgid "This setting specifies the data format when importing SWIFT MT940 files. The AqBanking library offers various import formats (called \"profiles\") of which you can choose one here."
 msgstr ""
 
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:15
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:15
 msgid "SWIFT MT942 import data format"
 msgstr ""
 
-#: ../src/import-export/aqb/gschemas/org.gnucash.dialogs.import.hbci.gschema.xml.in.in.h:16
+#: ../src/import-export/aqb/gschemas/org.systecash.dialogs.import.hbci.gschema.xml.in.in.h:16
 msgid "This setting specifies the data format when importing SWIFT MT942 files. The AqBanking library offers various import formats (called \"profiles\") of which you can choose one here."
 msgstr ""
 
@@ -14865,7 +14865,7 @@ msgstr "匯出科目(_A)"
 #: ../src/import-export/csv-exp/gnc-plugin-csv-export.c:48
 #, fuzzy
 msgid "Export the Account Tree to a CSV file"
-msgstr "匯出科目體系至新的 GnuCash 資料檔"
+msgstr "匯出科目體系至新的 systecash 資料檔"
 
 #: ../src/import-export/csv-exp/gnc-plugin-csv-export.c:52
 #, fuzzy
@@ -14877,11 +14877,11 @@ msgstr "取得交易(_T)..."
 msgid "Export the Transactions to a CSV file"
 msgstr "匯入交易的第一個分割:"
 
-#: ../src/import-export/csv-exp/gschemas/org.gnucash.dialogs.export.csv.gschema.xml.in.in.h:5
+#: ../src/import-export/csv-exp/gschemas/org.systecash.dialogs.export.csv.gschema.xml.in.in.h:5
 msgid "Window geometry"
 msgstr "視窗座標"
 
-#: ../src/import-export/csv-exp/gschemas/org.gnucash.dialogs.export.csv.gschema.xml.in.in.h:6
+#: ../src/import-export/csv-exp/gschemas/org.systecash.dialogs.export.csv.gschema.xml.in.in.h:6
 msgid "The position of paned window when it was last closed."
 msgstr ""
 
@@ -14900,7 +14900,7 @@ msgid ""
 "\n"
 "You can also go back and verify your selections by clicking on 'Back' or 'Cancel' to Abort Import.\n"
 "\n"
-"If this is your initial import into a new file, you will first see a dialog for setting book options, since these can affect how imported data are converted to GnuCash transactions. If this is an existing file, the dialog will not be shown.\n"
+"If this is your initial import into a new file, you will first see a dialog for setting book options, since these can affect how imported data are converted to systecash transactions. If this is an existing file, the dialog will not be shown.\n"
 msgstr ""
 
 #: ../src/import-export/csv-imp/assistant-csv-account-import.c:172
@@ -14942,7 +14942,7 @@ msgstr ""
 #: ../src/import-export/csv-imp/assistant-csv-account-import.glade.h:1
 #, fuzzy
 msgid "CSV Import Assistant"
-msgstr "GnuCash 資料檔匯入精靈"
+msgstr "systecash 資料檔匯入精靈"
 
 #: ../src/import-export/csv-imp/assistant-csv-account-import.glade.h:2
 msgid ""
@@ -15179,7 +15179,7 @@ msgid ""
 "\n"
 "If this is the first time importing, you will find that all lines may need to be associated. On subsequent imports, the importer will try to associate the transactions based on previous imports.\n"
 "\n"
-"If this is your initial import into a new file, you will first see a dialog for setting book options, since these can affect how imported data are converted to GnuCash transactions. If this is an existing file, the dialog will not be shown.\n"
+"If this is your initial import into a new file, you will first see a dialog for setting book options, since these can affect how imported data are converted to systecash transactions. If this is an existing file, the dialog will not be shown.\n"
 "\n"
 "The confidence of a correct association is displayed as a colored bar.\n"
 "\n"
@@ -15288,7 +15288,7 @@ msgid "Enable skip transaction action"
 msgstr "通用匯入交易比對器"
 
 #: ../src/import-export/dialog-import.glade.h:3
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:2
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:2
 #, fuzzy
 msgid "Enable the SKIP action in the transaction matcher. If enabled, a transaction whose best match's score is in the yellow zone (above the Auto-ADD threshold but below the Auto-CLEAR threshold) will be skipped by default."
 msgstr "其最高比對分數在紅色區（高於顯示門檻但低於或等於自動新增門檻）的交易會預設為已加入。"
@@ -15299,7 +15299,7 @@ msgid "Enable update match action"
 msgstr "通用匯入交易比對器"
 
 #: ../src/import-export/dialog-import.glade.h:5
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:4
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:4
 #, fuzzy
 msgid "Enable the UPDATE AND RECONCILE action in the transaction matcher. If enabled, a transaction whose best match's score is above the Auto-CLEAR threshold and has a different date or amount than the matching existing transaction will cause the existing transaction to be updated and cleared by default."
 msgstr "其最高比對分數在紅色區（高於顯示門檻但低於或等於自動新增門檻）的交易會預設為已加入。"
@@ -15349,13 +15349,13 @@ msgid "Use bayesian algorithms to match new transactions with existing accounts.
 msgstr "使用貝氏(bayesian)演算法進行新交易與現有科目的比對。"
 
 #: ../src/import-export/dialog-import.glade.h:17
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:15
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:15
 #, fuzzy
 msgid "Automatically create new commodities"
 msgstr "自動小數點"
 
 #: ../src/import-export/dialog-import.glade.h:18
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:16
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:16
 msgid "Enables the automatic creation of new commodities if any unknown commodity is encountered during import. Otherwise the user will be asked what to do with each unknown commodity."
 msgstr ""
 
@@ -15365,8 +15365,8 @@ msgid "Select Account"
 msgstr "選擇科目"
 
 #: ../src/import-export/dialog-import.glade.h:20
-msgid "Please select or create an appropriate GnuCash account for:"
-msgstr "請選擇或建立適當的 GnuCash 科目給："
+msgid "Please select or create an appropriate systecash account for:"
+msgstr "請選擇或建立適當的 systecash 科目給："
 
 #: ../src/import-export/dialog-import.glade.h:21
 msgid "Online account ID here..."
@@ -15468,58 +15468,58 @@ msgstr "通用匯入交易比對器"
 msgid "List of downloaded transactions (source split shown):"
 msgstr "已下載交易的清單（顯示來源分割）:"
 
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:1
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:1
 #, fuzzy
 msgid "Enable SKIP transaction action"
 msgstr "通用匯入交易比對器"
 
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:3
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:3
 #, fuzzy
 msgid "Enable UPDATE match action"
 msgstr "通用匯入交易比對器"
 
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:5
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:5
 msgid "Use bayesian matching"
 msgstr "使用貝氏(bayesian)比對法"
 
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:6
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:6
 msgid "Enables bayesian matching when matching imported transaction against existing transactions. Otherwise a less sophisticated rule-based matching mechanism will be used."
 msgstr ""
 
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:7
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:7
 msgid "Minimum score to be displayed"
 msgstr ""
 
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:8
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:8
 #, fuzzy
 msgid "This field specifies the minimum matching score a potential matching transaction must have to be displayed in the match list."
 msgstr "可能的比對必須顯示在比對清單中的最小分數。"
 
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:9
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:9
 #, fuzzy
 msgid "Add matching transactions below this score"
 msgstr "找不到相符的交易"
 
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:10
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:10
 #, fuzzy
-msgid "This field specifies the threshold below which a matching transaction will be added automatically. A transaction whose best match's score is in the red zone (above the display minimum score but below or equal to the Add match score) will be added to the GnuCash file by default."
+msgid "This field specifies the threshold below which a matching transaction will be added automatically. A transaction whose best match's score is in the red zone (above the display minimum score but below or equal to the Add match score) will be added to the systecash file by default."
 msgstr "其最高比對分數在紅色區（高於顯示門檻但低於或等於自動新增門檻）的交易會預設為已加入。"
 
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:11
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:11
 #, fuzzy
 msgid "Clear matching transactions above this score"
 msgstr "找不到相符的交易"
 
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:12
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:12
 #, fuzzy
 msgid "This field specifies the threshold above which a matching transaction will be cleared by default. A transaction whose best match's score is in the green zone (above or equal to this Clear threshold) will be cleared by default."
 msgstr "其最高比對分數在紅色區（高於顯示門檻但低於或等於自動新增門檻）的交易會預設為已加入。"
 
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:13
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:13
 msgid "Maximum ATM fee amount in your area"
 msgstr ""
 
-#: ../src/import-export/gschemas/org.gnucash.dialogs.import.generic.gschema.xml.in.in.h:14
+#: ../src/import-export/gschemas/org.systecash.dialogs.import.generic.gschema.xml.in.in.h:14
 #, fuzzy
 msgid "This field specifies the extra fee that is taken into account when matching imported transactions. In some places commercial ATMs (not belonging to a financial institution) are installed in places like convenience stores. These ATMs add their fee directly to the amount instead of showing up as a separate transaction or in your monthly banking fees. For example, you withdraw $100, and you are charged $101,50 plus Interac fees. If you manually entered that $100, the amounts won't match. You should set this to whatever is the maximum such fee in your area (in units of your local currency), so the transaction will be recognised as a match."
 msgstr "在某些地方商用的 ATM（不屬於公家金融機構）是設置在便利商店裡的。這些 ATM 會將它的費用直接加到總額裡，而不會在您每月的銀行費用中顯示為分開的個別交易。舉例來說，您提款 100$ ，但是加上手續費總共要收費 101,50$。如果您自己輸入 100$，總額將會不符。您應該要把這個數值設為您所處地區對這種收費的最大值（以您當地貨幣的單位），這樣一來交易便會識別為相符。"
@@ -15660,11 +15660,11 @@ msgstr ""
 
 #: ../src/import-export/log-replay/gnc-plugin-log-replay.c:48
 #, fuzzy
-msgid "_Replay GnuCash .log file..."
+msgid "_Replay systecash .log file..."
 msgstr "讀取檔案中..."
 
 #: ../src/import-export/log-replay/gnc-plugin-log-replay.c:49
-msgid "Replay a GnuCash log file after a crash. This cannot be undone."
+msgid "Replay a systecash log file after a crash. This cannot be undone."
 msgstr ""
 
 #. As we now have the commodity, select the account with that commodity.
@@ -15731,8 +15731,8 @@ msgid "Process an OFX/QFX response file"
 msgstr "處理 OFX/QFX 回應檔案"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.c:531
-msgid "GnuCash account name"
-msgstr "GnuCash 科目名稱"
+msgid "systecash account name"
+msgstr "systecash 科目名稱"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.c:833
 #: ../src/import-export/qif-imp/assistant-qif-import.c:2666
@@ -15845,7 +15845,7 @@ msgid "Loading completed"
 msgstr "載入完成"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.c:1947
-msgid "When you press the Start Button, GnuCash will load your QIF file. If there are no errors or warnings, you will automatically proceed to the next step. Otherwise, the details will be shown below for your review."
+msgid "When you press the Start Button, systecash will load your QIF file. If there are no errors or warnings, you will automatically proceed to the next step. Otherwise, the details will be shown below for your review."
 msgstr ""
 
 #: ../src/import-export/qif-imp/assistant-qif-import.c:2512
@@ -15881,11 +15881,11 @@ msgid "Conversion completed"
 msgstr "轉換完成"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.c:3002
-msgid "When you press the Start Button, GnuCash will import your QIF data. If there are no errors or warnings, you will automatically proceed to the next step. Otherwise, the details will be shown below for your review."
+msgid "When you press the Start Button, systecash will import your QIF data. If there are no errors or warnings, you will automatically proceed to the next step. Otherwise, the details will be shown below for your review."
 msgstr ""
 
 #: ../src/import-export/qif-imp/assistant-qif-import.c:3198
-msgid "GnuCash was unable to save your mapping preferences."
+msgid "systecash was unable to save your mapping preferences."
 msgstr ""
 
 #: ../src/import-export/qif-imp/assistant-qif-import.c:3231
@@ -15900,17 +15900,17 @@ msgstr ""
 msgid "QIF Import Completed."
 msgstr "QIF 匯入"
 
-#. Set up the QIF account to GnuCash account matcher.
+#. Set up the QIF account to systecash account matcher.
 #: ../src/import-export/qif-imp/assistant-qif-import.c:3456
 msgid "QIF account name"
 msgstr "QIF 科目名稱"
 
-#. Set up the QIF category to GnuCash account matcher.
+#. Set up the QIF category to systecash account matcher.
 #: ../src/import-export/qif-imp/assistant-qif-import.c:3462
 msgid "QIF category name"
 msgstr "QIF 分類名稱"
 
-#. Set up the QIF payee/memo to GnuCash account matcher.
+#. Set up the QIF payee/memo to systecash account matcher.
 #: ../src/import-export/qif-imp/assistant-qif-import.c:3468
 msgid "QIF payee/memo"
 msgstr "QIF 收款人/備忘錄"
@@ -15926,15 +15926,15 @@ msgstr "QIF 匯入"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:2
 msgid ""
-"GnuCash can import financial data from QIF (Quicken Interchange Format) files written by Quicken/QuickBooks, MS Money, Moneydance, and many other programs. \n"
+"systecash can import financial data from QIF (Quicken Interchange Format) files written by Quicken/QuickBooks, MS Money, Moneydance, and many other programs. \n"
 "\n"
-"The import process has several steps. Your GnuCash accounts will not be changed until you click \"Apply\" at the end of the process. \n"
+"The import process has several steps. Your systecash accounts will not be changed until you click \"Apply\" at the end of the process. \n"
 "\n"
 "Click \"Forward\" to start loading your QIF data, or \"Cancel\" to abort the process. "
 msgstr ""
-"GnuCash 可以從 Quiken/QuickBooks、MS Money、Moneydance 與許多其他程式所產生的 QIF (Quicken 交換格式) 檔案匯入金融資料。\n"
+"systecash 可以從 Quiken/QuickBooks、MS Money、Moneydance 與許多其他程式所產生的 QIF (Quicken 交換格式) 檔案匯入金融資料。\n"
 "\n"
-"匯入的程序有許多步驟。直到您在程序的最後點選「套用」之前，您的 GnuCash 科目將不會被變更。\n"
+"匯入的程序有許多步驟。直到您在程序的最後點選「套用」之前，您的 systecash 科目將不會被變更。\n"
 "\n"
 "點選「向前」以開始載入您的 QIF 資料，或「取消」以放棄程序。"
 
@@ -16032,13 +16032,13 @@ msgstr "您已經載入的 QIF 檔案"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:34
 msgid ""
-"On the next page, the accounts in your QIF files and any stocks or mutual funds you own will be matched with GnuCash accounts. If a GnuCash account already exists with the same name, or a similar name and compatible type, that account will be used as a match; otherwise, GnuCash will create a new account with the same name and type as the QIF account. If you do not like the suggested GnuCash account, double-click to change it.\n"
+"On the next page, the accounts in your QIF files and any stocks or mutual funds you own will be matched with systecash accounts. If a systecash account already exists with the same name, or a similar name and compatible type, that account will be used as a match; otherwise, systecash will create a new account with the same name and type as the QIF account. If you do not like the suggested systecash account, double-click to change it.\n"
 "\n"
-"Note that GnuCash will be creating many accounts that did not exist on your other personal finance program, including a separate account for each stock you own, separate accounts for the brokerage commissions, special \"Equity\" accounts (subaccounts of Retained Earnings, by default) which are the source of your opening balances, etc. All of these accounts will appear on the next page so you can change them if you want to, but it is safe to leave them alone.\n"
+"Note that systecash will be creating many accounts that did not exist on your other personal finance program, including a separate account for each stock you own, separate accounts for the brokerage commissions, special \"Equity\" accounts (subaccounts of Retained Earnings, by default) which are the source of your opening balances, etc. All of these accounts will appear on the next page so you can change them if you want to, but it is safe to leave them alone.\n"
 msgstr ""
-"下一頁中，在您的 QIF 檔案中的科目與任何您持有的股票或共同基金將會與 GnuCash 科目比對。如果 GnuCash 科目已經存有相同或近似名稱與適合的類型，那個科目將會被視為相符；否則 GnuCash 會用在 QIF 科目中相同的名稱與類型來建立新的科目。如果您不喜歡建議的 GnuCash科目，點選以改變它。\n"
+"下一頁中，在您的 QIF 檔案中的科目與任何您持有的股票或共同基金將會與 systecash 科目比對。如果 systecash 科目已經存有相同或近似名稱與適合的類型，那個科目將會被視為相符；否則 systecash 會用在 QIF 科目中相同的名稱與類型來建立新的科目。如果您不喜歡建議的 systecash科目，點選以改變它。\n"
 "\n"
-"注意 GnuCash 將會建立許多不存在於您其他個人財務程式的科目，包括您的每一個持股都有個別的科目、佣金的個別科目、做為您的起始結餘來源的「資產淨值」科目(預設上是保留收入的子科目)、其他。這些科目全部會出現在下一頁，因此如果有需要您可以改變他們，但是不管他們也是安全的。\n"
+"注意 systecash 將會建立許多不存在於您其他個人財務程式的科目，包括您的每一個持股都有個別的科目、佣金的個別科目、做為您的起始結餘來源的「資產淨值」科目(預設上是保留收入的子科目)、其他。這些科目全部會出現在下一頁，因此如果有需要您可以改變他們，但是不管他們也是安全的。\n"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:38
 msgid "Accounts and stock holdings"
@@ -16055,52 +16055,52 @@ msgid "Matchings selected:"
 msgstr "沒有選定科目"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:41
-msgid "Change GnuCash _Account..."
-msgstr "改變 GnuCash 科目(_A)..."
+msgid "Change systecash _Account..."
+msgstr "改變 systecash 科目(_A)..."
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:42
-msgid "Match QIF accounts with GnuCash accounts"
-msgstr "以 GnuCash 科目比對 QIF 科目"
+msgid "Match QIF accounts with systecash accounts"
+msgstr "以 systecash 科目比對 QIF 科目"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:43
 msgid ""
-"GnuCash uses separate Income and Expense accounts rather than categories to classify your transactions. Each of the categories in your QIF file will be converted to a GnuCash account. \n"
+"systecash uses separate Income and Expense accounts rather than categories to classify your transactions. Each of the categories in your QIF file will be converted to a systecash account. \n"
 "\n"
-"On the next page, you will have an opportunity to look at the suggested matches between QIF categories and GnuCash accounts. You may change matches that you do not like by double-clicking on the line containing the category name.\n"
+"On the next page, you will have an opportunity to look at the suggested matches between QIF categories and systecash accounts. You may change matches that you do not like by double-clicking on the line containing the category name.\n"
 "\n"
-"If you change your mind later, you can reorganize the account structure safely within GnuCash."
+"If you change your mind later, you can reorganize the account structure safely within systecash."
 msgstr ""
-"GnuCash 使用個別的收入與支出科目而不是分類來歸類您的交易。您的 QIF 檔案中的每個分類將被轉換成 GnuCash 科目。\n"
+"systecash 使用個別的收入與支出科目而不是分類來歸類您的交易。您的 QIF 檔案中的每個分類將被轉換成 systecash 科目。\n"
 "\n"
-"下一頁中，您將有機會查看 QIF 分類與 GnuCash 科目之間的比對。您可以雙擊含有您不喜歡的分類名稱那一行來改變比對結果。\n"
+"下一頁中，您將有機會查看 QIF 分類與 systecash 科目之間的比對。您可以雙擊含有您不喜歡的分類名稱那一行來改變比對結果。\n"
 "\n"
-"假如您稍後改變心意，您也可以在 GnuCash 中安全地重新組織科目結構。"
+"假如您稍後改變心意，您也可以在 systecash 中安全地重新組織科目結構。"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:48
 msgid "Income and Expense categories"
 msgstr "收入與支出分類"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:49
-msgid "Match QIF categories with GnuCash accounts"
-msgstr "比對 QIF 分類與 GnuCash 科目"
+msgid "Match QIF categories with systecash accounts"
+msgstr "比對 QIF 分類與 systecash 科目"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:50
 msgid ""
-"QIF files downloaded from banks and other financial institutions may not have information about Accounts and Categories which would allow them to be correctly assigned to GnuCash accounts. \n"
+"QIF files downloaded from banks and other financial institutions may not have information about Accounts and Categories which would allow them to be correctly assigned to systecash accounts. \n"
 "\n"
-"In the following page, you will see the text that appears in the Payee and Memo fields of transactions with no QIF Account or Category. By default these transactions are assigned to the 'Unspecified' account in GnuCash. If you select a different account, it will be remembered for future QIF files. "
+"In the following page, you will see the text that appears in the Payee and Memo fields of transactions with no QIF Account or Category. By default these transactions are assigned to the 'Unspecified' account in systecash. If you select a different account, it will be remembered for future QIF files. "
 msgstr ""
-"自銀行或其他金融機構下載的 QIF 檔案可能沒有包含讓科目與分類正確地分配到 GnuCash 科目的有關資訊。\n"
+"自銀行或其他金融機構下載的 QIF 檔案可能沒有包含讓科目與分類正確地分配到 systecash 科目的有關資訊。\n"
 "\n"
-"在下面一頁裡，您將會看到以非 QIF 科目或分類的型態出現在交易的收款人與備忘錄欄位的文字。預設上這些交易會被分派到 GnuCash 的「未指定」科目。如果您選擇不同的科目，它也會在未來的 QIF 檔案中記住。"
+"在下面一頁裡，您將會看到以非 QIF 科目或分類的型態出現在交易的收款人與備忘錄欄位的文字。預設上這些交易會被分派到 systecash 的「未指定」科目。如果您選擇不同的科目，它也會在未來的 QIF 檔案中記住。"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:53
 msgid "Payees and memos"
 msgstr "收款人與備忘錄"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:54
-msgid "Match payees/memos to GnuCash accounts"
-msgstr "比對 收款人/備忘錄 至 GnuCash 科目"
+msgid "Match payees/memos to systecash accounts"
+msgstr "比對 收款人/備忘錄 至 systecash 科目"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:55
 msgid "The QIF importer cannot currently handle multi-currency QIF files. All the accounts you are importing must be denominated in the same currency.\n"
@@ -16117,12 +16117,12 @@ msgid "<b>Book Options</b>"
 msgstr "<b>選項</b>"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:59
-msgid "Since you are creating a new file, you will next see a dialog for setting book options. These can affect how GnuCash imports transactions. If you come back to this page without cancelling and starting over, the dialog for setting book options will not be shown a second time when you go forward. You can access it directly from the menu via File->Properties."
+msgid "Since you are creating a new file, you will next see a dialog for setting book options. These can affect how systecash imports transactions. If you come back to this page without cancelling and starting over, the dialog for setting book options will not be shown a second time when you go forward. You can access it directly from the menu via File->Properties."
 msgstr ""
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:61
 msgid ""
-"In the following pages you will be asked to provide information about stocks, mutual funds, and other investments that appear in the QIF file(s) you are importing. GnuCash needs some additional details about these investments that the QIF format does not provide. \n"
+"In the following pages you will be asked to provide information about stocks, mutual funds, and other investments that appear in the QIF file(s) you are importing. systecash needs some additional details about these investments that the QIF format does not provide. \n"
 "\n"
 "Each stock, mutual fund, or other investment must have a name and an abbreviation, such as a stock symbol. Because some unrelated investments have the same abbreviation, you also need to indicate what type of abbreviation you have entered. For example, you could select the exchange that assigned the symbol (NASDAQ, NYSE, etc.), or select an investment type.\n"
 "\n"
@@ -16146,13 +16146,13 @@ msgstr "QIF 匯入"
 #, fuzzy
 msgid ""
 "\n"
-"If you are importing a QIF file from a bank or other financial institution, some of the transactions may already exist in your GnuCash accounts. To avoid duplication, GnuCash has tried to identify matches and needs your help to review them.\n"
+"If you are importing a QIF file from a bank or other financial institution, some of the transactions may already exist in your systecash accounts. To avoid duplication, systecash has tried to identify matches and needs your help to review them.\n"
 "\n"
 "On the next page you will be shown a list of imported transactions. As you select each one, a list of possible matches will be shown below it. If you find a correct match, click on it. Your selection will be confirmed by a check mark in the \"Match?\" column.\n"
 "\n"
 "Click \"Forward\" to review the possible matches."
 msgstr ""
-"如果您正匯入從銀行或其他金融機構下載的 QIF 檔案，QIF 檔案中的一些資訊可能與已經在您的 GnuCash 科目中的資訊相同。為了避免重複，GnuCash 會嘗試比對既存的相同交易並需要您來幫忙確認。\n"
+"如果您正匯入從銀行或其他金融機構下載的 QIF 檔案，QIF 檔案中的一些資訊可能與已經在您的 systecash 科目中的資訊相同。為了避免重複，systecash 會嘗試比對既存的相同交易並需要您來幫忙確認。\n"
 "\n"
 "下一頁中，您將會看到一個匯入交易的列表。當您每選一筆交易，可能相符的交易會列在下方。若您在其中發現有相符的交易，請點選它。您可以透過 \"相符?\" 這個欄位來確認所選的交易。\n"
 "\n"
@@ -16179,21 +16179,21 @@ msgstr "選擇可能的相同點"
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:79
 #, fuzzy
 msgid ""
-"Click \"Apply\" to import data from the staging area and update your GnuCash accounts. The account and category matching information you have entered will be saved and used for defaults the next time you use the QIF import facility. \n"
+"Click \"Apply\" to import data from the staging area and update your systecash accounts. The account and category matching information you have entered will be saved and used for defaults the next time you use the QIF import facility. \n"
 "\n"
 "Click \"Back\" to review your account and category matchings, to change currency and security settings for new accounts, or to add more files to the staging area.\n"
 "\n"
 "Click \"Cancel\" to abort the QIF import process."
 msgstr ""
-"點選「套用」以自籌畫區匯入資料並更新您的 GnuCash 科目。您已經輸入的科目與分類比對資訊會被儲存並做為您下次使用QIF 匯入功能的預設值。\n"
+"點選「套用」以自籌畫區匯入資料並更新您的 systecash 科目。您已經輸入的科目與分類比對資訊會被儲存並做為您下次使用QIF 匯入功能的預設值。\n"
 "\n"
 "點選「向後」以檢查您的科目與分類比對，您可以改變用於新科目的貨幣與證券設定，或新增更多檔案至籌畫區。\n"
 "\n"
 "點選「取消」以放棄 QIF 匯入程序。"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:84
-msgid "Update your GnuCash accounts"
-msgstr "更新您的 GnuCash 科目"
+msgid "Update your systecash accounts"
+msgstr "更新您的 systecash 科目"
 
 #: ../src/import-export/qif-imp/assistant-qif-import.glade.h:85
 #, fuzzy
@@ -16223,12 +16223,12 @@ msgid "_Show documentation"
 msgstr "顯示說明文件(_S)"
 
 #: ../src/import-export/qif-imp/dialog-account-picker.glade.h:4
-#: ../src/import-export/qif-imp/gschemas/org.gnucash.dialogs.import.qif.gschema.xml.in.in.h:9
+#: ../src/import-export/qif-imp/gschemas/org.systecash.dialogs.import.qif.gschema.xml.in.in.h:9
 msgid "Show some documentation-only pages in QIF Import assistant."
 msgstr "在 QIF 匯入精靈中顯示一些只有說明的畫面。"
 
 #: ../src/import-export/qif-imp/dialog-account-picker.glade.h:6
-#: ../src/import-export/qif-imp/gschemas/org.gnucash.dialogs.import.qif.gschema.xml.in.in.h:3
+#: ../src/import-export/qif-imp/gschemas/org.systecash.dialogs.import.qif.gschema.xml.in.in.h:3
 msgid "When the status is not specified in a QIF file, the transactions are marked as reconciled."
 msgstr ""
 
@@ -16253,8 +16253,8 @@ msgid "Default transaction status (overridden by the status given by the QIF fil
 msgstr ""
 
 #: ../src/import-export/qif-imp/dialog-account-picker.glade.h:13
-msgid "_Select or add a GnuCash account:"
-msgstr "選擇或新增 GnuCash 科目(_S):"
+msgid "_Select or add a systecash account:"
+msgstr "選擇或新增 systecash 科目(_S):"
 
 #: ../src/import-export/qif-imp/gnc-plugin-qif-import.c:47
 msgid "Import _QIF..."
@@ -16264,16 +16264,16 @@ msgstr "匯入 _QIF..."
 msgid "Import a Quicken QIF file"
 msgstr "匯入 Quicken QIF 檔案"
 
-#: ../src/import-export/qif-imp/gschemas/org.gnucash.dialogs.import.qif.gschema.xml.in.in.h:1
+#: ../src/import-export/qif-imp/gschemas/org.systecash.dialogs.import.qif.gschema.xml.in.in.h:1
 #, fuzzy
 msgid "Default QIF transaction status"
 msgstr "刪除交易"
 
-#: ../src/import-export/qif-imp/gschemas/org.gnucash.dialogs.import.qif.gschema.xml.in.in.h:2
+#: ../src/import-export/qif-imp/gschemas/org.systecash.dialogs.import.qif.gschema.xml.in.in.h:2
 msgid "Default status for QIF transaction when not specified in QIF file."
 msgstr ""
 
-#: ../src/import-export/qif-imp/gschemas/org.gnucash.dialogs.import.qif.gschema.xml.in.in.h:8
+#: ../src/import-export/qif-imp/gschemas/org.systecash.dialogs.import.qif.gschema.xml.in.in.h:8
 msgid "Show documentation"
 msgstr "顯示說明文件"
 
@@ -16931,7 +16931,7 @@ msgid ""
 "'%s'"
 msgstr ""
 
-#: ../src/register/register-gnome/gnucash-item-list.c:485
+#: ../src/register/register-gnome/systecash-item-list.c:485
 #, fuzzy
 msgid "List"
 msgstr "List"
@@ -17322,7 +17322,7 @@ msgid "Template file"
 msgstr "模板檔案"
 
 #: ../src/report/business-reports/balsheet-eg.scm:284
-msgid "The file name of the eguile template part of this report. This file must be in your .gnucash directory, or else in its proper place within the GnuCash installation directories."
+msgid "The file name of the eguile template part of this report. This file must be in your .systecash directory, or else in its proper place within the systecash installation directories."
 msgstr ""
 
 #: ../src/report/business-reports/balsheet-eg.scm:285
@@ -17331,7 +17331,7 @@ msgid "CSS stylesheet file"
 msgstr "CSS 樣式檔"
 
 #: ../src/report/business-reports/balsheet-eg.scm:287
-msgid "The file name of the CSS stylesheet to use with this report. If specified, this file should be in your .gnucash directory, or else in its proper place within the GnuCash installation directories."
+msgid "The file name of the CSS stylesheet to use with this report. If specified, this file should be in your .systecash directory, or else in its proper place within the systecash installation directories."
 msgstr ""
 
 #: ../src/report/business-reports/balsheet-eg.scm:288
@@ -18554,11 +18554,11 @@ msgid "Invoice Job number?"
 msgstr "發票編號"
 
 #: ../src/report/business-reports/taxinvoice.scm:179
-msgid "The file name of the eguile template part of this report. This file should either be in your .gnucash directory, or else in its proper place within the GnuCash installation directories."
+msgid "The file name of the eguile template part of this report. This file should either be in your .systecash directory, or else in its proper place within the systecash installation directories."
 msgstr ""
 
 #: ../src/report/business-reports/taxinvoice.scm:182
-msgid "The file name of the CSS stylesheet to use with this report. This file should either be in your .gnucash directory, or else in its proper place within the GnuCash installation directories."
+msgid "The file name of the CSS stylesheet to use with this report. This file should either be in your .systecash directory, or else in its proper place within the systecash installation directories."
 msgstr ""
 
 #: ../src/report/business-reports/taxinvoice.scm:186
@@ -19136,7 +19136,7 @@ msgid "Save _Report Configuration"
 msgstr "設定組態路徑"
 
 #: ../src/report/report-gnome/gnc-plugin-page-report.c:1039
-msgid "Update the current report's saved configuration. The report will be saved in the file ~/.gnucash/saved-reports-2.4. "
+msgid "Update the current report's saved configuration. The report will be saved in the file ~/.systecash/saved-reports-2.4. "
 msgstr ""
 
 #: ../src/report/report-gnome/gnc-plugin-page-report.c:1044
@@ -19145,7 +19145,7 @@ msgid "Save Report Configuration As..."
 msgstr "設定組態路徑"
 
 #: ../src/report/report-gnome/gnc-plugin-page-report.c:1045
-msgid "Add the current report's configuration to the `Saved Report Configurations' menu. The report will be saved in the file ~/.gnucash/saved-reports-2.4. "
+msgid "Add the current report's configuration to the `Saved Report Configurations' menu. The report will be saved in the file ~/.systecash/saved-reports-2.4. "
 msgstr ""
 
 #: ../src/report/report-gnome/gnc-plugin-page-report.c:1050
@@ -19246,8 +19246,8 @@ msgid "There are no options for this report."
 msgstr "這個報表沒有可用的選項。"
 
 #: ../src/report/report-gnome/gnc-plugin-page-report.c:1633
-msgid "GnuCash-Report"
-msgstr "GnuCash-報表"
+msgid "systecash-Report"
+msgstr "systecash-報表"
 
 #: ../src/report/report-gnome/report-gnome.scm:73
 msgid "This report has no options."
@@ -19267,8 +19267,8 @@ msgid "Welcome Sample Report"
 msgstr "歡迎來到樣本報表"
 
 #: ../src/report/report-gnome/report-gnome.scm:165
-msgid "Welcome-to-GnuCash report screen"
-msgstr "歡迎來到 GnuCash 報表畫面"
+msgid "Welcome-to-systecash report screen"
+msgstr "歡迎來到 systecash 報表畫面"
 
 #: ../src/report/report-gnome/window-report.c:103
 msgid "Set the report options you want using this dialog."
@@ -19844,7 +19844,7 @@ msgid "One of your reports has a report-guid that is a duplicate. Please check t
 msgstr ""
 
 #: ../src/report/report-system/report.scm:177
-msgid "The GnuCash report system has been upgraded. Your old saved reports have been transfered into a new format. If you experience trouble with saved reports, please contact the GnuCash development team."
+msgid "The systecash report system has been upgraded. Your old saved reports have been transfered into a new format. If you experience trouble with saved reports, please contact the systecash development team."
 msgstr ""
 
 #: ../src/report/report-system/report.scm:242
@@ -23185,16 +23185,16 @@ msgid "This is for testing. Your reports probably shouldn't have an option like 
 msgstr "這是測試用的。您的報表應該不會有像這個的選項。"
 
 #: ../src/report/utility-reports/hello-world.scm:347
-msgid "This is a sample GnuCash report. See the guile (scheme) source code in the scm/report directory for details on writing your own reports, or extending existing reports."
-msgstr "這是 GnuCash 的範例報表。想知道關於寫出自己的報表或擴充現有報表的詳細資料，請查閱在 scm/report 目錄的 guile (scheme) 原始碼。"
+msgid "This is a sample systecash report. See the guile (scheme) source code in the scm/report directory for details on writing your own reports, or extending existing reports."
+msgstr "這是 systecash 的範例報表。想知道關於寫出自己的報表或擴充現有報表的詳細資料，請查閱在 scm/report 目錄的 guile (scheme) 原始碼。"
 
 #: ../src/report/utility-reports/hello-world.scm:353
 msgid "For help on writing reports, or to contribute your brand new, totally cool report, consult the mailing list %s."
 msgstr "需要撰寫報表的說明，或貢獻您獨特、新奇又酷的報表，請參考通信論壇 %s。"
 
 #: ../src/report/utility-reports/hello-world.scm:358
-msgid "For details on subscribing to that list, see &lt;http://www.gnucash.org/&gt;."
-msgstr "需要訂閱通信論壇的詳情，請看 &lt;http://www.gnucash.org/&gt;。"
+msgid "For details on subscribing to that list, see &lt;http://www.systecash.org/&gt;."
+msgstr "需要訂閱通信論壇的詳情，請看 &lt;http://www.systecash.org/&gt;。"
 
 #: ../src/report/utility-reports/hello-world.scm:359
 msgid "You can learn more about writing scheme at &lt;http://www.scheme.com/tspl2d/&gt;."
@@ -23311,20 +23311,20 @@ msgstr "多欄檢視"
 msgid "Custom Multicolumn Report"
 msgstr "自訂多欄報表"
 
-#: ../src/report/utility-reports/welcome-to-gnucash.scm:61
-#: ../src/report/utility-reports/welcome-to-gnucash.scm:103
-msgid "Welcome to GnuCash"
-msgstr "歡迎使用 GnuCash"
+#: ../src/report/utility-reports/welcome-to-systecash.scm:61
+#: ../src/report/utility-reports/welcome-to-systecash.scm:103
+msgid "Welcome to systecash"
+msgstr "歡迎使用 systecash"
 
-#: ../src/report/utility-reports/welcome-to-gnucash.scm:97
+#: ../src/report/utility-reports/welcome-to-systecash.scm:97
 #, fuzzy, scheme-format
-msgid "Welcome to GnuCash ~a !"
-msgstr "歡迎使用 GnuCash"
+msgid "Welcome to systecash ~a !"
+msgstr "歡迎使用 systecash"
 
-#: ../src/report/utility-reports/welcome-to-gnucash.scm:99
+#: ../src/report/utility-reports/welcome-to-systecash.scm:99
 #, fuzzy, scheme-format
-msgid "GnuCash ~a has lots of nice features. Here are a few."
-msgstr "GnuCash 2.4 有許多優秀的功能。這裡只是其中一部分。"
+msgid "systecash ~a has lots of nice features. Here are a few."
+msgstr "systecash 2.4 有許多優秀的功能。這裡只是其中一部分。"
 
 #: ../src/scm/price-quotes.scm:500 ../src/scm/price-quotes.scm:501
 #, fuzzy
@@ -23392,57 +23392,57 @@ msgstr "您的商務名稱"
 msgid "No help available."
 msgstr "沒有說明。"
 
-#: ../src/gnome/gnucash.appdata.xml.in.h:1
-msgid "GnuCash is a program for personal and small-business financial-accounting."
+#: ../src/gnome/systecash.appdata.xml.in.h:1
+msgid "systecash is a program for personal and small-business financial-accounting."
 msgstr ""
 
-#: ../src/gnome/gnucash.appdata.xml.in.h:2
-msgid "Designed to be easy to use, yet powerful and flexible, GnuCash allows you to track bank accounts, stocks, income and expenses. As quick and intuitive to use as a checkbook register, it is based on professional accounting principles like double-entry accounting to ensure balanced books and accurate reports."
+#: ../src/gnome/systecash.appdata.xml.in.h:2
+msgid "Designed to be easy to use, yet powerful and flexible, systecash allows you to track bank accounts, stocks, income and expenses. As quick and intuitive to use as a checkbook register, it is based on professional accounting principles like double-entry accounting to ensure balanced books and accurate reports."
 msgstr ""
 
-#: ../src/gnome/gnucash.appdata.xml.in.h:3
-msgid "With GnuCash you can (but are not limited to):"
+#: ../src/gnome/systecash.appdata.xml.in.h:3
+msgid "With systecash you can (but are not limited to):"
 msgstr ""
 
-#: ../src/gnome/gnucash.appdata.xml.in.h:4
+#: ../src/gnome/systecash.appdata.xml.in.h:4
 msgid "Keep track of your day to day personal income and expenses"
 msgstr ""
 
-#: ../src/gnome/gnucash.appdata.xml.in.h:5
+#: ../src/gnome/systecash.appdata.xml.in.h:5
 msgid "Manage your stock, bond and mutual fund accounts with ease"
 msgstr ""
 
-#: ../src/gnome/gnucash.appdata.xml.in.h:6
+#: ../src/gnome/systecash.appdata.xml.in.h:6
 #, fuzzy
 msgid "Keep your small business' accounting up to date"
 msgstr "保持正常科目順序"
 
-#: ../src/gnome/gnucash.appdata.xml.in.h:7
+#: ../src/gnome/systecash.appdata.xml.in.h:7
 msgid "Create accurate reports and graphs from your financial data"
 msgstr ""
 
-#: ../src/gnome/gnucash.appdata.xml.in.h:8
+#: ../src/gnome/systecash.appdata.xml.in.h:8
 #, fuzzy
 msgid "Set up scheduled transactions to avoid repeated data entry"
 msgstr "設定用於貸款償還的排程交易"
 
-#: ../src/gnome/gnucash.appdata.xml.in.h:9
+#: ../src/gnome/systecash.appdata.xml.in.h:9
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
 msgstr ""
 
-#: ../src/gnome/gnucash.appdata.xml.in.h:10
+#: ../src/gnome/systecash.appdata.xml.in.h:10
 msgid "Perform financial calculations, such as a loan repayment"
 msgstr ""
 
-#: ../src/gnome/gnucash.desktop.in.in.h:1
-msgid "GnuCash"
-msgstr "GnuCash"
+#: ../src/gnome/systecash.desktop.in.in.h:1
+msgid "systecash"
+msgstr "systecash"
 
-#: ../src/gnome/gnucash.desktop.in.in.h:2
+#: ../src/gnome/systecash.desktop.in.in.h:2
 msgid "Finance Management"
 msgstr "財務管理"
 
-#: ../src/gnome/gnucash.desktop.in.in.h:3
+#: ../src/gnome/systecash.desktop.in.in.h:3
 msgid "Manage your finances, accounts, and investments"
 msgstr ""
 
@@ -23477,20 +23477,20 @@ msgstr "預設預算"
 #. * OPTION-NAME-DEFAULT-BUDGET
 #.
 #: ../doc/tip_of_the_day.list.in:1
-msgid "The GnuCash online manual has lots of helpful information. You can access the manual under the Help menu."
-msgstr "GnuCash 線上手冊有許多有用的資訊。您可以在「說明」選單下找到此手冊。"
+msgid "The systecash online manual has lots of helpful information. You can access the manual under the Help menu."
+msgstr "systecash 線上手冊有許多有用的資訊。您可以在「說明」選單下找到此手冊。"
 
 #: ../doc/tip_of_the_day.list.in:4
 msgid "You can easily import your existing financial data from Quicken, MS Money or other programs that export QIF files or OFX files. In the File menu, click on the sub-menu Import and click on QIF or OFX file, respectively. Then, follow the instructions provided."
 msgstr "您可以簡單地匯入您現有來自 Quicken、 MS Money、或其他匯出 QIF 檔案或 OFX 檔案的程式的財務資料。點選「檔案」選單的「匯入」功能，選擇 QIF 或 OFX 格式，接下來依照指示進行即可。"
 
 #: ../doc/tip_of_the_day.list.in:9
-msgid "If you are familiar with other financial programs such as Quicken, note that GnuCash uses accounts instead of categories to track income and expenses. For more information on income and expense accounts, please see the GnuCash online manual."
-msgstr "如果您熟悉其他像 Quicken 這類財務程式，注意 GnuCash 使用科目而非分類來追蹤收入與支出。需要更多關於收入與支出科目的資訊，請查閱 GnuCash 線上手冊。"
+msgid "If you are familiar with other financial programs such as Quicken, note that systecash uses accounts instead of categories to track income and expenses. For more information on income and expense accounts, please see the systecash online manual."
+msgstr "如果您熟悉其他像 Quicken 這類財務程式，注意 systecash 使用科目而非分類來追蹤收入與支出。需要更多關於收入與支出科目的資訊，請查閱 systecash 線上手冊。"
 
 #: ../doc/tip_of_the_day.list.in:14
-msgid "Create new accounts by clicking the New button in the main window tool bar. This will bring up a dialog box where you can enter account details. For more information on choosing an account type or setting up a chart of accounts, please see the GnuCash online manual."
-msgstr "點選主視窗工具列的新增按鈕以建立新科目。這樣會出現可以讓您輸入科目詳細資料的對話盒。需要更多關於選擇科目類型或建立會計科目表的資訊，請查閱 GnuCash 線上手冊。"
+msgid "Create new accounts by clicking the New button in the main window tool bar. This will bring up a dialog box where you can enter account details. For more information on choosing an account type or setting up a chart of accounts, please see the systecash online manual."
+msgstr "點選主視窗工具列的新增按鈕以建立新科目。這樣會出現可以讓您輸入科目詳細資料的對話盒。需要更多關於選擇科目類型或建立會計科目表的資訊，請查閱 systecash 線上手冊。"
 
 #: ../doc/tip_of_the_day.list.in:20
 msgid "Click the right mouse button in the main window to bring up the account menu options. Within each register, clicking the right mouse button brings up the transaction menu options."
@@ -23502,16 +23502,16 @@ msgstr "要輸入像具有多重扣除額的薪水這類多重分割交易，可
 
 #: ../doc/tip_of_the_day.list.in:29
 #, fuzzy
-msgid "As you enter amounts in the register, you can use the GnuCash calculator to add, subtract, multiply and divide. Simply type the first value, then select '+', '-','*', or '/'. Type the second value and press Enter to record the calculated amount."
-msgstr "當您在登記簿中輸入總數時，您可以使用 GnuCash計算機來加、減、乘、除。只要輸入第一個值，然後選擇 '+'、'-'、'*' 或 '/'。再輸入第二個值並按 Enter就可以記錄計算後的總數。"
+msgid "As you enter amounts in the register, you can use the systecash calculator to add, subtract, multiply and divide. Simply type the first value, then select '+', '-','*', or '/'. Type the second value and press Enter to record the calculated amount."
+msgstr "當您在登記簿中輸入總數時，您可以使用 systecash計算機來加、減、乘、除。只要輸入第一個值，然後選擇 '+'、'-'、'*' 或 '/'。再輸入第二個值並按 Enter就可以記錄計算後的總數。"
 
 #: ../doc/tip_of_the_day.list.in:34
-msgid "Quick-fill makes it easy to enter common transactions. When you type the first letter(s) of a common transaction description, then press the Tab key, GnuCash will automatically complete the remainder of the transaction as it was last entered."
-msgstr "快速填字讓輸入常用交易更簡單。當您輸入常用交易敘述的前幾個字，按 Tab 鍵，GnuCash 會自動根據過去輸入的結果完成交易剩下的部分。"
+msgid "Quick-fill makes it easy to enter common transactions. When you type the first letter(s) of a common transaction description, then press the Tab key, systecash will automatically complete the remainder of the transaction as it was last entered."
+msgstr "快速填字讓輸入常用交易更簡單。當您輸入常用交易敘述的前幾個字，按 Tab 鍵，systecash 會自動根據過去輸入的結果完成交易剩下的部分。"
 
 #: ../doc/tip_of_the_day.list.in:39
-msgid "Type the first letter(s) of an existing account name in the Transfer register column, and GnuCash will complete the name from your list of accounts. For subaccounts, type the first letter(s) of the parent account, followed by ':' and the first letter(s) of the subaccount (e.g. A:C for Assets:Cash.)"
-msgstr "在匯兌登記簿一欄中輸入現存科目名稱的前幾個字時，GnuCash 會根據您的科目列表完成科目名稱。以子科目為例，輸入母科目的前幾個字，接著輸入 ':'，再輸入子科目的前幾個字 (例 A:C 即 Assets:Cash。)"
+msgid "Type the first letter(s) of an existing account name in the Transfer register column, and systecash will complete the name from your list of accounts. For subaccounts, type the first letter(s) of the parent account, followed by ':' and the first letter(s) of the subaccount (e.g. A:C for Assets:Cash.)"
+msgstr "在匯兌登記簿一欄中輸入現存科目名稱的前幾個字時，systecash 會根據您的科目列表完成科目名稱。以子科目為例，輸入母科目的前幾個字，接著輸入 ':'，再輸入子科目的前幾個字 (例 A:C 即 Assets:Cash。)"
 
 #: ../doc/tip_of_the_day.list.in:45
 msgid "Want to see all your subaccount transactions in one register? From the main menu, highlight the parent account and select Accounts -> Open Subaccounts from the menu."
@@ -23555,12 +23555,12 @@ msgid ""
 msgstr ""
 
 #: ../doc/tip_of_the_day.list.in:86
-msgid "If you work overnight, you should close and reopen your working register after midnight, to get the new date as default for new transactions. It is not necessary to restart GnuCash therefore."
+msgid "If you work overnight, you should close and reopen your working register after midnight, to get the new date as default for new transactions. It is not necessary to restart systecash therefore."
 msgstr ""
 
 #: ../doc/tip_of_the_day.list.in:90
-msgid "The GnuCash developers are easy to contact. As well as several mailing lists, you can chat to them live on IRC! Join them on #gnucash at irc.gnome.org"
-msgstr "連絡 GnuCash 開發者很容易。不但有許多通信論壇，還可以在 IRC 跟他們聊天！想加入他們就在 irc.gnome.org 的 #gnucash"
+msgid "The systecash developers are easy to contact. As well as several mailing lists, you can chat to them live on IRC! Join them on #systecash at irc.gnome.org"
+msgstr "連絡 systecash 開發者很容易。不但有許多通信論壇，還可以在 IRC 跟他們聊天！想加入他們就在 irc.gnome.org 的 #systecash"
 
 #: ../doc/tip_of_the_day.list.in:94
 #, fuzzy
@@ -23778,8 +23778,8 @@ msgstr ""
 #~ msgid "Choose Method"
 #~ msgstr "排序方式"
 
-#~ msgid "GnuCash will update the system path for you."
-#~ msgstr "GnuCash 將會替你更新系統路徑。"
+#~ msgid "systecash will update the system path for you."
+#~ msgstr "systecash 將會替你更新系統路徑。"
 
 #, fuzzy
 #~ msgid "Install Into Home Directory"
@@ -23803,11 +23803,11 @@ msgstr ""
 #~ msgstr "關閉此發票視窗"
 
 #, fuzzy
-#~ msgid "Update GnuCash Configuration Data"
-#~ msgstr "更新 GnuCash 設定選項"
+#~ msgid "Update systecash Configuration Data"
+#~ msgstr "更新 systecash 設定選項"
 
-#~ msgid "Update GnuCash configuration data"
-#~ msgstr "更新 GnuCash 設定選項"
+#~ msgid "Update systecash configuration data"
+#~ msgstr "更新 systecash 設定選項"
 
 #, fuzzy
 #~ msgid "Update Search Path"
@@ -23817,8 +23817,8 @@ msgstr ""
 #~ msgid "You will then need to restart the gconf backend with the command 'gconftool-2 --shutdown'."
 #~ msgstr "接下來你需要執行指令 'gconftool-2 --shutdown' 來重新啟動 gconf backend。"
 
-#~ msgid "_GnuCash updates the search path"
-#~ msgstr "_GnuCash 更新搜尋路徑"
+#~ msgid "_systecash updates the search path"
+#~ msgstr "_systecash 更新搜尋路徑"
 
 #~ msgid "_Install into home directory"
 #~ msgstr "安裝到個人家(home)目錄(_I)"
@@ -23955,8 +23955,8 @@ msgstr ""
 #~ msgid "Enable hyperlinks in reports"
 #~ msgstr "啟動報表中的超鏈結"
 
-#~ msgid "Welcome to GnuCash 2.4!"
-#~ msgstr "歡迎使用 GnuCash 2.4！"
+#~ msgid "Welcome to systecash 2.4!"
+#~ msgstr "歡迎使用 systecash 2.4！"
 
 #~ msgid "The last stable version was "
 #~ msgstr "最新穩定版本為 "
@@ -24065,8 +24065,8 @@ msgstr ""
 #~ msgid "New Account (not implemented)"
 #~ msgstr "新增科目(尚未實作)"
 
-#~ msgid "Select or add a GnuCash account"
-#~ msgstr "選擇或新增 GnuCash 科目"
+#~ msgid "Select or add a systecash account"
+#~ msgstr "選擇或新增 systecash 科目"
 
 #~ msgid ""
 #~ "Use Commodity Value\n"
@@ -24400,29 +24400,29 @@ msgstr ""
 #~ msgid "Case Insensitive?"
 #~ msgstr "大小寫視為相同？"
 
-#~ msgid "That GnuCash XML file is already loaded. Please select another file."
-#~ msgstr "這個 GnuCash XML 檔案已經載入。請選擇其他檔案。"
+#~ msgid "That systecash XML file is already loaded. Please select another file."
+#~ msgstr "這個 systecash XML 檔案已經載入。請選擇其他檔案。"
 
 #~ msgid "Finish changes"
 #~ msgstr "完成修改"
 
-#~ msgid "Update gconf settings - GnuCash"
-#~ msgstr "更新 gconf 設定 - GnuCash"
+#~ msgid "Update gconf settings - systecash"
+#~ msgstr "更新 gconf 設定 - systecash"
 
 #~ msgid ""
-#~ "Click \"Load another file\" if you have more data to import at this time. Do this if you have saved your accounts to separate GnuCash files.\n"
+#~ "Click \"Load another file\" if you have more data to import at this time. Do this if you have saved your accounts to separate systecash files.\n"
 #~ "\n"
-#~ "Click \"Forward\" to finish loading files and move to the next step of the GnuCash Datafile import process."
+#~ "Click \"Forward\" to finish loading files and move to the next step of the systecash Datafile import process."
 #~ msgstr ""
-#~ "如果您此時還有更多資料要匯入，點選「讀取其他檔案」。您可以在您的科目儲存於不同 GnuCash 檔案時這麼做。\n"
+#~ "如果您此時還有更多資料要匯入，點選「讀取其他檔案」。您可以在您的科目儲存於不同 systecash 檔案時這麼做。\n"
 #~ "\n"
-#~ "點選「向前」以結束載入檔案並且移至 GnuCash 資料檔匯入程序的下一個步驟。"
+#~ "點選「向前」以結束載入檔案並且移至 systecash 資料檔匯入程序的下一個步驟。"
 
 #~ msgid "Do not merge"
 #~ msgstr "不要合併"
 
-#~ msgid "GnuCash data files you have loaded"
-#~ msgstr "您已經載入的 GnuCash 檔案"
+#~ msgid "systecash data files you have loaded"
+#~ msgstr "您已經載入的 systecash 檔案"
 
 #~ msgid "Load another file"
 #~ msgstr "載入其他檔案"
@@ -24512,14 +24512,14 @@ msgstr ""
 #~ msgid ""
 #~ "For a new transaction, click on the \"Other Account\" entry to choose the other (destination) account of this transaction.\n"
 #~ "For a transaction that is a duplicate of an existing one, click on the \"Other Account\" or \"Description\" entry to \n"
-#~ "check whether GnuCash chose the right existing transaction.\n"
+#~ "check whether systecash chose the right existing transaction.\n"
 #~ "To switch transactions between both states, click on the checkmark in the \"New\" column.\n"
 #~ "When all new transactions have the correct destination account and all duplicates are matched with the right existing transaction, \n"
 #~ "click \"OK\"."
 #~ msgstr ""
 #~ "對新的交易而言，按下「其他科目」可選擇這個交易的其他（目標）科目。\n"
 #~ "對和既存交易重複的交易來說，按下「其他科目」或「描述」項目可以\n"
-#~ "檢查 GnuCash 是否選擇了正確的既存交易。\n"
+#~ "檢查 systecash 是否選擇了正確的既存交易。\n"
 #~ "要讓交易在兩種狀態間切換，按下「新增」欄位中的核取標記。\n"
 #~ "當所有的新交易都有正確的目標科目，而所有的重複也符合正確的既存交易後，\n"
 #~ "請按「確定」。"
@@ -24612,8 +24612,8 @@ msgstr ""
 #~ "目前的範本交易已經變更。\n"
 #~ "您想要記錄它的變更嗎？"
 
-#~ msgid "An error occurred while importing QIF transactions into GnuCash. Your accounts are unchanged."
-#~ msgstr "匯入 QIF 交易至 GnuCash 時發生錯誤。您的科目並未變更。"
+#~ msgid "An error occurred while importing QIF transactions into systecash. Your accounts are unchanged."
+#~ msgstr "匯入 QIF 交易至 systecash 時發生錯誤。您的科目並未變更。"
 
 #~ msgid "You must enter a Type for the commodity."
 #~ msgstr "您必須輸入此商品的類型。"
@@ -24644,7 +24644,7 @@ msgstr ""
 
 #, fuzzy
 #~ msgid ""
-#~ "In the next pages, you will be asked to provide information about stocks, mutual funds, and other tradable commodities that appear in the QIF file(s) you are importing. GnuCash requires more information about tradable commodities than the QIF format can represent. \n"
+#~ "In the next pages, you will be asked to provide information about stocks, mutual funds, and other tradable commodities that appear in the QIF file(s) you are importing. systecash requires more information about tradable commodities than the QIF format can represent. \n"
 #~ "\n"
 #~ "Each stock, mutual fund, or other commodity must have a type, which is the exchange or listing that it is found on (NASDAQ, NYSE, US Mutual Funds, etc), a full name, and an abbreviation.\n"
 #~ "\n"
@@ -24652,7 +24652,7 @@ msgstr ""
 #~ msgstr ""
 #~ "下一頁中，您將被要求提供關於出現在您所匯入\n"
 #~ "的 QIF 檔案裡的股票、共同基金和其他有價商\n"
-#~ "品的資訊。GnuCash 要求的有價商品相關資訊\n"
+#~ "品的資訊。systecash 要求的有價商品相關資訊\n"
 #~ "比 QIF 格式所能呈現還要多。\n"
 #~ "\n"
 #~ "每一個股票、共同基金或其他商品必須有類型─\n"

@@ -22,19 +22,19 @@
 #define GNUCASH_SHEETP_H
 
 
-#include "gnucash-sheet.h"
-#include "gnucash-item-edit.h"
+#include "systecash-sheet.h"
+#include "systecash-item-edit.h"
 #include <libgnomecanvas/libgnomecanvas.h>
 
 /** @ingroup Register
  * @addtogroup Gnome
  * @{
  */
-/** @file gnucash-sheetP.h
- * @brief Private declarations for GnucashSheet class.
+/** @file systecash-sheetP.h
+ * @brief Private declarations for systecashSheet class.
  */
 
-struct _GnucashSheet
+struct _systecashSheet
 {
     GnomeCanvas canvas;
 
@@ -126,13 +126,13 @@ struct _GnucashSheet
 };
 
 
-struct _GnucashSheetClass
+struct _systecashSheetClass
 {
     GnomeCanvasClass parent_class;
 };
 
 
-struct _GnucashRegister
+struct _systecashRegister
 {
     GtkTable table;
 
@@ -144,20 +144,20 @@ struct _GnucashRegister
 };
 
 
-struct _GnucashRegisterClass
+struct _systecashRegisterClass
 {
     GtkTableClass parent_class;
 
-    void (*activate_cursor) (GnucashRegister *reg);
-    void (*redraw_all)      (GnucashRegister *reg);
-    void (*redraw_help)     (GnucashRegister *reg);
+    void (*activate_cursor) (systecashRegister *reg);
+    void (*redraw_all)      (systecashRegister *reg);
+    void (*redraw_help)     (systecashRegister *reg);
 };
 
 
-GncItemEdit *gnucash_sheet_get_item_edit (GnucashSheet *sheet);
-//Table       *gnucash_sheet_get_table (GnucashSheet *sheet);
-//gint         gnucash_sheet_get_num_virt_rows (GnucashSheet *sheet);
-//gint         gnucash_sheet_get_num_virt_cols (GnucashSheet *sheet);
+GncItemEdit *systecash_sheet_get_item_edit (systecashSheet *sheet);
+//Table       *systecash_sheet_get_table (systecashSheet *sheet);
+//gint         systecash_sheet_get_num_virt_rows (systecashSheet *sheet);
+//gint         systecash_sheet_get_num_virt_cols (systecashSheet *sheet);
 
 /** @} */
 #endif
